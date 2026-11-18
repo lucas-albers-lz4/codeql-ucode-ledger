@@ -1,0 +1,111 @@
+{
+  "columns": [
+    {
+      "name": "raw",
+      "kind": "Entity"
+    },
+    {
+      "name": "path",
+      "kind": "String"
+    },
+    {
+      "kind": "Integer"
+    },
+    {
+      "kind": "Integer"
+    },
+    {
+      "kind": "String"
+    },
+    {
+      "name": "ident",
+      "kind": "String"
+    },
+    {
+      "name": "cfg",
+      "kind": "String"
+    },
+    {
+      "name": "libs",
+      "kind": "String"
+    }
+  ],
+  "tuples": [
+    [
+      {
+        "label": "CallExpression",
+        "url": {
+          "uri": "file://<SMOKE_TMP>/ql/test/extractor-smoke/popen__direct.uc",
+          "startLine": 2,
+          "startColumn": 28,
+          "endLine": 2,
+          "endColumn": 52
+        }
+      },
+      "popen__direct.uc",
+      2,
+      28,
+      "Identifier",
+      "popen",
+      "CallExpression",
+      "popen"
+    ],
+    [
+      {
+        "label": "CallExpression",
+        "url": {
+          "uri": "file://<SMOKE_TMP>/ql/test/extractor-smoke/popen__formal.uc",
+          "startLine": 2,
+          "startColumn": 46,
+          "endLine": 2,
+          "endColumn": 70
+        }
+      },
+      "popen__formal.uc",
+      2,
+      46,
+      "Identifier",
+      "popen",
+      "CallExpression",
+      ""
+    ],
+    [
+      {
+        "label": "CallExpression",
+        "url": {
+          "uri": "file://<SMOKE_TMP>/ql/test/extractor-smoke/popen__local.uc",
+          "startLine": 2,
+          "startColumn": 70,
+          "endLine": 2,
+          "endColumn": 94
+        }
+      },
+      "popen__local.uc",
+      2,
+      70,
+      "Identifier",
+      "popen",
+      "CallExpression",
+      ""
+    ],
+    [
+      {
+        "label": "CallExpression",
+        "url": {
+          "uri": "file://<SMOKE_TMP>/ql/test/extractor-smoke/popen__sibling.uc",
+          "startLine": 3,
+          "startColumn": 28,
+          "endLine": 3,
+          "endColumn": 52
+        }
+      },
+      "popen__sibling.uc",
+      3,
+      28,
+      "Identifier",
+      "popen",
+      "CallExpression",
+      ""
+    ]
+  ]
+}

@@ -1,0 +1,3 @@
+"c","col1","c","col3"
+"CallExpression","getProcessList via process_list popen /bin/busybox top -bn1 at line 7","CallExpression","popen"
+"CallExpression","getConntrackList via conntrack_list popen /usr/sbin/conntrack -L -o extended at line 49","CallExpression","popen"

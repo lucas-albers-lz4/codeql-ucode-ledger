@@ -1,0 +1,6 @@
+"observation_kind","method","sink_kind","command","source_path","start_line","start_column","end_line","end_column"
+"callback_body_call","setBlockDetect","system","/sbin/block detect > /etc/config/fstab","modules/positive/root/usr/share/rpcd/ucode/luci",3,5,3,52
+"callback_body_call","setBlockDetect","system","/sbin/block detect > /etc/config/fstab","modules/positive-renamed-import/root/usr/share/rpcd/ucode/luci",4,5,4,52
+"callback_body_call","setBlockDetect","system","/sbin/block detect > /etc/config/fstab","modules/real/root/usr/share/rpcd/ucode/luci",532,21,532,68
+"callback_body_call","setBlockDetect","system","/sbin/block detect > /etc/config/fstab","modules/sibling-shadow/root/usr/share/rpcd/ucode/luci",8,7,8,54
+"callback_body_call","setBlockDetect","system","/sbin/block detect > /etc/config/fstab","modules/sibling-shadow/root/usr/share/rpcd/ucode/luci",14,5,14,52

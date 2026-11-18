@@ -1,0 +1,7 @@
+{"#select":{"columns":[
+   {"name":"error","kind":"Entity"}
+  ,{"kind":"String"}
+  ,{"kind":"Integer"}]
+ ,"tuples":[
+   [{"label":"A parse error occurred. Check the syntax of the file. If the file is invalid, correct the error or exclude the file from analysis.","url":{"uri":"file://<SMOKE_TMP>/ql/test/extractor-smoke/readfile__malformed.uc","startLine":3,"startColumn":12,"endLine":3,"endColumn":12}},"Extraction failed in <SMOKE_TMP>/ql/test/extractor-smoke/readfile__malformed.uc with error A parse error occurred. Check the syntax of the file. If the file is invalid, correct the error or exclude the file from analysis.",2]]
+ }}

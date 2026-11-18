@@ -1,0 +1,8 @@
+{"#select":{"columns":[
+   {"name":"c","kind":"Entity"}
+  ,{"kind":"String"}]
+ ,"tuples":[
+   [{"label":"CallExpression","url":{"uri":"file://<SMOKE_TMP>/ql/test/extractor-smoke/ssa_pos","startLine":2,"startColumn":1,"endLine":2,"endColumn":37}},"ubus_call fact in ssa_pos at line 2"]
+  ,[{"label":"CallExpression","url":{"uri":"file://<SMOKE_TMP>/ql/test/extractor-smoke/usr/share/rpcd/ucode/luci","startLine":663,"startColumn":17,"endLine":663,"endColumn":53}},"ubus_call fact in luci at line 663"]
+  ,[{"label":"CallExpression","url":{"uri":"file://<SMOKE_TMP>/ql/test/extractor-smoke/usr/share/rpcd/ucode/luci","startLine":671,"startColumn":15,"endLine":671,"endColumn":59}},"ubus_call fact in luci at line 671"]]
+ }}

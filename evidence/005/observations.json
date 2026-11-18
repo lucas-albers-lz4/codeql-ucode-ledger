@@ -1,0 +1,8 @@
+{"#select":{"columns":[
+   {"name":"src","kind":"Entity"}
+  ,{"kind":"String"}
+  ,{"name":"c","kind":"Entity"}
+  ,{"kind":"String"}]
+ ,"tuples":[
+   [{"label":"MemberExpression","url":{"uri":"file://<WORK>/claim-005/controls/src/modules/positive/root/usr/share/rpcd/ucode/luci","startLine":4,"startColumn":17,"endLine":4,"endColumn":33}},"init_action from 'luci.sys' takes request.args (callee body not extracted)",{"label":"CallExpression","url":{"uri":"file://<WORK>/claim-005/controls/src/modules/positive/root/usr/share/rpcd/ucode/luci","startLine":4,"startColumn":5,"endLine":4,"endColumn":34}},"init_action"]]
+ }}

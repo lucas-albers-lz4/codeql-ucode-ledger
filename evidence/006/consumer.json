@@ -1,0 +1,171 @@
+{
+  "artifact_format": "setlocaltime_source_construction_annotation",
+  "format_version": 1,
+  "source": {
+    "repository": "https://github.com/openwrt/luci",
+    "revision": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "path": "usr/share/rpcd/ucode/luci",
+    "sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e"
+  },
+  "context": {
+    "profile": "luci-ssl-25.12",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "consumed_input_sha256": {
+      "policy/tests/fixtures/setlocaltime-construction-source-v1.json": "a7e0a95e0c77f5e1e87cf20d32144f791df980ac4dd1ed2ddf16c7663d7c8218",
+      "corpus/lock.json": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+      "corpus/profiles/luci-ssl-25.12/profile.json": "16a5468601be4b23f45795a43deedd6fda6726ff7503abb9d80e493d16808ac5",
+      "policy/grants.json": "b34cdc9b9403c0ca21761ca340d6840e2b23f522486c4d6f7e139a4fa77b12bc",
+      "policy/policy_decisions.json": "abc44873c15a0a682e8527d20547a8cc9335e263696dee5749dfada6e2239f31",
+      "reports/handler_effects.json": "2644d1187afaaf126afa71572cc980afbecd3f22592057809951491f90a436a0",
+      "reports/m4-findings.json": "70873734806b6fbd359715634795acb4639a4517fde3f4e7d175822b2f36dd60"
+    }
+  },
+  "observation": {
+    "observation_kind": "setlocaltime_complete_decimal_datetime_source_v1",
+    "ubus_object": "luci",
+    "method": "setLocaltime",
+    "local_name": "t",
+    "format_value": "date -s \"%04d-%02d-%02d %02d:%02d:%02d\" >/dev/null",
+    "callback": [
+      107,
+      9,
+      116,
+      3
+    ],
+    "initializer": [
+      108,
+      12,
+      108,
+      44
+    ],
+    "input": [
+      108,
+      22,
+      108,
+      43
+    ],
+    "guard": [
+      110,
+      8,
+      110,
+      8
+    ],
+    "formatter": [
+      111,
+      12,
+      111,
+      117
+    ],
+    "format": [
+      111,
+      20,
+      111,
+      71
+    ],
+    "sink": [
+      111,
+      5,
+      111,
+      118
+    ],
+    "slots": [
+      {
+        "slot_index": 1,
+        "conversion": "%04d",
+        "field_name": "year",
+        "field": [
+          111,
+          74,
+          111,
+          79
+        ]
+      },
+      {
+        "slot_index": 2,
+        "conversion": "%02d",
+        "field_name": "mon",
+        "field": [
+          111,
+          82,
+          111,
+          86
+        ]
+      },
+      {
+        "slot_index": 3,
+        "conversion": "%02d",
+        "field_name": "mday",
+        "field": [
+          111,
+          89,
+          111,
+          94
+        ]
+      },
+      {
+        "slot_index": 4,
+        "conversion": "%02d",
+        "field_name": "hour",
+        "field": [
+          111,
+          97,
+          111,
+          102
+        ]
+      },
+      {
+        "slot_index": 5,
+        "conversion": "%02d",
+        "field_name": "min",
+        "field": [
+          111,
+          105,
+          111,
+          109
+        ]
+      },
+      {
+        "slot_index": 6,
+        "conversion": "%02d",
+        "field_name": "sec",
+        "field": [
+          111,
+          112,
+          111,
+          116
+        ]
+      }
+    ]
+  },
+  "links": {
+    "existing_effect_record_id": "m4:effect:luci-setLocaltime-system",
+    "existing_taint_record_id": "m4:luci-setLocaltime-request-args-system",
+    "primary_grant_ids": [
+      "policy:grant:luci-mod-system-config:ubus_http:luci.setLocaltime"
+    ],
+    "supplementary_grant_ids": [
+      "policy:grant:root:ubus_http:luci.setLocaltime"
+    ],
+    "unauthenticated_decision_id": "policy:decision:unauthenticated-setLocaltime-deny"
+  },
+  "evidence": {
+    "table_sha256": "d11882e671c1842f5c9f30b711e677bfa01a05cbdae276aceb8792a883715523",
+    "extracted_csv_sha256": "3fb20bc1dddaf67a7eed576ec9b04a623a31150498650e5c0ebb1e66893a08d7",
+    "errors_csv_sha256": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+    "source_oracle_sha256": "a7e0a95e0c77f5e1e87cf20d32144f791df980ac4dd1ed2ddf16c7663d7c8218"
+  },
+  "assumptions": [
+    "Source observation only; genuine unmodified builtins are not established.",
+    "Historical caller is synthetic; supplementary root grant does not inherit its assessment.",
+    "CSV and diagnostics are not authenticated producer execution."
+  ],
+  "unknowns": [
+    "live uhttpd/rpcd not executed",
+    "int/sprintf conversion is not modeled as a barrier",
+    "builtin runtime targets and dynamic global mutation are not resolved",
+    "target firmware, libc, timezone and helper execution are not established",
+    "source construction does not establish registration, reachability, execution or authorization"
+  ],
+  "validation_scope": "exact_pinned_source_construction_only",
+  "execution_verified": false
+}

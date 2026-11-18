@@ -1,0 +1,12 @@
+{"#select":{"columns":[
+   {"name":"c","kind":"Entity"}
+  ,{"kind":"String"}
+  ,{"name":"c","kind":"Entity"}
+  ,{"name":"kind","kind":"String"}]
+ ,"tuples":[
+   [{"label":"CallExpression","url":{"uri":"file://<WORK>/claim-002/run/main/src/usr/share/rpcd/ucode/luci","startLine":268,"startColumn":32,"endLine":268,"endColumn":94}},"getFeatures.call system at line 268",{"label":"CallExpression","url":{"uri":"file://<WORK>/claim-002/run/main/src/usr/share/rpcd/ucode/luci","startLine":268,"startColumn":32,"endLine":268,"endColumn":94}},"system"]
+  ,[{"label":"CallExpression","url":{"uri":"file://<WORK>/claim-002/run/main/src/usr/share/rpcd/ucode/luci","startLine":275,"startColumn":38,"endLine":275,"endColumn":107}},"getFeatures.call system at line 275",{"label":"CallExpression","url":{"uri":"file://<WORK>/claim-002/run/main/src/usr/share/rpcd/ucode/luci","startLine":275,"startColumn":38,"endLine":275,"endColumn":107}},"system"]
+  ,[{"label":"CallExpression","url":{"uri":"file://<WORK>/claim-002/run/main/src/usr/share/rpcd/ucode/luci","startLine":278,"startColumn":13,"endLine":278,"endColumn":50}},"getFeatures.call popen at line 278",{"label":"CallExpression","url":{"uri":"file://<WORK>/claim-002/run/main/src/usr/share/rpcd/ucode/luci","startLine":278,"startColumn":13,"endLine":278,"endColumn":50}},"popen"]
+  ,[{"label":"CallExpression","url":{"uri":"file://<WORK>/claim-002/run/main/src/usr/share/rpcd/ucode/luci","startLine":294,"startColumn":9,"endLine":294,"endColumn":38}},"getFeatures.call popen at line 294",{"label":"CallExpression","url":{"uri":"file://<WORK>/claim-002/run/main/src/usr/share/rpcd/ucode/luci","startLine":294,"startColumn":9,"endLine":294,"endColumn":38}},"popen"]
+  ,[{"label":"CallExpression","url":{"uri":"file://<WORK>/claim-002/run/main/src/usr/share/rpcd/ucode/luci","startLine":315,"startColumn":9,"endLine":315,"endColumn":41}},"getFeatures.call popen at line 315",{"label":"CallExpression","url":{"uri":"file://<WORK>/claim-002/run/main/src/usr/share/rpcd/ucode/luci","startLine":315,"startColumn":9,"endLine":315,"endColumn":41}},"popen"]]
+ }}

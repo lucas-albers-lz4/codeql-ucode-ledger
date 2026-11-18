@@ -1,0 +1,43 @@
+{
+  "table_sha256": "9d9a1a7178e7f5fbd3cb772122fe172354004fac09ce00e91647d6b35ba9d0a0",
+  "source_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+  "positive": {
+    "before": {
+      "reports/m4-block-device-exec.json": "f81718031bdfe53fdde5ee0641683a7dc564329d2c655f85fc5c8eb629b95373",
+      "reports/handler_effects.json": "2644d1187afaaf126afa71572cc980afbecd3f22592057809951491f90a436a0",
+      "policy/grants.json": "b34cdc9b9403c0ca21761ca340d6840e2b23f522486c4d6f7e139a4fa77b12bc",
+      "policy/policy_decisions.json": "abc44873c15a0a682e8527d20547a8cc9335e263696dee5749dfada6e2239f31"
+    },
+    "after": {
+      "reports/m4-block-device-exec.json": "f81718031bdfe53fdde5ee0641683a7dc564329d2c655f85fc5c8eb629b95373",
+      "reports/handler_effects.json": "2644d1187afaaf126afa71572cc980afbecd3f22592057809951491f90a436a0",
+      "policy/grants.json": "b34cdc9b9403c0ca21761ca340d6840e2b23f522486c4d6f7e139a4fa77b12bc",
+      "policy/policy_decisions.json": "abc44873c15a0a682e8527d20547a8cc9335e263696dee5749dfada6e2239f31"
+    },
+    "reimport_identical": true
+  },
+  "negatives": {
+    "wrong-row": {
+      "exit": 1,
+      "unchanged": true,
+      "artifacts": {
+        "reports/m4-block-device-exec.json": "f81718031bdfe53fdde5ee0641683a7dc564329d2c655f85fc5c8eb629b95373",
+        "reports/handler_effects.json": "2644d1187afaaf126afa71572cc980afbecd3f22592057809951491f90a436a0",
+        "policy/grants.json": "b34cdc9b9403c0ca21761ca340d6840e2b23f522486c4d6f7e139a4fa77b12bc",
+        "policy/policy_decisions.json": "abc44873c15a0a682e8527d20547a8cc9335e263696dee5749dfada6e2239f31"
+      },
+      "error": "ValueError: expected exactly the supported pinned source observation"
+    },
+    "wrong-source": {
+      "exit": 1,
+      "unchanged": true,
+      "artifacts": {
+        "reports/m4-block-device-exec.json": "f81718031bdfe53fdde5ee0641683a7dc564329d2c655f85fc5c8eb629b95373",
+        "reports/handler_effects.json": "2644d1187afaaf126afa71572cc980afbecd3f22592057809951491f90a436a0",
+        "policy/grants.json": "b34cdc9b9403c0ca21761ca340d6840e2b23f522486c4d6f7e139a4fa77b12bc",
+        "policy/policy_decisions.json": "abc44873c15a0a682e8527d20547a8cc9335e263696dee5749dfada6e2239f31"
+      },
+      "error": "ValueError: source bytes do not match pinned luci"
+    }
+  }
+}

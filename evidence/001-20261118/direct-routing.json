@@ -1,0 +1,25 @@
+{
+  "input_count": 2,
+  "plain_count": 1,
+  "markup_count": 0,
+  "markup_inconclusive_count": 0,
+  "uncertain_count": 0,
+  "excluded_count": 1,
+  "duplicate_input_count": 0,
+  "decisions": [
+    {
+      "path": "<RUN>/direct/stage/usr/share/rpcd/ucode/luci",
+      "installed_path": "usr/share/rpcd/ucode/luci",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "path": "<RUN>/direct/outside/usr/share/rpcd/ucode/luci",
+      "installed_path": "",
+      "classification": "excluded",
+      "reason": "outside_staged_root",
+      "status": "excluded"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "producer_table_sha256": "8ba3a5dc591c4672f5c91ac4da4060bddd2bc5e44aba0f2f8ed43cf6ad735579",
+  "source_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+  "cases": {
+    "current_and_reimport": {
+      "before": {
+        "reports/m4-block-device-exec.json": "f81718031bdfe53fdde5ee0641683a7dc564329d2c655f85fc5c8eb629b95373",
+        "reports/handler_effects.json": "2644d1187afaaf126afa71572cc980afbecd3f22592057809951491f90a436a0"
+      },
+      "after": {
+        "reports/m4-block-device-exec.json": "f81718031bdfe53fdde5ee0641683a7dc564329d2c655f85fc5c8eb629b95373",
+        "reports/handler_effects.json": "1cf43aeaf379061808fef927ebf204a7221100b65426bfcdfb7029f9a8d73ba6"
+      },
+      "reimport_identical": true
+    },
+    "seeded_replacement": {
+      "before": {
+        "reports/m4-block-device-exec.json": "f15ff416f3eb51cb775a315c6de4562e702d5ce7e8a17128ae459b34b3f392ca",
+        "reports/handler_effects.json": "d13111c560ee6e6d3d420bbc2320922d57eb2876fdde180bbfbb73a0695721a4"
+      },
+      "after": {
+        "reports/m4-block-device-exec.json": "f81718031bdfe53fdde5ee0641683a7dc564329d2c655f85fc5c8eb629b95373",
+        "reports/handler_effects.json": "1cf43aeaf379061808fef927ebf204a7221100b65426bfcdfb7029f9a8d73ba6"
+      },
+      "seed": "target analysis_revision set to ledger-seeded-prior"
+    },
+    "bad-source": {
+      "exit": 1,
+      "unchanged": true,
+      "artifact_sha256": {
+        "reports/m4-block-device-exec.json": "f81718031bdfe53fdde5ee0641683a7dc564329d2c655f85fc5c8eb629b95373",
+        "reports/handler_effects.json": "2644d1187afaaf126afa71572cc980afbecd3f22592057809951491f90a436a0"
+      },
+      "error_last_line": "ValueError: source bytes do not match pinned luci"
+    },
+    "bad-row": {
+      "exit": 1,
+      "unchanged": true,
+      "artifact_sha256": {
+        "reports/m4-block-device-exec.json": "f81718031bdfe53fdde5ee0641683a7dc564329d2c655f85fc5c8eb629b95373",
+        "reports/handler_effects.json": "2644d1187afaaf126afa71572cc980afbecd3f22592057809951491f90a436a0"
+      },
+      "error_last_line": "ValueError: expected exactly the supported pinned source observation"
+    }
+  }
+}

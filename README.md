@@ -6,13 +6,35 @@ The ledger connects a claim to the source it concerns, the analyzer behavior it 
 
 ## Start here
 
-The initial claims are **proposals, not completed results**:
+The initial claims and their current status are:
 
-1. [Explicit staged-root extraction](claims/001-staged-root-extraction.md): the intended extensionless ucode file is selected and extracted cleanly.
-2. [getBlockDevices query observation](claims/002-getblock-query.md): a narrow source shape yields the expected query row, with meaningful controls.
-3. [getBlockDevices producer–consumer handoff](claims/003-getblock-handoff.md): a freshly generated table is validated and imported by the OpenWrt consumer without overstating its meaning.
+1. [Explicit staged-root extraction](claims/001-staged-root-extraction.md): demonstrated for one pinned fixture and root; see the run record.
+2. [getBlockDevices query observation](claims/002-getblock-query.md): demonstrated for a pinned fixture and controls.
+3. [getBlockDevices producer–consumer handoff](claims/003-getblock-handoff.md): demonstrated for a freshly generated table and pinned consumer.
 
-Together these move from source selection through extraction, query, and consumer, but each claim stands on its own evidence. Start with **001**, then **002**, then **003**. See [the claim template](claims/TEMPLATE.md) before adding a result.
+Together these move from source selection through extraction, query, and consumer, but each claim stands on its own evidence. Claims **001–003** have bounded run records; reassess them when the selected revisions change. The [coverage portfolio](planning/coverage-portfolio.md) maps four representative paths, priorities, dependencies and additional proposed claims. See [the claim template](claims/TEMPLATE.md) before adding a result.
+
+## Claim index
+
+| Claim | Current ledger status | Scope |
+|---|---|---|
+| [001](claims/001-staged-root-extraction.md) | Demonstrated | Explicit staging root and extraction |
+| [002](claims/002-getblock-query.md) | Demonstrated | `getBlockDevices` source-table query |
+| [003](claims/003-getblock-handoff.md) | Demonstrated | `getBlockDevices` CSV handoff |
+| [004](claims/004-system-shadowing.md) | Demonstrated | Bounded `system` shadowing controls |
+| [005](claims/005-imported-callee-boundary.md) | Partial | Imported-callee observation; no fresh retained-record path identified |
+| [006](claims/006-setlocaltime-construction.md) | Demonstrated | `setLocaltime` source construction and consumer |
+| [007](claims/007-setblock-csv-handoff.md) | Demonstrated | `setBlockDetect` CSV handoff |
+| [008](claims/008-setblock-typed-handoff.md) | Demonstrated | `setBlockDetect` typed handoff |
+| [009](claims/009-luci-sys-status.md) | Demonstrated | Two LuCI status helper source shapes |
+| [010](claims/010-ubus-call-inventory.md) | Demonstrated | Direct `ubus.call` syntax |
+| [011](claims/011-same-file-jump-local.md) | Demonstrated | Experimental same-file argument-to-parameter flow |
+| [012](claims/012-backend-declaration-comparison.md) | Demonstrated | Pinned source declarations versus catalog, with oracle qualification |
+| [013](claims/013-getfeatures-direct-calls.md) | Demonstrated | `getFeatures` direct call inventory |
+| [014](claims/014-fs-binding-guard.md) | Demonstrated | Conservative `fs` binding controls |
+
+Every demonstrated status is limited to the run, inputs, controls and revisions
+in that claim. These rows are not a coverage percentage.
 
 ## Scope and status
 

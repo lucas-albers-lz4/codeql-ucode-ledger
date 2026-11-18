@@ -1,0 +1,28 @@
+{
+  "#select": {
+    "columns": [
+      {
+        "name": "f",
+        "kind": "Entity"
+      },
+      {
+        "kind": "String"
+      }
+    ],
+    "tuples": [
+      [
+        {
+          "label": "<RUN>/retained2/ordinary/src/usr/share/rpcd/ucode/luci",
+          "url": {
+            "uri": "file://<RUN>/retained2/ordinary/src/usr/share/rpcd/ucode/luci",
+            "startLine": 0,
+            "startColumn": 0,
+            "endLine": 0,
+            "endColumn": 0
+          }
+        },
+        ""
+      ]
+    ]
+  }
+}

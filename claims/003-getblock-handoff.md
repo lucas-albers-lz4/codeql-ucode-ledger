@@ -1,6 +1,6 @@
 # Claim 003: getBlockDevices producer–consumer handoff
 
-**Status: Proposed — not yet demonstrated in this ledger.**
+**Status: Demonstrated for the bounded run recorded below.**
 
 ## Claim to investigate
 
@@ -25,4 +25,40 @@ The adapter checks input and source bytes but cannot by itself authenticate that
 
 ## Run record
 
-None yet. Use [the template](TEMPLATE.md) to record actual evidence.
+See the bounded run below and [the template](TEMPLATE.md) for future runs.
+
+### Run: 2026-11-18 UTC
+
+**Status: Demonstrated for the pinned pair and stated initial states.** The
+[claim 002](002-getblock-query.md) actual output and matching source root were
+passed directly to the adapter; no CSV or source alteration was used for the
+positive. Producer `d3588ca6821fe983d240fcbb2e80692fabcc6aab`; consumer
+`a8bdef3c22c8d5ba9999baa978052b59bd22907e`. The actual table SHA-256 was
+`8ba3a5dc591c4672f5c91ac4da4060bddd2bc5e44aba0f2f8ed43cf6ad735579`;
+the source SHA-256 was
+`6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e`.
+The [consumer runner](../evidence/002-003/run-consumer.py) made separate
+no-hardlink consumer clones and invoked `python3 -B -m policy.getblock_table`
+with the actual producer table and source root. It exited 0.
+
+- The current-state import succeeded. Both target artifacts contained exactly
+  one `m4:effect:luci-getBlockDevices-popen` at `481:18–481:54`, with the
+  mounts and root grant references and `intended_access` tied to the separate
+  mounts expectation. All unrelated rows were preserved in order and grants
+  were unchanged. A second actual import left both artifacts byte-identical to
+  their first-import state. One artifact was already byte-identical before
+  the first import; the other was rewritten.
+- In a separate copy, the initial target's `analysis_revision` was deliberately
+  seeded as `ledger-seeded-prior`. The actual import replaced it in both
+  artifacts with the expected current value while preserving unrelated rows.
+  This is a controlled replacement, not a historical migration.
+- In separate copies, appending a byte to the source and changing the table's
+  start line to 482 each caused the actual adapter to exit 1; both target
+  artifacts remained byte-identical to their initial states. The
+  [summary](../evidence/002-003/consumer-summary.json) records before/after
+  digests and rejection messages. Full command logs and copies are local under
+  ignored `work/`.
+
+This binds the local observed commands and artifacts; it is not cryptographic
+attestation. The table does not prove runtime execution, taint or an
+authorization violation. Its assessment comes from separate policy context.
