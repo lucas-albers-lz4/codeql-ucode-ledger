@@ -1,0 +1,292 @@
+[
+  {
+    "stage": "direct-extractor",
+    "argv": [
+      "<BATCH>/producer/extractor-pack/tools/linux64/extractor",
+      "extract",
+      "--source-archive-dir",
+      "<BATCH>/run/direct-archive",
+      "--output-dir",
+      "<BATCH>/run/direct-trap",
+      "--file-list",
+      "<BATCH>/run/direct-inputs",
+      "--staged-root",
+      "<BATCH>/run/positive/root"
+    ],
+    "exit": 0,
+    "elapsed_s": 0.02,
+    "timing": "wall_s=0.01 user_s=0.01 sys_s=0.00 max_rss_kb=10704\n"
+  },
+  {
+    "stage": "positive-init",
+    "argv": [
+      "codeql",
+      "database",
+      "init",
+      "<BATCH>/run/positive/db",
+      "--language=ucode",
+      "--search-path=<BATCH>/producer/extractor-pack",
+      "--source-root=<BATCH>/run/positive/root"
+    ],
+    "exit": 0,
+    "elapsed_s": 0.691,
+    "timing": "wall_s=0.69 user_s=1.60 sys_s=0.15 max_rss_kb=125768\n"
+  },
+  {
+    "stage": "positive-index",
+    "argv": [
+      "codeql",
+      "database",
+      "index-files",
+      "<BATCH>/run/positive/db",
+      "--language=ucode",
+      "--include=**/rpcd/ucode/luci",
+      "--include=**/*.uc",
+      "--working-dir=<BATCH>/run/positive/root"
+    ],
+    "exit": 0,
+    "elapsed_s": 0.587,
+    "timing": "wall_s=0.58 user_s=1.14 sys_s=0.12 max_rss_kb=125088\n"
+  },
+  {
+    "stage": "positive-finalize",
+    "argv": [
+      "codeql",
+      "database",
+      "finalize",
+      "<BATCH>/run/positive/db"
+    ],
+    "exit": 0,
+    "elapsed_s": 1.65,
+    "timing": "wall_s=1.64 user_s=4.03 sys_s=0.39 max_rss_kb=338816\n"
+  },
+  {
+    "stage": "positive-extracted-query",
+    "argv": [
+      "codeql",
+      "query",
+      "run",
+      "<BATCH>/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+      "--database=<BATCH>/run/positive/db",
+      "--search-path=<BATCH>/producer/extractor-pack:<BATCH>/producer/ql/lib:<BATCH>/producer/ql/src",
+      "--output=<BATCH>/run/positive/extracted.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "exit": 0,
+    "elapsed_s": 2.155,
+    "timing": "wall_s=2.15 user_s=6.12 sys_s=0.45 max_rss_kb=300136\n"
+  },
+  {
+    "stage": "positive-extracted-decode",
+    "argv": [
+      "codeql",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--entities=url,string",
+      "<BATCH>/run/positive/extracted.bqrs"
+    ],
+    "exit": 0,
+    "elapsed_s": 0.324,
+    "timing": "wall_s=0.32 user_s=0.60 sys_s=0.07 max_rss_kb=92904\n"
+  },
+  {
+    "stage": "positive-errors-query",
+    "argv": [
+      "codeql",
+      "query",
+      "run",
+      "<BATCH>/producer/ql/src/diagnostics/ExtractionErrors.ql",
+      "--database=<BATCH>/run/positive/db",
+      "--search-path=<BATCH>/producer/extractor-pack:<BATCH>/producer/ql/lib:<BATCH>/producer/ql/src",
+      "--output=<BATCH>/run/positive/errors.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "exit": 0,
+    "elapsed_s": 2.158,
+    "timing": "wall_s=2.15 user_s=6.56 sys_s=0.45 max_rss_kb=295032\n"
+  },
+  {
+    "stage": "positive-errors-decode",
+    "argv": [
+      "codeql",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--entities=url,string",
+      "<BATCH>/run/positive/errors.bqrs"
+    ],
+    "exit": 0,
+    "elapsed_s": 0.313,
+    "timing": "wall_s=0.31 user_s=0.59 sys_s=0.06 max_rss_kb=92504\n"
+  },
+  {
+    "stage": "positive-status-query",
+    "argv": [
+      "codeql",
+      "query",
+      "run",
+      "<BATCH>/producer/ql/src/m4/LuciSysStatusExec.ql",
+      "--database=<BATCH>/run/positive/db",
+      "--search-path=<BATCH>/producer/extractor-pack:<BATCH>/producer/ql/lib:<BATCH>/producer/ql/src",
+      "--output=<BATCH>/run/positive/status.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "exit": 0,
+    "elapsed_s": 4.24,
+    "timing": "wall_s=4.23 user_s=17.07 sys_s=0.66 max_rss_kb=539396\n"
+  },
+  {
+    "stage": "positive-status-decode",
+    "argv": [
+      "codeql",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--entities=url,string",
+      "<BATCH>/run/positive/status.bqrs"
+    ],
+    "exit": 0,
+    "elapsed_s": 0.334,
+    "timing": "wall_s=0.33 user_s=0.62 sys_s=0.06 max_rss_kb=93440\n"
+  },
+  {
+    "stage": "dispatch-swapped-init",
+    "argv": [
+      "codeql",
+      "database",
+      "init",
+      "<BATCH>/run/dispatch-swapped/db",
+      "--language=ucode",
+      "--search-path=<BATCH>/producer/extractor-pack",
+      "--source-root=<BATCH>/run/dispatch-swapped/root"
+    ],
+    "exit": 0,
+    "elapsed_s": 0.682,
+    "timing": "wall_s=0.68 user_s=1.56 sys_s=0.14 max_rss_kb=125340\n"
+  },
+  {
+    "stage": "dispatch-swapped-index",
+    "argv": [
+      "codeql",
+      "database",
+      "index-files",
+      "<BATCH>/run/dispatch-swapped/db",
+      "--language=ucode",
+      "--include=**/rpcd/ucode/luci",
+      "--include=**/*.uc",
+      "--working-dir=<BATCH>/run/dispatch-swapped/root"
+    ],
+    "exit": 0,
+    "elapsed_s": 0.583,
+    "timing": "wall_s=0.58 user_s=1.13 sys_s=0.12 max_rss_kb=125368\n"
+  },
+  {
+    "stage": "dispatch-swapped-finalize",
+    "argv": [
+      "codeql",
+      "database",
+      "finalize",
+      "<BATCH>/run/dispatch-swapped/db"
+    ],
+    "exit": 0,
+    "elapsed_s": 1.654,
+    "timing": "wall_s=1.65 user_s=4.02 sys_s=0.44 max_rss_kb=339280\n"
+  },
+  {
+    "stage": "dispatch-swapped-extracted-query",
+    "argv": [
+      "codeql",
+      "query",
+      "run",
+      "<BATCH>/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+      "--database=<BATCH>/run/dispatch-swapped/db",
+      "--search-path=<BATCH>/producer/extractor-pack:<BATCH>/producer/ql/lib:<BATCH>/producer/ql/src",
+      "--output=<BATCH>/run/dispatch-swapped/extracted.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "exit": 0,
+    "elapsed_s": 1.613,
+    "timing": "wall_s=1.61 user_s=3.91 sys_s=0.35 max_rss_kb=207052\n"
+  },
+  {
+    "stage": "dispatch-swapped-extracted-decode",
+    "argv": [
+      "codeql",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--entities=url,string",
+      "<BATCH>/run/dispatch-swapped/extracted.bqrs"
+    ],
+    "exit": 0,
+    "elapsed_s": 0.323,
+    "timing": "wall_s=0.32 user_s=0.59 sys_s=0.06 max_rss_kb=93124\n"
+  },
+  {
+    "stage": "dispatch-swapped-errors-query",
+    "argv": [
+      "codeql",
+      "query",
+      "run",
+      "<BATCH>/producer/ql/src/diagnostics/ExtractionErrors.ql",
+      "--database=<BATCH>/run/dispatch-swapped/db",
+      "--search-path=<BATCH>/producer/extractor-pack:<BATCH>/producer/ql/lib:<BATCH>/producer/ql/src",
+      "--output=<BATCH>/run/dispatch-swapped/errors.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "exit": 0,
+    "elapsed_s": 1.604,
+    "timing": "wall_s=1.60 user_s=3.83 sys_s=0.36 max_rss_kb=198208\n"
+  },
+  {
+    "stage": "dispatch-swapped-errors-decode",
+    "argv": [
+      "codeql",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--entities=url,string",
+      "<BATCH>/run/dispatch-swapped/errors.bqrs"
+    ],
+    "exit": 0,
+    "elapsed_s": 0.312,
+    "timing": "wall_s=0.31 user_s=0.58 sys_s=0.06 max_rss_kb=92180\n"
+  },
+  {
+    "stage": "dispatch-swapped-status-query",
+    "argv": [
+      "codeql",
+      "query",
+      "run",
+      "<BATCH>/producer/ql/src/m4/LuciSysStatusExec.ql",
+      "--database=<BATCH>/run/dispatch-swapped/db",
+      "--search-path=<BATCH>/producer/extractor-pack:<BATCH>/producer/ql/lib:<BATCH>/producer/ql/src",
+      "--output=<BATCH>/run/dispatch-swapped/status.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "exit": 0,
+    "elapsed_s": 1.875,
+    "timing": "wall_s=1.87 user_s=5.44 sys_s=0.40 max_rss_kb=240792\n"
+  },
+  {
+    "stage": "dispatch-swapped-status-decode",
+    "argv": [
+      "codeql",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--entities=url,string",
+      "<BATCH>/run/dispatch-swapped/status.bqrs"
+    ],
+    "exit": 0,
+    "elapsed_s": 0.309,
+    "timing": "wall_s=0.30 user_s=0.59 sys_s=0.05 max_rss_kb=92396\n"
+  }
+]

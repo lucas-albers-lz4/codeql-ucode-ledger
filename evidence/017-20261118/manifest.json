@@ -1,0 +1,58 @@
+{
+  "files": [
+    {
+      "file": "commands-and-timings.json",
+      "portable_sha256": "be28589d9d32d7c705c1a61174bbea51ced9a3990018795adea3405b9c295e99",
+      "raw_run_sha256": null,
+      "normalized": false
+    },
+    {
+      "file": "consumer-report.json",
+      "portable_sha256": "3b0020c6d87664c8be7c1544e705ab14f12f1b6c29f43c6f939db341460696a0",
+      "raw_run_sha256": "3b0020c6d87664c8be7c1544e705ab14f12f1b6c29f43c6f939db341460696a0",
+      "normalized": false
+    },
+    {
+      "file": "errors.csv",
+      "portable_sha256": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+      "raw_run_sha256": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+      "normalized": false
+    },
+    {
+      "file": "extracted.csv",
+      "portable_sha256": "9a19ac135535d1ce93325b1afb320e421891784fcc86dad059b97d38a82b0f72",
+      "raw_run_sha256": "174840560136dfeec673e3840421db88a333c14d03df6a1030c9ce295ba0ecbf",
+      "normalized": true
+    },
+    {
+      "file": "prequery-expectations.json",
+      "portable_sha256": "96a3c934ef980f951337ffb9d030c010f46536f75757e4bd03525fba93d66395",
+      "raw_run_sha256": "96a3c934ef980f951337ffb9d030c010f46536f75757e4bd03525fba93d66395",
+      "normalized": false
+    },
+    {
+      "file": "producer-validation.json",
+      "portable_sha256": "dd8a9212df6a87b90f9ade832b9b871a6d6f6e24bb972e235b72fade78f0ecc3",
+      "raw_run_sha256": "dd8a9212df6a87b90f9ade832b9b871a6d6f6e24bb972e235b72fade78f0ecc3",
+      "normalized": false
+    },
+    {
+      "file": "routing.json",
+      "portable_sha256": "63dae27a185340d5776707e6ef968f75693757fae0963c49b24d9bb01430f969",
+      "raw_run_sha256": "99356d6a27a221ecf77b18c63d28c3000517246ce775dc4806007420c939a609",
+      "normalized": true
+    },
+    {
+      "file": "table-duplicate-row.csv",
+      "portable_sha256": "024a5e61d0fa14d45161b06adece452cda7846b925213b751149f4dcfc37d440",
+      "raw_run_sha256": "024a5e61d0fa14d45161b06adece452cda7846b925213b751149f4dcfc37d440",
+      "normalized": false
+    },
+    {
+      "file": "table.csv",
+      "portable_sha256": "245ad2dc1aedc9d4e0d41d83fcb0246a0990bcd70b5d0a35e1cb65100bfa8996",
+      "raw_run_sha256": "245ad2dc1aedc9d4e0d41d83fcb0246a0990bcd70b5d0a35e1cb65100bfa8996",
+      "normalized": false
+    }
+  ]
+}

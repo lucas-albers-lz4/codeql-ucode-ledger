@@ -1,0 +1,223 @@
+{
+  "selected_luci_revision": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+  "source_repository_path": "modules/luci-base/root/usr/share/rpcd/ucode/luci",
+  "installed_relative_path": "usr/share/rpcd/ucode/luci",
+  "source_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+  "consumer_lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+  "consumer_oracle_path": "policy/tests/fixtures/luci-backend-source-v1.json",
+  "consumer_oracle_sha256": "f8b5a575002a1b7937a563f96e3e2c914b64a1dc2fc0c39def09a761dca8dc0d",
+  "expected_identity_count": 21,
+  "expected_identities": [
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "getVersion",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 51,
+      "start_column": 9,
+      "end_line": 53,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "getInitList",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 58,
+      "start_column": 9,
+      "end_line": 72,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "setInitAction",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 77,
+      "start_column": 9,
+      "end_line": 95,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "getUnixtime",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 99,
+      "start_column": 9,
+      "end_line": 102,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "setLocaltime",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 107,
+      "start_column": 9,
+      "end_line": 116,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "getTimezones",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 120,
+      "start_column": 9,
+      "end_line": 133,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "getLEDs",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 137,
+      "start_column": 9,
+      "end_line": 161,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "getUSBDevices",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 165,
+      "start_column": 9,
+      "end_line": 192,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "getConntrackHelpers",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 196,
+      "start_column": 9,
+      "end_line": 220,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "getFeatures",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 224,
+      "start_column": 9,
+      "end_line": 336,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "getSwconfigFeatures",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 341,
+      "start_column": 9,
+      "end_line": 394,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "getSwconfigPortState",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 399,
+      "start_column": 9,
+      "end_line": 464,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "setPassword",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 469,
+      "start_column": 9,
+      "end_line": 476,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "getBlockDevices",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 480,
+      "start_column": 9,
+      "end_line": 527,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "setBlockDetect",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 531,
+      "start_column": 9,
+      "end_line": 533,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "getMountPoints",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 537,
+      "start_column": 9,
+      "end_line": 566,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "getRealtimeStats",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 571,
+      "start_column": 9,
+      "end_line": 602,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "getConntrackList",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 606,
+      "start_column": 9,
+      "end_line": 608,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "getProcessList",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 612,
+      "start_column": 9,
+      "end_line": 614,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "getBuiltinEthernetPorts",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 618,
+      "start_column": 9,
+      "end_line": 657,
+      "end_column": 3
+    },
+    {
+      "observation_kind": "source_declared_callback",
+      "ubus_object": "luci",
+      "method": "getOdhcp6cStats",
+      "source_path": "usr/share/rpcd/ucode/luci",
+      "start_line": 661,
+      "start_column": 9,
+      "end_line": 682,
+      "end_column": 3
+    }
+  ],
+  "expectation_method": "Before CodeQL execution, matched every consumer-oracle method key, call:function start line and function-closing line against the exact pinned upstream source bytes. The existing oracle's provenance is not blinded or independently reviewed in this run."
+}

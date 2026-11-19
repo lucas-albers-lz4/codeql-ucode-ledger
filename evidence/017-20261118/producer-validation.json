@@ -1,0 +1,21 @@
+{
+  "validation_status": "passed",
+  "expected_rows": 21,
+  "actual_rows": 21,
+  "successful_extraction_rows": 1,
+  "extraction_error_rows": 0,
+  "source_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+  "table_sha256": "245ad2dc1aedc9d4e0d41d83fcb0246a0990bcd70b5d0a35e1cb65100bfa8996",
+  "table_identity_multiset_matches": true,
+  "actual_unique_identity_count": 21,
+  "expected_fields": [
+    "observation_kind",
+    "ubus_object",
+    "method",
+    "source_path",
+    "start_line",
+    "start_column",
+    "end_line",
+    "end_column"
+  ]
+}

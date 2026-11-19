@@ -48,3 +48,70 @@ and [producer contract](https://github.com/lucas-albers-lz4/codeql-ucode/blob/d3
 record further limitations. Existing broad ownership remains with
 [ucode #54](https://github.com/lucas-albers-lz4/codeql-ucode/issues/54) and
 [OpenWrt #64](https://github.com/lucas-albers-lz4/codeql-openwrt/issues/64).
+
+### Fresh producer-to-consumer handoff: 2026-11-18 UTC
+
+**Demonstrated for the pinned source and comparison contract.** This follow-up
+used clean detached checkouts of producer `094a163db1138c83820197180501bd7c78bd9051`,
+consumer `faf95a4934ce0ad73a9d361742ab57f9eb514ea8`, and LuCI
+`b2e0be4b46ec0fd43394c081fa7c50657af14011`. The lock, profile, grants and
+consumer source/grant-oracle hashes are in the
+[portable receipt](../evidence/017-20261118/commands-and-timings.json). The
+actual upstream `luci` source was reconstructed at
+`usr/share/rpcd/ucode/luci` from the locked LuCI checkout; its SHA-256 is
+`6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e`.
+This was not a package build. Before querying, the consumer oracle's 21 method
+keys, `call: function` starts, and closing lines were checked against those
+pinned bytes. The oracle is not blinded or independently re-reviewed here.
+
+The current producer query hash remains
+`58d11ee8bf4f27db2dec4e34292d5155874f035bac8b98121c9ee8d85225a298`.
+A fresh database routed the exact one-file input as
+`rpcd_raw_mode_full_path` / `plain_route_selected`; successful extraction had
+one exact file and the error query had zero rows. The actual query and decode
+exited 0 and produced 21 unique rows matching the source-first identity/span
+multiset. Table SHA-256:
+`245ad2dc1aedc9d4e0d41d83fcb0246a0990bcd70b5d0a35e1cb65100bfa8996`.
+The [actual decoded table](../evidence/017-20261118/table.csv),
+[normalized diagnostics](../evidence/017-20261118/extracted.csv),
+[errors](../evidence/017-20261118/errors.csv),
+[routing](../evidence/017-20261118/routing.json), and
+[pre-query expectations](../evidence/017-20261118/prequery-expectations.json)
+are retained. Temporary paths are normalized in the diagnostic/routing copies;
+manifest hashes link those copies to raw run artifacts under ignored `work/`.
+
+Passed the actual table, actual successful-file/error CSVs and matching source
+root to `python3 -B -m policy.backend_declarations` in the current disposable
+consumer checkout. Exit 0; the
+[consumer report](../evidence/017-20261118/consumer-report.json) contains 21
+declarations, 18 represented methods, 38 grant rows, three
+source-only methods (`getInitList`, `getUSBDevices`, `setInitAction`) and no
+grant-only methods. Its `getFeatures` declaration is associated with the
+unauthenticated and root grant IDs in the current catalog. A
+[duplicate-row control table](../evidence/017-20261118/table-duplicate-row.csv)
+changed only table multiplicity; the actual comparator exited 1, emitted no
+success stdout, and reported `source identity/span multiset mismatch`.
+Consumer context files and worktree were unchanged. The report's
+`producer_revision_reference` (`d54c17a…`) and `consumer_baseline_reference`
+remain historical constants, not the actual run pins or execution evidence;
+the local commands, outputs and statuses are recorded separately.
+
+The producer extractor's `cargo test` passed 10 tests. On the current consumer,
+16 backend-comparison tests and 33 handler-effect-join tests also passed. The
+latter cover the consumer change since its previous batch pin, but they exercise
+retained `join_policy_grants` rows, not this fresh declaration table. The
+consumer delta since `c45d0c4…` changed only that test module; its comparator,
+grants, lock, profile and two declaration oracles were unchanged. Current
+[ucode #54](https://github.com/lucas-albers-lz4/codeql-ucode/issues/54),
+[OpenWrt #64](https://github.com/lucas-albers-lz4/codeql-openwrt/issues/64),
+and [OpenWrt #113](https://github.com/lucas-albers-lz4/codeql-openwrt/issues/113)
+keep broader query-family promotion and retained grant-join work in their
+existing owners. This run closes none of them.
+
+Build, pack-install, extraction, query, consumer and focused-test timings, peak
+RSS where measured, exact commands and the setup-only failed legacy patch
+attempt are documented in the receipt. CodeQL was 2.27.4; Rust/Cargo 1.100.0;
+Python 3.15.2. The run used a copied Cargo cache but run-owned databases,
+CodeQL package cache and output paths. The consumer comparison is non-writing;
+this is evidence of a local fresh handoff, not cryptographic attestation,
+policy correctness, runtime registration, reachability or authorization.
