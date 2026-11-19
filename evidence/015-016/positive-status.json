@@ -1,0 +1,9 @@
+{"#select":{"columns":[
+   {"name":"c","kind":"Entity"}
+  ,{"kind":"String"}
+  ,{"name":"c","kind":"Entity"}
+  ,{"kind":"String"}]
+ ,"tuples":[
+   [{"label":"CallExpression","url":{"uri":"file://<BATCH>/run/positive/root/usr/share/ucode/luci/sys.uc","startLine":7,"startColumn":14,"endLine":7,"endColumn":43}},"getProcessList via process_list popen /bin/busybox top -bn1 at line 7",{"label":"CallExpression","url":{"uri":"file://<BATCH>/run/positive/root/usr/share/ucode/luci/sys.uc","startLine":7,"startColumn":14,"endLine":7,"endColumn":43}},"popen"]
+  ,[{"label":"CallExpression","url":{"uri":"file://<BATCH>/run/positive/root/usr/share/ucode/luci/sys.uc","startLine":49,"startColumn":10,"endLine":49,"endColumn":57}},"getConntrackList via conntrack_list popen /usr/sbin/conntrack -L -o extended at line 49",{"label":"CallExpression","url":{"uri":"file://<BATCH>/run/positive/root/usr/share/ucode/luci/sys.uc","startLine":49,"startColumn":10,"endLine":49,"endColumn":57}},"popen"]]
+ }}

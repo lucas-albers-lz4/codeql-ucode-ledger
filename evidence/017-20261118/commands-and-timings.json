@@ -1,0 +1,719 @@
+{
+  "run_utc": "2026-11-18",
+  "repositories": {
+    "producer": {
+      "commit": "094a163db1138c83820197180501bd7c78bd9051",
+      "dirty": false
+    },
+    "consumer": {
+      "commit": "faf95a4934ce0ad73a9d361742ab57f9eb514ea8",
+      "dirty": false
+    },
+    "luci": {
+      "commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+      "dirty": false
+    },
+    "grammar": {
+      "commit": "4a243af329fae2f4ff01e0fc80133cbab8314600"
+    }
+  },
+  "environment": {
+    "os": "Linux-7.0.0-43-generic-x86_64-with-glibc2.39",
+    "codeql": {
+      "version": "2.27.4",
+      "sha": "7eb0047c90fffaeb822564a0ac56d585dc871f30"
+    },
+    "python": "3.15.2",
+    "rustc": "1.100.0",
+    "cargo": "1.100.0",
+    "initial_resources_checked": {
+      "available_disk_gib": 50,
+      "available_memory_gib": 22,
+      "cpus": 16
+    }
+  },
+  "cache_provenance": "Cargo cache was copied into the run-owned CARGO_HOME from work/batch-20261118/cargo-home; CodeQL package cache and all writable databases/artifacts were run-owned under this run. Source checkout/acquisition elapsed time was not separately measured.",
+  "context_hashes": {
+    "corpus_lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile_sha256": "16a5468601be4b23f45795a43deedd6fda6726ff7503abb9d80e493d16808ac5",
+    "grants_sha256": "b34cdc9b9403c0ca21761ca340d6840e2b23f522486c4d6f7e139a4fa77b12bc",
+    "consumer_source_oracle_sha256": "f8b5a575002a1b7937a563f96e3e2c914b64a1dc2fc0c39def09a761dca8dc0d",
+    "consumer_grant_oracle_sha256": "a8749b7e302f1d7ee10154e6ca80492c758d6f3667f0946321d4a0921e1c9a62",
+    "consumer_comparator_sha256": "52955bdb11eb48125fe648d57df5650087e8f3434ab6ae4157db155876b56994",
+    "producer_query_sha256": "58d11ee8bf4f27db2dec4e34292d5155874f035bac8b98121c9ee8d85225a298",
+    "extractor_binary_sha256": "3d48a4e6c0ac0c0e1141e0d2f5d35aeee60dae655416ea4a947c16e13ff6981e",
+    "cargo_lock_sha256": "20678c3cbb29632a9369bdb3c735af9ee63c9443879db38847fbda9813aa0a77"
+  },
+  "consumer_delta_since_previous_batch_pin": "M\tpolicy/tests/test_handler_effect_joins.py",
+  "source_selection": {
+    "selected_luci_revision": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "source_repository_path": "modules/luci-base/root/usr/share/rpcd/ucode/luci",
+    "installed_relative_path": "usr/share/rpcd/ucode/luci",
+    "source_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+    "consumer_lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "consumer_oracle_path": "policy/tests/fixtures/luci-backend-source-v1.json",
+    "consumer_oracle_sha256": "f8b5a575002a1b7937a563f96e3e2c914b64a1dc2fc0c39def09a761dca8dc0d",
+    "expected_identity_count": 21,
+    "expected_identities": [
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "getVersion",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 51,
+        "start_column": 9,
+        "end_line": 53,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "getInitList",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 58,
+        "start_column": 9,
+        "end_line": 72,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "setInitAction",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 77,
+        "start_column": 9,
+        "end_line": 95,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "getUnixtime",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 99,
+        "start_column": 9,
+        "end_line": 102,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "setLocaltime",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 107,
+        "start_column": 9,
+        "end_line": 116,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "getTimezones",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 120,
+        "start_column": 9,
+        "end_line": 133,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "getLEDs",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 137,
+        "start_column": 9,
+        "end_line": 161,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "getUSBDevices",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 165,
+        "start_column": 9,
+        "end_line": 192,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "getConntrackHelpers",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 196,
+        "start_column": 9,
+        "end_line": 220,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "getFeatures",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 224,
+        "start_column": 9,
+        "end_line": 336,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "getSwconfigFeatures",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 341,
+        "start_column": 9,
+        "end_line": 394,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "getSwconfigPortState",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 399,
+        "start_column": 9,
+        "end_line": 464,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "setPassword",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 469,
+        "start_column": 9,
+        "end_line": 476,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "getBlockDevices",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 480,
+        "start_column": 9,
+        "end_line": 527,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "setBlockDetect",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 531,
+        "start_column": 9,
+        "end_line": 533,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "getMountPoints",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 537,
+        "start_column": 9,
+        "end_line": 566,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "getRealtimeStats",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 571,
+        "start_column": 9,
+        "end_line": 602,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "getConntrackList",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 606,
+        "start_column": 9,
+        "end_line": 608,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "getProcessList",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 612,
+        "start_column": 9,
+        "end_line": 614,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "getBuiltinEthernetPorts",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 618,
+        "start_column": 9,
+        "end_line": 657,
+        "end_column": 3
+      },
+      {
+        "observation_kind": "source_declared_callback",
+        "ubus_object": "luci",
+        "method": "getOdhcp6cStats",
+        "source_path": "usr/share/rpcd/ucode/luci",
+        "start_line": 661,
+        "start_column": 9,
+        "end_line": 682,
+        "end_column": 3
+      }
+    ],
+    "expectation_method": "Before CodeQL execution, matched every consumer-oracle method key, call:function start line and function-closing line against the exact pinned upstream source bytes. The existing oracle's provenance is not blinded or independently reviewed in this run."
+  },
+  "producer_run": [
+    {
+      "stage": "database-init",
+      "argv": [
+        "codeql",
+        "database",
+        "init",
+        "<RUN>/database",
+        "--language=ucode",
+        "--search-path=<PRODUCER>/extractor-pack",
+        "--source-root=<RUN>/source-root"
+      ],
+      "exit_status": 0,
+      "elapsed_monotonic_s": 0.674,
+      "gnu_time": "wall_s=0.67 user_s=1.56 sys_s=0.13 max_rss_kb=125076",
+      "stdout": "database-init.stdout",
+      "stderr": "database-init.stderr"
+    },
+    {
+      "stage": "database-index",
+      "argv": [
+        "codeql",
+        "database",
+        "index-files",
+        "<RUN>/database",
+        "--language=ucode",
+        "--include=**/rpcd/ucode/luci",
+        "--working-dir=<RUN>/source-root"
+      ],
+      "exit_status": 0,
+      "elapsed_monotonic_s": 0.559,
+      "gnu_time": "wall_s=0.55 user_s=1.14 sys_s=0.08 max_rss_kb=125012",
+      "stdout": "database-index.stdout",
+      "stderr": "database-index.stderr"
+    },
+    {
+      "stage": "database-finalize",
+      "argv": [
+        "codeql",
+        "database",
+        "finalize",
+        "<RUN>/database"
+      ],
+      "exit_status": 0,
+      "elapsed_monotonic_s": 1.602,
+      "gnu_time": "wall_s=1.60 user_s=3.78 sys_s=0.42 max_rss_kb=324868",
+      "stdout": "database-finalize.stdout",
+      "stderr": "database-finalize.stderr"
+    },
+    {
+      "stage": "extracted-query",
+      "argv": [
+        "codeql",
+        "query",
+        "run",
+        "<PRODUCER>/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=<RUN>/database",
+        "--search-path=<PRODUCER>/extractor-pack:<PRODUCER>/ql/lib:<PRODUCER>/ql/src",
+        "--output=<RUN>/extracted.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit_status": 0,
+      "elapsed_monotonic_s": 2.182,
+      "gnu_time": "wall_s=2.18 user_s=6.07 sys_s=0.46 max_rss_kb=348376",
+      "stdout": "extracted-query.stdout",
+      "stderr": "extracted-query.stderr"
+    },
+    {
+      "stage": "extracted-decode",
+      "argv": [
+        "codeql",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "<RUN>/extracted.bqrs"
+      ],
+      "exit_status": 0,
+      "elapsed_monotonic_s": 0.303,
+      "gnu_time": "wall_s=0.30 user_s=0.58 sys_s=0.05 max_rss_kb=90232",
+      "stdout": "extracted-decode.stdout",
+      "stderr": "extracted-decode.stderr"
+    },
+    {
+      "stage": "errors-query",
+      "argv": [
+        "codeql",
+        "query",
+        "run",
+        "<PRODUCER>/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=<RUN>/database",
+        "--search-path=<PRODUCER>/extractor-pack:<PRODUCER>/ql/lib:<PRODUCER>/ql/src",
+        "--output=<RUN>/errors.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit_status": 0,
+      "elapsed_monotonic_s": 2.19,
+      "gnu_time": "wall_s=2.18 user_s=6.55 sys_s=0.48 max_rss_kb=385296",
+      "stdout": "errors-query.stdout",
+      "stderr": "errors-query.stderr"
+    },
+    {
+      "stage": "errors-decode",
+      "argv": [
+        "codeql",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "<RUN>/errors.bqrs"
+      ],
+      "exit_status": 0,
+      "elapsed_monotonic_s": 0.307,
+      "gnu_time": "wall_s=0.30 user_s=0.58 sys_s=0.06 max_rss_kb=90440",
+      "stdout": "errors-decode.stdout",
+      "stderr": "errors-decode.stderr"
+    },
+    {
+      "stage": "declarations-query",
+      "argv": [
+        "codeql",
+        "query",
+        "run",
+        "<PRODUCER>/ql/src/m4/LuciBackendDeclarations.ql",
+        "--database=<RUN>/database",
+        "--search-path=<PRODUCER>/extractor-pack:<PRODUCER>/ql/lib:<PRODUCER>/ql/src",
+        "--output=<RUN>/declarations.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit_status": 0,
+      "elapsed_monotonic_s": 4.214,
+      "gnu_time": "wall_s=4.21 user_s=13.85 sys_s=0.67 max_rss_kb=564064",
+      "stdout": "declarations-query.stdout",
+      "stderr": "declarations-query.stderr"
+    },
+    {
+      "stage": "declarations-decode",
+      "argv": [
+        "codeql",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "<RUN>/declarations.bqrs"
+      ],
+      "exit_status": 0,
+      "elapsed_monotonic_s": 0.306,
+      "gnu_time": "wall_s=0.30 user_s=0.59 sys_s=0.05 max_rss_kb=90436",
+      "stdout": "declarations-decode.stdout",
+      "stderr": "declarations-decode.stderr"
+    },
+    {
+      "stage": "independent-output-check",
+      "argv": [
+        "python3",
+        "<RUN>/validate-producer-output.py"
+      ],
+      "exit_status": 0,
+      "result": {
+        "expected_rows": 21,
+        "actual_rows": 21,
+        "successful_file_count": 1,
+        "extraction_error_count": 0
+      }
+    }
+  ],
+  "consumer_run": {
+    "consumer_commit": "faf95a4934ce0ad73a9d361742ab57f9eb514ea8",
+    "consumer_worktree_clean_before_after": true,
+    "tracked_context_hashes_unchanged": true,
+    "positive": {
+      "stage": "consumer-positive",
+      "argv": [
+        "<PYTHON_3.15>",
+        "-B",
+        "-m",
+        "policy.backend_declarations",
+        "--table",
+        "<RUN>/table.csv",
+        "--extracted",
+        "<RUN>/extracted.csv",
+        "--errors",
+        "<RUN>/errors.csv",
+        "--source-root",
+        "<RUN>/source-root"
+      ],
+      "exit_status": 0,
+      "elapsed_monotonic_s": 0.053,
+      "gnu_time": "wall_s=0.05 user_s=0.04 sys_s=0.01 max_rss_kb=22236",
+      "stdout_sha256": "3b0020c6d87664c8be7c1544e705ab14f12f1b6c29f43c6f939db341460696a0",
+      "stdout_bytes": 8341,
+      "stderr": ""
+    },
+    "positive_summary": {
+      "declarations": 21,
+      "represented_methods": 18,
+      "grant_rows": 38,
+      "source_only": 3,
+      "grant_only": 0
+    },
+    "positive_source_only": [
+      "getInitList",
+      "getUSBDevices",
+      "setInitAction"
+    ],
+    "consumer_report_sha256": "3b0020c6d87664c8be7c1544e705ab14f12f1b6c29f43c6f939db341460696a0",
+    "input_sha256": {
+      "producer_table": "245ad2dc1aedc9d4e0d41d83fcb0246a0990bcd70b5d0a35e1cb65100bfa8996",
+      "duplicate_row_control_table": "024a5e61d0fa14d45161b06adece452cda7846b925213b751149f4dcfc37d440",
+      "extracted_diagnostics": "174840560136dfeec673e3840421db88a333c14d03df6a1030c9ce295ba0ecbf",
+      "error_diagnostics": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+      "source": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e"
+    },
+    "duplicate_row_control": {
+      "stage": "consumer-duplicate-row-control",
+      "argv": [
+        "<PYTHON_3.15>",
+        "-B",
+        "-m",
+        "policy.backend_declarations",
+        "--table",
+        "<RUN>/table-duplicate-row.csv",
+        "--extracted",
+        "<RUN>/extracted.csv",
+        "--errors",
+        "<RUN>/errors.csv",
+        "--source-root",
+        "<RUN>/source-root"
+      ],
+      "exit_status": 1,
+      "elapsed_monotonic_s": 0.058,
+      "gnu_time": "Command exited with non-zero status 1\nwall_s=0.05 user_s=0.04 sys_s=0.01 max_rss_kb=21972",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 0,
+      "stderr": "comparison failed: source identity/span multiset mismatch\n"
+    },
+    "negative_control_changed_only_table_multiplicity": true,
+    "control_row_count": 22,
+    "report_metadata_limit": "Report producer_revision_reference is a historical constant, not the actual run pin or execution evidence; actual producer SHA and command receipts are recorded separately."
+  },
+  "setup": [
+    {
+      "stage": "clone-producer",
+      "argv": [
+        "git",
+        "clone",
+        "--quiet",
+        "https://github.com/lucas-albers-lz4/codeql-ucode.git",
+        "<WORK>/codeql-ucode"
+      ],
+      "exit_status": 0,
+      "gnu_time": "not_measured"
+    },
+    {
+      "stage": "checkout-producer",
+      "argv": [
+        "git",
+        "-C",
+        "<PRODUCER>",
+        "checkout",
+        "--detach",
+        "094a163db1138c83820197180501bd7c78bd9051"
+      ],
+      "exit_status": 0,
+      "gnu_time": "not_measured"
+    },
+    {
+      "stage": "clone-consumer",
+      "argv": [
+        "git",
+        "clone",
+        "--quiet",
+        "https://github.com/lucas-albers-lz4/codeql-openwrt.git",
+        "<WORK>/codeql-openwrt"
+      ],
+      "exit_status": 0,
+      "gnu_time": "not_measured"
+    },
+    {
+      "stage": "checkout-consumer",
+      "argv": [
+        "git",
+        "-C",
+        "<CONSUMER>",
+        "checkout",
+        "--detach",
+        "faf95a4934ce0ad73a9d361742ab57f9eb514ea8"
+      ],
+      "exit_status": 0,
+      "gnu_time": "not_measured"
+    },
+    {
+      "stage": "clone-luci",
+      "argv": [
+        "git",
+        "clone",
+        "https://github.com/openwrt/luci.git",
+        "<WORK>/upstream/luci"
+      ],
+      "exit_status": 0,
+      "gnu_time": "not_measured"
+    },
+    {
+      "stage": "checkout-luci",
+      "argv": [
+        "git",
+        "-C",
+        "<UPSTREAM_LUCI>",
+        "checkout",
+        "--detach",
+        "b2e0be4b46ec0fd43394c081fa7c50657af14011"
+      ],
+      "exit_status": 0,
+      "gnu_time": "not_measured"
+    },
+    {
+      "stage": "copy-cargo-cache",
+      "argv": [
+        "cp",
+        "-a",
+        "work/batch-20261118/cargo-home/.",
+        "<RUN>/cargo-home/"
+      ],
+      "exit_status": 0,
+      "gnu_time": "not_measured"
+    },
+    {
+      "stage": "stage-source-and-prequery-expectations",
+      "argv": [
+        "python3",
+        "<RUN>/prepare-expectations.py"
+      ],
+      "exit_status": 0,
+      "gnu_time": "not_measured"
+    },
+    {
+      "stage": "grammar-checkout",
+      "argv": [
+        "bash",
+        "scripts/clone-grammar.sh"
+      ],
+      "exit_status": 0,
+      "gnu_time": "wall_s=1.54 user_s=0.10 sys_s=0.06 max_rss_kb=16248"
+    },
+    {
+      "stage": "legacy-patch-attempt",
+      "argv": [
+        "bash",
+        "patches/apply.sh"
+      ],
+      "exit_status": 1,
+      "gnu_time": "no GNU time measurement emitted; exit status 1"
+    },
+    {
+      "stage": "restore-after-legacy-patch",
+      "argv": [
+        "git checkout -- extractor/src/extractor.rs extractor/src/generator.rs; rm -f extractor/src/extractor.rs.orig extractor/src/extractor.rs.rej extractor/src/generator.rs.rej"
+      ],
+      "exit_status": 0,
+      "gnu_time": "not_measured"
+    },
+    {
+      "stage": "cargo-tests",
+      "argv": [
+        "cargo",
+        "test",
+        "-p",
+        "codeql-extractor-ucode",
+        "--offline",
+        "--",
+        "--nocapture"
+      ],
+      "exit_status": 0,
+      "gnu_time": "wall_s=9.25 user_s=75.11 sys_s=9.48 max_rss_kb=457692",
+      "result": "10 tests passed; 0 failed"
+    },
+    {
+      "stage": "extractor-pack-build",
+      "argv": [
+        "bash",
+        "scripts/create-extractor-pack.sh"
+      ],
+      "exit_status": 0,
+      "gnu_time": "wall_s=17.58 user_s=194.09 sys_s=11.64 max_rss_kb=447460"
+    },
+    {
+      "stage": "install-ql-lib-pack",
+      "argv": [
+        "codeql",
+        "pack",
+        "install",
+        "<PRODUCER>/ql/lib"
+      ],
+      "exit_status": 0,
+      "gnu_time": "wall_s=9.59 user_s=2.34 sys_s=0.21 max_rss_kb=163060"
+    },
+    {
+      "stage": "install-ql-src-pack",
+      "argv": [
+        "codeql",
+        "pack",
+        "install",
+        "<PRODUCER>/ql/src"
+      ],
+      "exit_status": 0,
+      "gnu_time": "wall_s=7.26 user_s=2.26 sys_s=0.19 max_rss_kb=161060"
+    }
+  ],
+  "consumer_unit_tests": [
+    {
+      "stage": "backend-declarations-tests",
+      "argv": [
+        "env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "policy.tests.test_backend_declarations",
+        "-v"
+      ],
+      "exit_status": 0,
+      "gnu_time": "wall_s=1.37 user_s=1.08 sys_s=0.28 max_rss_kb=41308",
+      "result": "16 tests, OK"
+    },
+    {
+      "stage": "handler-effect-join-tests",
+      "argv": [
+        "env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "policy.tests.test_handler_effect_joins",
+        "-v"
+      ],
+      "exit_status": 0,
+      "gnu_time": "wall_s=0.12 user_s=0.11 sys_s=0.01 max_rss_kb=32964",
+      "result": "33 tests, OK"
+    }
+  ],
+  "setup_and_validation_failures": "The initial legacy patches/apply.sh attempt returned 1 because patch 0001 no longer matched current source (the required changes were already present); temporary edits/rejects were restored/removed before tests/build, and the final producer worktree was clean. The first post-query identity validator also returned nonzero because it compared CSV decimal strings with JSON integers; a corrected type-normalizing validator passed against the unchanged raw output. No extraction/query was rerun or altered for that correction.",
+  "consumer_delta_limit": "Since prior consumer pin c45d0c4..., HEAD adds only policy/tests/test_handler_effect_joins.py. backend_declarations.py, grants, lock, profile and its two oracle fixtures are byte-identical across those pins. The fresh table-to-comparator handoff does not test the separate join_policy_grants path for retained getFeatures direct-exec rows.",
+  "issue_scope": "ucode #54 latest census says bounded slices are gated and broad families lack implementations; OpenWrt #64 remains per-family promotion work; OpenWrt #113 scopes the retained direct-exec grant-join test changes. This run closes none of those issues.",
+  "provenance_limit": "The consumer JSON report contains historical producer_revision_reference and consumer_baseline_reference constants; neither is the actual run pin or proof of execution. Actual command receipts here bind this local run; no cryptographic attestation is claimed.",
+  "raw_artifact_location": "Raw BQRS, database, full logs and unnormalized output remain under ignored work/handoff-012-20261118/run and are not portable evidence.",
+  "path_normalization": "extracted.csv and routing.json replace the local source root with <SOURCE_ROOT>; commands-and-timings.json replaces disposable checkout/run paths and the Python executable path with named placeholders. Query table and consumer report bytes are unchanged. See raw outputs in the run-owned ignored directory for the exact local-path versions."
+}

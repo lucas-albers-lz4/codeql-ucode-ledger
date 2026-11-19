@@ -1,12 +1,15 @@
 # Coverage claim portfolio
 
 Inventory date: 2026-11-18 UTC. This is a prioritized working map, not a
-coverage denominator or a new test result. It draws on isolated snapshots of
+coverage denominator or a new test result. See [the later pinned-source batch](batch-20261118.md) for newer revisions and claims 015–016. It draws on isolated snapshots of
 [ucode `d3588ca`](https://github.com/lucas-albers-lz4/codeql-ucode/tree/d3588ca6821fe983d240fcbb2e80692fabcc6aab)
 and [OpenWrt `a8bdef3`](https://github.com/lucas-albers-lz4/codeql-openwrt/tree/a8bdef3c22c8d5ba9999baa978052b59bd22907e),
 and the open issue titles/bodies inspected on that date. These were the remote
 `main` heads when checked; assess deltas and issue changes for any later run.
 The projects remain the owners of their contracts, implementation and issues.
+Claim 012 additionally records a fresh declaration-query-to-consumer comparison
+at producer `094a163` / consumer `faf95a4`; it is scoped to that run and does
+not exercise the separate retained direct-exec grant-join path.
 
 ## Selection heuristic
 

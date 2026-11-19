@@ -6,6 +6,8 @@ The ledger connects a claim to the source it concerns, the analyzer behavior it 
 
 ## Start here
 
+For the next batch, read [PLAN.md](PLAN.md); agent workflow guidance is in [AGENTS.md](AGENTS.md).
+
 The initial claims and their current status are:
 
 1. [Explicit staged-root extraction](claims/001-staged-root-extraction.md): demonstrated for one pinned fixture and root; see the run record.
@@ -32,6 +34,8 @@ Together these move from source selection through extraction, query, and consume
 | [012](claims/012-backend-declaration-comparison.md) | Demonstrated | Pinned source declarations versus catalog, with oracle qualification |
 | [013](claims/013-getfeatures-direct-calls.md) | Demonstrated | `getFeatures` direct call inventory |
 | [014](claims/014-fs-binding-guard.md) | Demonstrated | Conservative `fs` binding controls |
+| [015](claims/015-pinned-luci-source-extraction.md) | Demonstrated | Three pinned upstream LuCI sources extracted |
+| [016](claims/016-pinned-luci-status-query.md) | Demonstrated | Status source-shape query on the upstream slice |
 
 Every demonstrated status is limited to the run, inputs, controls and revisions
 in that claim. These rows are not a coverage percentage.
