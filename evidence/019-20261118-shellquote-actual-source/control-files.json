@@ -1,0 +1,162 @@
+{
+  "expected_selected_paths": [
+    "quote_bad_ash_c.uc",
+    "quote_bad_assignment.uc",
+    "quote_bad_bash_c.uc",
+    "quote_bad_conditional.uc",
+    "quote_bad_echo",
+    "quote_bad_import.uc",
+    "quote_bad_local.uc",
+    "quote_bad_parameter.uc",
+    "quote_bad_pipe.uc",
+    "quote_bad_prefix_join.uc",
+    "quote_bad_separator.uc",
+    "quote_bad_separator_space.uc",
+    "quote_bad_sh_c",
+    "quote_bad_sh_c_suffix.uc",
+    "quote_bad_shell_flags.uc",
+    "quote_bad_shell_path.uc",
+    "quote_bad_shell_wrapper.uc",
+    "quote_bad_suffix",
+    "quote_bad_suffix_join.uc",
+    "quote_bad_trailing_substitution.uc",
+    "quote_bad_transform.uc",
+    "quote_bad_unknown_command.uc",
+    "quote_bad_variable.uc",
+    "quote_exe",
+    "quote_ok",
+    "quote_ok_echo.uc",
+    "quote_ok_printf.uc",
+    "taint_neg",
+    "taint_pos",
+    "usr/share/rpcd/ucode/luci",
+    "usr/share/ucode/luci/sys.uc"
+  ],
+  "observed_successful_files": [
+    {
+      "path": "quote_bad_ash_c.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_assignment.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_bash_c.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_conditional.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_echo",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_import.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_local.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_parameter.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_pipe.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_prefix_join.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_separator.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_separator_space.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_sh_c",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_sh_c_suffix.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_shell_flags.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_shell_path.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_shell_wrapper.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_suffix",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_suffix_join.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_trailing_substitution.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_transform.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_unknown_command.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_bad_variable.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_exe",
+      "message": ""
+    },
+    {
+      "path": "quote_ok",
+      "message": ""
+    },
+    {
+      "path": "quote_ok_echo.uc",
+      "message": ""
+    },
+    {
+      "path": "quote_ok_printf.uc",
+      "message": ""
+    },
+    {
+      "path": "taint_neg",
+      "message": ""
+    },
+    {
+      "path": "taint_pos",
+      "message": ""
+    },
+    {
+      "path": "usr/share/rpcd/ucode/luci",
+      "message": ""
+    },
+    {
+      "path": "usr/share/ucode/luci/sys.uc",
+      "message": ""
+    }
+  ],
+  "exact_multiset_match": true
+}

@@ -1,0 +1,8 @@
+test_existing_read_write_default_and_nul_semantics (policy.tests.test_login_negation_whitespace.LoginNegationWhitespaceTests.test_existing_read_write_default_and_nul_semantics) ... ok
+test_integrated_session_and_gate_follow_native_decision (policy.tests.test_login_negation_whitespace.LoginNegationWhitespaceTests.test_integrated_session_and_gate_follow_native_decision) ... ok
+test_negation_whitespace_matches_pinned_rpcd (policy.tests.test_login_negation_whitespace.LoginNegationWhitespaceTests.test_negation_whitespace_matches_pinned_rpcd) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.044s
+
+OK

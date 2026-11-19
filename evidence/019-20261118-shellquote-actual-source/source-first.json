@@ -1,0 +1,191 @@
+{
+  "luci_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+  "producer_commit": "8376a6d72a2879de24e68a28c6ef1e02b319df83",
+  "consumer_commit": "1d025213c102dfa68a0f1a5cb46de65f5b0c4e33",
+  "corpus_lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+  "source_path": "modules/luci-base/root/usr/share/rpcd/ucode/luci",
+  "source_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+  "fixture_mirror_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+  "source_equals_producer_fixture_byte_for_byte": true,
+  "query_sha256": "a94a4cd20c532a11c0544b3ba24b1e07f3ff6f9554b4904a6632731547bdc6d5",
+  "model_sha256": "a24ea29d142a80c005daccb28f91da3850feb719953ca0de640ea0ab6f67563c",
+  "control_script_sha256": "9a3c91edc0369d0fa2257cb46d8f90b4ef2e70dac13c7b9fe33a8063a54d3018",
+  "query_model_extractor_control_script_unchanged_from_previous_producer_pin": true,
+  "control_fixtures_unchanged_from_previous_producer_pin": true,
+  "expected_luci_rows": [
+    {
+      "method": "getSwconfigFeatures",
+      "sink": "popen",
+      "sink_line": 343,
+      "source_line": 343,
+      "source_reason": "request.args.switch -> shellquote -> popen template"
+    },
+    {
+      "method": "getSwconfigPortState",
+      "sink": "popen",
+      "sink_line": 400,
+      "source_line": 400,
+      "source_reason": "request.args.switch -> shellquote -> popen template"
+    },
+    {
+      "method": "getRealtimeStats",
+      "sink": "popen",
+      "sink_line": 585,
+      "source_line": 575,
+      "source_reason": "request.args.device -> shellquote -> flags -> popen template (interface branch)"
+    },
+    {
+      "method": "getRealtimeStats",
+      "sink": "popen",
+      "sink_line": 585,
+      "source_line": 577,
+      "source_reason": "request.args.device -> shellquote -> flags -> popen template (wireless branch)"
+    },
+    {
+      "method": "setPassword",
+      "sink": "system",
+      "sink_line": 474,
+      "source_line": 470,
+      "source_reason": "request.args.username -> shellquote -> u -> system template"
+    },
+    {
+      "method": "setPassword",
+      "sink": "system",
+      "sink_line": 474,
+      "source_line": 471,
+      "source_reason": "request.args.password -> shellquote -> p -> system template"
+    },
+    {
+      "method": "setLocaltime",
+      "sink": "system",
+      "sink_line": 111,
+      "source_line": 108,
+      "source_reason": "request.args.localtime -> localtime result t -> formatted system template"
+    }
+  ],
+  "source_request_args_sites": [
+    {
+      "line": 61,
+      "text": "for (let name in filter(init_list(), i => !request.args.name || i == request.args.name)) {"
+    },
+    {
+      "line": 78,
+      "text": "switch (request.args.action) {"
+    },
+    {
+      "line": 85,
+      "text": "const rc = init_action(request.args.name, request.args.action);"
+    },
+    {
+      "line": 108,
+      "text": "let t = localtime(request.args.localtime);"
+    },
+    {
+      "line": 115,
+      "text": "return { result: request.args.localtime };"
+    },
+    {
+      "line": 343,
+      "text": "const swc = popen(`swconfig dev ${shellquote(request.args.switch)} help 2>/dev/null`);"
+    },
+    {
+      "line": 400,
+      "text": "const swc = popen(`swconfig dev ${shellquote(request.args.switch)} show 2>/dev/null`);"
+    },
+    {
+      "line": 470,
+      "text": "const u = shellquote(request.args.username);"
+    },
+    {
+      "line": 471,
+      "text": "const p = shellquote(request.args.password);"
+    },
+    {
+      "line": 574,
+      "text": "if (request.args.mode == 'interface')"
+    },
+    {
+      "line": 575,
+      "text": "flags = `-i ${shellquote(request.args.device)}`;"
+    },
+    {
+      "line": 576,
+      "text": "else if (request.args.mode == 'wireless')"
+    },
+    {
+      "line": 577,
+      "text": "flags = `-r ${shellquote(request.args.device)}`;"
+    },
+    {
+      "line": 578,
+      "text": "else if (request.args.mode == 'conntrack')"
+    },
+    {
+      "line": 580,
+      "text": "else if (request.args.mode == 'load')"
+    }
+  ],
+  "source_shell_sink_sites": [
+    {
+      "line": 26,
+      "text": "let fd = popen('opkg list-installed ' + shellquote(pkg) + ' 2>/dev/null');"
+    },
+    {
+      "line": 37,
+      "text": "let fd = popen('apk list -I ' + shellquote(pkg) + ' 2>/dev/null');"
+    },
+    {
+      "line": 111,
+      "text": "system(sprintf('date -s \"%04d-%02d-%02d %02d:%02d:%02d\" >/dev/null', t.year, t.mon, t.mday, t.hour, t.min, t.sec));"
+    },
+    {
+      "line": 112,
+      "text": "system('/etc/init.d/sysfixtime restart >/dev/null');"
+    },
+    {
+      "line": 268,
+      "text": "result.hostapd[feature] = system(`/usr/sbin/hostapd -v${feature} >/dev/null 2>/dev/null`) == 0;"
+    },
+    {
+      "line": 275,
+      "text": "result.wpasupplicant[feature] = system(`/usr/sbin/wpa_supplicant -v${feature} >/dev/null 2>/dev/null`) == 0;"
+    },
+    {
+      "line": 278,
+      "text": "let fd = popen('dnsmasq --version 2>/dev/null');"
+    },
+    {
+      "line": 294,
+      "text": "fd = popen('odhcpd -h 2>/dev/null');"
+    },
+    {
+      "line": 315,
+      "text": "fd = popen('ipset --help 2>/dev/null');"
+    },
+    {
+      "line": 343,
+      "text": "const swc = popen(`swconfig dev ${shellquote(request.args.switch)} help 2>/dev/null`);"
+    },
+    {
+      "line": 400,
+      "text": "const swc = popen(`swconfig dev ${shellquote(request.args.switch)} show 2>/dev/null`);"
+    },
+    {
+      "line": 474,
+      "text": "result: system(`(echo ${p}; sleep 1; echo ${p}) | /bin/busybox passwd ${u} >/dev/null 2>&1`) == 0"
+    },
+    {
+      "line": 481,
+      "text": "const block = popen('/sbin/block info 2>/dev/null');"
+    },
+    {
+      "line": 532,
+      "text": "return { result: system('/sbin/block detect > /etc/config/fstab') == 0 };"
+    },
+    {
+      "line": 585,
+      "text": "const fd = popen(`luci-bwc ${flags}`, 'r');"
+    }
+  ],
+  "prequery_interpretation": "The seven expected rows are candidate paths under the query model, not vulnerability findings. shellquote is not modeled as a trusted barrier; the control suite separately checks complete-argument-shape and taint controls. No consumer handoff is available for this fresh query output."
+}

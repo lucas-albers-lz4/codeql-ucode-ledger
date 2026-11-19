@@ -1,0 +1,12 @@
+test_corrected_retained_rows_validate_against_schema (policy.tests.test_realtime_password_quoted_locals.TestRealtimePasswordQuotedLocals.test_corrected_retained_rows_validate_against_schema) ... ok
+test_inventory_has_exactly_the_two_methods (policy.tests.test_realtime_password_quoted_locals.TestRealtimePasswordQuotedLocals.test_inventory_has_exactly_the_two_methods) ... ok
+test_luci_emitter_is_unchanged (policy.tests.test_realtime_password_quoted_locals.TestRealtimePasswordQuotedLocals.test_luci_emitter_is_unchanged) ... ok
+test_retained_getfeatures_no_path_has_matching_grant (policy.tests.test_realtime_password_quoted_locals.TestRealtimePasswordQuotedLocals.test_retained_getfeatures_no_path_has_matching_grant) ... ok
+test_rows_join_existing_grants_and_unauth_deny (policy.tests.test_realtime_password_quoted_locals.TestRealtimePasswordQuotedLocals.test_rows_join_existing_grants_and_unauth_deny) ... ok
+test_runtime_quoting_and_analyzer_coverage_are_distinct (policy.tests.test_realtime_password_quoted_locals.TestRealtimePasswordQuotedLocals.test_runtime_quoting_and_analyzer_coverage_are_distinct) ... ok
+test_schema_join_keys_and_producer_fields (policy.tests.test_realtime_password_quoted_locals.TestRealtimePasswordQuotedLocals.test_schema_join_keys_and_producer_fields) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.003s
+
+OK

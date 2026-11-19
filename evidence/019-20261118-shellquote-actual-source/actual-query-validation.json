@@ -1,0 +1,58 @@
+{
+  "complete_quoted_arg_rows": 0,
+  "shellquote_shape_rows": 0,
+  "shell_injection_rows": 7,
+  "exact_expected_source_sink_multiplicity": [
+    {
+      "method": "getRealtimeStats",
+      "sink": "popen",
+      "sink_line": 585,
+      "source_line": 575,
+      "multiplicity": 1
+    },
+    {
+      "method": "getRealtimeStats",
+      "sink": "popen",
+      "sink_line": 585,
+      "source_line": 577,
+      "multiplicity": 1
+    },
+    {
+      "method": "getSwconfigFeatures",
+      "sink": "popen",
+      "sink_line": 343,
+      "source_line": 343,
+      "multiplicity": 1
+    },
+    {
+      "method": "getSwconfigPortState",
+      "sink": "popen",
+      "sink_line": 400,
+      "source_line": 400,
+      "multiplicity": 1
+    },
+    {
+      "method": "setLocaltime",
+      "sink": "system",
+      "sink_line": 111,
+      "source_line": 108,
+      "multiplicity": 1
+    },
+    {
+      "method": "setPassword",
+      "sink": "system",
+      "sink_line": 474,
+      "source_line": 470,
+      "multiplicity": 1
+    },
+    {
+      "method": "setPassword",
+      "sink": "system",
+      "sink_line": 474,
+      "source_line": 471,
+      "multiplicity": 1
+    }
+  ],
+  "control": "actual pinned LuCI source has local shellquote helper; unresolved binding gives no shape/barrier rows",
+  "classification": "query candidates only; no vulnerability/runtime conclusion"
+}

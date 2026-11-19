@@ -1,0 +1,232 @@
+{
+  "run_date_utc": "2026-11-18",
+  "revisions": {
+    "codeql_ucode": "8376a6d72a2879de24e68a28c6ef1e02b319df83",
+    "codeql_openwrt": "1d025213c102dfa68a0f1a5cb46de65f5b0c4e33",
+    "openwrt_luci": "b2e0be4b46ec0fd43394c081fa7c50657af14011"
+  },
+  "clean_worktrees": {
+    "codeql_ucode": true,
+    "codeql_openwrt": true,
+    "openwrt_luci": true
+  },
+  "corpus_lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+  "source_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+  "test_fixture_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+  "source_and_fixture_byte_identical": true,
+  "query_sha256": "a94a4cd20c532a11c0544b3ba24b1e07f3ff6f9554b4904a6632731547bdc6d5",
+  "models_sha256": "a24ea29d142a80c005daccb28f91da3850feb719953ca0de640ea0ab6f67563c",
+  "relevant_query_model_extractor_and_control_script_unchanged_from": "094a163db1138c83820197180501bd7c78bd9051",
+  "tool_versions": {
+    "CodeQL": "CodeQL command-line toolchain release 2.27.4.",
+    "Python": "Python 3.15.2",
+    "Cargo": "cargo 1.100.0 (3acc79c0c 2026-11-05) (Homebrew)",
+    "Rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09) (Homebrew)",
+    "OS": "Linux-7.0.0-43-generic-x86_64-with-glibc2.39"
+  },
+  "control_expectations": {
+    "quoted_complete_argument_rows": 0,
+    "supported_shape_files": [
+      "quote_ok",
+      "quote_ok_echo.uc",
+      "quote_ok_printf.uc"
+    ],
+    "shellquote_shape_positive_controls_still_candidates": true,
+    "bad_shape_controls_rejected_by_shape_but_retained_as_candidates": true,
+    "taint_pos_present": true,
+    "taint_neg_absent": true,
+    "quote_exe_retained_as_executable_selection": true,
+    "luci_helper_shape_rows": 0
+  },
+  "actual_source_result": {
+    "complete_quoted_arg_rows": 0,
+    "shellquote_shape_rows": 0,
+    "shell_injection_rows": 7,
+    "exact_expected_source_sink_multiplicity": [
+      {
+        "method": "getRealtimeStats",
+        "sink": "popen",
+        "sink_line": 585,
+        "source_line": 575,
+        "multiplicity": 1
+      },
+      {
+        "method": "getRealtimeStats",
+        "sink": "popen",
+        "sink_line": 585,
+        "source_line": 577,
+        "multiplicity": 1
+      },
+      {
+        "method": "getSwconfigFeatures",
+        "sink": "popen",
+        "sink_line": 343,
+        "source_line": 343,
+        "multiplicity": 1
+      },
+      {
+        "method": "getSwconfigPortState",
+        "sink": "popen",
+        "sink_line": 400,
+        "source_line": 400,
+        "multiplicity": 1
+      },
+      {
+        "method": "setLocaltime",
+        "sink": "system",
+        "sink_line": 111,
+        "source_line": 108,
+        "multiplicity": 1
+      },
+      {
+        "method": "setPassword",
+        "sink": "system",
+        "sink_line": 474,
+        "source_line": 470,
+        "multiplicity": 1
+      },
+      {
+        "method": "setPassword",
+        "sink": "system",
+        "sink_line": 474,
+        "source_line": 471,
+        "multiplicity": 1
+      }
+    ],
+    "control": "actual pinned LuCI source has local shellquote helper; unresolved binding gives no shape/barrier rows",
+    "classification": "query candidates only; no vulnerability/runtime conclusion"
+  },
+  "timings": {
+    "real-db-init": {
+      "wall_time": "0:00.67",
+      "max_rss_kb": 125748,
+      "exit_status": 0
+    },
+    "real-index-files": {
+      "wall_time": "0:00.56",
+      "max_rss_kb": 125080,
+      "exit_status": 0
+    },
+    "real-db-finalize": {
+      "wall_time": "0:01.61",
+      "max_rss_kb": 321740,
+      "exit_status": 0
+    },
+    "real-r2-query-SuccessfullyExtractedFiles": {
+      "wall_time": "0:01.62",
+      "max_rss_kb": 197136,
+      "exit_status": 0
+    },
+    "real-r2-decode-SuccessfullyExtractedFiles": {
+      "wall_time": "0:00.32",
+      "max_rss_kb": 92524,
+      "exit_status": 0
+    },
+    "real-r2-query-ExtractionErrors": {
+      "wall_time": "0:01.56",
+      "max_rss_kb": 205860,
+      "exit_status": 0
+    },
+    "real-r2-decode-ExtractionErrors": {
+      "wall_time": "0:00.30",
+      "max_rss_kb": 92324,
+      "exit_status": 0
+    },
+    "real-r2-query-CompleteQuotedArg": {
+      "wall_time": "0:01.56",
+      "max_rss_kb": 210412,
+      "exit_status": 0
+    },
+    "real-r2-decode-CompleteQuotedArg": {
+      "wall_time": "0:00.29",
+      "max_rss_kb": 90624,
+      "exit_status": 0
+    },
+    "real-r2-query-ShellquoteTemplateShape": {
+      "wall_time": "0:01.67",
+      "max_rss_kb": 224856,
+      "exit_status": 0
+    },
+    "real-r2-decode-ShellquoteTemplateShape": {
+      "wall_time": "0:00.31",
+      "max_rss_kb": 89720,
+      "exit_status": 0
+    },
+    "real-r2-query-ShellInjection": {
+      "wall_time": "0:01.95",
+      "max_rss_kb": 231124,
+      "exit_status": 0
+    },
+    "real-r2-decode-ShellInjection": {
+      "wall_time": "0:00.29",
+      "max_rss_kb": 90776,
+      "exit_status": 0
+    },
+    "extractor_build": {
+      "wall_time": "0:19.17",
+      "max_rss_kb": 459812,
+      "exit_status": 0
+    },
+    "control_smoke_combined": {
+      "wall_time": "0:35.37",
+      "max_rss_kb": 628904,
+      "exit_status": 0
+    },
+    "failed_initial_real_source_driver": {
+      "wall_time": "0:01.90",
+      "max_rss_kb": 127396,
+      "exit_status": 32
+    },
+    "real_source_driver_before_validator_fix": {
+      "wall_time": "0:12.87",
+      "max_rss_kb": 321740,
+      "exit_status": 1
+    }
+  },
+  "consumer_snapshot_test": {
+    "argv": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "policy.tests.test_realtime_password_quoted_locals",
+      "-v"
+    ],
+    "exit_status": 0,
+    "test_count": 7,
+    "timing": {
+      "wall_time": "0:00.07",
+      "max_rss_kb": 25900,
+      "exit_status": 0
+    }
+  },
+  "setup_and_validation_attempts": [
+    {
+      "command": "env HOME=<run>/home CARGO_HOME=<run>/cargo-home bash scripts/create-extractor-pack.sh",
+      "exit_status": 101,
+      "result": "Initial setup lacked extractor/tree-sitter/Cargo.toml; no analysis database was created. Then scripts/clone-grammar.sh fetched the lock-pinned grammar and the extractor build succeeded."
+    },
+    {
+      "command": "env -u CODEQL_UCODE_STAGED_ROOT bash run-real-source.sh (first source layout: usr/share/rpcd/ucode/luci)",
+      "exit_status": 32,
+      "result": "The file was outside a recognized package root layout, so CodeQL selected no source and finalization failed. This was a staging mistake, not a negative query result; the fresh corrected database uses modules/luci-base/root/..."
+    },
+    {
+      "command": "env -u CODEQL_UCODE_STAGED_ROOT bash run-real-source.sh (corrected modules/luci-base/root layout)",
+      "exit_status": 1,
+      "result": "Extraction, diagnostic queries, three analysis queries and CSV decoding all exited 0; the wrapper reached its validator, whose JSON summary print failed on tuple dictionary keys after all assertions. The validator was corrected and rerun against the same immutable outputs; it exited 0. No query/database was rerun or reused."
+    }
+  ],
+  "consumer_report_snapshot": {
+    "m4_shellquote_findings_sha256": "928db1c634e0a0763cd03d31eb05e28b033cf9f1a5323ce620260318240e8730",
+    "m4_shellquote_coverage_sha256": "ee11e4ff13699fb3fbc4dcddd7c70b11c722b995d10830bfa43ae5635ab39e0d",
+    "m4_shellquote_summary_sha256": "92d0de660a7d64673ec249e3ff04b85f772bf315ce46207af7b6b31bb21cff44",
+    "quoted_locals_inventory_sha256": "d00946d162584a3107b47f7e14155aa8820a750e92d7b8f9e86818180ef04233",
+    "quoted_locals_coverage_sha256": "958e398cff3acc0059d326429806598ec96efef992bc0c04c3d9d602f6ae1c09",
+    "quoted_locals_test_sha256": "bf9066e7fa9ed7eec841e2a1d854d3fde66738990f9180fb3e88b44ebe9d83d4",
+    "snapshot_note": "The report names producer step3:shellquote-barrier-v2 at ae946190661eb221bc1f562fdba02088ef83de2d and explicitly says it is not a fresh query run. The quoted-locals inventory is fact/inventory, not path_found."
+  },
+  "consumer_step": "The focused consumer snapshot test was run but the fresh producer output was not passed to any consumer. No authenticated current producer-to-consumer adapter path was identified; static report/test output is not fresh handoff evidence.",
+  "boundaries": "The real-source database contains exactly one pinned LuCI file. The controls are a separate 31-file smoke database; its LuCI fixture is byte-identical to the upstream file. These are analyzer/query controls, not runtime shell execution. The seven rows are candidate dataflow results, not vulnerabilities. No device, shell, RPC, authorization, corpus-wide scan or full-corpus timing was tested.",
+  "raw_artifacts": "Databases, complete diagnostic JSON, full process logs and build caches are in ignored work/candidate-triage-20261118/run-shellquote-20261118 and work/candidate-triage-20261118/codeql-ucode/.codeql-database/m4-quote."
+}
