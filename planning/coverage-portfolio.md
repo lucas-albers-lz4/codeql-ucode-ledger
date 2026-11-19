@@ -39,9 +39,15 @@ checks direct `ubus.call` syntax. [011](../claims/011-same-file-jump-local.md)
 checks an experimental same-file flow shape; [012](../claims/012-backend-declaration-comparison.md)
 compares backend declarations with a pinned grant catalog, and [013](../claims/013-getfeatures-direct-calls.md)
 inventories direct `getFeatures` calls. [014](../claims/014-fs-binding-guard.md)
-checks selected conservative `fs` binding controls. None establishes runtime binding or a
-cross-file taint path. These are examples selected for existing fixtures and
-discriminating controls, not an inventory of all candidate analyses.
+checks selected conservative `fs` binding controls. [017](../claims/017-rpcd-login-negation-whitespace.md)
+checks the consumer login-permission oracle against the pinned rpcd C function
+for a bounded whitespace matrix; it is not live authorization evidence.
+[018](../claims/018-pinned-luci-shellquote-candidates.md) records seven current
+shell-injection candidate rows for one pinned LuCI source file plus separate
+controls; it is not a consumer handoff or a vulnerability finding. These
+bounded examples do not establish runtime binding or a cross-file taint path.
+They are selected for named decisions and controls, not an inventory of all
+candidate analyses.
 
 These paths overlap in the pinned LuCI fixture; they are not a representative
 sample of all OpenWrt software or ucode syntax. The inventory deliberately

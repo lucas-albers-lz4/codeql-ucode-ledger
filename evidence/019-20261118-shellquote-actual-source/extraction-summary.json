@@ -1,0 +1,151 @@
+{
+  "actual_source": {
+    "selected_file_count": 1,
+    "successful_files": [
+      {
+        "path": "modules/luci-base/root/usr/share/rpcd/ucode/luci",
+        "message": ""
+      }
+    ],
+    "error_count": 0,
+    "errors": [],
+    "raw_success_json_sha256": "68d38d4c71d4c50bb14450ab3ec7e30c5788f63e81b609682dd4a64305ef0c14",
+    "raw_error_json_sha256": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "normalization": "Raw absolute labels are normalized relative to the fresh source root; raw diagnostics remain in ignored work/."
+  },
+  "control_database": {
+    "expected_file_count": 31,
+    "selected_file_count": 31,
+    "successful_files": [
+      {
+        "path": "quote_bad_ash_c.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_assignment.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_bash_c.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_conditional.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_echo",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_import.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_local.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_parameter.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_pipe.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_prefix_join.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_separator.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_separator_space.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_sh_c",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_sh_c_suffix.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_shell_flags.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_shell_path.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_shell_wrapper.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_suffix",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_suffix_join.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_trailing_substitution.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_transform.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_unknown_command.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_variable.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_exe",
+        "message": ""
+      },
+      {
+        "path": "quote_ok",
+        "message": ""
+      },
+      {
+        "path": "quote_ok_echo.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_ok_printf.uc",
+        "message": ""
+      },
+      {
+        "path": "taint_neg",
+        "message": ""
+      },
+      {
+        "path": "taint_pos",
+        "message": ""
+      },
+      {
+        "path": "usr/share/rpcd/ucode/luci",
+        "message": ""
+      },
+      {
+        "path": "usr/share/ucode/luci/sys.uc",
+        "message": ""
+      }
+    ],
+    "error_count": 0,
+    "errors": [],
+    "raw_success_json_sha256": "9c2834356e45a6870fada08c882bd3a7d7255a81cd77739748f06b7abaaf4739",
+    "raw_error_json_sha256": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "normalization": "Raw absolute labels are normalized relative to ql/test/extractor-smoke; raw diagnostics remain in ignored work/."
+  }
+}

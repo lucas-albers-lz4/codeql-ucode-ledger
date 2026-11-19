@@ -14,7 +14,7 @@ The initial claims and their current status are:
 2. [getBlockDevices query observation](claims/002-getblock-query.md): demonstrated for a pinned fixture and controls.
 3. [getBlockDevices producer–consumer handoff](claims/003-getblock-handoff.md): demonstrated for a freshly generated table and pinned consumer.
 
-Together these move from source selection through extraction, query, and consumer, but each claim stands on its own evidence. Claims **001–003** have bounded run records; reassess them when the selected revisions change. The [coverage portfolio](planning/coverage-portfolio.md) maps four representative paths, priorities, dependencies and additional proposed claims. See [the claim template](claims/TEMPLATE.md) before adding a result.
+Together these move from source selection through extraction, query, and consumer, but each claim stands on its own evidence. Claims **001–003** have bounded run records; reassess them when the selected revisions change. The [coverage portfolio](planning/coverage-portfolio.md) maps representative paths; the [candidate lead list](planning/claim-opportunities.md) records prioritization, ownership and stop conditions without inflating leads into claims. See [the claim template](claims/TEMPLATE.md) before adding a result.
 
 ## Claim index
 
@@ -36,6 +36,8 @@ Together these move from source selection through extraction, query, and consume
 | [014](claims/014-fs-binding-guard.md) | Demonstrated | Conservative `fs` binding controls |
 | [015](claims/015-pinned-luci-source-extraction.md) | Demonstrated | Three pinned upstream LuCI sources extracted |
 | [016](claims/016-pinned-luci-status-query.md) | Demonstrated | Status source-shape query on the upstream slice |
+| [017](claims/017-rpcd-login-negation-whitespace.md) | Demonstrated | Consumer login-ACL whitespace parity with pinned rpcd reference |
+| [018](claims/018-pinned-luci-shellquote-candidates.md) | Demonstrated | Seven conservative candidate rows on one pinned LuCI source file |
 
 Every demonstrated status is limited to the run, inputs, controls and revisions
 in that claim. These rows are not a coverage percentage.

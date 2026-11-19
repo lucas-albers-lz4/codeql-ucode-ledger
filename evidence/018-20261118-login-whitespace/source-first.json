@@ -1,0 +1,111 @@
+{
+  "rpcd_commit": "d99f703e4035d03fbcfbada3cb697db346c2b984",
+  "source_file": "session.c",
+  "source_file_sha256": "225e9a1fa8badc8fa431db11403f833ed745a99502f46ca84e004b36499ada6f",
+  "source_function_line_range": [
+    934,
+    990
+  ],
+  "source_function_sha256": "260a54df33b57e8a0e96cd046e45d8cf02db729f9981a6b6d6d9c665cf781e1b",
+  "reference_function_sha256": "260a54df33b57e8a0e96cd046e45d8cf02db729f9981a6b6d6d9c665cf781e1b",
+  "reference_matches_upstream_byte_for_byte": true,
+  "consumer_commit": "1d025213c102dfa68a0f1a5cb46de65f5b0c4e33",
+  "consumer_worktree_clean": true,
+  "consumer_lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+  "oracle_source_sha256": "15f261656b07551a3da07fc3cf4b0ce822bfd7bef6b0e4082e73db09ca85720c",
+  "test_source_sha256": "adc411d8b331ee63575468212a79908489ffe8ac4c9b6d21f76055645d59d8c3",
+  "reference_harness_sha256": "169a88af189eb729fa524acf246b1899d03564863e7b082f4cda56eb6ecc4dd1",
+  "expected_cases_from_C_semantics": [
+    {
+      "case": "ASCII-space-negative",
+      "login_patterns": [
+        "*",
+        "! example"
+      ],
+      "group": "example",
+      "expected": false
+    },
+    {
+      "case": "ASCII-tab-negative",
+      "login_patterns": [
+        "*",
+        "!\texample"
+      ],
+      "group": "example",
+      "expected": false
+    },
+    {
+      "case": "ASCII-LF-negative",
+      "login_patterns": [
+        "*",
+        "!\nexample"
+      ],
+      "group": "example",
+      "expected": false
+    },
+    {
+      "case": "ASCII-CR-negative",
+      "login_patterns": [
+        "*",
+        "!\rexample"
+      ],
+      "group": "example",
+      "expected": false
+    },
+    {
+      "case": "ASCII-VT-negative",
+      "login_patterns": [
+        "*",
+        "!\u000bexample"
+      ],
+      "group": "example",
+      "expected": false
+    },
+    {
+      "case": "ASCII-FF-negative",
+      "login_patterns": [
+        "*",
+        "!\fexample"
+      ],
+      "group": "example",
+      "expected": false
+    },
+    {
+      "case": "unicode-\\xa0-plain-group",
+      "login_patterns": [
+        "*",
+        "!\u00a0example"
+      ],
+      "group": "example",
+      "expected": true
+    },
+    {
+      "case": "unicode-\\xa0-prefixed-group",
+      "login_patterns": [
+        "*",
+        "!\u00a0example"
+      ],
+      "group": "\u00a0example",
+      "expected": false
+    },
+    {
+      "case": "unicode-\\u2003-plain-group",
+      "login_patterns": [
+        "*",
+        "!\u2003example"
+      ],
+      "group": "example",
+      "expected": true
+    },
+    {
+      "case": "unicode-\\u2003-prefixed-group",
+      "login_patterns": [
+        "*",
+        "!\u2003example"
+      ],
+      "group": "\u2003example",
+      "expected": false
+    }
+  ],
+  "expectation_limit": "C-locale isspace removes ASCII whitespace bytes only; UTF-8 NBSP and EM SPACE lead with non-ASCII bytes and are not C-locale whitespace. Wildcard allow and fnmatch negation outcomes are derived before running consumer tests."
+}

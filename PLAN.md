@@ -1,14 +1,25 @@
-# Next batch: refresh pins and examine a real-source slice
+# Next batch: prioritize bounded evidence leads
 
-The first bounded batch under this plan is recorded in [planning/batch-20261118.md](planning/batch-20261118.md). The steps below remain a reusable workflow, not a claim about future runs. Resume by
-reading [AGENTS.md](AGENTS.md), the [claim index](README.md#claim-index), and
-[coverage portfolio](planning/coverage-portfolio.md). The most recent ledger
-runs used producer `d3588ca6821fe983d240fcbb2e80692fabcc6aab` and consumer
-`a8bdef3c22c8d5ba9999baa978052b59bd22907e`; their results remain scoped to
-those revisions and named fixtures. On 2026-11-18 UTC a read-only remote-head
-check returned producer `094a163db1138c83820197180501bd7c78bd9051` and
-consumer `c45d0c4f36e66e7927d610d5a92c1186bb910f1f`. These are observations,
-not pins for a later run: fetch again and choose explicit full SHAs at launch.
+The prior producer/consumer handoffs remain in [planning/batch-20261118.md](planning/batch-20261118.md). After the handoff branch merged to `main`, this
+candidate-triage batch refreshed disposable snapshots and completed claims 017
+and 018. Its pin set is producer
+`8376a6d72a2879de24e68a28c6ef1e02b319df83`, consumer
+`1d025213c102dfa68a0f1a5cb46de65f5b0c4e33`, LuCI
+`b2e0be4b46ec0fd43394c081fa7c50657af14011`, and rpcd
+`d99f703e4035d03fbcfbada3cb697db346c2b984`; these results remain scoped to
+the exact files and tests recorded in each claim. The 2026-11-18
+[candidate lead list](planning/claim-opportunities.md) has 17 distinct leads
+and explicit ownership/blockers; it is not a proposal for 17 more claim files,
+much less 100. Do not rerun the same pins absent a relevant delta. These are
+observations, not pins for a later run: fetch again and choose explicit full
+SHAs at launch.
+
+The steps below remain a reusable workflow, not a claim about future runs.
+Resume by reading [AGENTS.md](AGENTS.md), the [claim index](README.md#claim-index),
+and [coverage portfolio](planning/coverage-portfolio.md). Claim 005 remains
+partial until an actual supported fresh query-to-record path is observed. Claim
+018 adds current producer output relevant to ucode #75, but does not run a
+fresh consumer handoff or complete the issue's broader reconciliation criteria.
 
 ## Objectives
 
