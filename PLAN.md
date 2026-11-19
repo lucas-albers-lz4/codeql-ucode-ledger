@@ -1,8 +1,8 @@
 # Next batch: prioritize bounded evidence leads
 
 The prior producer/consumer handoffs remain in [planning/batch-20261118.md](planning/batch-20261118.md). After the handoff branch merged to `main`, this
-candidate-triage batch refreshed disposable snapshots and completed claims 017
-and 018. Its pin set is producer
+candidate-triage batch refreshed disposable snapshots and completed claims
+017–019. Its pin set is producer
 `8376a6d72a2879de24e68a28c6ef1e02b319df83`, consumer
 `1d025213c102dfa68a0f1a5cb46de65f5b0c4e33`, LuCI
 `b2e0be4b46ec0fd43394c081fa7c50657af14011`, and rpcd
@@ -18,8 +18,9 @@ The steps below remain a reusable workflow, not a claim about future runs.
 Resume by reading [AGENTS.md](AGENTS.md), the [claim index](README.md#claim-index),
 and [coverage portfolio](planning/coverage-portfolio.md). Claim 005 remains
 partial until an actual supported fresh query-to-record path is observed. Claim
-018 adds current producer output relevant to ucode #75, but does not run a
-fresh consumer handoff or complete the issue's broader reconciliation criteria.
+018–019 add current producer output relevant to ucode #75, including an
+8-source selected LuCI slice, but do not run a fresh consumer handoff or
+complete the issue's broader reconciliation criteria.
 
 ## Objectives
 

@@ -43,11 +43,12 @@ checks selected conservative `fs` binding controls. [017](../claims/017-rpcd-log
 checks the consumer login-permission oracle against the pinned rpcd C function
 for a bounded whitespace matrix; it is not live authorization evidence.
 [018](../claims/018-pinned-luci-shellquote-candidates.md) records seven current
-shell-injection candidate rows for one pinned LuCI source file plus separate
-controls; it is not a consumer handoff or a vulnerability finding. These
-bounded examples do not establish runtime binding or a cross-file taint path.
-They are selected for named decisions and controls, not an inventory of all
-candidate analyses.
+shell-injection candidate rows for one pinned LuCI source file, and
+[019](../claims/019-pinned-luci-shellquote-slice.md) runs the same query over
+eight selected plain `luci-base` sources plus controls. Neither is a consumer
+handoff or vulnerability finding. These bounded examples do not establish
+runtime binding or a cross-file taint path. They are selected for named
+decisions and controls, not an inventory of all candidate analyses.
 
 These paths overlap in the pinned LuCI fixture; they are not a representative
 sample of all OpenWrt software or ucode syntax. The inventory deliberately

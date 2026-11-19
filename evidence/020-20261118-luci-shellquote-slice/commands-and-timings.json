@@ -1,0 +1,177 @@
+{
+  "run_date_utc": "2026-11-18",
+  "revisions": {
+    "codeql_ucode": "8376a6d72a2879de24e68a28c6ef1e02b319df83",
+    "codeql_openwrt": "1d025213c102dfa68a0f1a5cb46de65f5b0c4e33",
+    "openwrt_luci": "b2e0be4b46ec0fd43394c081fa7c50657af14011"
+  },
+  "clean_worktrees": {
+    "codeql_ucode": true,
+    "codeql_openwrt": true,
+    "openwrt_luci": true
+  },
+  "corpus_lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+  "consumer_inventory_sha256": "05598b6bb1dd7d63a4f8cc109367980e51f334385704c3d92453b411c737ab9c",
+  "luci_mk_sha256": "9716c9a7a1c276b867df5887558e2b63b78f7d3695915adb7fcd0a7f0182ed0d",
+  "source_file_shas": {
+    "modules/luci-base/root/usr/share/rpcd/ucode/luci": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+    "modules/luci-base/ucode/sys.uc": "0380fba5d843a8950bab0ef70982cb40ab8f475e8d267c873e4199a736b55656",
+    "modules/luci-base/ucode/dispatcher.uc": "4f9923cf569aeebb956343d208bcc38f40d8a26d2f46f12c5539a9582fa4f037",
+    "modules/luci-base/ucode/http.uc": "68f8a7dffc7bccdfe98956cb3b6e0e087592c86049a2b83d061e5be3585fa5fa",
+    "modules/luci-base/ucode/runtime.uc": "b15afce07020e2a7ad50718d49a874da30d0582ede7de65e54acaceb6e9d0926",
+    "modules/luci-base/ucode/zoneinfo.uc": "54162a073660ea65706aa920a10cfbd3ee4d345e1e4ab3bed8a8d56c9cab3863",
+    "modules/luci-base/ucode/controller/admin/index.uc": "7d7a5dc3e694ad232e4e0f3d01db17c2f5502338aa8c4fc44fa714b0b1147620",
+    "modules/luci-base/ucode/controller/admin/uci.uc": "ac75cfef7d74f87ed7f957778004a7bf486c76df699398c215795b4947e0c93e"
+  },
+  "producer_query_hashes": {
+    "ql/src/m4/ShellInjection.ql": "a94a4cd20c532a11c0544b3ba24b1e07f3ff6f9554b4904a6632731547bdc6d5",
+    "ql/src/m4/CompleteQuotedArg.ql": "c896035c895b44d7645f1bedcafb6b1a3c391e6c9c66a4f9c6c531a172da261c",
+    "ql/src/m4/ShellquoteTemplateShape.ql": "347f80797e136796c1e15320130f30e984ca7b5255fb099e6ddec75574596489",
+    "ql/lib/codeql/ucode/m3/Models.qll": "a24ea29d142a80c005daccb28f91da3850feb719953ca0de640ea0ab6f67563c"
+  },
+  "extractor_pack_sha256": "adf40fdb1afeab1fcb3af429a39cef3fcd7d9cedb3b32453bd8de664729c10a2",
+  "extractor_pack_provenance": "Immutable pack copied from the prior isolated build of the same producer commit 8376a6d; no database, output, or writable cache was reused. CodeQL query packs installed under this run own HOME.",
+  "tools": {
+    "CodeQL": "CodeQL command-line toolchain release 2.27.4.",
+    "OS": "Linux-7.0.0-43-generic-x86_64-with-glibc2.39"
+  },
+  "expected_and_observed": {
+    "selected_source_count": 8,
+    "complete_quoted_arg_rows": 0,
+    "shellquote_shape_rows": 0,
+    "shell_injection_rows": 7,
+    "exact_source_sink_multiplicity": [
+      {
+        "method": "getRealtimeStats",
+        "sink": "popen",
+        "sink_line": 585,
+        "source_line": 575,
+        "count": 1
+      },
+      {
+        "method": "getRealtimeStats",
+        "sink": "popen",
+        "sink_line": 585,
+        "source_line": 577,
+        "count": 1
+      },
+      {
+        "method": "getSwconfigFeatures",
+        "sink": "popen",
+        "sink_line": 343,
+        "source_line": 343,
+        "count": 1
+      },
+      {
+        "method": "getSwconfigPortState",
+        "sink": "popen",
+        "sink_line": 400,
+        "source_line": 400,
+        "count": 1
+      },
+      {
+        "method": "setLocaltime",
+        "sink": "system",
+        "sink_line": 111,
+        "source_line": 108,
+        "count": 1
+      },
+      {
+        "method": "setPassword",
+        "sink": "system",
+        "sink_line": 474,
+        "source_line": 470,
+        "count": 1
+      },
+      {
+        "method": "setPassword",
+        "sink": "system",
+        "sink_line": 474,
+        "source_line": 471,
+        "count": 1
+      }
+    ],
+    "interpretation": "query emits current bounded candidates; no query result is a vulnerability or whole-program negative"
+  },
+  "timings": {
+    "db-init": {
+      "wall_time": "0:00.68",
+      "max_rss_kb": 125748,
+      "exit_status": 0
+    },
+    "index-files": {
+      "wall_time": "0:00.62",
+      "max_rss_kb": 124772,
+      "exit_status": 0
+    },
+    "db-finalize": {
+      "wall_time": "0:01.75",
+      "max_rss_kb": 341544,
+      "exit_status": 0
+    },
+    "query-SuccessfullyExtractedFiles": {
+      "wall_time": "0:01.61",
+      "max_rss_kb": 207092,
+      "exit_status": 0
+    },
+    "decode-SuccessfullyExtractedFiles": {
+      "wall_time": "0:00.32",
+      "max_rss_kb": 92836,
+      "exit_status": 0
+    },
+    "query-ExtractionErrors": {
+      "wall_time": "0:01.59",
+      "max_rss_kb": 197592,
+      "exit_status": 0
+    },
+    "decode-ExtractionErrors": {
+      "wall_time": "0:00.31",
+      "max_rss_kb": 92496,
+      "exit_status": 0
+    },
+    "query-CompleteQuotedArg": {
+      "wall_time": "0:01.59",
+      "max_rss_kb": 214912,
+      "exit_status": 0
+    },
+    "decode-CompleteQuotedArg": {
+      "wall_time": "0:00.31",
+      "max_rss_kb": 90248,
+      "exit_status": 0
+    },
+    "query-ShellquoteTemplateShape": {
+      "wall_time": "0:01.71",
+      "max_rss_kb": 224744,
+      "exit_status": 0
+    },
+    "decode-ShellquoteTemplateShape": {
+      "wall_time": "0:00.30",
+      "max_rss_kb": 89192,
+      "exit_status": 0
+    },
+    "query-ShellInjection": {
+      "wall_time": "0:02.48",
+      "max_rss_kb": 234320,
+      "exit_status": 0
+    },
+    "decode-ShellInjection": {
+      "wall_time": "0:00.32",
+      "max_rss_kb": 89296,
+      "exit_status": 0
+    },
+    "control-smoke": {
+      "wall_time": "0:35.05",
+      "max_rss_kb": 558724,
+      "exit_status": 0
+    },
+    "real-slice-driver": {
+      "wall_time": "0:13.73",
+      "max_rss_kb": 341544,
+      "exit_status": 0
+    }
+  },
+  "consumer_step": "Not run: current shell-injection output has no authenticated producer-to-consumer adapter. The separate consumer report snapshot in claim 018 is not a fresh handoff.",
+  "scope": "Exactly the eight plain ucode source entries for package luci-base in the pinned luci-ssl-25.12 consumer inventory: one rpcd plugin and seven .uc files. This excludes the CGI script, generated version source, markup/uncertain entries, other packages and native C plugins. It is not the entire luci-base package or full profile.",
+  "limits": "The seven rows are candidate query observations only. In particular, sys.uc has parameterized shell calls and is involved in an imported init_action path from the plugin; this local RequestArgsAccess query does not establish that interprocedural path, and the empty output for sys.uc is not a no-path or safety claim. Dispatcher/runtime policy, markup, device behavior, exploitability, authorization, whole-profile completeness and full-corpus runtime are not established.",
+  "raw_artifacts": "Fresh databases, BQRS, complete diagnostics and logs are under ignored work/candidate-triage-20261118/run-luci-slice-20261118 and work/candidate-triage-20261118/codeql-ucode-claim019/.codeql-database/m4-quote."
+}

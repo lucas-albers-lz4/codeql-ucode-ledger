@@ -38,6 +38,7 @@ Together these move from source selection through extraction, query, and consume
 | [016](claims/016-pinned-luci-status-query.md) | Demonstrated | Status source-shape query on the upstream slice |
 | [017](claims/017-rpcd-login-negation-whitespace.md) | Demonstrated | Consumer login-ACL whitespace parity with pinned rpcd reference |
 | [018](claims/018-pinned-luci-shellquote-candidates.md) | Demonstrated | Seven conservative candidate rows on one pinned LuCI source file |
+| [019](claims/019-pinned-luci-shellquote-slice.md) | Demonstrated | Shell-injection query on eight selected pinned LuCI source files |
 
 Every demonstrated status is limited to the run, inputs, controls and revisions
 in that claim. These rows are not a coverage percentage.

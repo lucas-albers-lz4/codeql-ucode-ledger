@@ -1,0 +1,180 @@
+{
+  "actual_source_slice": {
+    "expected_count": 8,
+    "selected_count": 8,
+    "selected_files": [
+      {
+        "path": "modules/luci-base/root/usr/share/rpcd/ucode/luci",
+        "message": ""
+      },
+      {
+        "path": "modules/luci-base/ucode/controller/admin/index.uc",
+        "message": ""
+      },
+      {
+        "path": "modules/luci-base/ucode/controller/admin/uci.uc",
+        "message": ""
+      },
+      {
+        "path": "modules/luci-base/ucode/dispatcher.uc",
+        "message": ""
+      },
+      {
+        "path": "modules/luci-base/ucode/http.uc",
+        "message": ""
+      },
+      {
+        "path": "modules/luci-base/ucode/runtime.uc",
+        "message": ""
+      },
+      {
+        "path": "modules/luci-base/ucode/sys.uc",
+        "message": ""
+      },
+      {
+        "path": "modules/luci-base/ucode/zoneinfo.uc",
+        "message": ""
+      }
+    ],
+    "error_count": 0,
+    "errors": [],
+    "successful_raw_sha256": "c16cfd1458aa75bb7aed6036ec9615f97bc915d01b56fee662b3f22d696190ac",
+    "errors_raw_sha256": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "normalization": "Absolute local labels normalized relative to source-root; raw diagnostics are retained only under ignored work/."
+  },
+  "controls": {
+    "expected_count": 31,
+    "selected_count": 31,
+    "selected_files": [
+      {
+        "path": "quote_bad_ash_c.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_assignment.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_bash_c.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_conditional.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_echo",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_import.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_local.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_parameter.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_pipe.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_prefix_join.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_separator.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_separator_space.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_sh_c",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_sh_c_suffix.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_shell_flags.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_shell_path.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_shell_wrapper.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_suffix",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_suffix_join.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_trailing_substitution.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_transform.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_unknown_command.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_bad_variable.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_exe",
+        "message": ""
+      },
+      {
+        "path": "quote_ok",
+        "message": ""
+      },
+      {
+        "path": "quote_ok_echo.uc",
+        "message": ""
+      },
+      {
+        "path": "quote_ok_printf.uc",
+        "message": ""
+      },
+      {
+        "path": "taint_neg",
+        "message": ""
+      },
+      {
+        "path": "taint_pos",
+        "message": ""
+      },
+      {
+        "path": "usr/share/rpcd/ucode/luci",
+        "message": ""
+      },
+      {
+        "path": "usr/share/ucode/luci/sys.uc",
+        "message": ""
+      }
+    ],
+    "error_count": 0,
+    "errors": [],
+    "successful_raw_sha256": "9d65a67d6bca7d22a9b2ad1054ac3991c80600550fab1d52d29ae89882d5a080",
+    "errors_raw_sha256": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "normalization": "Absolute smoke labels normalized relative to producer ql/test/extractor-smoke."
+  }
+}

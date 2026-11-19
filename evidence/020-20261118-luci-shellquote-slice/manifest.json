@@ -1,0 +1,48 @@
+{
+  "files": [
+    {
+      "file": "actual-complete-quoted.csv",
+      "sha256": "635a27790b463705f360cf9059dc0dd65faa00471ac10e2d6c0f3b309f46f473"
+    },
+    {
+      "file": "actual-query-validation.json",
+      "sha256": "abe6cee1981edd16d9fd6c71d237ff261dd533abce0cdc8050ab09d972f46a29"
+    },
+    {
+      "file": "actual-shell-injection.csv",
+      "sha256": "c3df87b9f70a945867e2c4a7d9ec6c5bb48126d501f012e4db07dc2906ab21d7"
+    },
+    {
+      "file": "actual-shellquote-shape.csv",
+      "sha256": "fe47351f7731e3b89e57ff7df1aba47d73ed91d7f8df4cfb796181bc3f1f4048"
+    },
+    {
+      "file": "commands-and-timings.json",
+      "sha256": "8fd60a0b59390ea7855c7240d2b376937b41dc26fc5c1aecc3c27f7b4057389f"
+    },
+    {
+      "file": "control-files.json",
+      "sha256": "433a799437fb432f35a983f92b972295ca119f9c8332c0db2b23555c0f188aa8"
+    },
+    {
+      "file": "controls-complete-quoted.csv",
+      "sha256": "635a27790b463705f360cf9059dc0dd65faa00471ac10e2d6c0f3b309f46f473"
+    },
+    {
+      "file": "controls-shell-injection.csv",
+      "sha256": "f99f5eac29f2f9fc2faa5d185a907e94d82d7910b7f3fa4e234ed47f35302f4c"
+    },
+    {
+      "file": "controls-shellquote-shape.csv",
+      "sha256": "61d4d32586071575a85b0c4380595cc5fbc9072abef656358f8b49a82a8a9338"
+    },
+    {
+      "file": "extraction-summary.json",
+      "sha256": "cd16ea62d79efd8a2dbb25ad6af37bd89f36ae14dc3964f4d9ab071ba1372ced"
+    },
+    {
+      "file": "source-first.json",
+      "sha256": "6eb6484fbc7ca2481c46d8a1a40465b68ae1fc64e25119118fa473b8177f17cf"
+    }
+  ]
+}

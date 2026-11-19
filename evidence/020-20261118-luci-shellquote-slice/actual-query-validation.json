@@ -1,0 +1,58 @@
+{
+  "selected_source_count": 8,
+  "complete_quoted_arg_rows": 0,
+  "shellquote_shape_rows": 0,
+  "shell_injection_rows": 7,
+  "exact_source_sink_multiplicity": [
+    {
+      "method": "getRealtimeStats",
+      "sink": "popen",
+      "sink_line": 585,
+      "source_line": 575,
+      "count": 1
+    },
+    {
+      "method": "getRealtimeStats",
+      "sink": "popen",
+      "sink_line": 585,
+      "source_line": 577,
+      "count": 1
+    },
+    {
+      "method": "getSwconfigFeatures",
+      "sink": "popen",
+      "sink_line": 343,
+      "source_line": 343,
+      "count": 1
+    },
+    {
+      "method": "getSwconfigPortState",
+      "sink": "popen",
+      "sink_line": 400,
+      "source_line": 400,
+      "count": 1
+    },
+    {
+      "method": "setLocaltime",
+      "sink": "system",
+      "sink_line": 111,
+      "source_line": 108,
+      "count": 1
+    },
+    {
+      "method": "setPassword",
+      "sink": "system",
+      "sink_line": 474,
+      "source_line": 470,
+      "count": 1
+    },
+    {
+      "method": "setPassword",
+      "sink": "system",
+      "sink_line": 474,
+      "source_line": 471,
+      "count": 1
+    }
+  ],
+  "interpretation": "query emits current bounded candidates; no query result is a vulnerability or whole-program negative"
+}
