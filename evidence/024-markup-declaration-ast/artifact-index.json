@@ -1,0 +1,107 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "ffeb2b15a7b510b4a456a4ba5c90cce4781323ef996a51e3a9a383caff35378a",
+    "bytes": 2394
+  },
+  {
+    "path": "inputs/prequery-manifest.json",
+    "sha256": "108827290c342364b1fb94e54d00a59957fe38caffb28b4c39c21bf95b3bd5c0",
+    "bytes": 2888
+  },
+  {
+    "path": "inputs/source/usr/share/ucode/controls/malformed.ut",
+    "sha256": "a0c248ffc509e14bc749a6b91c02864c46a46c2a390992869250fe9b05ad8507",
+    "bytes": 12
+  },
+  {
+    "path": "inputs/source/usr/share/ucode/controls/mixed.ut",
+    "sha256": "0ef793bb3ce8833739fb622aa555464ace8044194e24223acff692627546b3b4",
+    "bytes": 48
+  },
+  {
+    "path": "inputs/source/usr/share/ucode/controls/no-init.ut",
+    "sha256": "4672b91bc99e3e601100426774fa39c7f5d7ccef2165d907b85f747f6ceb2fde",
+    "bytes": 13
+  },
+  {
+    "path": "inputs/source/usr/share/ucode/controls/plain.uc",
+    "sha256": "dcbeb5added37dff25ceece588d4ef57d4219ae4a2b6996a320c9a51869e132b",
+    "bytes": 15
+  },
+  {
+    "path": "oracle/source-first-oracle.json",
+    "sha256": "d7ef11e773893816fa2359fd7ef270bd019cb5665f7a1933408a404d0cc8ec61",
+    "bytes": 3049
+  },
+  {
+    "path": "outputs/Wave1AllDiagnostics.json",
+    "sha256": "558ebd87d7e91d32cdd693c92aa167f07fe635679c3cd216631f01830c8b15ca",
+    "bytes": 1654
+  },
+  {
+    "path": "outputs/errors.json",
+    "sha256": "fc228dcca2b8a9fc5203f5efb95bd6a67b6ac5aaf48c4ef84a72adf6987304b0",
+    "bytes": 1418
+  },
+  {
+    "path": "outputs/extracted.json",
+    "sha256": "affc31f4e129959060f11030effab4d2a9c4e0804c61b25e2a4990db1c345688",
+    "bytes": 1139
+  },
+  {
+    "path": "outputs/markup-declaration-ast.json",
+    "sha256": "4cd2aae9bcebf25ab0e649a11c9fe2ebe66900fe40cd47734b33738ce69d19fa",
+    "bytes": 2534
+  },
+  {
+    "path": "outputs/markup-declaration-value-negative.json",
+    "sha256": "852dc23c0aa1279f859834bf7a85b98afcb97d3392e4b02e5105cc75801eb80e",
+    "bytes": 687
+  },
+  {
+    "path": "outputs/markup-declaration-value-positive.json",
+    "sha256": "75f8de6f0d63fee5dc44829c807c3109f45e7af87583c76e25a0ca2a081ea0f4",
+    "bytes": 1115
+  },
+  {
+    "path": "outputs/run-receipt.json",
+    "sha256": "524b131d6f1aa8ccac556e7f9a8175a7c6470cc10249773dae589fa9f9339ec1",
+    "bytes": 39864
+  },
+  {
+    "path": "outputs/wave10-ast-run-commands.json",
+    "sha256": "97ff7ab7fd650bc200283421613d90447f1062600e416a6c7915620696ef4a5b",
+    "bytes": 3846
+  },
+  {
+    "path": "outputs/wave10-ast-run-retry-01-commands.json",
+    "sha256": "6eff2ec954e6c26d6b8be5bbac1db0415618413d5b8c2820a2a4c430f88e94af",
+    "bytes": 14842
+  },
+  {
+    "path": "outputs/wave10-ast-run-retry-02-commands.json",
+    "sha256": "a4a068efe97fc3507a6b65dff2e6ef8069bc058608ead0eb2920c5e5e53227f7",
+    "bytes": 4778
+  },
+  {
+    "path": "queries/Wave1AllDiagnostics.ql",
+    "sha256": "3973f9f1e59aa5637d8bc04bb2fece5775ff893cff184cfb35e40a185a36acbe",
+    "bytes": 1203
+  },
+  {
+    "path": "queries/markup-declaration-ast.ql",
+    "sha256": "ed42660bc4b5d2d1df7130e31825bf563ac4280714b632a43cf5d85f999bb08c",
+    "bytes": 937
+  },
+  {
+    "path": "queries/markup-declaration-value-negative.ql",
+    "sha256": "c03c32dd0640e05686a04e6a50edba6356fb0f9a864657fc2f4a354dd70c6ff6",
+    "bytes": 623
+  },
+  {
+    "path": "queries/markup-declaration-value-positive.ql",
+    "sha256": "d930b486db3b28e668f78cb02127ee44a2921199f9642cd97ac20593192c0a7e",
+    "bytes": 769
+  }
+]

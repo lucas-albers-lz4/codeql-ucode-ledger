@@ -1,0 +1,46 @@
+{
+  "#select": {
+    "columns": [
+      {
+        "name": "error",
+        "kind": "Entity"
+      },
+      {
+        "kind": "String"
+      },
+      {
+        "kind": "Integer"
+      }
+    ],
+    "tuples": [
+      [
+        {
+          "label": "A parse error occurred (expected identifier symbol). Check the syntax of the file. If the file is invalid, correct the error or exclude the file from analysis.",
+          "url": {
+            "uri": "source://usr/share/ucode/controls/malformed.ut",
+            "startLine": 1,
+            "startColumn": 9,
+            "endLine": 1,
+            "endColumn": 8
+          }
+        },
+        "Extraction failed in ${WAVE10_RUN_RETRY_01}/source/usr/share/ucode/controls/malformed.ut with error A parse error occurred (expected identifier symbol). Check the syntax of the file. If the file is invalid, correct the error or exclude the file from analysis.",
+        2
+      ],
+      [
+        {
+          "label": "Missing value for field: expression_tag::child",
+          "url": {
+            "uri": "source://usr/share/ucode/controls/malformed.ut",
+            "startLine": 1,
+            "startColumn": 7,
+            "endLine": 1,
+            "endColumn": 11
+          }
+        },
+        "Extraction failed in ${WAVE10_RUN_RETRY_01}/source/usr/share/ucode/controls/malformed.ut with error Missing value for field: expression_tag::child",
+        2
+      ]
+    ]
+  }
+}

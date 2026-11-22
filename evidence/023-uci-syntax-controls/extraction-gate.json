@@ -1,0 +1,18 @@
+{
+  "expected_input_count": 7,
+  "successful_rows": 7,
+  "extraction_error_rows": 0,
+  "success_paths_match": true,
+  "success_multiplicity_all_one": true,
+  "unexpected_success_paths": [],
+  "missing_success_paths": [],
+  "path_counts": {
+    "<RUN>/source/usr/share/ucode/luci/wave4-controls/property-read.uc": 1,
+    "<RUN>/source/usr/share/ucode/luci/wave4-controls/unknown-direct-call.uc": 1,
+    "<RUN>/source/usr/share/ucode/luci/controller/admin/uci.uc": 1,
+    "<RUN>/source/usr/share/ucode/luci/wave4-controls/session-set.uc": 1,
+    "<RUN>/source/usr/share/ucode/luci/wave4-controls/changes.uc": 1,
+    "<RUN>/source/usr/share/ucode/luci/wave4-controls/swapped-argument-order.uc": 1,
+    "<RUN>/source/usr/share/ucode/luci/wave4-controls/unrelated-same-name-helper.uc": 1
+  }
+}

@@ -1,0 +1,1 @@
+Init/index command records were reconstructed from run_extract.py exact argv, the phase stderr/time files, and the observed tool result: both exit 0, 0.534937/0.632913 wall seconds. Later records were preserved from run_diagnostics.py.

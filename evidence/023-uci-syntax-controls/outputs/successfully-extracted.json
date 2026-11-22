@@ -1,0 +1,12 @@
+{"#select":{"columns":[
+   {"name":"f","kind":"Entity"}
+  ,{"kind":"String"}]
+ ,"tuples":[
+   [{"label":"<RUN>/source/usr/share/ucode/luci/controller/admin/uci.uc","url":{"uri":"file://<RUN>/source/usr/share/ucode/luci/controller/admin/uci.uc","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<RUN>/source/usr/share/ucode/luci/wave4-controls/changes.uc","url":{"uri":"file://<RUN>/source/usr/share/ucode/luci/wave4-controls/changes.uc","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<RUN>/source/usr/share/ucode/luci/wave4-controls/property-read.uc","url":{"uri":"file://<RUN>/source/usr/share/ucode/luci/wave4-controls/property-read.uc","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<RUN>/source/usr/share/ucode/luci/wave4-controls/session-set.uc","url":{"uri":"file://<RUN>/source/usr/share/ucode/luci/wave4-controls/session-set.uc","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<RUN>/source/usr/share/ucode/luci/wave4-controls/swapped-argument-order.uc","url":{"uri":"file://<RUN>/source/usr/share/ucode/luci/wave4-controls/swapped-argument-order.uc","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<RUN>/source/usr/share/ucode/luci/wave4-controls/unknown-direct-call.uc","url":{"uri":"file://<RUN>/source/usr/share/ucode/luci/wave4-controls/unknown-direct-call.uc","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<RUN>/source/usr/share/ucode/luci/wave4-controls/unrelated-same-name-helper.uc","url":{"uri":"file://<RUN>/source/usr/share/ucode/luci/wave4-controls/unrelated-same-name-helper.uc","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]]
+ }}

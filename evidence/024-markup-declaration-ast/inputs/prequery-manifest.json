@@ -1,0 +1,84 @@
+{
+  "preparation_only": true,
+  "expected_input_count": 4,
+  "source_root": "source",
+  "files": [
+    {
+      "path": "usr/share/ucode/controls/mixed.ut",
+      "sha256": "0ef793bb3ce8833739fb622aa555464ace8044194e24223acff692627546b3b4",
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "control": "markup_positive",
+      "expected_extraction": "success"
+    },
+    {
+      "path": "usr/share/ucode/controls/no-init.ut",
+      "sha256": "4672b91bc99e3e601100426774fa39c7f5d7ccef2165d907b85f747f6ceb2fde",
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "control": "valid_near_miss",
+      "expected_extraction": "success"
+    },
+    {
+      "path": "usr/share/ucode/controls/plain.uc",
+      "sha256": "dcbeb5added37dff25ceece588d4ef57d4219ae4a2b6996a320c9a51869e132b",
+      "route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected",
+        "inconclusive_reason": null
+      },
+      "control": "plain_control",
+      "expected_extraction": "success"
+    },
+    {
+      "path": "usr/share/ucode/controls/malformed.ut",
+      "sha256": "a0c248ffc509e14bc749a6b91c02864c46a46c2a390992869250fe9b05ad8507",
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "control": "malformed_control",
+      "expected_extraction": "error",
+      "expected_error_count": 2,
+      "expected_error_fragments": [
+        "expected identifier symbol",
+        "Missing value for field: expression_tag::child"
+      ]
+    }
+  ],
+  "query_oracle": {
+    "markup-declaration-ast": {
+      "expected_source_entity_counts": {
+        "usr/share/ucode/controls/mixed.ut": 3,
+        "usr/share/ucode/controls/no-init.ut": 2
+      },
+      "expected_total_rows": 5
+    },
+    "markup-declaration-value-positive": {
+      "expected_total_rows": 1,
+      "required_relation": "d.getValue() = n and n is UcodeMarkup::Number"
+    },
+    "markup-declaration-value-negative": {
+      "expected_total_rows": 1,
+      "required_relation": "not exists(d.getValue())"
+    }
+  },
+  "requirements": [
+    "Compare exact route decisions before finalization.",
+    "Compare successful-file identities and extraction errors by exact source path with multiplicity.",
+    "Require clean extraction for mixed.ut and no-init.ut before interpreting AST query rows.",
+    "Preserve `malformed.ut` diagnostics separately as intentional errors.",
+    "Compare AST query entity outputs as multisets; do not reduce to counts."
+  ]
+}

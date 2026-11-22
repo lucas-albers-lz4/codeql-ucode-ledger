@@ -1,0 +1,102 @@
+{
+  "purpose": "Predeclared AST identity expectations for declaration/initializer syntax only; no CFG expectation.",
+  "producer_main_sha": "0a6612fe0e66351a0ccda43ad5b51f5ef5a2724e",
+  "markup_grammar_sha": "4a243af329fae2f4ff01e0fc80133cbab8314600",
+  "sources": {
+    "mixed.ut": {
+      "sha256": "0ef793bb3ce8833739fb622aa555464ace8044194e24223acff692627546b3b4",
+      "expected_candidate_entity_count": 3,
+      "expected_candidates": [
+        {
+          "kind": "LexicalDeclaration",
+          "span": [
+            2,
+            4,
+            2,
+            13
+          ],
+          "parent_kind": "Markup",
+          "parent_index": 4
+        },
+        {
+          "kind": "VariableDeclarator",
+          "span": [
+            2,
+            8,
+            2,
+            12
+          ],
+          "parent_kind": "LexicalDeclaration",
+          "parent_index": 1
+        },
+        {
+          "kind": "Number",
+          "span": [
+            2,
+            12,
+            2,
+            12
+          ],
+          "parent_kind": "VariableDeclarator",
+          "parent_index": 2
+        }
+      ],
+      "semantic_shape_from_source": {
+        "keyword": "let",
+        "binding": "x",
+        "initializer_token": "1",
+        "declarator_count": 1,
+        "initializer_count": 1
+      }
+    },
+    "no-init.ut": {
+      "sha256": "4672b91bc99e3e601100426774fa39c7f5d7ccef2165d907b85f747f6ceb2fde",
+      "source_text": "{% let y; %}",
+      "expected_candidate_entity_count": 2,
+      "expected_candidates": [
+        {
+          "kind": "LexicalDeclaration",
+          "span": [
+            1,
+            4,
+            1,
+            9
+          ],
+          "parent_kind": "Markup",
+          "parent_index": 1
+        },
+        {
+          "kind": "VariableDeclarator",
+          "span": [
+            1,
+            8,
+            1,
+            8
+          ],
+          "parent_kind": "LexicalDeclaration",
+          "parent_index": 1
+        }
+      ],
+      "excluded_candidate": {
+        "kind": "Number",
+        "reason": "The let declarator has no initializer; no Number AST entity is expected under it.",
+        "required_query_predicate": "not exists(d.getValue())"
+      },
+      "semantic_shape_from_source": {
+        "keyword": "let",
+        "binding": "y",
+        "declarator_count": 1,
+        "initializer_count": 0
+      }
+    }
+  },
+  "relation_expectations": {
+    "mixed.ut initialized Number relation count": 1,
+    "no-init.ut value-absent declarator count": 1
+  },
+  "interpretation_boundary": [
+    "The source and grammar define the expected syntax and spans; this oracle has not been compared with query output.",
+    "A successful AST query would establish node identity and parent linkage only, not CFG edges, execution order, rendering, or data flow.",
+    "The no-initializer case is a valid grammar-level near miss because variable_declarator has an optional initializer and lexical_declaration permits let; confirm clean extraction diagnostics before using it in an actual run."
+  ]
+}

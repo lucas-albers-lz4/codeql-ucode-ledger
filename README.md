@@ -42,6 +42,9 @@ Together these move from source selection through extraction, query, and consume
 | [020](claims/020-pinned-markup-call-syntax.md) | Demonstrated | Markup AST call syntax on one pinned LuCI file and controls |
 | [021](claims/021-pinned-luci-template-extraction.md) | Demonstrated | Extraction of 11 staged pinned LuCI templates and controls |
 | [022](claims/022-pinned-mixed-template-ast.md) | Demonstrated | Selected mixed-template AST syntax and literal lookalike |
+| [023](claims/023-uci-syntax-controls.md) | Demonstrated | Selected UCI controller call and argument syntax with controls |
+| [024](claims/024-markup-declaration-ast.md) | Demonstrated | Markup declaration and initializer AST prerequisite |
+| [025](claims/025-mixed-profile.md) | Demonstrated | Plain and markup AST roots for a selected mixed LuCI stage |
 
 Every demonstrated status is limited to the run, inputs, controls and revisions
 in that claim. These rows are not a coverage percentage.

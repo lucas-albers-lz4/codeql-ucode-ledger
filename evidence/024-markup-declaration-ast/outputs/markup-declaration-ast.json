@@ -1,0 +1,136 @@
+{
+  "#select": {
+    "columns": [
+      {
+        "name": "n",
+        "kind": "Entity"
+      },
+      {
+        "kind": "String"
+      },
+      {
+        "kind": "String"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "String"
+      },
+      {
+        "kind": "Integer"
+      }
+    ],
+    "tuples": [
+      [
+        {
+          "label": "LexicalDeclaration",
+          "url": {
+            "uri": "source://usr/share/ucode/controls/mixed.ut",
+            "startLine": 2,
+            "startColumn": 4,
+            "endLine": 2,
+            "endColumn": 13
+          }
+        },
+        "mixed.ut",
+        "LexicalDeclaration",
+        2,
+        4,
+        2,
+        13,
+        "Markup",
+        4
+      ],
+      [
+        {
+          "label": "VariableDeclarator",
+          "url": {
+            "uri": "source://usr/share/ucode/controls/mixed.ut",
+            "startLine": 2,
+            "startColumn": 8,
+            "endLine": 2,
+            "endColumn": 12
+          }
+        },
+        "mixed.ut",
+        "VariableDeclarator",
+        2,
+        8,
+        2,
+        12,
+        "LexicalDeclaration",
+        1
+      ],
+      [
+        {
+          "label": "1",
+          "url": {
+            "uri": "source://usr/share/ucode/controls/mixed.ut",
+            "startLine": 2,
+            "startColumn": 12,
+            "endLine": 2,
+            "endColumn": 12
+          }
+        },
+        "mixed.ut",
+        "Number",
+        2,
+        12,
+        2,
+        12,
+        "VariableDeclarator",
+        2
+      ],
+      [
+        {
+          "label": "LexicalDeclaration",
+          "url": {
+            "uri": "source://usr/share/ucode/controls/no-init.ut",
+            "startLine": 1,
+            "startColumn": 4,
+            "endLine": 1,
+            "endColumn": 9
+          }
+        },
+        "no-init.ut",
+        "LexicalDeclaration",
+        1,
+        4,
+        1,
+        9,
+        "Markup",
+        1
+      ],
+      [
+        {
+          "label": "VariableDeclarator",
+          "url": {
+            "uri": "source://usr/share/ucode/controls/no-init.ut",
+            "startLine": 1,
+            "startColumn": 8,
+            "endLine": 1,
+            "endColumn": 8
+          }
+        },
+        "no-init.ut",
+        "VariableDeclarator",
+        1,
+        8,
+        1,
+        8,
+        "LexicalDeclaration",
+        1
+      ]
+    ]
+  }
+}

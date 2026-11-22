@@ -1,0 +1,8 @@
+{
+  "expected_rows": 24,
+  "observed_rows": 24,
+  "missing_paths": [],
+  "unexpected_paths": [],
+  "mismatches": [],
+  "all_match": true
+}

@@ -1,0 +1,351 @@
+[
+  {
+    "label": "database-init",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "database",
+      "init",
+      "work/wave4-prep/run-20261121/output/db",
+      "--language=ucode",
+      "--search-path=work/wave4-prep/run-20261121/extractor-pack",
+      "--source-root=work/wave4-prep/run-20261121/source"
+    ],
+    "cwd": "work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 0.534937,
+    "stdout": "database-init.stdout",
+    "stderr_and_time": "database-init.stderr-time.txt",
+    "peak_rss_bytes": 133939200
+  },
+  {
+    "label": "index-files",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "database",
+      "index-files",
+      "work/wave4-prep/run-20261121/output/db",
+      "--language=ucode",
+      "--include=**/*.uc",
+      "--working-dir=work/wave4-prep/run-20261121/source"
+    ],
+    "cwd": "work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 0.632913,
+    "stdout": "index-files.stdout",
+    "stderr_and_time": "index-files.stderr-time.txt",
+    "peak_rss_bytes": 119980032
+  },
+  {
+    "label": "database-finalize",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "database",
+      "finalize",
+      "<LEDGER>/work/wave4-prep/run-20261121/output/db"
+    ],
+    "cwd": "<LEDGER>/work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 1.183219,
+    "stdout": "database-finalize.stdout",
+    "stderr_and_time": "database-finalize.stderr-time.txt"
+  },
+  {
+    "label": "successfully-extracted-query",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "query",
+      "run",
+      "<LEDGER>/work/wave4-prep/run-20261121/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+      "--database=<LEDGER>/work/wave4-prep/run-20261121/output/db",
+      "--search-path=<LEDGER>/work/wave4-prep/run-20261121/extractor-pack:<LEDGER>/work/wave4-prep/run-20261121/producer/ql/lib:<LEDGER>/work/wave4-prep/run-20261121/producer/ql/src",
+      "--output=<LEDGER>/work/wave4-prep/run-20261121/output/successfully-extracted.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<LEDGER>/work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 1.755654,
+    "stdout": "successfully-extracted-query.stdout",
+    "stderr_and_time": "successfully-extracted-query.stderr-time.txt"
+  },
+  {
+    "label": "successfully-extracted-decode",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--entities=url,string",
+      "<LEDGER>/work/wave4-prep/run-20261121/output/successfully-extracted.bqrs"
+    ],
+    "cwd": "<LEDGER>/work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 0.228637,
+    "stdout": "successfully-extracted-decode.stdout",
+    "stderr_and_time": "successfully-extracted-decode.stderr-time.txt"
+  },
+  {
+    "label": "extraction-errors-query",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "query",
+      "run",
+      "<LEDGER>/work/wave4-prep/run-20261121/producer/ql/src/diagnostics/ExtractionErrors.ql",
+      "--database=<LEDGER>/work/wave4-prep/run-20261121/output/db",
+      "--search-path=<LEDGER>/work/wave4-prep/run-20261121/extractor-pack:<LEDGER>/work/wave4-prep/run-20261121/producer/ql/lib:<LEDGER>/work/wave4-prep/run-20261121/producer/ql/src",
+      "--output=<LEDGER>/work/wave4-prep/run-20261121/output/extraction-errors.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<LEDGER>/work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 1.736763,
+    "stdout": "extraction-errors-query.stdout",
+    "stderr_and_time": "extraction-errors-query.stderr-time.txt"
+  },
+  {
+    "label": "extraction-errors-decode",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--entities=url,string",
+      "<LEDGER>/work/wave4-prep/run-20261121/output/extraction-errors.bqrs"
+    ],
+    "cwd": "<LEDGER>/work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 0.231643,
+    "stdout": "extraction-errors-decode.stdout",
+    "stderr_and_time": "extraction-errors-decode.stderr-time.txt"
+  },
+  {
+    "label": "all-diagnostics-query",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "query",
+      "run",
+      "<LEDGER>/work/wave4-prep/run-20261121/producer/ql/src/wave4-prep/Wave1AllDiagnostics.ql",
+      "--database=<LEDGER>/work/wave4-prep/run-20261121/output/db",
+      "--search-path=<LEDGER>/work/wave4-prep/run-20261121/extractor-pack:<LEDGER>/work/wave4-prep/run-20261121/producer/ql/lib:<LEDGER>/work/wave4-prep/run-20261121/producer/ql/src",
+      "--output=<LEDGER>/work/wave4-prep/run-20261121/output/all-diagnostics.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<LEDGER>/work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 2.179391,
+    "stdout": "all-diagnostics-query.stdout",
+    "stderr_and_time": "all-diagnostics-query.stderr-time.txt"
+  },
+  {
+    "label": "all-diagnostics-decode",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--entities=url,string",
+      "<LEDGER>/work/wave4-prep/run-20261121/output/all-diagnostics.bqrs"
+    ],
+    "cwd": "<LEDGER>/work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 0.245861,
+    "stdout": "all-diagnostics-decode.stdout",
+    "stderr_and_time": "all-diagnostics-decode.stderr-time.txt"
+  },
+  {
+    "label": "uci-call-syntax-query",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "query",
+      "run",
+      "<LEDGER>/work/wave4-prep/run-20261121/producer/ql/src/wave4-prep/Wave4UciCallSyntax.ql",
+      "--database=<LEDGER>/work/wave4-prep/run-20261121/output/db",
+      "--search-path=<LEDGER>/work/wave4-prep/run-20261121/extractor-pack:<LEDGER>/work/wave4-prep/run-20261121/producer/ql/lib:<LEDGER>/work/wave4-prep/run-20261121/producer/ql/src",
+      "--output=<LEDGER>/work/wave4-prep/run-20261121/output/uci-call-syntax.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<LEDGER>/work/wave4-prep/run-20261121/producer",
+    "exit_status": 100,
+    "wall_seconds": 8.916722,
+    "stdout": "uci-call-syntax-query.stdout",
+    "stderr_and_time": "uci-call-syntax-query.stderr-time.txt"
+  },
+  {
+    "label": "call-arguments-query",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "query",
+      "run",
+      "<LEDGER>/work/wave4-prep/run-20261121/producer/ql/src/wave4-prep/Wave4CallArguments.ql",
+      "--database=<LEDGER>/work/wave4-prep/run-20261121/output/db",
+      "--search-path=<LEDGER>/work/wave4-prep/run-20261121/extractor-pack:<LEDGER>/work/wave4-prep/run-20261121/producer/ql/lib:<LEDGER>/work/wave4-prep/run-20261121/producer/ql/src",
+      "--output=<LEDGER>/work/wave4-prep/run-20261121/output/call-arguments.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<LEDGER>/work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 1.961274,
+    "stdout": "call-arguments-query.stdout",
+    "stderr_and_time": "call-arguments-query.stderr-time.txt"
+  },
+  {
+    "label": "call-arguments-decode",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--entities=id,url,string",
+      "<LEDGER>/work/wave4-prep/run-20261121/output/call-arguments.bqrs"
+    ],
+    "cwd": "<LEDGER>/work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 0.224969,
+    "stdout": "call-arguments-decode.stdout",
+    "stderr_and_time": "call-arguments-decode.stderr-time.txt"
+  },
+  {
+    "label": "identifier-callees-query",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "query",
+      "run",
+      "<LEDGER>/work/wave4-prep/run-20261121/producer/ql/src/wave4-prep/Wave4IdentifierCallees.ql",
+      "--database=<LEDGER>/work/wave4-prep/run-20261121/output/db",
+      "--search-path=<LEDGER>/work/wave4-prep/run-20261121/extractor-pack:<LEDGER>/work/wave4-prep/run-20261121/producer/ql/lib:<LEDGER>/work/wave4-prep/run-20261121/producer/ql/src",
+      "--output=<LEDGER>/work/wave4-prep/run-20261121/output/identifier-callees.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<LEDGER>/work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 2.068805,
+    "stdout": "identifier-callees-query.stdout",
+    "stderr_and_time": "identifier-callees-query.stderr-time.txt"
+  },
+  {
+    "label": "identifier-callees-decode",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--entities=id,url,string",
+      "<LEDGER>/work/wave4-prep/run-20261121/output/identifier-callees.bqrs"
+    ],
+    "cwd": "<LEDGER>/work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 0.217954,
+    "stdout": "identifier-callees-decode.stdout",
+    "stderr_and_time": "identifier-callees-decode.stderr-time.txt"
+  },
+  {
+    "label": "member-callees-query",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "query",
+      "run",
+      "<LEDGER>/work/wave4-prep/run-20261121/producer/ql/src/wave4-prep/Wave4MemberCallees.ql",
+      "--database=<LEDGER>/work/wave4-prep/run-20261121/output/db",
+      "--search-path=<LEDGER>/work/wave4-prep/run-20261121/extractor-pack:<LEDGER>/work/wave4-prep/run-20261121/producer/ql/lib:<LEDGER>/work/wave4-prep/run-20261121/producer/ql/src",
+      "--output=<LEDGER>/work/wave4-prep/run-20261121/output/member-callees.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<LEDGER>/work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 1.931728,
+    "stdout": "member-callees-query.stdout",
+    "stderr_and_time": "member-callees-query.stderr-time.txt"
+  },
+  {
+    "label": "member-callees-decode",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--entities=id,url,string",
+      "<LEDGER>/work/wave4-prep/run-20261121/output/member-callees.bqrs"
+    ],
+    "cwd": "<LEDGER>/work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 0.215711,
+    "stdout": "member-callees-decode.stdout",
+    "stderr_and_time": "member-callees-decode.stderr-time.txt"
+  },
+  {
+    "label": "helper-body-membership-query",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "query",
+      "run",
+      "<LEDGER>/work/wave4-prep/run-20261121/producer/ql/src/wave4-prep/Wave4HelperBodyMembership.ql",
+      "--database=<LEDGER>/work/wave4-prep/run-20261121/output/db",
+      "--search-path=<LEDGER>/work/wave4-prep/run-20261121/extractor-pack:<LEDGER>/work/wave4-prep/run-20261121/producer/ql/lib:<LEDGER>/work/wave4-prep/run-20261121/producer/ql/src",
+      "--output=<LEDGER>/work/wave4-prep/run-20261121/output/helper-body-membership.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<LEDGER>/work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 1.862765,
+    "stdout": "helper-body-membership-query.stdout",
+    "stderr_and_time": "helper-body-membership-query.stderr-time.txt"
+  },
+  {
+    "label": "helper-body-membership-decode",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--entities=id,url,string",
+      "<LEDGER>/work/wave4-prep/run-20261121/output/helper-body-membership.bqrs"
+    ],
+    "cwd": "<LEDGER>/work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 0.218576,
+    "stdout": "helper-body-membership-decode.stdout",
+    "stderr_and_time": "helper-body-membership-decode.stderr-time.txt"
+  },
+  {
+    "label": "property-read-control-query",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "query",
+      "run",
+      "<LEDGER>/work/wave4-prep/run-20261121/producer/ql/src/wave4-prep/Wave4PropertyReadControl.ql",
+      "--database=<LEDGER>/work/wave4-prep/run-20261121/output/db",
+      "--search-path=<LEDGER>/work/wave4-prep/run-20261121/extractor-pack:<LEDGER>/work/wave4-prep/run-20261121/producer/ql/lib:<LEDGER>/work/wave4-prep/run-20261121/producer/ql/src",
+      "--output=<LEDGER>/work/wave4-prep/run-20261121/output/property-read-control.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<LEDGER>/work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 1.986795,
+    "stdout": "property-read-control-query.stdout",
+    "stderr_and_time": "property-read-control-query.stderr-time.txt"
+  },
+  {
+    "label": "property-read-control-decode",
+    "argv": [
+      "<CODEQL_CLI>/codeql",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--entities=id,url,string",
+      "<LEDGER>/work/wave4-prep/run-20261121/output/property-read-control.bqrs"
+    ],
+    "cwd": "<LEDGER>/work/wave4-prep/run-20261121/producer",
+    "exit_status": 0,
+    "wall_seconds": 0.215955,
+    "stdout": "property-read-control-decode.stdout",
+    "stderr_and_time": "property-read-control-decode.stderr-time.txt"
+  }
+]

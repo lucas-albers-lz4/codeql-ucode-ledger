@@ -1,0 +1,736 @@
+{
+  "scope": "comparison of query output identities with source-first predeclared sites/spans; all entity IDs are local to this database",
+  "checks": {
+    "source_site_count_exact": true,
+    "call_argument_row_count_33": true,
+    "call_argument_distinct_call_ids_11": true,
+    "call_argument_site_set_exact": true,
+    "all_call_argument_spans_exact": true,
+    "identifier_site_set_exact": true,
+    "identifier_call_ids_match_argument_query": true,
+    "member_site_set_exact": true,
+    "member_call_ids_match_argument_query": true,
+    "identifier_member_call_ids_disjoint": true,
+    "identifier_union_member_equals_all_11": true,
+    "helper_membership_two_rows": true,
+    "property_read_exactly_one_span": true
+  },
+  "all_checks_pass": true,
+  "calls": [
+    {
+      "site": [
+        "usr/share/ucode/luci/controller/admin/uci.uc",
+        28,
+        12
+      ],
+      "expected": [
+        [
+          22,
+          27,
+          "Identifier"
+        ],
+        [
+          30,
+          35,
+          "Identifier"
+        ],
+        [
+          38,
+          41,
+          "Identifier"
+        ]
+      ],
+      "observed": [
+        [
+          22,
+          27,
+          "Identifier"
+        ],
+        [
+          30,
+          35,
+          "Identifier"
+        ],
+        [
+          38,
+          41,
+          "Identifier"
+        ]
+      ],
+      "exact": true,
+      "call_id": -16776903,
+      "arg_entity_ids": [
+        -16776891,
+        -16776887,
+        -16776883
+      ]
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/controller/admin/uci.uc",
+        59,
+        4
+      ],
+      "expected": [
+        [
+          14,
+          22,
+          "String"
+        ],
+        [
+          25,
+          29,
+          "String"
+        ],
+        [
+          32,
+          4,
+          "Object",
+          59,
+          68
+        ]
+      ],
+      "observed": [
+        [
+          14,
+          22,
+          "String"
+        ],
+        [
+          25,
+          29,
+          "String"
+        ],
+        [
+          32,
+          4,
+          "Object",
+          59,
+          68
+        ]
+      ],
+      "exact": true,
+      "call_id": -16776386,
+      "arg_entity_ids": [
+        -16776374,
+        -16776364,
+        -16776354
+      ]
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/controller/admin/uci.uc",
+        76,
+        17
+      ],
+      "expected": [
+        [
+          27,
+          31,
+          "String"
+        ],
+        [
+          34,
+          42,
+          "String"
+        ],
+        [
+          45,
+          81,
+          "Object"
+        ]
+      ],
+      "observed": [
+        [
+          27,
+          31,
+          "String"
+        ],
+        [
+          34,
+          42,
+          "String"
+        ],
+        [
+          45,
+          81,
+          "Object"
+        ]
+      ],
+      "exact": true,
+      "call_id": -16776221,
+      "arg_entity_ids": [
+        -16776215,
+        -16776205,
+        -16776195
+      ]
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/controller/admin/uci.uc",
+        79,
+        9
+      ],
+      "expected": [
+        [
+          19,
+          23,
+          "String"
+        ],
+        [
+          26,
+          33,
+          "String"
+        ],
+        [
+          36,
+          80,
+          "Object"
+        ]
+      ],
+      "observed": [
+        [
+          19,
+          23,
+          "String"
+        ],
+        [
+          26,
+          33,
+          "String"
+        ],
+        [
+          36,
+          80,
+          "Object"
+        ]
+      ],
+      "exact": true,
+      "call_id": -16776138,
+      "arg_entity_ids": [
+        -16776132,
+        -16776122,
+        -16776112
+      ]
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/controller/admin/uci.uc",
+        144,
+        22
+      ],
+      "expected": [
+        [
+          32,
+          36,
+          "String"
+        ],
+        [
+          39,
+          47,
+          "String"
+        ],
+        [
+          50,
+          86,
+          "Object"
+        ]
+      ],
+      "observed": [
+        [
+          32,
+          36,
+          "String"
+        ],
+        [
+          39,
+          47,
+          "String"
+        ],
+        [
+          50,
+          86,
+          "Object"
+        ]
+      ],
+      "exact": true,
+      "call_id": -16775186,
+      "arg_entity_ids": [
+        -16775180,
+        -16775170,
+        -16775160
+      ]
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/controller/admin/uci.uc",
+        145,
+        9
+      ],
+      "expected": [
+        [
+          19,
+          23,
+          "String"
+        ],
+        [
+          26,
+          33,
+          "String"
+        ],
+        [
+          36,
+          80,
+          "Object"
+        ]
+      ],
+      "observed": [
+        [
+          19,
+          23,
+          "String"
+        ],
+        [
+          26,
+          33,
+          "String"
+        ],
+        [
+          36,
+          80,
+          "Object"
+        ]
+      ],
+      "exact": true,
+      "call_id": -16775120,
+      "arg_entity_ids": [
+        -16775114,
+        -16775104,
+        -16775094
+      ]
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/wave4-controls/changes.uc",
+        2,
+        9
+      ],
+      "expected": [
+        [
+          19,
+          23,
+          "String"
+        ],
+        [
+          26,
+          34,
+          "String"
+        ],
+        [
+          37,
+          38,
+          "Object"
+        ]
+      ],
+      "observed": [
+        [
+          19,
+          23,
+          "String"
+        ],
+        [
+          26,
+          34,
+          "String"
+        ],
+        [
+          37,
+          38,
+          "Object"
+        ]
+      ],
+      "exact": true,
+      "call_id": -16775006,
+      "arg_entity_ids": [
+        -16775000,
+        -16774990,
+        -16774980
+      ]
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/wave4-controls/session-set.uc",
+        2,
+        9
+      ],
+      "expected": [
+        [
+          19,
+          27,
+          "String"
+        ],
+        [
+          30,
+          34,
+          "String"
+        ],
+        [
+          37,
+          38,
+          "Object"
+        ]
+      ],
+      "observed": [
+        [
+          19,
+          27,
+          "String"
+        ],
+        [
+          30,
+          34,
+          "String"
+        ],
+        [
+          37,
+          38,
+          "Object"
+        ]
+      ],
+      "exact": true,
+      "call_id": -16774892,
+      "arg_entity_ids": [
+        -16774880,
+        -16774870,
+        -16774860
+      ]
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/wave4-controls/unrelated-same-name-helper.uc",
+        6,
+        9
+      ],
+      "expected": [
+        [
+          19,
+          23,
+          "String"
+        ],
+        [
+          26,
+          33,
+          "String"
+        ],
+        [
+          36,
+          37,
+          "Object"
+        ]
+      ],
+      "observed": [
+        [
+          19,
+          23,
+          "String"
+        ],
+        [
+          26,
+          33,
+          "String"
+        ],
+        [
+          36,
+          37,
+          "Object"
+        ]
+      ],
+      "exact": true,
+      "call_id": -16774636,
+      "arg_entity_ids": [
+        -16774630,
+        -16774620,
+        -16774610
+      ]
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/wave4-controls/unknown-direct-call.uc",
+        2,
+        9
+      ],
+      "expected": [
+        [
+          19,
+          34,
+          "String"
+        ],
+        [
+          37,
+          52,
+          "String"
+        ],
+        [
+          55,
+          56,
+          "Object"
+        ]
+      ],
+      "observed": [
+        [
+          19,
+          34,
+          "String"
+        ],
+        [
+          37,
+          52,
+          "String"
+        ],
+        [
+          55,
+          56,
+          "Object"
+        ]
+      ],
+      "exact": true,
+      "call_id": -16774758,
+      "arg_entity_ids": [
+        -16774746,
+        -16774736,
+        -16774726
+      ]
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/wave4-controls/swapped-argument-order.uc",
+        2,
+        9
+      ],
+      "expected": [
+        [
+          19,
+          26,
+          "String"
+        ],
+        [
+          29,
+          33,
+          "String"
+        ],
+        [
+          36,
+          37,
+          "Object"
+        ]
+      ],
+      "observed": [
+        [
+          19,
+          26,
+          "String"
+        ],
+        [
+          29,
+          33,
+          "String"
+        ],
+        [
+          36,
+          37,
+          "Object"
+        ]
+      ],
+      "exact": true,
+      "call_id": -16774822,
+      "arg_entity_ids": [
+        -16774816,
+        -16774806,
+        -16774796
+      ]
+    }
+  ],
+  "identifier_rows": [
+    {
+      "site": [
+        "usr/share/ucode/luci/controller/admin/uci.uc",
+        76,
+        17
+      ],
+      "call_id": -16776221,
+      "callee_id": -16776220,
+      "callee": "ubus_call"
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/controller/admin/uci.uc",
+        79,
+        9
+      ],
+      "call_id": -16776138,
+      "callee_id": -16776137,
+      "callee": "ubus_call"
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/controller/admin/uci.uc",
+        144,
+        22
+      ],
+      "call_id": -16775186,
+      "callee_id": -16775185,
+      "callee": "ubus_call"
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/controller/admin/uci.uc",
+        145,
+        9
+      ],
+      "call_id": -16775120,
+      "callee_id": -16775119,
+      "callee": "ubus_call"
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/wave4-controls/changes.uc",
+        2,
+        9
+      ],
+      "call_id": -16775006,
+      "callee_id": -16775005,
+      "callee": "ubus_call"
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/wave4-controls/swapped-argument-order.uc",
+        2,
+        9
+      ],
+      "call_id": -16774822,
+      "callee_id": -16774821,
+      "callee": "ubus_call"
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/wave4-controls/unrelated-same-name-helper.uc",
+        6,
+        9
+      ],
+      "call_id": -16774636,
+      "callee_id": -16774635,
+      "callee": "ubus_call"
+    }
+  ],
+  "member_rows": [
+    {
+      "site": [
+        "usr/share/ucode/luci/controller/admin/uci.uc",
+        28,
+        12
+      ],
+      "call_id": -16776903,
+      "callee_id": -16776902,
+      "receiver_id": -16776901,
+      "property_id": -16776897,
+      "receiver": "ubus",
+      "property": "call"
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/controller/admin/uci.uc",
+        59,
+        4
+      ],
+      "call_id": -16776386,
+      "callee_id": -16776385,
+      "receiver_id": -16776384,
+      "property_id": -16776380,
+      "receiver": "ubus",
+      "property": "call"
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/wave4-controls/session-set.uc",
+        2,
+        9
+      ],
+      "call_id": -16774892,
+      "callee_id": -16774891,
+      "receiver_id": -16774890,
+      "property_id": -16774886,
+      "receiver": "ubus",
+      "property": "call"
+    },
+    {
+      "site": [
+        "usr/share/ucode/luci/wave4-controls/unknown-direct-call.uc",
+        2,
+        9
+      ],
+      "call_id": -16774758,
+      "callee_id": -16774757,
+      "receiver_id": -16774756,
+      "property_id": -16774752,
+      "receiver": "ubus",
+      "property": "call"
+    }
+  ],
+  "helper_body_rows": [
+    {
+      "source": "usr/share/ucode/luci/controller/admin/uci.uc",
+      "declaration_span": [
+        25,
+        1,
+        33,
+        1
+      ],
+      "call_span": [
+        28,
+        12,
+        28,
+        42
+      ],
+      "name": "ubus_call",
+      "declaration_id": -16776957,
+      "call_id": -16776903,
+      "name_id": -16776954
+    },
+    {
+      "source": "usr/share/ucode/luci/wave4-controls/unrelated-same-name-helper.uc",
+      "declaration_span": [
+        1,
+        1,
+        3,
+        1
+      ],
+      "call_span": [
+        2,
+        9,
+        2,
+        36
+      ],
+      "name": "ubus_call",
+      "declaration_id": -16774707,
+      "call_id": -16774680,
+      "name_id": -16774704
+    }
+  ],
+  "property_read_rows": [
+    {
+      "path": "usr/share/ucode/luci/wave4-controls/property-read.uc",
+      "member_id": -16774937,
+      "receiver_id": -16774936,
+      "property_id": -16774932,
+      "parent_id": -16774942,
+      "span": [
+        2,
+        16,
+        2,
+        28
+      ],
+      "receiver_kind": "Identifier",
+      "property": "ubus_call"
+    }
+  ]
+}

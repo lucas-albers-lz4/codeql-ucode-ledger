@@ -1,0 +1,122 @@
+{
+  "input_count": 7,
+  "plain_count": 7,
+  "markup_count": 0,
+  "uncertain_count": 0,
+  "excluded_count": 0,
+  "duplicate_input_count": 0,
+  "files": [
+    {
+      "source_path": "usr/share/ucode/luci/controller/admin/uci.uc",
+      "expected_abs_path": "<RUN>/source/usr/share/ucode/luci/controller/admin/uci.uc",
+      "match_count": 1,
+      "observed": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "exact": true
+    },
+    {
+      "source_path": "usr/share/ucode/luci/wave4-controls/changes.uc",
+      "expected_abs_path": "<RUN>/source/usr/share/ucode/luci/wave4-controls/changes.uc",
+      "match_count": 1,
+      "observed": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "exact": true
+    },
+    {
+      "source_path": "usr/share/ucode/luci/wave4-controls/property-read.uc",
+      "expected_abs_path": "<RUN>/source/usr/share/ucode/luci/wave4-controls/property-read.uc",
+      "match_count": 1,
+      "observed": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "exact": true
+    },
+    {
+      "source_path": "usr/share/ucode/luci/wave4-controls/session-set.uc",
+      "expected_abs_path": "<RUN>/source/usr/share/ucode/luci/wave4-controls/session-set.uc",
+      "match_count": 1,
+      "observed": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "exact": true
+    },
+    {
+      "source_path": "usr/share/ucode/luci/wave4-controls/swapped-argument-order.uc",
+      "expected_abs_path": "<RUN>/source/usr/share/ucode/luci/wave4-controls/swapped-argument-order.uc",
+      "match_count": 1,
+      "observed": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "exact": true
+    },
+    {
+      "source_path": "usr/share/ucode/luci/wave4-controls/unknown-direct-call.uc",
+      "expected_abs_path": "<RUN>/source/usr/share/ucode/luci/wave4-controls/unknown-direct-call.uc",
+      "match_count": 1,
+      "observed": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "exact": true
+    },
+    {
+      "source_path": "usr/share/ucode/luci/wave4-controls/unrelated-same-name-helper.uc",
+      "expected_abs_path": "<RUN>/source/usr/share/ucode/luci/wave4-controls/unrelated-same-name-helper.uc",
+      "match_count": 1,
+      "observed": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "exact": true
+    }
+  ]
+}

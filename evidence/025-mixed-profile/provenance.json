@@ -1,0 +1,112 @@
+{
+  "producer_revision": "0a6612fe0e66351a0ccda43ad5b51f5ef5a2724e",
+  "producer_status_after_run": "?? ql/src/wave4-prep/",
+  "extractor_pack_built_at_revision": "8375887ed14825dd59addbfd0df43616d9e684fb",
+  "extractor_pack_previous_receipt": "../021-template-extraction/pack-and-lock-provenance.json",
+  "extractor_pack_file_manifest_matches_previous_receipt": true,
+  "pack_source_delta_paths_checked": [
+    "extractor",
+    "extractor-pack",
+    "ql/lib",
+    "Cargo.lock",
+    "Cargo.toml",
+    "scripts/clone-grammar.sh",
+    "scripts/create-extractor-pack.sh"
+  ],
+  "pack_source_changed_paths": [],
+  "pack_files": [
+    {
+      "path": "codeql-extractor.yml",
+      "kind": 420,
+      "sha256": "350977db453446af1081fa844e0cbdefb9fc3de7bd51b14e57938063c83b42c4",
+      "size_bytes": 511
+    },
+    {
+      "path": "downgrades/qlpack.yml",
+      "kind": 420,
+      "sha256": "52302981ad5f13e5344cbd3927037b3546939d7ce93b8b450c59a22cbaff15bf",
+      "size_bytes": 96
+    },
+    {
+      "path": "tools/autobuild.cmd",
+      "kind": 420,
+      "sha256": "f93d73fcc4669fab57cfa3391f2f42e19028d2576503a93ca673f23322dd7272",
+      "size_bytes": 120
+    },
+    {
+      "path": "tools/autobuild.sh",
+      "kind": 493,
+      "sha256": "190d821560f9be595a1ba0a10361d3071168f4e7e6db985478fe79ee8fc522d3",
+      "size_bytes": 93
+    },
+    {
+      "path": "tools/export_setblock_detect.py",
+      "kind": 420,
+      "sha256": "a970c5c3350677ada8cfb5a342050f214e6e5eb5678313f01efd38115192ccd6",
+      "size_bytes": 4543
+    },
+    {
+      "path": "tools/index-files.cmd",
+      "kind": 420,
+      "sha256": "1867afda8666ae3871bc534ad1a80c117f68219dadf54e6df022ce17b29f004d",
+      "size_bytes": 626
+    },
+    {
+      "path": "tools/index-files.sh",
+      "kind": 493,
+      "sha256": "1fc6de73c0ea285d944d0e9ab11beec34342808198a5716ce2d51e5c29fd995e",
+      "size_bytes": 381
+    },
+    {
+      "path": "tools/osx64/extractor",
+      "kind": 493,
+      "sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+      "size_bytes": 4486128
+    },
+    {
+      "path": "tools/pre-finalize.cmd",
+      "kind": 420,
+      "sha256": "9142cc3503e20cc507536c6c132be55d98fdd6d2b7bb19e84d5eb651fb7b6903",
+      "size_bytes": 300
+    },
+    {
+      "path": "tools/pre-finalize.sh",
+      "kind": 493,
+      "sha256": "0636921f55488cbf1934543fe8ea113ea240817d15a0cda56e6e16a00743c4b6",
+      "size_bytes": 303
+    },
+    {
+      "path": "tools/qltest.cmd",
+      "kind": 420,
+      "sha256": "6c9e02e6ad51155bf7512d338f1643be7a7388fc417e52c8b71710ce47d749dd",
+      "size_bytes": 293
+    },
+    {
+      "path": "tools/qltest.sh",
+      "kind": 493,
+      "sha256": "ffda5bdd6df90e343e431b801cee093d38aaece142d5c1a519b0b6f41d9e8924",
+      "size_bytes": 518
+    },
+    {
+      "path": "ucode.dbscheme",
+      "kind": 420,
+      "sha256": "a32b8f63d4545439bc632b4afd0d58ad64aa2a634736bcd341fba68b7690ad2b",
+      "size_bytes": 67919
+    },
+    {
+      "path": "ucode.dbscheme.stats",
+      "kind": 420,
+      "sha256": "90d6939a021bb0cb71fd491117d1ecb4c7968fb5a80262ddc44975a75bd97767",
+      "size_bytes": 68
+    }
+  ],
+  "grammar_revision": "4a243af329fae2f4ff01e0fc80133cbab8314600",
+  "shared_tree_sitter_extractor_revision": "ce29d8a59af0d25517c622469db17aad826b8d7f",
+  "codeql_cli_version": "2.27.4",
+  "producer_lock_digests": {
+    "Cargo.lock": "20678c3cbb29632a9369bdb3c735af9ee63c9443879db38847fbda9813aa0a77",
+    "ql/lib/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+    "ql/src/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3"
+  },
+  "root_query_sha256": "8997aa7bc4e7759fa6df7cdb19ebaac8b61ad8ade7e69fd13647d6c264554c92"
+}

@@ -1,0 +1,44 @@
+{
+  "#select": {
+    "columns": [
+      {
+        "name": "d",
+        "kind": "Entity"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      }
+    ],
+    "tuples": [
+      [
+        {
+          "label": "VariableDeclarator",
+          "url": {
+            "uri": "source://usr/share/ucode/controls/no-init.ut",
+            "startLine": 1,
+            "startColumn": 8,
+            "endLine": 1,
+            "endColumn": 8
+          }
+        },
+        1,
+        8,
+        1,
+        8,
+        1
+      ]
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+Scanning for files in <RUN>/source...
+<RUN>/output/db: Indexing files in in <RUN>/source...
+Running command in <RUN>/source: [<RUN>/producer/extractor-pack/tools/index-files.sh, <RUN>/output/db/working/files-to-index7878486264099253758.list]
+        0.71 real         0.81 user         0.08 sys
+           121667584  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               13231  page reclaims
+                  13  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   6  signals received
+                  18  voluntary context switches
+                8778  involuntary context switches
+            38230607  instructions retired
+            15507452  cycles elapsed
+             1933600  peak memory footprint

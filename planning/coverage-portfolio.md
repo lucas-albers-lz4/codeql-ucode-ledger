@@ -58,6 +58,14 @@ records the selection and diagnostics for 11 pinned upstream `.ut` sources
 staged at expected paths plus controls; its markup routes remain inconclusive.
 [022](../claims/022-pinned-mixed-template-ast.md) observes selected mixed-text
 AST nodes and a literal-lookalike control on one pinned template.
+[023](../claims/023-uci-syntax-controls.md) checks selected UCI controller call
+and argument syntax without resolving helper binding or forwarding.
+[024](../claims/024-markup-declaration-ast.md) observes declaration and
+initializer AST rows and a valid no-initializer control; it does not establish
+the proposed markup CFG.
+[025](../claims/025-mixed-profile.md) checks routing, diagnostics and root
+multiplicity for 21 pinned LuCI files and three controls in one database;
+markup routing remains inconclusive.
 
 These paths overlap in the pinned LuCI fixture; they are not a representative
 sample of all OpenWrt software or ucode syntax. The inventory deliberately

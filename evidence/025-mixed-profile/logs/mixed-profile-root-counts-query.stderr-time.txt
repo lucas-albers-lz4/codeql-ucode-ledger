@@ -1,0 +1,29 @@
+Resolving data extensions.
+Finished resolving data extensions.
+Merging data extensions.
+Finished merging data extensions.
+WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.
+Compiling query plan for <RUN>/MixedProfileRootCounts.ql.
+ERROR: could not resolve module codeql.files.FileSystem (<RUN>/MixedProfileRootCounts.ql:7,8-31)
+ERROR: could not resolve module codeql.ucode.Markup (<RUN>/MixedProfileRootCounts.ql:8,8-27)
+ERROR: could not resolve type File (<RUN>/MixedProfileRootCounts.ql:10,6-10)
+ERROR: could not resolve module UCODE (<RUN>/MixedProfileRootCounts.ql:14,24-29)
+ERROR: could not resolve module UcodeMarkup (<RUN>/MixedProfileRootCounts.ql:15,23-34)
+        1.10 real         2.37 user         0.17 sys
+           184369152  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               25309  page reclaims
+                  76  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   9  signals received
+                  17  voluntary context switches
+               18551  involuntary context switches
+            42934793  instructions retired
+            17300037  cycles elapsed
+             1982776  peak memory footprint

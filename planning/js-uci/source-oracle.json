@@ -1,0 +1,233 @@
+{
+  "planning_only": true,
+  "consumer_remote_main": "5f8bd2658483c0c06c0ebfced98fd09b1f57aeff",
+  "consumer_manifest_sha256": "3161274241e086d121fd5122e0dfe0c5fb5d97872710d79c87f86244be2b2627",
+  "consumer_lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+  "luci_pin": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+  "sources": [
+    {
+      "role": "positive",
+      "path": "modules/luci-mod-system/htdocs/luci-static/resources/view/system/reboot.js",
+      "blob": "92e1dd49208f465f0d91099fa69c64b74b800161",
+      "sha256": "dd7e1ad72d2da510e53b194d40d9b45ec2a901939cdf655a4fc930cf42fba079",
+      "anchors": [
+        {
+          "line": 5,
+          "text": "'require uci';"
+        },
+        {
+          "line": 15,
+          "text": "return uci.changes();",
+          "access": "uci.changes",
+          "span": [
+            15,
+            10,
+            15,
+            20
+          ],
+          "receiver_form": "bare"
+        }
+      ]
+    },
+    {
+      "role": "positive and receiver-form control",
+      "path": "modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js",
+      "blob": "a0c589fcbac98a9781a4eb80c44af35f8120a0d6",
+      "sha256": "b02c16b896a31789d24e615452de0596bb6b52ff4f82061172ce27e6e567f8b2",
+      "anchors": [
+        {
+          "line": 6,
+          "text": "'require uci';"
+        },
+        {
+          "line": 943,
+          "text": "uci.set('dhcp', section, 'name', value);",
+          "access": "uci.set",
+          "span": [
+            943,
+            4,
+            943,
+            10
+          ],
+          "receiver_form": "bare"
+        },
+        {
+          "line": 944,
+          "text": "uci.set('dhcp', section, 'dns', '1');",
+          "access": "uci.set",
+          "span": [
+            944,
+            4,
+            944,
+            10
+          ],
+          "receiver_form": "bare"
+        },
+        {
+          "line": 958,
+          "text": "const macs = uci.get('dhcp', section, 'mac');",
+          "access": "uci.get",
+          "span": [
+            958,
+            17,
+            958,
+            23
+          ],
+          "receiver_form": "bare"
+        },
+        {
+          "line": 616,
+          "text": "Object.values(L.uci.sections('dhcp', 'dnsmasq')).forEach(function(val, index) {",
+          "access": "L.uci.sections",
+          "span": [
+            616,
+            17,
+            616,
+            30
+          ],
+          "receiver_form": "L.uci"
+        },
+        {
+          "line": 1104,
+          "text": "Object.values(L.uci.sections('dhcp', 'dnsmasq')).forEach(function(val, index) {",
+          "access": "L.uci.sections",
+          "span": [
+            1104,
+            17,
+            1104,
+            30
+          ],
+          "receiver_form": "L.uci"
+        }
+      ]
+    },
+    {
+      "role": "method-name non-match",
+      "path": "modules/luci-base/htdocs/luci-static/resources/uci.js",
+      "blob": "f53b548e3eeb3ae45dfe9c8e3a09fdb77f30c78f",
+      "sha256": "c14a05d8bd458d57e855513f1397132f73ce8af82ab3d1be8e102df1d22e29f3",
+      "anchors": [
+        {
+          "line": 676,
+          "text": "return this.set(conf, sid, opt, null);",
+          "nonmatch_reason": "receiver is this, not bare uci or exact L.uci"
+        },
+        {
+          "line": 713,
+          "text": "return this.get(conf, sid, opt);",
+          "nonmatch_reason": "receiver is this, not bare uci or exact L.uci"
+        }
+      ]
+    }
+  ],
+  "fixture": {
+    "path": "uci-surface-controls.js",
+    "sha256": "11562a17f9c35dc5a6f779871dac06e6c23cb7a63ed4b3b320f5575deb0098b0",
+    "expected_candidates": [
+      {
+        "line": 1,
+        "span": [
+          1,
+          1,
+          1,
+          7
+        ],
+        "kind": "dot",
+        "property": "set",
+        "receiver_form": "bare"
+      },
+      {
+        "line": 2,
+        "span": [
+          2,
+          19,
+          2,
+          25
+        ],
+        "kind": "dot",
+        "property": "get",
+        "receiver_form": "bare",
+        "usage": "property read"
+      },
+      {
+        "line": 3,
+        "span": [
+          3,
+          1,
+          3,
+          12
+        ],
+        "kind": "index",
+        "property": "unset",
+        "receiver_form": "bare",
+        "source_index_form": "literal-index"
+      },
+      {
+        "line": 4,
+        "span": [
+          4,
+          1,
+          4,
+          8
+        ],
+        "kind": "index",
+        "property": "<unknown>",
+        "receiver_form": "bare",
+        "source_index_form": "computed-index"
+      },
+      {
+        "line": 5,
+        "span": [
+          5,
+          1,
+          5,
+          14
+        ],
+        "kind": "dot",
+        "property": "sections",
+        "receiver_form": "L.uci"
+      },
+      {
+        "line": 9,
+        "span": [
+          9,
+          24,
+          9,
+          33
+        ],
+        "kind": "dot",
+        "property": "commit",
+        "receiver_form": "bare",
+        "binding": "lexically shadowed in fixture; emitted binding unresolved"
+      },
+      {
+        "line": 14,
+        "source_expression": "(uci).set",
+        "kind": "dot",
+        "property": "set",
+        "receiver_form": "bare",
+        "note": "Exact QL span to be independently checked before execution.",
+        "source_receiver_annotation": "parenthesized bare",
+        "source_span": [
+          14,
+          1,
+          14,
+          9
+        ]
+      }
+    ],
+    "expected_nonmatches": [
+      6,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      15
+    ],
+    "optional_chain_policy": "Excluded from first proposed syntax scope; recheck CodeQL AST representation and control before any execution."
+  },
+  "issue_state_note": "OpenWrt #69 is open and its bridge says UCI inventory is held because prior approval was withdrawn; the inspected record does not state why. Planning does not change that hold.",
+  "scope": "Partial source-anchor and synthetic-control oracle; not the full 88-file expected site multiset."
+}

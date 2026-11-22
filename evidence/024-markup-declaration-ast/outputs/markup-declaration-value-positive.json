@@ -1,0 +1,66 @@
+{
+  "#select": {
+    "columns": [
+      {
+        "name": "d",
+        "kind": "Entity"
+      },
+      {
+        "name": "n",
+        "kind": "Entity"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "String"
+      }
+    ],
+    "tuples": [
+      [
+        {
+          "label": "VariableDeclarator",
+          "url": {
+            "uri": "source://usr/share/ucode/controls/mixed.ut",
+            "startLine": 2,
+            "startColumn": 8,
+            "endLine": 2,
+            "endColumn": 12
+          }
+        },
+        {
+          "label": "1",
+          "url": {
+            "uri": "source://usr/share/ucode/controls/mixed.ut",
+            "startLine": 2,
+            "startColumn": 12,
+            "endLine": 2,
+            "endColumn": 12
+          }
+        },
+        2,
+        8,
+        12,
+        2,
+        12,
+        12,
+        "1"
+      ]
+    ]
+  }
+}

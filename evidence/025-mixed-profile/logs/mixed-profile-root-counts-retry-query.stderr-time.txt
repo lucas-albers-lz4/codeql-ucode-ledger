@@ -1,0 +1,28 @@
+Resolving data extensions.
+Finished resolving data extensions.
+Merging data extensions.
+Finished merging data extensions.
+WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.
+Compiling query plan for <RUN>/producer/ql/src/wave4-prep/MixedProfileRootCounts.ql.
+[1/1 comp 622ms] Compiled <RUN>/producer/ql/src/wave4-prep/MixedProfileRootCounts.ql.
+Starting evaluation of lucas-albers-lz4/ucode-queries/wave4-prep/MixedProfileRootCounts.ql.
+[1/1 eval 58ms] Evaluation done; writing results to <RUN>/output/mixed-profile-root-counts-retry.bqrs.
+Shutting down query evaluator.
+        1.62 real         4.47 user         0.22 sys
+           353796096  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               37387  page reclaims
+                  99  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                  14  signals received
+                 161  voluntary context switches
+               24859  involuntary context switches
+            43795739  instructions retired
+            16423354  cycles elapsed
+             2113848  peak memory footprint

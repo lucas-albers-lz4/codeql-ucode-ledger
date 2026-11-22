@@ -1,0 +1,40 @@
+{
+  "producer_sha": "0a6612fe0e66351a0ccda43ad5b51f5ef5a2724e",
+  "luci_sha": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+  "controller_git_blob": "c38a42b10bfefbaa31741feae9395abd8a1f8e40",
+  "controller_sha256": "ac75cfef7d74f87ed7f957778004a7bf486c76df699398c215795b4947e0c93e",
+  "consumer_corpus_lock_sha256_from_producer_audit": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+  "codeql_version": "2.27.4",
+  "pack_manifest_sha256": "a1c706ff037fbc0db773b1ce96dfa872d518b1da35cff5cdc82163fd5eac7339",
+  "dependency_cache_manifest_sha256": "fe82538c902f372c87208a789dca226364b607a6bb69382292aa7dca3e8090ec",
+  "controls": [
+    {
+      "path": "controls/changes.uc",
+      "sha256": "a53a96668db439765f19edc127f660ef54474c7d96a060aad06cac9d9e4b0d90"
+    },
+    {
+      "path": "controls/property-read.uc",
+      "sha256": "8e75552737580f7312ca74190dca60f188b82f325d5064b4e44d4de1dab9dc33"
+    },
+    {
+      "path": "controls/session-set.uc",
+      "sha256": "f8fa2eefc1f5c342a59e17a8e11cd092f335de0c6ff5ef180adf172d3ed4de0e"
+    },
+    {
+      "path": "controls/swapped-argument-order.uc",
+      "sha256": "ad632c3e87fd8c22a1b8b8a2b2a33cb799dc83645f69a0037daf1675dbb3aaae"
+    },
+    {
+      "path": "controls/unknown-direct-call.uc",
+      "sha256": "170358cfb932a3c03b5c9c78c8dc249bc987f59fdb99987d9bfec5d9d373d599"
+    },
+    {
+      "path": "controls/unrelated-same-name-helper.uc",
+      "sha256": "75765c83dcdefe70d2b5350bf25529a8a32a334ff057b17f274f0ce85cf4281d"
+    }
+  ],
+  "result_ids_scope": "CodeQL entity IDs are local to this run database",
+  "producer_worktree": "Pinned tracked files plus untracked ledger-local test queries",
+  "luci_worktree": "clean",
+  "grammar_sha": "4a243af329fae2f4ff01e0fc80133cbab8314600"
+}

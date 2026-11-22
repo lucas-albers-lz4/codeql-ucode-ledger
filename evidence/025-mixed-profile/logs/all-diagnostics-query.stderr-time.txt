@@ -1,0 +1,28 @@
+Resolving data extensions.
+Finished resolving data extensions.
+Merging data extensions.
+Finished merging data extensions.
+WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.
+Compiling query plan for <RUN>/producer/ql/src/wave4-prep/Wave1AllDiagnostics.ql.
+[1/1 comp 627ms] Compiled <RUN>/producer/ql/src/wave4-prep/Wave1AllDiagnostics.ql.
+Starting evaluation of lucas-albers-lz4/ucode-queries/wave4-prep/Wave1AllDiagnostics.ql.
+[1/1 eval 11ms] Evaluation done; writing results to <RUN>/output/all-diagnostics.bqrs.
+Shutting down query evaluator.
+        1.70 real         4.28 user         0.28 sys
+           316342272  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               35202  page reclaims
+                  95  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                  11  signals received
+                  39  voluntary context switches
+               30834  involuntary context switches
+            42714772  instructions retired
+            17579064  cycles elapsed
+             2130232  peak memory footprint

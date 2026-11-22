@@ -1,0 +1,15 @@
+{"#select":{"columns":[
+   {"name":"member","kind":"Entity"}
+  ,{"name":"receiver","kind":"Entity"}
+  ,{"name":"property","kind":"Entity"}
+  ,{"name":"parent","kind":"Entity"}
+  ,{"name":"source_path","kind":"String"}
+  ,{"name":"member_line","kind":"Integer"}
+  ,{"name":"member_column","kind":"Integer"}
+  ,{"name":"member_end_line","kind":"Integer"}
+  ,{"name":"member_end_column","kind":"Integer"}
+  ,{"name":"receiver_kind","kind":"String"}
+  ,{"name":"property_name","kind":"String"}]
+ ,"tuples":[
+   [{"id":-16774937,"label":"MemberExpression","url":{"uri":"file://<RUN>/source/usr/share/ucode/luci/wave4-controls/property-read.uc","startLine":2,"startColumn":16,"endLine":2,"endColumn":28}},{"id":-16774936,"label":"api","url":{"uri":"file://<RUN>/source/usr/share/ucode/luci/wave4-controls/property-read.uc","startLine":2,"startColumn":16,"endLine":2,"endColumn":18}},{"id":-16774932,"label":"ubus_call","url":{"uri":"file://<RUN>/source/usr/share/ucode/luci/wave4-controls/property-read.uc","startLine":2,"startColumn":20,"endLine":2,"endColumn":28}},{"id":-16774942,"label":"VariableDeclarator","url":{"uri":"file://<RUN>/source/usr/share/ucode/luci/wave4-controls/property-read.uc","startLine":2,"startColumn":8,"endLine":2,"endColumn":28}},"usr/share/ucode/luci/wave4-controls/property-read.uc",2,16,2,28,"Identifier","ubus_call"]]
+ }}

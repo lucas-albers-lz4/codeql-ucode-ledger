@@ -1,0 +1,54 @@
+{
+  "#select": {
+    "columns": [
+      {
+        "name": "f",
+        "kind": "Entity"
+      },
+      {
+        "kind": "String"
+      }
+    ],
+    "tuples": [
+      [
+        {
+          "label": "source://usr/share/ucode/controls/mixed.ut",
+          "url": {
+            "uri": "source://usr/share/ucode/controls/mixed.ut",
+            "startLine": 0,
+            "startColumn": 0,
+            "endLine": 0,
+            "endColumn": 0
+          }
+        },
+        ""
+      ],
+      [
+        {
+          "label": "source://usr/share/ucode/controls/no-init.ut",
+          "url": {
+            "uri": "source://usr/share/ucode/controls/no-init.ut",
+            "startLine": 0,
+            "startColumn": 0,
+            "endLine": 0,
+            "endColumn": 0
+          }
+        },
+        ""
+      ],
+      [
+        {
+          "label": "source://usr/share/ucode/controls/plain.uc",
+          "url": {
+            "uri": "source://usr/share/ucode/controls/plain.uc",
+            "startLine": 0,
+            "startColumn": 0,
+            "endLine": 0,
+            "endColumn": 0
+          }
+        },
+        ""
+      ]
+    ]
+  }
+}

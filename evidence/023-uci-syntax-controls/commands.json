@@ -1,0 +1,335 @@
+{
+  "commands": [
+    {
+      "label": "database-init",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "database",
+        "init",
+        "<RUN>/output/db",
+        "--language=ucode",
+        "--search-path=<RUN>/extractor-pack",
+        "--source-root=<RUN>/source"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.534937,
+      "peak_rss_bytes": 133939200
+    },
+    {
+      "label": "index-files",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "database",
+        "index-files",
+        "<RUN>/output/db",
+        "--language=ucode",
+        "--include=**/*.uc",
+        "--working-dir=<RUN>/source"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.632913,
+      "peak_rss_bytes": 119980032
+    },
+    {
+      "label": "database-finalize",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "database",
+        "finalize",
+        "<RUN>/output/db"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 1.183219,
+      "peak_rss_bytes": 219283456
+    },
+    {
+      "label": "successfully-extracted-query",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "query",
+        "run",
+        "<RUN>/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=<RUN>/output/db",
+        "--search-path=<RUN>/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src",
+        "--output=<RUN>/output/successfully-extracted.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 1.755654,
+      "peak_rss_bytes": 300990464
+    },
+    {
+      "label": "successfully-extracted-decode",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<RUN>/output/successfully-extracted.bqrs"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.228637,
+      "peak_rss_bytes": 89358336
+    },
+    {
+      "label": "extraction-errors-query",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "query",
+        "run",
+        "<RUN>/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=<RUN>/output/db",
+        "--search-path=<RUN>/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src",
+        "--output=<RUN>/output/extraction-errors.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 1.736763,
+      "peak_rss_bytes": 328433664
+    },
+    {
+      "label": "extraction-errors-decode",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<RUN>/output/extraction-errors.bqrs"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.231643,
+      "peak_rss_bytes": 89751552
+    },
+    {
+      "label": "all-diagnostics-query",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "query",
+        "run",
+        "<RUN>/producer/ql/src/wave4-prep/Wave1AllDiagnostics.ql",
+        "--database=<RUN>/output/db",
+        "--search-path=<RUN>/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src",
+        "--output=<RUN>/output/all-diagnostics.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 2.179391,
+      "peak_rss_bytes": 318636032
+    },
+    {
+      "label": "all-diagnostics-decode",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<RUN>/output/all-diagnostics.bqrs"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.245861,
+      "peak_rss_bytes": 89440256
+    },
+    {
+      "label": "uci-call-syntax-query",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "query",
+        "run",
+        "<RUN>/producer/ql/src/wave4-prep/Wave4UciCallSyntax.ql",
+        "--database=<RUN>/output/db",
+        "--search-path=<RUN>/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src",
+        "--output=<RUN>/output/uci-call-syntax.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 100,
+      "wall_seconds": 8.916722,
+      "peak_rss_bytes": 1443348480
+    },
+    {
+      "label": "call-arguments-query",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "query",
+        "run",
+        "<RUN>/producer/ql/src/wave4-prep/Wave4CallArguments.ql",
+        "--database=<RUN>/output/db",
+        "--search-path=<RUN>/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src",
+        "--output=<RUN>/output/call-arguments.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 1.961274,
+      "peak_rss_bytes": 380190720
+    },
+    {
+      "label": "call-arguments-decode",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=id,url,string",
+        "<RUN>/output/call-arguments.bqrs"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.224969,
+      "peak_rss_bytes": 90062848
+    },
+    {
+      "label": "identifier-callees-query",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "query",
+        "run",
+        "<RUN>/producer/ql/src/wave4-prep/Wave4IdentifierCallees.ql",
+        "--database=<RUN>/output/db",
+        "--search-path=<RUN>/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src",
+        "--output=<RUN>/output/identifier-callees.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 2.068805,
+      "peak_rss_bytes": 398966784
+    },
+    {
+      "label": "identifier-callees-decode",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=id,url,string",
+        "<RUN>/output/identifier-callees.bqrs"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.217954,
+      "peak_rss_bytes": 90144768
+    },
+    {
+      "label": "member-callees-query",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "query",
+        "run",
+        "<RUN>/producer/ql/src/wave4-prep/Wave4MemberCallees.ql",
+        "--database=<RUN>/output/db",
+        "--search-path=<RUN>/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src",
+        "--output=<RUN>/output/member-callees.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 1.931728,
+      "peak_rss_bytes": 378011648
+    },
+    {
+      "label": "member-callees-decode",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=id,url,string",
+        "<RUN>/output/member-callees.bqrs"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.215711,
+      "peak_rss_bytes": 89948160
+    },
+    {
+      "label": "helper-body-membership-query",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "query",
+        "run",
+        "<RUN>/producer/ql/src/wave4-prep/Wave4HelperBodyMembership.ql",
+        "--database=<RUN>/output/db",
+        "--search-path=<RUN>/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src",
+        "--output=<RUN>/output/helper-body-membership.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 1.862765,
+      "peak_rss_bytes": 398327808
+    },
+    {
+      "label": "helper-body-membership-decode",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=id,url,string",
+        "<RUN>/output/helper-body-membership.bqrs"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.218576,
+      "peak_rss_bytes": 90226688
+    },
+    {
+      "label": "property-read-control-query",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "query",
+        "run",
+        "<RUN>/producer/ql/src/wave4-prep/Wave4PropertyReadControl.ql",
+        "--database=<RUN>/output/db",
+        "--search-path=<RUN>/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src",
+        "--output=<RUN>/output/property-read-control.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 1.986795,
+      "peak_rss_bytes": 428179456
+    },
+    {
+      "label": "property-read-control-decode",
+      "argv": [
+        "<CODEQL-2.27.4>/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=id,url,string",
+        "<RUN>/output/property-read-control.bqrs"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.215955,
+      "peak_rss_bytes": 89849856
+    }
+  ],
+  "notes": [
+    "All CodeQL commands ran serially with one query thread, 2048 MiB query RAM cap, and HOME/TMPDIR/XDG cache/CODEQL_UCODE_CACHE under <RUN>.",
+    "Initial broad query failed with an internal BDD node limit; no retry was made. Five narrow queries later ran sequentially after review."
+  ]
+}

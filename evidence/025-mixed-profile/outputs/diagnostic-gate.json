@@ -1,0 +1,10 @@
+{
+  "expected_file_count": 24,
+  "observed_success_rows": 24,
+  "observed_unique_success_files": 24,
+  "missing": [],
+  "unexpected": [],
+  "duplicates": {},
+  "extraction_error_rows": 0,
+  "all_diagnostic_rows": 0
+}

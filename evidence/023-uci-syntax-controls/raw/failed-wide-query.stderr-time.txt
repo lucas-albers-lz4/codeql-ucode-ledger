@@ -1,0 +1,124 @@
+Resolving data extensions.
+Finished resolving data extensions.
+Merging data extensions.
+Finished merging data extensions.
+WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.
+Compiling query plan for <LEDGER>/<RUN>/producer/ql/src/wave4-prep/Wave4UciCallSyntax.ql.
+Oops! A fatal internal error occurred. Details:
+com.semmle.util.exception.CatastrophicError: BDD factory #14 functionality: BDD node limit of 2^^25 reached.
+	at com.semmle.bdd.SemmleBDDFactory.growNodesList(SemmleBDDFactory.java:446)
+	at com.semmle.bdd.SemmleBDDFactory.makeNode(SemmleBDDFactory.java:396)
+	at com.semmle.bdd.SemmleBDDFactory.makeBNode(SemmleBDDFactory.java:423)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:688)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDDFactory.and(SemmleBDDFactory.java:690)
+	at com.semmle.bdd.SemmleBDD.and(SemmleBDD.java:20)
+	at com.semmle.dil.dependency.functional.FunctionalDependency.and(FunctionalDependency.java:126)
+	at com.semmle.dil.absinthe.functionality.Functionality.and(Functionality.java:48)
+	at com.semmle.dil.absinthe.functionality.Functionality.and(Functionality.java:32)
+	at com.semmle.dil.absinthe.util.CompoundValue.and(CompoundValue.java:54)
+	at com.semmle.dil.absinthe.util.CompoundValue.and(CompoundValue.java:17)
+	at java.base/java.util.stream.ReduceOps$2ReducingSink.accept(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.reduce(Unknown Source)
+	at com.semmle.dil.absinthe.AbstractInterpreter$Evaluator.lambda$visit$8(AbstractInterpreter.java:1170)
+	at com.semmle.dil.absinthe.AbstractInterpreter$Evaluator.handleNodeCaching(AbstractInterpreter.java:1089)
+	at com.semmle.dil.absinthe.AbstractInterpreter$Evaluator.visit(AbstractInterpreter.java:1165)
+	at com.semmle.dil.absinthe.ast.AbsintheTerm$AbsintheAnd.accept(AbsintheTerm.java:281)
+	at com.semmle.dil.absinthe.AbstractInterpreter.lazyEval(AbstractInterpreter.java:523)
+	at com.semmle.dil.absinthe.AbstractInterpreter.evaluate(AbstractInterpreter.java:296)
+	at com.semmle.dil.opt.FunctionalEqualityInference.visit(FunctionalEqualityInference.java:129)
+	at com.semmle.dil.opt.FunctionalEqualityInference.visit(FunctionalEqualityInference.java:48)
+	at com.semmle.dil.ast.And.accept(And.java:109)
+	at com.semmle.dil.visit.DefaultVisitor.visit(DefaultVisitor.java:127)
+	at com.semmle.dil.visit.DefaultVisitor.visit(DefaultVisitor.java:33)
+	at com.semmle.dil.ast.Exists.accept(Exists.java:121)
+	at com.semmle.dil.visit.DefaultVisitor.lambda$visitClause$3(DefaultVisitor.java:71)
+	at java.base/java.util.Collections$SingletonList.forEach(Unknown Source)
+	at com.semmle.dil.visit.DefaultVisitor.visitClause(DefaultVisitor.java:71)
+	at com.semmle.dil.opt.FunctionalEqualityInference.visitClause(FunctionalEqualityInference.java:105)
+	at com.semmle.dil.visit.DefaultVisitor.visit(DefaultVisitor.java:59)
+	at com.semmle.dil.ast.IntensionalRelation.lambda$withTracing$0(IntensionalRelation.java:50)
+	at com.semmle.dil.ast.Clause.accept(Clause.java:72)
+	at com.semmle.dil.visit.DefaultVisitor.lambda$visit$1(DefaultVisitor.java:49)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at com.semmle.dil.visit.DefaultVisitor.visit(DefaultVisitor.java:49)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at com.semmle.dil.visit.DefaultVisitor.visit(DefaultVisitor.java:41)
+	at com.semmle.dil.opt.FunctionalEqualityInference.apply(FunctionalEqualityInference.java:59)
+	at com.semmle.dil.opt.DILOptimiser.functionalEqualityInference(DILOptimiser.java:603)
+	at com.semmle.dil.opt.DILOptimiser.optimiseDILProgram(DILOptimiser.java:208)
+	at com.semmle.dil.opt.DILOptimiser.lambda$apply$0(DILOptimiser.java:64)
+	at com.semmle.inmemory.planner.Compiler.lambda$optimiseAndCompileOneProgram$1(Compiler.java:238)
+	at com.semmle.dil.opt.DILOptimiser.apply(DILOptimiser.java:54)
+	at com.semmle.inmemory.planner.Compiler.optimiseAndCompileOneProgram(Compiler.java:229)
+	at com.semmle.inmemory.planner.StageDirector.processStratum(StageDirector.java:168)
+	at com.semmle.inmemory.planner.StageDirector.computeStagedProgram(StageDirector.java:122)
+	at com.semmle.inmemory.QueryCompiler.prepareQuery(QueryCompiler.java:62)
+	at com.semmle.api.QLCompilerUtils.compilePipelineToRa(QLCompilerUtils.java:266)
+	at com.semmle.cli2.ql.CompilationCommon$OneCompilation.compileInner(CompilationCommon.java:471)
+	at com.semmle.cli2.ql.CompilationCommon$OneCompilation.compile(CompilationCommon.java:283)
+	at com.semmle.cli2.ql.CompilationCommon.compile(CompilationCommon.java:251)
+	at com.semmle.cli2.ql.CompilationCommon.compile(CompilationCommon.java:243)
+	at com.semmle.cli2.execute.ExecuteQueriesCommand.compileOrLoad(ExecuteQueriesCommand.java:908)
+	at com.semmle.cli2.execute.ExecuteQueriesCommand$ExecutionIterator.startImpl(ExecuteQueriesCommand.java:242)
+	at com.semmle.cli2.execute.ExecuteQueriesCommand$ExecutionIterator.start(ExecuteQueriesCommand.java:209)
+	at com.semmle.cli2.execute.ExecuteQueriesCommand$ExecutionIterator.lambda$next$0(ExecuteQueriesCommand.java:204)
+	at com.semmle.util.concurrent.FutureUtils.supplyCompose(FutureUtils.java:248)
+	at com.semmle.util.concurrent.Paralleliser.lambda$startMoreJobs$3(Paralleliser.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+        8.91 real        12.86 user         3.05 sys
+          1443348480  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              104182  page reclaims
+                  96  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                  13  signals received
+                 104  voluntary context switches
+               73320  involuntary context switches
+            39129696  instructions retired
+            15699706  cycles elapsed
+             1933624  peak memory footprint

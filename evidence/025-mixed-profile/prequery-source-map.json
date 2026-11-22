@@ -1,0 +1,252 @@
+{
+  "decision": "Does one database preserve exact routing, successful extraction and one AST root of the appropriate mode for each selected source and control?",
+  "luci_sha": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+  "producer_sha": "0a6612fe0e66351a0ccda43ad5b51f5ef5a2724e",
+  "consumer_inventory_checkout_sha": "fa745e1c62f1f558bd8f6659a1d1040bb569cb96",
+  "consumer_main_revision_target": "5f8bd2658483c0c06c0ebfced98fd09b1f57aeff",
+  "input_count": 24,
+  "staged_source_root": "source",
+  "inputs": [
+    {
+      "source_path": "modules/luci-base/root/usr/share/rpcd/ucode/luci",
+      "staged_relative_path": "usr/share/rpcd/ucode/luci",
+      "sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected",
+      "program_roots_expected": 1,
+      "markup_roots_expected": 0
+    },
+    {
+      "source_path": "modules/luci-base/ucode/controller/admin/index.uc",
+      "staged_relative_path": "usr/share/ucode/luci/controller/admin/index.uc",
+      "sha256": "7d7a5dc3e694ad232e4e0f3d01db17c2f5502338aa8c4fc44fa714b0b1147620",
+      "classification": "plain",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected",
+      "program_roots_expected": 1,
+      "markup_roots_expected": 0
+    },
+    {
+      "source_path": "modules/luci-base/ucode/controller/admin/uci.uc",
+      "staged_relative_path": "usr/share/ucode/luci/controller/admin/uci.uc",
+      "sha256": "ac75cfef7d74f87ed7f957778004a7bf486c76df699398c215795b4947e0c93e",
+      "classification": "plain",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected",
+      "program_roots_expected": 1,
+      "markup_roots_expected": 0
+    },
+    {
+      "source_path": "modules/luci-base/ucode/dispatcher.uc",
+      "staged_relative_path": "usr/share/ucode/luci/dispatcher.uc",
+      "sha256": "4f9923cf569aeebb956343d208bcc38f40d8a26d2f46f12c5539a9582fa4f037",
+      "classification": "plain",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected",
+      "program_roots_expected": 1,
+      "markup_roots_expected": 0
+    },
+    {
+      "source_path": "modules/luci-base/ucode/http.uc",
+      "staged_relative_path": "usr/share/ucode/luci/http.uc",
+      "sha256": "68f8a7dffc7bccdfe98956cb3b6e0e087592c86049a2b83d061e5be3585fa5fa",
+      "classification": "plain",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected",
+      "program_roots_expected": 1,
+      "markup_roots_expected": 0
+    },
+    {
+      "source_path": "modules/luci-base/ucode/runtime.uc",
+      "staged_relative_path": "usr/share/ucode/luci/runtime.uc",
+      "sha256": "b15afce07020e2a7ad50718d49a874da30d0582ede7de65e54acaceb6e9d0926",
+      "classification": "plain",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected",
+      "program_roots_expected": 1,
+      "markup_roots_expected": 0
+    },
+    {
+      "source_path": "modules/luci-base/ucode/sys.uc",
+      "staged_relative_path": "usr/share/ucode/luci/sys.uc",
+      "sha256": "0380fba5d843a8950bab0ef70982cb40ab8f475e8d267c873e4199a736b55656",
+      "classification": "plain",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected",
+      "program_roots_expected": 1,
+      "markup_roots_expected": 0
+    },
+    {
+      "source_path": "modules/luci-mod-status/ucode/template/admin_status/index.ut",
+      "staged_relative_path": "usr/share/ucode/luci/template/admin_status/index.ut",
+      "sha256": "652842b1e54f8a2904458ae1f5693ddfc68b97f106d8b8ff48a4d8747d673019",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "program_roots_expected": 0,
+      "markup_roots_expected": 1
+    },
+    {
+      "source_path": "modules/luci-base/ucode/template/csrftoken.ut",
+      "staged_relative_path": "usr/share/ucode/luci/template/csrftoken.ut",
+      "sha256": "a2f223208d9ff2c3e1bfa808f11d74636028b4902973afb5b7f336328f7e2160",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "program_roots_expected": 0,
+      "markup_roots_expected": 1
+    },
+    {
+      "source_path": "modules/luci-base/ucode/template/error404.ut",
+      "staged_relative_path": "usr/share/ucode/luci/template/error404.ut",
+      "sha256": "8fa2306435be3aca3ca59b09adaaa0190292c6cfe2fecda9df4eb3eeac5b8552",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "program_roots_expected": 0,
+      "markup_roots_expected": 1
+    },
+    {
+      "source_path": "modules/luci-base/ucode/template/error500.ut",
+      "staged_relative_path": "usr/share/ucode/luci/template/error500.ut",
+      "sha256": "6c7a519229524d7a34b18c5da97cb8b05f622ee0938fe1a4b2d2516a6adf1887",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "program_roots_expected": 0,
+      "markup_roots_expected": 1
+    },
+    {
+      "source_path": "modules/luci-base/ucode/template/footer.ut",
+      "staged_relative_path": "usr/share/ucode/luci/template/footer.ut",
+      "sha256": "5625f938d625ff406e53434d37aa7643cc09e11f74379887a4ba154021240495",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "program_roots_expected": 0,
+      "markup_roots_expected": 1
+    },
+    {
+      "source_path": "modules/luci-base/ucode/template/header.ut",
+      "staged_relative_path": "usr/share/ucode/luci/template/header.ut",
+      "sha256": "67132f2d1c1cf743f3e4ce11d660a5a2569b461804a63914061fe956171be6c2",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "program_roots_expected": 0,
+      "markup_roots_expected": 1
+    },
+    {
+      "source_path": "modules/luci-base/ucode/template/sysauth.ut",
+      "staged_relative_path": "usr/share/ucode/luci/template/sysauth.ut",
+      "sha256": "8c1dcf98cd29410021ed4f5f9dc668f8c70c0227f39f97f60f7205f9d52fa5bb",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "program_roots_expected": 0,
+      "markup_roots_expected": 1
+    },
+    {
+      "source_path": "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/footer.ut",
+      "staged_relative_path": "usr/share/ucode/luci/template/themes/bootstrap/footer.ut",
+      "sha256": "b5cb417ca73c02226679ab2412e272dcf6851eee134c521fc316c39a81ecfa4e",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "program_roots_expected": 0,
+      "markup_roots_expected": 1
+    },
+    {
+      "source_path": "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/header.ut",
+      "staged_relative_path": "usr/share/ucode/luci/template/themes/bootstrap/header.ut",
+      "sha256": "eca05b1e4d8391e36a08bcd0b3d0135d2addb37b9e574bd7db98d56f4835e0a3",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "program_roots_expected": 0,
+      "markup_roots_expected": 1
+    },
+    {
+      "source_path": "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/sysauth.ut",
+      "staged_relative_path": "usr/share/ucode/luci/template/themes/bootstrap/sysauth.ut",
+      "sha256": "7e4702c063c95734ec3157121dc59802ff51ed2c1b73c405cd9831ddd2e0c337",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "program_roots_expected": 0,
+      "markup_roots_expected": 1
+    },
+    {
+      "source_path": "modules/luci-base/ucode/template/view.ut",
+      "staged_relative_path": "usr/share/ucode/luci/template/view.ut",
+      "sha256": "785bf7d4cceb5cdd9f113cbede0bde5b69e35b69cc1b51d2e498665d50091d62",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "program_roots_expected": 0,
+      "markup_roots_expected": 1
+    },
+    {
+      "source_path": "modules/luci-base/ucode/uhttpd.uc",
+      "staged_relative_path": "usr/share/ucode/luci/uhttpd.uc",
+      "sha256": "a2b2694f52c021af16dd06ac8c988b8a0a726d9e8186d308708268ebb8849493",
+      "classification": "markup",
+      "reason": "markup_tag_content",
+      "status": "inconclusive",
+      "program_roots_expected": 0,
+      "markup_roots_expected": 1
+    },
+    {
+      "source_path": "modules/luci-base/ucode/zoneinfo.uc",
+      "staged_relative_path": "usr/share/ucode/luci/zoneinfo.uc",
+      "sha256": "54162a073660ea65706aa920a10cfbd3ee4d345e1e4ab3bed8a8d56c9cab3863",
+      "classification": "plain",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected",
+      "program_roots_expected": 1,
+      "markup_roots_expected": 0
+    },
+    {
+      "source_path": "modules/luci-base/htdocs/cgi-bin/luci",
+      "staged_relative_path": "www/cgi-bin/luci",
+      "sha256": "aced6c9b2e621bb6e1dd1bb7d675925e9325ed901f49b1aabb0696a06942dacb",
+      "classification": "plain",
+      "reason": "ucode_shebang",
+      "status": "plain_route_selected",
+      "program_roots_expected": 1,
+      "markup_roots_expected": 0
+    },
+    {
+      "source_path": "controls/literal-near-miss.ut",
+      "staged_relative_path": "usr/share/ucode/controls/literal-near-miss.ut",
+      "sha256": "3f941935679ff9ff5d4f3ee3c813a31ced28adf5c5285e2be90776396baf95da",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "program_roots_expected": 0,
+      "markup_roots_expected": 1
+    },
+    {
+      "source_path": "controls/mixed.ut",
+      "staged_relative_path": "usr/share/ucode/controls/mixed.ut",
+      "sha256": "0ef793bb3ce8833739fb622aa555464ace8044194e24223acff692627546b3b4",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "program_roots_expected": 0,
+      "markup_roots_expected": 1
+    },
+    {
+      "source_path": "controls/tag-like-string.uc",
+      "staged_relative_path": "usr/share/ucode/controls/tag-like-string.uc",
+      "sha256": "f2cafacea6884584d6841834c371b929d23501cd2caafe271afc32f83493efe8",
+      "classification": "plain",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected",
+      "program_roots_expected": 1,
+      "markup_roots_expected": 0
+    }
+  ],
+  "unexpected_files": []
+}

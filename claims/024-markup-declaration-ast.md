@@ -1,0 +1,41 @@
+# Claim 024: declaration and initializer AST prequery
+
+**Status:** Demonstrated for the exact staged bytes and returned rows; AST-only.
+
+**Scope:** Before any markup CFG implementation, does the selected extractor expose the source-derived `VariableDeclarator` and `Number` AST rows for an initialized declaration, a `d.getValue() = n` relation, and a valid declaration without an initializer that is positively selected by `not exists(d.getValue())`?
+
+**Out of scope:** CFG nodes or edges, general markup support, template rendering, runtime meaning, reachability, flow, escaping, security, completeness, and consumer handoff. This result is a prerequisite observation for the proposal, not an implementation or verification of CFG behavior.
+
+## Revisions and context
+
+- **Ucode source:** producer revision `0a6612fe0e66351a0ccda43ad5b51f5ef5a2724e`. The staged fixtures and QL API inputs were taken from this source pin. The producer query tree had one unrelated, untracked `Wave1AllDiagnostics.ql` at staging; no upstream source was modified. The three declaration queries are ledger-authored and retained in the evidence folder.
+- **Extractor pack:** copied from the retained pack built at `8375887ed14825dd59addbfd0df43616d9e684fb`, whose checkout was clean. Relevant extractor, pack, lock, manifest and grammar inputs were compared with the selected producer source; the relevant-source diff exited 0. Pack file manifest SHA-256: `c9810210d12c13d239aa45f507d467b1375be69dd34ad9e350cb5ff4736e5822`.
+- **Inputs:** exact four staged source bytes and SHA-256 values are in [the prequery manifest](../evidence/024-markup-declaration-ast/inputs/prequery-manifest.json) and are archived under [inputs/source](../evidence/024-markup-declaration-ast/inputs/source). `mixed.ut` is the positive fixture; `no-init.ut` is the valid no-initializer near miss; `plain.uc` is a routing control; `malformed.ut` is an intentional malformed-input control.
+- **Tools:** CodeQL 2.27.4, executable SHA-256 `bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d`; timed with `/usr/bin/time -l`. The copied run-owned CodeQL package cache had 82 files and matched retained manifest SHA-256 `88fd30b22c1b13769089f4ab3d66ecb153cfaae9e5ba713efdfb7fd1ea2dcf7c`.
+- **Existing ownership:** producer [ucode #57](https://github.com/lucas-albers-lz4/codeql-ucode/issues/57) is the open markup CFG/dataflow issue. At the inspected producer revision, [`docs/markup-cfg-proposal.md`](https://github.com/lucas-albers-lz4/codeql-ucode/blob/0a6612fe0e66351a0ccda43ad5b51f5ef5a2724e/docs/markup-cfg-proposal.md) describes a proposed contract and explicitly says it is not an implemented CFG. Wave 10 remains gated on an actual supported implementation and separate edge controls.
+
+## Evidence required
+
+1. The [source-first oracle](../evidence/024-markup-declaration-ast/oracle/source-first-oracle.json) and [input manifest](../evidence/024-markup-declaration-ast/inputs/prequery-manifest.json) were prepared before the final query outputs. The oracle declares five target AST rows, exact spans and parent-kind/index observations; the query returns entity-bearing rows, but internal entity IDs were not decoded. The five returned rows have distinct source spans and match the oracle; that does not prove global AST entity uniqueness.
+2. The [routing receipt](../evidence/024-markup-declaration-ast/outputs/run-receipt.json) records four exact route decisions. `mixed.ut`, `no-init.ut` and `malformed.ut` route as markup with `markup_not_modeled` / inconclusive status; `plain.uc` routes as plain. The [successful-file output](../evidence/024-markup-declaration-ast/outputs/extracted.json) contains exactly the three clean inputs once each. This producer diagnostic is file-selection evidence, not a per-file execution attestation.
+3. The five-row AST multiset matched exactly:
+
+   | File | Node | Span | Parent kind/index |
+   |---|---|---|---|
+   | `mixed.ut` | `LexicalDeclaration` | 2:4–2:13 | `Markup` / 4 |
+   | `mixed.ut` | `VariableDeclarator` | 2:8–2:12 | `LexicalDeclaration` / 1 |
+   | `mixed.ut` | `Number` | 2:12–2:12 | `VariableDeclarator` / 2 |
+   | `no-init.ut` | `LexicalDeclaration` | 1:4–1:9 | `Markup` / 1 |
+   | `no-init.ut` | `VariableDeclarator` | 1:8–1:8 | `LexicalDeclaration` / 1 |
+
+   The [initialized-value query](../evidence/024-markup-declaration-ast/queries/markup-declaration-value-positive.ql) returned one row connecting the mixed-file declarator at 2:8–2:12 to its typed `Number` at 2:12. The [near-miss query](../evidence/024-markup-declaration-ast/queries/markup-declaration-value-negative.ql) returned one positively selected no-init declarator at 1:8 satisfying `not exists(d.getValue())`. These results show the model relation on these exact inputs; they do not establish runtime value semantics.
+4. Diagnostics are separated from the AST controls. The [error query](../evidence/024-markup-declaration-ast/outputs/errors.json) and [all-diagnostics query](../evidence/024-markup-declaration-ast/outputs/Wave1AllDiagnostics.json) each returned the two expected `malformed.ut` parse diagnostics and no diagnostic for the other staged sources. The emitted diagnostic spans are preserved as reported: 1:9–1:8 (reversed missing-token span) and 1:7–1:11. Their message fragments are `expected identifier symbol` and `Missing value for field: expression_tag::child`.
+
+## Run record
+
+- **Date and environment:** 2026-11-22; isolated ledger `work/` run with fresh, run-owned source, database, output, `HOME`, `TMPDIR` and cache. No database is included in the retained evidence.
+- **Commands and statuses:** The initial runner command `python3 work/wave10-ast-run/run-wave10.py --after-uci-complete` reached finalization but its extracted-file query exited 2 because `${workspace}` in `ql/src/qlpack.yml` had no CodeQL workspace. Retry 01 used a run-local workspace descriptor; database init, indexing, finalization and extraction/error queries exited 0. Its first loose diagnostics query exited 2 because CodeQL ignored `--search-path` for the locked pack. Retry 02 was interrupted with Ctrl-C while waiting on its errors query; it is incomplete and not used for results. On the already finalized retry-01 database, the unchanged ledger queries were copied into the disposable producer `ql/src` workspace and rerun. Their exact CLI arguments and exit statuses are in the [command receipts](../evidence/024-markup-declaration-ast/outputs); no extraction rerun was needed.
+- **Observed results:** Routing matched 4/4 expected decisions; successful-file identities matched 3/3; malformed error identities and messages matched 2/2. AST inventory matched 5/5 rows with distinct source spans. Positive and negative relation queries each returned exactly one expected row. All result comparisons passed. Decoded outputs, query sources and hashes are retained under [evidence/024-markup-declaration-ast](../evidence/024-markup-declaration-ast).
+- **Timing and memory:** On the final retry-01 database, initialization took 0.539 s / 123,781,120 bytes maximum RSS; indexing 0.605 s / 120,733,696 bytes; finalization 1.123 s / 198,410,240 bytes. Successfully-extracted and extraction-error queries took 1.494 s / 283,639,808 bytes and 1.479 s / 295,960,576 bytes. The all-diagnostics query took 1.677 s / 329,351,168 bytes; AST inventory 1.966 s / 383,909,888 bytes; positive relation 1.909 s / 350,044,160 bytes; negative relation 2.093 s / 380,911,616 bytes. Decode timings, setup failures, all command times and memory reports are preserved in the command receipts. These smoke timings are not full-corpus estimates.
+- **Status and limits:** This demonstrates that, with the staged pack and source revision, the selected markup inputs expose the listed AST rows and value relation despite the routing status remaining inconclusive. It does not establish the proposal's CFG node/edge contract, markup semantic coverage, completeness, or any runtime/security conclusion. No consumer was invoked.
+- **Outstanding work:** Revisit wave 10 only after ucode #57 has an owner-supported implementation. Then define source-derived positive and unsupported controls and assert exact CFG node/edge identities in a fresh database. Keep malformed extraction errors separate from valid unsupported shapes.

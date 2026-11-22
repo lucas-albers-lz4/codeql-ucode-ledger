@@ -1,0 +1,8 @@
+{"#select":{"columns":[
+   {"name":"declaration","kind":"Entity"}
+  ,{"name":"bodyCall","kind":"Entity"}
+  ,{"name":"name","kind":"Entity"}]
+ ,"tuples":[
+   [{"id":-16776957,"label":"FunctionDeclaration","url":{"uri":"file://<RUN>/source/usr/share/ucode/luci/controller/admin/uci.uc","startLine":25,"startColumn":1,"endLine":33,"endColumn":1}},{"id":-16776903,"label":"CallExpression","url":{"uri":"file://<RUN>/source/usr/share/ucode/luci/controller/admin/uci.uc","startLine":28,"startColumn":12,"endLine":28,"endColumn":42}},{"id":-16776954,"label":"ubus_call","url":{"uri":"file://<RUN>/source/usr/share/ucode/luci/controller/admin/uci.uc","startLine":25,"startColumn":10,"endLine":25,"endColumn":18}}]
+  ,[{"id":-16774707,"label":"FunctionDeclaration","url":{"uri":"file://<RUN>/source/usr/share/ucode/luci/wave4-controls/unrelated-same-name-helper.uc","startLine":1,"startColumn":1,"endLine":3,"endColumn":1}},{"id":-16774680,"label":"CallExpression","url":{"uri":"file://<RUN>/source/usr/share/ucode/luci/wave4-controls/unrelated-same-name-helper.uc","startLine":2,"startColumn":9,"endLine":2,"endColumn":36}},{"id":-16774704,"label":"ubus_call","url":{"uri":"file://<RUN>/source/usr/share/ucode/luci/wave4-controls/unrelated-same-name-helper.uc","startLine":1,"startColumn":10,"endLine":1,"endColumn":18}}]]
+ }}

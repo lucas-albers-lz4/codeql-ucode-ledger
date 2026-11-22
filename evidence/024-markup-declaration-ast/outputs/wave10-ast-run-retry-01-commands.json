@@ -1,0 +1,366 @@
+{
+  "commands": [
+    {
+      "label": "codeql-version",
+      "argv": [
+        "${CODEQL_ROOT}/.tools/codeql-2.27.4/codeql/codeql",
+        "version"
+      ],
+      "cwd": "${WAVE10_RUN_RETRY_01}",
+      "exit_status": 0,
+      "wall_seconds": 0.208414,
+      "stdout": "codeql-version.stdout",
+      "stderr_and_time": "codeql-version.stderr-time.txt",
+      "peak_memory_bytes_reported": 0,
+      "stderr_time_sha256": "a11b67f261133e82d1ad2d8c49f93c5aec3a4a0b5fce4d5d49fdd372ef188a82",
+      "maximum_resident_set_size_bytes": 85000192,
+      "peak_memory_footprint_bytes": 2081056
+    },
+    {
+      "label": "database-init",
+      "argv": [
+        "${CODEQL_ROOT}/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "init",
+        "${WAVE10_RUN_RETRY_01}/database",
+        "--language=ucode",
+        "--search-path=${WAVE10_RUN_RETRY_01}/packs/ucode-extractor-pack",
+        "--source-root=${WAVE10_RUN_RETRY_01}/source"
+      ],
+      "cwd": "${WAVE10_RUN_RETRY_01}",
+      "exit_status": 0,
+      "wall_seconds": 0.539102,
+      "stdout": "database-init.stdout",
+      "stderr_and_time": "database-init.stderr-time.txt",
+      "peak_memory_bytes_reported": 0,
+      "stderr_time_sha256": "d5ac9100f059618f57056a1ddb02652ed2941636f34770aa8b394164f8f12414",
+      "maximum_resident_set_size_bytes": 123781120,
+      "peak_memory_footprint_bytes": 1638688
+    },
+    {
+      "label": "index-files",
+      "argv": [
+        "${CODEQL_ROOT}/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "index-files",
+        "${WAVE10_RUN_RETRY_01}/database",
+        "--language=ucode",
+        "--include=**/usr/share/ucode/controls/mixed.ut",
+        "--include=**/usr/share/ucode/controls/no-init.ut",
+        "--include=**/usr/share/ucode/controls/plain.uc",
+        "--include=**/usr/share/ucode/controls/malformed.ut",
+        "--working-dir=${WAVE10_RUN_RETRY_01}/source"
+      ],
+      "cwd": "${WAVE10_RUN_RETRY_01}",
+      "exit_status": 0,
+      "wall_seconds": 0.604507,
+      "stdout": "index-files.stdout",
+      "stderr_and_time": "index-files.stderr-time.txt",
+      "peak_memory_bytes_reported": 0,
+      "stderr_time_sha256": "6080528f3d8f9df633469ef553a6d6e4e2c327914198bd770da46f11d8ffb829",
+      "maximum_resident_set_size_bytes": 120733696,
+      "peak_memory_footprint_bytes": 1917216
+    },
+    {
+      "label": "database-finalize",
+      "argv": [
+        "${CODEQL_ROOT}/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "finalize",
+        "${WAVE10_RUN_RETRY_01}/database"
+      ],
+      "cwd": "${WAVE10_RUN_RETRY_01}",
+      "exit_status": 0,
+      "wall_seconds": 1.12349,
+      "stdout": "database-finalize.stdout",
+      "stderr_and_time": "database-finalize.stderr-time.txt",
+      "peak_memory_bytes_reported": 0,
+      "stderr_time_sha256": "9f4050d7211e3e56aa7ac90f3e41b84a6cb7e4c9a39e155efef2b1d78f3cdab3",
+      "maximum_resident_set_size_bytes": 198410240,
+      "peak_memory_footprint_bytes": 1671528
+    },
+    {
+      "label": "extracted-query",
+      "argv": [
+        "${CODEQL_ROOT}/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "${WAVE10_RUN_RETRY_01}/producer-ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=${WAVE10_RUN_RETRY_01}/database",
+        "--search-path=${WAVE10_RUN_RETRY_01}/packs/ucode-extractor-pack:${WAVE10_RUN_RETRY_01}/producer-ql/lib:${WAVE10_RUN_RETRY_01}/producer-ql/src",
+        "--output=${WAVE10_RUN_RETRY_01}/output/extracted.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "${WAVE10_RUN_RETRY_01}",
+      "exit_status": 0,
+      "wall_seconds": 1.493695,
+      "stdout": "extracted-query.stdout",
+      "stderr_and_time": "extracted-query.stderr-time.txt",
+      "peak_memory_bytes_reported": 0,
+      "stderr_time_sha256": "636ff3460264fb085f393e8cc5acd5dc3073bd22f24ecb790e4874e37a1b2c2c",
+      "maximum_resident_set_size_bytes": 283639808,
+      "peak_memory_footprint_bytes": 1884472
+    },
+    {
+      "label": "extracted-decode",
+      "argv": [
+        "${CODEQL_ROOT}/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "${WAVE10_RUN_RETRY_01}/output/extracted.bqrs"
+      ],
+      "cwd": "${WAVE10_RUN_RETRY_01}",
+      "exit_status": 0,
+      "wall_seconds": 0.227451,
+      "stdout": "extracted-decode.stdout",
+      "stderr_and_time": "extracted-decode.stderr-time.txt",
+      "peak_memory_bytes_reported": 0,
+      "stderr_time_sha256": "d8e4860107ba3cd7ecc70965e4b5c029fea65cc18ee0c81ac04660fbf9241966",
+      "maximum_resident_set_size_bytes": 89718784,
+      "peak_memory_footprint_bytes": 1753400
+    },
+    {
+      "label": "errors-query",
+      "argv": [
+        "${CODEQL_ROOT}/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "${WAVE10_RUN_RETRY_01}/producer-ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=${WAVE10_RUN_RETRY_01}/database",
+        "--search-path=${WAVE10_RUN_RETRY_01}/packs/ucode-extractor-pack:${WAVE10_RUN_RETRY_01}/producer-ql/lib:${WAVE10_RUN_RETRY_01}/producer-ql/src",
+        "--output=${WAVE10_RUN_RETRY_01}/output/errors.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "${WAVE10_RUN_RETRY_01}",
+      "exit_status": 0,
+      "wall_seconds": 1.478602,
+      "stdout": "errors-query.stdout",
+      "stderr_and_time": "errors-query.stderr-time.txt",
+      "peak_memory_bytes_reported": 0,
+      "stderr_time_sha256": "02cd30258a6936a0f6af18272b09059faa6fc0184569589e9e68407ae78b9ded",
+      "maximum_resident_set_size_bytes": 295960576,
+      "peak_memory_footprint_bytes": 1671480
+    },
+    {
+      "label": "errors-decode",
+      "argv": [
+        "${CODEQL_ROOT}/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "${WAVE10_RUN_RETRY_01}/output/errors.bqrs"
+      ],
+      "cwd": "${WAVE10_RUN_RETRY_01}",
+      "exit_status": 0,
+      "wall_seconds": 0.224925,
+      "stdout": "errors-decode.stdout",
+      "stderr_and_time": "errors-decode.stderr-time.txt",
+      "peak_memory_bytes_reported": 0,
+      "stderr_time_sha256": "2a7c10650f3f79b20056e73b360b721d05b77382d71a6089335043b7eacff3fe",
+      "maximum_resident_set_size_bytes": 89915392,
+      "peak_memory_footprint_bytes": 1786192
+    },
+    {
+      "label": "all-diagnostics-query",
+      "argv": [
+        "${CODEQL_ROOT}/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "${WAVE10_RUN_RETRY_01}/queries/Wave1AllDiagnostics.ql",
+        "--database=${WAVE10_RUN_RETRY_01}/database",
+        "--search-path=${WAVE10_RUN_RETRY_01}/packs/ucode-extractor-pack:${WAVE10_RUN_RETRY_01}/producer-ql/lib:${WAVE10_RUN_RETRY_01}/producer-ql/src",
+        "--output=${WAVE10_RUN_RETRY_01}/output/all-diagnostics.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "${WAVE10_RUN_RETRY_01}",
+      "exit_status": 2,
+      "wall_seconds": 0.989151,
+      "stdout": "all-diagnostics-query.stdout",
+      "stderr_and_time": "all-diagnostics-query.stderr-time.txt",
+      "peak_memory_bytes_reported": 0,
+      "stderr_time_sha256": "4bea3e4f979b47ddb181e6af5f6aeb425367706137df78c73938a9113f858c07",
+      "maximum_resident_set_size_bytes": 190578688,
+      "peak_memory_footprint_bytes": 1999160
+    }
+  ],
+  "final_query_commands": [
+    {
+      "label": "Wave1AllDiagnostics-query",
+      "argv": [
+        "${CODEQL_ROOT}/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "${WAVE10_RUN_RETRY_01}/producer-ql/src/wave10-prep/Wave1AllDiagnostics.ql",
+        "--database=${WAVE10_RUN_RETRY_01}/database",
+        "--search-path=${WAVE10_RUN_RETRY_01}/packs/ucode-extractor-pack:${WAVE10_RUN_RETRY_01}/producer-ql/lib:${WAVE10_RUN_RETRY_01}/producer-ql/src",
+        "--output=${WAVE10_RUN_RETRY_01}/output/Wave1AllDiagnostics.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "${WAVE10_RUN_RETRY_01}",
+      "exit_status": 0,
+      "wall_seconds": 1.677157,
+      "stdout": "Wave1AllDiagnostics-query.stdout",
+      "stderr_and_time": "Wave1AllDiagnostics-query.stderr-time.txt",
+      "peak_memory_bytes_reported": 0,
+      "stderr_time_sha256": "071a77109e91a3a4f58164d0ffdbfa77f9be85959bf41048c856372f2cf6cf7f",
+      "maximum_resident_set_size_bytes": 329351168,
+      "peak_memory_footprint_bytes": 2015544
+    },
+    {
+      "label": "Wave1AllDiagnostics-decode",
+      "argv": [
+        "${CODEQL_ROOT}/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "${WAVE10_RUN_RETRY_01}/output/Wave1AllDiagnostics.bqrs"
+      ],
+      "cwd": "${WAVE10_RUN_RETRY_01}",
+      "exit_status": 0,
+      "wall_seconds": 0.238022,
+      "stdout": "Wave1AllDiagnostics-decode.stdout",
+      "stderr_and_time": "Wave1AllDiagnostics-decode.stderr-time.txt",
+      "peak_memory_bytes_reported": 0,
+      "stderr_time_sha256": "58fd69e1feaa79a0e50f0eab6897c65bfe970d7d8a69279cc66dc8a5beeeee74",
+      "maximum_resident_set_size_bytes": 90488832,
+      "peak_memory_footprint_bytes": 1818912
+    },
+    {
+      "label": "markup-declaration-ast-query",
+      "argv": [
+        "${CODEQL_ROOT}/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "${WAVE10_RUN_RETRY_01}/producer-ql/src/wave10-prep/markup-declaration-ast.ql",
+        "--database=${WAVE10_RUN_RETRY_01}/database",
+        "--search-path=${WAVE10_RUN_RETRY_01}/packs/ucode-extractor-pack:${WAVE10_RUN_RETRY_01}/producer-ql/lib:${WAVE10_RUN_RETRY_01}/producer-ql/src",
+        "--output=${WAVE10_RUN_RETRY_01}/output/markup-declaration-ast.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "${WAVE10_RUN_RETRY_01}",
+      "exit_status": 0,
+      "wall_seconds": 1.965964,
+      "stdout": "markup-declaration-ast-query.stdout",
+      "stderr_and_time": "markup-declaration-ast-query.stderr-time.txt",
+      "peak_memory_bytes_reported": 0,
+      "stderr_time_sha256": "51e7cb108cb296538fb41cb8c9056159529a17530d7361f89b39fd2e6359536b",
+      "maximum_resident_set_size_bytes": 383909888,
+      "peak_memory_footprint_bytes": 2048312
+    },
+    {
+      "label": "markup-declaration-ast-decode",
+      "argv": [
+        "${CODEQL_ROOT}/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "${WAVE10_RUN_RETRY_01}/output/markup-declaration-ast.bqrs"
+      ],
+      "cwd": "${WAVE10_RUN_RETRY_01}",
+      "exit_status": 0,
+      "wall_seconds": 0.233047,
+      "stdout": "markup-declaration-ast-decode.stdout",
+      "stderr_and_time": "markup-declaration-ast-decode.stderr-time.txt",
+      "peak_memory_bytes_reported": 0,
+      "stderr_time_sha256": "2d73943bc7bfdf2667bf41d9161fbf87eccd0c29172dcd2a8a67d92fc3a1bdf2",
+      "maximum_resident_set_size_bytes": 90292224,
+      "peak_memory_footprint_bytes": 1884520
+    },
+    {
+      "label": "markup-declaration-value-positive-query",
+      "argv": [
+        "${CODEQL_ROOT}/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "${WAVE10_RUN_RETRY_01}/producer-ql/src/wave10-prep/markup-declaration-value-positive.ql",
+        "--database=${WAVE10_RUN_RETRY_01}/database",
+        "--search-path=${WAVE10_RUN_RETRY_01}/packs/ucode-extractor-pack:${WAVE10_RUN_RETRY_01}/producer-ql/lib:${WAVE10_RUN_RETRY_01}/producer-ql/src",
+        "--output=${WAVE10_RUN_RETRY_01}/output/markup-declaration-value-positive.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "${WAVE10_RUN_RETRY_01}",
+      "exit_status": 0,
+      "wall_seconds": 1.908929,
+      "stdout": "markup-declaration-value-positive-query.stdout",
+      "stderr_and_time": "markup-declaration-value-positive-query.stderr-time.txt",
+      "peak_memory_bytes_reported": 0,
+      "stderr_time_sha256": "41574aa6af1249a5d0b79d16e2db4d75f9626402f4afd33fc247e2334e00abc6",
+      "maximum_resident_set_size_bytes": 350044160,
+      "peak_memory_footprint_bytes": 1868088
+    },
+    {
+      "label": "markup-declaration-value-positive-decode",
+      "argv": [
+        "${CODEQL_ROOT}/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "${WAVE10_RUN_RETRY_01}/output/markup-declaration-value-positive.bqrs"
+      ],
+      "cwd": "${WAVE10_RUN_RETRY_01}",
+      "exit_status": 0,
+      "wall_seconds": 0.234998,
+      "stdout": "markup-declaration-value-positive-decode.stdout",
+      "stderr_and_time": "markup-declaration-value-positive-decode.stderr-time.txt",
+      "peak_memory_bytes_reported": 0,
+      "stderr_time_sha256": "31e1cc8a8ea8e38dcf32b91e97bdf7342e3bd4fdff5310fe116cf4fd2c44053c",
+      "maximum_resident_set_size_bytes": 90570752,
+      "peak_memory_footprint_bytes": 1851704
+    },
+    {
+      "label": "markup-declaration-value-negative-query",
+      "argv": [
+        "${CODEQL_ROOT}/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "${WAVE10_RUN_RETRY_01}/producer-ql/src/wave10-prep/markup-declaration-value-negative.ql",
+        "--database=${WAVE10_RUN_RETRY_01}/database",
+        "--search-path=${WAVE10_RUN_RETRY_01}/packs/ucode-extractor-pack:${WAVE10_RUN_RETRY_01}/producer-ql/lib:${WAVE10_RUN_RETRY_01}/producer-ql/src",
+        "--output=${WAVE10_RUN_RETRY_01}/output/markup-declaration-value-negative.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "${WAVE10_RUN_RETRY_01}",
+      "exit_status": 0,
+      "wall_seconds": 2.092547,
+      "stdout": "markup-declaration-value-negative-query.stdout",
+      "stderr_and_time": "markup-declaration-value-negative-query.stderr-time.txt",
+      "peak_memory_bytes_reported": 0,
+      "stderr_time_sha256": "f41fd2aee59c78ae0625d3dbaf022266a4244de5e73540dd2cab9a7718e9bdc1",
+      "maximum_resident_set_size_bytes": 380911616,
+      "peak_memory_footprint_bytes": 2048312
+    },
+    {
+      "label": "markup-declaration-value-negative-decode",
+      "argv": [
+        "${CODEQL_ROOT}/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "${WAVE10_RUN_RETRY_01}/output/markup-declaration-value-negative.bqrs"
+      ],
+      "cwd": "${WAVE10_RUN_RETRY_01}",
+      "exit_status": 0,
+      "wall_seconds": 0.236112,
+      "stdout": "markup-declaration-value-negative-decode.stdout",
+      "stderr_and_time": "markup-declaration-value-negative-decode.stderr-time.txt",
+      "peak_memory_bytes_reported": 0,
+      "stderr_time_sha256": "73890b7e2b500297b0bae21dd71c337218b917de426d7ca52abfaa187e161d3d",
+      "maximum_resident_set_size_bytes": 90046464,
+      "peak_memory_footprint_bytes": 1818936
+    }
+  ]
+}

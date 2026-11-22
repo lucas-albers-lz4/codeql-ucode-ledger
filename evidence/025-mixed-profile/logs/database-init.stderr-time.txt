@@ -1,0 +1,23 @@
+Calculating baseline information in <RUN>/source
+Calculated baseline information for languages:  (17ms).
+Resolving extractor ucode.
+Successfully loaded extractor ucode (ucode) from <RUN>/producer/extractor-pack.
+Created skeleton CodeQL database at <RUN>/output/db. This in-progress database is ready to be populated by an extractor.
+        0.55 real         1.06 user         0.10 sys
+           123928576  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               14716  page reclaims
+                  10  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   5  signals received
+                  25  voluntary context switches
+               12190  involuntary context switches
+            35132335  instructions retired
+            18092554  cycles elapsed
+             2572600  peak memory footprint

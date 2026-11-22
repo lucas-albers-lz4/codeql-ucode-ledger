@@ -1,0 +1,263 @@
+{
+  "timer_argv": [
+    "/usr/bin/time",
+    "-l"
+  ],
+  "base_environment_overrides": {
+    "CODEQL_UCODE_CACHE": "<RUN>/cache",
+    "XDG_CACHE_HOME": "<RUN>/cache",
+    "TMPDIR": "<RUN>/tmp",
+    "TMP": "<RUN>/tmp",
+    "TEMP": "<RUN>/tmp"
+  },
+  "home_provenance": "Run scripts inherited HOME. The execution receipt does not establish a HOME override. Query search paths explicitly listed packages under <RUN>/home/.codeql/packages.",
+  "records": [
+    {
+      "label": "database-init",
+      "argv": [
+        "<CODEQL>",
+        "database",
+        "init",
+        "<RUN>/output/db",
+        "--language=ucode",
+        "--search-path=<RUN>/producer/extractor-pack",
+        "--source-root=<RUN>/source"
+      ],
+      "cwd": "<RUN>/producer",
+      "environment_overrides": {},
+      "exit_status": 0,
+      "wall_seconds": 0.556013,
+      "stdout": "database-init.stdout",
+      "stderr_and_time": "database-init.stderr-time.txt",
+      "peak_rss_bytes": 123928576
+    },
+    {
+      "label": "index-files",
+      "argv": [
+        "<CODEQL>",
+        "database",
+        "index-files",
+        "<RUN>/output/db",
+        "--language=ucode",
+        "--include=**/usr/share/rpcd/ucode/luci",
+        "--include=**/usr/share/ucode/luci/controller/admin/index.uc",
+        "--include=**/usr/share/ucode/luci/controller/admin/uci.uc",
+        "--include=**/usr/share/ucode/luci/dispatcher.uc",
+        "--include=**/usr/share/ucode/luci/http.uc",
+        "--include=**/usr/share/ucode/luci/runtime.uc",
+        "--include=**/usr/share/ucode/luci/sys.uc",
+        "--include=**/usr/share/ucode/luci/template/admin_status/index.ut",
+        "--include=**/usr/share/ucode/luci/template/csrftoken.ut",
+        "--include=**/usr/share/ucode/luci/template/error404.ut",
+        "--include=**/usr/share/ucode/luci/template/error500.ut",
+        "--include=**/usr/share/ucode/luci/template/footer.ut",
+        "--include=**/usr/share/ucode/luci/template/header.ut",
+        "--include=**/usr/share/ucode/luci/template/sysauth.ut",
+        "--include=**/usr/share/ucode/luci/template/themes/bootstrap/footer.ut",
+        "--include=**/usr/share/ucode/luci/template/themes/bootstrap/header.ut",
+        "--include=**/usr/share/ucode/luci/template/themes/bootstrap/sysauth.ut",
+        "--include=**/usr/share/ucode/luci/template/view.ut",
+        "--include=**/usr/share/ucode/luci/uhttpd.uc",
+        "--include=**/usr/share/ucode/luci/zoneinfo.uc",
+        "--include=**/www/cgi-bin/luci",
+        "--include=**/usr/share/ucode/controls/literal-near-miss.ut",
+        "--include=**/usr/share/ucode/controls/mixed.ut",
+        "--include=**/usr/share/ucode/controls/tag-like-string.uc",
+        "--working-dir=<RUN>/source"
+      ],
+      "cwd": "<RUN>/producer",
+      "environment_overrides": {
+        "CODEQL_UCODE_STAGED_ROOT": "<RUN>/source"
+      },
+      "exit_status": 0,
+      "wall_seconds": 0.720278,
+      "stdout": "index-files.stdout",
+      "stderr_and_time": "index-files.stderr-time.txt",
+      "peak_rss_bytes": 121667584
+    },
+    {
+      "label": "database-finalize",
+      "argv": [
+        "<CODEQL>",
+        "database",
+        "finalize",
+        "<RUN>/output/db"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 1.403043,
+      "stdout": "database-finalize.stdout",
+      "stderr_and_time": "database-finalize.stderr-time.txt",
+      "peak_rss_bytes": 276709376
+    },
+    {
+      "label": "successfully-extracted-query",
+      "argv": [
+        "<CODEQL>",
+        "query",
+        "run",
+        "<RUN>/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=<RUN>/output/db",
+        "--search-path=<RUN>/producer/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src:<RUN>/home/.codeql/packages/codeql/controlflow/1.0.12:<RUN>/home/.codeql/packages/codeql/dataflow/1.1.6:<RUN>/home/.codeql/packages/codeql/regex/1.0.12:<RUN>/home/.codeql/packages/codeql/ssa/1.0.12:<RUN>/home/.codeql/packages/codeql/threat-models/1.1.1:<RUN>/home/.codeql/packages/codeql/threat-models/1.1.2:<RUN>/home/.codeql/packages/codeql/typetracking/1.0.12:<RUN>/home/.codeql/packages/codeql/util/1.0.12:<RUN>/home/.codeql/packages/codeql/yaml/1.0.61:<RUN>/home/.codeql/packages/codeql/yaml/1.0.62",
+        "--output=<RUN>/output/successfully-extracted.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 1.216591,
+      "stdout": "successfully-extracted-query.stdout",
+      "stderr_and_time": "successfully-extracted-query.stderr-time.txt",
+      "peak_rss_bytes": 188727296
+    },
+    {
+      "label": "successfully-extracted-decode",
+      "argv": [
+        "<CODEQL>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<RUN>/output/successfully-extracted.bqrs"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.237989,
+      "stdout": "successfully-extracted-decode.stdout",
+      "stderr_and_time": "successfully-extracted-decode.stderr-time.txt",
+      "peak_rss_bytes": 90816512
+    },
+    {
+      "label": "extraction-errors-query",
+      "argv": [
+        "<CODEQL>",
+        "query",
+        "run",
+        "<RUN>/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=<RUN>/output/db",
+        "--search-path=<RUN>/producer/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src:<RUN>/home/.codeql/packages/codeql/controlflow/1.0.12:<RUN>/home/.codeql/packages/codeql/dataflow/1.1.6:<RUN>/home/.codeql/packages/codeql/regex/1.0.12:<RUN>/home/.codeql/packages/codeql/ssa/1.0.12:<RUN>/home/.codeql/packages/codeql/threat-models/1.1.1:<RUN>/home/.codeql/packages/codeql/threat-models/1.1.2:<RUN>/home/.codeql/packages/codeql/typetracking/1.0.12:<RUN>/home/.codeql/packages/codeql/util/1.0.12:<RUN>/home/.codeql/packages/codeql/yaml/1.0.61:<RUN>/home/.codeql/packages/codeql/yaml/1.0.62",
+        "--output=<RUN>/output/extraction-errors.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 1.235003,
+      "stdout": "extraction-errors-query.stdout",
+      "stderr_and_time": "extraction-errors-query.stderr-time.txt",
+      "peak_rss_bytes": 196640768
+    },
+    {
+      "label": "extraction-errors-decode",
+      "argv": [
+        "<CODEQL>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<RUN>/output/extraction-errors.bqrs"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.26516,
+      "stdout": "extraction-errors-decode.stdout",
+      "stderr_and_time": "extraction-errors-decode.stderr-time.txt",
+      "peak_rss_bytes": 92045312
+    },
+    {
+      "label": "all-diagnostics-query",
+      "argv": [
+        "<CODEQL>",
+        "query",
+        "run",
+        "<RUN>/producer/ql/src/wave4-prep/Wave1AllDiagnostics.ql",
+        "--database=<RUN>/output/db",
+        "--search-path=<RUN>/producer/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src:<RUN>/home/.codeql/packages/codeql/controlflow/1.0.12:<RUN>/home/.codeql/packages/codeql/dataflow/1.1.6:<RUN>/home/.codeql/packages/codeql/regex/1.0.12:<RUN>/home/.codeql/packages/codeql/ssa/1.0.12:<RUN>/home/.codeql/packages/codeql/threat-models/1.1.1:<RUN>/home/.codeql/packages/codeql/threat-models/1.1.2:<RUN>/home/.codeql/packages/codeql/typetracking/1.0.12:<RUN>/home/.codeql/packages/codeql/util/1.0.12:<RUN>/home/.codeql/packages/codeql/yaml/1.0.61:<RUN>/home/.codeql/packages/codeql/yaml/1.0.62",
+        "--output=<RUN>/output/all-diagnostics.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 1.707841,
+      "stdout": "all-diagnostics-query.stdout",
+      "stderr_and_time": "all-diagnostics-query.stderr-time.txt",
+      "peak_rss_bytes": 316342272
+    },
+    {
+      "label": "all-diagnostics-decode",
+      "argv": [
+        "<CODEQL>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<RUN>/output/all-diagnostics.bqrs"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.239556,
+      "stdout": "all-diagnostics-decode.stdout",
+      "stderr_and_time": "all-diagnostics-decode.stderr-time.txt",
+      "peak_rss_bytes": 91357184
+    },
+    {
+      "label": "mixed-profile-root-counts-query",
+      "argv": [
+        "<CODEQL>",
+        "query",
+        "run",
+        "<RUN>/MixedProfileRootCounts.ql",
+        "--database=<RUN>/output/db",
+        "--search-path=<RUN>/producer/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src:<RUN>/home/.codeql/packages/codeql/controlflow/1.0.12:<RUN>/home/.codeql/packages/codeql/dataflow/1.1.6:<RUN>/home/.codeql/packages/codeql/regex/1.0.12:<RUN>/home/.codeql/packages/codeql/ssa/1.0.12:<RUN>/home/.codeql/packages/codeql/threat-models/1.1.1:<RUN>/home/.codeql/packages/codeql/threat-models/1.1.2:<RUN>/home/.codeql/packages/codeql/typetracking/1.0.12:<RUN>/home/.codeql/packages/codeql/util/1.0.12:<RUN>/home/.codeql/packages/codeql/yaml/1.0.61:<RUN>/home/.codeql/packages/codeql/yaml/1.0.62",
+        "--output=<RUN>/output/mixed-profile-root-counts.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 2,
+      "wall_seconds": 1.109151,
+      "stdout": "mixed-profile-root-counts-query.stdout",
+      "stderr_and_time": "mixed-profile-root-counts-query.stderr-time.txt",
+      "peak_rss_bytes": 184369152
+    },
+    {
+      "label": "mixed-profile-root-counts-retry-query",
+      "argv": [
+        "<CODEQL>",
+        "query",
+        "run",
+        "<RUN>/producer/ql/src/wave4-prep/MixedProfileRootCounts.ql",
+        "--database=<RUN>/output/db",
+        "--search-path=<RUN>/producer/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src:<RUN>/home/.codeql/packages/codeql/controlflow/1.0.12:<RUN>/home/.codeql/packages/codeql/dataflow/1.1.6:<RUN>/home/.codeql/packages/codeql/regex/1.0.12:<RUN>/home/.codeql/packages/codeql/ssa/1.0.12:<RUN>/home/.codeql/packages/codeql/threat-models/1.1.1:<RUN>/home/.codeql/packages/codeql/threat-models/1.1.2:<RUN>/home/.codeql/packages/codeql/typetracking/1.0.12:<RUN>/home/.codeql/packages/codeql/util/1.0.12:<RUN>/home/.codeql/packages/codeql/yaml/1.0.61:<RUN>/home/.codeql/packages/codeql/yaml/1.0.62",
+        "--additional-packs=<RUN>/producer/ql/lib",
+        "--output=<RUN>/output/mixed-profile-root-counts-retry.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 1.62404,
+      "stdout": "mixed-profile-root-counts-retry-query.stdout",
+      "stderr_and_time": "mixed-profile-root-counts-retry-query.stderr-time.txt",
+      "peak_rss_bytes": 353796096
+    },
+    {
+      "label": "mixed-profile-root-counts-retry-decode",
+      "argv": [
+        "<CODEQL>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<RUN>/output/mixed-profile-root-counts-retry.bqrs"
+      ],
+      "cwd": "<RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.217437,
+      "stdout": "mixed-profile-root-counts-retry-decode.stdout",
+      "stderr_and_time": "mixed-profile-root-counts-retry-decode.stderr-time.txt",
+      "peak_rss_bytes": 90406912
+    }
+  ]
+}

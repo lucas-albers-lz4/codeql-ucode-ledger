@@ -1,0 +1,47 @@
+[
+  {
+    "file": "outputs/routing.json",
+    "raw_sha256": "a80c8840e1aa2cd5d72ae212f9b3d284684343b28721b27929ffc5096b849e0b",
+    "normalized_sha256": "c554da1e31ef76193447201d3c294cb78883e2f2cc46310e03fee00fafa2ccb1"
+  },
+  {
+    "file": "outputs/successfully-extracted.json",
+    "raw_sha256": "fb32fabcef8eb2ef22977d49fada877dc68a88037123492735d80e3dd81a5a0e",
+    "normalized_sha256": "28c962b4992144972de451afaa6e6271fa453af10278d521d3b65d33989b6f89"
+  },
+  {
+    "file": "outputs/extraction-errors.json",
+    "raw_sha256": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "normalized_sha256": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc"
+  },
+  {
+    "file": "outputs/all-diagnostics.json",
+    "raw_sha256": "a895b809503a161eba7dc873b74e8dd0443088b28c79ef560f18e7f4ddf5d5ed",
+    "normalized_sha256": "a895b809503a161eba7dc873b74e8dd0443088b28c79ef560f18e7f4ddf5d5ed"
+  },
+  {
+    "file": "outputs/call-arguments.json",
+    "raw_sha256": "ab867340f6089affb3ef52a7af3c95c5dbfb1d3367cdc28ff84e35ff84a9c74f",
+    "normalized_sha256": "22f4ef95791d20ba3c870cf25e600cc88b4ac01b6ea0c2130a5699b8891911d8"
+  },
+  {
+    "file": "outputs/identifier-callees.json",
+    "raw_sha256": "80a848b3c4637f02e5f522590cf7ca40b50d1dd2fb91e8ad99384f00cbd8a2eb",
+    "normalized_sha256": "badcef07e130fe3011c9f7db9bc72264d1a4b5e971acb969679886ce1a4d8e1e"
+  },
+  {
+    "file": "outputs/member-callees.json",
+    "raw_sha256": "9716d40a5a95480907c40d36a39070a59b6eeaae3e839bbec8416c2671ca3c75",
+    "normalized_sha256": "ad4d51b5502fc55508c6e1be769f2a07450c02b64218e7c745e2558b3c8ce573"
+  },
+  {
+    "file": "outputs/helper-body-membership.json",
+    "raw_sha256": "c43b7ba40ddeaa95276fb067e8a98f7a57500c1ffd83e8119c19dff6d7e35a41",
+    "normalized_sha256": "5ee23cb4466b1a59bab1072adb9bf2a5138d208a2eb293b9e7b85099abfccc36"
+  },
+  {
+    "file": "outputs/property-read-control.json",
+    "raw_sha256": "90c434c3aefacb2be4437d025c91dd0e0e5e958bbba5b19d6b9d4056ff55cf17",
+    "normalized_sha256": "90f808f5add228023d5a47fea61771f174ea28d9b83a8137bf46520c881ad6b6"
+  }
+]

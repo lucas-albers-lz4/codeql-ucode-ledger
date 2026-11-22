@@ -1,0 +1,83 @@
+{
+  "source_root": "<RUN>/source",
+  "expected_input_count": 7,
+  "files": [
+    {
+      "path": "usr/share/ucode/luci/controller/admin/uci.uc",
+      "sha256": "ac75cfef7d74f87ed7f957778004a7bf486c76df699398c215795b4947e0c93e",
+      "kind": "real_candidate",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_extraction": "success"
+    },
+    {
+      "path": "usr/share/ucode/luci/wave4-controls/changes.uc",
+      "sha256": "a53a96668db439765f19edc127f660ef54474c7d96a060aad06cac9d9e4b0d90",
+      "kind": "synthetic_control",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_extraction": "success"
+    },
+    {
+      "path": "usr/share/ucode/luci/wave4-controls/property-read.uc",
+      "sha256": "8e75552737580f7312ca74190dca60f188b82f325d5064b4e44d4de1dab9dc33",
+      "kind": "synthetic_control",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_extraction": "success"
+    },
+    {
+      "path": "usr/share/ucode/luci/wave4-controls/session-set.uc",
+      "sha256": "f8fa2eefc1f5c342a59e17a8e11cd092f335de0c6ff5ef180adf172d3ed4de0e",
+      "kind": "synthetic_control",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_extraction": "success"
+    },
+    {
+      "path": "usr/share/ucode/luci/wave4-controls/swapped-argument-order.uc",
+      "sha256": "ad632c3e87fd8c22a1b8b8a2b2a33cb799dc83645f69a0037daf1675dbb3aaae",
+      "kind": "synthetic_control",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_extraction": "success"
+    },
+    {
+      "path": "usr/share/ucode/luci/wave4-controls/unknown-direct-call.uc",
+      "sha256": "170358cfb932a3c03b5c9c78c8dc249bc987f59fdb99987d9bfec5d9d373d599",
+      "kind": "synthetic_control",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_extraction": "success"
+    },
+    {
+      "path": "usr/share/ucode/luci/wave4-controls/unrelated-same-name-helper.uc",
+      "sha256": "75765c83dcdefe70d2b5350bf25529a8a32a334ff057b17f274f0ce85cf4281d",
+      "kind": "synthetic_control",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_extraction": "success"
+    }
+  ]
+}
