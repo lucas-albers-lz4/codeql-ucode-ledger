@@ -1,5 +1,7 @@
 # Next batch: prioritize bounded evidence leads
 
+The next proposed four-claim sequence is in [planning/wave-next-20261121.md](planning/wave-next-20261121.md). Its go/no-go gates and ordered dependencies take precedence over the older generic batch outline below.
+
 The prior producer/consumer handoffs remain in [planning/batch-20261118.md](planning/batch-20261118.md). After the handoff branch merged to `main`, this
 candidate-triage batch refreshed disposable snapshots and completed claims
 017–019. Its pin set is producer
@@ -17,10 +19,10 @@ SHAs at launch.
 The steps below remain a reusable workflow, not a claim about future runs.
 Resume by reading [AGENTS.md](AGENTS.md), the [claim index](README.md#claim-index),
 and [coverage portfolio](planning/coverage-portfolio.md). Claim 005 remains
-partial until an actual supported fresh query-to-record path is observed. Claim
-018–019 add current producer output relevant to ucode #75, including an
-8-source selected LuCI slice, but do not run a fresh consumer handoff or
-complete the issue's broader reconciliation criteria.
+partial until an actual supported fresh query-to-record path is observed. Claims
+018–019 record producer output relevant to ucode #75, including an
+8-source selected LuCI slice, but do not run a fresh consumer handoff.
+Issue #75 is now closed; that status does not broaden those runs.
 
 The requested typed setBlockDetect refresh is recorded in [claim 008](claims/008-setblock-typed-handoff.md#refresh-2026-11-21), at producer `8375887ed14825dd59addbfd0df43616d9e684fb` and consumer `33ff29f9f311fec078be8e2df04261529cba0e65`. It is a bounded fixture handoff, not an expanded real-source slice. Fetch and triage again before choosing another batch.
 
