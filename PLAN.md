@@ -1,5 +1,10 @@
 # Next batch: prioritize bounded evidence leads
 
+The [24-package evidence program](planning/next-program-20261122.md) is the
+current larger planning queue. It accounts for newer upstream markup CFG,
+receiver-observation and read-only v2 changes. Its packages are conditional
+decisions and checks, not promised claims or automatic execution.
+
 The [12-wave roadmap](planning/roadmap-12-waves.md) extends the [next four evidence decisions](planning/wave-next-20261121.md). Its ordered gates take precedence over the older generic batch outline below; later waves are conditional, not automatic runs.
 
 The prior producer/consumer handoffs remain in [planning/batch-20261118.md](planning/batch-20261118.md). After the handoff branch merged to `main`, this
