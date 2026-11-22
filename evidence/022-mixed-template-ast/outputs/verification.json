@@ -1,0 +1,79 @@
+{
+  "source_hashes_unchanged": true,
+  "changed_paths": [],
+  "routing_input_count": 4,
+  "routing_input_count_matches_manifest": true,
+  "routing_decision_count": 4,
+  "files": [
+    {
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "control": "corpus",
+      "route_matches": true,
+      "success_multiplicity": 1,
+      "error_multiplicity": 0,
+      "observed_extraction": "success",
+      "expected_extraction": "success",
+      "extraction_expectation_matches": true,
+      "positive_or_control_clean": true
+    },
+    {
+      "path": "usr/share/ucode/controls/literal-near-miss.ut",
+      "control": "near_miss",
+      "route_matches": true,
+      "success_multiplicity": 1,
+      "error_multiplicity": 0,
+      "observed_extraction": "success",
+      "expected_extraction": "success",
+      "extraction_expectation_matches": true,
+      "positive_or_control_clean": true
+    },
+    {
+      "path": "usr/share/ucode/controls/mixed.ut",
+      "control": "markup_positive",
+      "route_matches": true,
+      "success_multiplicity": 1,
+      "error_multiplicity": 0,
+      "observed_extraction": "success",
+      "expected_extraction": "success",
+      "extraction_expectation_matches": true,
+      "positive_or_control_clean": true
+    },
+    {
+      "path": "usr/share/ucode/controls/plain.uc",
+      "control": "plain_control",
+      "route_matches": true,
+      "success_multiplicity": 1,
+      "error_multiplicity": 0,
+      "observed_extraction": "success",
+      "expected_extraction": "success",
+      "extraction_expectation_matches": true,
+      "positive_or_control_clean": true
+    }
+  ],
+  "extracted_identity_multiplicity": {
+    "<SOURCE_ROOT>/usr/share/ucode/controls/literal-near-miss.ut": 1,
+    "<SOURCE_ROOT>/usr/share/ucode/controls/mixed.ut": 1,
+    "<SOURCE_ROOT>/usr/share/ucode/controls/plain.uc": 1,
+    "<SOURCE_ROOT>/usr/share/ucode/luci/template/view.ut": 1
+  },
+  "error_identity_multiplicity": {},
+  "producer_error_entity_urls": [],
+  "diagnostic_error_entity_urls": [],
+  "producer_and_supplemental_error_urls_match": true,
+  "parse_error_diagnostics": [],
+  "errors_outside_manifest": {},
+  "unexpected_extracted_identities": {},
+  "missing_or_wrong_extracted_multiplicity": {},
+  "unexpected_routing_paths": {},
+  "missing_or_duplicate_routing_paths": {},
+  "diagnostics_by_file": {
+    "usr/share/ucode/luci/template/view.ut": [],
+    "usr/share/ucode/controls/literal-near-miss.ut": [],
+    "usr/share/ucode/controls/mixed.ut": [],
+    "usr/share/ucode/controls/plain.uc": []
+  },
+  "all_diagnostic_rows": 0,
+  "locationless_diagnostics": [],
+  "unattributed_diagnostics": [],
+  "all_checks_match": true
+}

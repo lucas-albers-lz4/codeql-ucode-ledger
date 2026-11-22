@@ -1,0 +1,936 @@
+{
+  "source_first_expected_subset": [
+    {
+      "id": "view-expression-tag",
+      "identity_multiplicity": 1,
+      "parent_expectation_matches": true,
+      "source_text_matches": true,
+      "observed": [
+        {
+          "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+          "entity_label": "ExpressionTag",
+          "path": "usr/share/ucode/luci/template/view.ut",
+          "kind": "ExpressionTag",
+          "label": "ExpressionTag",
+          "span": {
+            "start": [
+              7,
+              24
+            ],
+            "end": [
+              7,
+              33
+            ]
+          },
+          "parent_kind": "TextStatement",
+          "parent_span": {
+            "start": [
+              1,
+              22
+            ],
+            "end": [
+              12,
+              2
+            ]
+          },
+          "parent_index": 4
+        }
+      ]
+    },
+    {
+      "id": "view-expression-tag-child",
+      "identity_multiplicity": 1,
+      "parent_expectation_matches": true,
+      "source_text_matches": true,
+      "observed": [
+        {
+          "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+          "entity_label": "view",
+          "path": "usr/share/ucode/luci/template/view.ut",
+          "kind": "Identifier",
+          "label": "view",
+          "span": {
+            "start": [
+              7,
+              27
+            ],
+            "end": [
+              7,
+              30
+            ]
+          },
+          "parent_kind": "ExpressionTag",
+          "parent_span": {
+            "start": [
+              7,
+              24
+            ],
+            "end": [
+              7,
+              33
+            ]
+          },
+          "parent_index": 1
+        }
+      ]
+    },
+    {
+      "id": "include-header-call",
+      "identity_multiplicity": 1,
+      "parent_expectation_matches": true,
+      "source_text_matches": true,
+      "observed": [
+        {
+          "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+          "entity_label": "CallExpression",
+          "path": "usr/share/ucode/luci/template/view.ut",
+          "kind": "CallExpression",
+          "label": "CallExpression",
+          "span": {
+            "start": [
+              1,
+              4
+            ],
+            "end": [
+              1,
+              20
+            ]
+          },
+          "parent_kind": "ExpressionStatement",
+          "parent_span": {
+            "start": [
+              1,
+              4
+            ],
+            "end": [
+              1,
+              20
+            ]
+          },
+          "parent_index": 0
+        }
+      ]
+    },
+    {
+      "id": "raw-text-before-view-tag",
+      "identity_multiplicity": 1,
+      "parent_expectation_matches": true,
+      "source_text_matches": true,
+      "observed": [
+        {
+          "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+          "entity_label": "</div>\n\t<script>\n\t\tL.require('ui').then(function(ui) {\n\t\t\tui.instantiateView('",
+          "path": "usr/share/ucode/luci/template/view.ut",
+          "kind": "RawText",
+          "label": "</div>\n\t<script>\n\t\tL.require('ui').then(function(ui) {\n\t\t\tui.instantiateView('",
+          "span": {
+            "start": [
+              4,
+              50
+            ],
+            "end": [
+              7,
+              23
+            ]
+          },
+          "parent_kind": "TextStatement",
+          "parent_span": {
+            "start": [
+              1,
+              22
+            ],
+            "end": [
+              12,
+              2
+            ]
+          },
+          "parent_index": 3
+        }
+      ]
+    },
+    {
+      "id": "raw-text-before-expression-call",
+      "identity_multiplicity": 1,
+      "parent_expectation_matches": true,
+      "source_text_matches": true,
+      "observed": [
+        {
+          "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+          "entity_label": "\n\n<div id=\"view\">\n\t<div class=\"spinning\">",
+          "path": "usr/share/ucode/luci/template/view.ut",
+          "kind": "RawText",
+          "label": "\n\n<div id=\"view\">\n\t<div class=\"spinning\">",
+          "span": {
+            "start": [
+              1,
+              24
+            ],
+            "end": [
+              4,
+              23
+            ]
+          },
+          "parent_kind": "TextStatement",
+          "parent_span": {
+            "start": [
+              1,
+              22
+            ],
+            "end": [
+              12,
+              2
+            ]
+          },
+          "parent_index": 1
+        }
+      ]
+    },
+    {
+      "id": "literal-lookalike-string",
+      "identity_multiplicity": 1,
+      "parent_expectation_matches": true,
+      "source_text_matches": true,
+      "observed": [
+        {
+          "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/controls/literal-near-miss.ut",
+          "entity_label": "String",
+          "path": "usr/share/ucode/controls/literal-near-miss.ut",
+          "kind": "String",
+          "label": "String",
+          "span": {
+            "start": [
+              1,
+              18
+            ],
+            "end": [
+              1,
+              42
+            ]
+          },
+          "parent_kind": "VariableDeclarator",
+          "parent_span": {
+            "start": [
+              1,
+              8
+            ],
+            "end": [
+              1,
+              42
+            ]
+          },
+          "parent_index": 2
+        }
+      ]
+    }
+  ],
+  "main_query_total_entity_rows": 15,
+  "main_query_rows_all_retained": [
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/controls/literal-near-miss.ut",
+      "entity_label": "String",
+      "path": "usr/share/ucode/controls/literal-near-miss.ut",
+      "kind": "String",
+      "label": "String",
+      "span": {
+        "start": [
+          1,
+          18
+        ],
+        "end": [
+          1,
+          42
+        ]
+      },
+      "parent_kind": "VariableDeclarator",
+      "parent_span": {
+        "start": [
+          1,
+          8
+        ],
+        "end": [
+          1,
+          42
+        ]
+      },
+      "parent_index": 2
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/controls/literal-near-miss.ut",
+      "entity_label": "\n<p>Literal lookalike stays inside a ucode string.</p>\n",
+      "path": "usr/share/ucode/controls/literal-near-miss.ut",
+      "kind": "RawText",
+      "label": "\n<p>Literal lookalike stays inside a ucode string.</p>\n",
+      "span": {
+        "start": [
+          1,
+          47
+        ],
+        "end": [
+          2,
+          54
+        ]
+      },
+      "parent_kind": "TextStatement",
+      "parent_span": {
+        "start": [
+          1,
+          45
+        ],
+        "end": [
+          2,
+          54
+        ]
+      },
+      "parent_index": 1
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "CallExpression",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "CallExpression",
+      "label": "CallExpression",
+      "span": {
+        "start": [
+          1,
+          4
+        ],
+        "end": [
+          1,
+          20
+        ]
+      },
+      "parent_kind": "ExpressionStatement",
+      "parent_span": {
+        "start": [
+          1,
+          4
+        ],
+        "end": [
+          1,
+          20
+        ]
+      },
+      "parent_index": 0
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "String",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "String",
+      "label": "String",
+      "span": {
+        "start": [
+          1,
+          12
+        ],
+        "end": [
+          1,
+          19
+        ]
+      },
+      "parent_kind": "Arguments",
+      "parent_span": {
+        "start": [
+          1,
+          11
+        ],
+        "end": [
+          1,
+          20
+        ]
+      },
+      "parent_index": 1
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "\n\n<div id=\"view\">\n\t<div class=\"spinning\">",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "RawText",
+      "label": "\n\n<div id=\"view\">\n\t<div class=\"spinning\">",
+      "span": {
+        "start": [
+          1,
+          24
+        ],
+        "end": [
+          4,
+          23
+        ]
+      },
+      "parent_kind": "TextStatement",
+      "parent_span": {
+        "start": [
+          1,
+          22
+        ],
+        "end": [
+          12,
+          2
+        ]
+      },
+      "parent_index": 1
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "ExpressionTag",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "ExpressionTag",
+      "label": "ExpressionTag",
+      "span": {
+        "start": [
+          4,
+          24
+        ],
+        "end": [
+          4,
+          49
+        ]
+      },
+      "parent_kind": "TextStatement",
+      "parent_span": {
+        "start": [
+          1,
+          22
+        ],
+        "end": [
+          12,
+          2
+        ]
+      },
+      "parent_index": 2
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "CallExpression",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "CallExpression",
+      "label": "CallExpression",
+      "span": {
+        "start": [
+          4,
+          27
+        ],
+        "end": [
+          4,
+          46
+        ]
+      },
+      "parent_kind": "ExpressionTag",
+      "parent_span": {
+        "start": [
+          4,
+          24
+        ],
+        "end": [
+          4,
+          49
+        ]
+      },
+      "parent_index": 1
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "String",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "String",
+      "label": "String",
+      "span": {
+        "start": [
+          4,
+          29
+        ],
+        "end": [
+          4,
+          45
+        ]
+      },
+      "parent_kind": "Arguments",
+      "parent_span": {
+        "start": [
+          4,
+          28
+        ],
+        "end": [
+          4,
+          46
+        ]
+      },
+      "parent_index": 1
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "</div>\n\t<script>\n\t\tL.require('ui').then(function(ui) {\n\t\t\tui.instantiateView('",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "RawText",
+      "label": "</div>\n\t<script>\n\t\tL.require('ui').then(function(ui) {\n\t\t\tui.instantiateView('",
+      "span": {
+        "start": [
+          4,
+          50
+        ],
+        "end": [
+          7,
+          23
+        ]
+      },
+      "parent_kind": "TextStatement",
+      "parent_span": {
+        "start": [
+          1,
+          22
+        ],
+        "end": [
+          12,
+          2
+        ]
+      },
+      "parent_index": 3
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "ExpressionTag",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "ExpressionTag",
+      "label": "ExpressionTag",
+      "span": {
+        "start": [
+          7,
+          24
+        ],
+        "end": [
+          7,
+          33
+        ]
+      },
+      "parent_kind": "TextStatement",
+      "parent_span": {
+        "start": [
+          1,
+          22
+        ],
+        "end": [
+          12,
+          2
+        ]
+      },
+      "parent_index": 4
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "view",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "Identifier",
+      "label": "view",
+      "span": {
+        "start": [
+          7,
+          27
+        ],
+        "end": [
+          7,
+          30
+        ]
+      },
+      "parent_kind": "ExpressionTag",
+      "parent_span": {
+        "start": [
+          7,
+          24
+        ],
+        "end": [
+          7,
+          33
+        ]
+      },
+      "parent_index": 1
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "');\n\t\t});\n\t</script>\n</div>\n\n",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "RawText",
+      "label": "');\n\t\t});\n\t</script>\n</div>\n\n",
+      "span": {
+        "start": [
+          7,
+          34
+        ],
+        "end": [
+          11,
+          1
+        ]
+      },
+      "parent_kind": "TextStatement",
+      "parent_span": {
+        "start": [
+          1,
+          22
+        ],
+        "end": [
+          12,
+          2
+        ]
+      },
+      "parent_index": 5
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "CallExpression",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "CallExpression",
+      "label": "CallExpression",
+      "span": {
+        "start": [
+          12,
+          4
+        ],
+        "end": [
+          12,
+          20
+        ]
+      },
+      "parent_kind": "ExpressionStatement",
+      "parent_span": {
+        "start": [
+          12,
+          4
+        ],
+        "end": [
+          12,
+          20
+        ]
+      },
+      "parent_index": 0
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "String",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "String",
+      "label": "String",
+      "span": {
+        "start": [
+          12,
+          12
+        ],
+        "end": [
+          12,
+          19
+        ]
+      },
+      "parent_kind": "Arguments",
+      "parent_span": {
+        "start": [
+          12,
+          11
+        ],
+        "end": [
+          12,
+          20
+        ]
+      },
+      "parent_index": 1
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "\n",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "RawText",
+      "label": "\n",
+      "span": {
+        "start": [
+          12,
+          24
+        ],
+        "end": [
+          12,
+          24
+        ]
+      },
+      "parent_kind": "TextStatement",
+      "parent_span": {
+        "start": [
+          12,
+          22
+        ],
+        "end": [
+          12,
+          24
+        ]
+      },
+      "parent_index": 1
+    }
+  ],
+  "rows_outside_predeclared_subset": [
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/controls/literal-near-miss.ut",
+      "entity_label": "\n<p>Literal lookalike stays inside a ucode string.</p>\n",
+      "path": "usr/share/ucode/controls/literal-near-miss.ut",
+      "kind": "RawText",
+      "label": "\n<p>Literal lookalike stays inside a ucode string.</p>\n",
+      "span": {
+        "start": [
+          1,
+          47
+        ],
+        "end": [
+          2,
+          54
+        ]
+      },
+      "parent_kind": "TextStatement",
+      "parent_span": {
+        "start": [
+          1,
+          45
+        ],
+        "end": [
+          2,
+          54
+        ]
+      },
+      "parent_index": 1
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "String",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "String",
+      "label": "String",
+      "span": {
+        "start": [
+          1,
+          12
+        ],
+        "end": [
+          1,
+          19
+        ]
+      },
+      "parent_kind": "Arguments",
+      "parent_span": {
+        "start": [
+          1,
+          11
+        ],
+        "end": [
+          1,
+          20
+        ]
+      },
+      "parent_index": 1
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "ExpressionTag",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "ExpressionTag",
+      "label": "ExpressionTag",
+      "span": {
+        "start": [
+          4,
+          24
+        ],
+        "end": [
+          4,
+          49
+        ]
+      },
+      "parent_kind": "TextStatement",
+      "parent_span": {
+        "start": [
+          1,
+          22
+        ],
+        "end": [
+          12,
+          2
+        ]
+      },
+      "parent_index": 2
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "CallExpression",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "CallExpression",
+      "label": "CallExpression",
+      "span": {
+        "start": [
+          4,
+          27
+        ],
+        "end": [
+          4,
+          46
+        ]
+      },
+      "parent_kind": "ExpressionTag",
+      "parent_span": {
+        "start": [
+          4,
+          24
+        ],
+        "end": [
+          4,
+          49
+        ]
+      },
+      "parent_index": 1
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "String",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "String",
+      "label": "String",
+      "span": {
+        "start": [
+          4,
+          29
+        ],
+        "end": [
+          4,
+          45
+        ]
+      },
+      "parent_kind": "Arguments",
+      "parent_span": {
+        "start": [
+          4,
+          28
+        ],
+        "end": [
+          4,
+          46
+        ]
+      },
+      "parent_index": 1
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "');\n\t\t});\n\t</script>\n</div>\n\n",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "RawText",
+      "label": "');\n\t\t});\n\t</script>\n</div>\n\n",
+      "span": {
+        "start": [
+          7,
+          34
+        ],
+        "end": [
+          11,
+          1
+        ]
+      },
+      "parent_kind": "TextStatement",
+      "parent_span": {
+        "start": [
+          1,
+          22
+        ],
+        "end": [
+          12,
+          2
+        ]
+      },
+      "parent_index": 5
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "CallExpression",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "CallExpression",
+      "label": "CallExpression",
+      "span": {
+        "start": [
+          12,
+          4
+        ],
+        "end": [
+          12,
+          20
+        ]
+      },
+      "parent_kind": "ExpressionStatement",
+      "parent_span": {
+        "start": [
+          12,
+          4
+        ],
+        "end": [
+          12,
+          20
+        ]
+      },
+      "parent_index": 0
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "String",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "String",
+      "label": "String",
+      "span": {
+        "start": [
+          12,
+          12
+        ],
+        "end": [
+          12,
+          19
+        ]
+      },
+      "parent_kind": "Arguments",
+      "parent_span": {
+        "start": [
+          12,
+          11
+        ],
+        "end": [
+          12,
+          20
+        ]
+      },
+      "parent_index": 1
+    },
+    {
+      "entity_url": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+      "entity_label": "\n",
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "kind": "RawText",
+      "label": "\n",
+      "span": {
+        "start": [
+          12,
+          24
+        ],
+        "end": [
+          12,
+          24
+        ]
+      },
+      "parent_kind": "TextStatement",
+      "parent_span": {
+        "start": [
+          12,
+          22
+        ],
+        "end": [
+          12,
+          24
+        ]
+      },
+      "parent_index": 1
+    }
+  ],
+  "broad_near_miss_audit_row_count": 0,
+  "broad_near_miss_rows": [],
+  "near_miss_zero_expression_tags_or_calls": true,
+  "extraction_all_four_clean": true,
+  "source_first_targets_all_exact_once": true,
+  "provenance_note": "The main query enumerates all selected classes in view.ut and the lookalike file. Rows outside the predeclared target subset are retained and not promoted to claims. mixed.ut was a clean extraction positive; the current QL query did not include mixed.ut as a QL target.",
+  "selected_text_nodes_share_parent_descriptor_span": true,
+  "parent_entity_identity_established_by_query": false,
+  "interpretation_note": "The query selects parent kind, span and index, not the parent entity itself. Matching descriptors support the observed shared parent shape but do not prove parent-entity identity."
+}

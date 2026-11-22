@@ -56,6 +56,8 @@ Its routing status remains inconclusive; it does not establish dispatcher
 behavior, target resolution, CFG or data flow. [021](../claims/021-pinned-luci-template-extraction.md)
 records the selection and diagnostics for 11 pinned upstream `.ut` sources
 staged at expected paths plus controls; its markup routes remain inconclusive.
+[022](../claims/022-pinned-mixed-template-ast.md) observes selected mixed-text
+AST nodes and a literal-lookalike control on one pinned template.
 
 These paths overlap in the pinned LuCI fixture; they are not a representative
 sample of all OpenWrt software or ucode syntax. The inventory deliberately

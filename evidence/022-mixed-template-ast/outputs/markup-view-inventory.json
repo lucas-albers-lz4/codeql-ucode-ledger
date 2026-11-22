@@ -1,0 +1,426 @@
+{
+  "#select": {
+    "columns": [
+      {
+        "name": "n",
+        "kind": "Entity"
+      },
+      {
+        "kind": "String"
+      },
+      {
+        "kind": "String"
+      },
+      {
+        "kind": "String"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "String"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      }
+    ],
+    "tuples": [
+      [
+        {
+          "label": "String",
+          "url": {
+            "uri": "file:///__SOURCE_ROOT__/usr/share/ucode/controls/literal-near-miss.ut",
+            "startLine": 1,
+            "startColumn": 18,
+            "endLine": 1,
+            "endColumn": 42
+          }
+        },
+        "usr/share/ucode/controls/literal-near-miss.ut",
+        "String",
+        "String",
+        1,
+        18,
+        1,
+        42,
+        "VariableDeclarator",
+        1,
+        8,
+        1,
+        42,
+        2
+      ],
+      [
+        {
+          "label": "\n<p>Literal lookalike stays inside a ucode string.</p>\n",
+          "url": {
+            "uri": "file:///__SOURCE_ROOT__/usr/share/ucode/controls/literal-near-miss.ut",
+            "startLine": 1,
+            "startColumn": 47,
+            "endLine": 2,
+            "endColumn": 54
+          }
+        },
+        "usr/share/ucode/controls/literal-near-miss.ut",
+        "RawText",
+        "\n<p>Literal lookalike stays inside a ucode string.</p>\n",
+        1,
+        47,
+        2,
+        54,
+        "TextStatement",
+        1,
+        45,
+        2,
+        54,
+        1
+      ],
+      [
+        {
+          "label": "CallExpression",
+          "url": {
+            "uri": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+            "startLine": 1,
+            "startColumn": 4,
+            "endLine": 1,
+            "endColumn": 20
+          }
+        },
+        "usr/share/ucode/luci/template/view.ut",
+        "CallExpression",
+        "CallExpression",
+        1,
+        4,
+        1,
+        20,
+        "ExpressionStatement",
+        1,
+        4,
+        1,
+        20,
+        0
+      ],
+      [
+        {
+          "label": "String",
+          "url": {
+            "uri": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+            "startLine": 1,
+            "startColumn": 12,
+            "endLine": 1,
+            "endColumn": 19
+          }
+        },
+        "usr/share/ucode/luci/template/view.ut",
+        "String",
+        "String",
+        1,
+        12,
+        1,
+        19,
+        "Arguments",
+        1,
+        11,
+        1,
+        20,
+        1
+      ],
+      [
+        {
+          "label": "\n\n<div id=\"view\">\n\t<div class=\"spinning\">",
+          "url": {
+            "uri": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+            "startLine": 1,
+            "startColumn": 24,
+            "endLine": 4,
+            "endColumn": 23
+          }
+        },
+        "usr/share/ucode/luci/template/view.ut",
+        "RawText",
+        "\n\n<div id=\"view\">\n\t<div class=\"spinning\">",
+        1,
+        24,
+        4,
+        23,
+        "TextStatement",
+        1,
+        22,
+        12,
+        2,
+        1
+      ],
+      [
+        {
+          "label": "ExpressionTag",
+          "url": {
+            "uri": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+            "startLine": 4,
+            "startColumn": 24,
+            "endLine": 4,
+            "endColumn": 49
+          }
+        },
+        "usr/share/ucode/luci/template/view.ut",
+        "ExpressionTag",
+        "ExpressionTag",
+        4,
+        24,
+        4,
+        49,
+        "TextStatement",
+        1,
+        22,
+        12,
+        2,
+        2
+      ],
+      [
+        {
+          "label": "CallExpression",
+          "url": {
+            "uri": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+            "startLine": 4,
+            "startColumn": 27,
+            "endLine": 4,
+            "endColumn": 46
+          }
+        },
+        "usr/share/ucode/luci/template/view.ut",
+        "CallExpression",
+        "CallExpression",
+        4,
+        27,
+        4,
+        46,
+        "ExpressionTag",
+        4,
+        24,
+        4,
+        49,
+        1
+      ],
+      [
+        {
+          "label": "String",
+          "url": {
+            "uri": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+            "startLine": 4,
+            "startColumn": 29,
+            "endLine": 4,
+            "endColumn": 45
+          }
+        },
+        "usr/share/ucode/luci/template/view.ut",
+        "String",
+        "String",
+        4,
+        29,
+        4,
+        45,
+        "Arguments",
+        4,
+        28,
+        4,
+        46,
+        1
+      ],
+      [
+        {
+          "label": "</div>\n\t<script>\n\t\tL.require('ui').then(function(ui) {\n\t\t\tui.instantiateView('",
+          "url": {
+            "uri": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+            "startLine": 4,
+            "startColumn": 50,
+            "endLine": 7,
+            "endColumn": 23
+          }
+        },
+        "usr/share/ucode/luci/template/view.ut",
+        "RawText",
+        "</div>\n\t<script>\n\t\tL.require('ui').then(function(ui) {\n\t\t\tui.instantiateView('",
+        4,
+        50,
+        7,
+        23,
+        "TextStatement",
+        1,
+        22,
+        12,
+        2,
+        3
+      ],
+      [
+        {
+          "label": "ExpressionTag",
+          "url": {
+            "uri": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+            "startLine": 7,
+            "startColumn": 24,
+            "endLine": 7,
+            "endColumn": 33
+          }
+        },
+        "usr/share/ucode/luci/template/view.ut",
+        "ExpressionTag",
+        "ExpressionTag",
+        7,
+        24,
+        7,
+        33,
+        "TextStatement",
+        1,
+        22,
+        12,
+        2,
+        4
+      ],
+      [
+        {
+          "label": "view",
+          "url": {
+            "uri": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+            "startLine": 7,
+            "startColumn": 27,
+            "endLine": 7,
+            "endColumn": 30
+          }
+        },
+        "usr/share/ucode/luci/template/view.ut",
+        "Identifier",
+        "view",
+        7,
+        27,
+        7,
+        30,
+        "ExpressionTag",
+        7,
+        24,
+        7,
+        33,
+        1
+      ],
+      [
+        {
+          "label": "');\n\t\t});\n\t</script>\n</div>\n\n",
+          "url": {
+            "uri": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+            "startLine": 7,
+            "startColumn": 34,
+            "endLine": 11,
+            "endColumn": 1
+          }
+        },
+        "usr/share/ucode/luci/template/view.ut",
+        "RawText",
+        "');\n\t\t});\n\t</script>\n</div>\n\n",
+        7,
+        34,
+        11,
+        1,
+        "TextStatement",
+        1,
+        22,
+        12,
+        2,
+        5
+      ],
+      [
+        {
+          "label": "CallExpression",
+          "url": {
+            "uri": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+            "startLine": 12,
+            "startColumn": 4,
+            "endLine": 12,
+            "endColumn": 20
+          }
+        },
+        "usr/share/ucode/luci/template/view.ut",
+        "CallExpression",
+        "CallExpression",
+        12,
+        4,
+        12,
+        20,
+        "ExpressionStatement",
+        12,
+        4,
+        12,
+        20,
+        0
+      ],
+      [
+        {
+          "label": "String",
+          "url": {
+            "uri": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+            "startLine": 12,
+            "startColumn": 12,
+            "endLine": 12,
+            "endColumn": 19
+          }
+        },
+        "usr/share/ucode/luci/template/view.ut",
+        "String",
+        "String",
+        12,
+        12,
+        12,
+        19,
+        "Arguments",
+        12,
+        11,
+        12,
+        20,
+        1
+      ],
+      [
+        {
+          "label": "\n",
+          "url": {
+            "uri": "file:///__SOURCE_ROOT__/usr/share/ucode/luci/template/view.ut",
+            "startLine": 12,
+            "startColumn": 24,
+            "endLine": 12,
+            "endColumn": 24
+          }
+        },
+        "usr/share/ucode/luci/template/view.ut",
+        "RawText",
+        "\n",
+        12,
+        24,
+        12,
+        24,
+        "TextStatement",
+        12,
+        22,
+        12,
+        24,
+        1
+      ]
+    ]
+  }
+}

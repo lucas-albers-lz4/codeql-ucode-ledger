@@ -1,0 +1,269 @@
+{
+  "extraction_and_diagnostics": [
+    {
+      "label": "database-init",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "database",
+        "init",
+        "<WAVE2_RUN>/execution/output/db",
+        "--language=ucode",
+        "--search-path=<WAVE2_RUN>/producer/extractor-pack",
+        "--source-root=<SOURCE_ROOT>"
+      ],
+      "cwd": "<WAVE2_RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.495855,
+      "stdout": "database-init.stdout",
+      "stderr_and_time": "database-init.stderr-time.txt",
+      "peak_rss_bytes": 120782848
+    },
+    {
+      "label": "index-files",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "database",
+        "index-files",
+        "<WAVE2_RUN>/execution/output/db",
+        "--language=ucode",
+        "--include=**/usr/share/ucode/luci/template/view.ut",
+        "--include=**/usr/share/ucode/controls/literal-near-miss.ut",
+        "--include=**/usr/share/ucode/controls/mixed.ut",
+        "--include=**/usr/share/ucode/controls/plain.uc",
+        "--working-dir=<SOURCE_ROOT>"
+      ],
+      "cwd": "<WAVE2_RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.662,
+      "stdout": "index-files.stdout",
+      "stderr_and_time": "index-files.stderr-time.txt",
+      "peak_rss_bytes": 120356864
+    },
+    {
+      "label": "database-finalize",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "database",
+        "finalize",
+        "<WAVE2_RUN>/execution/output/db"
+      ],
+      "cwd": "<WAVE2_RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 1.145494,
+      "stdout": "database-finalize.stdout",
+      "stderr_and_time": "database-finalize.stderr-time.txt",
+      "peak_rss_bytes": 197443584
+    },
+    {
+      "label": "extracted-query",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "query",
+        "run",
+        "<WAVE2_RUN>/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=<WAVE2_RUN>/execution/output/db",
+        "--search-path=<WAVE2_RUN>/producer/extractor-pack:<WAVE2_RUN>/producer/ql/lib:<WAVE2_RUN>/producer/ql/src",
+        "--output=<WAVE2_RUN>/execution/output/extracted.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<WAVE2_RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 1.736662,
+      "stdout": "extracted-query.stdout",
+      "stderr_and_time": "extracted-query.stderr-time.txt",
+      "peak_rss_bytes": 310804480
+    },
+    {
+      "label": "extracted-decode",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<WAVE2_RUN>/execution/output/extracted.bqrs"
+      ],
+      "cwd": "<WAVE2_RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.238098,
+      "stdout": "extracted-decode.stdout",
+      "stderr_and_time": "extracted-decode.stderr-time.txt",
+      "peak_rss_bytes": 89587712
+    },
+    {
+      "label": "errors-query",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "query",
+        "run",
+        "<WAVE2_RUN>/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=<WAVE2_RUN>/execution/output/db",
+        "--search-path=<WAVE2_RUN>/producer/extractor-pack:<WAVE2_RUN>/producer/ql/lib:<WAVE2_RUN>/producer/ql/src",
+        "--output=<WAVE2_RUN>/execution/output/errors.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<WAVE2_RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 1.752979,
+      "stdout": "errors-query.stdout",
+      "stderr_and_time": "errors-query.stderr-time.txt",
+      "peak_rss_bytes": 326287360
+    },
+    {
+      "label": "errors-decode",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<WAVE2_RUN>/execution/output/errors.bqrs"
+      ],
+      "cwd": "<WAVE2_RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.228454,
+      "stdout": "errors-decode.stdout",
+      "stderr_and_time": "errors-decode.stderr-time.txt",
+      "peak_rss_bytes": 89620480
+    },
+    {
+      "label": "all-diagnostics-query",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "query",
+        "run",
+        "<WAVE2_RUN>/producer/ql/src/Wave1AllDiagnostics.ql",
+        "--database=<WAVE2_RUN>/execution/output/db",
+        "--search-path=<WAVE2_RUN>/producer/extractor-pack:<WAVE2_RUN>/producer/ql/lib:<WAVE2_RUN>/producer/ql/src",
+        "--output=<WAVE2_RUN>/execution/output/all-diagnostics.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<WAVE2_RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 1.838637,
+      "stdout": "all-diagnostics-query.stdout",
+      "stderr_and_time": "all-diagnostics-query.stderr-time.txt",
+      "peak_rss_bytes": 354746368
+    },
+    {
+      "label": "all-diagnostics-decode",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<WAVE2_RUN>/execution/output/all-diagnostics.bqrs"
+      ],
+      "cwd": "<WAVE2_RUN>/producer",
+      "exit_status": 0,
+      "wall_seconds": 0.231912,
+      "stdout": "all-diagnostics-decode.stdout",
+      "stderr_and_time": "all-diagnostics-decode.stderr-time.txt",
+      "peak_rss_bytes": 89440256
+    }
+  ],
+  "queries_and_decodes": [
+    {
+      "label": "MarkupViewInventory-query",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "query",
+        "run",
+        "<WAVE2_RUN>/producer/ql/src/Wave2MarkupViewInventory.ql",
+        "--database=<WAVE2_RUN>/execution/output/db",
+        "--search-path=<WAVE2_RUN>/producer/extractor-pack:<WAVE2_RUN>/producer/ql/lib:<WAVE2_RUN>/producer/ql/src",
+        "--output=<WAVE2_RUN>/execution/output/markup-view-inventory.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<WAVE2_RUN>/producer",
+      "environment": {
+        "HOME": "<WAVE2_RUN>/execution/home",
+        "TMPDIR": "<WAVE2_RUN>/execution/tmp",
+        "XDG_CACHE_HOME": "<WAVE2_RUN>/execution/cache",
+        "CODEQL_UCODE_CACHE": "<WAVE2_RUN>/execution/cache"
+      },
+      "exit_status": 0,
+      "wall_seconds": 2.52,
+      "peak_rss_bytes": 451444736,
+      "stdout": "markup-view-inventory-query.stdout",
+      "stderr_time": "markup-view-inventory-query.stderr-time.txt"
+    },
+    {
+      "label": "MarkupViewInventory-decode",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<WAVE2_RUN>/execution/output/markup-view-inventory.bqrs"
+      ],
+      "cwd": "<WAVE2_RUN>/producer",
+      "environment": {
+        "HOME": "<WAVE2_RUN>/execution/home",
+        "TMPDIR": "<WAVE2_RUN>/execution/tmp",
+        "XDG_CACHE_HOME": "<WAVE2_RUN>/execution/cache",
+        "CODEQL_UCODE_CACHE": "<WAVE2_RUN>/execution/cache"
+      },
+      "exit_status": 0,
+      "wall_seconds": 0.24,
+      "peak_rss_bytes": 90193920,
+      "stdout": "markup-view-inventory.json",
+      "stderr_time": "markup-view-inventory-decode.stderr-time.txt"
+    },
+    {
+      "label": "MarkupNearMissAudit-query",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "query",
+        "run",
+        "<WAVE2_RUN>/producer/ql/src/Wave2MarkupNearMissAudit.ql",
+        "--database=<WAVE2_RUN>/execution/output/db",
+        "--search-path=<WAVE2_RUN>/producer/extractor-pack:<WAVE2_RUN>/producer/ql/lib:<WAVE2_RUN>/producer/ql/src",
+        "--output=<WAVE2_RUN>/execution/output/markup-nearmiss-audit.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<WAVE2_RUN>/producer",
+      "environment": {
+        "HOME": "<WAVE2_RUN>/execution/home",
+        "TMPDIR": "<WAVE2_RUN>/execution/tmp",
+        "XDG_CACHE_HOME": "<WAVE2_RUN>/execution/cache",
+        "CODEQL_UCODE_CACHE": "<WAVE2_RUN>/execution/cache"
+      },
+      "exit_status": 0,
+      "wall_seconds": 2.69,
+      "peak_rss_bytes": 545652736,
+      "stdout": "markup-nearmiss-audit-query.stdout",
+      "stderr_time": "markup-nearmiss-audit-query.stderr-time.txt"
+    },
+    {
+      "label": "MarkupNearMissAudit-decode",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<WAVE2_RUN>/execution/output/markup-nearmiss-audit.bqrs"
+      ],
+      "cwd": "<WAVE2_RUN>/producer",
+      "environment": {
+        "HOME": "<WAVE2_RUN>/execution/home",
+        "TMPDIR": "<WAVE2_RUN>/execution/tmp",
+        "XDG_CACHE_HOME": "<WAVE2_RUN>/execution/cache",
+        "CODEQL_UCODE_CACHE": "<WAVE2_RUN>/execution/cache"
+      },
+      "exit_status": 0,
+      "wall_seconds": 0.23,
+      "peak_rss_bytes": 89341952,
+      "stdout": "markup-nearmiss-audit.json",
+      "stderr_time": "markup-nearmiss-audit-decode.stderr-time.txt"
+    }
+  ]
+}

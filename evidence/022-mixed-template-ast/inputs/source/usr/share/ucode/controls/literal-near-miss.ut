@@ -1,0 +1,2 @@
+{% let literal = "{{ include('header') }}"; %}
+<p>Literal lookalike stays inside a ucode string.</p>

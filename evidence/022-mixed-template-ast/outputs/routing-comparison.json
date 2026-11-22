@@ -1,0 +1,72 @@
+[
+  {
+    "path": "usr/share/ucode/luci/template/view.ut",
+    "matched": {
+      "path": "<SOURCE_ROOT>/usr/share/ucode/luci/template/view.ut",
+      "installed_path": "usr/share/ucode/luci/template/view.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    "expected": {
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    "matches": true
+  },
+  {
+    "path": "usr/share/ucode/controls/literal-near-miss.ut",
+    "matched": {
+      "path": "<SOURCE_ROOT>/usr/share/ucode/controls/literal-near-miss.ut",
+      "installed_path": "usr/share/ucode/controls/literal-near-miss.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    "expected": {
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    "matches": true
+  },
+  {
+    "path": "usr/share/ucode/controls/mixed.ut",
+    "matched": {
+      "path": "<SOURCE_ROOT>/usr/share/ucode/controls/mixed.ut",
+      "installed_path": "usr/share/ucode/controls/mixed.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    "expected": {
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    "matches": true
+  },
+  {
+    "path": "usr/share/ucode/controls/plain.uc",
+    "matched": {
+      "path": "<SOURCE_ROOT>/usr/share/ucode/controls/plain.uc",
+      "installed_path": "usr/share/ucode/controls/plain.uc",
+      "classification": "plain",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    "expected": {
+      "classification": "plain",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    "matches": true
+  }
+]

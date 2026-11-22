@@ -1,0 +1,42 @@
+{
+  "input_count": 4,
+  "plain_count": 1,
+  "markup_count": 3,
+  "markup_inconclusive_count": 3,
+  "uncertain_count": 0,
+  "excluded_count": 0,
+  "duplicate_input_count": 0,
+  "decisions": [
+    {
+      "path": "<SOURCE_ROOT>/usr/share/ucode/controls/literal-near-miss.ut",
+      "installed_path": "usr/share/ucode/controls/literal-near-miss.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "<SOURCE_ROOT>/usr/share/ucode/controls/mixed.ut",
+      "installed_path": "usr/share/ucode/controls/mixed.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "<SOURCE_ROOT>/usr/share/ucode/controls/plain.uc",
+      "installed_path": "usr/share/ucode/controls/plain.uc",
+      "classification": "plain",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "path": "<SOURCE_ROOT>/usr/share/ucode/luci/template/view.ut",
+      "installed_path": "usr/share/ucode/luci/template/view.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    }
+  ]
+}

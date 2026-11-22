@@ -1,0 +1,53 @@
+{
+  "source_root": "<SOURCE_ROOT>",
+  "expected_input_count": 4,
+  "files": [
+    {
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "sha256": "785bf7d4cceb5cdd9f113cbede0bde5b69e35b69cc1b51d2e498665d50091d62",
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "control": "corpus",
+      "expected_extraction": "success"
+    },
+    {
+      "path": "usr/share/ucode/controls/literal-near-miss.ut",
+      "sha256": "3f941935679ff9ff5d4f3ee3c813a31ced28adf5c5285e2be90776396baf95da",
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "control": "near_miss",
+      "expected_extraction": "success"
+    },
+    {
+      "path": "usr/share/ucode/controls/mixed.ut",
+      "sha256": "0ef793bb3ce8833739fb622aa555464ace8044194e24223acff692627546b3b4",
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "control": "markup_positive",
+      "expected_extraction": "success"
+    },
+    {
+      "path": "usr/share/ucode/controls/plain.uc",
+      "sha256": "dcbeb5added37dff25ceece588d4ef57d4219ae4a2b6996a320c9a51869e132b",
+      "route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "control": "plain_control",
+      "expected_extraction": "success"
+    }
+  ]
+}

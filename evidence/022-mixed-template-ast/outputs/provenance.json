@@ -1,0 +1,74 @@
+{
+  "producer": {
+    "sha": "0a6612fe0e66351a0ccda43ad5b51f5ef5a2724e",
+    "tracked_tree_clean": true,
+    "untracked_local_queries": [
+      "Wave2MarkupViewInventory.ql",
+      "Wave2MarkupNearMissAudit.ql",
+      "Wave1AllDiagnostics.ql"
+    ]
+  },
+  "luci": {
+    "sha": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "source": "modules/luci-base/ucode/template/view.ut",
+    "sha256": "785bf7d4cceb5cdd9f113cbede0bde5b69e35b69cc1b51d2e498665d50091d62"
+  },
+  "grammar": {
+    "sha": "4a243af329fae2f4ff01e0fc80133cbab8314600",
+    "source": "m00qek/tree-sitter-ucode"
+  },
+  "toolchain": {
+    "codeql": "2.27.4",
+    "os": "macOS; /usr/bin/time -l used for RSS"
+  },
+  "pack": {
+    "source": "Wave 1 disposable producer extractor-pack",
+    "tree_digest": "672dfc6aa8d77782098a5cc78655ed860177b3885a406980c0678e0c31ffdd96",
+    "copy_matched": true,
+    "provenance": "The pack was used by the successful Wave 1 run at the same producer SHA."
+  },
+  "package_cache": {
+    "source": "Wave 1 run-owned HOME/.codeql/packages copy",
+    "tree_digest": "012e54b9857ed368ca3096896db967e0ba049405336d1267efb454c81fdd361f",
+    "copy_matched": true,
+    "provenance": "Copied into the Wave 2 preparation tree, then by the runner into Wave 2 isolated HOME/.codeql/packages."
+  },
+  "runner": {
+    "file": "queries/run-extraction.py",
+    "sha256": "e5842450aaaf290b1cbde2bed4574fd32456fa2daec6b3ae48053e38d0ab59fb"
+  },
+  "queries": {
+    "Wave2MarkupViewInventory.ql": "4393cfa8a47e90734b46719016ae780f33656129dde5ed8f0297b3ff237789e8",
+    "Wave2MarkupNearMissAudit.ql": "9cddc3a579958c7aaa4dc26a5b5e5b64dc20c6767cc8715211729a84e963c632",
+    "Wave1AllDiagnostics.ql": "3973f9f1e59aa5637d8bc04bb2fece5775ff893cff184cfb35e40a185a36acbe"
+  },
+  "preparation_events": [
+    {
+      "event": "initial staging script failure",
+      "status": 1,
+      "detail": "A preparation copy script raised FileNotFoundError because work/wave2-run/source/usr/share/ucode/luci/template/view.ut had not yet been copied into the Wave 2 run staging tree. It stopped before manifest creation or CodeQL; staging was resumed by copying work/wave2-prep/source and the mixed.ut/plain.uc fixtures, then validating manifest hashes."
+    },
+    {
+      "event": "initial comparison receipt script failure",
+      "status": 1,
+      "detail": "A Python f-string quoting typo caused SyntaxError before reading or writing receipt data. It was corrected; no CodeQL command was rerun."
+    }
+  ],
+  "execution_status": {
+    "extraction_runner_exit": 0,
+    "all_four_route_and_extraction_checks_match": true,
+    "extraction_errors": 0,
+    "all_diagnostics": 0,
+    "main_query_exit": 0,
+    "main_query_entity_rows": 15,
+    "near_miss_query_exit": 0,
+    "near_miss_audit_rows": 0,
+    "query_retries": 0
+  },
+  "path_normalization": {
+    "source_file_urls": "file:///__SOURCE_ROOT__/<manifest-relative-path>",
+    "run_paths": "<WAVE2_RUN>",
+    "codeql_executable": "<CODEQL_2_27_4>",
+    "raw_unmodified_files": "Raw BQRS/database and stderr text remain in ignored work/wave2-run/execution; this portable receipt retains normalized decoded JSON and structured timing records."
+  }
+}
