@@ -1,0 +1,95 @@
+{
+  "source": "raw-redacted/*.stderr-time.txt parsed; commands were run by Luna before this assembly",
+  "commands": [
+    {
+      "label": "database-init",
+      "exit_status": 0,
+      "runner_wall_seconds": 0.485033,
+      "time_l_real_seconds": 0.48,
+      "time_l_user_seconds": 0.92,
+      "time_l_sys_seconds": 0.07,
+      "maximum_resident_set_bytes": 122552320,
+      "peak_memory_footprint_bytes": 1622304
+    },
+    {
+      "label": "index-files",
+      "exit_status": 0,
+      "runner_wall_seconds": 0.664828,
+      "time_l_real_seconds": 0.66,
+      "time_l_user_seconds": 0.66,
+      "time_l_sys_seconds": 0.06,
+      "maximum_resident_set_bytes": 120930304,
+      "peak_memory_footprint_bytes": 1884472
+    },
+    {
+      "label": "database-finalize",
+      "exit_status": 0,
+      "runner_wall_seconds": 1.22419,
+      "time_l_real_seconds": 1.22,
+      "time_l_user_seconds": 2.19,
+      "time_l_sys_seconds": 0.2,
+      "maximum_resident_set_bytes": 270499840,
+      "peak_memory_footprint_bytes": 1835296
+    },
+    {
+      "label": "extracted-query",
+      "exit_status": 0,
+      "runner_wall_seconds": 1.746768,
+      "time_l_real_seconds": 1.74,
+      "time_l_user_seconds": 4.19,
+      "time_l_sys_seconds": 0.92,
+      "maximum_resident_set_bytes": 324845568,
+      "peak_memory_footprint_bytes": 1687864
+    },
+    {
+      "label": "extracted-decode",
+      "exit_status": 0,
+      "runner_wall_seconds": 0.236048,
+      "time_l_real_seconds": 0.23,
+      "time_l_user_seconds": 0.36,
+      "time_l_sys_seconds": 0.03,
+      "maximum_resident_set_bytes": 90554368,
+      "peak_memory_footprint_bytes": 1687840
+    },
+    {
+      "label": "errors-query",
+      "exit_status": 0,
+      "runner_wall_seconds": 2.073711,
+      "time_l_real_seconds": 2.07,
+      "time_l_user_seconds": 5.07,
+      "time_l_sys_seconds": 1.17,
+      "maximum_resident_set_bytes": 341278720,
+      "peak_memory_footprint_bytes": 2179384
+    },
+    {
+      "label": "errors-decode",
+      "exit_status": 0,
+      "runner_wall_seconds": 0.282863,
+      "time_l_real_seconds": 0.28,
+      "time_l_user_seconds": 0.44,
+      "time_l_sys_seconds": 0.04,
+      "maximum_resident_set_bytes": 91439104,
+      "peak_memory_footprint_bytes": 2048288
+    },
+    {
+      "label": "all-diagnostics-query",
+      "exit_status": 0,
+      "runner_wall_seconds": 2.283119,
+      "time_l_real_seconds": 2.28,
+      "time_l_user_seconds": 5.52,
+      "time_l_sys_seconds": 1.33,
+      "maximum_resident_set_bytes": 347914240,
+      "peak_memory_footprint_bytes": 2474296
+    },
+    {
+      "label": "all-diagnostics-decode",
+      "exit_status": 0,
+      "runner_wall_seconds": 0.252092,
+      "time_l_real_seconds": 0.24,
+      "time_l_user_seconds": 0.39,
+      "time_l_sys_seconds": 0.04,
+      "maximum_resident_set_bytes": 91455488,
+      "peak_memory_footprint_bytes": 1818936
+    }
+  ]
+}

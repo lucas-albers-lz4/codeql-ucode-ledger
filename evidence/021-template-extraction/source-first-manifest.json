@@ -1,0 +1,524 @@
+{
+  "scope": "Wave 1 source-first inventory only; no CodeQL/database/extractor execution",
+  "project_pins": {
+    "producer": {
+      "url": "https://github.com/lucas-albers-lz4/codeql-ucode.git",
+      "sha": "0a6612fe0e66351a0ccda43ad5b51f5ef5a2724e",
+      "dirty": false
+    },
+    "consumer": {
+      "url": "https://github.com/lucas-albers-lz4/codeql-openwrt.git",
+      "sha": "d37adeadaf836ba97049f75087a348165027f7f9",
+      "dirty": false
+    },
+    "luci": {
+      "url": "https://github.com/openwrt/luci.git",
+      "ref": "openwrt-25.12",
+      "sha": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+      "lock_sha": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+      "dirty": false
+    }
+  },
+  "lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+  "profile": "luci-ssl-25.12",
+  "selected_config_seed": {
+    "arch": "x86_64",
+    "CONFIG_IPV6": "y",
+    "CONFIG_PACKAGE_luci-ssl": "y"
+  },
+  "luci_package_closure": [
+    "luci-ssl",
+    "luci-light",
+    "luci-mod-admin-full",
+    "luci-base",
+    "luci-mod-status",
+    "luci-mod-system",
+    "luci-mod-network",
+    "luci-lib-uqr",
+    "luci-app-firewall",
+    "luci-theme-bootstrap",
+    "luci-proto-ppp",
+    "luci-proto-ipv6",
+    "luci-app-package-manager"
+  ],
+  "selection_rule": "Source-first input identities are the 11 .ut rows transcribed in consumer corpus/luci_ssl_files.py ROUTING_EVIDENCE. Separately enumerate every .ut blob in the pinned LuCI Git tree under every package directory in the profile package closure and compare exact path sets; installed path via luci.mk ucode/ => /usr/share/ucode/luci/.",
+  "consumer_inputs": {
+    "corpus/lock.json": {
+      "sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a"
+    },
+    "corpus/luci_ssl_files.py": {
+      "sha256": "b135b5f5dbe3feacd78705d9a85b11cc55f4b6961fe7ee94c8b0d7be316a6b46"
+    },
+    "corpus/profiles/luci-ssl-25.12/profile.json": {
+      "sha256": "16a5468601be4b23f45795a43deedd6fda6726ff7503abb9d80e493d16808ac5"
+    }
+  },
+  "source_tree_comparison": {
+    "method": "git ls-tree -r --name-only HEAD, filtered by package directories listed in pinned consumer dependency closure and .ut suffix",
+    "package_directories": [
+      "applications/luci-app-firewall",
+      "applications/luci-app-package-manager",
+      "collections/luci-light",
+      "collections/luci-ssl",
+      "libs/luci-lib-uqr",
+      "modules/luci-base",
+      "modules/luci-mod-admin-full",
+      "modules/luci-mod-network",
+      "modules/luci-mod-status",
+      "modules/luci-mod-system",
+      "protocols/luci-proto-ipv6",
+      "protocols/luci-proto-ppp",
+      "themes/luci-theme-bootstrap"
+    ],
+    "expected_inventory_sources": [
+      "modules/luci-base/ucode/template/csrftoken.ut",
+      "modules/luci-base/ucode/template/error404.ut",
+      "modules/luci-base/ucode/template/error500.ut",
+      "modules/luci-base/ucode/template/footer.ut",
+      "modules/luci-base/ucode/template/header.ut",
+      "modules/luci-base/ucode/template/sysauth.ut",
+      "modules/luci-base/ucode/template/view.ut",
+      "modules/luci-mod-status/ucode/template/admin_status/index.ut",
+      "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/footer.ut",
+      "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/header.ut",
+      "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/sysauth.ut"
+    ],
+    "actual_tree_sources": [
+      "modules/luci-base/ucode/template/csrftoken.ut",
+      "modules/luci-base/ucode/template/error404.ut",
+      "modules/luci-base/ucode/template/error500.ut",
+      "modules/luci-base/ucode/template/footer.ut",
+      "modules/luci-base/ucode/template/header.ut",
+      "modules/luci-base/ucode/template/sysauth.ut",
+      "modules/luci-base/ucode/template/view.ut",
+      "modules/luci-mod-status/ucode/template/admin_status/index.ut",
+      "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/footer.ut",
+      "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/header.ut",
+      "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/sysauth.ut"
+    ],
+    "exact_match": true,
+    "actual_not_in_inventory": [],
+    "inventory_not_in_actual": []
+  },
+  "markup_sources": [
+    {
+      "path": "modules/luci-base/ucode/template/csrftoken.ut",
+      "exists": true,
+      "is_symlink": false,
+      "symlink_target": null,
+      "git_mode": "100644",
+      "git_blob_oid": "4e96eebe905758bb607a324cd10d0cf43e4eec6e",
+      "git_type": "blob",
+      "sha256": "a2f223208d9ff2c3e1bfa808f11d74636028b4902973afb5b7f336328f7e2160",
+      "size_bytes": 603,
+      "package": "luci-base",
+      "installed_path": "/usr/share/ucode/luci/template/csrftoken.ut",
+      "classification": "markup",
+      "routing_reason": ".ut",
+      "routing_rule": 2,
+      "substitute_version_version_token": false,
+      "substitute_version_asset_token": false
+    },
+    {
+      "path": "modules/luci-base/ucode/template/error404.ut",
+      "exists": true,
+      "is_symlink": false,
+      "symlink_target": null,
+      "git_mode": "100644",
+      "git_blob_oid": "90c3d3784bb60ec8c4c6c189cf2eebd7cda9076d",
+      "git_type": "blob",
+      "sha256": "8fa2306435be3aca3ca59b09adaaa0190292c6cfe2fecda9df4eb3eeac5b8552",
+      "size_bytes": 435,
+      "package": "luci-base",
+      "installed_path": "/usr/share/ucode/luci/template/error404.ut",
+      "classification": "markup",
+      "routing_reason": ".ut",
+      "routing_rule": 2,
+      "substitute_version_version_token": false,
+      "substitute_version_asset_token": false
+    },
+    {
+      "path": "modules/luci-base/ucode/template/error500.ut",
+      "exists": true,
+      "is_symlink": false,
+      "symlink_target": null,
+      "git_mode": "100644",
+      "git_blob_oid": "e0d4d48ab741cb5fd9416de17ef9030a7a757bc1",
+      "git_type": "blob",
+      "sha256": "6c7a519229524d7a34b18c5da97cb8b05f622ee0938fe1a4b2d2516a6adf1887",
+      "size_bytes": 1127,
+      "package": "luci-base",
+      "installed_path": "/usr/share/ucode/luci/template/error500.ut",
+      "classification": "markup",
+      "routing_reason": ".ut",
+      "routing_rule": 2,
+      "substitute_version_version_token": false,
+      "substitute_version_asset_token": false
+    },
+    {
+      "path": "modules/luci-base/ucode/template/footer.ut",
+      "exists": true,
+      "is_symlink": false,
+      "symlink_target": null,
+      "git_mode": "100644",
+      "git_blob_oid": "0ab06ae0b9380b12c6351061b089a397a14ff0d7",
+      "git_type": "blob",
+      "sha256": "5625f938d625ff406e53434d37aa7643cc09e11f74379887a4ba154021240495",
+      "size_bytes": 1271,
+      "package": "luci-base",
+      "installed_path": "/usr/share/ucode/luci/template/footer.ut",
+      "classification": "markup",
+      "routing_reason": ".ut",
+      "routing_rule": 2,
+      "substitute_version_version_token": false,
+      "substitute_version_asset_token": false
+    },
+    {
+      "path": "modules/luci-base/ucode/template/header.ut",
+      "exists": true,
+      "is_symlink": false,
+      "symlink_target": null,
+      "git_mode": "100644",
+      "git_blob_oid": "f23e5e45c88211d3d500193407f9277f1912c784",
+      "git_type": "blob",
+      "sha256": "67132f2d1c1cf743f3e4ce11d660a5a2569b461804a63914061fe956171be6c2",
+      "size_bytes": 1052,
+      "package": "luci-base",
+      "installed_path": "/usr/share/ucode/luci/template/header.ut",
+      "classification": "markup",
+      "routing_reason": ".ut",
+      "routing_rule": 2,
+      "substitute_version_version_token": true,
+      "substitute_version_asset_token": false
+    },
+    {
+      "path": "modules/luci-base/ucode/template/sysauth.ut",
+      "exists": true,
+      "is_symlink": false,
+      "symlink_target": null,
+      "git_mode": "100644",
+      "git_blob_oid": "babba2ecb522b7acec2e20e4ea071c15b74c307f",
+      "git_type": "blob",
+      "sha256": "8c1dcf98cd29410021ed4f5f9dc668f8c70c0227f39f97f60f7205f9d52fa5bb",
+      "size_bytes": 2096,
+      "package": "luci-base",
+      "installed_path": "/usr/share/ucode/luci/template/sysauth.ut",
+      "classification": "markup",
+      "routing_reason": ".ut",
+      "routing_rule": 2,
+      "substitute_version_version_token": false,
+      "substitute_version_asset_token": false
+    },
+    {
+      "path": "modules/luci-base/ucode/template/view.ut",
+      "exists": true,
+      "is_symlink": false,
+      "symlink_target": null,
+      "git_mode": "100644",
+      "git_blob_oid": "a8562844baf7d155c8cd682939f26e67a2a208ac",
+      "git_type": "blob",
+      "sha256": "785bf7d4cceb5cdd9f113cbede0bde5b69e35b69cc1b51d2e498665d50091d62",
+      "size_bytes": 231,
+      "package": "luci-base",
+      "installed_path": "/usr/share/ucode/luci/template/view.ut",
+      "classification": "markup",
+      "routing_reason": ".ut",
+      "routing_rule": 2,
+      "substitute_version_version_token": false,
+      "substitute_version_asset_token": false
+    },
+    {
+      "path": "modules/luci-mod-status/ucode/template/admin_status/index.ut",
+      "exists": true,
+      "is_symlink": false,
+      "symlink_target": null,
+      "git_mode": "100644",
+      "git_blob_oid": "dafb427bf48b4da1e09ead45b97e55791804f20d",
+      "git_type": "blob",
+      "sha256": "652842b1e54f8a2904458ae1f5693ddfc68b97f106d8b8ff48a4d8747d673019",
+      "size_bytes": 1626,
+      "package": "luci-mod-status",
+      "installed_path": "/usr/share/ucode/luci/template/admin_status/index.ut",
+      "classification": "markup",
+      "routing_reason": ".ut",
+      "routing_rule": 2,
+      "substitute_version_version_token": false,
+      "substitute_version_asset_token": false
+    },
+    {
+      "path": "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/header.ut",
+      "exists": true,
+      "is_symlink": false,
+      "symlink_target": null,
+      "git_mode": "100644",
+      "git_blob_oid": "3486a412078c9fe5df3159b4691ffeb7de8794c0",
+      "git_type": "blob",
+      "sha256": "eca05b1e4d8391e36a08bcd0b3d0135d2addb37b9e574bd7db98d56f4835e0a3",
+      "size_bytes": 3636,
+      "package": "luci-theme-bootstrap",
+      "installed_path": "/usr/share/ucode/luci/template/themes/bootstrap/header.ut",
+      "classification": "markup",
+      "routing_reason": ".ut",
+      "routing_rule": 2,
+      "substitute_version_version_token": false,
+      "substitute_version_asset_token": true
+    },
+    {
+      "path": "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/footer.ut",
+      "exists": true,
+      "is_symlink": false,
+      "symlink_target": null,
+      "git_mode": "100644",
+      "git_blob_oid": "d51079b6fa8e89e5119514c7730f982a5cd671a3",
+      "git_type": "blob",
+      "sha256": "b5cb417ca73c02226679ab2412e272dcf6851eee134c521fc316c39a81ecfa4e",
+      "size_bytes": 671,
+      "package": "luci-theme-bootstrap",
+      "installed_path": "/usr/share/ucode/luci/template/themes/bootstrap/footer.ut",
+      "classification": "markup",
+      "routing_reason": ".ut",
+      "routing_rule": 2,
+      "substitute_version_version_token": false,
+      "substitute_version_asset_token": false
+    },
+    {
+      "path": "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/sysauth.ut",
+      "exists": true,
+      "is_symlink": false,
+      "symlink_target": null,
+      "git_mode": "100644",
+      "git_blob_oid": "e311f2d03fe28bccddf91c860ff66219b5415d50",
+      "git_type": "blob",
+      "sha256": "7e4702c063c95734ec3157121dc59802ff51ed2c1b73c405cd9831ddd2e0c337",
+      "size_bytes": 1345,
+      "package": "luci-theme-bootstrap",
+      "installed_path": "/usr/share/ucode/luci/template/themes/bootstrap/sysauth.ut",
+      "classification": "markup",
+      "routing_reason": ".ut",
+      "routing_rule": 2,
+      "substitute_version_version_token": false,
+      "substitute_version_asset_token": false
+    }
+  ],
+  "plain_control": {
+    "source": "modules/luci-base/htdocs/cgi-bin/luci",
+    "installed_path": "/www/cgi-bin/luci",
+    "path": "modules/luci-base/htdocs/cgi-bin/luci",
+    "exists": true,
+    "is_symlink": false,
+    "symlink_target": null,
+    "git_mode": "100755",
+    "git_blob_oid": "442e427d410f1824b7b07d48bab8a2730012989b",
+    "git_type": "blob",
+    "sha256": "aced6c9b2e621bb6e1dd1bb7d675925e9325ed901f49b1aabb0696a06942dacb",
+    "size_bytes": 660,
+    "shebang": "#!/usr/bin/env ucode",
+    "package": "luci-base",
+    "role": "actual pinned LuCI source; eligible shebang plain route control, distinct from fixture control"
+  },
+  "fixture_controls": [
+    {
+      "path": "tests/data/markup/usr/share/ucode/controls/mixed.ut",
+      "exists": true,
+      "is_symlink": false,
+      "symlink_target": null,
+      "git_mode": "100644",
+      "git_blob_oid": "ef4ab5b201704a0633fd816e0319634fe7b1eab0",
+      "git_type": "blob",
+      "sha256": "0ef793bb3ce8833739fb622aa555464ace8044194e24223acff692627546b3b4",
+      "size_bytes": 48,
+      "role": "predeclared valid markup positive; source-level AST/extraction expectations are in scripts/markup-ast-smoke.py",
+      "installed_staging_path": "/usr/share/ucode/controls/mixed.ut",
+      "expected_route": "markup (.ut)"
+    },
+    {
+      "path": "tests/data/markup/usr/share/ucode/controls/plain.uc",
+      "exists": true,
+      "is_symlink": false,
+      "symlink_target": null,
+      "git_mode": "100644",
+      "git_blob_oid": "3d9840bd09c84e5f5bf1278495d7261553abb32a",
+      "git_type": "blob",
+      "sha256": "dcbeb5added37dff25ceece588d4ef57d4219ae4a2b6996a320c9a51869e132b",
+      "size_bytes": 15,
+      "role": "eligible plain extension control; expected plain routing and clean extraction in scripts/markup-ast-smoke.py",
+      "installed_staging_path": "/usr/share/ucode/controls/plain.uc",
+      "expected_route": "plain (.uc)"
+    }
+  ],
+  "symlink_exclusions": [
+    {
+      "path": "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap-dark",
+      "exists": true,
+      "is_symlink": true,
+      "symlink_target": "bootstrap",
+      "git_mode": "120000",
+      "git_blob_oid": "ac7bcbbf37b1b7f6e3ac6402a29f844f6de1ca43",
+      "git_type": "blob",
+      "sha256": "333c04dd151a2a6831c039cb9a651df29198be8a04e16ce861d4b6a34a11c954",
+      "size_bytes": 9
+    },
+    {
+      "path": "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap-light",
+      "exists": true,
+      "is_symlink": true,
+      "symlink_target": "bootstrap",
+      "git_mode": "120000",
+      "git_blob_oid": "ac7bcbbf37b1b7f6e3ac6402a29f844f6de1ca43",
+      "git_type": "blob",
+      "sha256": "333c04dd151a2a6831c039cb9a651df29198be8a04e16ce861d4b6a34a11c954",
+      "size_bytes": 9
+    }
+  ],
+  "collisions": {},
+  "transformations": {
+    "build_prepare": "luci.mk Build/Prepare copies source ucode/* to PKG_BUILD_DIR/ucode/* then Build/Prepare/Default; package-specific luci-base prepare only copies NOTICE/LICENSE.",
+    "install": "luci.mk Package/install copies PKG_BUILD_DIR/ucode/* into /usr/share/ucode/luci/ then invokes SubstituteVersion on that tree.",
+    "substitute_version": "SubstituteVersion applies to *.ut: replaces {# ...PKG_VERSION #} with $(PKG_VERSION if set else PKG_SRC_VERSION), and adds ?v=... to quoted {{ media/resource }} paths ending .js/.css.",
+    "matching_sources": [
+      "modules/luci-base/ucode/template/header.ut",
+      "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/header.ut"
+    ],
+    "configuration_boundary": "Pinned consumer profile records CONFIG_IPV6=y and package/profile selection but no resolved LuCI PKG_VERSION/PKG_SRC_VERSION. Therefore source bytes are verified; installed header.ut bytes cannot be claimed without reproducing the build version value. Other selected .ut sources contain no matching SubstituteVersion token at this pin."
+  },
+  "excluded_or_unavailable": [
+    "bootstrap-dark and bootstrap-light are Git symlinks to bootstrap/, not .ut source files; retained separately as exclusions.",
+    "uhttpd.uc is already-investigated separately under claim 020; excluded from the 11 .ut count.",
+    "Generated version.uc is a luci-base src install output, not a pinned source blob and not a .ut.",
+    "No live package installation was executed; the inventory identifies upstream source bytes and install mapping only."
+  ],
+  "package_dependency_check": {
+    "luci-ssl": {
+      "makefile": "collections/luci-ssl/Makefile",
+      "active_luci_dependencies": [
+        "luci-app-package-manager",
+        "luci-light"
+      ],
+      "inventory_dependencies": [
+        "luci-app-package-manager",
+        "luci-light"
+      ],
+      "matches_profile_config": true
+    },
+    "luci-light": {
+      "makefile": "collections/luci-light/Makefile",
+      "active_luci_dependencies": [
+        "luci-app-firewall",
+        "luci-mod-admin-full",
+        "luci-proto-ipv6",
+        "luci-proto-ppp",
+        "luci-theme-bootstrap"
+      ],
+      "inventory_dependencies": [
+        "luci-app-firewall",
+        "luci-mod-admin-full",
+        "luci-proto-ipv6",
+        "luci-proto-ppp",
+        "luci-theme-bootstrap"
+      ],
+      "matches_profile_config": true
+    },
+    "luci-mod-admin-full": {
+      "makefile": "modules/luci-mod-admin-full/Makefile",
+      "active_luci_dependencies": [
+        "luci-base",
+        "luci-mod-network",
+        "luci-mod-status",
+        "luci-mod-system"
+      ],
+      "inventory_dependencies": [
+        "luci-base",
+        "luci-mod-network",
+        "luci-mod-status",
+        "luci-mod-system"
+      ],
+      "matches_profile_config": true
+    },
+    "luci-base": {
+      "makefile": "modules/luci-base/Makefile",
+      "active_luci_dependencies": [],
+      "inventory_dependencies": [],
+      "matches_profile_config": true
+    },
+    "luci-mod-status": {
+      "makefile": "modules/luci-mod-status/Makefile",
+      "active_luci_dependencies": [
+        "luci-base"
+      ],
+      "inventory_dependencies": [
+        "luci-base"
+      ],
+      "matches_profile_config": true
+    },
+    "luci-mod-system": {
+      "makefile": "modules/luci-mod-system/Makefile",
+      "active_luci_dependencies": [
+        "luci-base"
+      ],
+      "inventory_dependencies": [
+        "luci-base"
+      ],
+      "matches_profile_config": true
+    },
+    "luci-mod-network": {
+      "makefile": "modules/luci-mod-network/Makefile",
+      "active_luci_dependencies": [
+        "luci-base",
+        "luci-lib-uqr"
+      ],
+      "inventory_dependencies": [
+        "luci-base",
+        "luci-lib-uqr"
+      ],
+      "matches_profile_config": true
+    },
+    "luci-lib-uqr": {
+      "makefile": "libs/luci-lib-uqr/Makefile",
+      "active_luci_dependencies": [],
+      "inventory_dependencies": [],
+      "matches_profile_config": true
+    },
+    "luci-app-firewall": {
+      "makefile": "applications/luci-app-firewall/Makefile",
+      "active_luci_dependencies": [
+        "luci-base"
+      ],
+      "inventory_dependencies": [
+        "luci-base"
+      ],
+      "matches_profile_config": true
+    },
+    "luci-theme-bootstrap": {
+      "makefile": "themes/luci-theme-bootstrap/Makefile",
+      "active_luci_dependencies": [
+        "luci-base"
+      ],
+      "inventory_dependencies": [
+        "luci-base"
+      ],
+      "matches_profile_config": true
+    },
+    "luci-proto-ppp": {
+      "makefile": "protocols/luci-proto-ppp/Makefile",
+      "active_luci_dependencies": [],
+      "inventory_dependencies": [],
+      "matches_profile_config": true
+    },
+    "luci-proto-ipv6": {
+      "makefile": "protocols/luci-proto-ipv6/Makefile",
+      "active_luci_dependencies": [],
+      "inventory_dependencies": [],
+      "matches_profile_config": true
+    },
+    "luci-app-package-manager": {
+      "makefile": "applications/luci-app-package-manager/Makefile",
+      "active_luci_dependencies": [
+        "luci-base"
+      ],
+      "inventory_dependencies": [
+        "luci-base"
+      ],
+      "matches_profile_config": true
+    }
+  }
+}

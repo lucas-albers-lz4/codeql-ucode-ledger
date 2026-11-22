@@ -1,0 +1,121 @@
+{
+  "input_count": 14,
+  "plain_count": 2,
+  "markup_count": 12,
+  "markup_inconclusive_count": 12,
+  "uncertain_count": 0,
+  "excluded_count": 0,
+  "duplicate_input_count": 0,
+  "decisions": [
+    {
+      "path": "usr/share/ucode/controls/mixed.ut",
+      "installed_path": "usr/share/ucode/controls/mixed.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "usr/share/ucode/controls/plain.uc",
+      "installed_path": "usr/share/ucode/controls/plain.uc",
+      "classification": "plain",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/admin_status/index.ut",
+      "installed_path": "usr/share/ucode/luci/template/admin_status/index.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/csrftoken.ut",
+      "installed_path": "usr/share/ucode/luci/template/csrftoken.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/error404.ut",
+      "installed_path": "usr/share/ucode/luci/template/error404.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/error500.ut",
+      "installed_path": "usr/share/ucode/luci/template/error500.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/footer.ut",
+      "installed_path": "usr/share/ucode/luci/template/footer.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/header.ut",
+      "installed_path": "usr/share/ucode/luci/template/header.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/sysauth.ut",
+      "installed_path": "usr/share/ucode/luci/template/sysauth.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/themes/bootstrap/footer.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/bootstrap/footer.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/themes/bootstrap/header.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/bootstrap/header.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/themes/bootstrap/sysauth.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/bootstrap/sysauth.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "installed_path": "usr/share/ucode/luci/template/view.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "www/cgi-bin/luci",
+      "installed_path": "www/cgi-bin/luci",
+      "classification": "plain",
+      "reason": "ucode_shebang",
+      "status": "plain_route_selected"
+    }
+  ]
+}

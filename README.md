@@ -40,6 +40,7 @@ Together these move from source selection through extraction, query, and consume
 | [018](claims/018-pinned-luci-shellquote-candidates.md) | Demonstrated | Seven conservative candidate rows on one pinned LuCI source file |
 | [019](claims/019-pinned-luci-shellquote-slice.md) | Demonstrated | Shell-injection query on eight selected pinned LuCI source files |
 | [020](claims/020-pinned-markup-call-syntax.md) | Demonstrated | Markup AST call syntax on one pinned LuCI file and controls |
+| [021](claims/021-pinned-luci-template-extraction.md) | Demonstrated | Extraction of 11 staged pinned LuCI templates and controls |
 
 Every demonstrated status is limited to the run, inputs, controls and revisions
 in that claim. These rows are not a coverage percentage.

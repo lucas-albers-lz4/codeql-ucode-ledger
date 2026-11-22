@@ -1,0 +1,32 @@
+{
+  "#select": {
+    "columns": [
+      {
+        "name": "d",
+        "kind": "Entity"
+      },
+      {
+        "kind": "String"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "Integer"
+      },
+      {
+        "kind": "String"
+      },
+      {
+        "kind": "String"
+      },
+      {
+        "kind": "String"
+      }
+    ],
+    "tuples": []
+  }
+}

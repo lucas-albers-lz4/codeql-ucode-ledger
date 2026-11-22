@@ -1,0 +1,214 @@
+{
+  "pack_built_at_revision": "8375887ed14825dd59addbfd0df43616d9e684fb",
+  "producer_revision_used": "0a6612fe0e66351a0ccda43ad5b51f5ef5a2724e",
+  "build_reuse_basis": "Parent-run preflight states the prebuilt pack came from disposable work/typed-20261121/producer at the source revision above. Selected producer has zero relevant tracked source/lock diff from that build pin (verified in the selected checkout).",
+  "relevant_source_diff_exit_status": 0,
+  "relevant_diff_paths": [
+    "extractor/src",
+    "extractor-pack",
+    "Cargo.toml",
+    "Cargo.lock",
+    "codeql-extractor.yml",
+    ".codeqlmanifest.json",
+    "ql/src/qlpack.yml",
+    "ql/src/codeql-pack.lock.yml",
+    "ql/lib/qlpack.yml",
+    "ql/lib/codeql-pack.lock.yml"
+  ],
+  "copy_relationship": "Pack directory file manifest digests are compared source-to-destination; no writable artifact is shared.",
+  "source_pack_manifest_digest": "c9810210d12c13d239aa45f507d467b1375be69dd34ad9e350cb5ff4736e5822",
+  "destination_pack_manifest_digest": "c9810210d12c13d239aa45f507d467b1375be69dd34ad9e350cb5ff4736e5822",
+  "pack_file_manifests_equal": true,
+  "source_pack_files": [
+    {
+      "path": "codeql-extractor.yml",
+      "kind": 420,
+      "sha256": "350977db453446af1081fa844e0cbdefb9fc3de7bd51b14e57938063c83b42c4",
+      "size_bytes": 511
+    },
+    {
+      "path": "downgrades/qlpack.yml",
+      "kind": 420,
+      "sha256": "52302981ad5f13e5344cbd3927037b3546939d7ce93b8b450c59a22cbaff15bf",
+      "size_bytes": 96
+    },
+    {
+      "path": "tools/autobuild.cmd",
+      "kind": 420,
+      "sha256": "f93d73fcc4669fab57cfa3391f2f42e19028d2576503a93ca673f23322dd7272",
+      "size_bytes": 120
+    },
+    {
+      "path": "tools/autobuild.sh",
+      "kind": 493,
+      "sha256": "190d821560f9be595a1ba0a10361d3071168f4e7e6db985478fe79ee8fc522d3",
+      "size_bytes": 93
+    },
+    {
+      "path": "tools/export_setblock_detect.py",
+      "kind": 420,
+      "sha256": "a970c5c3350677ada8cfb5a342050f214e6e5eb5678313f01efd38115192ccd6",
+      "size_bytes": 4543
+    },
+    {
+      "path": "tools/index-files.cmd",
+      "kind": 420,
+      "sha256": "1867afda8666ae3871bc534ad1a80c117f68219dadf54e6df022ce17b29f004d",
+      "size_bytes": 626
+    },
+    {
+      "path": "tools/index-files.sh",
+      "kind": 493,
+      "sha256": "1fc6de73c0ea285d944d0e9ab11beec34342808198a5716ce2d51e5c29fd995e",
+      "size_bytes": 381
+    },
+    {
+      "path": "tools/osx64/extractor",
+      "kind": 493,
+      "sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+      "size_bytes": 4486128
+    },
+    {
+      "path": "tools/pre-finalize.cmd",
+      "kind": 420,
+      "sha256": "9142cc3503e20cc507536c6c132be55d98fdd6d2b7bb19e84d5eb651fb7b6903",
+      "size_bytes": 300
+    },
+    {
+      "path": "tools/pre-finalize.sh",
+      "kind": 493,
+      "sha256": "0636921f55488cbf1934543fe8ea113ea240817d15a0cda56e6e16a00743c4b6",
+      "size_bytes": 303
+    },
+    {
+      "path": "tools/qltest.cmd",
+      "kind": 420,
+      "sha256": "6c9e02e6ad51155bf7512d338f1643be7a7388fc417e52c8b71710ce47d749dd",
+      "size_bytes": 293
+    },
+    {
+      "path": "tools/qltest.sh",
+      "kind": 493,
+      "sha256": "ffda5bdd6df90e343e431b801cee093d38aaece142d5c1a519b0b6f41d9e8924",
+      "size_bytes": 518
+    },
+    {
+      "path": "ucode.dbscheme",
+      "kind": 420,
+      "sha256": "a32b8f63d4545439bc632b4afd0d58ad64aa2a634736bcd341fba68b7690ad2b",
+      "size_bytes": 67919
+    },
+    {
+      "path": "ucode.dbscheme.stats",
+      "kind": 420,
+      "sha256": "90d6939a021bb0cb71fd491117d1ecb4c7968fb5a80262ddc44975a75bd97767",
+      "size_bytes": 68
+    }
+  ],
+  "destination_pack_files": [
+    {
+      "path": "codeql-extractor.yml",
+      "kind": 420,
+      "sha256": "350977db453446af1081fa844e0cbdefb9fc3de7bd51b14e57938063c83b42c4",
+      "size_bytes": 511
+    },
+    {
+      "path": "downgrades/qlpack.yml",
+      "kind": 420,
+      "sha256": "52302981ad5f13e5344cbd3927037b3546939d7ce93b8b450c59a22cbaff15bf",
+      "size_bytes": 96
+    },
+    {
+      "path": "tools/autobuild.cmd",
+      "kind": 420,
+      "sha256": "f93d73fcc4669fab57cfa3391f2f42e19028d2576503a93ca673f23322dd7272",
+      "size_bytes": 120
+    },
+    {
+      "path": "tools/autobuild.sh",
+      "kind": 493,
+      "sha256": "190d821560f9be595a1ba0a10361d3071168f4e7e6db985478fe79ee8fc522d3",
+      "size_bytes": 93
+    },
+    {
+      "path": "tools/export_setblock_detect.py",
+      "kind": 420,
+      "sha256": "a970c5c3350677ada8cfb5a342050f214e6e5eb5678313f01efd38115192ccd6",
+      "size_bytes": 4543
+    },
+    {
+      "path": "tools/index-files.cmd",
+      "kind": 420,
+      "sha256": "1867afda8666ae3871bc534ad1a80c117f68219dadf54e6df022ce17b29f004d",
+      "size_bytes": 626
+    },
+    {
+      "path": "tools/index-files.sh",
+      "kind": 493,
+      "sha256": "1fc6de73c0ea285d944d0e9ab11beec34342808198a5716ce2d51e5c29fd995e",
+      "size_bytes": 381
+    },
+    {
+      "path": "tools/osx64/extractor",
+      "kind": 493,
+      "sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+      "size_bytes": 4486128
+    },
+    {
+      "path": "tools/pre-finalize.cmd",
+      "kind": 420,
+      "sha256": "9142cc3503e20cc507536c6c132be55d98fdd6d2b7bb19e84d5eb651fb7b6903",
+      "size_bytes": 300
+    },
+    {
+      "path": "tools/pre-finalize.sh",
+      "kind": 493,
+      "sha256": "0636921f55488cbf1934543fe8ea113ea240817d15a0cda56e6e16a00743c4b6",
+      "size_bytes": 303
+    },
+    {
+      "path": "tools/qltest.cmd",
+      "kind": 420,
+      "sha256": "6c9e02e6ad51155bf7512d338f1643be7a7388fc417e52c8b71710ce47d749dd",
+      "size_bytes": 293
+    },
+    {
+      "path": "tools/qltest.sh",
+      "kind": 493,
+      "sha256": "ffda5bdd6df90e343e431b801cee093d38aaece142d5c1a519b0b6f41d9e8924",
+      "size_bytes": 518
+    },
+    {
+      "path": "ucode.dbscheme",
+      "kind": 420,
+      "sha256": "a32b8f63d4545439bc632b4afd0d58ad64aa2a634736bcd341fba68b7690ad2b",
+      "size_bytes": 67919
+    },
+    {
+      "path": "ucode.dbscheme.stats",
+      "kind": 420,
+      "sha256": "90d6939a021bb0cb71fd491117d1ecb4c7968fb5a80262ddc44975a75bd97767",
+      "size_bytes": 68
+    }
+  ],
+  "relevant_lock_and_source_hashes": {
+    "Cargo.toml": "0baa09c629ef475eb31ec99a5342b222bd8993bdd0b53c539dbe4b92112f71ef",
+    "Cargo.lock": "20678c3cbb29632a9369bdb3c735af9ee63c9443879db38847fbda9813aa0a77",
+    ".codeqlmanifest.json": "59a8b55940864bfabb4f276fc97eead605f063928dc5d4a7c05f435b0c989068",
+    "codeql-extractor.yml": "350977db453446af1081fa844e0cbdefb9fc3de7bd51b14e57938063c83b42c4",
+    "ql/src/qlpack.yml": "043c06ddb4f7562efc1b0ac860c7d17f453cdb38d549a8a9d5ee35c547d79280",
+    "ql/src/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+    "ql/lib/qlpack.yml": "f33e8f2ddd53de4094c4f9c4ff9d04e1e2e42341eaa0e2fd75591b091852d550",
+    "ql/lib/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+    "extractor-pack/codeql-extractor.yml": "350977db453446af1081fa844e0cbdefb9fc3de7bd51b14e57938063c83b42c4",
+    "extractor-pack/ucode.dbscheme": "a32b8f63d4545439bc632b4afd0d58ad64aa2a634736bcd341fba68b7690ad2b"
+  },
+  "codeql_cli_version": "2.27.4 (from finalized database metadata)",
+  "cache_source": "@CACHE_SOURCE@ (typed-20261121 reusable packages)",
+  "cache_destination": "@HOME@/.codeql/packages",
+  "cache_manifest_file_count": 82,
+  "cache_file_hashes_sha256": "88fd30b22c1b13769089f4ab3d66ecb153cfaae9e5ba713efdfb7fd1ea2dcf7c",
+  "all_diagnostics_query_sha256": "3973f9f1e59aa5637d8bc04bb2fece5775ff893cff184cfb35e40a185a36acbe",
+  "finalized_runner_sha256": "e5842450aaaf290b1cbde2bed4574fd32456fa2daec6b3ae48053e38d0ab59fb",
+  "local_execution_by_this_assembly": "none; existing run outputs were read/copied only"
+}

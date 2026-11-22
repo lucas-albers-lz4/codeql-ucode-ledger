@@ -1,6 +1,6 @@
 # Next batch: prioritize bounded evidence leads
 
-The next proposed four-claim sequence is in [planning/wave-next-20261121.md](planning/wave-next-20261121.md). Its go/no-go gates and ordered dependencies take precedence over the older generic batch outline below.
+The [12-wave roadmap](planning/roadmap-12-waves.md) extends the [next four evidence decisions](planning/wave-next-20261121.md). Its ordered gates take precedence over the older generic batch outline below; later waves are conditional, not automatic runs.
 
 The prior producer/consumer handoffs remain in [planning/batch-20261118.md](planning/batch-20261118.md). After the handoff branch merged to `main`, this
 candidate-triage batch refreshed disposable snapshots and completed claims

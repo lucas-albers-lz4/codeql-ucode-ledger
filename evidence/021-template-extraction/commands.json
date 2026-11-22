@@ -1,0 +1,168 @@
+[
+  {
+    "label": "database-init",
+    "argv": [
+      "@CODEQL_EXEC@",
+      "database",
+      "init",
+      "@DB_ROOT@",
+      "--language=ucode",
+      "--search-path=@PRODUCER_ROOT@/extractor-pack",
+      "--source-root=@SOURCE_ROOT@"
+    ],
+    "cwd": "@PRODUCER_ROOT@",
+    "exit_status": 0,
+    "wall_seconds": 0.485033,
+    "stdout": "database-init.stdout",
+    "stderr_and_time": "database-init.stderr-time.txt"
+  },
+  {
+    "label": "index-files",
+    "argv": [
+      "@CODEQL_EXEC@",
+      "database",
+      "index-files",
+      "@DB_ROOT@",
+      "--language=ucode",
+      "--include=**/usr/share/ucode/luci/template/csrftoken.ut",
+      "--include=**/usr/share/ucode/luci/template/error404.ut",
+      "--include=**/usr/share/ucode/luci/template/error500.ut",
+      "--include=**/usr/share/ucode/luci/template/footer.ut",
+      "--include=**/usr/share/ucode/luci/template/header.ut",
+      "--include=**/usr/share/ucode/luci/template/sysauth.ut",
+      "--include=**/usr/share/ucode/luci/template/view.ut",
+      "--include=**/usr/share/ucode/luci/template/admin_status/index.ut",
+      "--include=**/usr/share/ucode/luci/template/themes/bootstrap/header.ut",
+      "--include=**/usr/share/ucode/luci/template/themes/bootstrap/footer.ut",
+      "--include=**/usr/share/ucode/luci/template/themes/bootstrap/sysauth.ut",
+      "--include=**/www/cgi-bin/luci",
+      "--include=**/usr/share/ucode/controls/mixed.ut",
+      "--include=**/usr/share/ucode/controls/plain.uc",
+      "--working-dir=@SOURCE_ROOT@"
+    ],
+    "cwd": "@PRODUCER_ROOT@",
+    "exit_status": 0,
+    "wall_seconds": 0.664828,
+    "stdout": "index-files.stdout",
+    "stderr_and_time": "index-files.stderr-time.txt"
+  },
+  {
+    "label": "database-finalize",
+    "argv": [
+      "@CODEQL_EXEC@",
+      "database",
+      "finalize",
+      "@DB_ROOT@"
+    ],
+    "cwd": "@PRODUCER_ROOT@",
+    "exit_status": 0,
+    "wall_seconds": 1.22419,
+    "stdout": "database-finalize.stdout",
+    "stderr_and_time": "database-finalize.stderr-time.txt"
+  },
+  {
+    "label": "extracted-query",
+    "argv": [
+      "@CODEQL_EXEC@",
+      "query",
+      "run",
+      "@PRODUCER_ROOT@/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+      "--database=@DB_ROOT@",
+      "--search-path=@PRODUCER_ROOT@/extractor-pack:@PRODUCER_ROOT@/ql/lib:@PRODUCER_ROOT@/ql/src",
+      "--output=@OUTPUT_DIR@/extracted.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "@PRODUCER_ROOT@",
+    "exit_status": 0,
+    "wall_seconds": 1.746768,
+    "stdout": "extracted-query.stdout",
+    "stderr_and_time": "extracted-query.stderr-time.txt"
+  },
+  {
+    "label": "extracted-decode",
+    "argv": [
+      "@CODEQL_EXEC@",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--entities=url,string",
+      "@OUTPUT_DIR@/extracted.bqrs"
+    ],
+    "cwd": "@PRODUCER_ROOT@",
+    "exit_status": 0,
+    "wall_seconds": 0.236048,
+    "stdout": "extracted-decode.stdout",
+    "stderr_and_time": "extracted-decode.stderr-time.txt"
+  },
+  {
+    "label": "errors-query",
+    "argv": [
+      "@CODEQL_EXEC@",
+      "query",
+      "run",
+      "@PRODUCER_ROOT@/ql/src/diagnostics/ExtractionErrors.ql",
+      "--database=@DB_ROOT@",
+      "--search-path=@PRODUCER_ROOT@/extractor-pack:@PRODUCER_ROOT@/ql/lib:@PRODUCER_ROOT@/ql/src",
+      "--output=@OUTPUT_DIR@/errors.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "@PRODUCER_ROOT@",
+    "exit_status": 0,
+    "wall_seconds": 2.073711,
+    "stdout": "errors-query.stdout",
+    "stderr_and_time": "errors-query.stderr-time.txt"
+  },
+  {
+    "label": "errors-decode",
+    "argv": [
+      "@CODEQL_EXEC@",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--entities=url,string",
+      "@OUTPUT_DIR@/errors.bqrs"
+    ],
+    "cwd": "@PRODUCER_ROOT@",
+    "exit_status": 0,
+    "wall_seconds": 0.282863,
+    "stdout": "errors-decode.stdout",
+    "stderr_and_time": "errors-decode.stderr-time.txt"
+  },
+  {
+    "label": "all-diagnostics-query",
+    "argv": [
+      "@CODEQL_EXEC@",
+      "query",
+      "run",
+      "@PRODUCER_ROOT@/ql/src/Wave1AllDiagnostics.ql",
+      "--database=@DB_ROOT@",
+      "--search-path=@PRODUCER_ROOT@/extractor-pack:@PRODUCER_ROOT@/ql/lib:@PRODUCER_ROOT@/ql/src",
+      "--output=@OUTPUT_DIR@/all-diagnostics.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "@PRODUCER_ROOT@",
+    "exit_status": 0,
+    "wall_seconds": 2.283119,
+    "stdout": "all-diagnostics-query.stdout",
+    "stderr_and_time": "all-diagnostics-query.stderr-time.txt"
+  },
+  {
+    "label": "all-diagnostics-decode",
+    "argv": [
+      "@CODEQL_EXEC@",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--entities=url,string",
+      "@OUTPUT_DIR@/all-diagnostics.bqrs"
+    ],
+    "cwd": "@PRODUCER_ROOT@",
+    "exit_status": 0,
+    "wall_seconds": 0.252092,
+    "stdout": "all-diagnostics-decode.stdout",
+    "stderr_and_time": "all-diagnostics-decode.stderr-time.txt"
+  }
+]

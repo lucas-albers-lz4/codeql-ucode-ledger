@@ -53,7 +53,9 @@ decisions and controls, not an inventory of all candidate analyses.
 [020](../claims/020-pinned-markup-call-syntax.md) observes a direct call in the
 pinned `uhttpd.uc` markup AST and distinguishes member and plain-tree controls.
 Its routing status remains inconclusive; it does not establish dispatcher
-behavior, target resolution, CFG or data flow.
+behavior, target resolution, CFG or data flow. [021](../claims/021-pinned-luci-template-extraction.md)
+records the selection and diagnostics for 11 pinned upstream `.ut` sources
+staged at expected paths plus controls; its markup routes remain inconclusive.
 
 These paths overlap in the pinned LuCI fixture; they are not a representative
 sample of all OpenWrt software or ucode syntax. The inventory deliberately

@@ -1,0 +1,177 @@
+{
+  "source_root": "source",
+  "expected_input_count": 14,
+  "files": [
+    {
+      "path": "usr/share/ucode/luci/template/csrftoken.ut",
+      "sha256": "a2f223208d9ff2c3e1bfa808f11d74636028b4902973afb5b7f336328f7e2160",
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "control": "corpus",
+      "expected_extraction": "either"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/error404.ut",
+      "sha256": "8fa2306435be3aca3ca59b09adaaa0190292c6cfe2fecda9df4eb3eeac5b8552",
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "control": "corpus",
+      "expected_extraction": "either"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/error500.ut",
+      "sha256": "6c7a519229524d7a34b18c5da97cb8b05f622ee0938fe1a4b2d2516a6adf1887",
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "control": "corpus",
+      "expected_extraction": "either"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/footer.ut",
+      "sha256": "5625f938d625ff406e53434d37aa7643cc09e11f74379887a4ba154021240495",
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "control": "corpus",
+      "expected_extraction": "either"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/header.ut",
+      "sha256": "67132f2d1c1cf743f3e4ce11d660a5a2569b461804a63914061fe956171be6c2",
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "control": "corpus",
+      "expected_extraction": "either"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/sysauth.ut",
+      "sha256": "8c1dcf98cd29410021ed4f5f9dc668f8c70c0227f39f97f60f7205f9d52fa5bb",
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "control": "corpus",
+      "expected_extraction": "either"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/view.ut",
+      "sha256": "785bf7d4cceb5cdd9f113cbede0bde5b69e35b69cc1b51d2e498665d50091d62",
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "control": "corpus",
+      "expected_extraction": "either"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/admin_status/index.ut",
+      "sha256": "652842b1e54f8a2904458ae1f5693ddfc68b97f106d8b8ff48a4d8747d673019",
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "control": "corpus",
+      "expected_extraction": "either"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/themes/bootstrap/header.ut",
+      "sha256": "eca05b1e4d8391e36a08bcd0b3d0135d2addb37b9e574bd7db98d56f4835e0a3",
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "control": "corpus",
+      "expected_extraction": "either"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/themes/bootstrap/footer.ut",
+      "sha256": "b5cb417ca73c02226679ab2412e272dcf6851eee134c521fc316c39a81ecfa4e",
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "control": "corpus",
+      "expected_extraction": "either"
+    },
+    {
+      "path": "usr/share/ucode/luci/template/themes/bootstrap/sysauth.ut",
+      "sha256": "7e4702c063c95734ec3157121dc59802ff51ed2c1b73c405cd9831ddd2e0c337",
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "control": "corpus",
+      "expected_extraction": "either"
+    },
+    {
+      "path": "www/cgi-bin/luci",
+      "sha256": "aced6c9b2e621bb6e1dd1bb7d675925e9325ed901f49b1aabb0696a06942dacb",
+      "route": {
+        "classification": "plain",
+        "reason": "ucode_shebang",
+        "status": "plain_route_selected",
+        "inconclusive_reason": null
+      },
+      "control": "plain_control",
+      "expected_extraction": "success"
+    },
+    {
+      "path": "usr/share/ucode/controls/mixed.ut",
+      "sha256": "0ef793bb3ce8833739fb622aa555464ace8044194e24223acff692627546b3b4",
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "control": "markup_positive",
+      "expected_extraction": "success"
+    },
+    {
+      "path": "usr/share/ucode/controls/plain.uc",
+      "sha256": "dcbeb5added37dff25ceece588d4ef57d4219ae4a2b6996a320c9a51869e132b",
+      "route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected",
+        "inconclusive_reason": null
+      },
+      "control": "plain_control",
+      "expected_extraction": "success"
+    }
+  ],
+  "producer_revision": "0a6612fe0e66351a0ccda43ad5b51f5ef5a2724e",
+  "consumer_revision": "d37adeadaf836ba97049f75087a348165027f7f9",
+  "luci_revision": "b2e0be4b46ec0fd43394c081fa7c50657af14011"
+}
