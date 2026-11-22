@@ -1,0 +1,235 @@
+[
+  {
+    "label": "valid-clone",
+    "cwd": "<RUN_ROOT>/consumer-run",
+    "argv": [
+      "git",
+      "clone",
+      "--quiet",
+      "--no-hardlinks",
+      "--local",
+      "<RUN_ROOT>/consumer",
+      "<RUN_ROOT>/consumer-run/valid"
+    ],
+    "exit": 0,
+    "wall_seconds": 0.079,
+    "time_l": {
+      "real_seconds": 0.07,
+      "user_seconds": 0.01,
+      "system_seconds": 0.05,
+      "max_rss_bytes": 25853952
+    }
+  },
+  {
+    "label": "valid-checkout",
+    "cwd": "<RUN_ROOT>/consumer-run",
+    "argv": [
+      "git",
+      "-C",
+      "<RUN_ROOT>/consumer-run/valid",
+      "checkout",
+      "--detach",
+      "33ff29f9f311fec078be8e2df04261529cba0e65"
+    ],
+    "exit": 0,
+    "wall_seconds": 0.029,
+    "time_l": {
+      "real_seconds": 0.02,
+      "user_seconds": 0.01,
+      "system_seconds": 0.0,
+      "max_rss_bytes": 7176192
+    }
+  },
+  {
+    "label": "import",
+    "cwd": "<RUN_ROOT>/consumer-run/valid",
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "-B",
+      "-m",
+      "policy.setblock_table",
+      "--typed-json",
+      "<RUN_ROOT>/run/typed.json",
+      "--source-root",
+      "<RUN_ROOT>/run/main/src"
+    ],
+    "exit": 0,
+    "wall_seconds": 0.064,
+    "time_l": {
+      "real_seconds": 0.06,
+      "user_seconds": 0.03,
+      "system_seconds": 0.0,
+      "max_rss_bytes": 25067520
+    }
+  },
+  {
+    "label": "reimport",
+    "cwd": "<RUN_ROOT>/consumer-run/valid",
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "-B",
+      "-m",
+      "policy.setblock_table",
+      "--typed-json",
+      "<RUN_ROOT>/run/typed.json",
+      "--source-root",
+      "<RUN_ROOT>/run/main/src"
+    ],
+    "exit": 0,
+    "wall_seconds": 0.046,
+    "time_l": {
+      "real_seconds": 0.04,
+      "user_seconds": 0.03,
+      "system_seconds": 0.0,
+      "max_rss_bytes": 23871488
+    }
+  },
+  {
+    "label": "downgrade",
+    "cwd": "<RUN_ROOT>/consumer-run/valid",
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "-B",
+      "-m",
+      "policy.setblock_table",
+      "--csv",
+      "<RUN_ROOT>/run/main/effects.csv",
+      "--source-root",
+      "<RUN_ROOT>/run/main/src"
+    ],
+    "exit": 1,
+    "wall_seconds": 0.051,
+    "time_l": {
+      "real_seconds": 0.04,
+      "user_seconds": 0.03,
+      "system_seconds": 0.0,
+      "max_rss_bytes": 23969792
+    }
+  },
+  {
+    "label": "invalid-policy-clone",
+    "cwd": "<RUN_ROOT>/consumer-run",
+    "argv": [
+      "git",
+      "clone",
+      "--quiet",
+      "--no-hardlinks",
+      "--local",
+      "<RUN_ROOT>/consumer",
+      "<RUN_ROOT>/consumer-run/invalid-policy"
+    ],
+    "exit": 0,
+    "wall_seconds": 0.072,
+    "time_l": {
+      "real_seconds": 0.06,
+      "user_seconds": 0.01,
+      "system_seconds": 0.04,
+      "max_rss_bytes": 26787840
+    }
+  },
+  {
+    "label": "invalid-policy-checkout",
+    "cwd": "<RUN_ROOT>/consumer-run",
+    "argv": [
+      "git",
+      "-C",
+      "<RUN_ROOT>/consumer-run/invalid-policy",
+      "checkout",
+      "--detach",
+      "33ff29f9f311fec078be8e2df04261529cba0e65"
+    ],
+    "exit": 0,
+    "wall_seconds": 0.029,
+    "time_l": {
+      "real_seconds": 0.02,
+      "user_seconds": 0.01,
+      "system_seconds": 0.0,
+      "max_rss_bytes": 6963200
+    }
+  },
+  {
+    "label": "invalid-policy-import",
+    "cwd": "<RUN_ROOT>/consumer-run/invalid-policy",
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "-B",
+      "-m",
+      "policy.setblock_table",
+      "--typed-json",
+      "<RUN_ROOT>/consumer-run/policy-bearing.json",
+      "--source-root",
+      "<RUN_ROOT>/run/main/src"
+    ],
+    "exit": 1,
+    "wall_seconds": 0.049,
+    "time_l": {
+      "real_seconds": 0.04,
+      "user_seconds": 0.03,
+      "system_seconds": 0.0,
+      "max_rss_bytes": 23183360
+    }
+  },
+  {
+    "label": "invalid-numeric-clone",
+    "cwd": "<RUN_ROOT>/consumer-run",
+    "argv": [
+      "git",
+      "clone",
+      "--quiet",
+      "--no-hardlinks",
+      "--local",
+      "<RUN_ROOT>/consumer",
+      "<RUN_ROOT>/consumer-run/invalid-numeric"
+    ],
+    "exit": 0,
+    "wall_seconds": 0.071,
+    "time_l": {
+      "real_seconds": 0.06,
+      "user_seconds": 0.01,
+      "system_seconds": 0.04,
+      "max_rss_bytes": 27099136
+    }
+  },
+  {
+    "label": "invalid-numeric-checkout",
+    "cwd": "<RUN_ROOT>/consumer-run",
+    "argv": [
+      "git",
+      "-C",
+      "<RUN_ROOT>/consumer-run/invalid-numeric",
+      "checkout",
+      "--detach",
+      "33ff29f9f311fec078be8e2df04261529cba0e65"
+    ],
+    "exit": 0,
+    "wall_seconds": 0.029,
+    "time_l": {
+      "real_seconds": 0.02,
+      "user_seconds": 0.01,
+      "system_seconds": 0.0,
+      "max_rss_bytes": 6750208
+    }
+  },
+  {
+    "label": "invalid-numeric-import",
+    "cwd": "<RUN_ROOT>/consumer-run/invalid-numeric",
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "-B",
+      "-m",
+      "policy.setblock_table",
+      "--typed-json",
+      "<RUN_ROOT>/consumer-run/integral-decimal.json",
+      "--source-root",
+      "<RUN_ROOT>/run/main/src"
+    ],
+    "exit": 1,
+    "wall_seconds": 0.05,
+    "time_l": {
+      "real_seconds": 0.04,
+      "user_seconds": 0.03,
+      "system_seconds": 0.0,
+      "max_rss_bytes": 23445504
+    }
+  }
+]

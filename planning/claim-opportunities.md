@@ -27,7 +27,7 @@ source path, and some are explicitly deferred by their owning issues.
 | 13 | Does `realpath`/`stat` library-call habitation change an observable query result? | Issue #51's current census measured no affected result; do not promote on target counts alone. Reopen only with a discriminating affected case. |
 | 14 | Does exceptional-flow modeling change an observable pinned query result? | Issue #51's audit found no qualifying affected result. A syntax or CFG count is not enough; defer until a decision-relevant case exists. |
 | 15 | What are the exact dispatcher ingress/ACL route semantics for `/cgi-bin/luci` and `admin/ubus/*`? | Explicitly deferred by ucode #58 and OpenWrt #70. Do not infer SID bypass, runtime routing, or BAC from direct-call inventory. |
-| 16 | Which real markup/template sources and sinks are supported, and with what text-node guarantees? | Owned/deferred by ucode #56/#57 and OpenWrt #68/#70. No coverage claim from a green renderer test or an empty query. |
+| 16 | Which real markup/template sources and sinks are supported, and with what text-node guarantees? | AST extraction in ucode #56 has closed; [claim 020](../claims/020-pinned-markup-call-syntax.md) records a narrower pinned `uhttpd.uc` call-syntax observation. CFG/dataflow and OpenWrt integration remain under ucode #57 and OpenWrt #68/#70; no sink, runtime or template coverage follows. |
 | 17 | What selection, successful extraction, errors, exclusions and elapsed time result from a defined larger corpus? | Requires an explicit corpus boundary, independently enumerated expected identities, resources, and serial run plan. No full-corpus time or coverage percentage follows from the small slices already recorded. |
 
 ## Working rule

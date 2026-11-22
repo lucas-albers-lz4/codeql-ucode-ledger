@@ -1,0 +1,6 @@
+"tree","path","kind","name","sl","sc","el","ec"
+"markup","usr/share/ucode/controls/member.ut","MemberExpression","<non-identifier>",1,4,1,24
+"markup","usr/share/ucode/luci/uhttpd.uc","Identifier","dispatch",9,2,9,14
+"markup","usr/share/ucode/luci/uhttpd.uc","Identifier","request",7,12,7,49
+"markup","usr/share/ucode/luci/uhttpd.uc","MemberExpression","<non-identifier>",11,2,11,12
+"plain","usr/share/ucode/controls/plain.uc","Identifier","dispatch",1,1,1,13

@@ -1,0 +1,190 @@
+[
+  {
+    "label": "init",
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "init",
+      "<RUN_ROOT>/output-final/db",
+      "--language=ucode",
+      "--search-path=<RUN_ROOT>/producer/extractor-pack",
+      "--source-root=<RUN_ROOT>/src"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 0.512,
+    "time_l": {
+      "real_seconds": 0.5,
+      "user_seconds": 0.94,
+      "system_seconds": 0.06,
+      "max_rss_bytes": 122732544
+    }
+  },
+  {
+    "label": "index",
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "index-files",
+      "<RUN_ROOT>/output-final/db",
+      "--language=ucode",
+      "--include=**/uhttpd.uc",
+      "--include=**/plain.uc",
+      "--include=**/member.ut",
+      "--working-dir=<RUN_ROOT>/src"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 0.385,
+    "time_l": {
+      "real_seconds": 0.38,
+      "user_seconds": 0.63,
+      "system_seconds": 0.05,
+      "max_rss_bytes": 120815616
+    }
+  },
+  {
+    "label": "finalize",
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "finalize",
+      "<RUN_ROOT>/output-final/db"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 1.013,
+    "time_l": {
+      "real_seconds": 1.01,
+      "user_seconds": 1.99,
+      "system_seconds": 0.16,
+      "max_rss_bytes": 205815808
+    }
+  },
+  {
+    "label": "extracted-query",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN_ROOT>/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+      "--database=<RUN_ROOT>/output-final/db",
+      "--search-path=<RUN_ROOT>/producer/extractor-pack:<RUN_ROOT>/producer/ql/lib:<RUN_ROOT>/producer/ql/src",
+      "--output=<RUN_ROOT>/output-final/extracted.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 1.275,
+    "time_l": {
+      "real_seconds": 1.27,
+      "user_seconds": 2.71,
+      "system_seconds": 0.44,
+      "max_rss_bytes": 194281472
+    }
+  },
+  {
+    "label": "extracted-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "<RUN_ROOT>/output-final/extracted.bqrs"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 0.219,
+    "time_l": {
+      "real_seconds": 0.21,
+      "user_seconds": 0.34,
+      "system_seconds": 0.03,
+      "max_rss_bytes": 87572480
+    }
+  },
+  {
+    "label": "errors-query",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN_ROOT>/producer/ql/src/diagnostics/ExtractionErrors.ql",
+      "--database=<RUN_ROOT>/output-final/db",
+      "--search-path=<RUN_ROOT>/producer/extractor-pack:<RUN_ROOT>/producer/ql/lib:<RUN_ROOT>/producer/ql/src",
+      "--output=<RUN_ROOT>/output-final/errors.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 1.235,
+    "time_l": {
+      "real_seconds": 1.23,
+      "user_seconds": 2.62,
+      "system_seconds": 0.42,
+      "max_rss_bytes": 192495616
+    }
+  },
+  {
+    "label": "errors-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "<RUN_ROOT>/output-final/errors.bqrs"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 0.22,
+    "time_l": {
+      "real_seconds": 0.21,
+      "user_seconds": 0.34,
+      "system_seconds": 0.03,
+      "max_rss_bytes": 86999040
+    }
+  },
+  {
+    "label": "calls-query",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN_ROOT>/producer/ql/src/MarkupCalls.ql",
+      "--database=<RUN_ROOT>/output-final/db",
+      "--search-path=<RUN_ROOT>/producer/extractor-pack:<RUN_ROOT>/producer/ql/lib:<RUN_ROOT>/producer/ql/src",
+      "--output=<RUN_ROOT>/output-final/calls.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 1.318,
+    "time_l": {
+      "real_seconds": 1.31,
+      "user_seconds": 2.86,
+      "system_seconds": 0.48,
+      "max_rss_bytes": 192921600
+    }
+  },
+  {
+    "label": "calls-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "<RUN_ROOT>/output-final/calls.bqrs"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 0.228,
+    "time_l": {
+      "real_seconds": 0.22,
+      "user_seconds": 0.34,
+      "system_seconds": 0.03,
+      "max_rss_bytes": 87080960
+    }
+  }
+]

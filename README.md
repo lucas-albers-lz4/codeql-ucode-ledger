@@ -27,7 +27,7 @@ Together these move from source selection through extraction, query, and consume
 | [005](claims/005-imported-callee-boundary.md) | Partial | Imported-callee observation; no fresh retained-record path identified |
 | [006](claims/006-setlocaltime-construction.md) | Demonstrated | `setLocaltime` source construction and consumer |
 | [007](claims/007-setblock-csv-handoff.md) | Demonstrated | `setBlockDetect` CSV handoff |
-| [008](claims/008-setblock-typed-handoff.md) | Demonstrated | `setBlockDetect` typed handoff |
+| [008](claims/008-setblock-typed-handoff.md) | Demonstrated | `setBlockDetect` typed handoff, refreshed at the 2026-11-21 pair |
 | [009](claims/009-luci-sys-status.md) | Demonstrated | Two LuCI status helper source shapes |
 | [010](claims/010-ubus-call-inventory.md) | Demonstrated | Direct `ubus.call` syntax |
 | [011](claims/011-same-file-jump-local.md) | Demonstrated | Experimental same-file argument-to-parameter flow |
@@ -39,6 +39,7 @@ Together these move from source selection through extraction, query, and consume
 | [017](claims/017-rpcd-login-negation-whitespace.md) | Demonstrated | Consumer login-ACL whitespace parity with pinned rpcd reference |
 | [018](claims/018-pinned-luci-shellquote-candidates.md) | Demonstrated | Seven conservative candidate rows on one pinned LuCI source file |
 | [019](claims/019-pinned-luci-shellquote-slice.md) | Demonstrated | Shell-injection query on eight selected pinned LuCI source files |
+| [020](claims/020-pinned-markup-call-syntax.md) | Demonstrated | Markup AST call syntax on one pinned LuCI file and controls |
 
 Every demonstrated status is limited to the run, inputs, controls and revisions
 in that claim. These rows are not a coverage percentage.

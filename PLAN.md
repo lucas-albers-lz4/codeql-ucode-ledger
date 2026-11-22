@@ -22,6 +22,10 @@ partial until an actual supported fresh query-to-record path is observed. Claim
 8-source selected LuCI slice, but do not run a fresh consumer handoff or
 complete the issue's broader reconciliation criteria.
 
+The requested typed setBlockDetect refresh is recorded in [claim 008](claims/008-setblock-typed-handoff.md#refresh-2026-11-21), at producer `8375887ed14825dd59addbfd0df43616d9e684fb` and consumer `33ff29f9f311fec078be8e2df04261529cba0e65`. It is a bounded fixture handoff, not an expanded real-source slice. Fetch and triage again before choosing another batch.
+
+[Claim 020](claims/020-pinned-markup-call-syntax.md) adds a pinned LuCI `uhttpd.uc` markup AST call inventory with controls. It does not change the consumer's inconclusive routing status or establish dispatcher semantics.
+
 ## Objectives
 
 Broaden the evidence beyond the single LuCI fixture while keeping the batch

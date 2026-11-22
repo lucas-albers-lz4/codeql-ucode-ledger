@@ -1,0 +1,464 @@
+[
+  {
+    "label": "install-lib",
+    "argv": [
+      "<CODEQL>",
+      "pack",
+      "install",
+      "<RUN_ROOT>/producer/ql/lib"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 5.67,
+    "time_l": {
+      "real_seconds": 5.66,
+      "user_seconds": 1.51,
+      "system_seconds": 0.1,
+      "max_rss_bytes": 156876800
+    }
+  },
+  {
+    "label": "install-src",
+    "argv": [
+      "<CODEQL>",
+      "pack",
+      "install",
+      "<RUN_ROOT>/producer/ql/src"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 5.465,
+    "time_l": {
+      "real_seconds": 5.46,
+      "user_seconds": 1.43,
+      "system_seconds": 0.08,
+      "max_rss_bytes": 141393920
+    }
+  },
+  {
+    "label": "main-init",
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "init",
+      "<RUN_ROOT>/run/main/db",
+      "--language=ucode",
+      "--search-path=<RUN_ROOT>/producer/extractor-pack",
+      "--source-root=<RUN_ROOT>/run/main/src"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 0.532,
+    "time_l": {
+      "real_seconds": 0.53,
+      "user_seconds": 0.91,
+      "system_seconds": 0.07,
+      "max_rss_bytes": 121847808
+    }
+  },
+  {
+    "label": "main-index",
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "index-files",
+      "<RUN_ROOT>/run/main/db",
+      "--language=ucode",
+      "--include=**/rpcd/ucode/luci",
+      "--working-dir=<RUN_ROOT>/run/main/src"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 0.634,
+    "time_l": {
+      "real_seconds": 0.63,
+      "user_seconds": 0.67,
+      "system_seconds": 0.06,
+      "max_rss_bytes": 120045568
+    }
+  },
+  {
+    "label": "main-finalize",
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "finalize",
+      "<RUN_ROOT>/run/main/db"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 1.245,
+    "time_l": {
+      "real_seconds": 1.24,
+      "user_seconds": 2.19,
+      "system_seconds": 0.19,
+      "max_rss_bytes": 271745024
+    }
+  },
+  {
+    "label": "main-extracted-query",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN_ROOT>/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+      "--database=<RUN_ROOT>/run/main/db",
+      "--search-path=<RUN_ROOT>/producer/extractor-pack:<RUN_ROOT>/producer/ql/lib:<RUN_ROOT>/producer/ql/src",
+      "--output=<RUN_ROOT>/run/main/extracted.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 1.789,
+    "time_l": {
+      "real_seconds": 1.78,
+      "user_seconds": 4.23,
+      "system_seconds": 0.96,
+      "max_rss_bytes": 325451776
+    }
+  },
+  {
+    "label": "main-extracted-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "<RUN_ROOT>/run/main/extracted.bqrs"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 0.225,
+    "time_l": {
+      "real_seconds": 0.22,
+      "user_seconds": 0.34,
+      "system_seconds": 0.03,
+      "max_rss_bytes": 87474176
+    }
+  },
+  {
+    "label": "main-errors-query",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN_ROOT>/producer/ql/src/diagnostics/ExtractionErrors.ql",
+      "--database=<RUN_ROOT>/run/main/db",
+      "--search-path=<RUN_ROOT>/producer/extractor-pack:<RUN_ROOT>/producer/ql/lib:<RUN_ROOT>/producer/ql/src",
+      "--output=<RUN_ROOT>/run/main/errors.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 1.749,
+    "time_l": {
+      "real_seconds": 1.74,
+      "user_seconds": 4.26,
+      "system_seconds": 0.94,
+      "max_rss_bytes": 327745536
+    }
+  },
+  {
+    "label": "main-errors-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "<RUN_ROOT>/run/main/errors.bqrs"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 0.227,
+    "time_l": {
+      "real_seconds": 0.22,
+      "user_seconds": 0.34,
+      "system_seconds": 0.03,
+      "max_rss_bytes": 87015424
+    }
+  },
+  {
+    "label": "main-effects-query",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN_ROOT>/producer/ql/src/m4/SetBlockDetectEffectTable.ql",
+      "--database=<RUN_ROOT>/run/main/db",
+      "--search-path=<RUN_ROOT>/producer/extractor-pack:<RUN_ROOT>/producer/ql/lib:<RUN_ROOT>/producer/ql/src",
+      "--output=<RUN_ROOT>/run/main/effects.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 2.67,
+    "time_l": {
+      "real_seconds": 2.66,
+      "user_seconds": 8.14,
+      "system_seconds": 1.89,
+      "max_rss_bytes": 411549696
+    }
+  },
+  {
+    "label": "main-effects-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "<RUN_ROOT>/run/main/effects.bqrs"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 0.228,
+    "time_l": {
+      "real_seconds": 0.22,
+      "user_seconds": 0.35,
+      "system_seconds": 0.03,
+      "max_rss_bytes": 86720512
+    }
+  },
+  {
+    "label": "controls-init",
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "init",
+      "<RUN_ROOT>/run/controls/db",
+      "--language=ucode",
+      "--search-path=<RUN_ROOT>/producer/extractor-pack",
+      "--source-root=<RUN_ROOT>/run/controls/src"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 0.486,
+    "time_l": {
+      "real_seconds": 0.48,
+      "user_seconds": 0.92,
+      "system_seconds": 0.07,
+      "max_rss_bytes": 121946112
+    }
+  },
+  {
+    "label": "controls-index",
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "index-files",
+      "<RUN_ROOT>/run/controls/db",
+      "--language=ucode",
+      "--include=**/rpcd/ucode/luci",
+      "--working-dir=<RUN_ROOT>/run/controls/src"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 0.386,
+    "time_l": {
+      "real_seconds": 0.38,
+      "user_seconds": 0.63,
+      "system_seconds": 0.05,
+      "max_rss_bytes": 120258560
+    }
+  },
+  {
+    "label": "controls-finalize",
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "finalize",
+      "<RUN_ROOT>/run/controls/db"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 1.03,
+    "time_l": {
+      "real_seconds": 1.02,
+      "user_seconds": 2.04,
+      "system_seconds": 0.16,
+      "max_rss_bytes": 198737920
+    }
+  },
+  {
+    "label": "controls-extracted-query",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN_ROOT>/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+      "--database=<RUN_ROOT>/run/controls/db",
+      "--search-path=<RUN_ROOT>/producer/extractor-pack:<RUN_ROOT>/producer/ql/lib:<RUN_ROOT>/producer/ql/src",
+      "--output=<RUN_ROOT>/run/controls/extracted.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 1.273,
+    "time_l": {
+      "real_seconds": 1.27,
+      "user_seconds": 2.67,
+      "system_seconds": 0.43,
+      "max_rss_bytes": 193937408
+    }
+  },
+  {
+    "label": "controls-extracted-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "<RUN_ROOT>/run/controls/extracted.bqrs"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 0.224,
+    "time_l": {
+      "real_seconds": 0.22,
+      "user_seconds": 0.34,
+      "system_seconds": 0.02,
+      "max_rss_bytes": 87474176
+    }
+  },
+  {
+    "label": "controls-errors-query",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN_ROOT>/producer/ql/src/diagnostics/ExtractionErrors.ql",
+      "--database=<RUN_ROOT>/run/controls/db",
+      "--search-path=<RUN_ROOT>/producer/extractor-pack:<RUN_ROOT>/producer/ql/lib:<RUN_ROOT>/producer/ql/src",
+      "--output=<RUN_ROOT>/run/controls/errors.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 1.236,
+    "time_l": {
+      "real_seconds": 1.23,
+      "user_seconds": 2.58,
+      "system_seconds": 0.4,
+      "max_rss_bytes": 193888256
+    }
+  },
+  {
+    "label": "controls-errors-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "<RUN_ROOT>/run/controls/errors.bqrs"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 0.226,
+    "time_l": {
+      "real_seconds": 0.22,
+      "user_seconds": 0.34,
+      "system_seconds": 0.03,
+      "max_rss_bytes": 86933504
+    }
+  },
+  {
+    "label": "controls-effects-query",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN_ROOT>/producer/ql/src/m4/SetBlockDetectEffectTable.ql",
+      "--database=<RUN_ROOT>/run/controls/db",
+      "--search-path=<RUN_ROOT>/producer/extractor-pack:<RUN_ROOT>/producer/ql/lib:<RUN_ROOT>/producer/ql/src",
+      "--output=<RUN_ROOT>/run/controls/effects.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 1.388,
+    "time_l": {
+      "real_seconds": 1.38,
+      "user_seconds": 3.09,
+      "system_seconds": 0.55,
+      "max_rss_bytes": 201703424
+    }
+  },
+  {
+    "label": "controls-effects-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "<RUN_ROOT>/run/controls/effects.bqrs"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 0.233,
+    "time_l": {
+      "real_seconds": 0.23,
+      "user_seconds": 0.35,
+      "system_seconds": 0.03,
+      "max_rss_bytes": 87146496
+    }
+  },
+  {
+    "label": "export",
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "-B",
+      "<RUN_ROOT>/producer/tools/export_setblock_detect.py",
+      "--csv",
+      "<RUN_ROOT>/run/main/effects.csv",
+      "--extracted",
+      "<RUN_ROOT>/run/main/extracted.csv",
+      "--errors",
+      "<RUN_ROOT>/run/main/errors.csv",
+      "--source-root",
+      "<RUN_ROOT>/run/main/src",
+      "--lock",
+      "<RUN_ROOT>/consumer/corpus/lock.json"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 0,
+    "wall_seconds": 0.028,
+    "time_l": {
+      "real_seconds": 0.02,
+      "user_seconds": 0.01,
+      "system_seconds": 0.0,
+      "max_rss_bytes": 18104320
+    }
+  },
+  {
+    "label": "export-bad-span",
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "-B",
+      "<RUN_ROOT>/producer/tools/export_setblock_detect.py",
+      "--csv",
+      "<RUN_ROOT>/run/bad-span.csv",
+      "--extracted",
+      "<RUN_ROOT>/run/main/extracted.csv",
+      "--errors",
+      "<RUN_ROOT>/run/main/errors.csv",
+      "--source-root",
+      "<RUN_ROOT>/run/main/src",
+      "--lock",
+      "<RUN_ROOT>/consumer/corpus/lock.json"
+    ],
+    "cwd": "<RUN_ROOT>/producer",
+    "exit": 1,
+    "wall_seconds": 0.026,
+    "time_l": {
+      "real_seconds": 0.02,
+      "user_seconds": 0.01,
+      "system_seconds": 0.0,
+      "max_rss_bytes": 18235392
+    }
+  }
+]

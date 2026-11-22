@@ -1,0 +1,28 @@
+test_all_coordinate_fields_use_the_same_numeric_rule (policy.tests.test_interchange_numeric.InterchangeNumericTests.test_all_coordinate_fields_use_the_same_numeric_rule) ... ok
+test_decimal_number_minimum_and_conditional_validation (policy.tests.test_interchange_numeric.InterchangeNumericTests.test_decimal_number_minimum_and_conditional_validation) ... ok
+test_integral_decimal_source_coordinate_in_apis_and_clis (policy.tests.test_interchange_numeric.InterchangeNumericTests.test_integral_decimal_source_coordinate_in_apis_and_clis) ... ok
+test_raw_numeric_matrix_through_both_apis_and_clis (policy.tests.test_interchange_numeric.InterchangeNumericTests.test_raw_numeric_matrix_through_both_apis_and_clis) ... ok
+test_report_only_line_keeps_exact_integer_token_rule (policy.tests.test_interchange_numeric.InterchangeNumericTests.test_report_only_line_keeps_exact_integer_token_rule) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.964s
+
+OK
+        2.06 real         1.58 user         0.40 sys
+            33751040  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              108100  page reclaims
+                1667  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  67  voluntary context switches
+                3514  involuntary context switches
+          1811348793  instructions retired
+           774940772  cycles elapsed
+            25903800  peak memory footprint

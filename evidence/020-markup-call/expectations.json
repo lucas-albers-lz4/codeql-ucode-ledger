@@ -1,0 +1,18 @@
+{
+  "decision": "Can a syntax-only inventory identify a direct dispatch call in the pinned installed uhttpd source using the markup AST, while distinguishing a member call and a plain-tree call?",
+  "producer": "8375887ed14825dd59addbfd0df43616d9e684fb",
+  "consumer_inventory": "33ff29f9f311fec078be8e2df04261529cba0e65",
+  "luci": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+  "inventory": [
+    {"path": "usr/share/ucode/luci/uhttpd.uc", "source": "modules/luci-base/ucode/uhttpd.uc", "sha256": "a2b2694f52c021af16dd06ac8c988b8a0a726d9e8186d308708268ebb8849493", "expected_route": "markup"},
+    {"path": "usr/share/ucode/controls/member.ut", "source": "synthetic: {{ handler.dispatch(req) }}\\n", "sha256": "e72aa6290ac1bd6e43349dac28ea77164c692258aaaed98ac1682a940a81eee3", "expected_route": "markup"},
+    {"path": "usr/share/ucode/controls/plain.uc", "source": "synthetic: dispatch(req);\\n", "sha256": "580750df3cacb8897201897607e8d267d15dbaf1ddb18ea4776472d9673100c4", "expected_route": "plain"}
+  ],
+  "expected_rows": [
+    ["markup", "usr/share/ucode/luci/uhttpd.uc", "Identifier", "request", 7, 12, 7, 49],
+    ["markup", "usr/share/ucode/luci/uhttpd.uc", "Identifier", "dispatch", 9, 2, 9, 14],
+    ["markup", "usr/share/ucode/luci/uhttpd.uc", "MemberExpression", "<non-identifier>", 11, 2, 11, 12],
+    ["markup", "usr/share/ucode/controls/member.ut", "MemberExpression", "<non-identifier>", 1, 4, 1, 24],
+    ["plain", "usr/share/ucode/controls/plain.uc", "Identifier", "dispatch", 1, 1, 1, 13]
+  ]
+}
