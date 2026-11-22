@@ -26,6 +26,31 @@ Keep work useful alongside active development in both projects.
   output. Do not commit keys, credentials, private data or databases. Link to
   portable evidence rather than claiming another machine can access `work/`.
 
+## Run preflight and verification
+
+- Before launching a run, verify the chosen checkout SHAs and dirty states,
+  source and lock digests, tool executable/version, free resources, and that
+  database, outputs, `HOME`, `TMPDIR` and writable caches are owned by that run.
+  Distinguish pinned upstream source staged at an installed path from actual
+  installed bytes; inspect any build/install transformations first.
+- If a previously built extractor pack and dependencies match the selected
+  source, grammar, toolchain and locks, copy them into the new run and record
+  their build provenance and digests. Check dependency readiness before a
+  network install; use a timed bootstrap when missing or incompatible. Reuse
+  never means sharing a writable database or cache, and an interrupted command
+  is not a pass. Poll a live long-running process before retrying.
+- Prepare and retain the source-derived oracle before inspecting output. At
+  run completion compare source hashes, each routing decision, exact successful
+  file identities, diagnostics and output rows including multiplicity. Record
+  mismatches and phase timings even for failures. A successful command or a
+  matching row count alone does not establish a claim. If distinct AST entities
+  can project to identical rows, select their identities or count entities per
+  tuple; a CSV row count does not establish entity uniqueness.
+- Prefer the small checks in [scripts](scripts/README.md) for portable receipt
+  validation and exact tuple comparison. They do not verify source truth,
+  provenance, execution freshness or semantic correctness. Keep claim-specific
+  expectations and consumer assertions explicit; do not abstract away controls.
+
 ## Claims and evidence
 
 - Start from a specific analysis decision and make the smallest testable claim.

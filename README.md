@@ -58,6 +58,8 @@ A clean extraction does not prove semantic accuracy; a query result does not pro
 
 Clone this repository and create **separate disposable checkouts** of the two projects. Do not use active development checkouts or share writable CodeQL databases between runs. Each run needs its own workspace, database, outputs, and enough disk, memory and CPU. Local run artifacts belong under `work/`, which is ignored by Git; selectively retain small, reviewed evidence separately when useful. Do not commit credentials, raw private data, generated databases or unexplained host paths.
 
+For lightweight receipt and local-link checks, see [the verification scripts](scripts/README.md). They do not authenticate runs or validate claim semantics.
+
 This repository is a documentation and investigation starting point. **It does not yet contain an automated end-to-end runner or CI.** Follow the linked project instructions for the exact selected revisions; inspect scripts before running them. Build and test commands can modify their working directory, invoke network operations and consume substantial resources. Never run an adapter that rewrites reports against an active checkout: use a disposable consumer copy.
 
 ### Reference pair
