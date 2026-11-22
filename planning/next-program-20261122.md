@@ -2,7 +2,8 @@
 
 This is a **plan**, not an instruction to run every query or a promise of 24
 new claims. It scales the last three-claim effort to 24 small work packages
-(eight times as many packages), including decision gates, independent oracles,
+(eight times as many organizational units, not an eightfold execution, cost or
+coverage estimate), including decision gates, independent oracles,
 runs and reviews. A useful package can end with a documented stop rather than a
 claim. Execute in order; if a gate fails, record why and move to the next
 independent eligible package. Reassess after each four packages and when an
@@ -53,7 +54,7 @@ not a fresh v2 producer execution.
 - Check an actual producer output with an actual consumer only when the
   supported interface and a distinct decision exist. Retained inputs,
   snapshots and synthetic records are not fresh handoffs. Never invent an
-  exporter or infer runtime behavior, reachability, taint, authorization or
+  exporter or infer runtime behavior, runtime reachability, taint, authorization or
   vulnerability from syntax, source-model or CFG observations.
 - User direction allows a named upstream analysis need without a downstream
   consumer. Documented intent is the starting policy authority; missing intent
@@ -86,8 +87,8 @@ not a fresh v2 producer execution.
 | 19 | Reconcile current producer/consumer/exporter/adapter changes with the last actual handoffs and v2 input contract. | If no relevant delta or named new decision, skip live rerun. Keep typed, CSV and v2 paths distinct. | Luna maps; Terra verifies. |
 | 20 | If 19 finds a supported changed handoff, run the actual producer and actual consumer with a source-derived identity oracle and rejection control. | Use isolated consumer copy and retain timing and all intermediate actual outputs. Synthetic records or archived tables are not a live handoff. | Terra coordinates; Luna runs; Sol handles ambiguity. |
 | 21 | Review the JS UCI proposal and the upstream hold, and determine what independent source oracle and approval would be required. | Planning only unless the withdrawn execution approval is separately restored; do not treat this program as lifting the hold. | Luna inventories; Sol reviews. |
-| 22 | Only if the hold is explicitly lifted, independently enumerate the full pinned 88-file expected site multiset and review receiver, computed-name and shadow controls. | Re-pin manifest and sources; partial three-anchor oracle is not a completeness oracle. Stop before query output if enumeration is incomplete. | Luna enumerates; Terra verifies; Sol reviews semantics. |
-| 23 | Only if 22 passes, execute the supported JS syntax inventory with fresh extraction and exact entity/multiplicity comparison. | Property access is not invocation, binding, runtime effect or authorization. Do not promote Track A. | Luna runs; Terra verifies. |
+| 22 | Within the authorized planning scope, independently enumerate the full pinned 88-file expected site multiset and review receiver, computed-name and shadow controls. | Re-pin manifest and sources; partial three-anchor oracle is not a completeness oracle. This source-only preparation does not lift the execution hold. | Luna enumerates; Terra verifies; Sol reviews semantics. |
+| 23 | Only if 22 passes and the hold is explicitly lifted, execute the supported JS syntax inventory with fresh extraction and exact entity/multiplicity comparison. | Property access is not invocation, binding, runtime effect or authorization. Do not promote Track A. | Luna runs; Terra verifies. |
 | 24 | Reconcile results, portable receipts, issue ownership and remaining gates; choose the next batch only from a named new decision or relevant delta. | Claim 005 remains partial without its actual fresh supported path; record unexecuted gates explicitly and do not inflate package count into coverage. | Terra coordinates; Sol reviews ambiguous boundaries. |
 
 Carry forward the other deferred decisions: template-argument work needs a
