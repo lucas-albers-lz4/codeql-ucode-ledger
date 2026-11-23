@@ -1,0 +1,28 @@
+Resolving data extensions.
+Finished resolving data extensions.
+Merging data extensions.
+Finished merging data extensions.
+WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.
+Compiling query plan for <RUN>/producer-ql/ql/src/pkg6-ast.ql.
+[1/1 comp 1s] Compiled <RUN>/producer-ql/ql/src/pkg6-ast.ql.
+Starting evaluation of lucas-albers-lz4/ucode-queries/pkg6-ast.ql.
+[1/1 eval 62ms] Evaluation done; writing results to <RUN>/output/ast.bqrs.
+Shutting down query evaluator.
+        2.13 real         6.26 user         0.36 sys
+           425132032  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               42163  page reclaims
+                  95  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                  12  signals received
+                  36  voluntary context switches
+               48702  involuntary context switches
+            40318320  instructions retired
+            16683835  cycles elapsed
+             1999208  peak memory footprint

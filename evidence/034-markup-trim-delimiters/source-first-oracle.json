@@ -1,0 +1,831 @@
+{
+  "base_sha": "11a53fd8e911573860950ee8e549b337a8742438",
+  "grammar_sha": "4a243af329fae2f4ff01e0fc80133cbab8314600",
+  "warning_veto": {
+    "file": "trim-both.ut",
+    "coverage": false,
+    "ast_same": true,
+    "graph_path": [],
+    "warning": [
+      "trim-both.ut",
+      "test_warning",
+      "injected warning"
+    ]
+  },
+  "expectations": {
+    "plain.ut": {
+      "path": "tests/data/markup-cfg/plain.ut",
+      "bytes": "A {{ x }} B",
+      "sha256": "557c70f3707a0f1f22bd06e189c8d303ee99542d2767eb59226ac8010c8220da",
+      "coverage": true,
+      "ast": [
+        [
+          "plain.ut",
+          "Markup",
+          "Markup",
+          "1",
+          "1",
+          "1",
+          "11",
+          "<root>",
+          "-1",
+          "<none>",
+          "1"
+        ],
+        [
+          "plain.ut",
+          "RawText",
+          "A ",
+          "1",
+          "1",
+          "1",
+          "2",
+          "Markup",
+          "0",
+          "<none>",
+          "1"
+        ],
+        [
+          "plain.ut",
+          "ExpressionTag",
+          "ExpressionTag",
+          "1",
+          "3",
+          "1",
+          "9",
+          "Markup",
+          "1",
+          "<none>",
+          "1"
+        ],
+        [
+          "plain.ut",
+          "ExpressionTagOpen",
+          "{{",
+          "1",
+          "3",
+          "1",
+          "4",
+          "ExpressionTag",
+          "0",
+          "open",
+          "1"
+        ],
+        [
+          "plain.ut",
+          "Identifier",
+          "x",
+          "1",
+          "6",
+          "1",
+          "6",
+          "ExpressionTag",
+          "1",
+          "expression",
+          "1"
+        ],
+        [
+          "plain.ut",
+          "ExpressionTagClose",
+          "}}",
+          "1",
+          "8",
+          "1",
+          "9",
+          "ExpressionTag",
+          "2",
+          "close",
+          "1"
+        ],
+        [
+          "plain.ut",
+          "RawText",
+          " B",
+          "1",
+          "10",
+          "1",
+          "11",
+          "Markup",
+          "2",
+          "<none>",
+          "1"
+        ]
+      ],
+      "graph_path": [
+        "entry",
+        "RawText:1:1:1:2:Markup:0",
+        "Identifier:1:6:1:6:ExpressionTag:1",
+        "ExpressionTag:1:3:1:9:Markup:1",
+        "RawText:1:10:1:11:Markup:2",
+        "exit"
+      ],
+      "edge_pairs": [
+        [
+          "entry",
+          "RawText:1:1:1:2:Markup:0"
+        ],
+        [
+          "RawText:1:1:1:2:Markup:0",
+          "Identifier:1:6:1:6:ExpressionTag:1"
+        ],
+        [
+          "Identifier:1:6:1:6:ExpressionTag:1",
+          "ExpressionTag:1:3:1:9:Markup:1"
+        ],
+        [
+          "ExpressionTag:1:3:1:9:Markup:1",
+          "RawText:1:10:1:11:Markup:2"
+        ],
+        [
+          "RawText:1:10:1:11:Markup:2",
+          "exit"
+        ]
+      ],
+      "successful_files": 1,
+      "extraction_errors": 0,
+      "diagnostics": 0
+    },
+    "trim-open.ut": {
+      "path": "tests/data/markup-cfg/trim-open.ut",
+      "bytes": "A {{- x }} B",
+      "sha256": "fbeecce989e50bb9bd205afd29f8e717469dc977e57131f4ffa24378a5833e49",
+      "coverage": true,
+      "ast": [
+        [
+          "trim-open.ut",
+          "Markup",
+          "Markup",
+          "1",
+          "1",
+          "1",
+          "12",
+          "<root>",
+          "-1",
+          "<none>",
+          "1"
+        ],
+        [
+          "trim-open.ut",
+          "RawText",
+          "A ",
+          "1",
+          "1",
+          "1",
+          "2",
+          "Markup",
+          "0",
+          "<none>",
+          "1"
+        ],
+        [
+          "trim-open.ut",
+          "ExpressionTag",
+          "ExpressionTag",
+          "1",
+          "3",
+          "1",
+          "10",
+          "Markup",
+          "1",
+          "<none>",
+          "1"
+        ],
+        [
+          "trim-open.ut",
+          "ExpressionTagTrimOpen",
+          "{{-",
+          "1",
+          "3",
+          "1",
+          "5",
+          "ExpressionTag",
+          "0",
+          "open",
+          "1"
+        ],
+        [
+          "trim-open.ut",
+          "Identifier",
+          "x",
+          "1",
+          "7",
+          "1",
+          "7",
+          "ExpressionTag",
+          "1",
+          "expression",
+          "1"
+        ],
+        [
+          "trim-open.ut",
+          "ExpressionTagClose",
+          "}}",
+          "1",
+          "9",
+          "1",
+          "10",
+          "ExpressionTag",
+          "2",
+          "close",
+          "1"
+        ],
+        [
+          "trim-open.ut",
+          "RawText",
+          " B",
+          "1",
+          "11",
+          "1",
+          "12",
+          "Markup",
+          "2",
+          "<none>",
+          "1"
+        ]
+      ],
+      "graph_path": [
+        "entry",
+        "RawText:1:1:1:2:Markup:0",
+        "Identifier:1:7:1:7:ExpressionTag:1",
+        "ExpressionTag:1:3:1:10:Markup:1",
+        "RawText:1:11:1:12:Markup:2",
+        "exit"
+      ],
+      "edge_pairs": [
+        [
+          "entry",
+          "RawText:1:1:1:2:Markup:0"
+        ],
+        [
+          "RawText:1:1:1:2:Markup:0",
+          "Identifier:1:7:1:7:ExpressionTag:1"
+        ],
+        [
+          "Identifier:1:7:1:7:ExpressionTag:1",
+          "ExpressionTag:1:3:1:10:Markup:1"
+        ],
+        [
+          "ExpressionTag:1:3:1:10:Markup:1",
+          "RawText:1:11:1:12:Markup:2"
+        ],
+        [
+          "RawText:1:11:1:12:Markup:2",
+          "exit"
+        ]
+      ],
+      "successful_files": 1,
+      "extraction_errors": 0,
+      "diagnostics": 0
+    },
+    "trim-close.ut": {
+      "path": "tests/data/markup-cfg/trim-close.ut",
+      "bytes": "A {{ x -}} B",
+      "sha256": "afde724719c5f9bf3204a47b13d9028a3a0bb0ac60008827bf72602551da519a",
+      "coverage": true,
+      "ast": [
+        [
+          "trim-close.ut",
+          "Markup",
+          "Markup",
+          "1",
+          "1",
+          "1",
+          "12",
+          "<root>",
+          "-1",
+          "<none>",
+          "1"
+        ],
+        [
+          "trim-close.ut",
+          "RawText",
+          "A ",
+          "1",
+          "1",
+          "1",
+          "2",
+          "Markup",
+          "0",
+          "<none>",
+          "1"
+        ],
+        [
+          "trim-close.ut",
+          "ExpressionTag",
+          "ExpressionTag",
+          "1",
+          "3",
+          "1",
+          "10",
+          "Markup",
+          "1",
+          "<none>",
+          "1"
+        ],
+        [
+          "trim-close.ut",
+          "ExpressionTagOpen",
+          "{{",
+          "1",
+          "3",
+          "1",
+          "4",
+          "ExpressionTag",
+          "0",
+          "open",
+          "1"
+        ],
+        [
+          "trim-close.ut",
+          "Identifier",
+          "x",
+          "1",
+          "6",
+          "1",
+          "6",
+          "ExpressionTag",
+          "1",
+          "expression",
+          "1"
+        ],
+        [
+          "trim-close.ut",
+          "ExpressionTagTrimClose",
+          "-}}",
+          "1",
+          "8",
+          "1",
+          "10",
+          "ExpressionTag",
+          "2",
+          "close",
+          "1"
+        ],
+        [
+          "trim-close.ut",
+          "RawText",
+          " B",
+          "1",
+          "11",
+          "1",
+          "12",
+          "Markup",
+          "2",
+          "<none>",
+          "1"
+        ]
+      ],
+      "graph_path": [
+        "entry",
+        "RawText:1:1:1:2:Markup:0",
+        "Identifier:1:6:1:6:ExpressionTag:1",
+        "ExpressionTag:1:3:1:10:Markup:1",
+        "RawText:1:11:1:12:Markup:2",
+        "exit"
+      ],
+      "edge_pairs": [
+        [
+          "entry",
+          "RawText:1:1:1:2:Markup:0"
+        ],
+        [
+          "RawText:1:1:1:2:Markup:0",
+          "Identifier:1:6:1:6:ExpressionTag:1"
+        ],
+        [
+          "Identifier:1:6:1:6:ExpressionTag:1",
+          "ExpressionTag:1:3:1:10:Markup:1"
+        ],
+        [
+          "ExpressionTag:1:3:1:10:Markup:1",
+          "RawText:1:11:1:12:Markup:2"
+        ],
+        [
+          "RawText:1:11:1:12:Markup:2",
+          "exit"
+        ]
+      ],
+      "successful_files": 1,
+      "extraction_errors": 0,
+      "diagnostics": 0
+    },
+    "trim-both.ut": {
+      "path": "tests/data/markup-cfg/trim-both.ut",
+      "bytes": "A {{- x -}} B",
+      "sha256": "d897ab97d9025f6eacaa460015d71757746888efacef854955b31e3ac283f03f",
+      "coverage": true,
+      "ast": [
+        [
+          "trim-both.ut",
+          "Markup",
+          "Markup",
+          "1",
+          "1",
+          "1",
+          "13",
+          "<root>",
+          "-1",
+          "<none>",
+          "1"
+        ],
+        [
+          "trim-both.ut",
+          "RawText",
+          "A ",
+          "1",
+          "1",
+          "1",
+          "2",
+          "Markup",
+          "0",
+          "<none>",
+          "1"
+        ],
+        [
+          "trim-both.ut",
+          "ExpressionTag",
+          "ExpressionTag",
+          "1",
+          "3",
+          "1",
+          "11",
+          "Markup",
+          "1",
+          "<none>",
+          "1"
+        ],
+        [
+          "trim-both.ut",
+          "ExpressionTagTrimOpen",
+          "{{-",
+          "1",
+          "3",
+          "1",
+          "5",
+          "ExpressionTag",
+          "0",
+          "open",
+          "1"
+        ],
+        [
+          "trim-both.ut",
+          "Identifier",
+          "x",
+          "1",
+          "7",
+          "1",
+          "7",
+          "ExpressionTag",
+          "1",
+          "expression",
+          "1"
+        ],
+        [
+          "trim-both.ut",
+          "ExpressionTagTrimClose",
+          "-}}",
+          "1",
+          "9",
+          "1",
+          "11",
+          "ExpressionTag",
+          "2",
+          "close",
+          "1"
+        ],
+        [
+          "trim-both.ut",
+          "RawText",
+          " B",
+          "1",
+          "12",
+          "1",
+          "13",
+          "Markup",
+          "2",
+          "<none>",
+          "1"
+        ]
+      ],
+      "graph_path": [
+        "entry",
+        "RawText:1:1:1:2:Markup:0",
+        "Identifier:1:7:1:7:ExpressionTag:1",
+        "ExpressionTag:1:3:1:11:Markup:1",
+        "RawText:1:12:1:13:Markup:2",
+        "exit"
+      ],
+      "edge_pairs": [
+        [
+          "entry",
+          "RawText:1:1:1:2:Markup:0"
+        ],
+        [
+          "RawText:1:1:1:2:Markup:0",
+          "Identifier:1:7:1:7:ExpressionTag:1"
+        ],
+        [
+          "Identifier:1:7:1:7:ExpressionTag:1",
+          "ExpressionTag:1:3:1:11:Markup:1"
+        ],
+        [
+          "ExpressionTag:1:3:1:11:Markup:1",
+          "RawText:1:12:1:13:Markup:2"
+        ],
+        [
+          "RawText:1:12:1:13:Markup:2",
+          "exit"
+        ]
+      ],
+      "successful_files": 1,
+      "extraction_errors": 0,
+      "diagnostics": 0
+    },
+    "ordinary-member.ut": {
+      "path": "tests/data/markup-cfg/ordinary-member.ut",
+      "bytes": "A {{ x.y }} B",
+      "sha256": "52e70b638218d4e928e4bac51ee701cc357443b54faa6d63dcefca56184fb1c4",
+      "coverage": false,
+      "ast": [
+        [
+          "ordinary-member.ut",
+          "Markup",
+          "Markup",
+          "1",
+          "1",
+          "1",
+          "13",
+          "<root>",
+          "-1",
+          "<none>",
+          "1"
+        ],
+        [
+          "ordinary-member.ut",
+          "RawText",
+          "A ",
+          "1",
+          "1",
+          "1",
+          "2",
+          "Markup",
+          "0",
+          "<none>",
+          "1"
+        ],
+        [
+          "ordinary-member.ut",
+          "ExpressionTag",
+          "ExpressionTag",
+          "1",
+          "3",
+          "1",
+          "11",
+          "Markup",
+          "1",
+          "<none>",
+          "1"
+        ],
+        [
+          "ordinary-member.ut",
+          "ExpressionTagOpen",
+          "{{",
+          "1",
+          "3",
+          "1",
+          "4",
+          "ExpressionTag",
+          "0",
+          "open",
+          "1"
+        ],
+        [
+          "ordinary-member.ut",
+          "MemberExpression",
+          "MemberExpression",
+          "1",
+          "6",
+          "1",
+          "8",
+          "ExpressionTag",
+          "1",
+          "expression",
+          "1"
+        ],
+        [
+          "ordinary-member.ut",
+          "ExpressionTagClose",
+          "}}",
+          "1",
+          "10",
+          "1",
+          "11",
+          "ExpressionTag",
+          "2",
+          "close",
+          "1"
+        ],
+        [
+          "ordinary-member.ut",
+          "RawText",
+          " B",
+          "1",
+          "12",
+          "1",
+          "13",
+          "Markup",
+          "2",
+          "<none>",
+          "1"
+        ],
+        [
+          "ordinary-member.ut",
+          "Identifier",
+          "x",
+          "1",
+          "6",
+          "1",
+          "6",
+          "MemberExpression",
+          "0",
+          "object",
+          "1"
+        ],
+        [
+          "ordinary-member.ut",
+          "ReservedWord",
+          ".",
+          "1",
+          "7",
+          "1",
+          "7",
+          "MemberExpression",
+          "1",
+          "<none>",
+          "1"
+        ],
+        [
+          "ordinary-member.ut",
+          "PropertyIdentifier",
+          "y",
+          "1",
+          "8",
+          "1",
+          "8",
+          "MemberExpression",
+          "2",
+          "property",
+          "1"
+        ]
+      ],
+      "graph_path": [],
+      "edge_pairs": [],
+      "successful_files": 1,
+      "extraction_errors": 0,
+      "diagnostics": 0
+    },
+    "trim-member.ut": {
+      "path": "tests/data/markup-cfg/trim-member.ut",
+      "bytes": "A {{- x.y -}} B",
+      "sha256": "2b1650e98fcd52c9e18a10cfe5ad5016031ea4aae0ce412a309f4ef02858005d",
+      "coverage": false,
+      "ast": [
+        [
+          "trim-member.ut",
+          "Markup",
+          "Markup",
+          "1",
+          "1",
+          "1",
+          "15",
+          "<root>",
+          "-1",
+          "<none>",
+          "1"
+        ],
+        [
+          "trim-member.ut",
+          "RawText",
+          "A ",
+          "1",
+          "1",
+          "1",
+          "2",
+          "Markup",
+          "0",
+          "<none>",
+          "1"
+        ],
+        [
+          "trim-member.ut",
+          "ExpressionTag",
+          "ExpressionTag",
+          "1",
+          "3",
+          "1",
+          "13",
+          "Markup",
+          "1",
+          "<none>",
+          "1"
+        ],
+        [
+          "trim-member.ut",
+          "ExpressionTagTrimOpen",
+          "{{-",
+          "1",
+          "3",
+          "1",
+          "5",
+          "ExpressionTag",
+          "0",
+          "open",
+          "1"
+        ],
+        [
+          "trim-member.ut",
+          "MemberExpression",
+          "MemberExpression",
+          "1",
+          "7",
+          "1",
+          "9",
+          "ExpressionTag",
+          "1",
+          "expression",
+          "1"
+        ],
+        [
+          "trim-member.ut",
+          "ExpressionTagTrimClose",
+          "-}}",
+          "1",
+          "11",
+          "1",
+          "13",
+          "ExpressionTag",
+          "2",
+          "close",
+          "1"
+        ],
+        [
+          "trim-member.ut",
+          "RawText",
+          " B",
+          "1",
+          "14",
+          "1",
+          "15",
+          "Markup",
+          "2",
+          "<none>",
+          "1"
+        ],
+        [
+          "trim-member.ut",
+          "Identifier",
+          "x",
+          "1",
+          "7",
+          "1",
+          "7",
+          "MemberExpression",
+          "0",
+          "object",
+          "1"
+        ],
+        [
+          "trim-member.ut",
+          "ReservedWord",
+          ".",
+          "1",
+          "8",
+          "1",
+          "8",
+          "MemberExpression",
+          "1",
+          "<none>",
+          "1"
+        ],
+        [
+          "trim-member.ut",
+          "PropertyIdentifier",
+          "y",
+          "1",
+          "9",
+          "1",
+          "9",
+          "MemberExpression",
+          "2",
+          "property",
+          "1"
+        ]
+      ],
+      "graph_path": [],
+      "edge_pairs": [],
+      "successful_files": 1,
+      "extraction_errors": 0,
+      "diagnostics": 0
+    }
+  }
+}

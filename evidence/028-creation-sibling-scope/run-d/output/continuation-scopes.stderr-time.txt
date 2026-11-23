@@ -1,0 +1,28 @@
+Resolving data extensions.
+Finished resolving data extensions.
+Merging data extensions.
+Finished merging data extensions.
+WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.
+Compiling query plan for <RUN-D>/producer-ql/ql/src/pkg6-fixed-scopes.ql.
+[1/1] Found in cache: <RUN-D>/producer-ql/ql/src/pkg6-fixed-scopes.ql.
+Starting evaluation of lucas-albers-lz4/ucode-queries/pkg6-fixed-scopes.ql.
+[1/1 eval 83ms] Evaluation done; writing results to <RUN-D>/output/continuation-scopes.bqrs.
+Shutting down query evaluator.
+        1.18 real         2.64 user         0.17 sys
+           202915840  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               28072  page reclaims
+                  95  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   8  signals received
+                  36  voluntary context switches
+               19580  involuntary context switches
+            40167287  instructions retired
+            16045778  cycles elapsed
+             1982776  peak memory footprint

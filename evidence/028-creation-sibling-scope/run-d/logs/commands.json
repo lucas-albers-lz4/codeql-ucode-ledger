@@ -1,0 +1,204 @@
+[
+  {
+    "argv": [
+      "<CODEQL>",
+      "version"
+    ],
+    "cwd": "<RUN-D>",
+    "elapsed_seconds": 0.2040716670016991,
+    "exit": 0,
+    "label": "version",
+    "stderr_time": "version.stderr-time.txt",
+    "stdout": "version.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "init",
+      "<RUN-D>/database/db",
+      "--language=ucode",
+      "--search-path=<RUN-D>/pack/ucode-extractor-pack",
+      "--source-root=<RUN-D>/source",
+      "--common-caches=<RUN-D>/common-cache"
+    ],
+    "cwd": "<RUN-D>",
+    "elapsed_seconds": 0.4443480420013657,
+    "exit": 0,
+    "label": "init",
+    "stderr_time": "init.stderr-time.txt",
+    "stdout": "init.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "index-files",
+      "<RUN-D>/database/db",
+      "--language=ucode",
+      "--include=**/siblings.ut",
+      "--include=**/siblings-all-covered.ut",
+      "--working-dir=<RUN-D>/source",
+      "--common-caches=<RUN-D>/common-cache"
+    ],
+    "cwd": "<RUN-D>",
+    "elapsed_seconds": 0.6278166249976493,
+    "exit": 0,
+    "label": "index",
+    "stderr_time": "index.stderr-time.txt",
+    "stdout": "index.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "finalize",
+      "<RUN-D>/database/db",
+      "--common-caches=<RUN-D>/common-cache"
+    ],
+    "cwd": "<RUN-D>",
+    "elapsed_seconds": 1.0842564170015976,
+    "exit": 0,
+    "label": "finalize",
+    "stderr_time": "finalize.stderr-time.txt",
+    "stdout": "finalize.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN-D>/producer-ql/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+      "--database=<RUN-D>/database/db",
+      "--search-path=<RUN-D>/pack/ucode-extractor-pack:<RUN-D>/producer-ql/ql/lib:<RUN-D>/producer-ql/ql/src",
+      "--common-caches=<RUN-D>/common-cache",
+      "--compilation-cache=<RUN-D>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN-D>/output/extracted.bqrs"
+    ],
+    "cwd": "<RUN-D>",
+    "elapsed_seconds": 1.376761916999385,
+    "exit": 0,
+    "label": "extracted",
+    "stderr_time": "extracted.stderr-time.txt",
+    "stdout": "extracted.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--output=<RUN-D>/output/extracted.json",
+      "--entities=url,string",
+      "<RUN-D>/output/extracted.bqrs"
+    ],
+    "cwd": "<RUN-D>",
+    "elapsed_seconds": 0.21268425000016578,
+    "exit": 0,
+    "label": "extracted-decode",
+    "stderr_time": "extracted-decode.stderr-time.txt",
+    "stdout": "extracted-decode.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN-D>/producer-ql/ql/src/diagnostics/ExtractionErrors.ql",
+      "--database=<RUN-D>/database/db",
+      "--search-path=<RUN-D>/pack/ucode-extractor-pack:<RUN-D>/producer-ql/ql/lib:<RUN-D>/producer-ql/ql/src",
+      "--common-caches=<RUN-D>/common-cache",
+      "--compilation-cache=<RUN-D>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN-D>/output/errors.bqrs"
+    ],
+    "cwd": "<RUN-D>",
+    "elapsed_seconds": 1.3842699579981854,
+    "exit": 0,
+    "label": "errors",
+    "stderr_time": "errors.stderr-time.txt",
+    "stdout": "errors.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--output=<RUN-D>/output/errors.json",
+      "--entities=url,string",
+      "<RUN-D>/output/errors.bqrs"
+    ],
+    "cwd": "<RUN-D>",
+    "elapsed_seconds": 0.2126108340016799,
+    "exit": 0,
+    "label": "errors-decode",
+    "stderr_time": "errors-decode.stderr-time.txt",
+    "stdout": "errors-decode.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN-D>/producer-ql/ql/src/pkg6-diagnostics.ql",
+      "--database=<RUN-D>/database/db",
+      "--search-path=<RUN-D>/pack/ucode-extractor-pack:<RUN-D>/producer-ql/ql/lib:<RUN-D>/producer-ql/ql/src",
+      "--common-caches=<RUN-D>/common-cache",
+      "--compilation-cache=<RUN-D>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN-D>/output/diagnostics.bqrs"
+    ],
+    "cwd": "<RUN-D>",
+    "elapsed_seconds": 1.3308256669988623,
+    "exit": 0,
+    "label": "diagnostics",
+    "stderr_time": "diagnostics.stderr-time.txt",
+    "stdout": "diagnostics.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "--output=<RUN-D>/output/diagnostics.csv",
+      "<RUN-D>/output/diagnostics.bqrs"
+    ],
+    "cwd": "<RUN-D>",
+    "elapsed_seconds": 0.2082917500010808,
+    "exit": 0,
+    "label": "diagnostics-decode",
+    "stderr_time": "diagnostics-decode.stderr-time.txt",
+    "stdout": "diagnostics-decode.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN-D>/producer-ql/ql/src/pkg6-roots.ql",
+      "--database=<RUN-D>/database/db",
+      "--search-path=<RUN-D>/pack/ucode-extractor-pack:<RUN-D>/producer-ql/ql/lib:<RUN-D>/producer-ql/ql/src",
+      "--common-caches=<RUN-D>/common-cache",
+      "--compilation-cache=<RUN-D>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN-D>/output/roots.bqrs"
+    ],
+    "cwd": "<RUN-D>",
+    "elapsed_seconds": 1.2728616669992334,
+    "exit": 2,
+    "label": "roots",
+    "stderr_time": "roots.stderr-time.txt",
+    "stdout": "roots.stdout"
+  }
+]

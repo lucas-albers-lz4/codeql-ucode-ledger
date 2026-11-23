@@ -1,0 +1,28 @@
+Resolving data extensions.
+Finished resolving data extensions.
+Merging data extensions.
+Finished merging data extensions.
+WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.
+Compiling query plan for <RUN-D>/producer-ql/ql/src/pkg6-fixed-edges.ql.
+[1/1 comp 1.1s] Compiled <RUN-D>/producer-ql/ql/src/pkg6-fixed-edges.ql.
+Starting evaluation of lucas-albers-lz4/ucode-queries/pkg6-fixed-edges.ql.
+[1/1 eval 85ms] Evaluation done; writing results to <RUN-D>/output/continuation-edges.bqrs.
+Shutting down query evaluator.
+        2.14 real         6.69 user         0.28 sys
+           415072256  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               41025  page reclaims
+                  95  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                  11  signals received
+                  37  voluntary context switches
+               30758  involuntary context switches
+            40214583  instructions retired
+            16266158  cycles elapsed
+             2146616  peak memory footprint

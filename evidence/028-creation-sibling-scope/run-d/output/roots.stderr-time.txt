@@ -1,0 +1,30 @@
+Resolving data extensions.
+Finished resolving data extensions.
+Merging data extensions.
+Finished merging data extensions.
+WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.
+Compiling query plan for <RUN-D>/producer-ql/ql/src/pkg6-roots.ql.
+ERROR: 'c' is not bound to a value. (<RUN-D>/producer-ql/ql/src/pkg6-roots.ql:5,68-69)
+ERROR: 'f' is not bound to a value. (<RUN-D>/producer-ql/ql/src/pkg6-roots.ql:5,58-59)
+ERROR: 'ec' is not bound to a value. (<RUN-D>/producer-ql/ql/src/pkg6-roots.ql:5,47-49)
+ERROR: 'el' is not bound to a value. (<RUN-D>/producer-ql/ql/src/pkg6-roots.ql:5,39-41)
+ERROR: 'sc' is not bound to a value. (<RUN-D>/producer-ql/ql/src/pkg6-roots.ql:5,31-33)
+ERROR: 'sl' is not bound to a value. (<RUN-D>/producer-ql/ql/src/pkg6-roots.ql:5,23-25)
+        1.27 real         3.30 user         0.18 sys
+           292831232  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               33499  page reclaims
+                  95  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   7  signals received
+                  37  voluntary context switches
+               24843  involuntary context switches
+            40067533  instructions retired
+            15821863  cycles elapsed
+             2163000  peak memory footprint

@@ -1,0 +1,2454 @@
+{
+  "status": "Demonstrated for these two exact fixtures and this bounded CFG API result",
+  "producer": {
+    "sha": "6010ff2c0f101f7629c6fe117a421f671c311a2b",
+    "dirty": ""
+  },
+  "path_normalization": {
+    "$REPO": "ledger checkout root (host-local absolute path omitted)",
+    "$PRODUCER": "disposable producer checkout under work/pkg1-codeql-ucode",
+    "$RUN": "ignored run root at work/cfg-trim-oracle/run-20261122-a",
+    "$CODEQL_ROOT": "CodeQL installation root for version 2.27.4 (host-local absolute path omitted)",
+    "raw_paths_note": "Portable CSV/JSON copies normalize machine paths; raw BQRS/database/logs remain ignored under work/."
+  },
+  "tool": {
+    "version": "2.27.4",
+    "executable_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+    "timing_tool": "/usr/bin/time -l"
+  },
+  "source_first_oracle": "source-first-oracle.json",
+  "input_sha256": {
+    "normal.ut": "e52c737297f7dad622da7e58f5a16e7437f2716daccb4da859fc567ccd75c9a4",
+    "trim-open.ut": "f7a85937b2d008130449f9b0672e1961fd831b737d8038fa3ec24db094d88bf8"
+  },
+  "routing": {
+    "input_count": 2,
+    "plain_count": 0,
+    "markup_count": 2,
+    "markup_inconclusive_count": 2,
+    "uncertain_count": 0,
+    "excluded_count": 0,
+    "duplicate_input_count": 0,
+    "decisions": [
+      {
+        "path": "$RUN/source/usr/share/ucode/controls/normal.ut",
+        "installed_path": "usr/share/ucode/controls/normal.ut",
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      {
+        "path": "$RUN/source/usr/share/ucode/controls/trim-open.ut",
+        "installed_path": "usr/share/ucode/controls/trim-open.ut",
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      }
+    ]
+  },
+  "successful_file_rows": [
+    [
+      {
+        "label": "$RUN/source/usr/share/ucode/controls/normal.ut",
+        "url": {
+          "uri": "$RUN/source/usr/share/ucode/controls/normal.ut",
+          "startLine": 0,
+          "startColumn": 0,
+          "endLine": 0,
+          "endColumn": 0
+        }
+      },
+      ""
+    ],
+    [
+      {
+        "label": "$RUN/source/usr/share/ucode/controls/trim-open.ut",
+        "url": {
+          "uri": "$RUN/source/usr/share/ucode/controls/trim-open.ut",
+          "startLine": 0,
+          "startColumn": 0,
+          "endLine": 0,
+          "endColumn": 0
+        }
+      },
+      ""
+    ]
+  ],
+  "extraction_error_rows": [],
+  "diagnostics_data_rows": [],
+  "observed_rows": {
+    "coverage": [
+      [
+        "normal.ut",
+        "1",
+        "1",
+        "1",
+        "7",
+        "covered"
+      ],
+      [
+        "trim-open.ut",
+        "1",
+        "1",
+        "1",
+        "8",
+        "unsupported"
+      ]
+    ],
+    "ast_structural_rows": [
+      [
+        "normal.ut",
+        "Identifier",
+        "x",
+        "1",
+        "4",
+        "1",
+        "4",
+        "ExpressionTag",
+        "1"
+      ],
+      [
+        "normal.ut",
+        "Markup",
+        "Markup",
+        "1",
+        "1",
+        "1",
+        "7",
+        "<root>",
+        "-1"
+      ],
+      [
+        "normal.ut",
+        "ExpressionTagOpen",
+        "{{",
+        "1",
+        "1",
+        "1",
+        "2",
+        "ExpressionTag",
+        "0"
+      ],
+      [
+        "normal.ut",
+        "ExpressionTagClose",
+        "}}",
+        "1",
+        "6",
+        "1",
+        "7",
+        "ExpressionTag",
+        "2"
+      ],
+      [
+        "normal.ut",
+        "ExpressionTag",
+        "ExpressionTag",
+        "1",
+        "1",
+        "1",
+        "7",
+        "Markup",
+        "0"
+      ],
+      [
+        "trim-open.ut",
+        "Identifier",
+        "x",
+        "1",
+        "5",
+        "1",
+        "5",
+        "ExpressionTag",
+        "1"
+      ],
+      [
+        "trim-open.ut",
+        "Markup",
+        "Markup",
+        "1",
+        "1",
+        "1",
+        "8",
+        "<root>",
+        "-1"
+      ],
+      [
+        "trim-open.ut",
+        "ExpressionTagClose",
+        "}}",
+        "1",
+        "7",
+        "1",
+        "8",
+        "ExpressionTag",
+        "2"
+      ],
+      [
+        "trim-open.ut",
+        "ExpressionTagTrimOpen",
+        "{{-",
+        "1",
+        "1",
+        "1",
+        "3",
+        "ExpressionTag",
+        "0"
+      ],
+      [
+        "trim-open.ut",
+        "ExpressionTag",
+        "ExpressionTag",
+        "1",
+        "1",
+        "1",
+        "8",
+        "Markup",
+        "0"
+      ]
+    ],
+    "tag_open_child_close": [
+      [
+        "normal.ut",
+        "1",
+        "1",
+        "1",
+        "7",
+        "ExpressionTagOpen",
+        "1",
+        "2",
+        "Identifier",
+        "x",
+        "4",
+        "4",
+        "ExpressionTagClose",
+        "6",
+        "7"
+      ],
+      [
+        "trim-open.ut",
+        "1",
+        "1",
+        "1",
+        "8",
+        "ExpressionTagTrimOpen",
+        "1",
+        "3",
+        "Identifier",
+        "x",
+        "5",
+        "5",
+        "ExpressionTagClose",
+        "7",
+        "8"
+      ]
+    ],
+    "graph_nodes": [
+      [
+        "normal.ut",
+        "exit",
+        "exit"
+      ],
+      [
+        "normal.ut",
+        "entry",
+        "entry"
+      ],
+      [
+        "normal.ut",
+        "identifier",
+        "Identifier:1:4:1:4:ExpressionTag:1"
+      ],
+      [
+        "normal.ut",
+        "tag-completion",
+        "ExpressionTag:1:1:1:7:Markup:0"
+      ]
+    ],
+    "graph_edges": [
+      [
+        "normal.ut",
+        "entry",
+        "Identifier:1:4:1:4:ExpressionTag:1"
+      ],
+      [
+        "normal.ut",
+        "ExpressionTag:1:1:1:7:Markup:0",
+        "exit"
+      ],
+      [
+        "normal.ut",
+        "Identifier:1:4:1:4:ExpressionTag:1",
+        "ExpressionTag:1:1:1:7:Markup:0"
+      ]
+    ],
+    "AST_entity_counts": [
+      [
+        "normal.ut",
+        "Identifier",
+        "x",
+        "1",
+        "4",
+        "1",
+        "4",
+        "ExpressionTag",
+        "1",
+        "1"
+      ],
+      [
+        "normal.ut",
+        "Markup",
+        "Markup",
+        "1",
+        "1",
+        "1",
+        "7",
+        "<root>",
+        "-1",
+        "1"
+      ],
+      [
+        "normal.ut",
+        "ExpressionTagOpen",
+        "{{",
+        "1",
+        "1",
+        "1",
+        "2",
+        "ExpressionTag",
+        "0",
+        "1"
+      ],
+      [
+        "normal.ut",
+        "ExpressionTagClose",
+        "}}",
+        "1",
+        "6",
+        "1",
+        "7",
+        "ExpressionTag",
+        "2",
+        "1"
+      ],
+      [
+        "normal.ut",
+        "ExpressionTag",
+        "ExpressionTag",
+        "1",
+        "1",
+        "1",
+        "7",
+        "Markup",
+        "0",
+        "1"
+      ],
+      [
+        "trim-open.ut",
+        "Identifier",
+        "x",
+        "1",
+        "5",
+        "1",
+        "5",
+        "ExpressionTag",
+        "1",
+        "1"
+      ],
+      [
+        "trim-open.ut",
+        "Markup",
+        "Markup",
+        "1",
+        "1",
+        "1",
+        "8",
+        "<root>",
+        "-1",
+        "1"
+      ],
+      [
+        "trim-open.ut",
+        "ExpressionTagClose",
+        "}}",
+        "1",
+        "7",
+        "1",
+        "8",
+        "ExpressionTag",
+        "2",
+        "1"
+      ],
+      [
+        "trim-open.ut",
+        "ExpressionTagTrimOpen",
+        "{{-",
+        "1",
+        "1",
+        "1",
+        "3",
+        "ExpressionTag",
+        "0",
+        "1"
+      ],
+      [
+        "trim-open.ut",
+        "ExpressionTag",
+        "ExpressionTag",
+        "1",
+        "1",
+        "1",
+        "8",
+        "Markup",
+        "0",
+        "1"
+      ]
+    ],
+    "node_entity_counts": [
+      [
+        "normal.ut",
+        "exit",
+        "exit",
+        "1"
+      ],
+      [
+        "normal.ut",
+        "entry",
+        "entry",
+        "1"
+      ],
+      [
+        "normal.ut",
+        "identifier",
+        "Identifier:1:4:1:4:ExpressionTag:1",
+        "1"
+      ],
+      [
+        "normal.ut",
+        "tag-completion",
+        "ExpressionTag:1:1:1:7:Markup:0",
+        "1"
+      ]
+    ],
+    "edge_pair_counts": [
+      [
+        "normal.ut",
+        "entry",
+        "Identifier:1:4:1:4:ExpressionTag:1",
+        "1"
+      ],
+      [
+        "normal.ut",
+        "ExpressionTag:1:1:1:7:Markup:0",
+        "exit",
+        "1"
+      ],
+      [
+        "normal.ut",
+        "Identifier:1:4:1:4:ExpressionTag:1",
+        "ExpressionTag:1:1:1:7:Markup:0",
+        "1"
+      ]
+    ]
+  },
+  "assertions": [
+    {
+      "label": "coverage",
+      "pass": true,
+      "actual_count": 2,
+      "expected_count": 2,
+      "actual": [
+        [
+          "normal.ut",
+          "1",
+          "1",
+          "1",
+          "7",
+          "covered"
+        ],
+        [
+          "trim-open.ut",
+          "1",
+          "1",
+          "1",
+          "8",
+          "unsupported"
+        ]
+      ],
+      "expected": [
+        [
+          "normal.ut",
+          "1",
+          "1",
+          "1",
+          "7",
+          "covered"
+        ],
+        [
+          "trim-open.ut",
+          "1",
+          "1",
+          "1",
+          "8",
+          "unsupported"
+        ]
+      ]
+    },
+    {
+      "label": "ast-identities",
+      "pass": true,
+      "actual_count": 10,
+      "expected_count": 10,
+      "actual": [
+        [
+          "normal.ut",
+          "Identifier",
+          "x",
+          "1",
+          "4",
+          "1",
+          "4",
+          "ExpressionTag",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "Markup",
+          "Markup",
+          "1",
+          "1",
+          "1",
+          "7",
+          "<root>",
+          "-1"
+        ],
+        [
+          "normal.ut",
+          "ExpressionTagOpen",
+          "{{",
+          "1",
+          "1",
+          "1",
+          "2",
+          "ExpressionTag",
+          "0"
+        ],
+        [
+          "normal.ut",
+          "ExpressionTagClose",
+          "}}",
+          "1",
+          "6",
+          "1",
+          "7",
+          "ExpressionTag",
+          "2"
+        ],
+        [
+          "normal.ut",
+          "ExpressionTag",
+          "ExpressionTag",
+          "1",
+          "1",
+          "1",
+          "7",
+          "Markup",
+          "0"
+        ],
+        [
+          "trim-open.ut",
+          "Identifier",
+          "x",
+          "1",
+          "5",
+          "1",
+          "5",
+          "ExpressionTag",
+          "1"
+        ],
+        [
+          "trim-open.ut",
+          "Markup",
+          "Markup",
+          "1",
+          "1",
+          "1",
+          "8",
+          "<root>",
+          "-1"
+        ],
+        [
+          "trim-open.ut",
+          "ExpressionTagClose",
+          "}}",
+          "1",
+          "7",
+          "1",
+          "8",
+          "ExpressionTag",
+          "2"
+        ],
+        [
+          "trim-open.ut",
+          "ExpressionTagTrimOpen",
+          "{{-",
+          "1",
+          "1",
+          "1",
+          "3",
+          "ExpressionTag",
+          "0"
+        ],
+        [
+          "trim-open.ut",
+          "ExpressionTag",
+          "ExpressionTag",
+          "1",
+          "1",
+          "1",
+          "8",
+          "Markup",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "normal.ut",
+          "Markup",
+          "Markup",
+          "1",
+          "1",
+          "1",
+          "7",
+          "<root>",
+          "-1"
+        ],
+        [
+          "normal.ut",
+          "ExpressionTag",
+          "ExpressionTag",
+          "1",
+          "1",
+          "1",
+          "7",
+          "Markup",
+          "0"
+        ],
+        [
+          "normal.ut",
+          "ExpressionTagOpen",
+          "{{",
+          "1",
+          "1",
+          "1",
+          "2",
+          "ExpressionTag",
+          "0"
+        ],
+        [
+          "normal.ut",
+          "Identifier",
+          "x",
+          "1",
+          "4",
+          "1",
+          "4",
+          "ExpressionTag",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "ExpressionTagClose",
+          "}}",
+          "1",
+          "6",
+          "1",
+          "7",
+          "ExpressionTag",
+          "2"
+        ],
+        [
+          "trim-open.ut",
+          "Markup",
+          "Markup",
+          "1",
+          "1",
+          "1",
+          "8",
+          "<root>",
+          "-1"
+        ],
+        [
+          "trim-open.ut",
+          "ExpressionTag",
+          "ExpressionTag",
+          "1",
+          "1",
+          "1",
+          "8",
+          "Markup",
+          "0"
+        ],
+        [
+          "trim-open.ut",
+          "ExpressionTagTrimOpen",
+          "{{-",
+          "1",
+          "1",
+          "1",
+          "3",
+          "ExpressionTag",
+          "0"
+        ],
+        [
+          "trim-open.ut",
+          "Identifier",
+          "x",
+          "1",
+          "5",
+          "1",
+          "5",
+          "ExpressionTag",
+          "1"
+        ],
+        [
+          "trim-open.ut",
+          "ExpressionTagClose",
+          "}}",
+          "1",
+          "7",
+          "1",
+          "8",
+          "ExpressionTag",
+          "2"
+        ]
+      ]
+    },
+    {
+      "label": "tag-open-child-close",
+      "pass": true,
+      "actual_count": 2,
+      "expected_count": 2,
+      "actual": [
+        [
+          "normal.ut",
+          "1",
+          "1",
+          "1",
+          "7",
+          "ExpressionTagOpen",
+          "1",
+          "2",
+          "Identifier",
+          "x",
+          "4",
+          "4",
+          "ExpressionTagClose",
+          "6",
+          "7"
+        ],
+        [
+          "trim-open.ut",
+          "1",
+          "1",
+          "1",
+          "8",
+          "ExpressionTagTrimOpen",
+          "1",
+          "3",
+          "Identifier",
+          "x",
+          "5",
+          "5",
+          "ExpressionTagClose",
+          "7",
+          "8"
+        ]
+      ],
+      "expected": [
+        [
+          "normal.ut",
+          "1",
+          "1",
+          "1",
+          "7",
+          "ExpressionTagOpen",
+          "1",
+          "2",
+          "Identifier",
+          "x",
+          "4",
+          "4",
+          "ExpressionTagClose",
+          "6",
+          "7"
+        ],
+        [
+          "trim-open.ut",
+          "1",
+          "1",
+          "1",
+          "8",
+          "ExpressionTagTrimOpen",
+          "1",
+          "3",
+          "Identifier",
+          "x",
+          "5",
+          "5",
+          "ExpressionTagClose",
+          "7",
+          "8"
+        ]
+      ]
+    },
+    {
+      "label": "full-node-multiset",
+      "pass": true,
+      "actual_count": 4,
+      "expected_count": 4,
+      "actual": [
+        [
+          "normal.ut",
+          "exit",
+          "exit"
+        ],
+        [
+          "normal.ut",
+          "entry",
+          "entry"
+        ],
+        [
+          "normal.ut",
+          "identifier",
+          "Identifier:1:4:1:4:ExpressionTag:1"
+        ],
+        [
+          "normal.ut",
+          "tag-completion",
+          "ExpressionTag:1:1:1:7:Markup:0"
+        ]
+      ],
+      "expected": [
+        [
+          "normal.ut",
+          "entry",
+          "entry"
+        ],
+        [
+          "normal.ut",
+          "identifier",
+          "Identifier:1:4:1:4:ExpressionTag:1"
+        ],
+        [
+          "normal.ut",
+          "tag-completion",
+          "ExpressionTag:1:1:1:7:Markup:0"
+        ],
+        [
+          "normal.ut",
+          "exit",
+          "exit"
+        ]
+      ]
+    },
+    {
+      "label": "full-edge-multiset",
+      "pass": true,
+      "actual_count": 3,
+      "expected_count": 3,
+      "actual": [
+        [
+          "normal.ut",
+          "entry",
+          "Identifier:1:4:1:4:ExpressionTag:1"
+        ],
+        [
+          "normal.ut",
+          "ExpressionTag:1:1:1:7:Markup:0",
+          "exit"
+        ],
+        [
+          "normal.ut",
+          "Identifier:1:4:1:4:ExpressionTag:1",
+          "ExpressionTag:1:1:1:7:Markup:0"
+        ]
+      ],
+      "expected": [
+        [
+          "normal.ut",
+          "entry",
+          "Identifier:1:4:1:4:ExpressionTag:1"
+        ],
+        [
+          "normal.ut",
+          "Identifier:1:4:1:4:ExpressionTag:1",
+          "ExpressionTag:1:1:1:7:Markup:0"
+        ],
+        [
+          "normal.ut",
+          "ExpressionTag:1:1:1:7:Markup:0",
+          "exit"
+        ]
+      ]
+    },
+    {
+      "label": "zero-extraction-errors",
+      "pass": true,
+      "actual_count": 0,
+      "expected_count": 0,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "label": "zero-diagnostics",
+      "pass": true,
+      "actual_count": 0,
+      "expected_count": 0,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "label": "entity-counts-ast",
+      "pass": true,
+      "actual_count": 10,
+      "expected_count": 10,
+      "actual": [
+        [
+          "normal.ut",
+          "Identifier",
+          "x",
+          "1",
+          "4",
+          "1",
+          "4",
+          "ExpressionTag",
+          "1",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "Markup",
+          "Markup",
+          "1",
+          "1",
+          "1",
+          "7",
+          "<root>",
+          "-1",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "ExpressionTagOpen",
+          "{{",
+          "1",
+          "1",
+          "1",
+          "2",
+          "ExpressionTag",
+          "0",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "ExpressionTagClose",
+          "}}",
+          "1",
+          "6",
+          "1",
+          "7",
+          "ExpressionTag",
+          "2",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "ExpressionTag",
+          "ExpressionTag",
+          "1",
+          "1",
+          "1",
+          "7",
+          "Markup",
+          "0",
+          "1"
+        ],
+        [
+          "trim-open.ut",
+          "Identifier",
+          "x",
+          "1",
+          "5",
+          "1",
+          "5",
+          "ExpressionTag",
+          "1",
+          "1"
+        ],
+        [
+          "trim-open.ut",
+          "Markup",
+          "Markup",
+          "1",
+          "1",
+          "1",
+          "8",
+          "<root>",
+          "-1",
+          "1"
+        ],
+        [
+          "trim-open.ut",
+          "ExpressionTagClose",
+          "}}",
+          "1",
+          "7",
+          "1",
+          "8",
+          "ExpressionTag",
+          "2",
+          "1"
+        ],
+        [
+          "trim-open.ut",
+          "ExpressionTagTrimOpen",
+          "{{-",
+          "1",
+          "1",
+          "1",
+          "3",
+          "ExpressionTag",
+          "0",
+          "1"
+        ],
+        [
+          "trim-open.ut",
+          "ExpressionTag",
+          "ExpressionTag",
+          "1",
+          "1",
+          "1",
+          "8",
+          "Markup",
+          "0",
+          "1"
+        ]
+      ],
+      "expected": [
+        [
+          "normal.ut",
+          "Markup",
+          "Markup",
+          "1",
+          "1",
+          "1",
+          "7",
+          "<root>",
+          "-1",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "ExpressionTag",
+          "ExpressionTag",
+          "1",
+          "1",
+          "1",
+          "7",
+          "Markup",
+          "0",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "ExpressionTagOpen",
+          "{{",
+          "1",
+          "1",
+          "1",
+          "2",
+          "ExpressionTag",
+          "0",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "Identifier",
+          "x",
+          "1",
+          "4",
+          "1",
+          "4",
+          "ExpressionTag",
+          "1",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "ExpressionTagClose",
+          "}}",
+          "1",
+          "6",
+          "1",
+          "7",
+          "ExpressionTag",
+          "2",
+          "1"
+        ],
+        [
+          "trim-open.ut",
+          "Markup",
+          "Markup",
+          "1",
+          "1",
+          "1",
+          "8",
+          "<root>",
+          "-1",
+          "1"
+        ],
+        [
+          "trim-open.ut",
+          "ExpressionTag",
+          "ExpressionTag",
+          "1",
+          "1",
+          "1",
+          "8",
+          "Markup",
+          "0",
+          "1"
+        ],
+        [
+          "trim-open.ut",
+          "ExpressionTagTrimOpen",
+          "{{-",
+          "1",
+          "1",
+          "1",
+          "3",
+          "ExpressionTag",
+          "0",
+          "1"
+        ],
+        [
+          "trim-open.ut",
+          "Identifier",
+          "x",
+          "1",
+          "5",
+          "1",
+          "5",
+          "ExpressionTag",
+          "1",
+          "1"
+        ],
+        [
+          "trim-open.ut",
+          "ExpressionTagClose",
+          "}}",
+          "1",
+          "7",
+          "1",
+          "8",
+          "ExpressionTag",
+          "2",
+          "1"
+        ]
+      ]
+    },
+    {
+      "label": "entity-counts-nodes",
+      "pass": true,
+      "actual_count": 4,
+      "expected_count": 4,
+      "actual": [
+        [
+          "normal.ut",
+          "exit",
+          "exit",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "entry",
+          "entry",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "identifier",
+          "Identifier:1:4:1:4:ExpressionTag:1",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "tag-completion",
+          "ExpressionTag:1:1:1:7:Markup:0",
+          "1"
+        ]
+      ],
+      "expected": [
+        [
+          "normal.ut",
+          "entry",
+          "entry",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "identifier",
+          "Identifier:1:4:1:4:ExpressionTag:1",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "tag-completion",
+          "ExpressionTag:1:1:1:7:Markup:0",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "exit",
+          "exit",
+          "1"
+        ]
+      ]
+    },
+    {
+      "label": "entity-counts-edges",
+      "pass": true,
+      "actual_count": 3,
+      "expected_count": 3,
+      "actual": [
+        [
+          "normal.ut",
+          "entry",
+          "Identifier:1:4:1:4:ExpressionTag:1",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "ExpressionTag:1:1:1:7:Markup:0",
+          "exit",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "Identifier:1:4:1:4:ExpressionTag:1",
+          "ExpressionTag:1:1:1:7:Markup:0",
+          "1"
+        ]
+      ],
+      "expected": [
+        [
+          "normal.ut",
+          "entry",
+          "Identifier:1:4:1:4:ExpressionTag:1",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "Identifier:1:4:1:4:ExpressionTag:1",
+          "ExpressionTag:1:1:1:7:Markup:0",
+          "1"
+        ],
+        [
+          "normal.ut",
+          "ExpressionTag:1:1:1:7:Markup:0",
+          "exit",
+          "1"
+        ]
+      ]
+    }
+  ],
+  "timing_phases_seconds": {
+    "database_init_seconds": 0.913037,
+    "index_extraction_seconds": 1.540659,
+    "database_finalize_seconds": 3.403219,
+    "successful_query_run_seconds": 25.582909,
+    "successful_bqrs_decode_seconds": 2.778731,
+    "failed_diagnostics_queries_seconds": 1.971364,
+    "timer": "/usr/bin/time -l and Python time.monotonic"
+  },
+  "commands": [
+    {
+      "label": "codeql-version",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "version"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 0.242021,
+      "max_rss_bytes": 86966272
+    },
+    {
+      "label": "database-init",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "init",
+        "$RUN/database/db",
+        "--language=ucode",
+        "--search-path=$RUN/pack/ucode-extractor-pack",
+        "--common-caches=$RUN/common-cache",
+        "--source-root=$RUN/source"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 0.913037,
+      "max_rss_bytes": 124010496
+    },
+    {
+      "label": "index-files",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "index-files",
+        "$RUN/database/db",
+        "--language=ucode",
+        "--include=**/normal.ut",
+        "--include=**/trim-open.ut",
+        "--working-dir=$RUN/source",
+        "--common-caches=$RUN/common-cache"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 1.540659,
+      "max_rss_bytes": 122994688
+    },
+    {
+      "label": "database-finalize",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "finalize",
+        "$RUN/database/db",
+        "--common-caches=$RUN/common-cache"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 3.403219,
+      "max_rss_bytes": 190791680
+    },
+    {
+      "label": "successfully-extracted-files",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$PRODUCER/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/database/db",
+        "--search-path=$RUN/pack/ucode-extractor-pack:$PRODUCER/ql/lib:$PRODUCER/ql/src",
+        "--common-caches=$RUN/common-cache",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/output/successfully-extracted-files.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 5.423015,
+      "max_rss_bytes": 276332544
+    },
+    {
+      "label": "successfully-extracted-files-decode",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--output=$RUN/output/successfully-extracted-files.json",
+        "--entities=url,string",
+        "$RUN/output/successfully-extracted-files.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 0.634005,
+      "max_rss_bytes": 93110272
+    },
+    {
+      "label": "extraction-errors",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$PRODUCER/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/database/db",
+        "--search-path=$RUN/pack/ucode-extractor-pack:$PRODUCER/ql/lib:$PRODUCER/ql/src",
+        "--common-caches=$RUN/common-cache",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/output/extraction-errors.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 2.514848,
+      "max_rss_bytes": 272318464
+    },
+    {
+      "label": "extraction-errors-decode",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--output=$RUN/output/extraction-errors.json",
+        "--entities=url,string",
+        "$RUN/output/extraction-errors.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 0.251871,
+      "max_rss_bytes": 91586560
+    },
+    {
+      "label": "all-diagnostics",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/queries/diagnostics.ql",
+        "--database=$RUN/database/db",
+        "--search-path=$RUN/pack/ucode-extractor-pack:$PRODUCER/ql/lib:$PRODUCER/ql/src",
+        "--common-caches=$RUN/common-cache",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/output/all-diagnostics.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 2,
+      "wall_seconds": 0.262255,
+      "max_rss_bytes": 95256576
+    },
+    {
+      "label": "all-diagnostics-corrected",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/queries/diagnostics.ql",
+        "--database=$RUN/database/db",
+        "--search-path=$RUN/pack/ucode-extractor-pack:$PRODUCER/ql/lib:$PRODUCER/ql/src",
+        "--common-caches=$RUN/common-cache",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/output/all-diagnostics-corrected.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 2,
+      "wall_seconds": 0.924434,
+      "max_rss_bytes": 186875904
+    },
+    {
+      "label": "all-diagnostics-pack-context",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer-ql/ql/src/pkg4-diagnostics.ql",
+        "--database=$RUN/database/db",
+        "--search-path=$RUN/pack/ucode-extractor-pack:$RUN/producer-ql/ql/lib:$RUN/producer-ql/ql/src",
+        "--common-caches=$RUN/common-cache",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/output/all-diagnostics-pack-context.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 2,
+      "wall_seconds": 0.784675,
+      "max_rss_bytes": 137510912
+    },
+    {
+      "label": "all-diagnostics-pack-context",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer-ql/ql/src/pkg4-diagnostics.ql",
+        "--database=$RUN/database/db",
+        "--search-path=$RUN/pack/ucode-extractor-pack:$RUN/producer-ql/ql/lib:$RUN/producer-ql/ql/src",
+        "--common-caches=$RUN/common-cache",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/output/all-diagnostics-pack-context.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 1.390472,
+      "max_rss_bytes": 296009728
+    },
+    {
+      "label": "all-diagnostics-pack-context-decode",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "--output=$RUN/output/all-diagnostics-pack-context.csv",
+        "$RUN/output/all-diagnostics-pack-context.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 0.207308,
+      "max_rss_bytes": 86392832
+    },
+    {
+      "label": "coverage",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer-ql/ql/src/pkg4-coverage.ql",
+        "--database=$RUN/database/db",
+        "--search-path=$RUN/pack/ucode-extractor-pack:$RUN/producer-ql/ql/lib:$RUN/producer-ql/ql/src",
+        "--common-caches=$RUN/common-cache",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/output/coverage.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 1.846251,
+      "max_rss_bytes": 381747200
+    },
+    {
+      "label": "coverage-decode",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "--output=$RUN/output/coverage.csv",
+        "$RUN/output/coverage.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 0.213658,
+      "max_rss_bytes": 87228416
+    },
+    {
+      "label": "ast-identities",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer-ql/ql/src/pkg4-ast-identities.ql",
+        "--database=$RUN/database/db",
+        "--search-path=$RUN/pack/ucode-extractor-pack:$RUN/producer-ql/ql/lib:$RUN/producer-ql/ql/src",
+        "--common-caches=$RUN/common-cache",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/output/ast-identities.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 1.854719,
+      "max_rss_bytes": 375668736
+    },
+    {
+      "label": "ast-identities-decode",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "--output=$RUN/output/ast-identities.csv",
+        "$RUN/output/ast-identities.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 0.208532,
+      "max_rss_bytes": 86687744
+    },
+    {
+      "label": "tag-children",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer-ql/ql/src/pkg4-tag-children.ql",
+        "--database=$RUN/database/db",
+        "--search-path=$RUN/pack/ucode-extractor-pack:$RUN/producer-ql/ql/lib:$RUN/producer-ql/ql/src",
+        "--common-caches=$RUN/common-cache",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/output/tag-children.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 1.95787,
+      "max_rss_bytes": 437207040
+    },
+    {
+      "label": "tag-children-decode",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "--output=$RUN/output/tag-children.csv",
+        "$RUN/output/tag-children.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 0.206273,
+      "max_rss_bytes": 87080960
+    },
+    {
+      "label": "nodes",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer-ql/ql/src/pkg4-nodes.ql",
+        "--database=$RUN/database/db",
+        "--search-path=$RUN/pack/ucode-extractor-pack:$RUN/producer-ql/ql/lib:$RUN/producer-ql/ql/src",
+        "--common-caches=$RUN/common-cache",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/output/nodes.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 2.166315,
+      "max_rss_bytes": 435339264
+    },
+    {
+      "label": "nodes-decode",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "--output=$RUN/output/nodes.csv",
+        "$RUN/output/nodes.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 0.214717,
+      "max_rss_bytes": 87392256
+    },
+    {
+      "label": "edges",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer-ql/ql/src/pkg4-edges.ql",
+        "--database=$RUN/database/db",
+        "--search-path=$RUN/pack/ucode-extractor-pack:$RUN/producer-ql/ql/lib:$RUN/producer-ql/ql/src",
+        "--common-caches=$RUN/common-cache",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/output/edges.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 2.200045,
+      "max_rss_bytes": 430931968
+    },
+    {
+      "label": "edges-decode",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "--output=$RUN/output/edges.csv",
+        "$RUN/output/edges.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 0.209202,
+      "max_rss_bytes": 86851584
+    },
+    {
+      "label": "ast-entity-counts",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer-ql/ql/src/pkg4-ast-entity-counts.ql",
+        "--database=$RUN/database/db",
+        "--search-path=$RUN/pack/ucode-extractor-pack:$RUN/producer-ql/ql/lib:$RUN/producer-ql/ql/src",
+        "--common-caches=$RUN/common-cache",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/output/ast-entity-counts.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 1.962857,
+      "max_rss_bytes": 405094400
+    },
+    {
+      "label": "ast-entity-counts-decode",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "--output=$RUN/output/ast-entity-counts.csv",
+        "$RUN/output/ast-entity-counts.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 0.209371,
+      "max_rss_bytes": 87195648
+    },
+    {
+      "label": "node-entity-counts",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer-ql/ql/src/pkg4-node-entity-counts.ql",
+        "--database=$RUN/database/db",
+        "--search-path=$RUN/pack/ucode-extractor-pack:$RUN/producer-ql/ql/lib:$RUN/producer-ql/ql/src",
+        "--common-caches=$RUN/common-cache",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/output/node-entity-counts.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 2.104539,
+      "max_rss_bytes": 429850624
+    },
+    {
+      "label": "node-entity-counts-decode",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "--output=$RUN/output/node-entity-counts.csv",
+        "$RUN/output/node-entity-counts.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 0.211603,
+      "max_rss_bytes": 87080960
+    },
+    {
+      "label": "edge-entity-counts",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer-ql/ql/src/pkg4-edge-entity-counts.ql",
+        "--database=$RUN/database/db",
+        "--search-path=$RUN/pack/ucode-extractor-pack:$RUN/producer-ql/ql/lib:$RUN/producer-ql/ql/src",
+        "--common-caches=$RUN/common-cache",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/output/edge-entity-counts.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 2.161978,
+      "max_rss_bytes": 442810368
+    },
+    {
+      "label": "edge-entity-counts-decode",
+      "argv": [
+        "$CODEQL_ROOT/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "--output=$RUN/output/edge-entity-counts.csv",
+        "$RUN/output/edge-entity-counts.bqrs"
+      ],
+      "cwd": "$RUN",
+      "exit_status": 0,
+      "wall_seconds": 0.212191,
+      "max_rss_bytes": 87015424
+    }
+  ],
+  "failure_chronology": [
+    {
+      "label": "all-diagnostics initial",
+      "exit_status": 2,
+      "cause": "Missing staged diagnostics.ql.",
+      "raw": "work/cfg-trim-oracle/run-20261122-a/output/attempt-a-failure.json"
+    },
+    {
+      "label": "query-continuation guard",
+      "exit_status": 1,
+      "cause": "Wrong finalized database metadata path; no CodeQL command ran.",
+      "raw": "work/cfg-trim-oracle/run-20261122-a/output/query-continuation-gate-failure.json"
+    },
+    {
+      "label": "all-diagnostics-corrected",
+      "exit_status": 2,
+      "cause": "Custom query outside a ql/src pack workspace; module resolution failed.",
+      "raw": "work/cfg-trim-oracle/run-20261122-a/output/diagnostics-module-resolution-failure.json"
+    },
+    {
+      "label": "all-diagnostics-pack-context first attempt",
+      "exit_status": 2,
+      "wall_seconds": 0.785,
+      "max_rss_bytes": 137510912,
+      "cause": "Copied ql/src lacked workspace manifest, so ${workspace} could not resolve.",
+      "raw": "work/cfg-trim-oracle/run-20261122-a/output/query-pack-workspace-failure.json",
+      "note": "Same-label later success overwrote stderr-time file; exact error was captured in the execution transcript."
+    }
+  ],
+  "pack_provenance": {
+    "pack_built_at_revision": "8375887ed14825dd59addbfd0df43616d9e684fb",
+    "producer_revision_used_for_pack": "0a6612fe0e66351a0ccda43ad5b51f5ef5a2724e",
+    "pack_manifest_equal": true,
+    "pack_manifest_sha256": "d4820d9a239caba8f1741cbfd14b0ceedebc21f7e81066049dd41c905c6fe23f",
+    "relevant_source_delta_paths": [],
+    "lock_sha256": {
+      "ql/lib/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+      "ql/src/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3"
+    },
+    "cache_manifest_equal": true,
+    "cache_manifest_sha256": "35d66262f208080ace10a121e507c6104042924997bb662203edfb5ab22cea0a",
+    "cache_source_manifest_sha256": "35d66262f208080ace10a121e507c6104042924997bb662203edfb5ab22cea0a",
+    "required_packages": [
+      "codeql/controlflow",
+      "codeql/dataflow",
+      "codeql/regex",
+      "codeql/ssa",
+      "codeql/threat-models",
+      "codeql/typetracking",
+      "codeql/util",
+      "codeql/yaml"
+    ]
+  },
+  "run_isolation": {
+    "run_owned_paths": [
+      "$RUN/source",
+      "$RUN/database",
+      "$RUN/output",
+      "$RUN/tmp",
+      "$RUN/cache",
+      "$RUN/common-cache",
+      "$RUN/pack",
+      "$RUN/logs"
+    ],
+    "TMPDIR": "$RUN/tmp",
+    "XDG_CACHE_HOME": "$RUN/cache",
+    "CODEQL_UCODE_CACHE": "$RUN/cache",
+    "common_caches": "$RUN/common-cache",
+    "compilation_cache": "$RUN/cache/compilation",
+    "HOME": "inherited and not set/modified; ownership not established"
+  },
+  "external_process_gate": "Global CodeQL process polls were clear before each query phase; host-path process checks remain in ignored work logs.",
+  "interpretation": "Normal fixture matched the bounded path. Trim-open is valid and cleanly extracted but unsupported by current isCovered because it requires ExpressionTagOpen; high-level docs do not declare trim-open excluded. No intended policy exclusion, runtime trimming, rendering, flow, security or complete markup coverage is asserted.",
+  "raw_artifact_hashes": [
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/all-diagnostics-corrected.stderr-time.txt",
+      "size_bytes": 1452,
+      "sha256": "dc52614fa480ba3274f55068963aaeeaa54cea2c242075d335cbc100289a80a8"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/all-diagnostics-corrected.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/all-diagnostics-pack-context-decode.stderr-time.txt",
+      "size_bytes": 777,
+      "sha256": "cfbffb52662b61e8ea541cd14b82b9ab27f36b4b2ad8a67dd268bd1a459c85d8"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/all-diagnostics-pack-context-decode.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/all-diagnostics-pack-context.bqrs",
+      "size_bytes": 2319,
+      "sha256": "63c96456ac31bc58512f338b6aae3021942c279ae900317daffbb0ba804ed0e3"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/all-diagnostics-pack-context.csv",
+      "size_bytes": 21,
+      "sha256": "adc1e84d7518022112fd0365380af05e01ebb40e714a7498f00620a45b2216ba"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/all-diagnostics-pack-context.stderr-time.txt",
+      "size_bytes": 1571,
+      "sha256": "af9633871095755c2239615679f5de9d1439d66a6c933d86afd1803103b4d4dd"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/all-diagnostics-pack-context.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/all-diagnostics.stderr-time.txt",
+      "size_bytes": 925,
+      "sha256": "800473dca41cdbbbe21d11bb3818909a250ab4a0233c793bb606890673781248"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/all-diagnostics.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/assert-ast-identities.json",
+      "size_bytes": 3052,
+      "sha256": "b732e7b05571a72a1fab3cb40a833ca6157e045cef8e4eafb954b90f453d837c"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/assert-coverage.json",
+      "size_bytes": 506,
+      "sha256": "be2a502e4e11fddcc18a6fbd6dc8de15379d8df50c98a434ae25a0c27c923aee"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/assert-entity-counts-ast.json",
+      "size_bytes": 3275,
+      "sha256": "ee2dd157a0ad02ed46c9c3e17cf2d145c31ad2be7f7af10b99369acdcef1e725"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/assert-entity-counts-edges.json",
+      "size_bytes": 781,
+      "sha256": "80aa682ed09e824e679dcf19adecbe5d79bd20b449b99a684e058335d8659c80"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/assert-entity-counts-nodes.json",
+      "size_bytes": 843,
+      "sha256": "ffb9fe1ae356133319160c704f637b51c9a6e8cd0cfaeded0deadfcac78637e9"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/assert-full-edge-multiset.json",
+      "size_bytes": 714,
+      "sha256": "ca5b2a5153787bae7c20ef610009095a674490fd3c3aee82700088eda444bb7f"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/assert-full-node-multiset.json",
+      "size_bytes": 754,
+      "sha256": "6647d1adfcc03f9770a6cd67c5a805ce7f879a5846fc590a652256f0e36fe50a"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/assert-successful-files-resume-precheck.json",
+      "size_bytes": 718,
+      "sha256": "11479c11d0d2e0a8da6ee482a322f77266ecfa266f5b027516474578e8a1a15c"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/assert-successful-files.json",
+      "size_bytes": 702,
+      "sha256": "47dfdcceff5384ac3a9187b82d0fd57eb292e99ca8f00b678e5e2a90221a0bfe"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/assert-tag-open-child-close.json",
+      "size_bytes": 1058,
+      "sha256": "525f2590ba949ec6567deaccb67eb197941039ef61fe95a4078d257da99b51df"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/assert-zero-diagnostics.json",
+      "size_bytes": 128,
+      "sha256": "06842741e06f981f372b581ad603d55d778e0c3b8deb2b14ed73005a38637373"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/assert-zero-extraction-errors.json",
+      "size_bytes": 134,
+      "sha256": "a2c60ba41c000a952cc178aa63a643d1f4ef9168f4559ec753638c5edc8d58d4"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/ast-entity-counts-decode.stderr-time.txt",
+      "size_bytes": 777,
+      "sha256": "aa1e804e54beecb7bf5d6710715909fc2467f3bc5d8a07365c4e95574a5d936d"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/ast-entity-counts-decode.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/ast-entity-counts.bqrs",
+      "size_bytes": 2589,
+      "sha256": "d277b3cd5fec38c81a2efb51b55462492c799417ab6294f5bf5569c823ef901f"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/ast-entity-counts.csv",
+      "size_bytes": 700,
+      "sha256": "02a7cc7a0c63fb7a6ee36ee4173986e3c70a5c20f9e8c566a390056e3f4887b4"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/ast-entity-counts.stderr-time.txt",
+      "size_bytes": 1579,
+      "sha256": "b242b1ce7560d6803c2e9fcf4e92af6efb41f8625af63c8be3840191c6ca71d5"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/ast-entity-counts.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/ast-identities-decode.stderr-time.txt",
+      "size_bytes": 777,
+      "sha256": "3bc319261878a5f28f565b06846dcfb423f3ea7064c6d0bf80d913bac05c57e1"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/ast-identities-decode.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/ast-identities.bqrs",
+      "size_bytes": 2571,
+      "sha256": "b6c23e4d51108a2b668c7abd0b58daf1ed59b5ca62835d7b5a764d62c920d4ce"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/ast-identities.csv",
+      "size_bytes": 673,
+      "sha256": "cba08bfbb2f9432b50b5133b4b5602d194f7a6045bfc2a604b831029ab4dc17f"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/ast-identities.stderr-time.txt",
+      "size_bytes": 1567,
+      "sha256": "160ad6047f246a2f944d97927b8bd7c7802b95f1753ce7616f13932f202adec6"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/ast-identities.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/attempt-a-failure.json",
+      "size_bytes": 9415,
+      "sha256": "0430c68481fdaed481ea65833739e17c70957f027de9461bc07862419ae8d9bf"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/codeql-version.stderr-time.txt",
+      "size_bytes": 777,
+      "sha256": "372074a78a4aecc012fcc12911cf691ade8ebc226534d3aec258e007b22e2654"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/codeql-version.stdout",
+      "size_bytes": 362,
+      "sha256": "69af999e72d7bf1ae994a093df4857cdf038f14526f17f3d9864c112e297e942"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/coverage-decode.stderr-time.txt",
+      "size_bytes": 777,
+      "sha256": "04cc791123d9e65175673907a4c8d7ec205fb3d9b1ea358ee47b296b4d151338"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/coverage-decode.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/coverage.bqrs",
+      "size_bytes": 2374,
+      "sha256": "2423154b925a8d0242a2d449226aca7a99516b05492bcfcd512562cce42748c3"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/coverage.csv",
+      "size_bytes": 109,
+      "sha256": "24dc25a65d70a57aa5a332b39b77012ffc5bdcb59a52ad1cfec906a612d8f57d"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/coverage.stderr-time.txt",
+      "size_bytes": 1543,
+      "sha256": "43b68961f33391914d2457231748f36c7235237096ca163da57103ab6a0fa156"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/coverage.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/database-finalize.stderr-time.txt",
+      "size_bytes": 1784,
+      "sha256": "8784c4f8fb6f812bb6b44b4021582ae1a8f84a8d4866a4c54c6a9f0eeeaa288a"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/database-finalize.stdout",
+      "size_bytes": 154,
+      "sha256": "eda216b29db1ce77d3a8e87edfba8fd517fefa5f7cbf2081254feed726d00e54"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/database-init.stderr-time.txt",
+      "size_bytes": 1351,
+      "sha256": "26838b1c170944eca95fab6fd5e397709abbd1c0021286c74598738753f6bdd0"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/database-init.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/diagnostics-module-resolution-failure.json",
+      "size_bytes": 448391,
+      "sha256": "e666a887f0ad68b38ac25e2e6b1488e6f3a93c3d961ffc02822d3388a4562188"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/edge-entity-counts-decode.stderr-time.txt",
+      "size_bytes": 777,
+      "sha256": "c51cd66dc35ba4df7f9ec0224b275ea6109886e6976349373aaf2402eba54332"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/edge-entity-counts-decode.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/edge-entity-counts.bqrs",
+      "size_bytes": 2434,
+      "sha256": "a94066da1e8756af698fd85ce34024ef00f3cb20e93533c00260ae55bbcfde9c"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/edge-entity-counts.csv",
+      "size_bytes": 225,
+      "sha256": "b12d678c6a1c3f3e31bca56071a84f16d69e0f89bfd0465abcf997b293ddd6d4"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/edge-entity-counts.stderr-time.txt",
+      "size_bytes": 1582,
+      "sha256": "c8468215d9ccf2522d18bfe1f204df3a5155d1956d0a8f78da9ff1bb6e365315"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/edge-entity-counts.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/edges-decode.stderr-time.txt",
+      "size_bytes": 777,
+      "sha256": "969610744c95e648a8c0981866d08822e8efa78bf4cc31f4607cef0b37748092"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/edges-decode.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/edges.bqrs",
+      "size_bytes": 2403,
+      "sha256": "3432e3d7c0a4737b25fceb145980cc32278e801350e2b5f5e736a78402f83abd"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/edges.csv",
+      "size_bytes": 212,
+      "sha256": "a97560f3d64851171dff19cc827a2012e9c7f5e17495eaa16c185d54603914b2"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/edges.stderr-time.txt",
+      "size_bytes": 1530,
+      "sha256": "73b4d5c65bec7ae216032c2e3ea75db36ed55dbcd7d0420cea4c374efc087cf2"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/edges.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/entity-count-result.json",
+      "size_bytes": 33680,
+      "sha256": "e73ca1974a046d0a3bb75ca4cf30452690bc5d8850f80ec5c14eeef94444c79f"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/extraction-errors-decode.stderr-time.txt",
+      "size_bytes": 777,
+      "sha256": "0d356883ef34c96f8747670a5e7214d225375e3a37d16c4a6d912615ab782a2d"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/extraction-errors-decode.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/extraction-errors.bqrs",
+      "size_bytes": 2705,
+      "sha256": "dd2bd29315a17f75ce19908973b18087f13bcf90b60645ae8637d6d9ec12ea83"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/extraction-errors.json",
+      "size_bytes": 122,
+      "sha256": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/extraction-errors.stderr-time.txt",
+      "size_bytes": 1546,
+      "sha256": "ff8d48b01c33a539e3d386a6fdd49b02e699098433b7ef628f483f2638ad8045"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/extraction-errors.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/index-files.stderr-time.txt",
+      "size_bytes": 1500,
+      "sha256": "236d3f540d06762fffc8cc2a8f2fabd1459df6d7f91a3406f4953752fd7a0fa7"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/index-files.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/node-entity-counts-decode.stderr-time.txt",
+      "size_bytes": 777,
+      "sha256": "d4b38218f30cad31200ea757b22164c31267483cd921b7692395b4a8080ea48d"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/node-entity-counts-decode.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/node-entity-counts.bqrs",
+      "size_bytes": 2464,
+      "sha256": "8184c41b8b4c43d732d6cc400cd697f20d38687e4d1bf4ca929b23c488cd2989"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/node-entity-counts.csv",
+      "size_bytes": 214,
+      "sha256": "3854b3e6b127fe778764cbab973d246ffeeaf1356f0bb8eae667ff03d9be5d37"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/node-entity-counts.stderr-time.txt",
+      "size_bytes": 1582,
+      "sha256": "c4e60989169d41216e9cc4cefd2138a6bce2287ca0a555c95b5b129dfd17118a"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/node-entity-counts.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/nodes-decode.stderr-time.txt",
+      "size_bytes": 777,
+      "sha256": "dabbcddd0d9cba0191b63cfe83cf0e869195d377e7da4f50aa3c9ef1a6425077"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/nodes-decode.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/nodes.bqrs",
+      "size_bytes": 2432,
+      "sha256": "37c5cb9c4731d232c820f44b68532324f78415a009df7f00fed15cfa86611480"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/nodes.csv",
+      "size_bytes": 199,
+      "sha256": "46d5478daaff1690c6944a007d014e11f81519e759d28807597c10dddce67f97"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/nodes.stderr-time.txt",
+      "size_bytes": 1530,
+      "sha256": "ac27625dc42f4452a2bcefc0c9984f0310d37ac8343d1bb24467c061b6183383"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/nodes.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/query-continuation-gate-failure.json",
+      "size_bytes": 446652,
+      "sha256": "de7390b2e7aacbbc161f835e7c11fdf806bc982194e7933471b976d7522a631c"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/query-pack-workspace-failure.json",
+      "size_bytes": 450216,
+      "sha256": "f97619c3f3a73208af22721ed5a398c8e11c662e0c5659dd48be498f02f7c764"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/result.json",
+      "size_bytes": 464155,
+      "sha256": "e08b5bf1b03af585b22da65d757f1244716931983486f7faa272bfed37c763a2"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/routing-comparison.json",
+      "size_bytes": 2077,
+      "sha256": "eae70ff315126eb20b1c8177f8e097176c7e59a0b641cfd23fc5cd520666f4e4"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/routing.json",
+      "size_bytes": 798,
+      "sha256": "4e34786fa1802197b46e2a1e3f5244c8364a13b09972edcfa6c6e46dcb9b71b7"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/successfully-extracted-files-decode.stderr-time.txt",
+      "size_bytes": 777,
+      "sha256": "0ac08afb5ad01c3d4fb9cb7c86aa96ab01389e07e6fbe4a16a9a2b4f0215fbd0"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/successfully-extracted-files-decode.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/successfully-extracted-files.bqrs",
+      "size_bytes": 3520,
+      "sha256": "18e27cdaff8cdea7833fbfb5a6b63ee02718841f54dcbc09038c6ca69cdb4cba"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/successfully-extracted-files.json",
+      "size_bytes": 808,
+      "sha256": "c43f37f6019df0bad3575c2840b35d0ad8effe171ff15a5d340007fd76d2f70a"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/successfully-extracted-files.stderr-time.txt",
+      "size_bytes": 1588,
+      "sha256": "4e75b9266eeb4e8a7c161e98c8afc5e7770afc1ab5b70563d02cc4cc07a19d12"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/successfully-extracted-files.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/tag-children-decode.stderr-time.txt",
+      "size_bytes": 777,
+      "sha256": "c6e45e82c574d973f489040993d39a6d241876e54183000c6e74a4c716919bf9"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/tag-children-decode.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/tag-children.bqrs",
+      "size_bytes": 2470,
+      "sha256": "413c8f25d5a566fe27d86630ca2745160d0b7c097977f29a8b135128cbb85298"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/tag-children.csv",
+      "size_bytes": 297,
+      "sha256": "e2f2c42ed543752c9a88505223a4f4c2705e0bd31bd4c04478eab9f0034aa2d0"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/tag-children.stderr-time.txt",
+      "size_bytes": 1559,
+      "sha256": "387c1c9504e1ae360be497fea54fbb4ab1f6615f21d50f27cd1462b7416f7a88"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/tag-children.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/logs/commands.json",
+      "size_bytes": 31116,
+      "sha256": "e0ad079453c287de4cb07de223017f06a2a53b571f029645afc4034fe65058bb"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/logs/external-process-poll.jsonl",
+      "size_bytes": 423690,
+      "sha256": "b2de4eea87faa2d02cadb8bb480514851bb02e099620df1b332c112e253ed44b"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/logs/entity-process-poll.jsonl",
+      "size_bytes": 702,
+      "sha256": "2c15e4409ba34dc335acd51a3d63134180884f481255b6cb44b4a2aa6dc53414"
+    }
+  ],
+  "resource_preflight": {
+    "free_disk_bytes_observed": 146812608512,
+    "run_path_owner_matches_process": true,
+    "note": "Recorded during path preflight; the final query-only continuation reused the already finalized database."
+  },
+  "source_contract_hashes": {
+    "ql/lib/codeql/ucode/MarkupCFG.qll": {
+      "size": 5634,
+      "sha256": "5c65800cdc98c2c6aba5d71420b4f7fbfc330f0eb65ac2a603819a5d5d15b79a"
+    },
+    "docs/markup-cfg.md": {
+      "size": 1402,
+      "sha256": "a23bc6301d1572e1523eff7416ed0aa9c80146f43d8017b9c9671ed383b0450c"
+    },
+    "docs/markup-cfg-proposal.md": {
+      "size": 7582,
+      "sha256": "7382ee997b5011ee6ccaf7854956ed023cdc65f22b7f0a01adeaa95619df94e7"
+    },
+    "ql/lib/codeql-pack.lock.yml": {
+      "size": 359,
+      "sha256": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3"
+    },
+    "ql/src/codeql-pack.lock.yml": {
+      "size": 359,
+      "sha256": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3"
+    }
+  },
+  "query_workspace_copy": {
+    "producer_sha": "6010ff2c0f101f7629c6fe117a421f671c311a2b",
+    "ql_source": "work/pkg1-codeql-ucode/ql",
+    "copied_ql_lib_file_count": 155,
+    "copied_ql_lib_manifest_sha256": "dec70b5e6035b967bfb27e1f036f93c3b7c3aa54d26ccdd587401e01b6a79889",
+    "source_ql_lib_manifest_sha256": "dec70b5e6035b967bfb27e1f036f93c3b7c3aa54d26ccdd587401e01b6a79889",
+    "ql_lib_exact_copy": true,
+    "copied_ql_src_file_count_before_custom": 114,
+    "copied_ql_src_manifest_sha256_before_custom": "4acd9eea403639d977fe6b34ef030e9950faeaca4ebc393f31963a8648b6532a",
+    "source_ql_src_manifest_sha256": "4acd9eea403639d977fe6b34ef030e9950faeaca4ebc393f31963a8648b6532a",
+    "ql_src_exact_copy_before_custom_queries": true,
+    "workspace_manifest_source": "work/pkg1-codeql-ucode/.codeqlmanifest.json",
+    "workspace_manifest_sha256": "59a8b55940864bfabb4f276fc97eead605f063928dc5d4a7c05f435b0c989068",
+    "workspace_manifest_purpose": "restores the pinned workspace declaration for ql/src dependency ${workspace}"
+  },
+  "runner_invocations": [
+    {
+      "command": "python3 work/cfg-trim-oracle/run-20261122-a/run.py",
+      "exit_status": 1,
+      "failure": "diagnostics query file missing; preserved in output/attempt-a-failure.json"
+    },
+    {
+      "command": "python3 work/cfg-trim-oracle/run-20261122-a/run.py --queries-only",
+      "exit_status": 1,
+      "failure": "wrong finalized DB metadata guard path; preserved in output/query-continuation-gate-failure.json"
+    },
+    {
+      "command": "python3 work/cfg-trim-oracle/run-20261122-a/run.py --queries-only",
+      "exit_status": 1,
+      "failure": "query outside pack workspace; preserved in output/diagnostics-module-resolution-failure.json"
+    },
+    {
+      "command": "python3 work/cfg-trim-oracle/run-20261122-a/run.py --queries-only",
+      "exit_status": 1,
+      "failure": "workspace manifest absent; preserved in output/query-pack-workspace-failure.json"
+    },
+    {
+      "command": "python3 work/cfg-trim-oracle/run-20261122-a/run.py --queries-only",
+      "exit_status": 0,
+      "result": "output/result.json"
+    },
+    {
+      "command": "python3 work/cfg-trim-oracle/run-20261122-a/entity-counts.py",
+      "exit_status": 0,
+      "result": "output/entity-count-result.json"
+    }
+  ]
+}

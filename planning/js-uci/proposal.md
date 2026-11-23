@@ -36,11 +36,12 @@ bytes in the disposable checkout `work/wave4-prep/luci-pinned`:
 | Positive and receiver-form control | `modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js`; blob `a0c589fcbac98a9781a4eb80c44af35f8120a0d6`; SHA-256 `b02c16b896a31789d24e615452de0596bb6b52ff4f82061172ce27e6e567f8b2`; installed `/www/luci-static/resources/view/network/dhcp.js` | Lines 943–944: direct `uci.set`; line 958: direct `uci.get`; lines 616 and 1104: `L.uci.sections`. The file declares `'require uci'` at line 6. The direct accesses and namespaced accesses should both be represented with distinct receiver-form labels. |
 | Real non-match for the proposed UCI receiver forms | `modules/luci-base/htdocs/luci-static/resources/uci.js`; blob `f53b548e3eeb3ae45dfe9c8e3a09fdb77f30c78f`; SHA-256 `c14a05d8bd458d57e855513f1397132f73ce8af82ab3d1be8e102df1d22e29f3`; installed `/www/luci-static/resources/uci.js` | The implementation has `this.set` at line 676 and `this.get` at line 713. They are valid property accesses in the selected JS set but do not have either proposed receiver shape (`uci` or `L.uci`). They must not be included merely because the property name matches. |
 
-These lines establish useful anchors, not the complete source oracle. Before any
-query result is inspected, the full expected site multiset for the selected
-88-file manifest must be independently enumerated and reviewed against exact
-pinned bytes. The existing `rg` observations help locate candidates but are not
-a completeness oracle.
+These lines establish useful anchors. A subsequent planning-only
+[source candidate multiset](source-candidate-multiset.json) records 576 tuples
+over all 88 pinned files and agrees across two source parsers. Before any query
+result is inspected, independently establish how those source candidates map
+to the selected CodeQL AST and complete the expected query oracle; parser
+agreement alone does not establish CodeQL entity identity or completeness.
 
 ## Proposed inventory contract
 
@@ -62,8 +63,13 @@ candidate reference, but the record must not call it an invocation. A shadowed
 identifier named `uci` remains syntactically eligible and must not be presented
 as a resolved binding.
 
-Optional-chain accesses are excluded from the first proposed slice; verify their
-AST representation before execution. Aliases such as `const cfg = uci; cfg.set(...)`, `L['uci'].set(...)`, deeper
+For this planning contract, an optional member access is excluded; a
+nonoptional `uci.get` remains eligible when a later call or member access is
+optional. Verify this distinction in CodeQL's AST before execution. Two
+independent source parsers initially disagreed at three such sites; the
+[differential](parser-differential.md) and [corrected pass](corrected-acorn-pass.md)
+record the discrepancy and matching candidate sets. They do not establish
+CodeQL identities or lift the execution hold. Aliases such as `const cfg = uci; cfg.set(...)`, `L['uci'].set(...)`, deeper
 namespace chains, and generated/dynamic references are outside this first
 receiver-shape contract. If encountered in the source-first inventory, list
 them as exclusions/unknowns rather than treating their absence from results as

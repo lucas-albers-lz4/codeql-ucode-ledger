@@ -1,0 +1,28 @@
+Resolving data extensions.
+Finished resolving data extensions.
+Merging data extensions.
+Finished merging data extensions.
+WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.
+Compiling query plan for <RUN>/producer/ql/src/diagnostics/ExtractionErrors.ql.
+[1/1] Found in cache: <RUN>/producer/ql/src/diagnostics/ExtractionErrors.ql.
+Starting evaluation of lucas-albers-lz4/ucode-queries/diagnostics/ExtractionErrors.ql.
+[1/1 eval 9ms] Evaluation done; writing results to <RUN>/producer-run/controls/errors.bqrs.
+Shutting down query evaluator.
+        1.02 real         2.16 user         0.14 sys
+           191037440  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               27304  page reclaims
+                  95  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   8  signals received
+                  35  voluntary context switches
+               15483  involuntary context switches
+            39979928  instructions retired
+            16580986  cycles elapsed
+             2015544  peak memory footprint

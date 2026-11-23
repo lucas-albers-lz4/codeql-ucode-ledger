@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "<PYTHON>",
+    "-B",
+    "<PREP>/prepare.py",
+    "<RUN>"
+  ],
+  "cwd": "<LEDGER>",
+  "exit": 0,
+  "elapsed_seconds": 0.5792197500013572
+}

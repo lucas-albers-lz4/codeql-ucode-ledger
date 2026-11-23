@@ -1,0 +1,32 @@
+[
+  {
+    "argv": [
+      "<CODEQL>",
+      "version"
+    ],
+    "cwd": "<RUN-C>",
+    "elapsed_seconds": 0.1984624579999945,
+    "exit": 0,
+    "label": "version",
+    "stderr_time": "version.stderr-time.txt",
+    "stdout": "version.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "init",
+      "<RUN-C>/database/db",
+      "--language=ucode",
+      "--search-path=<RUN-C>/pack/ucode-extractor-pack",
+      "--source-root=<RUN-C>/source",
+      "--common-caches=<RUN-C>/common-cache"
+    ],
+    "cwd": "<RUN-C>",
+    "elapsed_seconds": 0.21669520800060127,
+    "exit": 2,
+    "label": "init",
+    "stderr_time": "init.stderr-time.txt",
+    "stdout": "init.stdout"
+  }
+]

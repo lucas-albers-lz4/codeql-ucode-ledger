@@ -1,0 +1,35 @@
+{
+  "context": {
+    "corpus": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "inputs": {
+      "acl": "sha256:16a24f388ca457758afbea4ff2283ad5984b0146d01697a6955ea84f42cb7924",
+      "effects": "sha256:9d9a1a7178e7f5fbd3cb772122fe172354004fac09ce00e91647d6b35ba9d0a0",
+      "errors": "sha256:0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+      "extracted": "sha256:ab842728312739e69fc47983c85abaa09a59a297ead156d6ceca3df333b570f4",
+      "feed-config": "sha256:0843b89011b0264ca1a21140bbfa039436080134c6f84c76a7a1c936f8ce3db0",
+      "login": "sha256:87870ce2884e31bddf9744b6bbe201e11b5f62991dc2169f6afe810372cd8ac2",
+      "recipe-admin": "sha256:c64544d6700cc3068b8708f84b66dfdcdc2f49730cc99aae2d3c75fbdd130205",
+      "recipe-base": "sha256:4a933ee77787783219bdeae45b03d89a6c3b5f1512e8ad8bc68d19f4b250c9bc",
+      "recipe-light": "sha256:1d02f3bad127162339bcc49524c383a18c336f9ff832b391fa499184e974fbc6",
+      "recipe-ssl": "sha256:a02dc41d525f1a0f0cbdb5b697a66bcc3b371b0f25a6362d0d2bc5fd8cf3f684",
+      "recipe-system": "sha256:315224a6aed5598eb229533eb73cc846e79f9d1f6fba4d1e75587910ef95cfe7",
+      "routing": "sha256:6b966b0d86873d3edc0602d7558e5bef74796edf60a74d3ad423f636cc5c47d6",
+      "source": "sha256:6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+      "source-archive": "sha256:c3a841f0f08290af2c73624d376008f109de5a39211e42ae48ac3c5e173d5ab8",
+      "typed": "sha256:5c619d5aa3566c5296080b0a9be7072b38d6eb7a98eae647d68c5dcf09b2b59b",
+      "uhttpd-config": "sha256:6cc793366729d4792b95139780baa4fbfc3402db6b63aa015d3007b34510e14a",
+      "uhttpd-default": "sha256:4cae1c943a1efc41449c377db3e2b5338b36cbcb815f388fea6d86c972b3927d",
+      "uhttpd-init": "sha256:49af2183baad478567bb74d484396142909959b4653ece0379e8dd159b19070e",
+      "uhttpd-recipe": "sha256:5d8b66c3f0ad09f3f43507f9025c778bace19b94c77d306d782128593f8feac6"
+    },
+    "policy": "sha256:8192803552814c47cb39b99712c033d0aa5a6631a6d32e05315bd9666630881c",
+    "profile": "sha256:16a5468601be4b23f45795a43deedd6fda6726ff7503abb9d80e493d16808ac5"
+  },
+  "kind": "readonly-assessment",
+  "reference": {
+    "authority": "openwrt-consumer:luci-ssl-25.12",
+    "id": "luci-mod-system-mounts"
+  },
+  "verdict": "intended_access",
+  "version": 2
+}

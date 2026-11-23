@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 201, in _run_module_as_main
+  File "<frozen runpy>", line 87, in _run_code
+  File "<RUN>/consumer-run/valid/policy/setblock_table.py", line 431, in <module>
+    main()
+    ~~~~^^
+  File "<RUN>/consumer-run/valid/policy/setblock_table.py", line 427, in main
+    import_table(args.csv, args.source_root)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<RUN>/consumer-run/valid/policy/setblock_table.py", line 366, in import_table
+    _import_observation(row, repo_root)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "<RUN>/consumer-run/valid/policy/setblock_table.py", line 379, in _import_observation
+    snapshot_update, catalog_update = prepare_updates(snapshot_rows, catalog_rows, row, repo_root, typed=typed)
+                                      ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<RUN>/consumer-run/valid/policy/setblock_table.py", line 352, in prepare_updates
+    raise ValueError("typed-to-CSV downgrade is not supported")
+ValueError: typed-to-CSV downgrade is not supported
+        0.04 real         0.03 user         0.00 sys
+            24068096  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                2549  page reclaims
+                  47  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                   9  involuntary context switches
+           548655321  instructions retired
+           178609886  cycles elapsed
+            16318848  peak memory footprint

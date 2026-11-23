@@ -1,0 +1,9 @@
+{
+  "utc": "2026-11-23T22:35:14.130607+00:00",
+  "free_disk_bytes": 141794455552,
+  "home_inherited": "<INHERITED_HOME>",
+  "home_set_by_run": false,
+  "database_exists_before": false,
+  "active_codeql_or_cargo": [],
+  "oracle_sha256": "47250a224177148d21de6fef21c64d7dcb1ea2426e5950face0e9a9352a24263"
+}

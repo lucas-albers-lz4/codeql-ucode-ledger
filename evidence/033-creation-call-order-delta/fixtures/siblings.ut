@@ -1,0 +1,1 @@
+{% x.y = function() { let n = 1; }; x.y = function() { call(); };

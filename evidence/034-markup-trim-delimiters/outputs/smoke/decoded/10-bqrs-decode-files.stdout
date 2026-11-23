@@ -1,0 +1,25 @@
+{"#select":{"columns":[
+   {"name":"f","kind":"Entity"}
+  ,{"kind":"String"}]
+ ,"tuples":[
+   [{"label":"<PRODUCER>/tests/data/markup-cfg/adjacent.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/adjacent.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/code-comment.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/code-comment.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/comma.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/comma.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/comment.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/comment.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/doc-comment.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/doc-comment.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/empty-text.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/empty-text.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/empty.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/empty.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/expression-comment.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/expression-comment.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/missing-init.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/missing-init.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/multiple.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/multiple.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/ordinary-member.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/ordinary-member.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/other.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/other.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/plain.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/plain.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/reopen.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/reopen.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/repeated.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/repeated.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/shebang.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/shebang.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/trim-both.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/trim-both.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/trim-close.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/trim-close.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/trim-member.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/trim-member.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/trim-open.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/trim-open.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]]
+ }}

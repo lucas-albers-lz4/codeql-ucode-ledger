@@ -1,0 +1,371 @@
+[
+  {
+    "argv": [
+      "<CODEQL>",
+      "version"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 0.3730036659981124,
+    "exit": 0,
+    "label": "version",
+    "stderr_time": "version.stderr-time.txt",
+    "stdout": "version.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "init",
+      "<RUN>/database/db",
+      "--language=ucode",
+      "--search-path=<RUN>/pack/ucode-extractor-pack",
+      "--source-root=/STAGED_SOURCE",
+      "--common-caches=<RUN>/common-cache"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 0.5884389999991981,
+    "exit": 0,
+    "label": "init",
+    "stderr_time": "init.stderr-time.txt",
+    "stdout": "init.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "index-files",
+      "<RUN>/database/db",
+      "--language=ucode",
+      "--include=**/*.ut",
+      "--working-dir=/STAGED_SOURCE",
+      "--common-caches=<RUN>/common-cache"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 0.8183185839952785,
+    "exit": 0,
+    "label": "index",
+    "stderr_time": "index.stderr-time.txt",
+    "stdout": "index.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "finalize",
+      "<RUN>/database/db",
+      "--common-caches=<RUN>/common-cache"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 1.1782022090046667,
+    "exit": 0,
+    "label": "finalize",
+    "stderr_time": "finalize.stderr-time.txt",
+    "stdout": "finalize.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN>/producer-ql/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+      "--database=<RUN>/database/db",
+      "--search-path=<RUN>/pack/ucode-extractor-pack:<RUN>/producer-ql/ql/lib:<RUN>/producer-ql/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN>/output/extracted.bqrs"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 1.6069690419972176,
+    "exit": 0,
+    "label": "extracted",
+    "stderr_time": "extracted.stderr-time.txt",
+    "stdout": "extracted.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--output=<RUN>/output/extracted.json",
+      "--entities=url,string",
+      "<RUN>/output/extracted.bqrs"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 0.2502049170070677,
+    "exit": 0,
+    "label": "extracted-decode",
+    "stderr_time": "extracted-decode.stderr-time.txt",
+    "stdout": "extracted-decode.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN>/producer-ql/ql/src/diagnostics/ExtractionErrors.ql",
+      "--database=<RUN>/database/db",
+      "--search-path=<RUN>/pack/ucode-extractor-pack:<RUN>/producer-ql/ql/lib:<RUN>/producer-ql/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN>/output/errors.bqrs"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 1.5816213340003742,
+    "exit": 0,
+    "label": "errors",
+    "stderr_time": "errors.stderr-time.txt",
+    "stdout": "errors.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=json",
+      "--output=<RUN>/output/errors.json",
+      "--entities=url,string",
+      "<RUN>/output/errors.bqrs"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 0.24017208300210768,
+    "exit": 0,
+    "label": "errors-decode",
+    "stderr_time": "errors-decode.stderr-time.txt",
+    "stdout": "errors-decode.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN>/producer-ql/ql/src/pkg6-diagnostics.ql",
+      "--database=<RUN>/database/db",
+      "--search-path=<RUN>/pack/ucode-extractor-pack:<RUN>/producer-ql/ql/lib:<RUN>/producer-ql/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN>/output/diagnostics.bqrs"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 1.5004274579987396,
+    "exit": 0,
+    "label": "diagnostics",
+    "stderr_time": "diagnostics.stderr-time.txt",
+    "stdout": "diagnostics.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "--output=<RUN>/output/diagnostics.csv",
+      "<RUN>/output/diagnostics.bqrs"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 0.22845900000538677,
+    "exit": 0,
+    "label": "diagnostics-decode",
+    "stderr_time": "diagnostics-decode.stderr-time.txt",
+    "stdout": "diagnostics-decode.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN>/producer-ql/ql/src/pkg6-roots.ql",
+      "--database=<RUN>/database/db",
+      "--search-path=<RUN>/pack/ucode-extractor-pack:<RUN>/producer-ql/ql/lib:<RUN>/producer-ql/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN>/output/roots.bqrs"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 2.2904114999982994,
+    "exit": 0,
+    "label": "roots",
+    "stderr_time": "roots.stderr-time.txt",
+    "stdout": "roots.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "--output=<RUN>/output/roots.csv",
+      "<RUN>/output/roots.bqrs"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 0.22963195799820824,
+    "exit": 0,
+    "label": "roots-decode",
+    "stderr_time": "roots-decode.stderr-time.txt",
+    "stdout": "roots-decode.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN>/producer-ql/ql/src/pkg6-scopes.ql",
+      "--database=<RUN>/database/db",
+      "--search-path=<RUN>/pack/ucode-extractor-pack:<RUN>/producer-ql/ql/lib:<RUN>/producer-ql/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN>/output/scopes.bqrs"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 2.1482752500014612,
+    "exit": 0,
+    "label": "scopes",
+    "stderr_time": "scopes.stderr-time.txt",
+    "stdout": "scopes.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "--output=<RUN>/output/scopes.csv",
+      "<RUN>/output/scopes.bqrs"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 0.22803983300400432,
+    "exit": 0,
+    "label": "scopes-decode",
+    "stderr_time": "scopes-decode.stderr-time.txt",
+    "stdout": "scopes-decode.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN>/producer-ql/ql/src/pkg6-ast.ql",
+      "--database=<RUN>/database/db",
+      "--search-path=<RUN>/pack/ucode-extractor-pack:<RUN>/producer-ql/ql/lib:<RUN>/producer-ql/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN>/output/ast.bqrs"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 2.1365656669950113,
+    "exit": 0,
+    "label": "ast",
+    "stderr_time": "ast.stderr-time.txt",
+    "stdout": "ast.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "--output=<RUN>/output/ast.csv",
+      "<RUN>/output/ast.bqrs"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 0.23540166699967813,
+    "exit": 0,
+    "label": "ast-decode",
+    "stderr_time": "ast-decode.stderr-time.txt",
+    "stdout": "ast-decode.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN>/producer-ql/ql/src/pkg6-nodes.ql",
+      "--database=<RUN>/database/db",
+      "--search-path=<RUN>/pack/ucode-extractor-pack:<RUN>/producer-ql/ql/lib:<RUN>/producer-ql/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN>/output/nodes.bqrs"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 2.4313473329966655,
+    "exit": 0,
+    "label": "nodes",
+    "stderr_time": "nodes.stderr-time.txt",
+    "stdout": "nodes.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "--output=<RUN>/output/nodes.csv",
+      "<RUN>/output/nodes.bqrs"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 0.23012679199746344,
+    "exit": 0,
+    "label": "nodes-decode",
+    "stderr_time": "nodes-decode.stderr-time.txt",
+    "stdout": "nodes-decode.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN>/producer-ql/ql/src/pkg6-edges.ql",
+      "--database=<RUN>/database/db",
+      "--search-path=<RUN>/pack/ucode-extractor-pack:<RUN>/producer-ql/ql/lib:<RUN>/producer-ql/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN>/output/edges.bqrs"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 2.4527103750006063,
+    "exit": 0,
+    "label": "edges",
+    "stderr_time": "edges.stderr-time.txt",
+    "stdout": "edges.stdout"
+  },
+  {
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "--output=<RUN>/output/edges.csv",
+      "<RUN>/output/edges.bqrs"
+    ],
+    "cwd": "<RUN>",
+    "elapsed_seconds": 0.22653687500132946,
+    "exit": 0,
+    "label": "edges-decode",
+    "stderr_time": "edges-decode.stderr-time.txt",
+    "stdout": "edges-decode.stdout"
+  }
+]

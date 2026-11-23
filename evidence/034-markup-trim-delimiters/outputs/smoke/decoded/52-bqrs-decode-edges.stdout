@@ -1,0 +1,12 @@
+"col0","col1","col2","col3"
+"mixed.ut","entry","RawText:1:1:1:6:Markup:0",1
+"mixed.ut","RawText:1:1:1:6:Markup:0","Identifier:1:10:1:13:ExpressionTag:1",1
+"mixed.ut","LexicalDeclaration:2:4:2:13:Markup:4","RawText:2:17:2:22:TextStatement:1",1
+"mixed.ut","ExpressionTag:1:7:1:16:Markup:1","RawText:1:17:1:18:Markup:2",1
+"mixed.ut","RawText:1:17:1:18:Markup:2","Number:2:12:2:12:VariableDeclarator:2",1
+"mixed.ut","Identifier:1:10:1:13:ExpressionTag:1","ExpressionTag:1:7:1:16:Markup:1",1
+"mixed.ut","Number:2:12:2:12:VariableDeclarator:2","LexicalDeclaration:2:4:2:13:Markup:4",1
+"mixed.ut","RawText:2:17:2:22:TextStatement:1","Identifier:2:26:2:26:ExpressionTag:1",1
+"mixed.ut","ExpressionTag:2:23:2:29:TextStatement:2","RawText:2:30:2:30:TextStatement:3",1
+"mixed.ut","RawText:2:30:2:30:TextStatement:3","exit",1
+"mixed.ut","Identifier:2:26:2:26:ExpressionTag:1","ExpressionTag:2:23:2:29:TextStatement:2",1

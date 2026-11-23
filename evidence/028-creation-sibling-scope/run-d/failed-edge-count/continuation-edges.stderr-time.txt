@@ -1,0 +1,25 @@
+Resolving data extensions.
+Finished resolving data extensions.
+Merging data extensions.
+Finished merging data extensions.
+WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.
+Compiling query plan for <RUN-D>/producer-ql/ql/src/pkg6-fixed-edges.ql.
+ERROR: aggregate 'count' expects at most one expression (<RUN-D>/producer-ql/ql/src/pkg6-fixed-edges.ql:5,3-7,84)
+        1.26 real         3.22 user         0.17 sys
+           288342016  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               33446  page reclaims
+                  95  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   9  signals received
+                  35  voluntary context switches
+               18290  involuntary context switches
+            40417318  instructions retired
+            16048141  cycles elapsed
+             1737016  peak memory footprint

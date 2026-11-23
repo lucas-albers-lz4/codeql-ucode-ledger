@@ -1,0 +1,39 @@
+{
+  "base_sha": "11a53fd8e911573860950ee8e549b337a8742438",
+  "grammar_sha": "4a243af329fae2f4ff01e0fc80133cbab8314600",
+  "source_and_oracle_sha256": {
+    "source/usr/share/ucode/controls/ordinary-member.ut": "52e70b638218d4e928e4bac51ee701cc357443b54faa6d63dcefca56184fb1c4",
+    "source/usr/share/ucode/controls/trim-open.ut": "fbeecce989e50bb9bd205afd29f8e717469dc977e57131f4ffa24378a5833e49",
+    "source/usr/share/ucode/controls/trim-both.ut": "d897ab97d9025f6eacaa460015d71757746888efacef854955b31e3ac283f03f",
+    "source/usr/share/ucode/controls/trim-close.ut": "afde724719c5f9bf3204a47b13d9028a3a0bb0ac60008827bf72602551da519a",
+    "source/usr/share/ucode/controls/trim-member.ut": "2b1650e98fcd52c9e18a10cfe5ad5016031ea4aae0ce412a309f4ef02858005d",
+    "source/usr/share/ucode/controls/plain.ut": "557c70f3707a0f1f22bd06e189c8d303ee99542d2767eb59226ac8010c8220da",
+    "source-first-oracle.json": "ba93f7087e8546ba85f0062c3e64f020352ca16a3a2e08d63ce1249357abcfd3",
+    "source-first-routing.json": "b5403bbfff0908d53bf0aaac0634f2565b266339019d7de355d3b44813dffa7d"
+  },
+  "project_locks_sha256": {
+    "ql/lib/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+    "ql/src/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3"
+  },
+  "pack_sha256": {
+    "extractor-pack/ucode.dbscheme": "a32b8f63d4545439bc632b4afd0d58ad64aa2a634736bcd341fba68b7690ad2b",
+    "extractor-pack/codeql-extractor.yml": "350977db453446af1081fa844e0cbdefb9fc3de7bd51b14e57938063c83b42c4",
+    "extractor-pack/ucode.dbscheme.stats": "90d6939a021bb0cb71fd491117d1ecb4c7968fb5a80262ddc44975a75bd97767",
+    "extractor-pack/tools/export_setblock_detect.py": "a970c5c3350677ada8cfb5a342050f214e6e5eb5678313f01efd38115192ccd6",
+    "extractor-pack/tools/pre-finalize.sh": "0636921f55488cbf1934543fe8ea113ea240817d15a0cda56e6e16a00743c4b6",
+    "extractor-pack/tools/index-files.cmd": "1867afda8666ae3871bc534ad1a80c117f68219dadf54e6df022ce17b29f004d",
+    "extractor-pack/tools/autobuild.sh": "190d821560f9be595a1ba0a10361d3071168f4e7e6db985478fe79ee8fc522d3",
+    "extractor-pack/tools/qltest.sh": "ffda5bdd6df90e343e431b801cee093d38aaece142d5c1a519b0b6f41d9e8924",
+    "extractor-pack/tools/qltest.cmd": "6c9e02e6ad51155bf7512d338f1643be7a7388fc417e52c8b71710ce47d749dd",
+    "extractor-pack/tools/autobuild.cmd": "f93d73fcc4669fab57cfa3391f2f42e19028d2576503a93ca673f23322dd7272",
+    "extractor-pack/tools/pre-finalize.cmd": "9142cc3503e20cc507536c6c132be55d98fdd6d2b7bb19e84d5eb651fb7b6903",
+    "extractor-pack/tools/index-files.sh": "1fc6de73c0ea285d944d0e9ab11beec34342808198a5716ce2d51e5c29fd995e",
+    "extractor-pack/downgrades/qlpack.yml": "52302981ad5f13e5344cbd3927037b3546939d7ce93b8b450c59a22cbaff15bf",
+    "extractor-pack/tools/osx64/extractor": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2"
+  },
+  "free_disk_bytes": 138432098304,
+  "home_set_by_run": false,
+  "database": "<MATRIX>/database/db",
+  "tmpdir": "<MATRIX>/tmp",
+  "common_cache": "<MATRIX>/common-cache"
+}

@@ -1,0 +1,28 @@
+Resolving data extensions.
+Finished resolving data extensions.
+Merging data extensions.
+Finished merging data extensions.
+WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.
+Compiling query plan for <RUN>/producer/ql/src/m4/SetBlockDetectEffectTable.ql.
+[1/1] Found in cache: <RUN>/producer/ql/src/m4/SetBlockDetectEffectTable.ql.
+Starting evaluation of lucas-albers-lz4/ucode-queries/m4/SetBlockDetectEffectTable.ql.
+[1/1 eval 74ms] Evaluation done; writing results to <RUN>/producer-run/controls/effects.bqrs.
+Shutting down query evaluator.
+        1.12 real         2.47 user         0.15 sys
+           199458816  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               27928  page reclaims
+                  95  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   8  signals received
+                  35  voluntary context switches
+               17633  involuntary context switches
+            39435274  instructions retired
+            15894488  cycles elapsed
+             1671456  peak memory footprint

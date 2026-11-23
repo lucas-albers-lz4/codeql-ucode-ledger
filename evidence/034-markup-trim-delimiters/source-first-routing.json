@@ -1,0 +1,89 @@
+{
+  "expected_routing_counts": {
+    "input_count": 6,
+    "plain_count": 0,
+    "markup_count": 6,
+    "markup_inconclusive_count": 6,
+    "uncertain_count": 0,
+    "excluded_count": 0,
+    "duplicate_input_count": 0
+  },
+  "expected_successful_file_identities": {
+    "usr/share/ucode/controls/plain.ut": 1,
+    "usr/share/ucode/controls/trim-open.ut": 1,
+    "usr/share/ucode/controls/trim-close.ut": 1,
+    "usr/share/ucode/controls/trim-both.ut": 1,
+    "usr/share/ucode/controls/trim-member.ut": 1,
+    "usr/share/ucode/controls/ordinary-member.ut": 1
+  },
+  "expected_extraction_errors": [],
+  "expected_file_located_diagnostics": [],
+  "files": [
+    {
+      "path": "usr/share/ucode/controls/plain.ut",
+      "sha256": "557c70f3707a0f1f22bd06e189c8d303ee99542d2767eb59226ac8010c8220da",
+      "size_bytes": 11,
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      }
+    },
+    {
+      "path": "usr/share/ucode/controls/trim-open.ut",
+      "sha256": "fbeecce989e50bb9bd205afd29f8e717469dc977e57131f4ffa24378a5833e49",
+      "size_bytes": 12,
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      }
+    },
+    {
+      "path": "usr/share/ucode/controls/trim-close.ut",
+      "sha256": "afde724719c5f9bf3204a47b13d9028a3a0bb0ac60008827bf72602551da519a",
+      "size_bytes": 12,
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      }
+    },
+    {
+      "path": "usr/share/ucode/controls/trim-both.ut",
+      "sha256": "d897ab97d9025f6eacaa460015d71757746888efacef854955b31e3ac283f03f",
+      "size_bytes": 13,
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      }
+    },
+    {
+      "path": "usr/share/ucode/controls/trim-member.ut",
+      "sha256": "2b1650e98fcd52c9e18a10cfe5ad5016031ea4aae0ce412a309f4ef02858005d",
+      "size_bytes": 15,
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      }
+    },
+    {
+      "path": "usr/share/ucode/controls/ordinary-member.ut",
+      "sha256": "52e70b638218d4e928e4bac51ee701cc357443b54faa6d63dcefca56184fb1c4",
+      "size_bytes": 13,
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      }
+    }
+  ]
+}

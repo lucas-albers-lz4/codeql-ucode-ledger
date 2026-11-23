@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "<PYTHON>",
+    "-B",
+    "<PREP>/run-consumer.py",
+    "<RUN>/consumer",
+    "<RUN>/producer-run/typed.json",
+    "<RUN>/producer-run/main/src",
+    "<RUN>/producer-run/main/effects.csv",
+    "<RUN>/consumer-run"
+  ],
+  "cwd": "<LEDGER>",
+  "exit": 0,
+  "elapsed_seconds": 0.5578163329992094
+}

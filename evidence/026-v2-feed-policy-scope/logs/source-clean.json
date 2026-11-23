@@ -1,0 +1,1 @@
+{"argv":["git","-C","<CONSUMER_SOURCE>","status","--porcelain=v1"],"cwd":"<RUN>","elapsed_seconds":0.011782458001107443,"exit":0,"stderr_digest":"sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","stdout_digest":"sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}

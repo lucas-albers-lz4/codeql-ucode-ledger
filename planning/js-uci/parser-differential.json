@@ -1,0 +1,90 @@
+{
+  "planning_only": true,
+  "scope": {
+    "project": "OpenWrt consumer JS profile",
+    "manifest_path": "ql-js/manifest.json",
+    "manifest_sha256": "3161274241e086d121fd5122e0dfe0c5fb5d97872710d79c87f86244be2b2627",
+    "source_file_count": 88,
+    "source_tree": "LuCI",
+    "source_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "consumer_commit": "48c6a65b7578234644c6b06780fc82ccf6d61a8b",
+    "consumer_lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a"
+  },
+  "implementation": {
+    "parser": "@babel/parser 7.28.5",
+    "parser_package_sha256": "06e89556fea2851b071797c63c0565725ba8b889014a07ac6ad62dbde52157de",
+    "parser_entry_sha256": "4fad5d076afb8c346159a06bb942d6e14c6167d590082b7c3bdebd4c108af201",
+    "archive_sha256": "d69b0c78b14cfef7d9ac3e933473839ba61080fdc8c9f0a787ac8bf0ea18bea7",
+    "inventory_script_sha256": "3068a4f2af2367e256347578e81bd98639eb853967fb5baee1d6f20b51da45fb",
+    "node": "v26.13.1",
+    "npm": "11.20.0"
+  },
+  "comparison": {
+    "babel_candidates": 576,
+    "babel_parsed_files": 88,
+    "babel_failures": 0,
+    "acorn": "8.15.0",
+    "acorn_candidates": 573,
+    "tuple_key": [
+      "path",
+      "inclusive_span",
+      "receiver_form",
+      "kind",
+      "property"
+    ],
+    "acorn_only": 0,
+    "babel_only": 3,
+    "babel_only_rows": [
+      {
+        "path": "modules/luci-base/htdocs/luci-static/resources/tools/views.js",
+        "source_sha256": "ccfcae2d0917a3fd44c54dbba3f57cec526a508e20c52e8e280f89b0ee4202a7",
+        "span_1based_inclusive": [
+          75,
+          16,
+          75,
+          22
+        ],
+        "receiver_form": "bare",
+        "kind": "dot",
+        "property": "get",
+        "source_expression": "uci.get"
+      },
+      {
+        "path": "modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js",
+        "source_sha256": "4001ac4a10e1cdbe7ff3fb5a883d47dc203e81cc40d47254c3717832e99f2a75",
+        "span_1based_inclusive": [
+          53,
+          10,
+          53,
+          16
+        ],
+        "receiver_form": "bare",
+        "kind": "dot",
+        "property": "get",
+        "source_expression": "uci.get"
+      },
+      {
+        "path": "modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js",
+        "source_sha256": "7a79896707f11d126b264ce3a14de034f550c5699786a04bfdc24911c78164dc",
+        "span_1based_inclusive": [
+          50,
+          13,
+          50,
+          19
+        ],
+        "receiver_form": "bare",
+        "kind": "dot",
+        "property": "get",
+        "source_expression": "uci.get"
+      }
+    ]
+  },
+  "interpretation": "The three Babel-only rows are nonoptional uci.get member accesses followed by an optional .replaceAll access on the call result. Acorn traversal appears to propagate optional-chain exclusion to descendants and omit the enclosing uci.get. This is a parser differential only. The proposal excludes optional-chain accesses, but whether the exclusion is per access or whole chain expression is unresolved; CodeQL AST mapping and extraction/query behavior are unverified.",
+  "limits": [
+    "Not a complete CodeQL source oracle.",
+    "No CodeQL run or query output inspection.",
+    "Computed property static-name evaluation is finite and not a general evaluator; the exact contract boundary for all statically reducible computed expressions remains unresolved.",
+    "No runtime, binding, invocation, configuration-effect, authorization, security, or reachability conclusion."
+  ],
+  "output_sha256": "0cf4d6dbb8ca4eb09efca2f6bbf56f058024a70968bc08f0d8149c3e1c40d4da"
+}

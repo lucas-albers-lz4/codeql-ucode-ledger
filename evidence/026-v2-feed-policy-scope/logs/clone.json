@@ -1,0 +1,1 @@
+{"argv":["git","clone","--no-hardlinks","--no-checkout","<CONSUMER_SOURCE>","<RUN>/consumer"],"cwd":"<RUN>","elapsed_seconds":0.021862917001271853,"exit":0,"stderr_digest":"sha256:86c0073d34484de35ec6e303315d2240262fc378bebfae619fcfe65fd5c4af78","stdout_digest":"sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}

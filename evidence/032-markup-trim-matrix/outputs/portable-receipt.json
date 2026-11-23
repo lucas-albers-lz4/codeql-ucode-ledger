@@ -1,0 +1,955 @@
+{
+  "run_id": "trim-matrix-run-20261122-a",
+  "run_executed_local_date": "2026-11-23",
+  "oracle_supplement_sha256": "47250a224177148d21de6fef21c64d7dcb1ea2426e5950face0e9a9352a24263",
+  "source": {
+    "repository": "lucas-albers-lz4/codeql-ucode",
+    "sha": "dc7310d0d2fb57047aa0c5653d9a32d6876c2d81",
+    "dirty_state": "",
+    "grammar_repository": "m00qek/tree-sitter-ucode",
+    "grammar_sha": "4a243af329fae2f4ff01e0fc80133cbab8314600",
+    "grammar_dirty_state": "",
+    "input_rows": [
+      {
+        "file": "plain.ut",
+        "path": "usr/share/ucode/controls/plain.ut",
+        "source_bytes": "A {{ x }} B",
+        "size_bytes": 11,
+        "sha256": "557c70f3707a0f1f22bd06e189c8d303ee99542d2767eb59226ac8010c8220da",
+        "trailing_newline": false,
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "role": "valid syntax fixture; current implementation prediction only"
+      },
+      {
+        "file": "trim-open.ut",
+        "path": "usr/share/ucode/controls/trim-open.ut",
+        "source_bytes": "A {{- x }} B",
+        "size_bytes": 12,
+        "sha256": "fbeecce989e50bb9bd205afd29f8e717469dc977e57131f4ffa24378a5833e49",
+        "trailing_newline": false,
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "role": "valid syntax fixture; current implementation prediction only"
+      },
+      {
+        "file": "trim-close.ut",
+        "path": "usr/share/ucode/controls/trim-close.ut",
+        "source_bytes": "A {{ x -}} B",
+        "size_bytes": 12,
+        "sha256": "afde724719c5f9bf3204a47b13d9028a3a0bb0ac60008827bf72602551da519a",
+        "trailing_newline": false,
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "role": "valid syntax fixture; current implementation prediction only"
+      },
+      {
+        "file": "trim-both.ut",
+        "path": "usr/share/ucode/controls/trim-both.ut",
+        "source_bytes": "A {{- x -}} B",
+        "size_bytes": 13,
+        "sha256": "d897ab97d9025f6eacaa460015d71757746888efacef854955b31e3ac283f03f",
+        "trailing_newline": false,
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "role": "valid syntax fixture; current implementation prediction only"
+      },
+      {
+        "file": "trim-member.ut",
+        "path": "usr/share/ucode/controls/trim-member.ut",
+        "source_bytes": "A {{- x.y -}} B",
+        "size_bytes": 15,
+        "sha256": "2b1650e98fcd52c9e18a10cfe5ad5016031ea4aae0ce412a309f4ef02858005d",
+        "trailing_newline": false,
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "role": "valid trim-delimiter member-expression near miss"
+      },
+      {
+        "file": "ordinary-member.ut",
+        "path": "usr/share/ucode/controls/ordinary-member.ut",
+        "source_bytes": "A {{ x.y }} B",
+        "size_bytes": 13,
+        "sha256": "52e70b638218d4e928e4bac51ee701cc357443b54faa6d63dcefca56184fb1c4",
+        "trailing_newline": false,
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "role": "valid ordinary member-expression eligible near miss"
+      }
+    ],
+    "implementation_hashes": {
+      "ql/lib/codeql/ucode/MarkupCFG.qll": "5c65800cdc98c2c6aba5d71420b4f7fbfc330f0eb65ac2a603819a5d5d15b79a",
+      "docs/markup-cfg.md": "a23bc6301d1572e1523eff7416ed0aa9c80146f43d8017b9c9671ed383b0450c",
+      "ql/lib/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+      "ql/src/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+      "scripts/clone-grammar.sh": "278e91e8ad4fcc9954b581f70e4e7dd87fe348ba4355dbc6cae6ecf6cedd6c89"
+    },
+    "query_lock_sha256": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+    "issue_57_current_check": {
+      "state": "open",
+      "assignees": [],
+      "labels": [
+        "later",
+        "deferred",
+        "dataflow"
+      ],
+      "title": "deferred: markup CFG/dataflow (separate bounded proposal)",
+      "updated_at": "2026-11-14T02:02:46Z"
+    }
+  },
+  "tools": {
+    "CodeQL": "2.27.4",
+    "executable_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+    "platform": "macOS 15.8.2 arm64, Darwin 24.6.0"
+  },
+  "pack_and_dependencies": {
+    "pack_source": "work/wave10-ast-run/packs/ucode-extractor-pack",
+    "built_at": "8375887ed14825dd59addbfd0df43616d9e684fb",
+    "used_with_producer": "0a6612fe0e66351a0ccda43ad5b51f5ef5a2724e",
+    "relevant_extractor_grammar_lock_delta_paths_to_selected_revision": [],
+    "pack_manifest_sha256": "9deb617faacc2f86f23e79a47f89042f1de7690b1d6166d26fe49cdaab9ee6e1",
+    "pack_file_count": 14,
+    "dependencies_manifest_sha256": "b08244cd403b2caf8ebc05c8481adc30cc7e5efa66d940fb69e129025727ac1c",
+    "dependency_file_count": 82,
+    "lock_versions": {
+      "codeql/controlflow": "1.0.12",
+      "codeql/dataflow": "1.1.6",
+      "codeql/regex": "1.0.12",
+      "codeql/ssa": "1.0.12",
+      "codeql/threat-models": "1.1.1",
+      "codeql/typetracking": "1.0.12",
+      "codeql/util": "1.0.12",
+      "codeql/yaml": "1.0.61"
+    }
+  },
+  "isolation": {
+    "run_owned": "source, database, output, TMPDIR, XDG_CACHE_HOME, CODEQL_UCODE_CACHE, common cache and compilation cache under <RUN>",
+    "HOME": "inherited; not set/modified; value omitted",
+    "free_disk_bytes_before_run": 141794455552,
+    "active_codeql_or_cargo_jobs_before_run": []
+  },
+  "phase_commands": {
+    "database_and_extraction": [
+      {
+        "label": "codeql-version",
+        "argv": [
+          "<CODEQL>",
+          "version"
+        ],
+        "cwd": "<LEDGER>/<RUN>",
+        "exit_status": 0,
+        "wall_seconds": 0.229822,
+        "started_utc": null,
+        "finished_utc": "2026-11-23T22:35:14.383831+00:00",
+        "stdout": "codeql-version.stdout",
+        "stderr_and_time": "codeql-version.stderr-time.txt",
+        "peak_rss_bytes": 85770240
+      },
+      {
+        "label": "database-init",
+        "argv": [
+          "<CODEQL>",
+          "database",
+          "init",
+          "<LEDGER>/<RUN>/database/db",
+          "--language=ucode",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--source-root=<LEDGER>/<RUN>/source"
+        ],
+        "cwd": "<LEDGER>/<RUN>",
+        "exit_status": 0,
+        "wall_seconds": 0.587127,
+        "started_utc": null,
+        "finished_utc": "2026-11-23T22:35:14.971289+00:00",
+        "stdout": "database-init.stdout",
+        "stderr_and_time": "database-init.stderr-time.txt",
+        "peak_rss_bytes": 122306560
+      },
+      {
+        "label": "index-files",
+        "argv": [
+          "<CODEQL>",
+          "database",
+          "index-files",
+          "<LEDGER>/<RUN>/database/db",
+          "--language=ucode",
+          "--include=**/plain.ut",
+          "--include=**/trim-open.ut",
+          "--include=**/trim-close.ut",
+          "--include=**/trim-both.ut",
+          "--include=**/trim-member.ut",
+          "--include=**/ordinary-member.ut",
+          "--working-dir=<LEDGER>/<RUN>/source",
+          "--common-caches=<LEDGER>/<RUN>/common-cache"
+        ],
+        "cwd": "<LEDGER>/<RUN>",
+        "exit_status": 0,
+        "wall_seconds": 0.659648,
+        "started_utc": null,
+        "finished_utc": "2026-11-23T22:35:15.631269+00:00",
+        "stdout": "index-files.stdout",
+        "stderr_and_time": "index-files.stderr-time.txt",
+        "peak_rss_bytes": 121978880
+      },
+      {
+        "label": "database-finalize",
+        "argv": [
+          "<CODEQL>",
+          "database",
+          "finalize",
+          "<LEDGER>/<RUN>/database/db",
+          "--common-caches=<LEDGER>/<RUN>/common-cache"
+        ],
+        "cwd": "<LEDGER>/<RUN>",
+        "exit_status": 0,
+        "wall_seconds": 1.267101,
+        "started_utc": null,
+        "finished_utc": "2026-11-23T22:35:16.898838+00:00",
+        "stdout": "database-finalize.stdout",
+        "stderr_and_time": "database-finalize.stderr-time.txt",
+        "peak_rss_bytes": 201588736
+      }
+    ],
+    "first_query_attempts": [
+      {
+        "label": "AllDiagnostics",
+        "argv": [
+          "<CODEQL>",
+          "query",
+          "run",
+          "<LEDGER>/<RUN>/producer-ql/ql/src/trim-matrix/AllDiagnostics.ql",
+          "--database=<LEDGER>/<RUN>/database/db",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack:<LEDGER>/<RUN>/producer-ql/ql/lib:<LEDGER>/<RUN>/producer-ql/ql/src",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--compilation-cache=<LEDGER>/<RUN>/cache/compilation",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2048",
+          "--output=<LEDGER>/<RUN>/output/AllDiagnostics.bqrs"
+        ],
+        "cwd": "<LEDGER>/<RUN>",
+        "exit_status": 2,
+        "wall_seconds": 0.942138,
+        "started_utc": null,
+        "finished_utc": "2026-11-23T22:35:17.841305+00:00",
+        "stdout": "AllDiagnostics.stdout",
+        "stderr_and_time": "AllDiagnostics.stderr-time.txt",
+        "peak_rss_bytes": 141099008
+      },
+      {
+        "label": "ExtractionErrors",
+        "argv": [
+          "<CODEQL>",
+          "query",
+          "run",
+          "<LEDGER>/<RUN>/producer-ql/ql/src/trim-matrix/ExtractionErrors.ql",
+          "--database=<LEDGER>/<RUN>/database/db",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack:<LEDGER>/<RUN>/producer-ql/ql/lib:<LEDGER>/<RUN>/producer-ql/ql/src",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--compilation-cache=<LEDGER>/<RUN>/cache/compilation",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2048",
+          "--output=<LEDGER>/<RUN>/output/ExtractionErrors.bqrs"
+        ],
+        "cwd": "<LEDGER>/<RUN>",
+        "exit_status": 2,
+        "wall_seconds": 0.918352,
+        "started_utc": null,
+        "finished_utc": "2026-11-23T22:35:18.759998+00:00",
+        "stdout": "ExtractionErrors.stdout",
+        "stderr_and_time": "ExtractionErrors.stderr-time.txt",
+        "peak_rss_bytes": 139804672
+      },
+      {
+        "label": "SuccessfulFiles",
+        "argv": [
+          "<CODEQL>",
+          "query",
+          "run",
+          "<LEDGER>/<RUN>/producer-ql/ql/src/trim-matrix/SuccessfulFiles.ql",
+          "--database=<LEDGER>/<RUN>/database/db",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack:<LEDGER>/<RUN>/producer-ql/ql/lib:<LEDGER>/<RUN>/producer-ql/ql/src",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--compilation-cache=<LEDGER>/<RUN>/cache/compilation",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2048",
+          "--output=<LEDGER>/<RUN>/output/SuccessfulFiles.bqrs"
+        ],
+        "cwd": "<LEDGER>/<RUN>",
+        "exit_status": 2,
+        "wall_seconds": 0.930393,
+        "started_utc": null,
+        "finished_utc": "2026-11-23T22:35:19.690742+00:00",
+        "stdout": "SuccessfulFiles.stdout",
+        "stderr_and_time": "SuccessfulFiles.stderr-time.txt",
+        "peak_rss_bytes": 140197888
+      },
+      {
+        "label": "Coverage",
+        "argv": [
+          "<CODEQL>",
+          "query",
+          "run",
+          "<LEDGER>/<RUN>/producer-ql/ql/src/trim-matrix/Coverage.ql",
+          "--database=<LEDGER>/<RUN>/database/db",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack:<LEDGER>/<RUN>/producer-ql/ql/lib:<LEDGER>/<RUN>/producer-ql/ql/src",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--compilation-cache=<LEDGER>/<RUN>/cache/compilation",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2048",
+          "--output=<LEDGER>/<RUN>/output/Coverage.bqrs"
+        ],
+        "cwd": "<LEDGER>/<RUN>",
+        "exit_status": 2,
+        "wall_seconds": 0.92439,
+        "started_utc": null,
+        "finished_utc": "2026-11-23T22:35:20.615480+00:00",
+        "stdout": "Coverage.stdout",
+        "stderr_and_time": "Coverage.stderr-time.txt",
+        "peak_rss_bytes": 143015936
+      },
+      {
+        "label": "AstIdentities",
+        "argv": [
+          "<CODEQL>",
+          "query",
+          "run",
+          "<LEDGER>/<RUN>/producer-ql/ql/src/trim-matrix/AstIdentities.ql",
+          "--database=<LEDGER>/<RUN>/database/db",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack:<LEDGER>/<RUN>/producer-ql/ql/lib:<LEDGER>/<RUN>/producer-ql/ql/src",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--compilation-cache=<LEDGER>/<RUN>/cache/compilation",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2048",
+          "--output=<LEDGER>/<RUN>/output/AstIdentities.bqrs"
+        ],
+        "cwd": "<LEDGER>/<RUN>",
+        "exit_status": 2,
+        "wall_seconds": 0.919908,
+        "started_utc": null,
+        "finished_utc": "2026-11-23T22:35:21.535803+00:00",
+        "stdout": "AstIdentities.stdout",
+        "stderr_and_time": "AstIdentities.stderr-time.txt",
+        "peak_rss_bytes": 141312000
+      },
+      {
+        "label": "TagFields",
+        "argv": [
+          "<CODEQL>",
+          "query",
+          "run",
+          "<LEDGER>/<RUN>/producer-ql/ql/src/trim-matrix/TagFields.ql",
+          "--database=<LEDGER>/<RUN>/database/db",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack:<LEDGER>/<RUN>/producer-ql/ql/lib:<LEDGER>/<RUN>/producer-ql/ql/src",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--compilation-cache=<LEDGER>/<RUN>/cache/compilation",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2048",
+          "--output=<LEDGER>/<RUN>/output/TagFields.bqrs"
+        ],
+        "cwd": "<LEDGER>/<RUN>",
+        "exit_status": 2,
+        "wall_seconds": 0.910997,
+        "started_utc": null,
+        "finished_utc": "2026-11-23T22:35:22.447406+00:00",
+        "stdout": "TagFields.stdout",
+        "stderr_and_time": "TagFields.stderr-time.txt",
+        "peak_rss_bytes": 142344192
+      },
+      {
+        "label": "MemberFields",
+        "argv": [
+          "<CODEQL>",
+          "query",
+          "run",
+          "<LEDGER>/<RUN>/producer-ql/ql/src/trim-matrix/MemberFields.ql",
+          "--database=<LEDGER>/<RUN>/database/db",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack:<LEDGER>/<RUN>/producer-ql/ql/lib:<LEDGER>/<RUN>/producer-ql/ql/src",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--compilation-cache=<LEDGER>/<RUN>/cache/compilation",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2048",
+          "--output=<LEDGER>/<RUN>/output/MemberFields.bqrs"
+        ],
+        "cwd": "<LEDGER>/<RUN>",
+        "exit_status": 2,
+        "wall_seconds": 0.925776,
+        "started_utc": null,
+        "finished_utc": "2026-11-23T22:35:23.373566+00:00",
+        "stdout": "MemberFields.stdout",
+        "stderr_and_time": "MemberFields.stderr-time.txt",
+        "peak_rss_bytes": 140591104
+      },
+      {
+        "label": "Nodes",
+        "argv": [
+          "<CODEQL>",
+          "query",
+          "run",
+          "<LEDGER>/<RUN>/producer-ql/ql/src/trim-matrix/Nodes.ql",
+          "--database=<LEDGER>/<RUN>/database/db",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack:<LEDGER>/<RUN>/producer-ql/ql/lib:<LEDGER>/<RUN>/producer-ql/ql/src",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--compilation-cache=<LEDGER>/<RUN>/cache/compilation",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2048",
+          "--output=<LEDGER>/<RUN>/output/Nodes.bqrs"
+        ],
+        "cwd": "<LEDGER>/<RUN>",
+        "exit_status": 2,
+        "wall_seconds": 0.92402,
+        "started_utc": null,
+        "finished_utc": "2026-11-23T22:35:24.297951+00:00",
+        "stdout": "Nodes.stdout",
+        "stderr_and_time": "Nodes.stderr-time.txt",
+        "peak_rss_bytes": 141639680
+      },
+      {
+        "label": "Edges",
+        "argv": [
+          "<CODEQL>",
+          "query",
+          "run",
+          "<LEDGER>/<RUN>/producer-ql/ql/src/trim-matrix/Edges.ql",
+          "--database=<LEDGER>/<RUN>/database/db",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack:<LEDGER>/<RUN>/producer-ql/ql/lib:<LEDGER>/<RUN>/producer-ql/ql/src",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--compilation-cache=<LEDGER>/<RUN>/cache/compilation",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2048",
+          "--output=<LEDGER>/<RUN>/output/Edges.bqrs"
+        ],
+        "cwd": "<LEDGER>/<RUN>",
+        "exit_status": 2,
+        "wall_seconds": 0.959715,
+        "started_utc": null,
+        "finished_utc": "2026-11-23T22:35:25.258029+00:00",
+        "stdout": "Edges.stdout",
+        "stderr_and_time": "Edges.stderr-time.txt",
+        "peak_rss_bytes": 140673024
+      }
+    ],
+    "successful_retry_set": [
+      {
+        "label": "AllDiagnostics-retry-07",
+        "argv": [
+          "<CODEQL>",
+          "query",
+          "run",
+          "ql/src/trim-matrix/AllDiagnostics.ql",
+          "--database=<LEDGER>/<RUN>/database/db",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack:<LEDGER>/<RUN>/producer-ql/ql/lib:<LEDGER>/<RUN>/producer-ql/ql/src",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--compilation-cache=<LEDGER>/<RUN>/cache/compilation",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2048",
+          "--output=<LEDGER>/<RUN>/output/AllDiagnostics-retry-07.bqrs"
+        ],
+        "cwd": "<LEDGER>/<QUERY_ROOT>",
+        "exit_status": 0,
+        "wall_seconds": 1.180176,
+        "started_utc": "2026-11-23T22:39:49.110332+00:00",
+        "finished_utc": "2026-11-23T22:39:50.290858+00:00",
+        "stdout": "AllDiagnostics-retry-07.stdout",
+        "stderr_and_time": "AllDiagnostics-retry-07.stderr-time.txt",
+        "peak_rss_bytes": 192217088
+      },
+      {
+        "label": "AllDiagnostics-retry-07-decode",
+        "argv": [
+          "<CODEQL>",
+          "bqrs",
+          "decode",
+          "--format=csv",
+          "--output=<LEDGER>/<RUN>/output/AllDiagnostics-retry-07.csv",
+          "<LEDGER>/<RUN>/output/AllDiagnostics-retry-07.bqrs"
+        ],
+        "cwd": "<LEDGER>/<QUERY_ROOT>",
+        "exit_status": 0,
+        "wall_seconds": 0.227396,
+        "started_utc": "2026-11-23T22:39:50.291024+00:00",
+        "finished_utc": "2026-11-23T22:39:50.518654+00:00",
+        "stdout": "AllDiagnostics-retry-07-decode.stdout",
+        "stderr_and_time": "AllDiagnostics-retry-07-decode.stderr-time.txt",
+        "peak_rss_bytes": 87261184
+      },
+      {
+        "label": "ExtractionErrors-retry-07",
+        "argv": [
+          "<CODEQL>",
+          "query",
+          "run",
+          "ql/src/trim-matrix/ExtractionErrors.ql",
+          "--database=<LEDGER>/<RUN>/database/db",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack:<LEDGER>/<RUN>/producer-ql/ql/lib:<LEDGER>/<RUN>/producer-ql/ql/src",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--compilation-cache=<LEDGER>/<RUN>/cache/compilation",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2048",
+          "--output=<LEDGER>/<RUN>/output/ExtractionErrors-retry-07.bqrs"
+        ],
+        "cwd": "<LEDGER>/<QUERY_ROOT>",
+        "exit_status": 0,
+        "wall_seconds": 1.544287,
+        "started_utc": "2026-11-23T22:39:50.518840+00:00",
+        "finished_utc": "2026-11-23T22:39:52.063403+00:00",
+        "stdout": "ExtractionErrors-retry-07.stdout",
+        "stderr_and_time": "ExtractionErrors-retry-07.stderr-time.txt",
+        "peak_rss_bytes": 314916864
+      },
+      {
+        "label": "ExtractionErrors-retry-07-decode",
+        "argv": [
+          "<CODEQL>",
+          "bqrs",
+          "decode",
+          "--format=csv",
+          "--output=<LEDGER>/<RUN>/output/ExtractionErrors-retry-07.csv",
+          "<LEDGER>/<RUN>/output/ExtractionErrors-retry-07.bqrs"
+        ],
+        "cwd": "<LEDGER>/<QUERY_ROOT>",
+        "exit_status": 0,
+        "wall_seconds": 0.233199,
+        "started_utc": "2026-11-23T22:39:52.063575+00:00",
+        "finished_utc": "2026-11-23T22:39:52.297024+00:00",
+        "stdout": "ExtractionErrors-retry-07-decode.stdout",
+        "stderr_and_time": "ExtractionErrors-retry-07-decode.stderr-time.txt",
+        "peak_rss_bytes": 87064576
+      },
+      {
+        "label": "SuccessfulFiles-retry-07",
+        "argv": [
+          "<CODEQL>",
+          "query",
+          "run",
+          "ql/src/trim-matrix/SuccessfulFiles.ql",
+          "--database=<LEDGER>/<RUN>/database/db",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack:<LEDGER>/<RUN>/producer-ql/ql/lib:<LEDGER>/<RUN>/producer-ql/ql/src",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--compilation-cache=<LEDGER>/<RUN>/cache/compilation",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2048",
+          "--output=<LEDGER>/<RUN>/output/SuccessfulFiles-retry-07.bqrs"
+        ],
+        "cwd": "<LEDGER>/<QUERY_ROOT>",
+        "exit_status": 0,
+        "wall_seconds": 1.559766,
+        "started_utc": "2026-11-23T22:39:52.297235+00:00",
+        "finished_utc": "2026-11-23T22:39:53.857231+00:00",
+        "stdout": "SuccessfulFiles-retry-07.stdout",
+        "stderr_and_time": "SuccessfulFiles-retry-07.stderr-time.txt",
+        "peak_rss_bytes": 305250304
+      },
+      {
+        "label": "SuccessfulFiles-retry-07-decode",
+        "argv": [
+          "<CODEQL>",
+          "bqrs",
+          "decode",
+          "--format=csv",
+          "--output=<LEDGER>/<RUN>/output/SuccessfulFiles-retry-07.csv",
+          "<LEDGER>/<RUN>/output/SuccessfulFiles-retry-07.bqrs"
+        ],
+        "cwd": "<LEDGER>/<QUERY_ROOT>",
+        "exit_status": 0,
+        "wall_seconds": 0.226565,
+        "started_utc": "2026-11-23T22:39:53.857391+00:00",
+        "finished_utc": "2026-11-23T22:39:54.084190+00:00",
+        "stdout": "SuccessfulFiles-retry-07-decode.stdout",
+        "stderr_and_time": "SuccessfulFiles-retry-07-decode.stderr-time.txt",
+        "peak_rss_bytes": 87179264
+      },
+      {
+        "label": "Coverage-retry-07",
+        "argv": [
+          "<CODEQL>",
+          "query",
+          "run",
+          "ql/src/trim-matrix/Coverage.ql",
+          "--database=<LEDGER>/<RUN>/database/db",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack:<LEDGER>/<RUN>/producer-ql/ql/lib:<LEDGER>/<RUN>/producer-ql/ql/src",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--compilation-cache=<LEDGER>/<RUN>/cache/compilation",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2048",
+          "--output=<LEDGER>/<RUN>/output/Coverage-retry-07.bqrs"
+        ],
+        "cwd": "<LEDGER>/<QUERY_ROOT>",
+        "exit_status": 0,
+        "wall_seconds": 2.063442,
+        "started_utc": "2026-11-23T22:39:54.084348+00:00",
+        "finished_utc": "2026-11-23T22:39:56.148015+00:00",
+        "stdout": "Coverage-retry-07.stdout",
+        "stderr_and_time": "Coverage-retry-07.stderr-time.txt",
+        "peak_rss_bytes": 413253632
+      },
+      {
+        "label": "Coverage-retry-07-decode",
+        "argv": [
+          "<CODEQL>",
+          "bqrs",
+          "decode",
+          "--format=csv",
+          "--output=<LEDGER>/<RUN>/output/Coverage-retry-07.csv",
+          "<LEDGER>/<RUN>/output/Coverage-retry-07.bqrs"
+        ],
+        "cwd": "<LEDGER>/<QUERY_ROOT>",
+        "exit_status": 0,
+        "wall_seconds": 0.241203,
+        "started_utc": "2026-11-23T22:39:56.148199+00:00",
+        "finished_utc": "2026-11-23T22:39:56.389636+00:00",
+        "stdout": "Coverage-retry-07-decode.stdout",
+        "stderr_and_time": "Coverage-retry-07-decode.stderr-time.txt",
+        "peak_rss_bytes": 87719936
+      },
+      {
+        "label": "AstIdentities-retry-07",
+        "argv": [
+          "<CODEQL>",
+          "query",
+          "run",
+          "ql/src/trim-matrix/AstIdentities.ql",
+          "--database=<LEDGER>/<RUN>/database/db",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack:<LEDGER>/<RUN>/producer-ql/ql/lib:<LEDGER>/<RUN>/producer-ql/ql/src",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--compilation-cache=<LEDGER>/<RUN>/cache/compilation",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2048",
+          "--output=<LEDGER>/<RUN>/output/AstIdentities-retry-07.bqrs"
+        ],
+        "cwd": "<LEDGER>/<QUERY_ROOT>",
+        "exit_status": 0,
+        "wall_seconds": 2.2144,
+        "started_utc": "2026-11-23T22:39:56.389807+00:00",
+        "finished_utc": "2026-11-23T22:39:58.604435+00:00",
+        "stdout": "AstIdentities-retry-07.stdout",
+        "stderr_and_time": "AstIdentities-retry-07.stderr-time.txt",
+        "peak_rss_bytes": 414973952
+      },
+      {
+        "label": "AstIdentities-retry-07-decode",
+        "argv": [
+          "<CODEQL>",
+          "bqrs",
+          "decode",
+          "--format=csv",
+          "--output=<LEDGER>/<RUN>/output/AstIdentities-retry-07.csv",
+          "<LEDGER>/<RUN>/output/AstIdentities-retry-07.bqrs"
+        ],
+        "cwd": "<LEDGER>/<QUERY_ROOT>",
+        "exit_status": 0,
+        "wall_seconds": 0.22376,
+        "started_utc": "2026-11-23T22:39:58.604606+00:00",
+        "finished_utc": "2026-11-23T22:39:58.828585+00:00",
+        "stdout": "AstIdentities-retry-07-decode.stdout",
+        "stderr_and_time": "AstIdentities-retry-07-decode.stderr-time.txt",
+        "peak_rss_bytes": 87179264
+      },
+      {
+        "label": "TagFields-retry-07",
+        "argv": [
+          "<CODEQL>",
+          "query",
+          "run",
+          "ql/src/trim-matrix/TagFields.ql",
+          "--database=<LEDGER>/<RUN>/database/db",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack:<LEDGER>/<RUN>/producer-ql/ql/lib:<LEDGER>/<RUN>/producer-ql/ql/src",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--compilation-cache=<LEDGER>/<RUN>/cache/compilation",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2048",
+          "--output=<LEDGER>/<RUN>/output/TagFields-retry-07.bqrs"
+        ],
+        "cwd": "<LEDGER>/<QUERY_ROOT>",
+        "exit_status": 0,
+        "wall_seconds": 2.143368,
+        "started_utc": "2026-11-23T22:39:58.828753+00:00",
+        "finished_utc": "2026-11-23T22:40:00.972360+00:00",
+        "stdout": "TagFields-retry-07.stdout",
+        "stderr_and_time": "TagFields-retry-07.stderr-time.txt",
+        "peak_rss_bytes": 386891776
+      },
+      {
+        "label": "TagFields-retry-07-decode",
+        "argv": [
+          "<CODEQL>",
+          "bqrs",
+          "decode",
+          "--format=csv",
+          "--output=<LEDGER>/<RUN>/output/TagFields-retry-07.csv",
+          "<LEDGER>/<RUN>/output/TagFields-retry-07.bqrs"
+        ],
+        "cwd": "<LEDGER>/<QUERY_ROOT>",
+        "exit_status": 0,
+        "wall_seconds": 0.230445,
+        "started_utc": "2026-11-23T22:40:00.972537+00:00",
+        "finished_utc": "2026-11-23T22:40:01.203249+00:00",
+        "stdout": "TagFields-retry-07-decode.stdout",
+        "stderr_and_time": "TagFields-retry-07-decode.stderr-time.txt",
+        "peak_rss_bytes": 87375872
+      },
+      {
+        "label": "MemberFields-retry-07",
+        "argv": [
+          "<CODEQL>",
+          "query",
+          "run",
+          "ql/src/trim-matrix/MemberFields.ql",
+          "--database=<LEDGER>/<RUN>/database/db",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack:<LEDGER>/<RUN>/producer-ql/ql/lib:<LEDGER>/<RUN>/producer-ql/ql/src",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--compilation-cache=<LEDGER>/<RUN>/cache/compilation",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2048",
+          "--output=<LEDGER>/<RUN>/output/MemberFields-retry-07.bqrs"
+        ],
+        "cwd": "<LEDGER>/<QUERY_ROOT>",
+        "exit_status": 2,
+        "wall_seconds": 1.343238,
+        "started_utc": "2026-11-23T22:40:01.203462+00:00",
+        "finished_utc": "2026-11-23T22:40:02.546943+00:00",
+        "stdout": "MemberFields-retry-07.stdout",
+        "stderr_and_time": "MemberFields-retry-07.stderr-time.txt",
+        "peak_rss_bytes": 252755968
+      },
+      {
+        "label": "Nodes-retry-07",
+        "argv": [
+          "<CODEQL>",
+          "query",
+          "run",
+          "ql/src/trim-matrix/Nodes.ql",
+          "--database=<LEDGER>/<RUN>/database/db",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack:<LEDGER>/<RUN>/producer-ql/ql/lib:<LEDGER>/<RUN>/producer-ql/ql/src",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--compilation-cache=<LEDGER>/<RUN>/cache/compilation",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2048",
+          "--output=<LEDGER>/<RUN>/output/Nodes-retry-07.bqrs"
+        ],
+        "cwd": "<LEDGER>/<QUERY_ROOT>",
+        "exit_status": 0,
+        "wall_seconds": 2.304206,
+        "started_utc": "2026-11-23T22:40:02.547157+00:00",
+        "finished_utc": "2026-11-23T22:40:04.851631+00:00",
+        "stdout": "Nodes-retry-07.stdout",
+        "stderr_and_time": "Nodes-retry-07.stderr-time.txt",
+        "peak_rss_bytes": 421412864
+      },
+      {
+        "label": "Nodes-retry-07-decode",
+        "argv": [
+          "<CODEQL>",
+          "bqrs",
+          "decode",
+          "--format=csv",
+          "--output=<LEDGER>/<RUN>/output/Nodes-retry-07.csv",
+          "<LEDGER>/<RUN>/output/Nodes-retry-07.bqrs"
+        ],
+        "cwd": "<LEDGER>/<QUERY_ROOT>",
+        "exit_status": 0,
+        "wall_seconds": 0.238967,
+        "started_utc": "2026-11-23T22:40:04.851818+00:00",
+        "finished_utc": "2026-11-23T22:40:05.090991+00:00",
+        "stdout": "Nodes-retry-07-decode.stdout",
+        "stderr_and_time": "Nodes-retry-07-decode.stderr-time.txt",
+        "peak_rss_bytes": 87572480
+      },
+      {
+        "label": "Edges-retry-07",
+        "argv": [
+          "<CODEQL>",
+          "query",
+          "run",
+          "ql/src/trim-matrix/Edges.ql",
+          "--database=<LEDGER>/<RUN>/database/db",
+          "--search-path=<LEDGER>/<RUN>/pack/ucode-extractor-pack:<LEDGER>/<RUN>/producer-ql/ql/lib:<LEDGER>/<RUN>/producer-ql/ql/src",
+          "--common-caches=<LEDGER>/<RUN>/common-cache",
+          "--compilation-cache=<LEDGER>/<RUN>/cache/compilation",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2048",
+          "--output=<LEDGER>/<RUN>/output/Edges-retry-07.bqrs"
+        ],
+        "cwd": "<LEDGER>/<QUERY_ROOT>",
+        "exit_status": 0,
+        "wall_seconds": 2.798467,
+        "started_utc": "2026-11-23T22:40:05.091184+00:00",
+        "finished_utc": "2026-11-23T22:40:07.889872+00:00",
+        "stdout": "Edges-retry-07.stdout",
+        "stderr_and_time": "Edges-retry-07.stderr-time.txt",
+        "peak_rss_bytes": 458964992
+      },
+      {
+        "label": "Edges-retry-07-decode",
+        "argv": [
+          "<CODEQL>",
+          "bqrs",
+          "decode",
+          "--format=csv",
+          "--output=<LEDGER>/<RUN>/output/Edges-retry-07.csv",
+          "<LEDGER>/<RUN>/output/Edges-retry-07.bqrs"
+        ],
+        "cwd": "<LEDGER>/<QUERY_ROOT>",
+        "exit_status": 0,
+        "wall_seconds": 0.240203,
+        "started_utc": "2026-11-23T22:40:07.890061+00:00",
+        "finished_utc": "2026-11-23T22:40:08.130492+00:00",
+        "stdout": "Edges-retry-07-decode.stdout",
+        "stderr_and_time": "Edges-retry-07-decode.stderr-time.txt",
+        "peak_rss_bytes": 87179264
+      }
+    ],
+    "retry_caveat": "Some manual retries lack structured top-level argv records; MemberFields retry-09 decode has no timed log. Do not claim complete exact-command/timing coverage."
+  },
+  "observed": {
+    "routing": {
+      "input_count": 6,
+      "plain_count": 0,
+      "markup_count": 6,
+      "markup_inconclusive_count": 6,
+      "uncertain_count": 0,
+      "excluded_count": 0,
+      "duplicate_input_count": 0,
+      "decisions": [
+        {
+          "path": "<RUN>/source/usr/share/ucode/controls/ordinary-member.ut",
+          "installed_path": "usr/share/ucode/controls/ordinary-member.ut",
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        {
+          "path": "<RUN>/source/usr/share/ucode/controls/plain.ut",
+          "installed_path": "usr/share/ucode/controls/plain.ut",
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        {
+          "path": "<RUN>/source/usr/share/ucode/controls/trim-both.ut",
+          "installed_path": "usr/share/ucode/controls/trim-both.ut",
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        {
+          "path": "<RUN>/source/usr/share/ucode/controls/trim-close.ut",
+          "installed_path": "usr/share/ucode/controls/trim-close.ut",
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        {
+          "path": "<RUN>/source/usr/share/ucode/controls/trim-member.ut",
+          "installed_path": "usr/share/ucode/controls/trim-member.ut",
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        {
+          "path": "<RUN>/source/usr/share/ucode/controls/trim-open.ut",
+          "installed_path": "usr/share/ucode/controls/trim-open.ut",
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        }
+      ]
+    },
+    "successful_files": 6,
+    "extraction_error_rows": 0,
+    "file_located_diagnostic_rows": 0,
+    "unlocated_cli_telemetry_events": 3,
+    "ast_expected_identities": 46,
+    "ast_actual_rows": 48,
+    "ast_expected_identity_matches": 46,
+    "extra_rows_outside_matrix_scope": [
+      {
+        "class": "ReservedWord",
+        "text": ".",
+        "count": 2
+      }
+    ],
+    "coverage": {
+      "plain.ut": "covered",
+      "trim-open.ut": "unsupported",
+      "trim-close.ut": "unsupported",
+      "trim-both.ut": "unsupported",
+      "trim-member.ut": "unsupported",
+      "ordinary-member.ut": "unsupported"
+    },
+    "graph_nodes": {
+      "plain.ut": 6,
+      "trim-open.ut": 0,
+      "trim-close.ut": 0,
+      "trim-both.ut": 0,
+      "trim-member.ut": 0,
+      "ordinary-member.ut": 0
+    },
+    "graph_edges": {
+      "plain.ut": 5,
+      "trim-open.ut": 0,
+      "trim-close.ut": 0,
+      "trim-both.ut": 0,
+      "trim-member.ut": 0,
+      "ordinary-member.ut": 0
+    },
+    "all_entity_and_edge_multiplicities": 1,
+    "oracle_assertions": 11,
+    "oracle_assertions_pass": true
+  },
+  "limits": {
+    "scope": "Current implementation baseline only. Option B is an implementation prediction, not a policy decision.",
+    "successful_files_query": "Scoped to the six expected basenames; not a producer-wide file inventory.",
+    "diagnostics": "The QL queries establish zero file-located Diagnostic/ExtractionError rows. Three unlocated CodeQL CLI telemetry events are preserved separately.",
+    "consumer": "Not run.",
+    "semantics": "No inference about trimming/rendering/runtime, reachability, expression evaluation, flow, security or general CFG completeness."
+  }
+}

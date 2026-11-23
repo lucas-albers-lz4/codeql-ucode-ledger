@@ -1,0 +1,30 @@
+{
+  "consumer_commit": "48c6a65b7578234644c6b06780fc82ccf6d61a8b",
+  "input_sha256": "5c619d5aa3566c5296080b0a9be7072b38d6eb7a98eae647d68c5dcf09b2b59b",
+  "before": {
+    "reports/m4-block-device-exec.json": "f81718031bdfe53fdde5ee0641683a7dc564329d2c655f85fc5c8eb629b95373",
+    "reports/handler_effects.json": "2644d1187afaaf126afa71572cc980afbecd3f22592057809951491f90a436a0",
+    "policy/grants.json": "b34cdc9b9403c0ca21761ca340d6840e2b23f522486c4d6f7e139a4fa77b12bc",
+    "policy/policy_decisions.json": "abc44873c15a0a682e8527d20547a8cc9335e263696dee5749dfada6e2239f31"
+  },
+  "after": {
+    "reports/m4-block-device-exec.json": "660e12712928a99b22e0a8c80247bcd63b54967e465ed3fa9b28354593045a6e",
+    "reports/handler_effects.json": "d55e0a799e916f8728b9bb34a9689b81f070dbe25eceddd2db9c0cc3b4417fab",
+    "policy/grants.json": "b34cdc9b9403c0ca21761ca340d6840e2b23f522486c4d6f7e139a4fa77b12bc",
+    "policy/policy_decisions.json": "abc44873c15a0a682e8527d20547a8cc9335e263696dee5749dfada6e2239f31"
+  },
+  "reimport_identical": true,
+  "csv_downgrade": {
+    "exit": 1,
+    "unchanged": true
+  },
+  "policy_field_control": {
+    "exit": 1,
+    "unchanged": true
+  },
+  "integral_decimal_control": {
+    "exit": 1,
+    "unchanged": true,
+    "token": "start_line: 532.0"
+  }
+}

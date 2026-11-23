@@ -1,0 +1,6 @@
+{
+  "commands": 2,
+  "error": "RuntimeError('init failed; see stderr-time')",
+  "finished_utc": "2026-11-22T21:29:19.098910+00:00",
+  "status": "failed"
+}

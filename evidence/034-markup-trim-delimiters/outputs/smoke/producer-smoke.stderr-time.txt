@@ -1,0 +1,69 @@
+04-database-create: exit=0, wall=2.037s
+05-query-run-ExtractionErrors: exit=0, wall=1.540s
+06-bqrs-decode-errors: exit=0, wall=0.238s
+07-query-run-markup-cfg-diagnostics-test: exit=0, wall=1.475s
+08-bqrs-decode-diagnostics: exit=0, wall=0.238s
+09-query-run-SuccessfullyExtractedFiles: exit=0, wall=1.527s
+10-bqrs-decode-files: exit=0, wall=0.234s
+11-query-run-markup-cfg-comments-test: exit=0, wall=1.762s
+12-bqrs-decode-comments: exit=0, wall=0.226s
+13-query-run-markup-cfg-ast-test: exit=0, wall=2.007s
+14-bqrs-decode-ast: exit=0, wall=0.232s
+15-query-run-markup-cfg-delimiters-ast-test: exit=0, wall=2.349s
+16-bqrs-decode-delimiter-ast: exit=0, wall=0.248s
+17-query-run-markup-cfg-delimiters-coverage-test: exit=0, wall=2.770s
+18-bqrs-decode-delimiter-coverage: exit=0, wall=0.254s
+19-query-run-markup-cfg-test: exit=0, wall=3.126s
+20-bqrs-decode-edges: exit=0, wall=0.327s
+21-query-run-markup-cfg-nodes-test: exit=0, wall=2.785s
+22-bqrs-decode-nodes: exit=0, wall=0.298s
+23-database-init: exit=0, wall=0.507s
+24-database-index-files: exit=0, wall=0.389s
+25-database-finalize: exit=0, wall=1.039s
+26-query-run-markup-cfg-adjacent-ast-test: exit=0, wall=2.740s
+27-bqrs-decode-clean-ast: exit=0, wall=0.288s
+28-query-run-markup-cfg-adjacent-ast-test: exit=0, wall=1.360s
+29-bqrs-decode-warned-ast: exit=0, wall=0.353s
+30-query-run-markup-cfg-diagnostics-test: exit=0, wall=1.608s
+31-bqrs-decode-warning: exit=0, wall=0.343s
+32-query-run-markup-cfg-delimiters-ast-test: exit=0, wall=1.814s
+33-bqrs-decode-warned-trim-ast: exit=0, wall=0.322s
+34-query-run-markup-cfg-delimiters-coverage-test: exit=0, wall=1.363s
+35-bqrs-decode-warned-coverage: exit=0, wall=0.306s
+36-query-run-SuccessfullyExtractedFiles: exit=0, wall=1.536s
+37-bqrs-decode-warned-files: exit=0, wall=0.251s
+38-query-run-markup-cfg-nodes-test: exit=0, wall=1.274s
+39-bqrs-decode-warned-nodes: exit=0, wall=0.241s
+40-query-run-markup-cfg-test: exit=0, wall=1.338s
+41-bqrs-decode-warned-edges: exit=0, wall=0.233s
+42-database-init: exit=0, wall=0.532s
+43-database-index-files: exit=0, wall=0.411s
+44-database-finalize: exit=0, wall=1.090s
+45-query-run-ExtractionErrors: exit=0, wall=1.197s
+46-bqrs-decode-errors: exit=0, wall=0.245s
+47-query-run-SuccessfullyExtractedFiles: exit=0, wall=1.211s
+48-bqrs-decode-files: exit=0, wall=0.242s
+49-query-run-markup-cfg-diagnostics-test: exit=0, wall=1.238s
+50-bqrs-decode-diagnostics: exit=0, wall=0.259s
+51-query-run-markup-cfg-test: exit=0, wall=1.717s
+52-bqrs-decode-edges: exit=0, wall=0.295s
+53-query-run-markup-cfg-nodes-test: exit=0, wall=1.782s
+54-bqrs-decode-nodes: exit=0, wall=0.333s
+       56.59 real       123.24 user         9.23 sys
+           576454656  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             1268902  page reclaims
+                6591  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                 418  signals received
+                2020  voluntary context switches
+              877423  involuntary context switches
+           724191212  instructions retired
+           370975448  cycles elapsed
+            18498160  peak memory footprint

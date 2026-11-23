@@ -1,0 +1,7 @@
+"col0","col1","col2","col3","col4","col5"
+"ordinary-member.ut",1,1,1,13,"unsupported"
+"plain.ut",1,1,1,11,"covered"
+"trim-both.ut",1,1,1,13,"unsupported"
+"trim-close.ut",1,1,1,12,"unsupported"
+"trim-member.ut",1,1,1,15,"unsupported"
+"trim-open.ut",1,1,1,12,"unsupported"

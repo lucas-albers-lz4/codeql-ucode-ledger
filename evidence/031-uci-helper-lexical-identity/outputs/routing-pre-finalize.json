@@ -1,0 +1,32 @@
+{
+  "decisions": [
+    {
+      "classification": "plain",
+      "installed_path": "controls-formal/alias-instead-of-formal.uc",
+      "path": "$RUN/src/controls-formal/alias-instead-of-formal.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "controls-formal/reassigned-formals.uc",
+      "path": "$RUN/src/controls-formal/reassigned-formals.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/ucode/luci/controller/admin/uci.uc",
+      "path": "$RUN/src/usr/share/ucode/luci/controller/admin/uci.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    }
+  ],
+  "duplicate_input_count": 0,
+  "excluded_count": 0,
+  "input_count": 3,
+  "markup_count": 0,
+  "markup_inconclusive_count": 0,
+  "plain_count": 3,
+  "uncertain_count": 0
+}

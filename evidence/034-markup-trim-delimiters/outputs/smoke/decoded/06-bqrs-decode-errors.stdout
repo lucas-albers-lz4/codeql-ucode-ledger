@@ -1,0 +1,8 @@
+{"#select":{"columns":[
+   {"name":"error","kind":"Entity"}
+  ,{"kind":"String"}
+  ,{"kind":"Integer"}]
+ ,"tuples":[
+   [{"label":"A parse error occurred (expected identifier symbol). Check the syntax of the file. If the file is invalid, correct the error or exclude the file from analysis.","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/malformed.ut","startLine":1,"startColumn":3,"endLine":1,"endColumn":2}},"Extraction failed in <PRODUCER>/tests/data/markup-cfg/malformed.ut with error A parse error occurred (expected identifier symbol). Check the syntax of the file. If the file is invalid, correct the error or exclude the file from analysis.",2]
+  ,[{"label":"Missing value for field: expression_tag::child","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/malformed.ut","startLine":1,"startColumn":1,"endLine":1,"endColumn":5}},"Extraction failed in <PRODUCER>/tests/data/markup-cfg/malformed.ut with error Missing value for field: expression_tag::child",2]]
+ }}

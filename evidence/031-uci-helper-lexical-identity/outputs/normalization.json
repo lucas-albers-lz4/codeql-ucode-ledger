@@ -1,0 +1,53 @@
+{
+  "method": "JSON parsed and re-serialized with sorted keys/indent=2; replace exact absolute run-root string with $RUN in string values; no row filtering or deduplication",
+  "files": [
+    {
+      "artifact": "routing-pre-finalize.json",
+      "raw_sha256": "3e42f481f32b60b64454abc2ee76ddf5fb3031cafcd2c8e11d4173580039a792",
+      "normalized_sha256": "705646a150657ec12313cbb35cf88ac4ba1a3b37e37653f407cb602f153e9067",
+      "raw_path": "work/uci-formal-reassignment-clean-run-retry-01/logs/routing-pre-finalize.json"
+    },
+    {
+      "artifact": "SuccessfullyExtractedFiles.json",
+      "raw_sha256": "40784775e9c67a08d86c0bb78a6f6f0c69de0704ca289823e0c0f77975f51216",
+      "normalized_sha256": "863b73c22cc253cbcbd3324a43bda09b9e4fdbb671f451486b6f9c54b8b093b1",
+      "raw_path": "work/uci-formal-reassignment-clean-run-retry-01/out/SuccessfullyExtractedFiles.json"
+    },
+    {
+      "artifact": "ExtractionErrors.json",
+      "raw_sha256": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+      "normalized_sha256": "d2fa94f46d4f890e740abd244b68cc186b01d70098ea72dbc060bea3cf6e882f",
+      "raw_path": "work/uci-formal-reassignment-clean-run-retry-01/out/ExtractionErrors.json"
+    },
+    {
+      "artifact": "AllDiagnostics.json",
+      "raw_sha256": "64be02a4d8926955415513ae15b7c65d3ab61346b7f33ba9d81bae94258d92bb",
+      "normalized_sha256": "63e2469e598cb402fa717c85ff4f0420df8c09ee615bf677c88d00a5327aa671",
+      "raw_path": "work/uci-formal-reassignment-clean-run-retry-01/out/AllDiagnostics.json"
+    },
+    {
+      "artifact": "UciHelperObservation.json",
+      "raw_sha256": "1367b399882208c7dbddd0aa5edd769935e667bbf7e689dabd57f0f994848303",
+      "normalized_sha256": "de354d89aae05a443997ed197ebfc12b0cc96cb799f244ad5f990b1baa075fdb",
+      "raw_path": "work/uci-formal-reassignment-clean-run-retry-01/out/UciHelperObservation.json"
+    },
+    {
+      "artifact": "AliasEligibility.json",
+      "raw_sha256": "2bbe0035cdea78a41ed3e73f69f60fcad64f0d145ec2d5bd260d7d4072a53adc",
+      "normalized_sha256": "fbbbc36aa0504ad4f2fad91b6d167ea22b32535d562c4285b64d2a01218aac5f",
+      "raw_path": "work/uci-formal-reassignment-clean-run-retry-01/out/AliasEligibility.json"
+    },
+    {
+      "artifact": "UciHelperWitnessCounts.json",
+      "raw_sha256": "feb253210ac12c5d374843d6bc27bb9463e5b807edfb35ca5e006de8641e021f",
+      "normalized_sha256": "c3ac47ae213dc320d0e7bce46c7bb675a9251eb8b7e9371459de431f06ab5344",
+      "raw_path": "work/uci-formal-reassignment-clean-run-retry-01/out/UciHelperWitnessCounts.json"
+    },
+    {
+      "artifact": "AliasEntityCounts.json",
+      "raw_sha256": "2cc48f83696397198dff0e8c37ed1df4b230f62555aaf09bde220f6d013ac9d6",
+      "normalized_sha256": "0f7e49c42eeb3d4fc30eb7070bd97c99ee562aeba52e047cd77039633da7c94b",
+      "raw_path": "work/uci-formal-reassignment-clean-run-retry-01/out/AliasEntityCounts.json"
+    }
+  ]
+}

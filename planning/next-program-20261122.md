@@ -1,5 +1,8 @@
 # Next evidence program: 24 ordered work packages
 
+See the [progress record](program-20261122/progress.md) for actual outcomes,
+execution limits and gates that were not met.
+
 This is a **plan**, not an instruction to run every query or a promise of 24
 new claims. It scales the last three-claim effort to 24 small work packages
 (eight times as many organizational units, not an eightfold execution, cost or

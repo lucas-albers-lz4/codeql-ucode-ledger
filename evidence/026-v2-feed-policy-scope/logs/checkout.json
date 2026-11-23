@@ -1,0 +1,1 @@
+{"argv":["git","-C","<RUN>/consumer","checkout","--detach","48c6a65b7578234644c6b06780fc82ccf6d61a8b"],"cwd":"<RUN>","elapsed_seconds":0.058920041999954265,"exit":0,"stderr_digest":"sha256:4129c3770c54ffb9a38b3232b704d8d7384a343b2d3708c59dd0d4edc9a42f9a","stdout_digest":"sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}

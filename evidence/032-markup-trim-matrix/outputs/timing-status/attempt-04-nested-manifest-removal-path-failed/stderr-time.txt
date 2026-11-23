@@ -1,0 +1,26 @@
+Resolving data extensions.
+ERROR: Dependency on pack 'lucas-albers-lz4/ucode-all' uses '${workspace}', but the referring pack is not in a workspace. (<RUN>/producer-ql/ql/src/qlpack.yml:1,1-1)
+ERROR: Pack 'lucas-albers-lz4/ucode-all' was not found locally, and is not listed in the lock file. Run 'codeql pack install' to update the lock file and download the dependencies. (<RUN>/producer-ql/ql/src/qlpack.yml:1,1-1)
+ERROR: The --search-path option was ignored when resolving dependencies for pack 'lucas-albers-lz4/ucode-queries'. This option is required only for finding extractors, or packs that do not have a lock file. To search for dependencies in additional directories, consider using the --additional-packs option instead. (<RUN>/producer-ql/ql/src/qlpack.yml:1,1-1)
+ERROR: No valid pack solution found:
+Because 'lucas-albers-lz4/ucode-queries' depends on 'lucas-albers-lz4/ucode-all@0.0.0', but pack 'lucas-albers-lz4/ucode-all' was not found, version solving failed.
+ (<RUN>/producer-ql/ql/src/qlpack.yml:1,1-1)
+A fatal error occurred: A 'codeql resolve extensions-by-pack' operation failed with error code 2
+        0.85 real         1.52 user         0.11 sys
+           138018816  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               22391  page reclaims
+                  81  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   6  signals received
+                  41  voluntary context switches
+               11400  involuntary context switches
+            40291342  instructions retired
+            16653019  cycles elapsed
+             1950008  peak memory footprint

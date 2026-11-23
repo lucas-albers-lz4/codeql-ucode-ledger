@@ -1,0 +1,7 @@
+"col0","covered"
+"ordinary-member.ut","unsupported"
+"plain.ut","covered"
+"trim-both.ut","covered"
+"trim-close.ut","covered"
+"trim-member.ut","unsupported"
+"trim-open.ut","covered"

@@ -1,0 +1,65 @@
+01-database-init: exit=0, wall=0.488s
+02-database-index-files: exit=0, wall=0.621s
+03-database-finalize: exit=0, wall=1.119s
+04-query-run-SuccessfullyExtractedFiles: exit=2, wall=0.843s
+Resolving data extensions.
+ERROR: Dependency on pack 'lucas-albers-lz4/ucode-all' uses '${workspace}', but the referring pack is not in a workspace. (<MATRIX>/ql/src/qlpack.yml:1,1-1)
+ERROR: Pack 'lucas-albers-lz4/ucode-all' was not found locally, and is not listed in the lock file. Run 'codeql pack install' to update the lock file and download the dependencies. (<MATRIX>/ql/src/qlpack.yml:1,1-1)
+ERROR: The --search-path option was ignored when resolving dependencies for pack 'lucas-albers-lz4/ucode-queries'. This option is required only for finding extractors, or packs that do not have a lock file. To search for dependencies in additional directories, consider using the --additional-packs option instead. (<MATRIX>/ql/src/qlpack.yml:1,1-1)
+ERROR: No valid pack solution found:
+Because 'lucas-albers-lz4/ucode-queries' depends on 'lucas-albers-lz4/ucode-all@0.0.0', but pack 'lucas-albers-lz4/ucode-all' was not found, version solving failed.
+ (<MATRIX>/ql/src/qlpack.yml:1,1-1)
+A fatal error occurred: A 'codeql resolve extensions-by-pack' operation failed with error code 2
+        0.84 real         1.53 user         0.09 sys
+           136839168  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               22257  page reclaims
+                  76  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   8  signals received
+                  18  voluntary context switches
+                9272  involuntary context switches
+            39426613  instructions retired
+            16723237  cycles elapsed
+             1868088  peak memory footprint
+Traceback (most recent call last):
+  File "<MATRIX>/run.py", line 117, in <module>
+    main()
+    ~~~~^^
+  File "<MATRIX>/run.py", line 88, in main
+    success = query('diagnostics/SuccessfullyExtractedFiles.ql', 'json')
+  File "<MATRIX>/run.py", line 42, in query
+    run('query', 'run', q, f'--database={database}', f'--search-path={extractor_pack}',
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        f'--output={bqrs}', '--threads=1', '--ram=2048')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<MATRIX>/run.py", line 27, in run
+    proc = subprocess.run([cli, *args], env=env, cwd=root, stdout=subprocess.PIPE, check=True)
+  File "<PYTHON_STDLIB>/subprocess.py", line 692, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command [PosixPath('<MATRIX>/bin/codeql'), 'query', 'run', PosixPath('<MATRIX>/ql/src/diagnostics/SuccessfullyExtractedFiles.ql'), '--database=<MATRIX>/database/db', '--search-path=<MATRIX>/extractor-pack', '--output=<MATRIX>/output/SuccessfullyExtractedFiles.bqrs', '--threads=1', '--ram=2048'] returned non-zero exit status 2.
+        3.38 real         5.16 user         0.43 sys
+           183173120  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               90782  page reclaims
+                 838  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                  34  signals received
+                 187  voluntary context switches
+               41006  involuntary context switches
+           503099913  instructions retired
+           185189622  cycles elapsed
+            16368000  peak memory footprint

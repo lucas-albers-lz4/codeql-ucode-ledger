@@ -1,0 +1,122 @@
+{
+  "planning_only": true,
+  "scope": {
+    "luci_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "consumer_commit": "48c6a65b7578234644c6b06780fc82ccf6d61a8b",
+    "manifest": "ql-js/manifest.json",
+    "manifest_sha256": "3161274241e086d121fd5122e0dfe0c5fb5d97872710d79c87f86244be2b2627",
+    "consumer_lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "source_count": 88
+  },
+  "parser": {
+    "name": "Acorn",
+    "version": "8.15.0",
+    "npm_archive_sha256": "e46eae89bd9761f16d1d25563b837b55b4b78f3ece06ee0b9789cb2644f523b3",
+    "package_json_sha256": "9e422c8225c9cc4c774e9a9392d0ecac7f766b46122ef2db99db0fc4bbedc247",
+    "bundle_sha256": "fdb08546776ec6228b03e8d02b40d4ab3255bae5f401adba7ff5dad927ac5c9c"
+  },
+  "corrected_implementation": {
+    "path": "work/js-uci-acorn-corrected/inventory.cjs",
+    "sha256": "60704b7043be52e5f72c820b2e1470bf40d91c755253c12dc711e4408b6b173e",
+    "semantics": "exclude only MemberExpression nodes marked optional; do not propagate ChainExpression status to descendant member accesses; strip ParenthesizedExpression around supported computed literal values"
+  },
+  "comparison": {
+    "babel": "@babel/parser 7.28.5",
+    "babel_output_sha256": "0cf4d6dbb8ca4eb09efca2f6bbf56f058024a70968bc08f0d8149c3e1c40d4da",
+    "corrected_acorn_count": 576,
+    "babel_count": 576,
+    "acorn_only": 0,
+    "babel_only": 0,
+    "tuple_key": [
+      "source_path",
+      "inclusive_1based_span",
+      "receiver_form",
+      "kind",
+      "property"
+    ],
+    "original_acorn_count": 573,
+    "original_acorn_output_sha256": "be4c86883e2f3c70cfd536681d150b6a1eb95f95838508ff5213cb6a109e3e21",
+    "original_acorn_script_sha256": "068775df2688f9f51ace5f94ad1ca789b2146bfd9d90bfac4b33c6a6815d7d7f"
+  },
+  "previously_missing_rows": [
+    {
+      "source": "modules/luci-base/htdocs/luci-static/resources/tools/views.js",
+      "source_sha256": "ccfcae2d0917a3fd44c54dbba3f57cec526a508e20c52e8e280f89b0ee4202a7",
+      "span": [
+        75,
+        16,
+        75,
+        22
+      ],
+      "tuple": [
+        "bare",
+        "dot",
+        "get"
+      ]
+    },
+    {
+      "source": "modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js",
+      "source_sha256": "4001ac4a10e1cdbe7ff3fb5a883d47dc203e81cc40d47254c3717832e99f2a75",
+      "span": [
+        53,
+        10,
+        53,
+        16
+      ],
+      "tuple": [
+        "bare",
+        "dot",
+        "get"
+      ]
+    },
+    {
+      "source": "modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js",
+      "source_sha256": "7a79896707f11d126b264ce3a14de034f550c5699786a04bfdc24911c78164dc",
+      "span": [
+        50,
+        13,
+        50,
+        19
+      ],
+      "tuple": [
+        "bare",
+        "dot",
+        "get"
+      ]
+    }
+  ],
+  "synthetic_controls": {
+    "source_sha256": "95e1cc0b48e0ad4f2e46926b18708a163122a05157df02d0dfdbcff8cbcb7570",
+    "harness_sha256": "ad9c9bd8c24f213c48333ef49d738596a64ce042370c310723cbd3b092675586",
+    "result_sha256": "0a79cf2da120dd019cf215a47c5e6a46d5dd772d3763d744b4435ffe847ecf4f",
+    "passed": true,
+    "cases": [
+      "uci?.get excluded",
+      "uci.get()?.replaceAll includes nonoptional uci.get only",
+      "uci.get?.() includes nonoptional uci.get",
+      "uci[('get')] recognized as index get",
+      "uci[(42)] recognized as index 42",
+      "uci?.['get'] excluded",
+      "uci['ge' + 't'] retained as index <unknown>",
+      "L.uci.get recognized as L.uci receiver"
+    ]
+  },
+  "execution": {
+    "node": "v26.13.1",
+    "npm": "11.20.0",
+    "corrected_parse_exit": 0,
+    "files_parsed": 88,
+    "failures": 0,
+    "elapsed_seconds": 0.18,
+    "max_rss_bytes": 148668416,
+    "synthetic_assertion_exit": 0,
+    "syntax_checks_exit": 0
+  },
+  "limits": [
+    "Source-level parser comparison only; not a complete source oracle.",
+    "No CodeQL run or query output inspection; AST mappings and query behavior remain unverified.",
+    "Computed property handling is finite and not general constant folding; expressions such as a concatenation stay <unknown>.",
+    "Optional-chain interpretation remains a contract question, even though this pass implements per-access exclusion.",
+    "No runtime, binding, invocation, configuration-effect, authorization, security, or reachability inference."
+  ]
+}

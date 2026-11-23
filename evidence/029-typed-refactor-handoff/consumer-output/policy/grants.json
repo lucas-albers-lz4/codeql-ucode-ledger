@@ -1,0 +1,3248 @@
+[
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:unauthenticated:ubus_http:luci.getFeatures",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "unauthenticated",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getFeatures",
+    "ubus_object": "luci",
+    "method": "getFeatures",
+    "target_id": "ubus:luci.getFeatures",
+    "op": "invoke",
+    "acl_group": "unauthenticated",
+    "expectation_id": "unauthenticated-getFeatures",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b modules/luci-base/root/usr/share/rpcd/acl.d/luci-base.json unauthenticated.read.ubus.luci=[getFeatures]",
+      "rpcd@d99f703 session.c rpc_session_api_init default SID 0000... loads group unauthenticated only",
+      "uhttpd@93b05e0 ubus.c parse_call_params: present SID is not rewritten when no_ubusauth=0",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed: session.access(ubus_rpc_session, object, function), no scope",
+      "rpcd@d99f703 session.c rpc_handle_access default scope=ubus; rpc_session_acl_allowed literal luci/getFeatures"
+    ]
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:luci.getFeatures",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getFeatures",
+    "ubus_object": "luci",
+    "method": "getFeatures",
+    "target_id": "ubus:luci.getFeatures",
+    "op": "invoke",
+    "acl_group": "unauthenticated",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config list read '*' list write '*'",
+      "rpcd@d99f703 session.c rpc_login_test_permission: fnmatch(\"*\", \"unauthenticated\", 0) matches",
+      "unauthenticated group still contributes luci.getFeatures to the root session"
+    ],
+    "note": "Stock root list read '*' / list write '*'; not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-network-config:ubus_http:luci.getSwconfigFeatures",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "luci-mod-network-config",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getSwconfigFeatures",
+    "ubus_object": "luci",
+    "method": "getSwconfigFeatures",
+    "target_id": "ubus:luci.getSwconfigFeatures",
+    "op": "invoke",
+    "acl_group": "luci-mod-network-config",
+    "expectation_id": "luci-mod-network-swconfig",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b modules/luci-mod-network/root/usr/share/rpcd/acl.d/luci-mod-network.json luci-mod-network-config.read.ubus.luci=[getSwconfigFeatures, getSwconfigPortState]",
+      "fixture rpcd.config login luci-mod-network-config list read luci-mod-network-config",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed: session.access(ubus_rpc_session, object, function), no scope",
+      "rpcd@d99f703 session.c rpc_handle_access default scope=ubus; rpc_session_acl_allowed literal luci/getSwconfigFeatures"
+    ],
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-network-config:ubus_http:luci.getSwconfigPortState",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "luci-mod-network-config",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getSwconfigPortState",
+    "ubus_object": "luci",
+    "method": "getSwconfigPortState",
+    "target_id": "ubus:luci.getSwconfigPortState",
+    "op": "invoke",
+    "acl_group": "luci-mod-network-config",
+    "expectation_id": "luci-mod-network-swconfig",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b modules/luci-mod-network/root/usr/share/rpcd/acl.d/luci-mod-network.json luci-mod-network-config.read.ubus.luci=[getSwconfigFeatures, getSwconfigPortState]",
+      "fixture rpcd.config login luci-mod-network-config list read luci-mod-network-config",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed: session.access(ubus_rpc_session, object, function), no scope",
+      "rpcd@d99f703 session.c rpc_handle_access default scope=ubus; rpc_session_acl_allowed literal luci/getSwconfigPortState"
+    ],
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-realtime:ubus_http:luci.getRealtimeStats",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "luci-mod-status-realtime",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getRealtimeStats",
+    "ubus_object": "luci",
+    "method": "getRealtimeStats",
+    "target_id": "ubus:luci.getRealtimeStats",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-realtime",
+    "expectation_id": "luci-mod-status-realtime",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b modules/luci-mod-status/root/usr/share/rpcd/acl.d/luci-mod-status.json luci-mod-status-realtime.read.ubus.luci=[getConntrackList, getRealtimeStats]",
+      "fixture rpcd.config login luci-mod-status-realtime list read luci-mod-status-realtime",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed: session.access(ubus_rpc_session, object, function), no scope",
+      "rpcd@d99f703 session.c rpc_handle_access default scope=ubus; rpc_session_acl_allowed literal luci/getRealtimeStats"
+    ],
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-system-config:ubus_http:luci.setPassword",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "luci-mod-system-config",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.setPassword",
+    "ubus_object": "luci",
+    "method": "setPassword",
+    "target_id": "ubus:luci.setPassword",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-config",
+    "expectation_id": "luci-mod-system-setPassword",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b modules/luci-mod-system/root/usr/share/rpcd/acl.d/luci-mod-system.json luci-mod-system-config.write.ubus.luci=[setLocaltime, setPassword]",
+      "fixture rpcd.config login luci-mod-system-config list write luci-mod-system-config",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed: session.access(ubus_rpc_session, object, function), no scope",
+      "rpcd@d99f703 session.c rpc_handle_access default scope=ubus; rpc_session_acl_allowed literal luci/setPassword"
+    ],
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-system-config:ubus_http:luci.setLocaltime",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "luci-mod-system-config",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.setLocaltime",
+    "ubus_object": "luci",
+    "method": "setLocaltime",
+    "target_id": "ubus:luci.setLocaltime",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-config",
+    "expectation_id": "luci-mod-system-setLocaltime",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b modules/luci-mod-system/root/usr/share/rpcd/acl.d/luci-mod-system.json luci-mod-system-config.write.ubus.luci=[setLocaltime, setPassword]",
+      "fixture rpcd.config login luci-mod-system-config list write luci-mod-system-config",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed: session.access(ubus_rpc_session, object, function), no scope",
+      "rpcd@d99f703 session.c rpc_handle_access default scope=ubus; rpc_session_acl_allowed literal luci/setLocaltime"
+    ],
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:luci.getSwconfigFeatures",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getSwconfigFeatures",
+    "ubus_object": "luci",
+    "method": "getSwconfigFeatures",
+    "target_id": "ubus:luci.getSwconfigFeatures",
+    "op": "invoke",
+    "acl_group": "luci-mod-network-config",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config list read '*' list write '*'",
+      "rpcd@d99f703 session.c rpc_login_test_permission: fnmatch(\"*\", \"luci-mod-network-config\", 0) matches",
+      "luci-mod-network-config still contributes luci.getSwconfigFeatures to the root session"
+    ],
+    "note": "Stock root list read '*' / list write '*'; not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:luci.getSwconfigPortState",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getSwconfigPortState",
+    "ubus_object": "luci",
+    "method": "getSwconfigPortState",
+    "target_id": "ubus:luci.getSwconfigPortState",
+    "op": "invoke",
+    "acl_group": "luci-mod-network-config",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config list read '*' list write '*'",
+      "rpcd@d99f703 session.c rpc_login_test_permission: fnmatch(\"*\", \"luci-mod-network-config\", 0) matches",
+      "luci-mod-network-config still contributes luci.getSwconfigPortState to the root session"
+    ],
+    "note": "Stock root list read '*' / list write '*'; not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:luci.getRealtimeStats",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getRealtimeStats",
+    "ubus_object": "luci",
+    "method": "getRealtimeStats",
+    "target_id": "ubus:luci.getRealtimeStats",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-realtime",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config list read '*' list write '*'",
+      "rpcd@d99f703 session.c rpc_login_test_permission: fnmatch(\"*\", \"luci-mod-status-realtime\", 0) matches",
+      "luci-mod-status-realtime still contributes luci.getRealtimeStats to the root session"
+    ],
+    "note": "Stock root list read '*' / list write '*'; not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:luci.setPassword",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.setPassword",
+    "ubus_object": "luci",
+    "method": "setPassword",
+    "target_id": "ubus:luci.setPassword",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-config",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config list read '*' list write '*'",
+      "rpcd@d99f703 session.c rpc_login_test_permission: fnmatch(\"*\", \"luci-mod-system-config\", 0) matches",
+      "luci-mod-system-config still contributes luci.setPassword to the root session"
+    ],
+    "note": "Stock root list read '*' / list write '*'; not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:luci.setLocaltime",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.setLocaltime",
+    "ubus_object": "luci",
+    "method": "setLocaltime",
+    "target_id": "ubus:luci.setLocaltime",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-config",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config list read '*' list write '*'",
+      "rpcd@d99f703 session.c rpc_login_test_permission: fnmatch(\"*\", \"luci-mod-system-config\", 0) matches",
+      "luci-mod-system-config still contributes luci.setLocaltime to the root session"
+    ],
+    "note": "Stock root list read '*' / list write '*'; not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-system-mounts:ubus_http:luci.getBlockDevices",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "luci-mod-system-mounts",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getBlockDevices",
+    "ubus_object": "luci",
+    "method": "getBlockDevices",
+    "target_id": "ubus:luci.getBlockDevices",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-mounts",
+    "expectation_id": "luci-mod-system-mounts",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b modules/luci-mod-system/root/usr/share/rpcd/acl.d/luci-mod-system.json luci-mod-system-mounts.read.ubus.luci=[getBlockDevices, getMountPoints]",
+      "fixture rpcd.config login luci-mod-system-mounts list read/write luci-mod-system-mounts",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed: session.access(ubus_rpc_session, object, function), no scope",
+      "rpcd@d99f703 session.c rpc_handle_access default scope=ubus; rpc_session_acl_allowed literal luci/getBlockDevices"
+    ],
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-system-mounts:ubus_http:luci.setBlockDetect",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "luci-mod-system-mounts",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.setBlockDetect",
+    "ubus_object": "luci",
+    "method": "setBlockDetect",
+    "target_id": "ubus:luci.setBlockDetect",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-mounts",
+    "expectation_id": "luci-mod-system-mounts",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b modules/luci-mod-system/root/usr/share/rpcd/acl.d/luci-mod-system.json luci-mod-system-mounts.write.ubus.luci=[setBlockDetect]",
+      "fixture rpcd.config login luci-mod-system-mounts list read/write luci-mod-system-mounts",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed: session.access(ubus_rpc_session, object, function), no scope",
+      "rpcd@d99f703 session.c rpc_handle_access default scope=ubus; rpc_session_acl_allowed literal luci/setBlockDetect"
+    ],
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:luci.getBlockDevices",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getBlockDevices",
+    "ubus_object": "luci",
+    "method": "getBlockDevices",
+    "target_id": "ubus:luci.getBlockDevices",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-mounts",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config list read '*' list write '*'",
+      "rpcd@d99f703 session.c rpc_login_test_permission: fnmatch(\"*\", \"luci-mod-system-mounts\", 0) matches",
+      "luci-mod-system-mounts still contributes luci.getBlockDevices to the root session"
+    ],
+    "note": "Stock root list read '*' / list write '*'; not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:luci.setBlockDetect",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.setBlockDetect",
+    "ubus_object": "luci",
+    "method": "setBlockDetect",
+    "target_id": "ubus:luci.setBlockDetect",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-mounts",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config list read '*' list write '*'",
+      "rpcd@d99f703 session.c rpc_login_test_permission: fnmatch(\"*\", \"luci-mod-system-mounts\", 0) matches",
+      "luci-mod-system-mounts still contributes luci.setBlockDetect to the root session"
+    ],
+    "note": "Stock root list read '*' / list write '*'; not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-realtime:ubus_http:luci.getConntrackList",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "luci-mod-status-realtime",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getConntrackList",
+    "ubus_object": "luci",
+    "method": "getConntrackList",
+    "target_id": "ubus:luci.getConntrackList",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-realtime",
+    "expectation_id": "luci-mod-status-realtime",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b modules/luci-mod-status/root/usr/share/rpcd/acl.d/luci-mod-status.json luci-mod-status-realtime.read.ubus.luci=[getConntrackList, getRealtimeStats]",
+      "fixture rpcd.config login luci-mod-status-realtime list read luci-mod-status-realtime",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed: session.access(ubus_rpc_session, object, function), no scope",
+      "rpcd@d99f703 session.c rpc_handle_access default scope=ubus; rpc_session_acl_allowed literal luci/getConntrackList"
+    ],
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-processes:ubus_http:luci.getProcessList",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "luci-mod-status-processes",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getProcessList",
+    "ubus_object": "luci",
+    "method": "getProcessList",
+    "target_id": "ubus:luci.getProcessList",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-processes",
+    "expectation_id": "luci-mod-status-processes",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b modules/luci-mod-status/root/usr/share/rpcd/acl.d/luci-mod-status.json luci-mod-status-processes.read.ubus.luci=[getProcessList]",
+      "fixture rpcd.config login luci-mod-status-processes list read luci-mod-status-processes (write file.exec /bin/kill is not granted to this fixture)",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed: session.access(ubus_rpc_session, object, function), no scope",
+      "rpcd@d99f703 session.c rpc_handle_access default scope=ubus; rpc_session_acl_allowed literal luci/getProcessList"
+    ],
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:luci.getConntrackList",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getConntrackList",
+    "ubus_object": "luci",
+    "method": "getConntrackList",
+    "target_id": "ubus:luci.getConntrackList",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-realtime",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config list read '*' list write '*'",
+      "rpcd@d99f703 session.c rpc_login_test_permission: fnmatch(\"*\", \"luci-mod-status-realtime\", 0) matches",
+      "luci-mod-status-realtime still contributes luci.getConntrackList to the root session"
+    ],
+    "note": "Stock root list read '*' / list write '*'; not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:luci.getProcessList",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-exec-methods-v2",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getProcessList",
+    "ubus_object": "luci",
+    "method": "getProcessList",
+    "target_id": "ubus:luci.getProcessList",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-processes",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config list read '*' list write '*'",
+      "rpcd@d99f703 session.c rpc_login_test_permission: fnmatch(\"*\", \"luci-mod-status-processes\", 0) matches",
+      "luci-mod-status-processes still contributes luci.getProcessList to the root session"
+    ],
+    "note": "Stock root list read '*' / list write '*'; not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-system-flash:cgi_io:cgi-backup",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-backup-v1",
+    "session_class": "luci-mod-system-flash",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-backup",
+    "cgi_endpoint": "cgi-backup",
+    "target_id": "cgi_endpoint:cgi-backup",
+    "op": "read",
+    "acl_group": "luci-mod-system-flash",
+    "expectation_id": "luci-mod-system-flash-backup",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=backup function=read"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b modules/luci-mod-system/root/usr/share/rpcd/acl.d/luci-mod-system.json luci-mod-system-flash.read.cgi-io=[backup, download]",
+      "fixture rpcd.config login luci-mod-system-flash list read luci-mod-system-flash",
+      "cgi-io@31cb3c89 main.c main_backup session_access(sid, cgi-io, backup, read)",
+      "rpcd@d99f703 session.c rpc_handle_access uses supplied scope=cgi-io"
+    ],
+    "note": "Fixture login luci-mod-system-flash is not a stock device login.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:cgi_io:cgi-backup",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-backup-v1",
+    "session_class": "root",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-backup",
+    "cgi_endpoint": "cgi-backup",
+    "target_id": "cgi_endpoint:cgi-backup",
+    "op": "read",
+    "acl_group": "luci-mod-system-flash",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=backup function=read"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config list read '*' list write '*'",
+      "rpcd@d99f703 session.c rpc_login_test_permission: fnmatch(\"*\", \"luci-mod-system-flash\", 0) matches",
+      "luci-mod-system-flash still contributes cgi-io backup to the root session"
+    ],
+    "note": "Stock root list read '*' / list write '*'; not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-base:cgi_io:cgi-upload",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-upload-v1",
+    "session_class": "luci-base",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-upload",
+    "cgi_endpoint": "cgi-upload",
+    "target_id": "cgi_endpoint:cgi-upload",
+    "op": "write",
+    "acl_group": "luci-base",
+    "expectation_id": "luci-base-upload",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=upload function=write",
+      "session.access scope=file object=canonicalize_path(filename) function=write"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-base.json luci-base.write.cgi-io=[upload]",
+      "luci@b2e0be4b luci-base.json luci-base.write.file./etc/luci-uploads/*=[write]",
+      "cgi-io@31cb3c89 main.c main_upload conjunctive cgi-io upload write and file write"
+    ],
+    "note": "Fixture login luci-base is not a stock device login.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:cgi_io:cgi-upload",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-upload-v1",
+    "session_class": "root",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-upload",
+    "cgi_endpoint": "cgi-upload",
+    "target_id": "cgi_endpoint:cgi-upload",
+    "op": "write",
+    "acl_group": "luci-base",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=upload function=write",
+      "session.access scope=file object=canonicalize_path(filename) function=write"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config list read '*' list write '*'",
+      "luci-base still contributes cgi-io upload to the root session"
+    ],
+    "note": "Stock root list read '*' / list write '*'; not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-system-flash:cgi_io:cgi-download",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-download-v1",
+    "session_class": "luci-mod-system-flash",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-download",
+    "cgi_endpoint": "cgi-download",
+    "target_id": "cgi_endpoint:cgi-download",
+    "op": "read",
+    "acl_group": "luci-mod-system-flash",
+    "expectation_id": "luci-mod-system-flash-download",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=download function=read",
+      "session.access scope=file object=canonicalize_path(path) function=read"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-system.json luci-mod-system-flash.read.cgi-io=[backup, download]",
+      "luci@b2e0be4b luci-mod-system.json luci-mod-system-flash.read.file./dev/mtdblock[0-9]*=[read]",
+      "cgi-io@31cb3c89 main.c main_download conjunctive cgi-io download read and file read"
+    ],
+    "note": "Fixture login luci-mod-system-flash is not a stock device login.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:cgi_io:cgi-download",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-download-v1",
+    "session_class": "root",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-download",
+    "cgi_endpoint": "cgi-download",
+    "target_id": "cgi_endpoint:cgi-download",
+    "op": "read",
+    "acl_group": "luci-mod-system-flash",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=download function=read",
+      "session.access scope=file object=canonicalize_path(path) function=read"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config list read '*' list write '*'",
+      "luci-mod-system-flash still contributes cgi-io download to the root session"
+    ],
+    "note": "Stock root list read '*' / list write '*'; not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-network-config:cgi_io:cgi-exec",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-v1",
+    "session_class": "luci-mod-network-config",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec",
+    "cgi_endpoint": "cgi-exec",
+    "target_id": "cgi_endpoint:cgi-exec",
+    "op": "exec",
+    "acl_group": "luci-mod-network-config",
+    "expectation_id": "luci-mod-network-config-cgi-exec",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b modules/luci-mod-network/root/usr/share/rpcd/acl.d/luci-mod-network.json luci-mod-network-config.read.cgi-io=[exec]",
+      "fixture rpcd.config login luci-mod-network-config list read luci-mod-network-config",
+      "cgi-io@31cb3c89 main.c main_exec session_access(sid, cgi-io, exec, read)",
+      "rpcd@d99f703 session.c rpc_handle_access uses supplied scope=cgi-io"
+    ],
+    "note": "Fixture login luci-mod-network-config is not a stock device login. This grant is the cgi-io exec read gate only, not file.exec of a command.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:cgi_io:cgi-exec",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-v1",
+    "session_class": "root",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec",
+    "cgi_endpoint": "cgi-exec",
+    "target_id": "cgi_endpoint:cgi-exec",
+    "op": "exec",
+    "acl_group": "luci-mod-network-config",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config list read '*' list write '*'",
+      "rpcd@d99f703 session.c rpc_login_test_permission: fnmatch(\"*\", \"luci-mod-network-config\", 0) matches",
+      "luci-mod-network-config still contributes cgi-io exec to the root session"
+    ],
+    "note": "Stock root list read '*' / list write '*'; not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-logs:cgi_io:cgi-exec:syslog-wrapper",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-file-v1",
+    "session_class": "luci-mod-status-logs",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/usr/libexec/syslog-wrapper",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/usr/libexec/syslog-wrapper",
+    "target_id": "command:syslog-wrapper",
+    "op": "exec",
+    "acl_group": "luci-mod-status-logs",
+    "expectation_id": "luci-mod-status-logs-syslog-wrapper",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status.json luci-mod-status-logs.read.cgi-io=[exec] file./usr/libexec/syslog-wrapper=[exec]",
+      "fixture rpcd.config login luci-mod-status-logs list read luci-mod-status-logs",
+      "cgi-io@31cb3c89 main.c main_exec session_access file cmdline then executable"
+    ],
+    "note": "Fixture login luci-mod-status-logs is not a stock device login. cgi-io exec read and file.exec of the helper are both required.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:cgi_io:cgi-exec:syslog-wrapper",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-file-v1",
+    "session_class": "root",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/usr/libexec/syslog-wrapper",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/usr/libexec/syslog-wrapper",
+    "target_id": "command:syslog-wrapper",
+    "op": "exec",
+    "acl_group": "luci-mod-status-logs",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config list read '*' list write '*'",
+      "rpcd@d99f703 session.c rpc_login_test_permission: fnmatch(\"*\", \"luci-mod-status-logs\", 0) matches"
+    ],
+    "note": "Stock root list read '*' / list write '*'; not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-network-config:cgi_io:cgi-exec:luci-peeraddr",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-file-v1",
+    "session_class": "luci-mod-network-config",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/usr/libexec/luci-peeraddr",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/usr/libexec/luci-peeraddr",
+    "target_id": "command:luci-peeraddr",
+    "op": "exec",
+    "acl_group": "luci-mod-network-config",
+    "expectation_id": "luci-mod-network-config-luci-peeraddr",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-network.json luci-mod-network-config.read.file./usr/libexec/luci-peeraddr=[exec]",
+      "luci@b2e0be4b luci-mod-network.json luci-mod-network-config.read.cgi-io=[exec]",
+      "cgi-io@31cb3c89 main.c main_exec conjunctive file ACL"
+    ],
+    "note": "Fixture login luci-mod-network-config is not a stock device login. This is the file.exec conjunct, not the cgi-exec-v1 gate alone.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:cgi_io:cgi-exec:luci-peeraddr",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-file-v1",
+    "session_class": "root",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/usr/libexec/luci-peeraddr",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/usr/libexec/luci-peeraddr",
+    "target_id": "command:luci-peeraddr",
+    "op": "exec",
+    "acl_group": "luci-mod-network-config",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config list read '*' list write '*'",
+      "rpcd@d99f703 session.c rpc_login_test_permission: fnmatch(\"*\", \"luci-mod-network-config\", 0) matches"
+    ],
+    "note": "Stock root list read '*' / list write '*'; not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-app-package-manager:cgi_io:cgi-exec:package-manager-call",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-file-v1",
+    "session_class": "luci-app-package-manager",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/usr/libexec/package-manager-call",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/usr/libexec/package-manager-call",
+    "target_id": "command:package-manager-call",
+    "op": "exec",
+    "acl_group": "luci-app-package-manager",
+    "expectation_id": "luci-app-package-manager-call",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-app-package-manager.json read.file./usr/libexec/package-manager-call list-installed=[exec]",
+      "luci@b2e0be4b luci-app-package-manager.json read.cgi-io=[exec]",
+      "cgi-io@31cb3c89 main.c main_exec cmdline file ACL before executable fallback"
+    ],
+    "note": "Fixture login luci-app-package-manager is not a stock device login. Whole-cmdline file ACL matches list-installed.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:cgi_io:cgi-exec:package-manager-call",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-file-v1",
+    "session_class": "root",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/usr/libexec/package-manager-call",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/usr/libexec/package-manager-call",
+    "target_id": "command:package-manager-call",
+    "op": "exec",
+    "acl_group": "luci-app-package-manager",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config list read '*' list write '*'",
+      "rpcd@d99f703 session.c rpc_login_test_permission: fnmatch(\"*\", \"luci-app-package-manager\", 0) matches"
+    ],
+    "note": "Stock root list read '*' / list write '*'; not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-logs:cgi_io:cgi-exec:dmesg",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-status-v1",
+    "session_class": "luci-mod-status-logs",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/bin/dmesg",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/bin/dmesg",
+    "target_id": "command:dmesg",
+    "op": "exec",
+    "acl_group": "luci-mod-status-logs",
+    "expectation_id": "luci-mod-status-logs-dmesg",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status.json luci-mod-status-logs.read.file./bin/dmesg -r=[exec]",
+      "luci@b2e0be4b modules/luci-mod-status/htdocs/luci-static/resources/view/status/dmesg.js retrieveLog fs.exec_direct",
+      "cgi-io@31cb3c89 main.c main_exec session_access file cmdline then executable"
+    ],
+    "note": "Fixture login luci-mod-status-logs is not a stock device login. dmesg.js uses fs.exec_direct('/bin/dmesg', ['-r']). Exact cmdline ACL; not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-firewall:cgi_io:cgi-exec:nft",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-status-v1",
+    "session_class": "luci-mod-status-firewall",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/usr/sbin/nft",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/usr/sbin/nft",
+    "target_id": "command:nft",
+    "op": "exec",
+    "acl_group": "luci-mod-status-firewall",
+    "expectation_id": "luci-mod-status-firewall-nft",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status.json luci-mod-status-firewall.read.file./usr/sbin/nft --terse --json list ruleset=[exec]",
+      "luci@b2e0be4b modules/luci-mod-status/htdocs/luci-static/resources/view/status/nftables.js fs.exec_direct nft",
+      "cgi-io@31cb3c89 main.c main_exec session_access file cmdline"
+    ],
+    "note": "Fixture login luci-mod-status-firewall is not a stock device login. nftables.js uses fs.exec_direct. Exact cmdline ACL; intended_access, not a violation.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-firewall:cgi_io:cgi-exec:iptables",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-status-v1",
+    "session_class": "luci-mod-status-firewall",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/usr/sbin/iptables",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/usr/sbin/iptables",
+    "target_id": "command:iptables",
+    "op": "exec",
+    "acl_group": "luci-mod-status-firewall",
+    "expectation_id": "luci-mod-status-firewall-iptables",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status.json luci-mod-status-firewall.read.file./usr/sbin/iptables --line-numbers -w -nvxL -t *=[exec]",
+      "luci@b2e0be4b iptables.js table_names Filter NAT Mangle Raw fs.exec_direct",
+      "rpcd@d99f703 session.c rpc_session_acl_allowed fnmatch FNM_NOESCAPE"
+    ],
+    "note": "iptables.js pollFirewallLists lists Filter/NAT/Mangle/Raw via -t <table>. The ACL glob -t * matches. Intended_access for this fixture, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-firewall:cgi_io:cgi-exec:ip6tables",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-status-v1",
+    "session_class": "luci-mod-status-firewall",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/usr/sbin/ip6tables",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/usr/sbin/ip6tables",
+    "target_id": "command:ip6tables",
+    "op": "exec",
+    "acl_group": "luci-mod-status-firewall",
+    "expectation_id": "luci-mod-status-firewall-ip6tables",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status.json luci-mod-status-firewall.read.file./usr/sbin/ip6tables --line-numbers -w -nvxL -t *=[exec]",
+      "luci@b2e0be4b /usr/sbin/ip6tables list is fs.stat, not file.exec"
+    ],
+    "note": "ip6tables.js path uses the same -t * glob. /usr/sbin/ip6tables list is not exec.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-firewall:cgi_io:cgi-exec:iptables-save",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-status-v1",
+    "session_class": "luci-mod-status-firewall",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/usr/sbin/iptables-save",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/usr/sbin/iptables-save",
+    "target_id": "command:iptables-save",
+    "op": "exec",
+    "acl_group": "luci-mod-status-firewall",
+    "expectation_id": "luci-mod-status-firewall-iptables-save",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status.json luci-mod-status-firewall.read.file./usr/sbin/iptables-save=[exec]",
+      "luci@b2e0be4b nftables.js fs.exec_direct iptables-save"
+    ],
+    "note": "nftables.js falls back to fs.exec_direct('/usr/sbin/iptables-save'). Exact cmdline.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-firewall:cgi_io:cgi-exec:ip6tables-save",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-status-v1",
+    "session_class": "luci-mod-status-firewall",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/usr/sbin/ip6tables-save",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/usr/sbin/ip6tables-save",
+    "target_id": "command:ip6tables-save",
+    "op": "exec",
+    "acl_group": "luci-mod-status-firewall",
+    "expectation_id": "luci-mod-status-firewall-ip6tables-save",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status.json luci-mod-status-firewall.read.file./usr/sbin/ip6tables-save=[exec]",
+      "luci@b2e0be4b nftables.js fs.exec_direct ip6tables-save"
+    ],
+    "note": "nftables.js falls back to fs.exec_direct('/usr/sbin/ip6tables-save'). Exact cmdline.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-firewall:cgi_io:cgi-exec:firewall-init",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-status-v1",
+    "session_class": "luci-mod-status-firewall",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/etc/init.d/firewall",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/etc/init.d/firewall",
+    "target_id": "command:firewall-init",
+    "op": "exec",
+    "acl_group": "luci-mod-status-firewall",
+    "expectation_id": "luci-mod-status-firewall-restart",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status.json luci-mod-status-firewall.write.file./etc/init.d/firewall restart=[exec]",
+      "luci@b2e0be4b iptables.js handleRestart fs.exec_direct"
+    ],
+    "note": "iptables.js handleRestart uses fs.exec_direct('/etc/init.d/firewall', ['restart']). Write file.exec. Intended_access for this fixture, not a violation.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:cgi_io:cgi-exec:nft",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-status-v1",
+    "session_class": "root",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/usr/sbin/nft",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/usr/sbin/nft",
+    "target_id": "command:nft",
+    "op": "exec",
+    "acl_group": "luci-mod-status-firewall",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config root read/write *",
+      "expectation_id root-administration"
+    ],
+    "note": "Stock rpcd.config root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:cgi_io:cgi-exec:dmesg",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-status-v1",
+    "session_class": "root",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/bin/dmesg",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/bin/dmesg",
+    "target_id": "command:dmesg",
+    "op": "exec",
+    "acl_group": "luci-mod-status-logs",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config root read/write *",
+      "expectation_id root-administration"
+    ],
+    "note": "Stock rpcd.config root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:cgi_io:cgi-exec:firewall-init",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-status-v1",
+    "session_class": "root",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/etc/init.d/firewall",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/etc/init.d/firewall",
+    "target_id": "command:firewall-init",
+    "op": "exec",
+    "acl_group": "luci-mod-status-firewall",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config root read/write *",
+      "expectation_id root-administration"
+    ],
+    "note": "Stock rpcd.config root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:cgi_io:cgi-exec:iptables",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-status-v1",
+    "session_class": "root",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/usr/sbin/iptables",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/usr/sbin/iptables",
+    "target_id": "command:iptables",
+    "op": "exec",
+    "acl_group": "luci-mod-status-firewall",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config root read/write *",
+      "expectation_id root-administration"
+    ],
+    "note": "Stock rpcd.config root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:cgi_io:cgi-exec:ip6tables",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-status-v1",
+    "session_class": "root",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/usr/sbin/ip6tables",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/usr/sbin/ip6tables",
+    "target_id": "command:ip6tables",
+    "op": "exec",
+    "acl_group": "luci-mod-status-firewall",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config root read/write *",
+      "expectation_id root-administration"
+    ],
+    "note": "Stock rpcd.config root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:cgi_io:cgi-exec:iptables-save",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-status-v1",
+    "session_class": "root",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/usr/sbin/iptables-save",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/usr/sbin/iptables-save",
+    "target_id": "command:iptables-save",
+    "op": "exec",
+    "acl_group": "luci-mod-status-firewall",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config root read/write *",
+      "expectation_id root-administration"
+    ],
+    "note": "Stock rpcd.config root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:cgi_io:cgi-exec:ip6tables-save",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:cgi-exec-status-v1",
+    "session_class": "root",
+    "ingress": "cgi_io",
+    "entrypoint_id": "cgi_io:cgi-exec:/usr/sbin/ip6tables-save",
+    "cgi_endpoint": "cgi-exec",
+    "fs_path": "/usr/sbin/ip6tables-save",
+    "target_id": "command:ip6tables-save",
+    "op": "exec",
+    "acl_group": "luci-mod-status-firewall",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "session.access scope=cgi-io object=exec function=read",
+      "session.access scope=file object=canonicalized cmdline or executable function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config root read/write *",
+      "expectation_id root-administration"
+    ],
+    "note": "Stock rpcd.config root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-firewall:ubus_http:file.exec:iptables",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-v1",
+    "session_class": "luci-mod-status-firewall",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/usr/sbin/iptables",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/usr/sbin/iptables",
+    "target_id": "command:iptables-z",
+    "op": "exec",
+    "acl_group": "luci-mod-status-firewall",
+    "expectation_id": "luci-mod-status-firewall-iptables-z",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status.json luci-mod-status-firewall.write.ubus.file=[exec]",
+      "luci@b2e0be4b luci-mod-status.json luci-mod-status-firewall.write.file./usr/sbin/iptables -Z=[exec]",
+      "luci@b2e0be4b iptables.js handleCounterReset fs.exec('/usr/sbin/iptables', ['-Z'])",
+      "rpcd@d99f703 file.c rpc_file_exec_run executable miss then cmdline ACL"
+    ],
+    "note": "Fixture login luci-mod-status-firewall is not a stock device login. iptables.js handleCounterReset uses fs.exec('/usr/sbin/iptables', ['-Z']). Exact cmdline ACL; intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-firewall:ubus_http:file.exec:ip6tables",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-v1",
+    "session_class": "luci-mod-status-firewall",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/usr/sbin/ip6tables",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/usr/sbin/ip6tables",
+    "target_id": "command:ip6tables-z",
+    "op": "exec",
+    "acl_group": "luci-mod-status-firewall",
+    "expectation_id": "luci-mod-status-firewall-ip6tables-z",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status.json luci-mod-status-firewall.write.file./usr/sbin/ip6tables -Z=[exec]",
+      "luci@b2e0be4b iptables.js handleCounterReset fs.exec('/usr/sbin/ip6tables', ['-Z'])"
+    ],
+    "note": "Fixture login luci-mod-status-firewall is not a stock device login. handleCounterReset calls ip6tables -Z when ip6tables is present. Exact cmdline ACL; intended_access, not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-routes:ubus_http:file.exec:ip",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-v1",
+    "session_class": "luci-mod-status-routes",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/sbin/ip",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/sbin/ip",
+    "target_id": "command:ip",
+    "op": "exec",
+    "acl_group": "luci-mod-status-routes",
+    "expectation_id": "luci-mod-status-routes-ip",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status.json luci-mod-status-routes.read.ubus.file=[exec]",
+      "luci@b2e0be4b luci-mod-status.json luci-mod-status-routes.read.file./sbin/ip -[46] neigh show=[exec]",
+      "luci@b2e0be4b routes.js load fs.exec('/sbin/ip', ['-4', 'neigh', 'show'])",
+      "rpcd@d99f703 session.c rpc_session_acl_allowed fnmatch FNM_NOESCAPE"
+    ],
+    "note": "Fixture login luci-mod-status-routes is not a stock device login. routes.js uses fs.exec('/sbin/ip', ['-4', 'neigh', 'show']). ACL glob /sbin/ip -[46] neigh show; intended_access, not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-routes-json:ubus_http:file.exec:ip-json",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-v1",
+    "session_class": "luci-mod-status-routes-json",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/sbin/ip:-j",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/sbin/ip",
+    "target_id": "command:ip-json",
+    "op": "exec",
+    "acl_group": "luci-mod-status-routes-json",
+    "expectation_id": "luci-mod-status-routes-json-ip",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status.json luci-mod-status-routes-json.read.ubus.file=[exec]",
+      "luci@b2e0be4b luci-mod-status.json luci-mod-status-routes-json.read.file./sbin/ip -[46] -j neigh show=[exec]",
+      "luci@b2e0be4b routesj.js load fs.exec('/sbin/ip', ['-4', '-j', 'neigh', 'show'])"
+    ],
+    "note": "Fixture login luci-mod-status-routes-json is not a stock device login. routesj.js uses fs.exec('/sbin/ip', ['-4', '-j', 'neigh', 'show']). Intended_access, not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:file.exec:iptables",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/usr/sbin/iptables",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/usr/sbin/iptables",
+    "target_id": "command:iptables-z",
+    "op": "exec",
+    "acl_group": "luci-mod-status-firewall",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config root read/write *",
+      "expectation_id root-administration"
+    ],
+    "note": "Stock rpcd.config root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:file.exec:ip6tables",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/usr/sbin/ip6tables",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/usr/sbin/ip6tables",
+    "target_id": "command:ip6tables-z",
+    "op": "exec",
+    "acl_group": "luci-mod-status-firewall",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config root read/write *",
+      "expectation_id root-administration"
+    ],
+    "note": "Stock rpcd.config root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:file.exec:ip",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/sbin/ip",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/sbin/ip",
+    "target_id": "command:ip",
+    "op": "exec",
+    "acl_group": "luci-mod-status-routes",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config root read/write *",
+      "expectation_id root-administration"
+    ],
+    "note": "Stock rpcd.config root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:file.exec:ip-json",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/sbin/ip:-j",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/sbin/ip",
+    "target_id": "command:ip-json",
+    "op": "exec",
+    "acl_group": "luci-mod-status-routes-json",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package/system/rpcd/files/rpcd.config root read/write *",
+      "expectation_id root-administration"
+    ],
+    "note": "Stock rpcd.config root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-network-config-write:ubus_http:file.exec:ifup",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-ifup-v1",
+    "session_class": "luci-mod-network-config-write",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/sbin/ifup",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/sbin/ifup",
+    "target_id": "command:ifup",
+    "op": "exec",
+    "acl_group": "luci-mod-network-config",
+    "expectation_id": "luci-mod-network-config-ifup",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-network.json luci-mod-network-config.write.ubus.file=[exec]",
+      "luci@b2e0be4b luci-mod-network.json luci-mod-network-config.write.file./sbin/ifup=[exec]",
+      "luci@b2e0be4b interfaces.js fs.exec('/sbin/ifup', [sid])",
+      "rpcd@d99f703 file.c rpc_file_exec_run executable ACL first"
+    ],
+    "note": "Fixture login luci-mod-network-config-write is not a stock device login. interfaces.js uses fs.exec('/sbin/ifup', [sid]). Bare executable ACL; intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-network-config-write:ubus_http:file.exec:ifdown",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-ifup-v1",
+    "session_class": "luci-mod-network-config-write",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/sbin/ifdown",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/sbin/ifdown",
+    "target_id": "command:ifdown",
+    "op": "exec",
+    "acl_group": "luci-mod-network-config",
+    "expectation_id": "luci-mod-network-config-ifdown",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-network.json luci-mod-network-config.write.file./sbin/ifdown=[exec]",
+      "luci@b2e0be4b interfaces.js fs.exec('/sbin/ifdown', [sid])"
+    ],
+    "note": "Fixture login luci-mod-network-config-write is not a stock device login. interfaces.js uses fs.exec('/sbin/ifdown', [sid]). Bare executable ACL; intended_access, not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-network-config-write:ubus_http:file.exec:wifi",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-ifup-v1",
+    "session_class": "luci-mod-network-config-write",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/sbin/wifi",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/sbin/wifi",
+    "target_id": "command:wifi",
+    "op": "exec",
+    "acl_group": "luci-mod-network-config",
+    "expectation_id": "luci-mod-network-config-wifi",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-network.json luci-mod-network-config.write.file./sbin/wifi=[exec]",
+      "luci@b2e0be4b wireless.js fs.exec('/sbin/wifi', ['up', s])"
+    ],
+    "note": "Fixture login luci-mod-network-config-write is not a stock device login. wireless.js uses fs.exec('/sbin/wifi', ['up', s]). Bare executable ACL; intended_access, not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:file.exec:ifup",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-ifup-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/sbin/ifup",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/sbin/ifup",
+    "target_id": "command:ifup",
+    "op": "exec",
+    "acl_group": "luci-mod-network-config",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:file.exec:ifdown",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-ifup-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/sbin/ifdown",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/sbin/ifdown",
+    "target_id": "command:ifdown",
+    "op": "exec",
+    "acl_group": "luci-mod-network-config",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:file.exec:wifi",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-ifup-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/sbin/wifi",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/sbin/wifi",
+    "target_id": "command:wifi",
+    "op": "exec",
+    "acl_group": "luci-mod-network-config",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-processes-write:ubus_http:file.exec:kill",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-kill-v1",
+    "session_class": "luci-mod-status-processes-write",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/bin/kill",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/bin/kill",
+    "target_id": "command:kill",
+    "op": "exec",
+    "acl_group": "luci-mod-status-processes",
+    "expectation_id": "luci-mod-status-processes-kill",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status.json luci-mod-status-processes.write.ubus.file=[exec]",
+      "luci@b2e0be4b luci-mod-status.json luci-mod-status-processes.write.file./bin/kill=[exec]",
+      "luci@b2e0be4b processes.js handleSignal fs.exec('/bin/kill', ['-%d'.format(signum), '%s'.format(pid)])",
+      "rpcd@d99f703 file.c rpc_file_exec_run executable ACL first"
+    ],
+    "note": "Fixture login luci-mod-status-processes-write is not a stock device login. processes.js handleSignal uses fs.exec('/bin/kill', ['-%d'.format(signum), '%s'.format(pid)]) for Hang Up/Terminate/Kill on a listed process. Bare executable ACL; intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:file.exec:kill",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-kill-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/bin/kill",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/bin/kill",
+    "target_id": "command:kill",
+    "op": "exec",
+    "acl_group": "luci-mod-status-processes",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-system-mounts:ubus_http:file.exec:umount",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-mounts-v1",
+    "session_class": "luci-mod-system-mounts",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/bin/umount",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/bin/umount",
+    "target_id": "command:umount",
+    "op": "exec",
+    "acl_group": "luci-mod-system-mounts",
+    "expectation_id": "luci-mod-system-mounts-umount",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-system.json luci-mod-system-mounts.write.ubus.file=[exec, write]",
+      "luci@b2e0be4b luci-mod-system.json luci-mod-system-mounts.write.file./bin/umount=[exec]",
+      "luci@b2e0be4b mounts.js handleUmount fs.exec('/bin/umount', [path])",
+      "rpcd@d99f703 file.c rpc_file_exec_run executable ACL first",
+      "fixture rpcd.config login luci-mod-system-mounts list read/write luci-mod-system-mounts"
+    ],
+    "note": "Fixture login luci-mod-system-mounts is not a stock device login. mounts.js handleUmount uses fs.exec('/bin/umount', [path]). Bare executable ACL; intended_access, not a violation and not a PoC. Reuses the existing read/write mounts fixture.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-system-mounts:ubus_http:file.exec:block",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-mounts-v1",
+    "session_class": "luci-mod-system-mounts",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/sbin/block",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/sbin/block",
+    "target_id": "command:block",
+    "op": "exec",
+    "acl_group": "luci-mod-system-mounts",
+    "expectation_id": "luci-mod-system-mounts-block",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-system.json luci-mod-system-mounts.write.ubus.file=[exec, write]",
+      "luci@b2e0be4b luci-mod-system.json luci-mod-system-mounts.write.file./sbin/block=[exec]",
+      "luci@b2e0be4b mounts.js handleMountAll fs.exec('/sbin/block', ['mount'])",
+      "rpcd@d99f703 file.c rpc_file_exec_run executable ACL first"
+    ],
+    "note": "mounts.js handleMountAll uses fs.exec('/sbin/block', ['mount']). Bare executable ACL; intended_access, not a violation and not a PoC. luci.getBlockDevices / setBlockDetect popen/system of /sbin/block stay on the luci object grants.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:file.exec:umount",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-mounts-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/bin/umount",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/bin/umount",
+    "target_id": "command:umount",
+    "op": "exec",
+    "acl_group": "luci-mod-system-mounts",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:file.exec:block",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-mounts-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/sbin/block",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/sbin/block",
+    "target_id": "command:block",
+    "op": "exec",
+    "acl_group": "luci-mod-system-mounts",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-system-flash:ubus_http:file.exec:list-backup",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-list-backup-v1",
+    "session_class": "luci-mod-system-flash",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/sbin/sysupgrade:--list-backup",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/sbin/sysupgrade",
+    "target_id": "command:sysupgrade-list-backup",
+    "op": "exec",
+    "acl_group": "luci-mod-system-flash",
+    "expectation_id": "luci-mod-system-flash-list-backup",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-system.json luci-mod-system-flash.read.ubus.file=[exec, read, stat]",
+      "luci@b2e0be4b luci-mod-system.json luci-mod-system-flash.read.file./sbin/sysupgrade --list-backup=[exec]",
+      "luci@b2e0be4b flash.js handleBackupList fs.exec('/sbin/sysupgrade', ['--list-backup'])",
+      "rpcd@d99f703 file.c rpc_file_exec_run executable ACL first then cmdline",
+      "fixture rpcd.config login luci-mod-system-flash list read luci-mod-system-flash"
+    ],
+    "note": "Fixture login luci-mod-system-flash is not a stock device login. flash.js handleBackupList uses fs.exec('/sbin/sysupgrade', ['--list-backup']). Cmdline ACL; intended_access, not a violation and not a PoC. Reuses the existing list-read flash fixture.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:file.exec:list-backup",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-file-exec-list-backup-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:file.exec:/sbin/sysupgrade:--list-backup",
+    "ubus_object": "file",
+    "method": "exec",
+    "fs_path": "/sbin/sysupgrade",
+    "target_id": "command:sysupgrade-list-backup",
+    "op": "exec",
+    "acl_group": "luci-mod-system-flash",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=file function=exec (uhttpd omits scope)",
+      "session.access scope=file object=canonicalized executable or cmdline function=exec"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-system-reboot:ubus_http:system.reboot",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-system-reboot-v1",
+    "session_class": "luci-mod-system-reboot",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:system.reboot",
+    "ubus_object": "system",
+    "method": "reboot",
+    "target_id": "ubus:system.reboot",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-reboot",
+    "expectation_id": "luci-mod-system-reboot",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=system function=reboot (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-system.json luci-mod-system-reboot.write.ubus.system=[reboot]",
+      "luci@b2e0be4b reboot.js rpc.declare object=system method=reboot",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access system/reboot",
+      "fixture rpcd.config login luci-mod-system-reboot list write luci-mod-system-reboot"
+    ],
+    "note": "Fixture login luci-mod-system-reboot is not a stock device login. reboot.js uses rpc.declare object=system method=reboot. Intended_access, not a violation and not a PoC. Does not invent a write flash login.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:system.reboot",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-system-reboot-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:system.reboot",
+    "ubus_object": "system",
+    "method": "reboot",
+    "target_id": "ubus:system.reboot",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-reboot",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=system function=reboot (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-system-init:ubus_http:rc.init",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-rc-init-v1",
+    "session_class": "luci-mod-system-init",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:rc.init",
+    "ubus_object": "rc",
+    "method": "init",
+    "target_id": "ubus:rc.init",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-init",
+    "expectation_id": "luci-mod-system-init",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=rc function=init (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-system.json luci-mod-system-init.write.ubus.rc=[init]",
+      "luci@b2e0be4b startup.js rpc.declare object=rc method=init",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access rc/init",
+      "fixture rpcd.config login luci-mod-system-init list write luci-mod-system-init"
+    ],
+    "note": "Fixture login luci-mod-system-init is not a stock device login. startup.js uses rpc.declare object=rc method=init. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-system-config:ubus_http:rc.init",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-rc-init-v1",
+    "session_class": "luci-mod-system-config",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:rc.init",
+    "ubus_object": "rc",
+    "method": "init",
+    "target_id": "ubus:rc.init",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-config",
+    "expectation_id": "luci-mod-system-config-rc-init",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=rc function=init (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-system.json luci-mod-system-config.write.ubus.rc=[init]",
+      "luci@b2e0be4b system.js rpc.declare object=rc method=init",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access rc/init",
+      "fixture rpcd.config login luci-mod-system-config list write luci-mod-system-config"
+    ],
+    "note": "Existing luci-mod-system-config write fixture already grants rc.init. system.js uses rpc.declare object=rc method=init for sysntpd restart. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:rc.init",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-rc-init-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:rc.init",
+    "ubus_object": "rc",
+    "method": "init",
+    "target_id": "ubus:rc.init",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-config",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=rc function=init (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-system-init-read:ubus_http:rc.list",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-rc-list-v1",
+    "session_class": "luci-mod-system-init-read",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:rc.list",
+    "ubus_object": "rc",
+    "method": "list",
+    "target_id": "ubus:rc.list",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-init",
+    "expectation_id": "luci-mod-system-init-list",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=rc function=list (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-system.json luci-mod-system-init.read.ubus.rc=[list]",
+      "luci@b2e0be4b startup.js rpc.declare object=rc method=list",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access rc/list",
+      "fixture rpcd.config login luci-mod-system-init-read list read luci-mod-system-init"
+    ],
+    "note": "Fixture login luci-mod-system-init-read is not a stock device login. startup.js uses rpc.declare object=rc method=list. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-system-init:ubus_http:rc.list",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-rc-list-v1",
+    "session_class": "luci-mod-system-init",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:rc.list",
+    "ubus_object": "rc",
+    "method": "list",
+    "target_id": "ubus:rc.list",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-init",
+    "expectation_id": "luci-mod-system-init-write-list",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=rc function=list (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-system.json luci-mod-system-init.read.ubus.rc=[list] write.ubus.rc=[init]",
+      "rpcd session.c login_test_permission: write implies read",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access rc/list",
+      "fixture rpcd.config login luci-mod-system-init list write luci-mod-system-init"
+    ],
+    "note": "rpcd write implies read, so the existing write luci-mod-system-init fixture also matches read ubus rc.list. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-system-config:ubus_http:rc.list",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-rc-list-v1",
+    "session_class": "luci-mod-system-config",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:rc.list",
+    "ubus_object": "rc",
+    "method": "list",
+    "target_id": "ubus:rc.list",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-config",
+    "expectation_id": "luci-mod-system-config-rc-list",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=rc function=list (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-system.json luci-mod-system-config.read.ubus.rc=[list]",
+      "luci@b2e0be4b system.js rpc.declare object=rc method=list",
+      "rpcd session.c login_test_permission: write implies read",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access rc/list",
+      "fixture rpcd.config login luci-mod-system-config list write luci-mod-system-config"
+    ],
+    "note": "Existing luci-mod-system-config write fixture grants rc.list via write-implies-read. system.js uses rpc.declare object=rc method=list. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:rc.list",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-rc-list-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:rc.list",
+    "ubus_object": "rc",
+    "method": "list",
+    "target_id": "ubus:rc.list",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-config",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=rc function=list (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-index:ubus_http:system.board",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-system-board-v1",
+    "session_class": "luci-mod-status-index",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:system.board",
+    "ubus_object": "system",
+    "method": "board",
+    "target_id": "ubus:system.board",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index",
+    "expectation_id": "luci-mod-status-index",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=system function=board (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status-index.json luci-mod-status-index.read.ubus.system=[board, info]",
+      "luci@b2e0be4b 10_system.js rpc.declare object=system method=board",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access system/board",
+      "fixture rpcd.config login luci-mod-status-index list read luci-mod-status-index"
+    ],
+    "note": "Fixture login luci-mod-status-index is not a stock device login. 10_system.js uses rpc.declare object=system method=board. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:system.board",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-system-board-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:system.board",
+    "ubus_object": "system",
+    "method": "board",
+    "target_id": "ubus:system.board",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=system function=board (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-index:ubus_http:system.info",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-system-info-v1",
+    "session_class": "luci-mod-status-index",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:system.info",
+    "ubus_object": "system",
+    "method": "info",
+    "target_id": "ubus:system.info",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index",
+    "expectation_id": "luci-mod-status-index-info",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=system function=info (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status-index.json luci-mod-status-index.read.ubus.system=[board, info]",
+      "luci@b2e0be4b 10_system.js rpc.declare object=system method=info",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access system/info",
+      "fixture rpcd.config login luci-mod-status-index list read luci-mod-status-index"
+    ],
+    "note": "Fixture login luci-mod-status-index is not a stock device login. 10_system.js uses rpc.declare object=system method=info. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:system.info",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-system-info-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:system.info",
+    "ubus_object": "system",
+    "method": "info",
+    "target_id": "ubus:system.info",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=system function=info (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-index:ubus_http:luci.getVersion",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-getversion-v1",
+    "session_class": "luci-mod-status-index",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getVersion",
+    "ubus_object": "luci",
+    "method": "getVersion",
+    "target_id": "ubus:luci.getVersion",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index",
+    "expectation_id": "luci-mod-status-index-getversion",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=luci function=getVersion (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status-index.json luci-mod-status-index.read.ubus.luci=[getVersion, getUnixtime, getOdhcp6cStats]",
+      "luci@b2e0be4b 10_system.js rpc.declare object=luci method=getVersion",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access luci/getVersion",
+      "fixture rpcd.config login luci-mod-status-index list read luci-mod-status-index"
+    ],
+    "note": "Fixture login luci-mod-status-index is not a stock device login. 10_system.js uses rpc.declare object=luci method=getVersion. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:luci.getVersion",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-getversion-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getVersion",
+    "ubus_object": "luci",
+    "method": "getVersion",
+    "target_id": "ubus:luci.getVersion",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=luci function=getVersion (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-index:ubus_http:luci.getUnixtime",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-getunixtime-v1",
+    "session_class": "luci-mod-status-index",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getUnixtime",
+    "ubus_object": "luci",
+    "method": "getUnixtime",
+    "target_id": "ubus:luci.getUnixtime",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index",
+    "expectation_id": "luci-mod-status-index-getunixtime",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=luci function=getUnixtime (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status-index.json luci-mod-status-index.read.ubus.luci=[getUnixtime, getVersion, getOdhcp6cStats]",
+      "luci@b2e0be4b 10_system.js rpc.declare object=luci method=getUnixtime",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access luci/getUnixtime",
+      "fixture rpcd.config login luci-mod-status-index list read luci-mod-status-index"
+    ],
+    "note": "Fixture login luci-mod-status-index is not a stock device login. 10_system.js uses rpc.declare object=luci method=getUnixtime. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:luci.getUnixtime",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-getunixtime-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getUnixtime",
+    "ubus_object": "luci",
+    "method": "getUnixtime",
+    "target_id": "ubus:luci.getUnixtime",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-config",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=luci function=getUnixtime (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-network-config-write:ubus_http:hostapd.del_client",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-hostapd-del-client-v1",
+    "session_class": "luci-mod-network-config-write",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:hostapd.del_client",
+    "ubus_object": "hostapd.*",
+    "method": "del_client",
+    "target_id": "ubus:hostapd.del_client",
+    "op": "invoke",
+    "acl_group": "luci-mod-network-config",
+    "expectation_id": "luci-mod-network-config-hostapd-del-client",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=hostapd.* function=del_client (uhttpd omits scope; FNM_NOESCAPE)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-network.json luci-mod-network-config.write.ubus.hostapd.*=[del_client]",
+      "luci@b2e0be4b network.js disconnectClient rpc.declare hostapd.<ifname> del_client",
+      "luci@b2e0be4b wireless.js associated-station Disconnect",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access hostapd.*/del_client",
+      "fixture rpcd.config login luci-mod-network-config-write list write luci-mod-network-config"
+    ],
+    "note": "Fixture login luci-mod-network-config-write is not a stock device login. wireless.js uses network.js disconnectClient rpc.declare object=hostapd.<ifname> method=del_client. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-index-wifi:ubus_http:hostapd.del_client",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-hostapd-del-client-v1",
+    "session_class": "luci-mod-status-index-wifi",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:hostapd.del_client",
+    "ubus_object": "hostapd.*",
+    "method": "del_client",
+    "target_id": "ubus:hostapd.del_client",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index-wifi",
+    "expectation_id": "luci-mod-status-index-wifi-hostapd-del-client",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=hostapd.* function=del_client (uhttpd omits scope; FNM_NOESCAPE)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status-index.json luci-mod-status-index-wifi.write.ubus.hostapd.*=[del_client, wps_start, wps_cancel, wps_status]",
+      "luci@b2e0be4b 60_wifi.js handleDelClient disconnectClient",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access hostapd.*/del_client",
+      "fixture rpcd.config login luci-mod-status-index-wifi list write luci-mod-status-index-wifi"
+    ],
+    "note": "Fixture login luci-mod-status-index-wifi is not a stock device login. 60_wifi.js handleDelClient uses network.js disconnectClient. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:hostapd.del_client",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-hostapd-del-client-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:hostapd.del_client",
+    "ubus_object": "hostapd.*",
+    "method": "del_client",
+    "target_id": "ubus:hostapd.del_client",
+    "op": "invoke",
+    "acl_group": "luci-mod-network-config",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=hostapd.* function=del_client (uhttpd omits scope; FNM_NOESCAPE)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-index-wifi:ubus_http:hostapd.wps_start",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-hostapd-wps-start-v1",
+    "session_class": "luci-mod-status-index-wifi",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:hostapd.wps_start",
+    "ubus_object": "hostapd.*",
+    "method": "wps_start",
+    "target_id": "ubus:hostapd.wps_start",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index-wifi",
+    "expectation_id": "luci-mod-status-index-wifi-hostapd-wps-start",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=hostapd.* function=wps_start (uhttpd omits scope; FNM_NOESCAPE)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status-index.json luci-mod-status-index-wifi.write.ubus.hostapd.*=[del_client, wps_start, wps_cancel, wps_status]",
+      "luci@b2e0be4b 60_wifi.js handleCallWPS rpc.declare method=wps_start",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access hostapd.*/wps_start",
+      "fixture rpcd.config login luci-mod-status-index-wifi list write luci-mod-status-index-wifi"
+    ],
+    "note": "Fixture login luci-mod-status-index-wifi is not a stock device login. 60_wifi.js handleCallWPS uses rpc.declare object=hostapd.<ifname> method=wps_start. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:hostapd.wps_start",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-hostapd-wps-start-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:hostapd.wps_start",
+    "ubus_object": "hostapd.*",
+    "method": "wps_start",
+    "target_id": "ubus:hostapd.wps_start",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index-wifi",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=hostapd.* function=wps_start (uhttpd omits scope; FNM_NOESCAPE)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-index-wifi:ubus_http:hostapd.wps_cancel",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-hostapd-wps-cancel-v1",
+    "session_class": "luci-mod-status-index-wifi",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:hostapd.wps_cancel",
+    "ubus_object": "hostapd.*",
+    "method": "wps_cancel",
+    "target_id": "ubus:hostapd.wps_cancel",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index-wifi",
+    "expectation_id": "luci-mod-status-index-wifi-hostapd-wps-cancel",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=hostapd.* function=wps_cancel (uhttpd omits scope; FNM_NOESCAPE)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status-index.json luci-mod-status-index-wifi.write.ubus.hostapd.*=[del_client, wps_start, wps_cancel, wps_status]",
+      "luci@b2e0be4b 60_wifi.js handleCancelWPS rpc.declare method=wps_cancel",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access hostapd.*/wps_cancel",
+      "fixture rpcd.config login luci-mod-status-index-wifi list write luci-mod-status-index-wifi"
+    ],
+    "note": "Fixture login luci-mod-status-index-wifi is not a stock device login. 60_wifi.js handleCancelWPS uses rpc.declare object=hostapd.<ifname> method=wps_cancel. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:hostapd.wps_cancel",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-hostapd-wps-cancel-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:hostapd.wps_cancel",
+    "ubus_object": "hostapd.*",
+    "method": "wps_cancel",
+    "target_id": "ubus:hostapd.wps_cancel",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index-wifi",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=hostapd.* function=wps_cancel (uhttpd omits scope; FNM_NOESCAPE)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-index-wifi:ubus_http:hostapd.wps_status",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-hostapd-wps-status-v1",
+    "session_class": "luci-mod-status-index-wifi",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:hostapd.wps_status",
+    "ubus_object": "hostapd.*",
+    "method": "wps_status",
+    "target_id": "ubus:hostapd.wps_status",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index-wifi",
+    "expectation_id": "luci-mod-status-index-wifi-hostapd-wps-status",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=hostapd.* function=wps_status (uhttpd omits scope; FNM_NOESCAPE)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status-index.json luci-mod-status-index-wifi.write.ubus.hostapd.*=[del_client, wps_start, wps_cancel, wps_status]",
+      "luci@b2e0be4b 60_wifi.js handleGetWPSStatus rpc.declare method=wps_status",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access hostapd.*/wps_status",
+      "fixture rpcd.config login luci-mod-status-index-wifi list write luci-mod-status-index-wifi"
+    ],
+    "note": "Fixture login luci-mod-status-index-wifi is not a stock device login. 60_wifi.js handleGetWPSStatus uses rpc.declare object=hostapd.<ifname> method=wps_status. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:hostapd.wps_status",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-hostapd-wps-status-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:hostapd.wps_status",
+    "ubus_object": "hostapd.*",
+    "method": "wps_status",
+    "target_id": "ubus:hostapd.wps_status",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index-wifi",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=hostapd.* function=wps_status (uhttpd omits scope; FNM_NOESCAPE)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-index:ubus_http:luci.getOdhcp6cStats",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-getodhcp6cstats-v1",
+    "session_class": "luci-mod-status-index",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getOdhcp6cStats",
+    "ubus_object": "luci",
+    "method": "getOdhcp6cStats",
+    "target_id": "ubus:luci.getOdhcp6cStats",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index",
+    "expectation_id": "luci-mod-status-index-getodhcp6cstats",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=luci function=getOdhcp6cStats (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status-index.json luci-mod-status-index.read.ubus.luci=[getVersion, getUnixtime, getOdhcp6cStats]",
+      "luci@b2e0be4b 30_network.js rpc.declare object=luci method=getOdhcp6cStats",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access luci/getOdhcp6cStats",
+      "fixture rpcd.config login luci-mod-status-index list read luci-mod-status-index"
+    ],
+    "note": "Fixture login luci-mod-status-index is not a stock device login. 30_network.js uses rpc.declare object=luci method=getOdhcp6cStats. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:luci.getOdhcp6cStats",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-getodhcp6cstats-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getOdhcp6cStats",
+    "ubus_object": "luci",
+    "method": "getOdhcp6cStats",
+    "target_id": "ubus:luci.getOdhcp6cStats",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=luci function=getOdhcp6cStats (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-system-config:ubus_http:luci.getTimezones",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-gettimezones-v1",
+    "session_class": "luci-mod-system-config",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getTimezones",
+    "ubus_object": "luci",
+    "method": "getTimezones",
+    "target_id": "ubus:luci.getTimezones",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-config",
+    "expectation_id": "luci-mod-system-config-gettimezones",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=luci function=getTimezones (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-system.json luci-mod-system-config.read.ubus.luci=[getLEDs, getTimezones, getUSBDevices, getUnixtime]",
+      "luci@b2e0be4b system.js rpc.declare object=luci method=getTimezones",
+      "rpcd session.c login_test_permission: write implies read",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access luci/getTimezones",
+      "fixture rpcd.config login luci-mod-system-config list write luci-mod-system-config"
+    ],
+    "note": "Fixture login luci-mod-system-config is not a stock device login. Existing write fixture grants getTimezones via write-implies-read. system.js uses rpc.declare object=luci method=getTimezones. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:luci.getTimezones",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-gettimezones-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getTimezones",
+    "ubus_object": "luci",
+    "method": "getTimezones",
+    "target_id": "ubus:luci.getTimezones",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-config",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=luci function=getTimezones (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-system-config:ubus_http:luci.getLEDs",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-getleds-v1",
+    "session_class": "luci-mod-system-config",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getLEDs",
+    "ubus_object": "luci",
+    "method": "getLEDs",
+    "target_id": "ubus:luci.getLEDs",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-config",
+    "expectation_id": "luci-mod-system-config-getleds",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=luci function=getLEDs (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-system.json luci-mod-system-config.read.ubus.luci=[getLEDs, getTimezones, getUSBDevices, getUnixtime]",
+      "luci@b2e0be4b leds.js rpc.declare object=luci method=getLEDs",
+      "luci@b2e0be4b luci-mod-system.json admin/system/leds depends on luci-mod-system-config",
+      "rpcd session.c login_test_permission: write implies read",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access luci/getLEDs",
+      "fixture rpcd.config login luci-mod-system-config list write luci-mod-system-config"
+    ],
+    "note": "Fixture login luci-mod-system-config is not a stock device login. Existing write fixture grants getLEDs via write-implies-read. leds.js uses rpc.declare object=luci method=getLEDs. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:luci.getLEDs",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-getleds-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getLEDs",
+    "ubus_object": "luci",
+    "method": "getLEDs",
+    "target_id": "ubus:luci.getLEDs",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-config",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=luci function=getLEDs (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-index-storage:ubus_http:luci.getMountPoints",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-getmountpoints-v1",
+    "session_class": "luci-mod-status-index-storage",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getMountPoints",
+    "ubus_object": "luci",
+    "method": "getMountPoints",
+    "target_id": "ubus:luci.getMountPoints",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index-storage",
+    "expectation_id": "luci-mod-status-index-storage-getmountpoints",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=luci function=getMountPoints (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status-index.json luci-mod-status-index-storage.read.ubus.luci=[getMountPoints]",
+      "luci@b2e0be4b 25_storage.js rpc.declare object=luci method=getMountPoints",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access luci/getMountPoints",
+      "fixture rpcd.config login luci-mod-status-index-storage list read luci-mod-status-index-storage"
+    ],
+    "note": "Fixture login luci-mod-status-index-storage is not a stock device login. 25_storage.js uses rpc.declare object=luci method=getMountPoints. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-system-mounts:ubus_http:luci.getMountPoints",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-getmountpoints-v1",
+    "session_class": "luci-mod-system-mounts",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getMountPoints",
+    "ubus_object": "luci",
+    "method": "getMountPoints",
+    "target_id": "ubus:luci.getMountPoints",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-mounts",
+    "expectation_id": "luci-mod-system-mounts-getmountpoints",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=luci function=getMountPoints (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-system.json luci-mod-system-mounts.read.ubus.luci=[getBlockDevices, getMountPoints]",
+      "luci@b2e0be4b mounts.js rpc.declare object=luci method=getMountPoints",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access luci/getMountPoints"
+    ],
+    "note": "Existing luci-mod-system-mounts fixture. mounts.js uses rpc.declare object=luci method=getMountPoints. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-app-package-manager:ubus_http:luci.getMountPoints",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-getmountpoints-v1",
+    "session_class": "luci-app-package-manager",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getMountPoints",
+    "ubus_object": "luci",
+    "method": "getMountPoints",
+    "target_id": "ubus:luci.getMountPoints",
+    "op": "invoke",
+    "acl_group": "luci-app-package-manager",
+    "expectation_id": "luci-app-package-manager-getmountpoints",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=luci function=getMountPoints (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-app-package-manager.json luci-app-package-manager.read.ubus.luci=[getMountPoints]",
+      "luci@b2e0be4b package-manager.js rpc.declare object=luci method=getMountPoints",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access luci/getMountPoints"
+    ],
+    "note": "Existing luci-app-package-manager fixture. package-manager.js uses rpc.declare object=luci method=getMountPoints. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:luci.getMountPoints",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-getmountpoints-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getMountPoints",
+    "ubus_object": "luci",
+    "method": "getMountPoints",
+    "target_id": "ubus:luci.getMountPoints",
+    "op": "invoke",
+    "acl_group": "luci-mod-system-mounts",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=luci function=getMountPoints (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-mod-status-index-ports:ubus_http:luci.getBuiltinEthernetPorts",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-getbuiltinethernetports-v1",
+    "session_class": "luci-mod-status-index-ports",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getBuiltinEthernetPorts",
+    "ubus_object": "luci",
+    "method": "getBuiltinEthernetPorts",
+    "target_id": "ubus:luci.getBuiltinEthernetPorts",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index-ports",
+    "expectation_id": "luci-mod-status-index-ports-getbuiltinethernetports",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=luci function=getBuiltinEthernetPorts (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-mod-status-index.json luci-mod-status-index-ports.read.ubus.luci=[getBuiltinEthernetPorts]",
+      "luci@b2e0be4b 29_ports.js rpc.declare object=luci method=getBuiltinEthernetPorts",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access luci/getBuiltinEthernetPorts",
+      "fixture rpcd.config login luci-mod-status-index-ports list read luci-mod-status-index-ports"
+    ],
+    "note": "Fixture login luci-mod-status-index-ports is not a stock device login. 29_ports.js uses rpc.declare object=luci method=getBuiltinEthernetPorts. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:luci.getBuiltinEthernetPorts",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-getbuiltinethernetports-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getBuiltinEthernetPorts",
+    "ubus_object": "luci",
+    "method": "getBuiltinEthernetPorts",
+    "target_id": "ubus:luci.getBuiltinEthernetPorts",
+    "op": "invoke",
+    "acl_group": "luci-mod-status-index-ports",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=luci function=getBuiltinEthernetPorts (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:luci-app-firewall:ubus_http:luci.getConntrackHelpers",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-getconntrackhelpers-v1",
+    "session_class": "luci-app-firewall",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getConntrackHelpers",
+    "ubus_object": "luci",
+    "method": "getConntrackHelpers",
+    "target_id": "ubus:luci.getConntrackHelpers",
+    "op": "invoke",
+    "acl_group": "luci-app-firewall",
+    "expectation_id": "luci-app-firewall-getconntrackhelpers",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=luci function=getConntrackHelpers (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "luci@b2e0be4b luci-app-firewall.json luci-app-firewall.read.ubus.luci=[getConntrackHelpers]",
+      "luci@b2e0be4b zones.js rules.js forwards.js rpc.declare object=luci method=getConntrackHelpers",
+      "uhttpd@93b05e0 ubus.c uh_ubus_allowed session.access luci/getConntrackHelpers",
+      "fixture rpcd.config login luci-app-firewall list read luci-app-firewall"
+    ],
+    "note": "Fixture login luci-app-firewall is not a stock device login. zones.js, rules.js, and forwards.js use rpc.declare object=luci method=getConntrackHelpers. Intended_access, not a violation and not a PoC.",
+    "synthetic_session": true
+  },
+  {
+    "record_type": "policy_grant",
+    "evidence_status": "fact",
+    "producer": "policy_facts",
+    "record_id": "policy:grant:root:ubus_http:luci.getConntrackHelpers",
+    "corpus_revision": "sha256:b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "profile": "luci-ssl-25.12",
+    "analysis_revision": "policy:ubus-luci-getconntrackhelpers-v1",
+    "session_class": "root",
+    "ingress": "ubus_http",
+    "entrypoint_id": "ubus_http:luci.getConntrackHelpers",
+    "ubus_object": "luci",
+    "method": "getConntrackHelpers",
+    "target_id": "ubus:luci.getConntrackHelpers",
+    "op": "invoke",
+    "acl_group": "luci-app-firewall",
+    "expectation_id": "root-administration",
+    "assessment": "intended_access",
+    "requirements": [
+      "uh_ubus_allowed",
+      "session.access scope=ubus object=luci function=getConntrackHelpers (uhttpd omits scope)"
+    ],
+    "evidence_refs": [
+      "openwrt@4e964251 package overlay rpcd.config root read/write '*'"
+    ],
+    "note": "Stock root list read/write '*' is intended_access (root-administration), not a violation."
+  }
+]

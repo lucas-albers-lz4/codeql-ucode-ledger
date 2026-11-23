@@ -1,0 +1,36 @@
+[
+  {
+    "label": "codeql-version",
+    "argv": [
+      "<CODEQL>",
+      "version"
+    ],
+    "cwd": "<RUN>",
+    "exit_status": 0,
+    "wall_seconds": 0.222904,
+    "started_utc": null,
+    "finished_utc": "2026-11-23T22:34:59.161051+00:00",
+    "stdout": "codeql-version.stdout",
+    "stderr_and_time": "codeql-version.stderr-time.txt"
+  },
+  {
+    "label": "database-init",
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "init",
+      "<RUN>/database/db",
+      "--language=ucode",
+      "--search-path=<RUN>/pack/ucode-extractor-pack",
+      "--common-caches=<RUN>/common-cache",
+      "--source-root=<RUN>/source"
+    ],
+    "cwd": "<RUN>",
+    "exit_status": 2,
+    "wall_seconds": 0.245038,
+    "started_utc": null,
+    "finished_utc": "2026-11-23T22:34:59.406399+00:00",
+    "stdout": "database-init.stdout",
+    "stderr_and_time": "database-init.stderr-time.txt"
+  }
+]

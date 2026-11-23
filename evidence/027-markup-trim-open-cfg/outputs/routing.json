@@ -1,0 +1,27 @@
+{
+  "input_count": 2,
+  "plain_count": 0,
+  "markup_count": 2,
+  "markup_inconclusive_count": 2,
+  "uncertain_count": 0,
+  "excluded_count": 0,
+  "duplicate_input_count": 0,
+  "decisions": [
+    {
+      "path": "$RUN/source/usr/share/ucode/controls/normal.ut",
+      "installed_path": "usr/share/ucode/controls/normal.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/source/usr/share/ucode/controls/trim-open.ut",
+      "installed_path": "usr/share/ucode/controls/trim-open.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    }
+  ]
+}

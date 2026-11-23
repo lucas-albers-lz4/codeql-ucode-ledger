@@ -1,0 +1,27 @@
+{
+  "decisions": [
+    {
+      "classification": "markup",
+      "inconclusive_reason": "markup_not_modeled",
+      "installed_path": "usr/share/ucode/controls/siblings-all-covered.ut",
+      "path": "<RUN-D>/source/usr/share/ucode/controls/siblings-all-covered.ut",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive"
+    },
+    {
+      "classification": "markup",
+      "inconclusive_reason": "markup_not_modeled",
+      "installed_path": "usr/share/ucode/controls/siblings.ut",
+      "path": "<RUN-D>/source/usr/share/ucode/controls/siblings.ut",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive"
+    }
+  ],
+  "duplicate_input_count": 0,
+  "excluded_count": 0,
+  "input_count": 2,
+  "markup_count": 2,
+  "markup_inconclusive_count": 2,
+  "plain_count": 0,
+  "uncertain_count": 0
+}

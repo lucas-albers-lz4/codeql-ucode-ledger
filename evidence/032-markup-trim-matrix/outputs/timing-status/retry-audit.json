@@ -1,0 +1,83 @@
+{
+  "setup_failures_and_retries": [
+    {
+      "attempt": "database init 1",
+      "exit": 2,
+      "wall_seconds": 0.245,
+      "peak_rss_bytes": 89653248,
+      "cause": "run omitted parent database directory; DB was not created; preserved under work/.../output/attempt-01-database-init-failed"
+    },
+    {
+      "attempt": "initial nine query commands",
+      "exit_each": 2,
+      "cause": "workspace pack/dependency resolution failed because only search-path was provided; per-command status, time, RSS and stderr are in commands.json"
+    },
+    {
+      "attempt": "AllDiagnostics retry 1",
+      "exit": 2,
+      "cause": "additional-packs experiment still lacked workspace context",
+      "work_log": "work/.../output/AllDiagnostics-retry-01.stderr-time.txt"
+    },
+    {
+      "attempt": "AllDiagnostics retry 2",
+      "exit": 2,
+      "cause": "parent descriptor was present but nested descriptor remained under producer-ql/ql",
+      "work_log": "work/.../output/AllDiagnostics-retry-02.stderr-time.txt"
+    },
+    {
+      "attempt": "AllDiagnostics retry 3",
+      "exit": 2,
+      "cause": "wrong working-directory/query-path combination",
+      "work_log": "work/.../output/AllDiagnostics-retry-03.stderr-time.txt"
+    },
+    {
+      "attempt": "AllDiagnostics retry 4",
+      "exit": 2,
+      "cause": "cleanup command used wrong relative path; nested descriptor remained",
+      "work_log": "work/.../output/AllDiagnostics-retry-04.stderr-time.txt"
+    },
+    {
+      "attempt": "AllDiagnostics retry 5",
+      "exit": 2,
+      "cause": "query path was wrong relative to current working directory",
+      "work_log": "work/.../output/AllDiagnostics-retry-05.stderr-time.txt"
+    },
+    {
+      "attempt": "MemberFields retry 7",
+      "exit": 2,
+      "wall_seconds": 1.343238,
+      "peak_rss_bytes": 252755968,
+      "cause": "invalid exists expression in select list; later corrected using not exists in where",
+      "work_log": "work/.../output/MemberFields-retry-07.stderr-time.txt"
+    },
+    {
+      "attempt": "MemberFields retry 8",
+      "exit": 2,
+      "cause": "edit command used wrong relative path; invalid query ran again",
+      "work_log": "work/.../output/MemberFields-retry-08.stderr-time.txt"
+    }
+  ],
+  "successes": [
+    {
+      "attempt": "AllDiagnostics retry 6",
+      "exit": 0,
+      "wall_seconds": 1.65,
+      "peak_rss_bytes": 311459840,
+      "capture": "manual timed shell command; no structured argv record"
+    },
+    {
+      "attempt": "query set retry 7",
+      "exit": "all 0 except MemberFields exit 2; all eight successful queries decoded with exit 0",
+      "capture": "commands are in query-retries.json"
+    },
+    {
+      "attempt": "MemberFields retry 9",
+      "exit": 0,
+      "wall_seconds": 2.01,
+      "peak_rss_bytes": 422805504,
+      "capture": "manual timed shell command; exact command and output retained under work; decode was not timed"
+    }
+  ],
+  "recording_note": "The retry-04 CodeQL invocation exited 2. A separate cleanup shell command exited 0 without removing the nested manifest; that cleanup status is not the query status. The preserved stderr shows the CodeQL failure.",
+  "coverage_limit": "Some manual retries lack structured top-level argv records; MemberFields retry-09 decode has no timed log. Do not claim complete exact-command/timing coverage."
+}

@@ -1,0 +1,13 @@
+{
+  "actual": {
+    "file:///STAGED_SOURCE/usr/share/ucode/controls/siblings-all-covered.ut": 1,
+    "file:///STAGED_SOURCE/usr/share/ucode/controls/siblings-computed-callee.ut": 1,
+    "file:///STAGED_SOURCE/usr/share/ucode/controls/siblings.ut": 1
+  },
+  "expected": {
+    "file:///STAGED_SOURCE/usr/share/ucode/controls/siblings-all-covered.ut": 1,
+    "file:///STAGED_SOURCE/usr/share/ucode/controls/siblings-computed-callee.ut": 1,
+    "file:///STAGED_SOURCE/usr/share/ucode/controls/siblings.ut": 1
+  },
+  "passed": true
+}

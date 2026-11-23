@@ -1,0 +1,32 @@
+05-query-run-SuccessfullyExtractedFiles: exit=0, wall=1.496s
+06-bqrs-decode-SuccessfullyExtractedFiles: exit=0, wall=0.233s
+07-query-run-ExtractionErrors: exit=0, wall=1.517s
+08-bqrs-decode-ExtractionErrors: exit=0, wall=0.231s
+09-query-run-markup-cfg-diagnostics-test: exit=0, wall=1.438s
+10-bqrs-decode-markup-cfg-diagnostics-test: exit=0, wall=0.227s
+11-query-run-markup-cfg-delimiters-ast-test: exit=0, wall=2.255s
+12-bqrs-decode-markup-cfg-delimiters-ast-test: exit=0, wall=0.227s
+13-query-run-markup-cfg-delimiters-coverage-test: exit=0, wall=2.013s
+14-bqrs-decode-markup-cfg-delimiters-coverage-test: exit=0, wall=0.228s
+15-query-run-markup-cfg-nodes-test: exit=0, wall=2.283s
+16-bqrs-decode-markup-cfg-nodes-test: exit=0, wall=0.224s
+17-query-run-markup-cfg-test: exit=0, wall=2.335s
+18-bqrs-decode-markup-cfg-test: exit=0, wall=0.227s
+       15.37 real        40.47 user         2.35 sys
+           468402176  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              377786  page reclaims
+                1463  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                 137  signals received
+                 483  voluntary context switches
+              243904  involuntary context switches
+           532590797  instructions retired
+           222514245  cycles elapsed
+            16794080  peak memory footprint

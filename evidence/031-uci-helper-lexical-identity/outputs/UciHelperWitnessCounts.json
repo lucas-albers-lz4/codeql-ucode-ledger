@@ -1,0 +1,41 @@
+{
+  "#select": {
+    "columns": [
+      {
+        "kind": "Entity",
+        "name": "site"
+      },
+      {
+        "kind": "String"
+      }
+    ],
+    "tuples": [
+      [
+        {
+          "label": "CallExpression",
+          "url": {
+            "endColumn": 30,
+            "endLine": 5,
+            "startColumn": 1,
+            "startLine": 5,
+            "uri": "file://$RUN/src/controls-formal/reassigned-formals.uc"
+          }
+        },
+        "distinct observer entities: forwarding calls=1, helpers=1"
+      ],
+      [
+        {
+          "label": "CallExpression",
+          "url": {
+            "endColumn": 81,
+            "endLine": 79,
+            "startColumn": 9,
+            "startLine": 79,
+            "uri": "file://$RUN/src/usr/share/ucode/luci/controller/admin/uci.uc"
+          }
+        },
+        "distinct observer entities: forwarding calls=1, helpers=1"
+      ]
+    ]
+  }
+}

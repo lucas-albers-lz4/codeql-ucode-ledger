@@ -1,0 +1,70 @@
+{
+  "#select": {
+    "columns": [
+      {
+        "kind": "Entity",
+        "name": "site"
+      },
+      {
+        "kind": "String"
+      },
+      {
+        "kind": "Entity",
+        "name": "forward"
+      },
+      {
+        "kind": "String"
+      }
+    ],
+    "tuples": [
+      [
+        {
+          "label": "CallExpression",
+          "url": {
+            "endColumn": 30,
+            "endLine": 5,
+            "startColumn": 1,
+            "startLine": 5,
+            "uri": "file://$RUN/src/controls-formal/reassigned-formals.uc"
+          }
+        },
+        "UCI commit helper observation: 1:3",
+        {
+          "label": "CallExpression",
+          "url": {
+            "endColumn": 40,
+            "endLine": 3,
+            "startColumn": 10,
+            "startLine": 3,
+            "uri": "file://$RUN/src/controls-formal/reassigned-formals.uc"
+          }
+        },
+        "forwarding call"
+      ],
+      [
+        {
+          "label": "CallExpression",
+          "url": {
+            "endColumn": 81,
+            "endLine": 79,
+            "startColumn": 9,
+            "startLine": 79,
+            "uri": "file://$RUN/src/usr/share/ucode/luci/controller/admin/uci.uc"
+          }
+        },
+        "UCI commit helper observation: 25:28",
+        {
+          "label": "CallExpression",
+          "url": {
+            "endColumn": 42,
+            "endLine": 28,
+            "startColumn": 12,
+            "startLine": 28,
+            "uri": "file://$RUN/src/usr/share/ucode/luci/controller/admin/uci.uc"
+          }
+        },
+        "forwarding call"
+      ]
+    ]
+  }
+}

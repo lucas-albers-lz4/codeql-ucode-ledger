@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 201, in _run_module_as_main
+  File "<frozen runpy>", line 87, in _run_code
+  File "<RUN>/consumer-run/invalid-numeric/policy/setblock_table.py", line 431, in <module>
+    main()
+    ~~~~^^
+  File "<RUN>/consumer-run/invalid-numeric/policy/setblock_table.py", line 425, in main
+    import_typed(args.typed_json, args.source_root)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<RUN>/consumer-run/invalid-numeric/policy/setblock_table.py", line 370, in import_typed
+    record = validate_typed(path, source_root, repo_root)
+  File "<RUN>/consumer-run/invalid-numeric/policy/setblock_table.py", line 139, in validate_typed
+    return validate_typed_records(records, source_bytes, lock, corpus_revision(repo_root))
+  File "<RUN>/consumer-run/invalid-numeric/policy/setblock_table.py", line 164, in validate_typed_records
+    raise ValueError("typed setBlockDetect record does not match the supported family")
+ValueError: typed setBlockDetect record does not match the supported family
+        0.04 real         0.03 user         0.00 sys
+            23478272  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                2513  page reclaims
+                  47  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                   9  involuntary context switches
+           540430970  instructions retired
+           177719895  cycles elapsed
+            15729024  peak memory footprint

@@ -1,0 +1,3 @@
+"observation_kind","method","sink_kind","command","source_path","start_line","start_column","end_line","end_column"
+"callback_body_call","setBlockDetect","system","/sbin/block detect > /etc/config/fstab","modules/sibling/root/usr/share/rpcd/ucode/luci",8,7,8,54
+"callback_body_call","setBlockDetect","system","/sbin/block detect > /etc/config/fstab","modules/sibling/root/usr/share/rpcd/ucode/luci",14,5,14,52

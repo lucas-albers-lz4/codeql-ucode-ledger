@@ -1,0 +1,10 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index d35277b..f029b3e 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -42,4 +42,4 @@ tree-sitter-language = "0.1"
+ cc = "1.2"
+ 
+ [dev-dependencies]
+-tree-sitter = "0.27.1"
++tree-sitter = "=0.26.8"

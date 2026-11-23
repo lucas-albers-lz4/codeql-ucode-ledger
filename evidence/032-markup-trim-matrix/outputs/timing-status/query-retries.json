@@ -1,0 +1,362 @@
+[
+  {
+    "label": "AllDiagnostics-retry-07",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "ql/src/trim-matrix/AllDiagnostics.ql",
+      "--database=<RUN>/database/db",
+      "--search-path=<RUN>/pack/ucode-extractor-pack:<RUN>/producer-ql/ql/lib:<RUN>/producer-ql/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN>/output/AllDiagnostics-retry-07.bqrs"
+    ],
+    "cwd": "<RUN>/producer-ql",
+    "exit_status": 0,
+    "wall_seconds": 1.180176,
+    "started_utc": "2026-11-23T22:39:49.110332+00:00",
+    "finished_utc": "2026-11-23T22:39:50.290858+00:00",
+    "stdout": "AllDiagnostics-retry-07.stdout",
+    "stderr_and_time": "AllDiagnostics-retry-07.stderr-time.txt"
+  },
+  {
+    "label": "AllDiagnostics-retry-07-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "--output=<RUN>/output/AllDiagnostics-retry-07.csv",
+      "<RUN>/output/AllDiagnostics-retry-07.bqrs"
+    ],
+    "cwd": "<RUN>/producer-ql",
+    "exit_status": 0,
+    "wall_seconds": 0.227396,
+    "started_utc": "2026-11-23T22:39:50.291024+00:00",
+    "finished_utc": "2026-11-23T22:39:50.518654+00:00",
+    "stdout": "AllDiagnostics-retry-07-decode.stdout",
+    "stderr_and_time": "AllDiagnostics-retry-07-decode.stderr-time.txt"
+  },
+  {
+    "label": "ExtractionErrors-retry-07",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "ql/src/trim-matrix/ExtractionErrors.ql",
+      "--database=<RUN>/database/db",
+      "--search-path=<RUN>/pack/ucode-extractor-pack:<RUN>/producer-ql/ql/lib:<RUN>/producer-ql/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN>/output/ExtractionErrors-retry-07.bqrs"
+    ],
+    "cwd": "<RUN>/producer-ql",
+    "exit_status": 0,
+    "wall_seconds": 1.544287,
+    "started_utc": "2026-11-23T22:39:50.518840+00:00",
+    "finished_utc": "2026-11-23T22:39:52.063403+00:00",
+    "stdout": "ExtractionErrors-retry-07.stdout",
+    "stderr_and_time": "ExtractionErrors-retry-07.stderr-time.txt"
+  },
+  {
+    "label": "ExtractionErrors-retry-07-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "--output=<RUN>/output/ExtractionErrors-retry-07.csv",
+      "<RUN>/output/ExtractionErrors-retry-07.bqrs"
+    ],
+    "cwd": "<RUN>/producer-ql",
+    "exit_status": 0,
+    "wall_seconds": 0.233199,
+    "started_utc": "2026-11-23T22:39:52.063575+00:00",
+    "finished_utc": "2026-11-23T22:39:52.297024+00:00",
+    "stdout": "ExtractionErrors-retry-07-decode.stdout",
+    "stderr_and_time": "ExtractionErrors-retry-07-decode.stderr-time.txt"
+  },
+  {
+    "label": "SuccessfulFiles-retry-07",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "ql/src/trim-matrix/SuccessfulFiles.ql",
+      "--database=<RUN>/database/db",
+      "--search-path=<RUN>/pack/ucode-extractor-pack:<RUN>/producer-ql/ql/lib:<RUN>/producer-ql/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN>/output/SuccessfulFiles-retry-07.bqrs"
+    ],
+    "cwd": "<RUN>/producer-ql",
+    "exit_status": 0,
+    "wall_seconds": 1.559766,
+    "started_utc": "2026-11-23T22:39:52.297235+00:00",
+    "finished_utc": "2026-11-23T22:39:53.857231+00:00",
+    "stdout": "SuccessfulFiles-retry-07.stdout",
+    "stderr_and_time": "SuccessfulFiles-retry-07.stderr-time.txt"
+  },
+  {
+    "label": "SuccessfulFiles-retry-07-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "--output=<RUN>/output/SuccessfulFiles-retry-07.csv",
+      "<RUN>/output/SuccessfulFiles-retry-07.bqrs"
+    ],
+    "cwd": "<RUN>/producer-ql",
+    "exit_status": 0,
+    "wall_seconds": 0.226565,
+    "started_utc": "2026-11-23T22:39:53.857391+00:00",
+    "finished_utc": "2026-11-23T22:39:54.084190+00:00",
+    "stdout": "SuccessfulFiles-retry-07-decode.stdout",
+    "stderr_and_time": "SuccessfulFiles-retry-07-decode.stderr-time.txt"
+  },
+  {
+    "label": "Coverage-retry-07",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "ql/src/trim-matrix/Coverage.ql",
+      "--database=<RUN>/database/db",
+      "--search-path=<RUN>/pack/ucode-extractor-pack:<RUN>/producer-ql/ql/lib:<RUN>/producer-ql/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN>/output/Coverage-retry-07.bqrs"
+    ],
+    "cwd": "<RUN>/producer-ql",
+    "exit_status": 0,
+    "wall_seconds": 2.063442,
+    "started_utc": "2026-11-23T22:39:54.084348+00:00",
+    "finished_utc": "2026-11-23T22:39:56.148015+00:00",
+    "stdout": "Coverage-retry-07.stdout",
+    "stderr_and_time": "Coverage-retry-07.stderr-time.txt"
+  },
+  {
+    "label": "Coverage-retry-07-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "--output=<RUN>/output/Coverage-retry-07.csv",
+      "<RUN>/output/Coverage-retry-07.bqrs"
+    ],
+    "cwd": "<RUN>/producer-ql",
+    "exit_status": 0,
+    "wall_seconds": 0.241203,
+    "started_utc": "2026-11-23T22:39:56.148199+00:00",
+    "finished_utc": "2026-11-23T22:39:56.389636+00:00",
+    "stdout": "Coverage-retry-07-decode.stdout",
+    "stderr_and_time": "Coverage-retry-07-decode.stderr-time.txt"
+  },
+  {
+    "label": "AstIdentities-retry-07",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "ql/src/trim-matrix/AstIdentities.ql",
+      "--database=<RUN>/database/db",
+      "--search-path=<RUN>/pack/ucode-extractor-pack:<RUN>/producer-ql/ql/lib:<RUN>/producer-ql/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN>/output/AstIdentities-retry-07.bqrs"
+    ],
+    "cwd": "<RUN>/producer-ql",
+    "exit_status": 0,
+    "wall_seconds": 2.2144,
+    "started_utc": "2026-11-23T22:39:56.389807+00:00",
+    "finished_utc": "2026-11-23T22:39:58.604435+00:00",
+    "stdout": "AstIdentities-retry-07.stdout",
+    "stderr_and_time": "AstIdentities-retry-07.stderr-time.txt"
+  },
+  {
+    "label": "AstIdentities-retry-07-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "--output=<RUN>/output/AstIdentities-retry-07.csv",
+      "<RUN>/output/AstIdentities-retry-07.bqrs"
+    ],
+    "cwd": "<RUN>/producer-ql",
+    "exit_status": 0,
+    "wall_seconds": 0.22376,
+    "started_utc": "2026-11-23T22:39:58.604606+00:00",
+    "finished_utc": "2026-11-23T22:39:58.828585+00:00",
+    "stdout": "AstIdentities-retry-07-decode.stdout",
+    "stderr_and_time": "AstIdentities-retry-07-decode.stderr-time.txt"
+  },
+  {
+    "label": "TagFields-retry-07",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "ql/src/trim-matrix/TagFields.ql",
+      "--database=<RUN>/database/db",
+      "--search-path=<RUN>/pack/ucode-extractor-pack:<RUN>/producer-ql/ql/lib:<RUN>/producer-ql/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN>/output/TagFields-retry-07.bqrs"
+    ],
+    "cwd": "<RUN>/producer-ql",
+    "exit_status": 0,
+    "wall_seconds": 2.143368,
+    "started_utc": "2026-11-23T22:39:58.828753+00:00",
+    "finished_utc": "2026-11-23T22:40:00.972360+00:00",
+    "stdout": "TagFields-retry-07.stdout",
+    "stderr_and_time": "TagFields-retry-07.stderr-time.txt"
+  },
+  {
+    "label": "TagFields-retry-07-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "--output=<RUN>/output/TagFields-retry-07.csv",
+      "<RUN>/output/TagFields-retry-07.bqrs"
+    ],
+    "cwd": "<RUN>/producer-ql",
+    "exit_status": 0,
+    "wall_seconds": 0.230445,
+    "started_utc": "2026-11-23T22:40:00.972537+00:00",
+    "finished_utc": "2026-11-23T22:40:01.203249+00:00",
+    "stdout": "TagFields-retry-07-decode.stdout",
+    "stderr_and_time": "TagFields-retry-07-decode.stderr-time.txt"
+  },
+  {
+    "label": "MemberFields-retry-07",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "ql/src/trim-matrix/MemberFields.ql",
+      "--database=<RUN>/database/db",
+      "--search-path=<RUN>/pack/ucode-extractor-pack:<RUN>/producer-ql/ql/lib:<RUN>/producer-ql/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN>/output/MemberFields-retry-07.bqrs"
+    ],
+    "cwd": "<RUN>/producer-ql",
+    "exit_status": 2,
+    "wall_seconds": 1.343238,
+    "started_utc": "2026-11-23T22:40:01.203462+00:00",
+    "finished_utc": "2026-11-23T22:40:02.546943+00:00",
+    "stdout": "MemberFields-retry-07.stdout",
+    "stderr_and_time": "MemberFields-retry-07.stderr-time.txt"
+  },
+  {
+    "label": "Nodes-retry-07",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "ql/src/trim-matrix/Nodes.ql",
+      "--database=<RUN>/database/db",
+      "--search-path=<RUN>/pack/ucode-extractor-pack:<RUN>/producer-ql/ql/lib:<RUN>/producer-ql/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN>/output/Nodes-retry-07.bqrs"
+    ],
+    "cwd": "<RUN>/producer-ql",
+    "exit_status": 0,
+    "wall_seconds": 2.304206,
+    "started_utc": "2026-11-23T22:40:02.547157+00:00",
+    "finished_utc": "2026-11-23T22:40:04.851631+00:00",
+    "stdout": "Nodes-retry-07.stdout",
+    "stderr_and_time": "Nodes-retry-07.stderr-time.txt"
+  },
+  {
+    "label": "Nodes-retry-07-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "--output=<RUN>/output/Nodes-retry-07.csv",
+      "<RUN>/output/Nodes-retry-07.bqrs"
+    ],
+    "cwd": "<RUN>/producer-ql",
+    "exit_status": 0,
+    "wall_seconds": 0.238967,
+    "started_utc": "2026-11-23T22:40:04.851818+00:00",
+    "finished_utc": "2026-11-23T22:40:05.090991+00:00",
+    "stdout": "Nodes-retry-07-decode.stdout",
+    "stderr_and_time": "Nodes-retry-07-decode.stderr-time.txt"
+  },
+  {
+    "label": "Edges-retry-07",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "ql/src/trim-matrix/Edges.ql",
+      "--database=<RUN>/database/db",
+      "--search-path=<RUN>/pack/ucode-extractor-pack:<RUN>/producer-ql/ql/lib:<RUN>/producer-ql/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--threads=1",
+      "--ram=2048",
+      "--output=<RUN>/output/Edges-retry-07.bqrs"
+    ],
+    "cwd": "<RUN>/producer-ql",
+    "exit_status": 0,
+    "wall_seconds": 2.798467,
+    "started_utc": "2026-11-23T22:40:05.091184+00:00",
+    "finished_utc": "2026-11-23T22:40:07.889872+00:00",
+    "stdout": "Edges-retry-07.stdout",
+    "stderr_and_time": "Edges-retry-07.stderr-time.txt"
+  },
+  {
+    "label": "Edges-retry-07-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "--output=<RUN>/output/Edges-retry-07.csv",
+      "<RUN>/output/Edges-retry-07.bqrs"
+    ],
+    "cwd": "<RUN>/producer-ql",
+    "exit_status": 0,
+    "wall_seconds": 0.240203,
+    "started_utc": "2026-11-23T22:40:07.890061+00:00",
+    "finished_utc": "2026-11-23T22:40:08.130492+00:00",
+    "stdout": "Edges-retry-07-decode.stdout",
+    "stderr_and_time": "Edges-retry-07-decode.stderr-time.txt"
+  }
+]

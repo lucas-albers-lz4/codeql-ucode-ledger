@@ -1,0 +1,7 @@
+{"#select":{"columns":[
+   {"name":"f","kind":"Entity"}
+  ,{"kind":"String"}]
+ ,"tuples":[
+   [{"label":"<PRODUCER>/tests/data/markup-cfg/adjacent.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/adjacent.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<PRODUCER>/tests/data/markup-cfg/trim-both.ut","url":{"uri":"file://<PRODUCER>/tests/data/markup-cfg/trim-both.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]]
+ }}

@@ -1,0 +1,4 @@
+{
+  "exit_status": 2,
+  "note": "Underlying CodeQL command exited 2 because the nested workspace manifest was still present. A previous portable status note mislabeled this as exit 0; stderr-time.txt is preserved and confirms the failed query. No passing result is attributed to this attempt."
+}

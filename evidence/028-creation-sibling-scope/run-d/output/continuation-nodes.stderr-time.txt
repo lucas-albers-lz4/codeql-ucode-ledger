@@ -1,0 +1,28 @@
+Resolving data extensions.
+Finished resolving data extensions.
+Merging data extensions.
+Finished merging data extensions.
+WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.
+Compiling query plan for <RUN-D>/producer-ql/ql/src/pkg6-fixed-nodes.ql.
+[1/1] Found in cache: <RUN-D>/producer-ql/ql/src/pkg6-fixed-nodes.ql.
+Starting evaluation of lucas-albers-lz4/ucode-queries/pkg6-fixed-nodes.ql.
+[1/1 eval 101ms] Evaluation done; writing results to <RUN-D>/output/continuation-nodes.bqrs.
+Shutting down query evaluator.
+        1.14 real         2.50 user         0.15 sys
+           197787648  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               27616  page reclaims
+                  95  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   5  signals received
+                  36  voluntary context switches
+               17067  involuntary context switches
+            39641822  instructions retired
+            15220787  cycles elapsed
+             1737016  peak memory footprint

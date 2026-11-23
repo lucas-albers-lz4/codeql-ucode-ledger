@@ -1,0 +1,27 @@
+Running pre-finalize script <RUN>/producer/extractor-pack/tools/pre-finalize.sh in <RUN>/producer-run/controls/src.
+Running command in <RUN>/producer-run/controls/src: [<RUN>/producer/extractor-pack/tools/pre-finalize.sh]
+Pre-finalize script <RUN>/producer/extractor-pack/tools/pre-finalize.sh completed in 369 ms.
+Running TRAP import for CodeQL database at <RUN>/producer-run/controls/db...
+Importing TRAP files
+Merging relations
+Finished writing database (relations: 3.38 KiB; string pool: 2.05 MiB).
+TRAP import complete (227ms).
+Finished zipping source archive (1.06 KiB).
+        0.94 real         1.90 user         0.14 sys
+           193413120  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               27267  page reclaims
+                 497  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   6  signals received
+                  65  voluntary context switches
+               11860  involuntary context switches
+            33146457  instructions retired
+            13667402  cycles elapsed
+             1638688  peak memory footprint

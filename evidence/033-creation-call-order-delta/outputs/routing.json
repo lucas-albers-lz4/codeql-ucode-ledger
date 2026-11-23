@@ -1,0 +1,35 @@
+{
+  "decisions": [
+    {
+      "classification": "markup",
+      "inconclusive_reason": "markup_not_modeled",
+      "installed_path": "usr/share/ucode/controls/siblings-all-covered.ut",
+      "path": "/STAGED_SOURCE/usr/share/ucode/controls/siblings-all-covered.ut",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive"
+    },
+    {
+      "classification": "markup",
+      "inconclusive_reason": "markup_not_modeled",
+      "installed_path": "usr/share/ucode/controls/siblings-computed-callee.ut",
+      "path": "/STAGED_SOURCE/usr/share/ucode/controls/siblings-computed-callee.ut",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive"
+    },
+    {
+      "classification": "markup",
+      "inconclusive_reason": "markup_not_modeled",
+      "installed_path": "usr/share/ucode/controls/siblings.ut",
+      "path": "/STAGED_SOURCE/usr/share/ucode/controls/siblings.ut",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive"
+    }
+  ],
+  "duplicate_input_count": 0,
+  "excluded_count": 0,
+  "input_count": 3,
+  "markup_count": 3,
+  "markup_inconclusive_count": 3,
+  "plain_count": 0,
+  "uncertain_count": 0
+}

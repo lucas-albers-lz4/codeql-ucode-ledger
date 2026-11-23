@@ -1,0 +1,365 @@
+{
+  "rule": "Portable text replaces local ledger/run/tool roots with <LEDGER>, <RUN>, and <CODEQL>; temporary paths become <TMP_PATH>. Raw counterparts and hashes remain under ignored work/ where applicable.",
+  "entries": [
+    {
+      "portable_path": "README.md",
+      "raw_local_path": null,
+      "raw_sha256": "a7913fdef33002387af17dd272cc4ac493332c07827e7436d4f11ca66f2416a8",
+      "normalized_sha256": "a7913fdef33002387af17dd272cc4ac493332c07827e7436d4f11ca66f2416a8",
+      "normalized_size_bytes": 2350,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "inputs/ordinary-member.ut",
+      "raw_local_path": null,
+      "raw_sha256": "52e70b638218d4e928e4bac51ee701cc357443b54faa6d63dcefca56184fb1c4",
+      "normalized_sha256": "52e70b638218d4e928e4bac51ee701cc357443b54faa6d63dcefca56184fb1c4",
+      "normalized_size_bytes": 13,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "inputs/plain.ut",
+      "raw_local_path": null,
+      "raw_sha256": "557c70f3707a0f1f22bd06e189c8d303ee99542d2767eb59226ac8010c8220da",
+      "normalized_sha256": "557c70f3707a0f1f22bd06e189c8d303ee99542d2767eb59226ac8010c8220da",
+      "normalized_size_bytes": 11,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "inputs/trim-both.ut",
+      "raw_local_path": null,
+      "raw_sha256": "d897ab97d9025f6eacaa460015d71757746888efacef854955b31e3ac283f03f",
+      "normalized_sha256": "d897ab97d9025f6eacaa460015d71757746888efacef854955b31e3ac283f03f",
+      "normalized_size_bytes": 13,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "inputs/trim-close.ut",
+      "raw_local_path": null,
+      "raw_sha256": "afde724719c5f9bf3204a47b13d9028a3a0bb0ac60008827bf72602551da519a",
+      "normalized_sha256": "afde724719c5f9bf3204a47b13d9028a3a0bb0ac60008827bf72602551da519a",
+      "normalized_size_bytes": 12,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "inputs/trim-member.ut",
+      "raw_local_path": null,
+      "raw_sha256": "2b1650e98fcd52c9e18a10cfe5ad5016031ea4aae0ce412a309f4ef02858005d",
+      "normalized_sha256": "2b1650e98fcd52c9e18a10cfe5ad5016031ea4aae0ce412a309f4ef02858005d",
+      "normalized_size_bytes": 15,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "inputs/trim-open.ut",
+      "raw_local_path": null,
+      "raw_sha256": "fbeecce989e50bb9bd205afd29f8e717469dc977e57131f4ffa24378a5833e49",
+      "normalized_sha256": "fbeecce989e50bb9bd205afd29f8e717469dc977e57131f4ffa24378a5833e49",
+      "normalized_size_bytes": 12,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "outputs/AllDiagnostics.csv",
+      "raw_local_path": null,
+      "raw_sha256": "3879ce7790a689988a2fd3acb3ba2618e3af77e9e5f9faddf2a47f164d7ff500",
+      "normalized_sha256": "3879ce7790a689988a2fd3acb3ba2618e3af77e9e5f9faddf2a47f164d7ff500",
+      "normalized_size_bytes": 49,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "outputs/AstIdentities.csv",
+      "raw_local_path": null,
+      "raw_sha256": "c7befcd2f1f034df7c29481f8950987d858a3cac50376f0998824a3f302d1b74",
+      "normalized_sha256": "c7befcd2f1f034df7c29481f8950987d858a3cac50376f0998824a3f302d1b74",
+      "normalized_size_bytes": 3161,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "outputs/Coverage.csv",
+      "raw_local_path": null,
+      "raw_sha256": "560cc29ffe3475cd127d4bf83f3001387b2c307a4ec7d5cb978b1aad39258731",
+      "normalized_sha256": "560cc29ffe3475cd127d4bf83f3001387b2c307a4ec7d5cb978b1aad39258731",
+      "normalized_size_bytes": 271,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "outputs/Edges.csv",
+      "raw_local_path": null,
+      "raw_sha256": "75a38d6fa3166975f25a10fdcdd53352116c73fe9356f09df1c13b6d1a0c3ea6",
+      "normalized_sha256": "75a38d6fa3166975f25a10fdcdd53352116c73fe9356f09df1c13b6d1a0c3ea6",
+      "normalized_size_bytes": 360,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "outputs/ExtractionErrors.csv",
+      "raw_local_path": null,
+      "raw_sha256": "3879ce7790a689988a2fd3acb3ba2618e3af77e9e5f9faddf2a47f164d7ff500",
+      "normalized_sha256": "3879ce7790a689988a2fd3acb3ba2618e3af77e9e5f9faddf2a47f164d7ff500",
+      "normalized_size_bytes": 49,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "outputs/MemberFields.csv",
+      "raw_local_path": null,
+      "raw_sha256": "31e48f9675eb5810bae22b2022e98eea0ee440ae4be4066870f70ba2ca375975",
+      "normalized_sha256": "31e48f9675eb5810bae22b2022e98eea0ee440ae4be4066870f70ba2ca375975",
+      "normalized_size_bytes": 280,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "outputs/Nodes.csv",
+      "raw_local_path": null,
+      "raw_sha256": "c2386f5a6869b6ab53723db523f6779b01310b8144190044bbc1491b0de2c1c1",
+      "normalized_sha256": "c2386f5a6869b6ab53723db523f6779b01310b8144190044bbc1491b0de2c1c1",
+      "normalized_size_bytes": 314,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "outputs/SuccessfulFiles.csv",
+      "raw_local_path": "work/trim-matrix-run-20261122-a/output/SuccessfulFiles-retry-07.csv",
+      "raw_sha256": "1321003afffe47f9422eae2ff56a14abf3d6afe9fc5deb6aa3ae0ff23f5a16d4",
+      "normalized_sha256": "c46e8a7a85fe58f3d0767eff428a4c8ac8e46e72e8f7a6835818fef1c16bc738",
+      "normalized_size_bytes": 579,
+      "replacement_counts": {
+        "<RUN>": 6
+      }
+    },
+    {
+      "portable_path": "outputs/TagFields.csv",
+      "raw_local_path": null,
+      "raw_sha256": "5d4307fcbd86d932619584375a97433ad09de3554f6f1cdc256f6cd8adaed041",
+      "normalized_sha256": "5d4307fcbd86d932619584375a97433ad09de3554f6f1cdc256f6cd8adaed041",
+      "normalized_size_bytes": 604,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "outputs/cli-diagnostics.jsonl",
+      "raw_local_path": "work/trim-matrix-run-20261122-a/database/db/diagnostic/cli-diagnostics-add-20261123T223514.959Z.json",
+      "raw_sha256": "928d8456cd35f5647d6a796f52f7b827a653d9b5d4877f5599533ddfb65a12c5",
+      "normalized_sha256": "928d8456cd35f5647d6a796f52f7b827a653d9b5d4877f5599533ddfb65a12c5",
+      "normalized_size_bytes": 724,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "outputs/oracle-comparison.json",
+      "raw_local_path": "work/trim-matrix-run-20261122-a/output/oracle-comparison.json",
+      "raw_sha256": "7e1317b86f78d32650cd1e17ffbc9e57ebcb17ad7c4ec36e10c30bf24bad0f4b",
+      "normalized_sha256": "559b66a7646c0647941f05911668357ed1959a379123a2a1fc31d60c0bba248d",
+      "normalized_size_bytes": 19077,
+      "replacement_counts": {
+        "<RUN>": 12
+      }
+    },
+    {
+      "portable_path": "outputs/portable-receipt.json",
+      "raw_local_path": null,
+      "raw_sha256": "6fc5053098d194ddc701c52df3a08e13722baa0a08a05a2b0b28118b643aaa11",
+      "normalized_sha256": "6fc5053098d194ddc701c52df3a08e13722baa0a08a05a2b0b28118b643aaa11",
+      "normalized_size_bytes": 36854,
+      "replacement_counts": {
+        "<RUN>": 6,
+        "<LEDGER>": 190
+      }
+    },
+    {
+      "portable_path": "outputs/routing.json",
+      "raw_local_path": "work/trim-matrix-run-20261122-a/output/routing.json",
+      "raw_sha256": "1e0fbdd3d4b9b045bc8512f074e50934082a973fae3e4ef2b98dbff32d6dd3d6",
+      "normalized_sha256": "846de0fbe8483dfaa25fe11e8e94e10f2a0196102cd31839da449d48b64eaf52",
+      "normalized_size_bytes": 1628,
+      "replacement_counts": {
+        "<RUN>": 6
+      }
+    },
+    {
+      "portable_path": "outputs/timing-status/attempt-01-database-init-failed/commands.json",
+      "raw_local_path": null,
+      "raw_sha256": "386481eabd00690233b937bee34de8ad8bd0b33c6da77a060ddc2479f78f2f10",
+      "normalized_sha256": "386481eabd00690233b937bee34de8ad8bd0b33c6da77a060ddc2479f78f2f10",
+      "normalized_size_bytes": 889,
+      "replacement_counts": {
+        "<RUN>": 6,
+        "<CODEQL>": 2
+      }
+    },
+    {
+      "portable_path": "outputs/timing-status/attempt-01-database-init-failed/database-init.stderr-time.txt",
+      "raw_local_path": null,
+      "raw_sha256": "f48c2cc6515a2ee393f2125e1cf72a7261d5774beaffb9053e80eeefd76c58c3",
+      "normalized_sha256": "f48c2cc6515a2ee393f2125e1cf72a7261d5774beaffb9053e80eeefd76c58c3",
+      "normalized_size_bytes": 885,
+      "replacement_counts": {
+        "<RUN>": 2
+      }
+    },
+    {
+      "portable_path": "outputs/timing-status/attempt-01-database-init-failed/database-init.stdout",
+      "raw_local_path": null,
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalized_size_bytes": 0,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "outputs/timing-status/attempt-01-database-init-failed/failure.json",
+      "raw_local_path": null,
+      "raw_sha256": "3f9eff67dde6f66bf2b459aa5e8dc8d120b8bdbd6a0396fa054c67718789491f",
+      "normalized_sha256": "3f9eff67dde6f66bf2b459aa5e8dc8d120b8bdbd6a0396fa054c67718789491f",
+      "normalized_size_bytes": 267,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "outputs/timing-status/attempt-04-nested-manifest-removal-path-failed/failure.json",
+      "raw_local_path": null,
+      "raw_sha256": "91b684524d22b46445d62ed067975bd2cdc991e420e005eb0b5cc7dc49756b63",
+      "normalized_sha256": "91b684524d22b46445d62ed067975bd2cdc991e420e005eb0b5cc7dc49756b63",
+      "normalized_size_bytes": 296,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "outputs/timing-status/attempt-04-nested-manifest-removal-path-failed/stderr-time.txt",
+      "raw_local_path": null,
+      "raw_sha256": "d3809461f9d0348496239fa28f2c476f03523f18237493f98e4f40db7dd74d13",
+      "normalized_sha256": "d3809461f9d0348496239fa28f2c476f03523f18237493f98e4f40db7dd74d13",
+      "normalized_size_bytes": 1898,
+      "replacement_counts": {
+        "<RUN>": 4
+      }
+    },
+    {
+      "portable_path": "outputs/timing-status/commands.json",
+      "raw_local_path": "work/trim-matrix-run-20261122-a/logs/commands.json",
+      "raw_sha256": "bbb620733703c8c8c4a88d30505b834d324c2f92b7b90180e01fe5a3e1c6f1d4",
+      "normalized_sha256": "52068187336c96b6205a979299611ade350c21b9814dda4e0164bc953ca5b193",
+      "normalized_size_bytes": 8998,
+      "replacement_counts": {
+        "<RUN>": 94,
+        "<CODEQL>": 13
+      }
+    },
+    {
+      "portable_path": "outputs/timing-status/preflight.json",
+      "raw_local_path": "work/trim-matrix-run-20261122-a/logs/preflight.json",
+      "raw_sha256": "ca6b89ae0caccaf6715f04d912c2e07a7661d372f995374367114b8e0217061f",
+      "normalized_sha256": "7f8251b9116bc8fb7256cbf045b424b266089e371a808f65fc319779228e9b23",
+      "normalized_size_bytes": 305,
+      "replacement_counts": {
+        "<INHERITED_HOME>": 1
+      }
+    },
+    {
+      "portable_path": "outputs/timing-status/query-retries.json",
+      "raw_local_path": "work/trim-matrix-run-20261122-a/logs/query-retries.json",
+      "raw_sha256": "4b1d79c150a2ac21042980509da459c544277a2e3cd0b73432e44ca51184c5ac",
+      "normalized_sha256": "0b84d8d6d37cdb702b19c16f18d61c9acb3da2909217aae23d29701251e4e765",
+      "normalized_size_bytes": 11994,
+      "replacement_counts": {
+        "<RUN>": 96,
+        "<CODEQL>": 17
+      }
+    },
+    {
+      "portable_path": "outputs/timing-status/retry-audit.json",
+      "raw_local_path": null,
+      "raw_sha256": "2ba1b63a8e4d83c4e0d0ed379c82e593b56e983b3c71ad88489934b9804d01bc",
+      "normalized_sha256": "2ba1b63a8e4d83c4e0d0ed379c82e593b56e983b3c71ad88489934b9804d01bc",
+      "normalized_size_bytes": 3348,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "queries/AllDiagnostics.ql",
+      "raw_local_path": null,
+      "raw_sha256": "0f8b128f12bbcc1ceaf56024ed8a34caf3b667fe281aadb447e944e415f4645c",
+      "normalized_sha256": "0f8b128f12bbcc1ceaf56024ed8a34caf3b667fe281aadb447e944e415f4645c",
+      "normalized_size_bytes": 407,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "queries/AstIdentities.ql",
+      "raw_local_path": null,
+      "raw_sha256": "c50be632511b3fba1c4f89d3d236b35f409e07bb562f0db1eaaacc05ea40d450",
+      "normalized_sha256": "c50be632511b3fba1c4f89d3d236b35f409e07bb562f0db1eaaacc05ea40d450",
+      "normalized_size_bytes": 1306,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "queries/Coverage.ql",
+      "raw_local_path": null,
+      "raw_sha256": "accfec9ec9c19a0a79e135c13501c43392c51920cf2592463f1ff128e17180af",
+      "normalized_sha256": "accfec9ec9c19a0a79e135c13501c43392c51920cf2592463f1ff128e17180af",
+      "normalized_size_bytes": 614,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "queries/Edges.ql",
+      "raw_local_path": null,
+      "raw_sha256": "b68f631597b07ec9855a7e9d2d473dd7490b7555b51885bb455bc46592e4fbd4",
+      "normalized_sha256": "b68f631597b07ec9855a7e9d2d473dd7490b7555b51885bb455bc46592e4fbd4",
+      "normalized_size_bytes": 1042,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "queries/ExtractionErrors.ql",
+      "raw_local_path": null,
+      "raw_sha256": "02ada922d67da5de9711a39079d8a3ebddeae4d368ebb81548c5d041f2bbbe54",
+      "normalized_sha256": "02ada922d67da5de9711a39079d8a3ebddeae4d368ebb81548c5d041f2bbbe54",
+      "normalized_size_bytes": 448,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "queries/MemberFields.ql",
+      "raw_local_path": null,
+      "raw_sha256": "1a2415df51ac074560410e22d541b27c86410993b8daeac6c26683e06818cf08",
+      "normalized_sha256": "1a2415df51ac074560410e22d541b27c86410993b8daeac6c26683e06818cf08",
+      "normalized_size_bytes": 782,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "queries/Nodes.ql",
+      "raw_local_path": null,
+      "raw_sha256": "ff68be7ab0374b7253f645527e8017abc676f4fa6c230fa7bf95b2cbfe99fc25",
+      "normalized_sha256": "ff68be7ab0374b7253f645527e8017abc676f4fa6c230fa7bf95b2cbfe99fc25",
+      "normalized_size_bytes": 948,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "queries/SuccessfulFiles.ql",
+      "raw_local_path": null,
+      "raw_sha256": "131ee17921606983f6ddfb546ee1ee7630c92df1287d27e25b45b88e3b928994",
+      "normalized_sha256": "131ee17921606983f6ddfb546ee1ee7630c92df1287d27e25b45b88e3b928994",
+      "normalized_size_bytes": 333,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "queries/TagFields.ql",
+      "raw_local_path": null,
+      "raw_sha256": "2cb00244c867fd4fb1f1ff5617d09d1ddb13976e0f0fea3a2312aff800eab0e4",
+      "normalized_sha256": "2cb00244c867fd4fb1f1ff5617d09d1ddb13976e0f0fea3a2312aff800eab0e4",
+      "normalized_size_bytes": 656,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "source-first-oracle-original.md",
+      "raw_local_path": null,
+      "raw_sha256": "6e8edc4daba3c950ed6c440b2133e897721e3848954914107281df1ec3024503",
+      "normalized_sha256": "6e8edc4daba3c950ed6c440b2133e897721e3848954914107281df1ec3024503",
+      "normalized_size_bytes": 7566,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "source-first-oracle-supplement.json",
+      "raw_local_path": null,
+      "raw_sha256": "47250a224177148d21de6fef21c64d7dcb1ea2426e5950face0e9a9352a24263",
+      "normalized_sha256": "47250a224177148d21de6fef21c64d7dcb1ea2426e5950face0e9a9352a24263",
+      "normalized_size_bytes": 21520,
+      "replacement_counts": {}
+    },
+    {
+      "portable_path": "trim-policy-disposition.md",
+      "raw_local_path": null,
+      "raw_sha256": "5dbea7030bf0bf2b628f7b8af2cff2bf13fb55c090bb93dfdae16ec1c519d47d",
+      "normalized_sha256": "5dbea7030bf0bf2b628f7b8af2cff2bf13fb55c090bb93dfdae16ec1c519d47d",
+      "normalized_size_bytes": 5996,
+      "replacement_counts": {}
+    }
+  ]
+}

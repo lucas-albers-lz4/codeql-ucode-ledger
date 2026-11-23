@@ -1,0 +1,6 @@
+{
+  "commands": 0,
+  "error": "UnboundLocalError(\"cannot access local variable 'expected' where it is not associated with a value\")",
+  "finished_utc": "2026-11-22T21:29:13.774810+00:00",
+  "status": "failed"
+}

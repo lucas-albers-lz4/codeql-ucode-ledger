@@ -45,6 +45,15 @@ Together these move from source selection through extraction, query, and consume
 | [023](claims/023-uci-syntax-controls.md) | Demonstrated | Selected UCI controller call and argument syntax with controls |
 | [024](claims/024-markup-declaration-ast.md) | Demonstrated | Markup declaration and initializer AST prerequisite |
 | [025](claims/025-mixed-profile.md) | Demonstrated | Plain and markup AST roots for a selected mixed LuCI stage |
+| [026](claims/026-v2-feed-policy-scope.md) | Demonstrated | Synthetic v2 provider-feed and policy-scope boundary |
+| [027](claims/027-markup-trim-open-cfg.md) | Demonstrated | Ordinary markup CFG and trim-open exclusion on two fixtures |
+| [028](claims/028-creation-sibling-scopes.md) | Demonstrated | Creation graph isolation for supported and unsupported sibling callables |
+| [029](claims/029-typed-refactor-handoff.md) | Demonstrated | Fresh typed v1 handoff after consumer validation refactor |
+| [030](claims/030-v2-archive-receipt-boundary.md) | Demonstrated | V2 archive identity boundary for fresh v1 handoff receipts |
+| [031](claims/031-uci-helper-lexical-identity.md) | Demonstrated | UCI helper formal identity under reassignment and local alias controls |
+| [032](claims/032-markup-trim-matrix-implementation.md) | Demonstrated | Current markup CFG behavior across a six-fixture trim matrix |
+| [033](claims/033-bounded-markup-callable-call-order.md) | Demonstrated | Updated bounded callable ordering with a computed-callee control |
+| [034](claims/034-markup-trim-delimiters.md) | Demonstrated | Local trim-delimiter ordering patch with exact controls |
 
 Every demonstrated status is limited to the run, inputs, controls and revisions
 in that claim. These rows are not a coverage percentage.

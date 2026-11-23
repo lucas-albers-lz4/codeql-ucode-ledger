@@ -1,0 +1,257 @@
+[
+  {
+    "label": "processes",
+    "argv": [
+      "ps",
+      "-ax",
+      "-o",
+      "pid=,etime=,command="
+    ],
+    "cwd": "<RUN>",
+    "exit": 0,
+    "seconds": 0.01960158400106593
+  },
+  {
+    "label": "producer-source-pin",
+    "argv": [
+      "git",
+      "-C",
+      "<PRODUCER-SOURCE>",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<RUN>",
+    "exit": 0,
+    "seconds": 0.004294000002118992
+  },
+  {
+    "label": "producer-source-clean",
+    "argv": [
+      "git",
+      "-C",
+      "<PRODUCER-SOURCE>",
+      "status",
+      "--porcelain=v1"
+    ],
+    "cwd": "<RUN>",
+    "exit": 0,
+    "seconds": 0.009588875000190455
+  },
+  {
+    "label": "consumer-source-pin",
+    "argv": [
+      "git",
+      "-C",
+      "<CONSUMER-SOURCE>",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<RUN>",
+    "exit": 0,
+    "seconds": 0.003746250000403961
+  },
+  {
+    "label": "consumer-source-clean",
+    "argv": [
+      "git",
+      "-C",
+      "<CONSUMER-SOURCE>",
+      "status",
+      "--porcelain=v1"
+    ],
+    "cwd": "<RUN>",
+    "exit": 0,
+    "seconds": 0.007266332999279257
+  },
+  {
+    "label": "pack-source-delta",
+    "argv": [
+      "git",
+      "-C",
+      "<PRODUCER-SOURCE>",
+      "diff",
+      "--name-only",
+      "8375887ed14825dd59addbfd0df43616d9e684fb",
+      "6010ff2c0f101f7629c6fe117a421f671c311a2b",
+      "--",
+      "extractor",
+      "extractor-pack",
+      "Cargo.toml",
+      "Cargo.lock",
+      "codeql-extractor.yml",
+      ".codeqlmanifest.json",
+      "ql/src/qlpack.yml",
+      "ql/src/codeql-pack.lock.yml",
+      "ql/lib/qlpack.yml",
+      "ql/lib/codeql-pack.lock.yml",
+      "scripts/create-extractor-pack.sh",
+      "scripts/clone-grammar.sh",
+      "ql/lib/ucode.dbscheme",
+      "ql/lib/ucode.dbscheme.stats",
+      "ql/lib/codeql/ucode/ast/internal/TreeSitter.qll",
+      "tools",
+      "downgrades"
+    ],
+    "cwd": "<RUN>",
+    "exit": 0,
+    "seconds": 0.004240999998728512
+  },
+  {
+    "label": "grammar-pin",
+    "argv": [
+      "git",
+      "-C",
+      "<BUILD>/producer/extractor/tree-sitter",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<RUN>",
+    "exit": 0,
+    "seconds": 0.004809582998859696
+  },
+  {
+    "label": "grammar-clean",
+    "argv": [
+      "git",
+      "-C",
+      "<BUILD>/producer/extractor/tree-sitter",
+      "status",
+      "--porcelain=v1"
+    ],
+    "cwd": "<RUN>",
+    "exit": 0,
+    "seconds": 0.008679333001055056
+  },
+  {
+    "label": "grammar-diff",
+    "argv": [
+      "git",
+      "-C",
+      "<BUILD>/producer/extractor/tree-sitter",
+      "diff",
+      "--",
+      "Cargo.toml"
+    ],
+    "cwd": "<RUN>",
+    "exit": 0,
+    "seconds": 0.004685959000198636
+  },
+  {
+    "label": "codeql-version",
+    "argv": [
+      "<CODEQL>",
+      "version"
+    ],
+    "cwd": "<RUN>",
+    "exit": 0,
+    "seconds": 0.1967149169977347
+  },
+  {
+    "label": "producer-clone",
+    "argv": [
+      "git",
+      "clone",
+      "--no-hardlinks",
+      "--no-checkout",
+      "<PRODUCER-SOURCE>",
+      "<RUN>/producer"
+    ],
+    "cwd": "<RUN>",
+    "exit": 0,
+    "seconds": 0.027984958000160987
+  },
+  {
+    "label": "producer-checkout",
+    "argv": [
+      "git",
+      "-C",
+      "<RUN>/producer",
+      "checkout",
+      "--detach",
+      "6010ff2c0f101f7629c6fe117a421f671c311a2b"
+    ],
+    "cwd": "<RUN>",
+    "exit": 0,
+    "seconds": 0.06904874999963795
+  },
+  {
+    "label": "producer-copy-pin",
+    "argv": [
+      "git",
+      "-C",
+      "<RUN>/producer",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<RUN>",
+    "exit": 0,
+    "seconds": 0.004198334001557669
+  },
+  {
+    "label": "producer-copy-clean",
+    "argv": [
+      "git",
+      "-C",
+      "<RUN>/producer",
+      "status",
+      "--porcelain=v1"
+    ],
+    "cwd": "<RUN>",
+    "exit": 0,
+    "seconds": 0.018858375002309913
+  },
+  {
+    "label": "consumer-clone",
+    "argv": [
+      "git",
+      "clone",
+      "--no-hardlinks",
+      "--no-checkout",
+      "<CONSUMER-SOURCE>",
+      "<RUN>/consumer"
+    ],
+    "cwd": "<RUN>",
+    "exit": 0,
+    "seconds": 0.02089991600223584
+  },
+  {
+    "label": "consumer-checkout",
+    "argv": [
+      "git",
+      "-C",
+      "<RUN>/consumer",
+      "checkout",
+      "--detach",
+      "48c6a65b7578234644c6b06780fc82ccf6d61a8b"
+    ],
+    "cwd": "<RUN>",
+    "exit": 0,
+    "seconds": 0.053308708000258775
+  },
+  {
+    "label": "consumer-copy-pin",
+    "argv": [
+      "git",
+      "-C",
+      "<RUN>/consumer",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "<RUN>",
+    "exit": 0,
+    "seconds": 0.004187999998976011
+  },
+  {
+    "label": "consumer-copy-clean",
+    "argv": [
+      "git",
+      "-C",
+      "<RUN>/consumer",
+      "status",
+      "--porcelain=v1"
+    ],
+    "cwd": "<RUN>",
+    "exit": 0,
+    "seconds": 0.024585499999375315
+  }
+]

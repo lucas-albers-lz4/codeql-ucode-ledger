@@ -1,0 +1,180 @@
+[
+  {
+    "label": "valid-clone",
+    "cwd": "<RUN>/consumer-run",
+    "argv": [
+      "git",
+      "clone",
+      "--quiet",
+      "--no-hardlinks",
+      "--local",
+      "<RUN>/consumer",
+      "<RUN>/consumer-run/valid"
+    ],
+    "exit": 0,
+    "wall_seconds": 0.074,
+    "stderr_and_time": "valid-clone.stderr"
+  },
+  {
+    "label": "valid-checkout",
+    "cwd": "<RUN>/consumer-run",
+    "argv": [
+      "git",
+      "-C",
+      "<RUN>/consumer-run/valid",
+      "checkout",
+      "--detach",
+      "48c6a65b7578234644c6b06780fc82ccf6d61a8b"
+    ],
+    "exit": 0,
+    "wall_seconds": 0.029,
+    "stderr_and_time": "valid-checkout.stderr"
+  },
+  {
+    "label": "import",
+    "cwd": "<RUN>/consumer-run/valid",
+    "argv": [
+      "<PYTHON>",
+      "-B",
+      "-m",
+      "policy.setblock_table",
+      "--typed-json",
+      "<RUN>/producer-run/typed.json",
+      "--source-root",
+      "<RUN>/producer-run/main/src"
+    ],
+    "exit": 0,
+    "wall_seconds": 0.043,
+    "stderr_and_time": "import.stderr"
+  },
+  {
+    "label": "reimport",
+    "cwd": "<RUN>/consumer-run/valid",
+    "argv": [
+      "<PYTHON>",
+      "-B",
+      "-m",
+      "policy.setblock_table",
+      "--typed-json",
+      "<RUN>/producer-run/typed.json",
+      "--source-root",
+      "<RUN>/producer-run/main/src"
+    ],
+    "exit": 0,
+    "wall_seconds": 0.043,
+    "stderr_and_time": "reimport.stderr"
+  },
+  {
+    "label": "downgrade",
+    "cwd": "<RUN>/consumer-run/valid",
+    "argv": [
+      "<PYTHON>",
+      "-B",
+      "-m",
+      "policy.setblock_table",
+      "--csv",
+      "<RUN>/producer-run/main/effects.csv",
+      "--source-root",
+      "<RUN>/producer-run/main/src"
+    ],
+    "exit": 1,
+    "wall_seconds": 0.047,
+    "stderr_and_time": "downgrade.stderr"
+  },
+  {
+    "label": "invalid-policy-clone",
+    "cwd": "<RUN>/consumer-run",
+    "argv": [
+      "git",
+      "clone",
+      "--quiet",
+      "--no-hardlinks",
+      "--local",
+      "<RUN>/consumer",
+      "<RUN>/consumer-run/invalid-policy"
+    ],
+    "exit": 0,
+    "wall_seconds": 0.071,
+    "stderr_and_time": "invalid-policy-clone.stderr"
+  },
+  {
+    "label": "invalid-policy-checkout",
+    "cwd": "<RUN>/consumer-run",
+    "argv": [
+      "git",
+      "-C",
+      "<RUN>/consumer-run/invalid-policy",
+      "checkout",
+      "--detach",
+      "48c6a65b7578234644c6b06780fc82ccf6d61a8b"
+    ],
+    "exit": 0,
+    "wall_seconds": 0.029,
+    "stderr_and_time": "invalid-policy-checkout.stderr"
+  },
+  {
+    "label": "invalid-policy-import",
+    "cwd": "<RUN>/consumer-run/invalid-policy",
+    "argv": [
+      "<PYTHON>",
+      "-B",
+      "-m",
+      "policy.setblock_table",
+      "--typed-json",
+      "<RUN>/consumer-run/policy-bearing.json",
+      "--source-root",
+      "<RUN>/producer-run/main/src"
+    ],
+    "exit": 1,
+    "wall_seconds": 0.047,
+    "stderr_and_time": "invalid-policy-import.stderr"
+  },
+  {
+    "label": "invalid-numeric-clone",
+    "cwd": "<RUN>/consumer-run",
+    "argv": [
+      "git",
+      "clone",
+      "--quiet",
+      "--no-hardlinks",
+      "--local",
+      "<RUN>/consumer",
+      "<RUN>/consumer-run/invalid-numeric"
+    ],
+    "exit": 0,
+    "wall_seconds": 0.072,
+    "stderr_and_time": "invalid-numeric-clone.stderr"
+  },
+  {
+    "label": "invalid-numeric-checkout",
+    "cwd": "<RUN>/consumer-run",
+    "argv": [
+      "git",
+      "-C",
+      "<RUN>/consumer-run/invalid-numeric",
+      "checkout",
+      "--detach",
+      "48c6a65b7578234644c6b06780fc82ccf6d61a8b"
+    ],
+    "exit": 0,
+    "wall_seconds": 0.029,
+    "stderr_and_time": "invalid-numeric-checkout.stderr"
+  },
+  {
+    "label": "invalid-numeric-import",
+    "cwd": "<RUN>/consumer-run/invalid-numeric",
+    "argv": [
+      "<PYTHON>",
+      "-B",
+      "-m",
+      "policy.setblock_table",
+      "--typed-json",
+      "<RUN>/consumer-run/integral-decimal.json",
+      "--source-root",
+      "<RUN>/producer-run/main/src"
+    ],
+    "exit": 1,
+    "wall_seconds": 0.046,
+    "stderr_and_time": "invalid-numeric-import.stderr"
+  }
+]

@@ -1,0 +1,32 @@
+# Claim 032: Bounded markup CFG on trim-delimited fixture matrix
+
+**Status:** Demonstrated for six exact fixtures at the pinned producer revision.
+
+**Scope:** On producer `dc7310d0d2fb57047aa0c5653d9a32d6876c2d81`, observe routing, extraction, AST identities and the current bounded markup CFG for five trim-matrix fixtures plus an ordinary-delimiter member-expression control. Option B is only the current implementation prediction.
+
+**Out of scope:** Maintainer policy for trim delimiters, rendering or runtime whitespace behavior, expression evaluation, reachability, output escaping, flow, security, consumer handoff, and general markup CFG completeness.
+
+## Revisions and context
+
+- **Producer:** `codeql-ucode` at `dc7310d0d2fb57047aa0c5653d9a32d6876c2d81`; fresh detached checkout, clean.
+- **Grammar:** `tree-sitter-ucode` at `4a243af329fae2f4ff01e0fc80133cbab8314600`; fresh detached checkout, clean.
+- **Fixtures:** Six ledger-authored ASCII files, exact byte counts and SHA-256 values in the reviewed [source-first supplement](../evidence/032-markup-trim-matrix/source-first-oracle-supplement.json). The original five-case [planning oracle](../evidence/032-markup-trim-matrix/source-first-oracle-original.md) is retained unchanged; the supplement adds the ordinary member-expression control and its identities.
+- **Tools:** CodeQL 2.27.4, executable SHA-256 `bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d`; macOS 15.8.2, arm64.
+- **Pack:** Reused pack built at `8375887ed14825dd59addbfd0df43616d9e684fb`, previously used with producer `0a6612fe0e66351a0ccda43ad5b51f5ef5a2724e`. The scoped extractor, grammar, Cargo, pack and lock inputs have no delta to this producer pin. Pack and dependency-copy manifests and digests are in the [portable receipt](../evidence/032-markup-trim-matrix/outputs/portable-receipt.json).
+- **Ownership:** Ucode [issue #57](https://github.com/lucas-albers-lz4/codeql-ucode/issues/57) was checked on 2026-11-23: open, unassigned, labeled deferred. Its current implementation author also authored the bounded implementation. The trim-policy disposition remains pending; this claim assigns no policy.
+
+## Evidence
+
+1. The six exact files routed once each as `markup` / `ut_markup_extension` / `inconclusive` / `markup_not_modeled`. Counts were six inputs, six markup, six markup-inconclusive, and zero plain, uncertain, excluded or duplicate inputs. The scoped successful-file query returned each expected relative path once.
+2. The file-located `ExtractionError` query and the file-located `Diagnostic` query returned no rows for these six files. Separately, CodeQL recorded three unlocated CLI telemetry events (file coverage baseline, platform, and SIP status); these are preserved in the bundle and are not file diagnostics.
+3. All 46 predeclared AST identity/parent/index tuples matched with entity count one. The AST query returned 48 rows total because it also exposed two `ReservedWord` dot entities under the member expressions; the oracle explicitly does not inventory punctuation descendants. All six `ExpressionTag.getOpen/getChild/getClose` projections matched. Both member controls had object `Identifier` `x` at index 0, property `PropertyIdentifier` `y` at index 2, and no optional-chain child.
+4. The coverage result matched the source-derived current-implementation prediction: `plain.ut` covered; all five other fixtures unsupported. The complete graph result for `plain.ut` contained six nodes (entry, leading raw text, identifier, tag completion, trailing raw text, exit) and five immediate edges in that order. Each projected tuple/entity count was one. All other fixtures had zero nodes and zero edges. The ordinary member control isolates the unsupported expression-child shape with ordinary delimiters; the trim-member row combines that shape with trim delimiters.
+5. All 11 source/oracle comparisons passed. Decoded query rows and the portable receipt are in [evidence 032](../evidence/032-markup-trim-matrix/README.md). Raw BQRS and the database remain in ignored `work/`; sizes and hashes are listed for the nine final BQRS files without copying the binaries into the portable evidence.
+
+## Run record
+
+- **Date and isolation:** 2026-11-23. Fresh producer and grammar checkouts, source tree, database, outputs, `TMPDIR`, `XDG_CACHE_HOME`, `CODEQL_UCODE_CACHE`, common cache and compilation cache were run-owned under `work/trim-matrix-run-20261122-a/`. `HOME` was inherited and not set or modified. No active CodeQL or Cargo process was found at preflight; free disk was recorded in the receipt.
+- **Commands and status:** CodeQL version, database init, indexing and finalization passed in the successful sequence. The first database-init attempt exited 2 because the run directory lacked its parent `database/`; it created no database and is preserved. Initial queries and several workspace/path retries failed before query compilation. After running from the copied query workspace root and removing the nested manifest, the nine-query retry set ran; eight queries and their decodes passed, while the first `MemberFields` query had a QL syntax error. Its corrected query passed on the same finalized database. Setup failures, retries, statuses and available timing/RSS data are documented in the receipt and retry audit. Some manual retries do not have a structured top-level argv record; the corrected member-field CSV decode was not timed. This record does not claim complete command/timing capture.
+- **Timing:** Successful database initialization 0.587 s; indexing/extraction 0.660 s; finalization 1.267 s. Query evaluation and decode timings, including failed attempts, are recorded per command in the receipt. `/usr/bin/time -l` recorded peak RSS; the highest successful query peak was 458,964,992 bytes. These are six-fixture timings, not a corpus estimate.
+- **Observed implementation boundary:** The current `MarkupCFG.qll` allowlist and coverage predicate independently require ordinary `ExpressionTagOpen` and `ExpressionTagClose`, and require an identifier child. The observed graph matches that code. “Option B” names this implementation output only; neither a maintainer decision nor intended policy is inferred.
+- **Limits and follow-up:** No consumer was run. This claim does not establish runtime trimming/rendering, general syntax support, data flow, reachability, security, or a policy exclusion. The open #57 owner decision remains outstanding.

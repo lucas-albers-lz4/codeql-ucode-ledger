@@ -1,0 +1,3 @@
+"col0","col1","col2"
+"malformed.ut","parse_error","A parse error occurred (expected identifier symbol). Check the syntax of the file. If the file is invalid, correct the error or exclude the file from analysis."
+"malformed.ut","parse_error","Missing value for field: expression_tag::child"

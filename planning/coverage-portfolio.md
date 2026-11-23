@@ -66,6 +66,33 @@ the proposed markup CFG.
 [025](../claims/025-mixed-profile.md) checks routing, diagnostics and root
 multiplicity for 21 pinned LuCI files and three controls in one database;
 markup routing remains inconclusive.
+[026](../claims/026-v2-feed-policy-scope.md) checks an independently scoped
+synthetic v2 provider-feed change at the consumer API and CLI. It is not a
+fresh producer handoff or a real authorization assessment.
+[027](../claims/027-markup-trim-open-cfg.md) checks a bounded ordinary-tag CFG
+and the observed trim-open exclusion on two fixtures. It does not determine
+whether that exclusion is intended policy or establish runtime behavior.
+[028](../claims/028-creation-sibling-scopes.md) checks creation graph scope
+isolation for two synthetic sibling-callable fixtures. It does not establish
+runtime calls or general callable-body support.
+[029](../claims/029-typed-refactor-handoff.md) refreshes the actual typed v1
+handoff after the consumer validation refactor, with rejection controls. It is
+not a v2 handoff or evidence of real authorization.
+[030](../claims/030-v2-archive-receipt-boundary.md) checks the v2 archive
+adapter against the actual claim 029 receipts. It records an archive-identity
+boundary on Darwin, not a fresh producer-to-v2 handoff or runtime authorization.
+[031](../claims/031-uci-helper-lexical-identity.md) checks the newer UCI helper
+observer against reassigned-formal and copied-alias controls. It establishes
+selected lexical identities, not value preservation or runtime UCI effects.
+[032](../claims/032-markup-trim-matrix-implementation.md) measures the current
+bounded graph for ordinary and trim delimiters with member-expression controls.
+It does not decide the intended trim-support policy.
+[033](../claims/033-bounded-markup-callable-call-order.md) refreshes claim 028
+after bounded direct-call ordering was added: a direct-call sibling is covered
+and a computed-callee sibling remains unsupported on the selected fixtures.
+[034](../claims/034-markup-trim-delimiters.md) tests the user-selected trim
+policy in a disposable producer checkout. The reviewed patch is local and has
+not been merged upstream; rendering and runtime semantics remain outside it.
 
 These paths overlap in the pinned LuCI fixture; they are not a representative
 sample of all OpenWrt software or ucode syntax. The inventory deliberately

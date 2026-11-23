@@ -1,0 +1,146 @@
+{
+  "raw_root": "work/cfg-trim-oracle/run-20261122-a/output",
+  "relationship": "Portable decoded CSV/JSON rows are copies of these raw outputs with host paths normalized where present; raw BQRS and database remain ignored under work/.",
+  "files": [
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/all-diagnostics-pack-context.bqrs",
+      "size_bytes": 2319,
+      "sha256": "63c96456ac31bc58512f338b6aae3021942c279ae900317daffbb0ba804ed0e3"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/all-diagnostics-pack-context.csv",
+      "size_bytes": 21,
+      "sha256": "adc1e84d7518022112fd0365380af05e01ebb40e714a7498f00620a45b2216ba"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/ast-entity-counts.bqrs",
+      "size_bytes": 2589,
+      "sha256": "d277b3cd5fec38c81a2efb51b55462492c799417ab6294f5bf5569c823ef901f"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/ast-entity-counts.csv",
+      "size_bytes": 700,
+      "sha256": "02a7cc7a0c63fb7a6ee36ee4173986e3c70a5c20f9e8c566a390056e3f4887b4"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/ast-identities.bqrs",
+      "size_bytes": 2571,
+      "sha256": "b6c23e4d51108a2b668c7abd0b58daf1ed59b5ca62835d7b5a764d62c920d4ce"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/ast-identities.csv",
+      "size_bytes": 673,
+      "sha256": "cba08bfbb2f9432b50b5133b4b5602d194f7a6045bfc2a604b831029ab4dc17f"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/attempt-a-failure.json",
+      "size_bytes": 9415,
+      "sha256": "0430c68481fdaed481ea65833739e17c70957f027de9461bc07862419ae8d9bf"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/coverage.bqrs",
+      "size_bytes": 2374,
+      "sha256": "2423154b925a8d0242a2d449226aca7a99516b05492bcfcd512562cce42748c3"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/coverage.csv",
+      "size_bytes": 109,
+      "sha256": "24dc25a65d70a57aa5a332b39b77012ffc5bdcb59a52ad1cfec906a612d8f57d"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/diagnostics-module-resolution-failure.json",
+      "size_bytes": 448391,
+      "sha256": "e666a887f0ad68b38ac25e2e6b1488e6f3a93c3d961ffc02822d3388a4562188"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/edge-entity-counts.bqrs",
+      "size_bytes": 2434,
+      "sha256": "a94066da1e8756af698fd85ce34024ef00f3cb20e93533c00260ae55bbcfde9c"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/edge-entity-counts.csv",
+      "size_bytes": 225,
+      "sha256": "b12d678c6a1c3f3e31bca56071a84f16d69e0f89bfd0465abcf997b293ddd6d4"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/edges.bqrs",
+      "size_bytes": 2403,
+      "sha256": "3432e3d7c0a4737b25fceb145980cc32278e801350e2b5f5e736a78402f83abd"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/edges.csv",
+      "size_bytes": 212,
+      "sha256": "a97560f3d64851171dff19cc827a2012e9c7f5e17495eaa16c185d54603914b2"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/entity-count-result.json",
+      "size_bytes": 33680,
+      "sha256": "e73ca1974a046d0a3bb75ca4cf30452690bc5d8850f80ec5c14eeef94444c79f"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/extraction-errors.bqrs",
+      "size_bytes": 2705,
+      "sha256": "dd2bd29315a17f75ce19908973b18087f13bcf90b60645ae8637d6d9ec12ea83"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/node-entity-counts.bqrs",
+      "size_bytes": 2464,
+      "sha256": "8184c41b8b4c43d732d6cc400cd697f20d38687e4d1bf4ca929b23c488cd2989"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/node-entity-counts.csv",
+      "size_bytes": 214,
+      "sha256": "3854b3e6b127fe778764cbab973d246ffeeaf1356f0bb8eae667ff03d9be5d37"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/nodes.bqrs",
+      "size_bytes": 2432,
+      "sha256": "37c5cb9c4731d232c820f44b68532324f78415a009df7f00fed15cfa86611480"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/nodes.csv",
+      "size_bytes": 199,
+      "sha256": "46d5478daaff1690c6944a007d014e11f81519e759d28807597c10dddce67f97"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/query-continuation-gate-failure.json",
+      "size_bytes": 446652,
+      "sha256": "de7390b2e7aacbbc161f835e7c11fdf806bc982194e7933471b976d7522a631c"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/query-pack-workspace-failure.json",
+      "size_bytes": 450216,
+      "sha256": "f97619c3f3a73208af22721ed5a398c8e11c662e0c5659dd48be498f02f7c764"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/result.json",
+      "size_bytes": 464155,
+      "sha256": "e08b5bf1b03af585b22da65d757f1244716931983486f7faa272bfed37c763a2"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/routing-comparison.json",
+      "size_bytes": 2077,
+      "sha256": "eae70ff315126eb20b1c8177f8e097176c7e59a0b641cfd23fc5cd520666f4e4"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/routing.json",
+      "size_bytes": 798,
+      "sha256": "4e34786fa1802197b46e2a1e3f5244c8364a13b09972edcfa6c6e46dcb9b71b7"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/successfully-extracted-files.bqrs",
+      "size_bytes": 3520,
+      "sha256": "18e27cdaff8cdea7833fbfb5a6b63ee02718841f54dcbc09038c6ca69cdb4cba"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/tag-children.bqrs",
+      "size_bytes": 2470,
+      "sha256": "413c8f25d5a566fe27d86630ca2745160d0b7c097977f29a8b135128cbb85298"
+    },
+    {
+      "path": "work/cfg-trim-oracle/run-20261122-a/output/tag-children.csv",
+      "size_bytes": 297,
+      "sha256": "e2f2c42ed543752c9a88505223a4f4c2705e0bd31bd4c04478eab9f0034aa2d0"
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "assertions": {
+    "assert-ast-selected": true,
+    "assert-diagnostics": true,
+    "assert-edges": true,
+    "assert-errors": true,
+    "assert-files": true,
+    "assert-nodes": true,
+    "assert-roots": true,
+    "assert-scopes": true
+  },
+  "commands": [
+    {
+      "elapsed_seconds": 0.3730036659981124,
+      "exit": 0,
+      "label": "version",
+      "peak_rss_bytes": 84197376
+    },
+    {
+      "elapsed_seconds": 0.5884389999991981,
+      "exit": 0,
+      "label": "init",
+      "peak_rss_bytes": 121700352
+    },
+    {
+      "elapsed_seconds": 0.8183185839952785,
+      "exit": 0,
+      "label": "index",
+      "peak_rss_bytes": 120324096
+    },
+    {
+      "elapsed_seconds": 1.1782022090046667,
+      "exit": 0,
+      "label": "finalize",
+      "peak_rss_bytes": 199852032
+    },
+    {
+      "elapsed_seconds": 1.6069690419972176,
+      "exit": 0,
+      "label": "extracted",
+      "peak_rss_bytes": 302022656
+    },
+    {
+      "elapsed_seconds": 0.2502049170070677,
+      "exit": 0,
+      "label": "extracted-decode",
+      "peak_rss_bytes": 90112000
+    },
+    {
+      "elapsed_seconds": 1.5816213340003742,
+      "exit": 0,
+      "label": "errors",
+      "peak_rss_bytes": 304005120
+    },
+    {
+      "elapsed_seconds": 0.24017208300210768,
+      "exit": 0,
+      "label": "errors-decode",
+      "peak_rss_bytes": 89391104
+    },
+    {
+      "elapsed_seconds": 1.5004274579987396,
+      "exit": 0,
+      "label": "diagnostics",
+      "peak_rss_bytes": 297107456
+    },
+    {
+      "elapsed_seconds": 0.22845900000538677,
+      "exit": 0,
+      "label": "diagnostics-decode",
+      "peak_rss_bytes": 87293952
+    },
+    {
+      "elapsed_seconds": 2.2904114999982994,
+      "exit": 0,
+      "label": "roots",
+      "peak_rss_bytes": 438665216
+    },
+    {
+      "elapsed_seconds": 0.22963195799820824,
+      "exit": 0,
+      "label": "roots-decode",
+      "peak_rss_bytes": 86835200
+    },
+    {
+      "elapsed_seconds": 2.1482752500014612,
+      "exit": 0,
+      "label": "scopes",
+      "peak_rss_bytes": 376438784
+    },
+    {
+      "elapsed_seconds": 0.22803983300400432,
+      "exit": 0,
+      "label": "scopes-decode",
+      "peak_rss_bytes": 86736896
+    },
+    {
+      "elapsed_seconds": 2.1365656669950113,
+      "exit": 0,
+      "label": "ast",
+      "peak_rss_bytes": 425132032
+    },
+    {
+      "elapsed_seconds": 0.23540166699967813,
+      "exit": 0,
+      "label": "ast-decode",
+      "peak_rss_bytes": 87064576
+    },
+    {
+      "elapsed_seconds": 2.4313473329966655,
+      "exit": 0,
+      "label": "nodes",
+      "peak_rss_bytes": 428212224
+    },
+    {
+      "elapsed_seconds": 0.23012679199746344,
+      "exit": 0,
+      "label": "nodes-decode",
+      "peak_rss_bytes": 86556672
+    },
+    {
+      "elapsed_seconds": 2.4527103750006063,
+      "exit": 0,
+      "label": "edges",
+      "peak_rss_bytes": 430587904
+    },
+    {
+      "elapsed_seconds": 0.22653687500132946,
+      "exit": 0,
+      "label": "edges-decode",
+      "peak_rss_bytes": 86900736
+    }
+  ],
+  "database_init_seconds": 0.5884389999991981,
+  "diagnostic_assertion_pass": true,
+  "extraction_error_count": 0,
+  "extraction_index_seconds": 0.8183185839952785,
+  "finalization_seconds": 1.1782022090046667,
+  "producer_dirty_after_run": false,
+  "producer_head_after_run": "11a53fd8e911573860950ee8e549b337a8742438",
+  "query_decode_total_seconds": 1.8685731250152458,
+  "query_exec_total_seconds": 16.148327958988375,
+  "routing_counts": {
+    "duplicate_input_count": 0,
+    "excluded_count": 0,
+    "input_count": 3,
+    "markup_count": 3,
+    "markup_inconclusive_count": 3,
+    "plain_count": 0,
+    "uncertain_count": 0
+  },
+  "routing_decisions": [
+    {
+      "classification": "markup",
+      "inconclusive_reason": "markup_not_modeled",
+      "installed_path": "usr/share/ucode/controls/siblings-all-covered.ut",
+      "path": "/STAGED_SOURCE/usr/share/ucode/controls/siblings-all-covered.ut",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive"
+    },
+    {
+      "classification": "markup",
+      "inconclusive_reason": "markup_not_modeled",
+      "installed_path": "usr/share/ucode/controls/siblings-computed-callee.ut",
+      "path": "/STAGED_SOURCE/usr/share/ucode/controls/siblings-computed-callee.ut",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive"
+    },
+    {
+      "classification": "markup",
+      "inconclusive_reason": "markup_not_modeled",
+      "installed_path": "usr/share/ucode/controls/siblings.ut",
+      "path": "/STAGED_SOURCE/usr/share/ucode/controls/siblings.ut",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive"
+    }
+  ],
+  "successful_extracted_count": 3,
+  "successful_extracted_uris": [
+    "file:///STAGED_SOURCE/usr/share/ucode/controls/siblings-all-covered.ut",
+    "file:///STAGED_SOURCE/usr/share/ucode/controls/siblings-computed-callee.ut",
+    "file:///STAGED_SOURCE/usr/share/ucode/controls/siblings.ut"
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "portable_files": [
+    {
+      "path": "README.md",
+      "size_bytes": 2350,
+      "sha256": "a7913fdef33002387af17dd272cc4ac493332c07827e7436d4f11ca66f2416a8"
+    },
+    {
+      "path": "inputs/ordinary-member.ut",
+      "size_bytes": 13,
+      "sha256": "52e70b638218d4e928e4bac51ee701cc357443b54faa6d63dcefca56184fb1c4"
+    },
+    {
+      "path": "inputs/plain.ut",
+      "size_bytes": 11,
+      "sha256": "557c70f3707a0f1f22bd06e189c8d303ee99542d2767eb59226ac8010c8220da"
+    },
+    {
+      "path": "inputs/trim-both.ut",
+      "size_bytes": 13,
+      "sha256": "d897ab97d9025f6eacaa460015d71757746888efacef854955b31e3ac283f03f"
+    },
+    {
+      "path": "inputs/trim-close.ut",
+      "size_bytes": 12,
+      "sha256": "afde724719c5f9bf3204a47b13d9028a3a0bb0ac60008827bf72602551da519a"
+    },
+    {
+      "path": "inputs/trim-member.ut",
+      "size_bytes": 15,
+      "sha256": "2b1650e98fcd52c9e18a10cfe5ad5016031ea4aae0ce412a309f4ef02858005d"
+    },
+    {
+      "path": "inputs/trim-open.ut",
+      "size_bytes": 12,
+      "sha256": "fbeecce989e50bb9bd205afd29f8e717469dc977e57131f4ffa24378a5833e49"
+    },
+    {
+      "path": "outputs/AllDiagnostics.csv",
+      "size_bytes": 49,
+      "sha256": "3879ce7790a689988a2fd3acb3ba2618e3af77e9e5f9faddf2a47f164d7ff500"
+    },
+    {
+      "path": "outputs/AstIdentities.csv",
+      "size_bytes": 3161,
+      "sha256": "c7befcd2f1f034df7c29481f8950987d858a3cac50376f0998824a3f302d1b74"
+    },
+    {
+      "path": "outputs/Coverage.csv",
+      "size_bytes": 271,
+      "sha256": "560cc29ffe3475cd127d4bf83f3001387b2c307a4ec7d5cb978b1aad39258731"
+    },
+    {
+      "path": "outputs/Edges.csv",
+      "size_bytes": 360,
+      "sha256": "75a38d6fa3166975f25a10fdcdd53352116c73fe9356f09df1c13b6d1a0c3ea6"
+    },
+    {
+      "path": "outputs/ExtractionErrors.csv",
+      "size_bytes": 49,
+      "sha256": "3879ce7790a689988a2fd3acb3ba2618e3af77e9e5f9faddf2a47f164d7ff500"
+    },
+    {
+      "path": "outputs/MemberFields.csv",
+      "size_bytes": 280,
+      "sha256": "31e48f9675eb5810bae22b2022e98eea0ee440ae4be4066870f70ba2ca375975"
+    },
+    {
+      "path": "outputs/Nodes.csv",
+      "size_bytes": 314,
+      "sha256": "c2386f5a6869b6ab53723db523f6779b01310b8144190044bbc1491b0de2c1c1"
+    },
+    {
+      "path": "outputs/SuccessfulFiles.csv",
+      "size_bytes": 579,
+      "sha256": "c46e8a7a85fe58f3d0767eff428a4c8ac8e46e72e8f7a6835818fef1c16bc738"
+    },
+    {
+      "path": "outputs/TagFields.csv",
+      "size_bytes": 604,
+      "sha256": "5d4307fcbd86d932619584375a97433ad09de3554f6f1cdc256f6cd8adaed041"
+    },
+    {
+      "path": "outputs/cli-diagnostics.jsonl",
+      "size_bytes": 724,
+      "sha256": "928d8456cd35f5647d6a796f52f7b827a653d9b5d4877f5599533ddfb65a12c5"
+    },
+    {
+      "path": "outputs/normalization-map.json",
+      "size_bytes": 15802,
+      "sha256": "0dfa6a9bdcf59c7eab97c83f305d701782c6a99e18b89e252691e83a516c20d5"
+    },
+    {
+      "path": "outputs/oracle-comparison.json",
+      "size_bytes": 19077,
+      "sha256": "559b66a7646c0647941f05911668357ed1959a379123a2a1fc31d60c0bba248d"
+    },
+    {
+      "path": "outputs/portable-receipt.json",
+      "size_bytes": 36854,
+      "sha256": "6fc5053098d194ddc701c52df3a08e13722baa0a08a05a2b0b28118b643aaa11"
+    },
+    {
+      "path": "outputs/routing.json",
+      "size_bytes": 1628,
+      "sha256": "846de0fbe8483dfaa25fe11e8e94e10f2a0196102cd31839da449d48b64eaf52"
+    },
+    {
+      "path": "outputs/timing-status/attempt-01-database-init-failed/commands.json",
+      "size_bytes": 889,
+      "sha256": "386481eabd00690233b937bee34de8ad8bd0b33c6da77a060ddc2479f78f2f10"
+    },
+    {
+      "path": "outputs/timing-status/attempt-01-database-init-failed/database-init.stderr-time.txt",
+      "size_bytes": 885,
+      "sha256": "f48c2cc6515a2ee393f2125e1cf72a7261d5774beaffb9053e80eeefd76c58c3"
+    },
+    {
+      "path": "outputs/timing-status/attempt-01-database-init-failed/database-init.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "outputs/timing-status/attempt-01-database-init-failed/failure.json",
+      "size_bytes": 267,
+      "sha256": "3f9eff67dde6f66bf2b459aa5e8dc8d120b8bdbd6a0396fa054c67718789491f"
+    },
+    {
+      "path": "outputs/timing-status/attempt-04-nested-manifest-removal-path-failed/failure.json",
+      "size_bytes": 296,
+      "sha256": "91b684524d22b46445d62ed067975bd2cdc991e420e005eb0b5cc7dc49756b63"
+    },
+    {
+      "path": "outputs/timing-status/attempt-04-nested-manifest-removal-path-failed/stderr-time.txt",
+      "size_bytes": 1898,
+      "sha256": "d3809461f9d0348496239fa28f2c476f03523f18237493f98e4f40db7dd74d13"
+    },
+    {
+      "path": "outputs/timing-status/commands.json",
+      "size_bytes": 8998,
+      "sha256": "52068187336c96b6205a979299611ade350c21b9814dda4e0164bc953ca5b193"
+    },
+    {
+      "path": "outputs/timing-status/preflight.json",
+      "size_bytes": 305,
+      "sha256": "7f8251b9116bc8fb7256cbf045b424b266089e371a808f65fc319779228e9b23"
+    },
+    {
+      "path": "outputs/timing-status/query-retries.json",
+      "size_bytes": 11994,
+      "sha256": "0b84d8d6d37cdb702b19c16f18d61c9acb3da2909217aae23d29701251e4e765"
+    },
+    {
+      "path": "outputs/timing-status/retry-audit.json",
+      "size_bytes": 3348,
+      "sha256": "2ba1b63a8e4d83c4e0d0ed379c82e593b56e983b3c71ad88489934b9804d01bc"
+    },
+    {
+      "path": "queries/AllDiagnostics.ql",
+      "size_bytes": 407,
+      "sha256": "0f8b128f12bbcc1ceaf56024ed8a34caf3b667fe281aadb447e944e415f4645c"
+    },
+    {
+      "path": "queries/AstIdentities.ql",
+      "size_bytes": 1306,
+      "sha256": "c50be632511b3fba1c4f89d3d236b35f409e07bb562f0db1eaaacc05ea40d450"
+    },
+    {
+      "path": "queries/Coverage.ql",
+      "size_bytes": 614,
+      "sha256": "accfec9ec9c19a0a79e135c13501c43392c51920cf2592463f1ff128e17180af"
+    },
+    {
+      "path": "queries/Edges.ql",
+      "size_bytes": 1042,
+      "sha256": "b68f631597b07ec9855a7e9d2d473dd7490b7555b51885bb455bc46592e4fbd4"
+    },
+    {
+      "path": "queries/ExtractionErrors.ql",
+      "size_bytes": 448,
+      "sha256": "02ada922d67da5de9711a39079d8a3ebddeae4d368ebb81548c5d041f2bbbe54"
+    },
+    {
+      "path": "queries/MemberFields.ql",
+      "size_bytes": 782,
+      "sha256": "1a2415df51ac074560410e22d541b27c86410993b8daeac6c26683e06818cf08"
+    },
+    {
+      "path": "queries/Nodes.ql",
+      "size_bytes": 948,
+      "sha256": "ff68be7ab0374b7253f645527e8017abc676f4fa6c230fa7bf95b2cbfe99fc25"
+    },
+    {
+      "path": "queries/SuccessfulFiles.ql",
+      "size_bytes": 333,
+      "sha256": "131ee17921606983f6ddfb546ee1ee7630c92df1287d27e25b45b88e3b928994"
+    },
+    {
+      "path": "queries/TagFields.ql",
+      "size_bytes": 656,
+      "sha256": "2cb00244c867fd4fb1f1ff5617d09d1ddb13976e0f0fea3a2312aff800eab0e4"
+    },
+    {
+      "path": "source-first-oracle-original.md",
+      "size_bytes": 7566,
+      "sha256": "6e8edc4daba3c950ed6c440b2133e897721e3848954914107281df1ec3024503"
+    },
+    {
+      "path": "source-first-oracle-supplement.json",
+      "size_bytes": 21520,
+      "sha256": "47250a224177148d21de6fef21c64d7dcb1ea2426e5950face0e9a9352a24263"
+    },
+    {
+      "path": "trim-policy-disposition.md",
+      "size_bytes": 5996,
+      "sha256": "5dbea7030bf0bf2b628f7b8af2cff2bf13fb55c090bb93dfdae16ec1c519d47d"
+    }
+  ],
+  "raw_bqrs_not_copied_to_portable_evidence": [
+    {
+      "query": "AllDiagnostics",
+      "local_work_path": "output/AllDiagnostics-retry-07.bqrs",
+      "size_bytes": 2323,
+      "sha256": "29af5ac10273a7ab862ac63953609a12e54cf424253a355d265bc2f756239c2b",
+      "decoded_portable_path": "outputs/AllDiagnostics.csv"
+    },
+    {
+      "query": "ExtractionErrors",
+      "local_work_path": "output/ExtractionErrors-retry-07.bqrs",
+      "size_bytes": 2327,
+      "sha256": "7f9238cee1b04f5b9d6ab2cf74d1a58493ae9cc1bf9b2f7efe9310a6597e850a",
+      "decoded_portable_path": "outputs/ExtractionErrors.csv"
+    },
+    {
+      "query": "SuccessfulFiles",
+      "local_work_path": "output/SuccessfulFiles-retry-07.bqrs",
+      "size_bytes": 4214,
+      "sha256": "6f14ba776cd8d3b71b2a9322e08bf42a19dd48eb09dc86df1b5eb6a09def1f88",
+      "decoded_portable_path": "outputs/SuccessfulFiles.csv"
+    },
+    {
+      "query": "Coverage",
+      "local_work_path": "output/Coverage-retry-07.bqrs",
+      "size_bytes": 2448,
+      "sha256": "4641e2a61084b6822b92e555e499533fd6fa5fd5250c16da5c0ec66c4973773b",
+      "decoded_portable_path": "outputs/Coverage.csv"
+    },
+    {
+      "query": "AstIdentities",
+      "local_work_path": "output/AstIdentities-retry-07.bqrs",
+      "size_bytes": 3177,
+      "sha256": "255ee0af1291df1200ccb0592a6df77bab598141ba6eb35f672ccdef5c191bdb",
+      "decoded_portable_path": "outputs/AstIdentities.csv"
+    },
+    {
+      "query": "TagFields",
+      "local_work_path": "output/TagFields-retry-07.bqrs",
+      "size_bytes": 2579,
+      "sha256": "f09a5bc1af8e8e4e90e358c21c4338720c8f17992a959fc1b9b34c243076c332",
+      "decoded_portable_path": "outputs/TagFields.csv"
+    },
+    {
+      "query": "MemberFields",
+      "local_work_path": "output/MemberFields-retry-09.bqrs",
+      "size_bytes": 2443,
+      "sha256": "7079c6f5dd7038616309f847afe3b56d27eeb54a3a3eb6062b6348f041eb7279",
+      "decoded_portable_path": "outputs/MemberFields.csv"
+    },
+    {
+      "query": "Nodes",
+      "local_work_path": "output/Nodes-retry-07.bqrs",
+      "size_bytes": 2498,
+      "sha256": "cdde142cf0a4efe077233f009a9d448a3bb58fe603db9932b451a54d1c4b00d8",
+      "decoded_portable_path": "outputs/Nodes.csv"
+    },
+    {
+      "query": "Edges",
+      "local_work_path": "output/Edges-retry-07.bqrs",
+      "size_bytes": 2458,
+      "sha256": "4e226b779a5324d30fb490816ec27bf9cf447c40dd0cba8318e69a112e86ed21",
+      "decoded_portable_path": "outputs/Edges.csv"
+    }
+  ],
+  "database_not_copied": "work/trim-matrix-run-20261122-a/database/db",
+  "normalization_map": "outputs/normalization-map.json"
+}

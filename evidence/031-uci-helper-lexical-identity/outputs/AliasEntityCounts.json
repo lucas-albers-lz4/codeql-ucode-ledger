@@ -1,0 +1,42 @@
+{
+  "#select": {
+    "columns": [
+      {
+        "kind": "Entity",
+        "name": "site"
+      },
+      {
+        "kind": "Entity",
+        "name": "forward"
+      },
+      {
+        "kind": "String"
+      }
+    ],
+    "tuples": [
+      [
+        {
+          "label": "CallExpression",
+          "url": {
+            "endColumn": 30,
+            "endLine": 5,
+            "startColumn": 1,
+            "startLine": 5,
+            "uri": "file://$RUN/src/controls-formal/alias-instead-of-formal.uc"
+          }
+        },
+        {
+          "label": "CallExpression",
+          "url": {
+            "endColumn": 49,
+            "endLine": 3,
+            "startColumn": 10,
+            "startLine": 3,
+            "uri": "file://$RUN/src/controls-formal/alias-instead-of-formal.uc"
+          }
+        },
+        "distinct alias entities: calls=1, arg1 identifiers=1, variable targets=1"
+      ]
+    ]
+  }
+}

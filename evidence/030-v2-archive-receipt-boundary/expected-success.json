@@ -1,0 +1,28 @@
+{
+  "gate": "unknown",
+  "limits": [
+    "allow describes the pinned source model, not a built or installed package",
+    "selected policy is a bounded consumer expectation, not authenticated provenance",
+    "model assumes the ubus default script ran with no prior prefix and the plugin is present",
+    "modeled object lookup assumes luci exists; live registration is not established",
+    "archived evidence does not establish live execution",
+    "ucode string-form system uses a shell; the fixed command includes redirection",
+    "Linux libc evaluator unavailable on this platform"
+  ],
+  "modeled_gate": "unknown",
+  "observation": "archived-neutral-observation",
+  "policy": {
+    "status": "unassessed"
+  },
+  "typed_assumptions": [
+    "Source observation in the pinned callback body; not a taint path",
+    "The supplied CSV and typed JSON are not authenticated as CodeQL output",
+    "Fixed argv; this is not luci.sys and not request.args interpolation",
+    "shellquote and basename are not sanitizers; they are not present on this sink"
+  ],
+  "typed_unknowns": [
+    "live uhttpd/rpcd not executed",
+    "Callback registration, actual execution and live uhttpd/rpcd are not established by the table",
+    "Lexical shadowing and unmodeled call shapes are not resolved by the table"
+  ]
+}

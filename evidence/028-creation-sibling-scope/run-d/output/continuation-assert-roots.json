@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "actual": [
+    [
+      "siblings-all-covered.ut",
+      "1",
+      "1",
+      "1",
+      "68",
+      "unsupported",
+      "top-observed",
+      "1"
+    ],
+    [
+      "siblings.ut",
+      "1",
+      "1",
+      "1",
+      "65",
+      "unsupported",
+      "top-observed",
+      "1"
+    ]
+  ],
+  "expected": [
+    [
+      "siblings.ut",
+      "1",
+      "1",
+      "1",
+      "65",
+      "unsupported",
+      "top-observed",
+      "1"
+    ],
+    [
+      "siblings-all-covered.ut",
+      "1",
+      "1",
+      "1",
+      "68",
+      "unsupported",
+      "top-observed",
+      "1"
+    ]
+  ]
+}

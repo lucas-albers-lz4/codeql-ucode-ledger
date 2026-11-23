@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "<PYTHON>",
+    "-B",
+    "<PREP>/run-producer.py",
+    "<RUN>/producer",
+    "<RUN>/consumer",
+    "<RUN>/producer-run"
+  ],
+  "cwd": "<LEDGER>",
+  "exit": 0,
+  "elapsed_seconds": 13.387524375000794
+}

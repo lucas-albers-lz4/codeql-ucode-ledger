@@ -1,0 +1,28 @@
+Resolving data extensions.
+Finished resolving data extensions.
+Merging data extensions.
+Finished merging data extensions.
+WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.
+Compiling query plan for <RUN-D>/producer-ql/ql/src/pkg6-fixed-roots.ql.
+[1/1] Found in cache: <RUN-D>/producer-ql/ql/src/pkg6-fixed-roots.ql.
+Starting evaluation of lucas-albers-lz4/ucode-queries/pkg6-fixed-roots.ql.
+[1/1 eval 75ms] Evaluation done; writing results to <RUN-D>/output/continuation-roots.bqrs.
+Shutting down query evaluator.
+        1.13 real         2.51 user         0.15 sys
+           201424896  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               27962  page reclaims
+                  95  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   5  signals received
+                  36  voluntary context switches
+               17390  involuntary context switches
+            41108549  instructions retired
+            17090015  cycles elapsed
+             2261304  peak memory footprint

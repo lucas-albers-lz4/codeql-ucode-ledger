@@ -1,0 +1,5 @@
+"col0","col1","col2","col3"
+"normal.ut","exit","exit",1
+"normal.ut","entry","entry",1
+"normal.ut","identifier","Identifier:1:4:1:4:ExpressionTag:1",1
+"normal.ut","tag-completion","ExpressionTag:1:1:1:7:Markup:0",1

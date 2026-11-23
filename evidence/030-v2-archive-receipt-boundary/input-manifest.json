@@ -1,0 +1,158 @@
+{
+  "archive-acl": {
+    "consumer_git_path": "policy/fixtures/luci-mod-system.json",
+    "raw_sha256": "16a24f388ca457758afbea4ff2283ad5984b0146d01697a6955ea84f42cb7924",
+    "size_bytes": 4714
+  },
+  "archive-effects": {
+    "consumer_git_path": "evidence/issue89-typed-ae946190-7f532ac/attempt/artifacts/effects.csv",
+    "raw_sha256": "9d9a1a7178e7f5fbd3cb772122fe172354004fac09ce00e91647d6b35ba9d0a0",
+    "size_bytes": 246
+  },
+  "archive-errors": {
+    "consumer_git_path": "evidence/issue89-typed-ae946190-7f532ac/attempt/artifacts/errors.csv",
+    "raw_sha256": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+    "size_bytes": 22
+  },
+  "archive-extracted": {
+    "consumer_git_path": "evidence/issue89-typed-ae946190-7f532ac/attempt/artifacts/extracted.csv",
+    "raw_sha256": "ab842728312739e69fc47983c85abaa09a59a297ead156d6ceca3df333b570f4",
+    "size_bytes": 148
+  },
+  "archive-feed-config": {
+    "consumer_git_path": "policy/fixtures/v2-source-pins/feeds.conf.default",
+    "raw_sha256": "0843b89011b0264ca1a21140bbfa039436080134c6f84c76a7a1c936f8ce3db0",
+    "size_bytes": 352
+  },
+  "archive-login": {
+    "consumer_git_path": "policy/fixtures/rpcd.config",
+    "raw_sha256": "87870ce2884e31bddf9744b6bbe201e11b5f62991dc2169f6afe810372cd8ac2",
+    "size_bytes": 3566
+  },
+  "archive-recipe-admin": {
+    "consumer_git_path": "policy/fixtures/v2-source-pins/luci-mod-admin-full.Makefile",
+    "raw_sha256": "c64544d6700cc3068b8708f84b66dfdcdc2f49730cc99aae2d3c75fbdd130205",
+    "size_bytes": 418
+  },
+  "archive-recipe-base": {
+    "consumer_git_path": "policy/fixtures/v2-source-pins/luci-base.Makefile",
+    "raw_sha256": "4a933ee77787783219bdeae45b03d89a6c3b5f1512e8ad8bc68d19f4b250c9bc",
+    "size_bytes": 1500
+  },
+  "archive-recipe-light": {
+    "consumer_git_path": "policy/fixtures/v2-source-pins/luci-light.Makefile",
+    "raw_sha256": "1d02f3bad127162339bcc49524c383a18c336f9ff832b391fa499184e974fbc6",
+    "size_bytes": 644
+  },
+  "archive-recipe-ssl": {
+    "consumer_git_path": "policy/fixtures/v2-source-pins/luci-ssl.Makefile",
+    "raw_sha256": "a02dc41d525f1a0f0cbdb5b697a66bcc3b371b0f25a6362d0d2bc5fd8cf3f684",
+    "size_bytes": 439
+  },
+  "archive-recipe-system": {
+    "consumer_git_path": "policy/fixtures/v2-source-pins/luci-mod-system.Makefile",
+    "raw_sha256": "315224a6aed5598eb229533eb73cc846e79f9d1f6fba4d1e75587910ef95cfe7",
+    "size_bytes": 358
+  },
+  "archive-routing": {
+    "consumer_git_path": "evidence/issue89-typed-ae946190-7f532ac/attempt/artifacts/routing.json",
+    "raw_sha256": "6b966b0d86873d3edc0602d7558e5bef74796edf60a74d3ad423f636cc5c47d6",
+    "size_bytes": 440
+  },
+  "archive-source": {
+    "consumer_archive_member": "sole regular member of evidence/issue89-typed-ae946190-7f532ac/attempt/artifacts/source-archive.zip",
+    "raw_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+    "size_bytes": 16161
+  },
+  "archive-source-archive": {
+    "consumer_git_path": "evidence/issue89-typed-ae946190-7f532ac/attempt/artifacts/source-archive.zip",
+    "raw_sha256": "c3a841f0f08290af2c73624d376008f109de5a39211e42ae48ac3c5e173d5ab8",
+    "size_bytes": 5072
+  },
+  "archive-typed": {
+    "consumer_git_path": "evidence/issue89-typed-ae946190-7f532ac/attempt/artifacts/typed.json",
+    "raw_sha256": "5c619d5aa3566c5296080b0a9be7072b38d6eb7a98eae647d68c5dcf09b2b59b",
+    "size_bytes": 1908
+  },
+  "archive-uhttpd-config": {
+    "consumer_git_path": "policy/fixtures/v2-source-pins/uhttpd.config",
+    "raw_sha256": "6cc793366729d4792b95139780baa4fbfc3402db6b63aa015d3007b34510e14a",
+    "size_bytes": 4912
+  },
+  "archive-uhttpd-default": {
+    "consumer_git_path": "policy/fixtures/v2-source-pins/ubus.default",
+    "raw_sha256": "4cae1c943a1efc41449c377db3e2b5338b36cbcb815f388fea6d86c972b3927d",
+    "size_bytes": 251
+  },
+  "archive-uhttpd-init": {
+    "consumer_git_path": "policy/fixtures/v2-source-pins/uhttpd.init",
+    "raw_sha256": "49af2183baad478567bb74d484396142909959b4653ece0379e8dd159b19070e",
+    "size_bytes": 7452
+  },
+  "archive-uhttpd-recipe": {
+    "consumer_git_path": "policy/fixtures/v2-source-pins/uhttpd.Makefile",
+    "raw_sha256": "5d8b66c3f0ad09f3f43507f9025c778bace19b94c77d306d782128593f8feac6",
+    "size_bytes": 3172
+  },
+  "corpus": {
+    "consumer_git_path": "corpus/lock.json",
+    "raw_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "size_bytes": 4661
+  },
+  "envelope": {
+    "portable_path": "inputs/envelope.json",
+    "raw_sha256": "190c56870b81bd457e2a3e64bb5b673a9f8245ead4b3f363c0675db3d07e4432",
+    "size_bytes": 2299
+  },
+  "policy": {
+    "consumer_git_path": "corpus/profiles/luci-ssl-25.12/expected-capabilities.json",
+    "raw_sha256": "8192803552814c47cb39b99712c033d0aa5a6631a6d32e05315bd9666630881c",
+    "size_bytes": 68921
+  },
+  "profile": {
+    "consumer_git_path": "corpus/profiles/luci-ssl-25.12/profile.json",
+    "raw_sha256": "16a5468601be4b23f45795a43deedd6fda6726ff7503abb9d80e493d16808ac5",
+    "size_bytes": 2353
+  },
+  "recorded-effects": {
+    "claim_029_portable_path": "../029-typed-refactor-handoff/run/producer-run/main/effects.csv",
+    "portable_sha256": "9d9a1a7178e7f5fbd3cb772122fe172354004fac09ce00e91647d6b35ba9d0a0",
+    "raw_sha256": "9d9a1a7178e7f5fbd3cb772122fe172354004fac09ce00e91647d6b35ba9d0a0",
+    "size_bytes": 246
+  },
+  "recorded-errors": {
+    "claim_029_portable_path": "../029-typed-refactor-handoff/run/producer-run/main/errors.csv",
+    "portable_sha256": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+    "raw_sha256": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+    "size_bytes": 22
+  },
+  "recorded-extracted": {
+    "claim_029_portable_path": "../029-typed-refactor-handoff/run/producer-run/main/extracted.csv",
+    "portable_sha256": "4a5db2e1cbb21ba61a5311df53d44bdea01aa2e7cdfbfafc4c21f13066c1ad19",
+    "raw_sha256": "7bc14c07e3c7bea4be6c7a738c4288f2f08a2c39a083ed3f28acc338ffdc04fa",
+    "size_bytes": 145
+  },
+  "recorded-routing": {
+    "claim_029_portable_path": "../029-typed-refactor-handoff/run/producer-run/main/routing.json",
+    "portable_sha256": "c827a6f4cb338e7f6d243b3c09822765e7310bee1504880a6ae3863c03bb0a97",
+    "raw_sha256": "281a835263b5ad6838c278fdd768d8f43e6f246ba5abeafa4555fd0a3f27d220",
+    "size_bytes": 437
+  },
+  "recorded-source": {
+    "claim_029_portable_path": "../029-typed-refactor-handoff/run/producer-run/main/src/usr/share/rpcd/ucode/luci",
+    "portable_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+    "raw_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+    "size_bytes": 16161
+  },
+  "recorded-typed": {
+    "claim_029_portable_path": "../029-typed-refactor-handoff/run/producer-run/typed.json",
+    "portable_sha256": "5c619d5aa3566c5296080b0a9be7072b38d6eb7a98eae647d68c5dcf09b2b59b",
+    "raw_sha256": "5c619d5aa3566c5296080b0a9be7072b38d6eb7a98eae647d68c5dcf09b2b59b",
+    "size_bytes": 1908
+  },
+  "selection": {
+    "portable_path": "inputs/selection.json",
+    "raw_sha256": "333a5337e88b847cccabe2d825460de538e3dabdcd2c1958e995015dde57ae6c",
+    "size_bytes": 2763
+  }
+}

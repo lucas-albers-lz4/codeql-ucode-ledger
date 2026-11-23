@@ -1,0 +1,110 @@
+{
+  "producer": {
+    "remote": "https://github.com/lucas-albers-lz4/codeql-ucode",
+    "selected_sha": "1ccf5268e6915dc8d4cbb926b28be8ff79bcb0ed",
+    "observer_introduced_sha": "cc87f6d7a104bd54bcb8a1ec97e9eb23afc6ba63",
+    "observer_blob": "e6d0a9efc3c3e94d7b4b623c670799ff24ea29608644e249890257f5b6cf9276",
+    "dirty_state": "tracked source clean; four auxiliary query files untracked under ql/src/diagnostics and ql/src/inventory; no tracked edits"
+  },
+  "source": {
+    "repository": "https://github.com/openwrt/luci",
+    "revision": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "path": "modules/luci-base/ucode/controller/admin/uci.uc",
+    "git_blob": "c38a42b10bfefbaa31741feae9395abd8a1f8e40",
+    "sha256": "ac75cfef7d74f87ed7f957778004a7bf486c76df699398c215795b4947e0c93e"
+  },
+  "controls": [
+    {
+      "path": "controls-formal/reassigned-formals.uc",
+      "sha256": "28782398b07af843d2134d0c296de95ba6110c256c50b86b38b41c1759a944c9"
+    },
+    {
+      "path": "controls-formal/alias-instead-of-formal.uc",
+      "sha256": "b83b1bc9aefae6b09823e72c5becd52274ea868a803e4314683d34bb010b60a6"
+    }
+  ],
+  "tool": {
+    "codeql_cli": "2.27.4",
+    "executable_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+    "timing_tool": "/usr/bin/time -l"
+  },
+  "extractor_pack": {
+    "origin_project_sha": "8375887ed14825dd59addbfd0df43616d9e684fb",
+    "dbscheme_sha256": "a32b8f63d4545439bc632b4afd0d58ad64aa2a634736bcd341fba68b7690ad2b",
+    "manifest_sha256": "350977db453446af1081fa844e0cbdefb9fc3de7bd51b14e57938063c83b42c4",
+    "extractor_sha256": "35aeb3a59305c7fb21b9ead30d658add5d255645f3f73efc877f5363abf242a8",
+    "build_provenance": "Copied from the existing build at producer HEAD 8375887; relevant extractor/grammar source diff to selected producer 1ccf526 was empty. The artifact digests are recorded here; no new build was performed."
+  },
+  "grammar_pin_from_claim023": "4a243af329fae2f4ff01e0fc80133cbab8314600",
+  "query_lock": {
+    "path": "ql/lib/codeql-pack.lock.yml",
+    "sha256": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+    "dependencies": [
+      {
+        "name": "codeql/controlflow",
+        "version": "1.0.12",
+        "manifest_sha256": "923d240f25e0522b20853722f87472d6457a954966d03b89f1a751cdaa71a754"
+      },
+      {
+        "name": "codeql/dataflow",
+        "version": "1.1.6",
+        "manifest_sha256": "4a1a4ce185d0878cafcbcdaa71db63e2be4bb0e69bd44831f156e097bb103cad"
+      },
+      {
+        "name": "codeql/regex",
+        "version": "1.0.12",
+        "manifest_sha256": "4c339cda512c7aaa2785d15d20fb9c331cd60199756bada178f5d60d602794e0"
+      },
+      {
+        "name": "codeql/ssa",
+        "version": "1.0.12",
+        "manifest_sha256": "c01dbbe30f64a12218a18b6cfd67d6910c2dbfc360b3b51cb037ab74bd42cfe8"
+      },
+      {
+        "name": "codeql/threat-models",
+        "version": "1.1.1",
+        "manifest_sha256": "7cfd5d5bbfeecb98a8beb685c249713824ddb2f3f21c9d195d8622ebc7c8eb43"
+      },
+      {
+        "name": "codeql/typetracking",
+        "version": "1.0.12",
+        "manifest_sha256": "205bcc319f21bfc81ea9d9a810cc08d1743b5b9b032f1d9f5bd3afa24a93e4b9"
+      },
+      {
+        "name": "codeql/util",
+        "version": "1.0.12",
+        "manifest_sha256": "c51cc18388d41ef459fb3636724312cdf777b94fb90c41b15ba0cfee80415c8b"
+      },
+      {
+        "name": "codeql/yaml",
+        "version": "1.0.61",
+        "manifest_sha256": "d844c722b7a2440c2859b9edb3f3d4bb5e4b18c03ee512f8923b11bf4f9c68c0"
+      }
+    ]
+  },
+  "isolation": {
+    "database": "run-owned at work/uci-formal-reassignment-clean-run-retry-01/db",
+    "source_root": "run-owned staging tree",
+    "TMPDIR": "run-owned",
+    "XDG_CACHE_HOME": "run-owned",
+    "XDG_CONFIG_HOME": "run-owned",
+    "XDG_DATA_HOME": "run-owned",
+    "CODEQL common cache": "run-owned",
+    "QL compilation cache": "run-owned",
+    "HOME": "inherited, not overridden"
+  },
+  "routing_instrumentation": "A run-owned copy of the pack index-files wrapper copied its actual extractor-produced routing.json from CODEQL_EXTRACTOR_UCODE_TRAP_DIR before finalize; wrapper only adds this receipt copy after extractor execution.",
+  "failures": [
+    "exploratory mixed-revision query-pack and decoder failures",
+    "common-caches CLI flag placed before subcommand; no DB init",
+    "locked codeql/controlflow absent on first current-pin query attempt",
+    "first alias entity count query had an incompatible AST type"
+  ],
+  "queries": {
+    "AliasEligibility.ql": "783a1020adcd9451a2b1f5c853b94e6524468097a242e8746a785a9483076412",
+    "AliasEntityCounts.ql": "ae9c325ec1476c92e57cdb2a044a038c88333e700d1747331b2d807b58f33396",
+    "AllDiagnostics.ql": "c0bf4f462eb9705479f480ebac9556688df4c62d191bd6309c4993d80ea6dbe1",
+    "UciHelperEntityCounts.ql": "ecd4cf44034d359ca79ac3e9e519634aa916e4609f9719371a992738e4f6aa21",
+    "UciHelperObservation.ql": "e6d0a9efc3c3e94d7b4b623c670799ff24ea29608644e249890257f5b6cf9276"
+  }
+}

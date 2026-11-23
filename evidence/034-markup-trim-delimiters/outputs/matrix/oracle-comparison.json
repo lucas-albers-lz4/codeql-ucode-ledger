@@ -1,0 +1,72 @@
+{
+  "routing_counts": {
+    "pass": true,
+    "actual_count": 7,
+    "expected_count": 7,
+    "missing": [],
+    "unexpected": []
+  },
+  "routing_decisions": {
+    "pass": true,
+    "actual_count": 6,
+    "expected_count": 6,
+    "missing": [],
+    "unexpected": []
+  },
+  "successful_files": {
+    "pass": true,
+    "actual_count": 6,
+    "expected_count": 6,
+    "missing": [],
+    "unexpected": []
+  },
+  "extraction_errors": {
+    "pass": true,
+    "actual_count": 0,
+    "expected_count": 0,
+    "missing": [],
+    "unexpected": []
+  },
+  "file_diagnostics": {
+    "pass": true,
+    "actual_count": 0,
+    "expected_count": 0,
+    "missing": [],
+    "unexpected": []
+  },
+  "source_archive_bytes": {
+    "pass": true,
+    "actual_count": 6,
+    "expected_count": 6,
+    "missing": [],
+    "unexpected": []
+  },
+  "ast_identity_and_field_multiplicity": {
+    "pass": true,
+    "actual_count": 48,
+    "expected_count": 48,
+    "missing": [],
+    "unexpected": []
+  },
+  "coverage": {
+    "pass": true,
+    "actual_count": 6,
+    "expected_count": 6,
+    "missing": [],
+    "unexpected": []
+  },
+  "nodes": {
+    "pass": true,
+    "actual_count": 24,
+    "expected_count": 24,
+    "missing": [],
+    "unexpected": []
+  },
+  "edges": {
+    "pass": true,
+    "actual_count": 20,
+    "expected_count": 20,
+    "missing": [],
+    "unexpected": []
+  }
+}

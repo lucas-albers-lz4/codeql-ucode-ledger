@@ -1,0 +1,7 @@
+{
+  "command": "codeql database init work/trim-matrix-run-20261122-a/database/db --language=ucode ...",
+  "exit_status": 2,
+  "wall_seconds": 0.245,
+  "failure": "parent database directory did not exist; database was not created",
+  "detected": "2026-11-23T22:34Z"
+}

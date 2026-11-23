@@ -1,0 +1,8 @@
+{"#select":{"columns":[
+   {"name":"f","kind":"Entity"}
+  ,{"kind":"String"}]
+ ,"tuples":[
+   [{"label":"/STAGED_SOURCE/usr/share/ucode/controls/siblings-all-covered.ut","url":{"uri":"file:///STAGED_SOURCE/usr/share/ucode/controls/siblings-all-covered.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"/STAGED_SOURCE/usr/share/ucode/controls/siblings-computed-callee.ut","url":{"uri":"file:///STAGED_SOURCE/usr/share/ucode/controls/siblings-computed-callee.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"/STAGED_SOURCE/usr/share/ucode/controls/siblings.ut","url":{"uri":"file:///STAGED_SOURCE/usr/share/ucode/controls/siblings.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]]
+ }}

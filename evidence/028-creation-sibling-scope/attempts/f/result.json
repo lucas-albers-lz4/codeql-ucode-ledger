@@ -1,0 +1,6 @@
+{
+  "commands": 0,
+  "error": "RuntimeError('live CodeQL process detected; abort without retry')",
+  "finished_utc": "2026-11-22T21:30:13.326169+00:00",
+  "status": "failed"
+}

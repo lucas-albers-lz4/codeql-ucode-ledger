@@ -1,0 +1,40 @@
+{
+  "cache": "<RUN>/cache",
+  "codeql_binary_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+  "codeql_version_expected": "2.27.4",
+  "common_cache": "<RUN>/common-cache",
+  "cpu_count": 10,
+  "db": "<RUN>/database/db",
+  "dependency_file_count": 82,
+  "dependency_tree_sha256": "4bc029c8e9f54ae81955a8bd354d09a9d3f858ee7409e602a79830647b2e2e63",
+  "extractor_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+  "fixtures": {
+    "siblings-all-covered.ut": "885ea36bf4edfa571a860c0226642a491b007f40d58ca8ed660a7bea2a46fb23",
+    "siblings-computed-callee.ut": "e4781ff609e500d449f48641a418a8ee1f211ef6d68fea080d71826d6b728885",
+    "siblings.ut": "940472ed365ba3c40aed4b42427ca703c05ece028069e696eb98d850808d7d16"
+  },
+  "free_disk_bytes_before_run": 138821668864,
+  "grammar_bootstrap_diff_sha256": "0d7e00ddd2460d6c6d7b3fe5488bc0e5c0ec8196e0f6ddf077866e74c8c43f2d",
+  "grammar_revision": "4a243af329fae2f4ff01e0fc80133cbab8314600",
+  "grammar_status": "M Cargo.toml",
+  "inherited_HOME": true,
+  "locks": {
+    "ql/lib/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+    "ql/src/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3"
+  },
+  "oracle_generator_sha256": "d81f629b2fae41058c72a344b5be9d95aaf72e6142d75230f89185139413aee4",
+  "oracle_sha256": "b3373b7c2b8511020fd255b0db5b4796f0cbc71defaa31de3393b95d07b133f3",
+  "pack_build_pin": "8375887ed14825dd59addbfd0df43616d9e684fb",
+  "pack_build_provenance": "reused from package 6 validated pack copied from build manifest; build revision 8375887..., CodeQL 2.27.4, grammar 4a243af with bootstrap pin 0.26.8; see prior run preflight and claim 028",
+  "pack_file_count": 14,
+  "pack_input_delta": "",
+  "pack_tree_sha256": "7890382255e8b42d83acd30d4d33f0d71eea6ecfe51adabeb8f416f98da452ad",
+  "prepared_utc": "2026-11-23T23:03:56.744790+00:00",
+  "producer_dirty": false,
+  "producer_pin": "11a53fd8e911573860950ee8e549b337a8742438",
+  "producer_ql_file_count": 773,
+  "producer_ql_tree_sha256": "14f635d2f2a870a199033fafb4b34184d1121d192007caac9915c380c5c7d5b0",
+  "producer_status": "clean",
+  "source_root": "/STAGED_SOURCE",
+  "tmp": "<RUN>/tmp"
+}

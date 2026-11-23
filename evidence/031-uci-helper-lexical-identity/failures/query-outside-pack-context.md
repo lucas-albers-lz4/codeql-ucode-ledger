@@ -1,0 +1,3 @@
+# Retained failed attempt
+
+The initial attempt used the disposable DB after successful init, indexing and finalization, but invoked the diagnostics from copied `.ql` files outside their query pack context. `query-SuccessfullyExtractedFiles` exited 2 while compiling (`codeql.files.FileSystem`, `codeql.ucode.Diagnostics`, `File`, and `ExtractionError` could not resolve). No query output was produced by that attempt. The query paths were then moved into the existing disposable checkout's `ql/src` pack context, and query execution was retried against the same run-owned database. This failed attempt is not treated as a pass.

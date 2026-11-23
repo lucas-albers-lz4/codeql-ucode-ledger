@@ -1,0 +1,11 @@
+{
+  "cases": [
+    "archival",
+    "typed-substitution",
+    "extracted-substitution",
+    "routing-substitution",
+    "receipts-substitution"
+  ],
+  "platform": "darwin",
+  "status": "pass"
+}

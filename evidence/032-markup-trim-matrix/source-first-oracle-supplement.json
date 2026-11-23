@@ -1,0 +1,888 @@
+{
+  "title": "Source-first supplement: trim matrix plus ordinary member-expression control",
+  "parent_oracle": "planning/upstream-20261122/trim-matrix-oracle.md",
+  "policy": "Option B is current implementation prediction only; no policy decision inferred",
+  "producer_sha": "dc7310d0d2fb57047aa0c5653d9a32d6876c2d81",
+  "grammar_sha": "4a243af329fae2f4ff01e0fc80133cbab8314600",
+  "files": [
+    {
+      "file": "plain.ut",
+      "path": "usr/share/ucode/controls/plain.ut",
+      "source_bytes": "A {{ x }} B",
+      "size_bytes": 11,
+      "sha256": "557c70f3707a0f1f22bd06e189c8d303ee99542d2767eb59226ac8010c8220da",
+      "trailing_newline": false,
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "role": "valid syntax fixture; current implementation prediction only"
+    },
+    {
+      "file": "trim-open.ut",
+      "path": "usr/share/ucode/controls/trim-open.ut",
+      "source_bytes": "A {{- x }} B",
+      "size_bytes": 12,
+      "sha256": "fbeecce989e50bb9bd205afd29f8e717469dc977e57131f4ffa24378a5833e49",
+      "trailing_newline": false,
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "role": "valid syntax fixture; current implementation prediction only"
+    },
+    {
+      "file": "trim-close.ut",
+      "path": "usr/share/ucode/controls/trim-close.ut",
+      "source_bytes": "A {{ x -}} B",
+      "size_bytes": 12,
+      "sha256": "afde724719c5f9bf3204a47b13d9028a3a0bb0ac60008827bf72602551da519a",
+      "trailing_newline": false,
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "role": "valid syntax fixture; current implementation prediction only"
+    },
+    {
+      "file": "trim-both.ut",
+      "path": "usr/share/ucode/controls/trim-both.ut",
+      "source_bytes": "A {{- x -}} B",
+      "size_bytes": 13,
+      "sha256": "d897ab97d9025f6eacaa460015d71757746888efacef854955b31e3ac283f03f",
+      "trailing_newline": false,
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "role": "valid syntax fixture; current implementation prediction only"
+    },
+    {
+      "file": "trim-member.ut",
+      "path": "usr/share/ucode/controls/trim-member.ut",
+      "source_bytes": "A {{- x.y -}} B",
+      "size_bytes": 15,
+      "sha256": "2b1650e98fcd52c9e18a10cfe5ad5016031ea4aae0ce412a309f4ef02858005d",
+      "trailing_newline": false,
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "role": "valid trim-delimiter member-expression near miss"
+    },
+    {
+      "file": "ordinary-member.ut",
+      "path": "usr/share/ucode/controls/ordinary-member.ut",
+      "source_bytes": "A {{ x.y }} B",
+      "size_bytes": 13,
+      "sha256": "52e70b638218d4e928e4bac51ee701cc357443b54faa6d63dcefca56184fb1c4",
+      "trailing_newline": false,
+      "route": {
+        "classification": "markup",
+        "reason": "ut_markup_extension",
+        "status": "inconclusive",
+        "inconclusive_reason": "markup_not_modeled"
+      },
+      "role": "valid ordinary member-expression eligible near miss"
+    }
+  ],
+  "ast_identities": [
+    {
+      "file": "plain.ut",
+      "class": "Markup",
+      "line": 1,
+      "start_column": 1,
+      "end_line": 1,
+      "end_column": 11,
+      "parent": "<root>",
+      "parent_index": -1,
+      "source_slice": "A {{ x }} B"
+    },
+    {
+      "file": "plain.ut",
+      "class": "RawText",
+      "line": 1,
+      "start_column": 1,
+      "end_line": 1,
+      "end_column": 2,
+      "parent": "Markup",
+      "parent_index": 0,
+      "source_slice": "A "
+    },
+    {
+      "file": "plain.ut",
+      "class": "ExpressionTag",
+      "line": 1,
+      "start_column": 3,
+      "end_line": 1,
+      "end_column": 9,
+      "parent": "Markup",
+      "parent_index": 1,
+      "source_slice": "{{ x }}"
+    },
+    {
+      "file": "plain.ut",
+      "class": "ExpressionTagOpen",
+      "line": 1,
+      "start_column": 3,
+      "end_line": 1,
+      "end_column": 4,
+      "parent": "ExpressionTag",
+      "parent_index": 0,
+      "source_slice": "{{"
+    },
+    {
+      "file": "plain.ut",
+      "class": "Identifier",
+      "line": 1,
+      "start_column": 6,
+      "end_line": 1,
+      "end_column": 6,
+      "parent": "ExpressionTag",
+      "parent_index": 1,
+      "source_slice": "x"
+    },
+    {
+      "file": "plain.ut",
+      "class": "ExpressionTagClose",
+      "line": 1,
+      "start_column": 8,
+      "end_line": 1,
+      "end_column": 9,
+      "parent": "ExpressionTag",
+      "parent_index": 2,
+      "source_slice": "}}"
+    },
+    {
+      "file": "plain.ut",
+      "class": "RawText",
+      "line": 1,
+      "start_column": 10,
+      "end_line": 1,
+      "end_column": 11,
+      "parent": "Markup",
+      "parent_index": 2,
+      "source_slice": " B"
+    },
+    {
+      "file": "trim-open.ut",
+      "class": "Markup",
+      "line": 1,
+      "start_column": 1,
+      "end_line": 1,
+      "end_column": 12,
+      "parent": "<root>",
+      "parent_index": -1,
+      "source_slice": "A {{- x }} B"
+    },
+    {
+      "file": "trim-open.ut",
+      "class": "RawText",
+      "line": 1,
+      "start_column": 1,
+      "end_line": 1,
+      "end_column": 2,
+      "parent": "Markup",
+      "parent_index": 0,
+      "source_slice": "A "
+    },
+    {
+      "file": "trim-open.ut",
+      "class": "ExpressionTag",
+      "line": 1,
+      "start_column": 3,
+      "end_line": 1,
+      "end_column": 10,
+      "parent": "Markup",
+      "parent_index": 1,
+      "source_slice": "{{- x }}"
+    },
+    {
+      "file": "trim-open.ut",
+      "class": "ExpressionTagTrimOpen",
+      "line": 1,
+      "start_column": 3,
+      "end_line": 1,
+      "end_column": 5,
+      "parent": "ExpressionTag",
+      "parent_index": 0,
+      "source_slice": "{{-"
+    },
+    {
+      "file": "trim-open.ut",
+      "class": "Identifier",
+      "line": 1,
+      "start_column": 7,
+      "end_line": 1,
+      "end_column": 7,
+      "parent": "ExpressionTag",
+      "parent_index": 1,
+      "source_slice": "x"
+    },
+    {
+      "file": "trim-open.ut",
+      "class": "ExpressionTagClose",
+      "line": 1,
+      "start_column": 9,
+      "end_line": 1,
+      "end_column": 10,
+      "parent": "ExpressionTag",
+      "parent_index": 2,
+      "source_slice": "}}"
+    },
+    {
+      "file": "trim-open.ut",
+      "class": "RawText",
+      "line": 1,
+      "start_column": 11,
+      "end_line": 1,
+      "end_column": 12,
+      "parent": "Markup",
+      "parent_index": 2,
+      "source_slice": " B"
+    },
+    {
+      "file": "trim-close.ut",
+      "class": "Markup",
+      "line": 1,
+      "start_column": 1,
+      "end_line": 1,
+      "end_column": 12,
+      "parent": "<root>",
+      "parent_index": -1,
+      "source_slice": "A {{ x -}} B"
+    },
+    {
+      "file": "trim-close.ut",
+      "class": "RawText",
+      "line": 1,
+      "start_column": 1,
+      "end_line": 1,
+      "end_column": 2,
+      "parent": "Markup",
+      "parent_index": 0,
+      "source_slice": "A "
+    },
+    {
+      "file": "trim-close.ut",
+      "class": "ExpressionTag",
+      "line": 1,
+      "start_column": 3,
+      "end_line": 1,
+      "end_column": 10,
+      "parent": "Markup",
+      "parent_index": 1,
+      "source_slice": "{{ x -}}"
+    },
+    {
+      "file": "trim-close.ut",
+      "class": "ExpressionTagOpen",
+      "line": 1,
+      "start_column": 3,
+      "end_line": 1,
+      "end_column": 4,
+      "parent": "ExpressionTag",
+      "parent_index": 0,
+      "source_slice": "{{"
+    },
+    {
+      "file": "trim-close.ut",
+      "class": "Identifier",
+      "line": 1,
+      "start_column": 6,
+      "end_line": 1,
+      "end_column": 6,
+      "parent": "ExpressionTag",
+      "parent_index": 1,
+      "source_slice": "x"
+    },
+    {
+      "file": "trim-close.ut",
+      "class": "ExpressionTagTrimClose",
+      "line": 1,
+      "start_column": 8,
+      "end_line": 1,
+      "end_column": 10,
+      "parent": "ExpressionTag",
+      "parent_index": 2,
+      "source_slice": "-}}"
+    },
+    {
+      "file": "trim-close.ut",
+      "class": "RawText",
+      "line": 1,
+      "start_column": 11,
+      "end_line": 1,
+      "end_column": 12,
+      "parent": "Markup",
+      "parent_index": 2,
+      "source_slice": " B"
+    },
+    {
+      "file": "trim-both.ut",
+      "class": "Markup",
+      "line": 1,
+      "start_column": 1,
+      "end_line": 1,
+      "end_column": 13,
+      "parent": "<root>",
+      "parent_index": -1,
+      "source_slice": "A {{- x -}} B"
+    },
+    {
+      "file": "trim-both.ut",
+      "class": "RawText",
+      "line": 1,
+      "start_column": 1,
+      "end_line": 1,
+      "end_column": 2,
+      "parent": "Markup",
+      "parent_index": 0,
+      "source_slice": "A "
+    },
+    {
+      "file": "trim-both.ut",
+      "class": "ExpressionTag",
+      "line": 1,
+      "start_column": 3,
+      "end_line": 1,
+      "end_column": 11,
+      "parent": "Markup",
+      "parent_index": 1,
+      "source_slice": "{{- x -}}"
+    },
+    {
+      "file": "trim-both.ut",
+      "class": "ExpressionTagTrimOpen",
+      "line": 1,
+      "start_column": 3,
+      "end_line": 1,
+      "end_column": 5,
+      "parent": "ExpressionTag",
+      "parent_index": 0,
+      "source_slice": "{{-"
+    },
+    {
+      "file": "trim-both.ut",
+      "class": "Identifier",
+      "line": 1,
+      "start_column": 7,
+      "end_line": 1,
+      "end_column": 7,
+      "parent": "ExpressionTag",
+      "parent_index": 1,
+      "source_slice": "x"
+    },
+    {
+      "file": "trim-both.ut",
+      "class": "ExpressionTagTrimClose",
+      "line": 1,
+      "start_column": 9,
+      "end_line": 1,
+      "end_column": 11,
+      "parent": "ExpressionTag",
+      "parent_index": 2,
+      "source_slice": "-}}"
+    },
+    {
+      "file": "trim-both.ut",
+      "class": "RawText",
+      "line": 1,
+      "start_column": 12,
+      "end_line": 1,
+      "end_column": 13,
+      "parent": "Markup",
+      "parent_index": 2,
+      "source_slice": " B"
+    },
+    {
+      "file": "trim-member.ut",
+      "class": "Markup",
+      "line": 1,
+      "start_column": 1,
+      "end_line": 1,
+      "end_column": 15,
+      "parent": "<root>",
+      "parent_index": -1,
+      "source_slice": "A {{- x.y -}} B"
+    },
+    {
+      "file": "trim-member.ut",
+      "class": "RawText",
+      "line": 1,
+      "start_column": 1,
+      "end_line": 1,
+      "end_column": 2,
+      "parent": "Markup",
+      "parent_index": 0,
+      "source_slice": "A "
+    },
+    {
+      "file": "trim-member.ut",
+      "class": "ExpressionTag",
+      "line": 1,
+      "start_column": 3,
+      "end_line": 1,
+      "end_column": 13,
+      "parent": "Markup",
+      "parent_index": 1,
+      "source_slice": "{{- x.y -}}"
+    },
+    {
+      "file": "trim-member.ut",
+      "class": "ExpressionTagTrimOpen",
+      "line": 1,
+      "start_column": 3,
+      "end_line": 1,
+      "end_column": 5,
+      "parent": "ExpressionTag",
+      "parent_index": 0,
+      "source_slice": "{{-"
+    },
+    {
+      "file": "trim-member.ut",
+      "class": "MemberExpression",
+      "line": 1,
+      "start_column": 7,
+      "end_line": 1,
+      "end_column": 9,
+      "parent": "ExpressionTag",
+      "parent_index": 1,
+      "source_slice": "x.y"
+    },
+    {
+      "file": "trim-member.ut",
+      "class": "Identifier",
+      "line": 1,
+      "start_column": 7,
+      "end_line": 1,
+      "end_column": 7,
+      "parent": "MemberExpression",
+      "parent_index": 0,
+      "field": "object",
+      "source_slice": "x"
+    },
+    {
+      "file": "trim-member.ut",
+      "class": "PropertyIdentifier",
+      "line": 1,
+      "start_column": 9,
+      "end_line": 1,
+      "end_column": 9,
+      "parent": "MemberExpression",
+      "parent_index": 2,
+      "field": "property",
+      "source_slice": "y"
+    },
+    {
+      "file": "trim-member.ut",
+      "class": "ExpressionTagTrimClose",
+      "line": 1,
+      "start_column": 11,
+      "end_line": 1,
+      "end_column": 13,
+      "parent": "ExpressionTag",
+      "parent_index": 2,
+      "source_slice": "-}}"
+    },
+    {
+      "file": "trim-member.ut",
+      "class": "RawText",
+      "line": 1,
+      "start_column": 14,
+      "end_line": 1,
+      "end_column": 15,
+      "parent": "Markup",
+      "parent_index": 2,
+      "source_slice": " B"
+    },
+    {
+      "file": "ordinary-member.ut",
+      "class": "Markup",
+      "line": 1,
+      "start_column": 1,
+      "end_line": 1,
+      "end_column": 13,
+      "parent": "<root>",
+      "parent_index": -1,
+      "source_slice": "A {{ x.y }} B"
+    },
+    {
+      "file": "ordinary-member.ut",
+      "class": "RawText",
+      "line": 1,
+      "start_column": 1,
+      "end_line": 1,
+      "end_column": 2,
+      "parent": "Markup",
+      "parent_index": 0,
+      "source_slice": "A "
+    },
+    {
+      "file": "ordinary-member.ut",
+      "class": "ExpressionTag",
+      "line": 1,
+      "start_column": 3,
+      "end_line": 1,
+      "end_column": 11,
+      "parent": "Markup",
+      "parent_index": 1,
+      "source_slice": "{{ x.y }}"
+    },
+    {
+      "file": "ordinary-member.ut",
+      "class": "ExpressionTagOpen",
+      "line": 1,
+      "start_column": 3,
+      "end_line": 1,
+      "end_column": 4,
+      "parent": "ExpressionTag",
+      "parent_index": 0,
+      "source_slice": "{{"
+    },
+    {
+      "file": "ordinary-member.ut",
+      "class": "MemberExpression",
+      "line": 1,
+      "start_column": 6,
+      "end_line": 1,
+      "end_column": 8,
+      "parent": "ExpressionTag",
+      "parent_index": 1,
+      "source_slice": "x.y"
+    },
+    {
+      "file": "ordinary-member.ut",
+      "class": "Identifier",
+      "line": 1,
+      "start_column": 6,
+      "end_line": 1,
+      "end_column": 6,
+      "parent": "MemberExpression",
+      "parent_index": 0,
+      "field": "object",
+      "source_slice": "x"
+    },
+    {
+      "file": "ordinary-member.ut",
+      "class": "PropertyIdentifier",
+      "line": 1,
+      "start_column": 8,
+      "end_line": 1,
+      "end_column": 8,
+      "parent": "MemberExpression",
+      "parent_index": 2,
+      "field": "property",
+      "source_slice": "y"
+    },
+    {
+      "file": "ordinary-member.ut",
+      "class": "ExpressionTagClose",
+      "line": 1,
+      "start_column": 10,
+      "end_line": 1,
+      "end_column": 11,
+      "parent": "ExpressionTag",
+      "parent_index": 2,
+      "source_slice": "}}"
+    },
+    {
+      "file": "ordinary-member.ut",
+      "class": "RawText",
+      "line": 1,
+      "start_column": 12,
+      "end_line": 1,
+      "end_column": 13,
+      "parent": "Markup",
+      "parent_index": 2,
+      "source_slice": " B"
+    }
+  ],
+  "expected_routing_counts": {
+    "input_count": 6,
+    "plain_count": 0,
+    "markup_count": 6,
+    "markup_inconclusive_count": 6,
+    "uncertain_count": 0,
+    "excluded_count": 0,
+    "duplicate_input_count": 0
+  },
+  "expected_successful_file_identities": {
+    "usr/share/ucode/controls/plain.ut": 1,
+    "usr/share/ucode/controls/trim-open.ut": 1,
+    "usr/share/ucode/controls/trim-close.ut": 1,
+    "usr/share/ucode/controls/trim-both.ut": 1,
+    "usr/share/ucode/controls/trim-member.ut": 1,
+    "usr/share/ucode/controls/ordinary-member.ut": 1
+  },
+  "expected_extraction_errors": [],
+  "expected_file_located_diagnostics": [],
+  "implementation_prediction": {
+    "covered": [
+      "plain.ut"
+    ],
+    "unsupported": [
+      "trim-open.ut",
+      "trim-close.ut",
+      "trim-both.ut",
+      "trim-member.ut",
+      "ordinary-member.ut"
+    ],
+    "covered_nodes_each": [
+      "entry",
+      "RawText:1:1-1:2:Markup:0",
+      "Identifier:1:6-1:6:ExpressionTag:1",
+      "ExpressionTag:1:3-1:9:Markup:1",
+      "RawText:1:10-1:11:Markup:2",
+      "exit"
+    ],
+    "covered_edges_each": [
+      [
+        "entry",
+        "RawText:1:1-1:2:Markup:0"
+      ],
+      [
+        "RawText:1:1-1:2:Markup:0",
+        "Identifier:1:6-1:6:ExpressionTag:1"
+      ],
+      [
+        "Identifier:1:6-1:6:ExpressionTag:1",
+        "ExpressionTag:1:3-1:9:Markup:1"
+      ],
+      [
+        "ExpressionTag:1:3-1:9:Markup:1",
+        "RawText:1:10-1:11:Markup:2"
+      ],
+      [
+        "RawText:1:10-1:11:Markup:2",
+        "exit"
+      ]
+    ],
+    "all expected projected node and edge entity multiplicities": 1
+  },
+  "field_relationships": [
+    {
+      "file": "plain.ut",
+      "field": "ExpressionTag.getOpen()",
+      "target_class": "ExpressionTagOpen",
+      "target_span": [
+        3,
+        4
+      ]
+    },
+    {
+      "file": "plain.ut",
+      "field": "ExpressionTag.getChild()",
+      "target_class": "Identifier",
+      "target_span": [
+        6,
+        6
+      ]
+    },
+    {
+      "file": "plain.ut",
+      "field": "ExpressionTag.getClose()",
+      "target_class": "ExpressionTagClose",
+      "target_span": [
+        8,
+        9
+      ]
+    },
+    {
+      "file": "trim-open.ut",
+      "field": "ExpressionTag.getOpen()",
+      "target_class": "ExpressionTagTrimOpen",
+      "target_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "file": "trim-open.ut",
+      "field": "ExpressionTag.getChild()",
+      "target_class": "Identifier",
+      "target_span": [
+        7,
+        7
+      ]
+    },
+    {
+      "file": "trim-open.ut",
+      "field": "ExpressionTag.getClose()",
+      "target_class": "ExpressionTagClose",
+      "target_span": [
+        9,
+        10
+      ]
+    },
+    {
+      "file": "trim-close.ut",
+      "field": "ExpressionTag.getOpen()",
+      "target_class": "ExpressionTagOpen",
+      "target_span": [
+        3,
+        4
+      ]
+    },
+    {
+      "file": "trim-close.ut",
+      "field": "ExpressionTag.getChild()",
+      "target_class": "Identifier",
+      "target_span": [
+        6,
+        6
+      ]
+    },
+    {
+      "file": "trim-close.ut",
+      "field": "ExpressionTag.getClose()",
+      "target_class": "ExpressionTagTrimClose",
+      "target_span": [
+        8,
+        10
+      ]
+    },
+    {
+      "file": "trim-both.ut",
+      "field": "ExpressionTag.getOpen()",
+      "target_class": "ExpressionTagTrimOpen",
+      "target_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "file": "trim-both.ut",
+      "field": "ExpressionTag.getChild()",
+      "target_class": "Identifier",
+      "target_span": [
+        7,
+        7
+      ]
+    },
+    {
+      "file": "trim-both.ut",
+      "field": "ExpressionTag.getClose()",
+      "target_class": "ExpressionTagTrimClose",
+      "target_span": [
+        9,
+        11
+      ]
+    },
+    {
+      "file": "trim-member.ut",
+      "field": "ExpressionTag.getOpen()",
+      "target_class": "ExpressionTagTrimOpen",
+      "target_span": [
+        3,
+        5
+      ]
+    },
+    {
+      "file": "trim-member.ut",
+      "field": "ExpressionTag.getChild()",
+      "target_class": "MemberExpression",
+      "target_span": [
+        7,
+        9
+      ]
+    },
+    {
+      "file": "trim-member.ut",
+      "field": "ExpressionTag.getClose()",
+      "target_class": "ExpressionTagTrimClose",
+      "target_span": [
+        11,
+        13
+      ]
+    },
+    {
+      "file": "trim-member.ut",
+      "field": "MemberExpression.getObject()",
+      "target_class": "Identifier",
+      "target_span": [
+        7,
+        7
+      ],
+      "target_value": "x"
+    },
+    {
+      "file": "trim-member.ut",
+      "field": "MemberExpression.getProperty()",
+      "target_class": "PropertyIdentifier",
+      "target_span": [
+        9,
+        9
+      ],
+      "target_value": "y"
+    },
+    {
+      "file": "ordinary-member.ut",
+      "field": "ExpressionTag.getOpen()",
+      "target_class": "ExpressionTagOpen",
+      "target_span": [
+        3,
+        4
+      ]
+    },
+    {
+      "file": "ordinary-member.ut",
+      "field": "ExpressionTag.getChild()",
+      "target_class": "MemberExpression",
+      "target_span": [
+        6,
+        8
+      ]
+    },
+    {
+      "file": "ordinary-member.ut",
+      "field": "ExpressionTag.getClose()",
+      "target_class": "ExpressionTagClose",
+      "target_span": [
+        10,
+        11
+      ]
+    },
+    {
+      "file": "ordinary-member.ut",
+      "field": "MemberExpression.getObject()",
+      "target_class": "Identifier",
+      "target_span": [
+        6,
+        6
+      ],
+      "target_value": "x"
+    },
+    {
+      "file": "ordinary-member.ut",
+      "field": "MemberExpression.getProperty()",
+      "target_class": "PropertyIdentifier",
+      "target_span": [
+        8,
+        8
+      ],
+      "target_value": "y"
+    },
+    {
+      "file": "trim-member.ut",
+      "field": "MemberExpression.getOptionalChain()",
+      "expected_exists": false
+    },
+    {
+      "file": "ordinary-member.ut",
+      "field": "MemberExpression.getOptionalChain()",
+      "expected_exists": false
+    }
+  ],
+  "parentage_note": "MemberExpression object/property identities are asserted through getObject()/getProperty(); child indices are object 0 and property 2, with punctuation omitted from AST entity list. source_slice is exact source text recovered by one-based inclusive columns and is not AstNode.toString(). MemberExpression optional-chain field is absent in both near misses."
+}

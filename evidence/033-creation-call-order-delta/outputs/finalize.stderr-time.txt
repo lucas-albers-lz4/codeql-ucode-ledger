@@ -1,0 +1,27 @@
+Running pre-finalize script <RUN>/pack/ucode-extractor-pack/tools/pre-finalize.sh in /STAGED_SOURCE.
+Running command in /STAGED_SOURCE: [<RUN>/pack/ucode-extractor-pack/tools/pre-finalize.sh]
+Pre-finalize script <RUN>/pack/ucode-extractor-pack/tools/pre-finalize.sh completed in 516 ms.
+Running TRAP import for CodeQL database at <RUN>/database/db...
+Importing TRAP files
+Merging relations
+Finished writing database (relations: 2.54 KiB; string pool: 2.05 MiB).
+TRAP import complete (277ms).
+Finished zipping source archive (1.27 KiB).
+        1.17 real         2.04 user         0.16 sys
+           199852032  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               27685  page reclaims
+                 540  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   6  signals received
+                 286  voluntary context switches
+               16875  involuntary context switches
+            33672814  instructions retired
+            13936082  cycles elapsed
+             1884472  peak memory footprint

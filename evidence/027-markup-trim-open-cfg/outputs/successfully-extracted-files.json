@@ -1,0 +1,41 @@
+{
+  "#select": {
+    "columns": [
+      {
+        "name": "f",
+        "kind": "Entity"
+      },
+      {
+        "kind": "String"
+      }
+    ],
+    "tuples": [
+      [
+        {
+          "label": "$RUN/source/usr/share/ucode/controls/normal.ut",
+          "url": {
+            "uri": "$RUN/source/usr/share/ucode/controls/normal.ut",
+            "startLine": 0,
+            "startColumn": 0,
+            "endLine": 0,
+            "endColumn": 0
+          }
+        },
+        ""
+      ],
+      [
+        {
+          "label": "$RUN/source/usr/share/ucode/controls/trim-open.ut",
+          "url": {
+            "uri": "$RUN/source/usr/share/ucode/controls/trim-open.ut",
+            "startLine": 0,
+            "startColumn": 0,
+            "endLine": 0,
+            "endColumn": 0
+          }
+        },
+        ""
+      ]
+    ]
+  }
+}

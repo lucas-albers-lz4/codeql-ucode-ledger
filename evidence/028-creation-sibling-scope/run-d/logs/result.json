@@ -1,0 +1,6 @@
+{
+  "commands": 11,
+  "error": "RuntimeError('roots failed; see stderr-time')",
+  "finished_utc": "2026-11-22T21:29:33.922260+00:00",
+  "status": "failed"
+}

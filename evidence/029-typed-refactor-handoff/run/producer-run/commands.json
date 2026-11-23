@@ -1,0 +1,372 @@
+[
+  {
+    "label": "main-init",
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "init",
+      "<RUN>/producer-run/main/db",
+      "--language=ucode",
+      "--search-path=<RUN>/producer/extractor-pack",
+      "--common-caches=<RUN>/common-cache",
+      "--source-root=<RUN>/producer-run/main/src"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 0.45,
+    "stdout": "main-init.stdout",
+    "stderr_and_time": "main-init.stderr"
+  },
+  {
+    "label": "main-index",
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "index-files",
+      "<RUN>/producer-run/main/db",
+      "--language=ucode",
+      "--include=**/rpcd/ucode/luci",
+      "--working-dir=<RUN>/producer-run/main/src",
+      "--common-caches=<RUN>/common-cache"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 0.599,
+    "stdout": "main-index.stdout",
+    "stderr_and_time": "main-index.stderr"
+  },
+  {
+    "label": "main-finalize",
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "finalize",
+      "<RUN>/producer-run/main/db",
+      "--common-caches=<RUN>/common-cache"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 1.142,
+    "stdout": "main-finalize.stdout",
+    "stderr_and_time": "main-finalize.stderr"
+  },
+  {
+    "label": "main-extracted-query",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN>/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+      "--database=<RUN>/producer-run/main/db",
+      "--search-path=<RUN>/producer/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--output=<RUN>/producer-run/main/extracted.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 1.402,
+    "stdout": "main-extracted-query.stdout",
+    "stderr_and_time": "main-extracted-query.stderr"
+  },
+  {
+    "label": "main-extracted-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "<RUN>/producer-run/main/extracted.bqrs"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 0.209,
+    "stdout": "main-extracted-decode.stdout",
+    "stderr_and_time": "main-extracted-decode.stderr"
+  },
+  {
+    "label": "main-errors-query",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN>/producer/ql/src/diagnostics/ExtractionErrors.ql",
+      "--database=<RUN>/producer-run/main/db",
+      "--search-path=<RUN>/producer/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--output=<RUN>/producer-run/main/errors.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 1.422,
+    "stdout": "main-errors-query.stdout",
+    "stderr_and_time": "main-errors-query.stderr"
+  },
+  {
+    "label": "main-errors-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "<RUN>/producer-run/main/errors.bqrs"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 0.218,
+    "stdout": "main-errors-decode.stdout",
+    "stderr_and_time": "main-errors-decode.stderr"
+  },
+  {
+    "label": "main-effects-query",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN>/producer/ql/src/m4/SetBlockDetectEffectTable.ql",
+      "--database=<RUN>/producer-run/main/db",
+      "--search-path=<RUN>/producer/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--output=<RUN>/producer-run/main/effects.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 2.033,
+    "stdout": "main-effects-query.stdout",
+    "stderr_and_time": "main-effects-query.stderr"
+  },
+  {
+    "label": "main-effects-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "<RUN>/producer-run/main/effects.bqrs"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 0.212,
+    "stdout": "main-effects-decode.stdout",
+    "stderr_and_time": "main-effects-decode.stderr"
+  },
+  {
+    "label": "controls-init",
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "init",
+      "<RUN>/producer-run/controls/db",
+      "--language=ucode",
+      "--search-path=<RUN>/producer/extractor-pack",
+      "--common-caches=<RUN>/common-cache",
+      "--source-root=<RUN>/producer-run/controls/src"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 0.453,
+    "stdout": "controls-init.stdout",
+    "stderr_and_time": "controls-init.stderr"
+  },
+  {
+    "label": "controls-index",
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "index-files",
+      "<RUN>/producer-run/controls/db",
+      "--language=ucode",
+      "--include=**/rpcd/ucode/luci",
+      "--working-dir=<RUN>/producer-run/controls/src",
+      "--common-caches=<RUN>/common-cache"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 0.372,
+    "stdout": "controls-index.stdout",
+    "stderr_and_time": "controls-index.stderr"
+  },
+  {
+    "label": "controls-finalize",
+    "argv": [
+      "<CODEQL>",
+      "database",
+      "finalize",
+      "<RUN>/producer-run/controls/db",
+      "--common-caches=<RUN>/common-cache"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 0.95,
+    "stdout": "controls-finalize.stdout",
+    "stderr_and_time": "controls-finalize.stderr"
+  },
+  {
+    "label": "controls-extracted-query",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN>/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+      "--database=<RUN>/producer-run/controls/db",
+      "--search-path=<RUN>/producer/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--output=<RUN>/producer-run/controls/extracted.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 1.052,
+    "stdout": "controls-extracted-query.stdout",
+    "stderr_and_time": "controls-extracted-query.stderr"
+  },
+  {
+    "label": "controls-extracted-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "<RUN>/producer-run/controls/extracted.bqrs"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 0.214,
+    "stdout": "controls-extracted-decode.stdout",
+    "stderr_and_time": "controls-extracted-decode.stderr"
+  },
+  {
+    "label": "controls-errors-query",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN>/producer/ql/src/diagnostics/ExtractionErrors.ql",
+      "--database=<RUN>/producer-run/controls/db",
+      "--search-path=<RUN>/producer/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--output=<RUN>/producer-run/controls/errors.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 1.028,
+    "stdout": "controls-errors-query.stdout",
+    "stderr_and_time": "controls-errors-query.stderr"
+  },
+  {
+    "label": "controls-errors-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "<RUN>/producer-run/controls/errors.bqrs"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 0.212,
+    "stdout": "controls-errors-decode.stdout",
+    "stderr_and_time": "controls-errors-decode.stderr"
+  },
+  {
+    "label": "controls-effects-query",
+    "argv": [
+      "<CODEQL>",
+      "query",
+      "run",
+      "<RUN>/producer/ql/src/m4/SetBlockDetectEffectTable.ql",
+      "--database=<RUN>/producer-run/controls/db",
+      "--search-path=<RUN>/producer/extractor-pack:<RUN>/producer/ql/lib:<RUN>/producer/ql/src",
+      "--common-caches=<RUN>/common-cache",
+      "--compilation-cache=<RUN>/cache/compilation",
+      "--no-default-compilation-cache",
+      "--output=<RUN>/producer-run/controls/effects.bqrs",
+      "--threads=1",
+      "--ram=2048"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 1.124,
+    "stdout": "controls-effects-query.stdout",
+    "stderr_and_time": "controls-effects-query.stderr"
+  },
+  {
+    "label": "controls-effects-decode",
+    "argv": [
+      "<CODEQL>",
+      "bqrs",
+      "decode",
+      "--format=csv",
+      "<RUN>/producer-run/controls/effects.bqrs"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 0.212,
+    "stdout": "controls-effects-decode.stdout",
+    "stderr_and_time": "controls-effects-decode.stderr"
+  },
+  {
+    "label": "export",
+    "argv": [
+      "<PYTHON>",
+      "-B",
+      "<RUN>/producer/tools/export_setblock_detect.py",
+      "--csv",
+      "<RUN>/producer-run/main/effects.csv",
+      "--extracted",
+      "<RUN>/producer-run/main/extracted.csv",
+      "--errors",
+      "<RUN>/producer-run/main/errors.csv",
+      "--source-root",
+      "<RUN>/producer-run/main/src",
+      "--lock",
+      "<RUN>/consumer/corpus/lock.json"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 0,
+    "wall_seconds": 0.027,
+    "stdout": "export.stdout",
+    "stderr_and_time": "export.stderr"
+  },
+  {
+    "label": "export-bad-span",
+    "argv": [
+      "<PYTHON>",
+      "-B",
+      "<RUN>/producer/tools/export_setblock_detect.py",
+      "--csv",
+      "<RUN>/producer-run/bad-span.csv",
+      "--extracted",
+      "<RUN>/producer-run/main/extracted.csv",
+      "--errors",
+      "<RUN>/producer-run/main/errors.csv",
+      "--source-root",
+      "<RUN>/producer-run/main/src",
+      "--lock",
+      "<RUN>/consumer/corpus/lock.json"
+    ],
+    "cwd": "<RUN>/producer",
+    "exit": 1,
+    "wall_seconds": 0.025,
+    "stdout": "export-bad-span.stdout",
+    "stderr_and_time": "export-bad-span.stderr"
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "fields": [
+    "observation_kind",
+    "method",
+    "sink_kind",
+    "command",
+    "source_path",
+    "start_line",
+    "start_column",
+    "end_line",
+    "end_column"
+  ],
+  "common": [
+    "callback_body_call",
+    "setBlockDetect",
+    "system",
+    "/sbin/block detect > /etc/config/fstab"
+  ],
+  "rows": {
+    "main": [
+      [
+        "usr/share/rpcd/ucode/luci",
+        "532",
+        "21",
+        "532",
+        "68"
+      ]
+    ],
+    "controls": [
+      [
+        "modules/sibling/root/usr/share/rpcd/ucode/luci",
+        "8",
+        "7",
+        "8",
+        "54"
+      ],
+      [
+        "modules/sibling/root/usr/share/rpcd/ucode/luci",
+        "14",
+        "5",
+        "14",
+        "52"
+      ]
+    ]
+  },
+  "fixture_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+  "sibling_sha256": "97353f888f4663bd7cd7b2cf5a7d697121c81d7b88dad3a46ac848646a7c2890",
+  "formal_sha256": "14af49d0d4c2653e5e064aa7fd8d9eef357eb5684666c832b0a0b7e1bf567b26",
+  "lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a"
+}

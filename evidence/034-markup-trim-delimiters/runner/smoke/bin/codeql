@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+import datetime
+import json
+import os
+import pathlib
+import re
+import shutil
+import subprocess
+import sys
+import time
+
+root = pathlib.Path(__file__).resolve().parents[1]
+cli = '<CODEQL>'
+arguments = sys.argv[1:]
+if arguments[:2] == ['query', 'run']:
+    arguments += [f'--compilation-cache={root / "cache/compilation"}',
+                  '--no-default-compilation-cache']
+if arguments[:2] in (['database', 'create'], ['database', 'finalize']) and os.environ.get('TRIM_KEEP_TRAP'):
+    arguments.append('--keep-trap')
+if arguments[:1] in (['database'], ['query'], ['pack']):
+    arguments.append(f'--common-caches={root / "common-cache"}')
+commands = root / 'logs/commands.jsonl'
+ordinal = len(commands.read_text().splitlines()) + 1 if commands.exists() else 1
+stem = '-'.join(arguments[:2]) if len(arguments) > 1 else arguments[0]
+if arguments[:2] == ['query', 'run']:
+    stem += '-' + pathlib.Path(arguments[2]).stem
+if arguments[:2] == ['bqrs', 'decode']:
+    stem += '-' + pathlib.Path(arguments[-1]).stem
+label = f'{ordinal:02d}-{stem}'
+cmd = ['/usr/bin/time', '-l', cli, *arguments]
+start_time = datetime.datetime.now(datetime.timezone.utc).isoformat()
+start = time.monotonic()
+proc = subprocess.run(cmd, capture_output=True)
+elapsed = time.monotonic() - start
+out = root / 'logs' / f'{label}.stdout'
+err = root / 'logs' / f'{label}.stderr-time.txt'
+out.write_bytes(proc.stdout)
+err.write_bytes(proc.stderr)
+rss = re.search(rb'(\d+)\s+maximum resident set size', proc.stderr)
+receipt = dict(label=label, cwd=os.getcwd(), argv=cmd, exit_status=proc.returncode,
+               start_utc=start_time, wall_seconds=elapsed, stdout=out.name, stderr=err.name,
+               max_rss_bytes=int(rss[1]) if rss else None)
+with commands.open('a') as log:
+    log.write(json.dumps(receipt) + '\n')
+print(f'{label}: exit={proc.returncode}, wall={elapsed:.3f}s', file=sys.stderr)
+if proc.returncode:
+    sys.stderr.buffer.write(proc.stderr)
+sys.stdout.buffer.write(proc.stdout)
+sys.exit(proc.returncode)

@@ -1,0 +1,11 @@
+{"#select":{"columns":[
+   {"name":"f","kind":"Entity"}
+  ,{"kind":"String"}]
+ ,"tuples":[
+   [{"label":"<MATRIX>/source/usr/share/ucode/controls/ordinary-member.ut","url":{"uri":"file://<MATRIX>/source/usr/share/ucode/controls/ordinary-member.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<MATRIX>/source/usr/share/ucode/controls/plain.ut","url":{"uri":"file://<MATRIX>/source/usr/share/ucode/controls/plain.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<MATRIX>/source/usr/share/ucode/controls/trim-both.ut","url":{"uri":"file://<MATRIX>/source/usr/share/ucode/controls/trim-both.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<MATRIX>/source/usr/share/ucode/controls/trim-close.ut","url":{"uri":"file://<MATRIX>/source/usr/share/ucode/controls/trim-close.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<MATRIX>/source/usr/share/ucode/controls/trim-member.ut","url":{"uri":"file://<MATRIX>/source/usr/share/ucode/controls/trim-member.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]
+  ,[{"label":"<MATRIX>/source/usr/share/ucode/controls/trim-open.ut","url":{"uri":"file://<MATRIX>/source/usr/share/ucode/controls/trim-open.ut","startLine":0,"startColumn":0,"endLine":0,"endColumn":0}},""]]
+ }}
