@@ -1,11 +1,11 @@
 # Claim 042: request.args to popen() in application ucode backends
 
-- Status: Proposed
+- Status: Blocked
 - Program: [Security-40](../planning/security-40-20261124.md), category B
-- Producer: `lucas-albers-lz4/codeql-ucode` (ucode lanes) / `lucas-albers-lz4/codeql-openwrt` (policy, C and JS lanes); pin resolved at execution
-- Producer commit: not yet resolved for this claim
-- Consumer: `lucas-albers-lz4/codeql-openwrt` where a join is named; otherwise none
-- Consumer commit: not yet resolved for this claim
+- Producer: `lucas-albers-lz4/codeql-ucode` — routing probe P2 at HEAD below; application backends not routed
+- Producer commit: `734555a9f56893e89e678cdee63028fc17ea5bc8` (clean; probe-ucode/producer); luci slice pin `b2e0be4b46ec0fd43394c081fa7c50657af14011`
+- Consumer: none (no consumer join reached)
+- Consumer commit: none
 - Environment: local CodeQL CLI 2.27.4 (`gh codeql`), no CI; host details recorded per run
 
 ## Historical anchor
@@ -48,4 +48,22 @@ None.
 
 ## Result
 
-Not yet evaluated.
+Blocked 2026-11-24 — same producer routing gate as claim 041 (codeql-ucode
+HEAD `734555a9f56893e89e678cdee63028fc17ea5bc8`, clean; probe P2 receipts in
+`work/security-40/probe-ucode/VERDICT.md`): 7/7 application .uc backends
+skipped ("No matching language found, skipping file"); extractor
+`file_globs` literal basenames only (extractor.rs ~l.45–64) and
+RequestArgsExec.ql l.18 `getBaseName() = "luci"` — both orchestrator-verified.
+RequestArgsExec.ql over the manifested slice: 7 rows / 5 methods, all
+luci-base (getSwconfigFeatures→popen ×1 shellquote,
+getSwconfigPortState→popen ×1 shellquote, getRealtimeStats→popen ×2
+shellquote), 0 application rows; predeclared expectations matched exactly.
+
+Bounded source observation (P2, pinned luci `b2e0be4b…`): tailscale.uc
+`do_login` passes request.args to `popen()` — present in source, unobserved
+by the analyzer. Quoting-context classification for application popen sites
+requires the supported slice; not performed at this HEAD.
+
+Unblock condition and evidence paths: see claim 041 Result (identical gate,
+identical probe). Security-40 lifts no gate. Deviation: openvpn/travelmate
+have no .uc backends at this pin.

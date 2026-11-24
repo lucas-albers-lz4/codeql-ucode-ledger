@@ -7,26 +7,36 @@ Update after every claim transition; newest entries first.
 
 - Program opened: 2026-11-24
 - Claims created: 035–074 (40); base commit `379b172` on main.
-  035–037 Demonstrated (wave 1A, this commit); 038–074 Proposed.
+  035–037 Demonstrated (wave 1A, commit `9a2585b`); 038–074 Proposed.
 - Wave 0: P1 DONE — **PASS, full-build-extraction** (probe-c/VERDICT.md):
   15/15 uhttpd .c files, 0 extractor diagnostics, semantic queries verified;
   claims 062–066 viable now; 067–071 need per-package P1-style probes.
   Dependency SHAs were probe-time HEADs — claim lanes must re-pin against
-  the corpus lock. P3 fnmatch witness DONE. P2 launching (heavy slot).
+  the corpus lock. P3 fnmatch witness DONE. P2 DONE — **not-routed**
+  (probe-ucode/VERDICT.md): application .uc backends skipped by producer;
+  041–045 Blocked; 046 feasible within current routing.
 - Wave 1: lane A DONE — 035/036/037 gated by orchestrator (full pipeline
   re-runs: controls green, witness 0 mismatches, pinned JSON spot-checks,
   shared pins clean) and transitioned to Demonstrated.
   - proc_95e20daccda0: lane B — claims 038–040 — still running, log
     lanes/laneB.log (no notify; wait/poll via process_manage)
-  - P2: ucode application-routing probe (gates 041–046), log lanes/p2.log
+  - P2: DONE (proc_4027700a0cc1, exit 0) — verdict not-routed; receipts
+    probe-ucode/{VERDICT.md,MANIFEST.yml,logs/,db/p2-slice}
+  - proc_0e309702728b: 046 lane (getFeatures templates; heavy slot), log
+    lanes/lane046.log; completion notify armed
 - Lanes: isolated `hermes chat` on alibaba/qwen4-max-preview (delegate_task
   codex-pipeline routing hit invalidated openai-codex OAuth; smoke SMOKE_OK).
   -Q logs stay empty until exit; progress visible via artifact dirs.
 - Shared pinned checkouts (read-only): work/security-40/shared/{luci,rpcd,
   uhttpd,ubus,libubox,uci,mdnsd,procd,packages,openwrt} (last seven blobless,
   no checkout; openwrt/packages working trees dirty — read pins via git show)
-- Next: gate lane B → transition 038–040 → commit; P2 verdict → wave 2
-  (category B, 041–046) lanes. Wave order stays A→B→D→E→C→F→H→G.
+- Next: gate lane B (038–040) and 046 lane on completion → transition →
+  commit; then wave 3 D: 048/049/050 C source-oracle lanes + 047/051 Blocked
+  (same routing gate). Routing-blocked set also includes 057/061 (C).
+  E: 053/054/055 viable; 052/056 stay inside documented markup subset
+  (feasibility check, no gate lift). F: 062–066 viable (P1 PASS); 067 needs
+  ubusd probe. H: 068–071 per-package probes. G: 072–074 shell source oracle.
+  Wave order stays A→B→D→E→C→F→H→G.
 
 ## Pins (plan-time observations; re-resolve at execution)
 
@@ -39,6 +49,35 @@ Update after every claim transition; newest entries first.
 - CodeQL CLI: 2.27.4 (gh extension)
 
 ## Log
+
+### 2026-11-24 — P2 not-routed; wave 2 closed (041–045 Blocked, 046 dispatched)
+
+- P2 verdict: **not-routed** at codeql-ucode HEAD `734555a9f56893e89e678cdee63028fc17ea5bc8`
+  (clean disposable clone probe-ucode/producer). 8-file manifested slice at
+  luci b2e0be4b (7 application .uc + luci-base `luci`): SuccessfullyExtractedFiles=1,
+  7 application files skipped ("No matching language found, skipping file"),
+  ExtractionErrors=0. RequestArgsExec.ql: 7 rows / 5 methods, all luci-base,
+  0 application rows — predeclared expectations matched exactly.
+- Gates orchestrator-verified in producer source: extractor.rs file_globs
+  literal basenames only (comment "without opening '*' routing");
+  RequestArgsExec.ql l.18 getBaseName()="luci". 043 additionally: fs.exec /
+  fs.exec_direct outside the supported sink set (popen/system only).
+- Detection gap (high-value): CVE-2026-69096 shape (docker_rpc.uc run_ttyd
+  request.args→system, no shellquote) and tailscale.uc do_login→popen are
+  PRESENT in pinned source, UNOBSERVED by the analyzer. Candidate codeql-ucode
+  finding — recorded here, not filed as an issue.
+- 041–045 → Blocked with full receipts + unblock conditions. 046 lane
+  launched (proc_0e309702728b): source inventory of getFeatures substitution
+  sites beyond the five M4 methods + GetFeaturesDirectExec.ql within routing.
+- Producer build facts: grammar pin 4a243af3 (clone-grammar.sh lowers
+  tree-sitter 0.27.1→0.26.8), Cargo.lock a88727b3 matches README pin, rustc
+  1.100.0 bootstrap (drift from 1.99.1 noted); pack build 72.8 s / 366 MB peak;
+  query 7.75 s / 358 MB peak; db/p2-slice 4.3 MB. Deviation: openvpn/travelmate
+  have no .uc backends at this pin.
+- Feasibility map for remaining waves: D 048/049/050 viable (C source oracle),
+  047/051 routing-blocked; E 053/054/055 viable, 052/056 bounded markup subset;
+  C 058/059/060 viable, 057/061 routing-blocked; F 062–066 viable (P1),
+  067 ubusd probe; H 068–071 per-package probes; G 072–074 shell source oracle.
 
 ### 2026-11-24 — wave 0 P1 PASS; wave 1A (035–037) demonstrated
 

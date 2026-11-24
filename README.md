@@ -60,11 +60,11 @@ Together these move from source selection through extraction, query, and consume
 | [038](claims/038-acl-init-action-argv.md) | Proposed | Security-40: Init-script exec grants and action argv control |
 | [039](claims/039-acl-persistence-write.md) | Proposed | Security-40: Write grants to persistence paths |
 | [040](claims/040-acl-read-scope-mutating-ubus.md) | Proposed | Security-40: Mutating ubus methods under read-only ACL |
-| [041](claims/041-ucode-app-request-system.md) | Proposed | Security-40: request.args to system() in application ucode backends |
-| [042](claims/042-ucode-app-request-popen.md) | Proposed | Security-40: request.args to popen() in application ucode backends |
-| [043](claims/043-ucode-app-fs-exec-argv.md) | Proposed | Security-40: request.args to fs.exec / fs.exec_direct argv |
-| [044](claims/044-app-shellquote-placement.md) | Proposed | Security-40: shellquote placement in application command templates |
-| [045](claims/045-app-sprintf-command-assembly.md) | Proposed | Security-40: sprintf/concatenation command assembly before sinks |
+| [041](claims/041-ucode-app-request-system.md) | Blocked | Security-40: request.args to system() in application ucode backends |
+| [042](claims/042-ucode-app-request-popen.md) | Blocked | Security-40: request.args to popen() in application ucode backends |
+| [043](claims/043-ucode-app-fs-exec-argv.md) | Blocked | Security-40: request.args to fs.exec / fs.exec_direct argv |
+| [044](claims/044-app-shellquote-placement.md) | Blocked | Security-40: shellquote placement in application command templates |
+| [045](claims/045-app-sprintf-command-assembly.md) | Blocked | Security-40: sprintf/concatenation command assembly before sinks |
 | [046](claims/046-luci-base-getfeatures-templates.md) | Proposed | Security-40: Fixed-command template substitution in getFeatures |
 | [047](claims/047-ucode-request-path-read.md) | Proposed | Security-40: Request-controlled paths into ucode fs read/stat |
 | [048](claims/048-cgi-io-canonicalize-order.md) | Proposed | Security-40: cgi-io canonicalize_path vs ACL ordering |

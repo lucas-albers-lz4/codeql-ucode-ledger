@@ -1,11 +1,11 @@
 # Claim 043: request.args to fs.exec / fs.exec_direct argv
 
-- Status: Proposed
+- Status: Blocked
 - Program: [Security-40](../planning/security-40-20261124.md), category B
-- Producer: `lucas-albers-lz4/codeql-ucode` (ucode lanes) / `lucas-albers-lz4/codeql-openwrt` (policy, C and JS lanes); pin resolved at execution
-- Producer commit: not yet resolved for this claim
-- Consumer: `lucas-albers-lz4/codeql-openwrt` where a join is named; otherwise none
-- Consumer commit: not yet resolved for this claim
+- Producer: `lucas-albers-lz4/codeql-ucode` — routing probe P2 at HEAD below; application backends not routed
+- Producer commit: `734555a9f56893e89e678cdee63028fc17ea5bc8` (clean; probe-ucode/producer); luci slice pin `b2e0be4b46ec0fd43394c081fa7c50657af14011`
+- Consumer: none (no consumer join reached)
+- Consumer commit: none
 - Environment: local CodeQL CLI 2.27.4 (`gh codeql`), no CI; host details recorded per run
 
 ## Historical anchor
@@ -48,4 +48,20 @@ None.
 
 ## Result
 
-Not yet evaluated.
+Blocked 2026-11-24 — same producer routing gate as claim 041 (codeql-ucode
+HEAD `734555a9f56893e89e678cdee63028fc17ea5bc8`, clean; probe P2 receipts in
+`work/security-40/probe-ucode/VERDICT.md`): 7/7 application .uc backends
+skipped; extractor `file_globs` literal basenames only (extractor.rs
+~l.45–64) and RequestArgsExec.ql l.18 `getBaseName() = "luci"` — both
+orchestrator-verified.
+
+Additional model gap (orchestrator-verified in RequestArgsExec.ql): the
+supported sink set is `NamedFsPopenCall` / `BuiltinSystemCall` only —
+`fs.exec` / `fs.exec_direct` are outside the M4 request-args sink model even
+for routed files. Routing is the primary blocker; the executable-position vs
+argument-position request-control classification was not performed. JS-side
+callers remain syntax inventory only (hold unchanged).
+
+Unblock condition: claim 041's routing unblock PLUS an fs.exec sink model
+decision in the producer (new bounded decision, not implied by this program).
+Evidence paths: see claim 041 Result. Security-40 lifts no gate.

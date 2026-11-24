@@ -1,11 +1,11 @@
 # Claim 045: sprintf/concatenation command assembly before sinks
 
-- Status: Proposed
+- Status: Blocked
 - Program: [Security-40](../planning/security-40-20261124.md), category B
-- Producer: `lucas-albers-lz4/codeql-ucode` (ucode lanes) / `lucas-albers-lz4/codeql-openwrt` (policy, C and JS lanes); pin resolved at execution
-- Producer commit: not yet resolved for this claim
-- Consumer: `lucas-albers-lz4/codeql-openwrt` where a join is named; otherwise none
-- Consumer commit: not yet resolved for this claim
+- Producer: `lucas-albers-lz4/codeql-ucode` — routing probe P2 at HEAD below; application backends not routed
+- Producer commit: `734555a9f56893e89e678cdee63028fc17ea5bc8` (clean; probe-ucode/producer); luci slice pin `b2e0be4b46ec0fd43394c081fa7c50657af14011`
+- Consumer: none (no consumer join reached)
+- Consumer commit: none
 - Environment: local CodeQL CLI 2.27.4 (`gh codeql`), no CI; host details recorded per run
 
 ## Historical anchor
@@ -47,4 +47,18 @@ None.
 
 ## Result
 
-Not yet evaluated.
+Blocked 2026-11-24 — same producer routing gate as claim 041 (codeql-ucode
+HEAD `734555a9f56893e89e678cdee63028fc17ea5bc8`, clean; probe P2 receipts in
+`work/security-40/probe-ucode/VERDICT.md`): 7/7 application .uc backends
+skipped; extractor `file_globs` literal basenames only (extractor.rs
+~l.45–64) and RequestArgsExec.ql l.18 `getBaseName() = "luci"` — both
+orchestrator-verified.
+
+String-building locals (sprintf/concatenation) feeding system/popen in
+application backends are unextracted at this HEAD; assembly-chain identities
+were not recorded. No new flow model was added (per method); the supported
+same-function name-binding slice remains the only intended observation
+surface once routing is unblocked.
+
+Unblock condition and evidence paths: see claim 041 Result. Security-40
+lifts no gate.
