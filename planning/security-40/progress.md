@@ -7,7 +7,7 @@ Update after every claim transition; newest entries first.
 
 - Program opened: 2026-11-24
 - Claims created: 035–074 (40); base commit `379b172` on main.
-  035–038 and 046 Demonstrated; 039/040 Partial (closure lanes running);
+  035–039 and 046 Demonstrated; 040 Partial (fix lane running);
   041–045, 047, 051 Blocked; 048/049/050 lanes running (wave 3 D);
   052–074 Proposed.
 - Wave 0: P1 DONE — **PASS, full-build-extraction** (probe-c/VERDICT.md):
@@ -22,8 +22,9 @@ Update after every claim transition; newest entries first.
   shared pins clean) and transitioned to Demonstrated.
   - lane B DONE (proc_95e20daccda0, exit 0): 038 Demonstrated, 039/040
     Partial — gated by orchestrator (script re-runs + line spot-checks).
-  - proc_e3a216ca2ae9: 039 upgrade lane (derive persistence list from pinned
-    base-files/procd layout), log lanes/lane039up.log
+  - proc_e3a216ca2ae9: 039 upgrade lane DONE (exit 0): Demonstrated —
+    orchestrator re-ran build_derivation.py (62 citations verified) +
+    persistence_inventory.py (exit 0); 14 derived families, 6 grants
   - proc_4fa69f89a8af: 040 fix lane (repair D1–D3 mechanical reconciliation),
     log lanes/lane040fix.log
   - Wave 3 D: proc_ebd4e790d96f (048 cgi-io canonicalize order; disposable
@@ -42,7 +43,7 @@ Update after every claim transition; newest entries first.
 - Shared pinned checkouts (read-only): work/security-40/shared/{luci,rpcd,
   uhttpd,ubus,libubox,uci,mdnsd,procd,packages,openwrt} (last seven blobless,
   no checkout; openwrt/packages working trees dirty — read pins via git show)
-- Next: gate 039-upgrade / 040-fix / 048 / 049+050 lanes on completion →
+- Next: gate 040-fix / 048 / 049+050 lanes on completion →
   transition → commit; then wave 4 E (052–056): 053/054/055 viable; 052/056
   stay inside documented markup subset (feasibility check, no gate lift).
   Then C (057–061): 058/059/060 viable, 057/061 routing-blocked. F: 062–066
@@ -60,6 +61,25 @@ Update after every claim transition; newest entries first.
 - CodeQL CLI: 2.27.4 (gh extension)
 
 ## Log
+
+### 2026-11-24 — 039 Demonstrated (pinned-layout derivation closed)
+
+- Upgrade lane proc_e3a216ca2ae9 (exit 0) derived the persistence list from
+  openwrt @4e9642517b base-files/procd install rules + shipped layout:
+  **14 families, 62 machine-verified citations** (+8/−0 vs analyst baseline;
+  scope rule E/P fixed before classification). Shared openwrt HEAD ≠ pin —
+  read via `git show <pin>:` only, checkout untouched (honesty recorded).
+- Multiset 5 → 6 grants (3 packages): +luci-mod-system `/etc/sysupgrade.conf`
+  write L168 (P-class). The two `/*` catch-alls now cover all 14 families
+  (witness-verified). grants.json sha 4d47fe68… unchanged.
+- Controls pass; 61/61 witness expectations; oracle 6/6 exact (rev3 logged).
+  7 persistence-adjacent targets remain out-of-list observations.
+- Limitations disclosed: glibc-only witness; rcS/inittab consumers external
+  to pin; board.d first-boot gated; uci-defaults one-shot.
+- Orchestrator gate: re-ran build_derivation.py (62 citations, exit 0) +
+  persistence_inventory.py (exit 0, all gates true); spot-checked base-files
+  Makefile L204 (crontabs mkdir) + luci-mod-system.json L168. Claim 039 →
+  Demonstrated; README + progress updated.
 
 ### 2026-11-24 — wave 3 D opened (047/051 Blocked; 048/049/050 lanes dispatched)
 

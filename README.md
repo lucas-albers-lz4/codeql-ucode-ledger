@@ -58,7 +58,7 @@ Together these move from source selection through extraction, query, and consume
 | [036](claims/036-acl-exec-in-read-scope.md) | Demonstrated | Security-40: Exec rules misplaced into read ACL scope |
 | [037](claims/037-acl-shell-interpreter-exec.md) | Demonstrated | Security-40: Shell-interpreter exec grants |
 | [038](claims/038-acl-init-action-argv.md) | Demonstrated | Security-40: Init-script exec grants and action argv control |
-| [039](claims/039-acl-persistence-write.md) | Partial | Security-40: Write grants to persistence paths |
+| [039](claims/039-acl-persistence-write.md) | Demonstrated | Security-40: Write grants to persistence paths |
 | [040](claims/040-acl-read-scope-mutating-ubus.md) | Partial | Security-40: Mutating ubus methods under read-only ACL |
 | [041](claims/041-ucode-app-request-system.md) | Blocked | Security-40: request.args to system() in application ucode backends |
 | [042](claims/042-ucode-app-request-popen.md) | Blocked | Security-40: request.args to popen() in application ucode backends |
