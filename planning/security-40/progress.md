@@ -7,9 +7,9 @@ Update after every claim transition; newest entries first.
 
 - Program opened: 2026-11-24
 - Claims created: 035–074 (40); base commit `379b172` on main.
-  035–040, 046, 048–050, 053–055, 058–060 Demonstrated (16); 041–045, 047,
-  051, 052, 056, 057, 061 Blocked (11); 062–074 Proposed (13). Waves
-  A/B/C/D/E closed; F (062–067) lanes running; H/G pending.
+  035–040, 046, 048–050, 053–055, 058–060, 062, 063, 065 Demonstrated (19);
+  041–045, 047, 051, 052, 056, 057, 061 Blocked (11); 064, 066, 067 in flight;
+  068–074 Proposed (7). A/B/C/D/E closed; F parse done, auth/ubusd running.
 - Wave 0: P1 DONE — **PASS, full-build-extraction** (probe-c/VERDICT.md):
   15/15 uhttpd .c files, 0 extractor diagnostics, semantic queries verified;
   claims 062–066 viable now; 067–071 need per-package P1-style probes.
@@ -62,12 +62,17 @@ Update after every claim transition; newest entries first.
     working tree never read). 057/061 Blocked (application-ucode routing gate).
     CATEGORY C COMPLETE (058/059/060 Demonstrated).
 - Wave 6 F (light source-oracle lanes; heavy slot free): proc_b4e13b5c0d4b
-    (062 TE case + 063 CL/chunk signedness + 065 keepalive drain; uhttpd
-    @93b05e0b clean), log lanes/laneF-uhttpd-parse.log; proc_3eaeb1f75860
-    (064 ubus params type + 066 realm enforcement; uhttpd @93b05e0b), log
-    lanes/laneF-uhttpd-auth.log; proc_2730fa24420d (067 ubusd blobmsg peer
-    bounds; ubus @24864e78 via git show blobs — working tree dirty), log
-    lanes/laneF-ubusd.log.
+    (062/063/065 DONE exit 0: all Demonstrated — advisory shapes FIXED-IN-SOURCE
+    at uhttpd @93b05e0b, fail-no-eligible-instance WITH census; 062 TE
+    strcasecmp:272/unknown-501, 063 CL guard :608→400 before :612 cast +
+    chunk-reset close :779, 065 reuse guard client.c:139-145 + ubus close
+    ubus.c:1161; fix ancestry confirmed; controls 2/2 + POS absence census;
+    2nd pass 20/20,30/30,30/30; no DB, peak RSS ~17-18MB; orchestrator re-ran
+    3 pipelines exit 0 + spot-checks), log lanes/laneF-uhttpd-parse.log;
+    proc_3eaeb1f75860 (064 ubus params type + 066 realm enforcement; uhttpd
+    @93b05e0b) RUNNING, log lanes/laneF-uhttpd-auth.log; proc_2730fa24420d
+    (067 ubusd blobmsg peer bounds; ubus @24864e78 via git show blobs — working
+    tree dirty) RUNNING, log lanes/laneF-ubusd.log.
 - H/G pre-staged (prompts in lanes/, launch after F gates): laneH-px5g (068,
   luci @b2e0be4b clean, libs/luci-lib-px5g/src); laneH-mdnsd-libubox (069 mdnsd
   @defe7ccfd20281b9ef4dfa45437813386a64f8ba — shared HEAD, mdnsd LEFT the feed,
@@ -101,6 +106,24 @@ Update after every claim transition; newest entries first.
 - CodeQL CLI: 2.27.4 (gh extension)
 
 ## Log
+
+### 2026-11-24 — 062/063/065 Demonstrated (uhttpd parse fixed-in-source)
+
+- Lane proc_b4e13b5c0d4b (exit 0): source oracle, uhttpd @93b05e0b (clean).
+  All THREE advisory shapes FIXED-IN-SOURCE — fail-no-eligible-instance WITH
+  census (049/050/055 pattern). 062 TE case-insensitive (client.c:272 strcasecmp,
+  unknown codings 501), 20 entries / 2 chains / 24-site census. 063 negative-CL
+  guard (client.c:608 length<0||>INT_MAX → 400 before :612 cast) + invalid-chunk
+  reset forces close (:779), 30 entries / 3 chains / parse census 10; fix
+  ancestry 2c869c0/9404e6c/b78f518/893fed8. 065 reuse single uh_request_done
+  (client.c:125-148), unread-body guard :139-140 forces close before :145 INIT;
+  CL.0 precondition :684-685 neutralized; ubus parse-error close ubus.c:1161;
+  funnel 22/22, census 12; fix ancestry 15346de/d6205aa/7b1bec4. Controls 2/2
+  each (+POS absence census); 2nd pass 20/20,30/30,30/30; no oracle revisions;
+  uhttpd clean; no DB (peak RSS ~17-18MB). Orchestrator re-ran 3 pipelines
+  (exit 0) + spot-checked guards/closes + ancestry. Source-shape only, no
+  runtime/exploit/vuln verdict. Claims 062/063/065 → Demonstrated; README +
+  progress updated. F auth (064/066) + ubusd (067) still running.
 
 ### 2026-11-24 — 059/060 Demonstrated; category C complete; wave 6 F opened
 
