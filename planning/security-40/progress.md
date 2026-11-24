@@ -7,9 +7,9 @@ Update after every claim transition; newest entries first.
 
 - Program opened: 2026-11-24
 - Claims created: 035–074 (40); base commit `379b172` on main.
-  035–040, 046, 048–050, 053–055, 058–060, 062–066 Demonstrated (21);
-  041–045, 047, 051, 052, 056, 057, 061 Blocked (11); 067 in flight;
-  068–074 Proposed (7). A/B/C/D/E closed; F parse+auth done, ubusd running.
+  035–040, 046, 048–050, 053–055, 058–060, 062–067 Demonstrated (22);
+  041–045, 047, 051, 052, 056, 057, 061 Blocked (11); 068–074 Proposed (7).
+  A/B/C/D/E/F closed; H (068–071) + G (072–074) next.
 - Wave 0: P1 DONE — **PASS, full-build-extraction** (probe-c/VERDICT.md):
   15/15 uhttpd .c files, 0 extractor diagnostics, semantic queries verified;
   claims 062–066 viable now; 067–071 need per-package P1-style probes.
@@ -76,9 +76,13 @@ Update after every claim transition; newest entries first.
     file.c:924 no realm call :920-928 (config-gated, NOT claimed exploitable),
     normal-path fixed 3aa7e1c ancestor, 5 branches/controls 3/3/2nd 4/4;
     orchestrator re-ran 2 pipelines exit 0 + spot-checks + ancestry), log
-    lanes/laneF-uhttpd-auth.log; proc_2730fa24420d
-    (067 ubusd blobmsg peer bounds; ubus @24864e78 via git show blobs — working
-    tree dirty) RUNNING, log lanes/laneF-ubusd.log.
+    lanes/laneF-uhttpd-auth.log; proc_2730fa24420d (067 DONE exit 0: Demonstrated
+    — FIXED-IN-PIN, 50 census sites pass A==B 50/50, 29 chains/34 sinks, 169
+    citations machine-verified; event zero-guard ubusd_event.c:87-88 before
+    :99 calloc/:107 strcpy; fix ancestry d31effb/60e0404/aa4a7ee/f92ffd2;
+    controls 3/3 incl real pre-fix blob POS; ubus @24864e78 blobs, dirty tree
+    never read; orchestrator re-ran pipeline exit 0 + spot-checks + ancestry),
+    log lanes/laneF-ubusd.log. CATEGORY F COMPLETE (062–067 Demonstrated).
 - H/G pre-staged (prompts in lanes/, launch after F gates): laneH-px5g (068,
   luci @b2e0be4b clean, libs/luci-lib-px5g/src); laneH-mdnsd-libubox (069 mdnsd
   @defe7ccfd20281b9ef4dfa45437813386a64f8ba — shared HEAD, mdnsd LEFT the feed,
@@ -112,6 +116,27 @@ Update after every claim transition; newest entries first.
 - CodeQL CLI: 2.27.4 (gh extension)
 
 ## Log
+
+### 2026-11-24 — 067 Demonstrated; category F complete; H/G launched
+
+- Lane proc_2730fa24420d (exit 0): source oracle, ubus @24864e78 (2026-06-28;
+  shared tree dirty 83, pinned blobs only). FIXED-IN-PIN (fail-no-eligible-
+  instance WITH census): peer intake validates before copy (fixed 40-byte
+  hdrbuf recvmsg; ubus_validate_hdr ubusd_proto.c:149/152 before alloc; bounded
+  body read; blob_parse_untrusted + typed policy). Advisory site
+  ubusd_alloc_event_pattern (ubusd_event.c:56): strlen :86 → zero-guard :87-88 →
+  wildcard strip :90-93 → LISTEN ACL :96 → calloc :99 → strcpy :107; empty-
+  pattern underflow guarded before alloc. 50 census sites (pass A==B 50/50), 29
+  chains/34 sinks, 16 local-only dispositions, 169 citations machine-verified.
+  Fix ancestry d31effb/60e0404/aa4a7ee/f92ffd2 all ancestors. Controls 3/3 (POS
+  real pre-fix blob d31effb^ UNGUARDED historical; NEAR pinned GUARDED; NEG fixed
+  hdrbuf). Gaps: pass B in-session procedure not independent model (OAuth 401);
+  stale citations rebuilt (R5 43/111 + 5 builder); libubox internals out-of-pin;
+  feed drift db20eff not evaluated; summary prose shifted event lines (chains.json
+  correct). Orchestrator re-ran pipeline (exit 0) + spot-checked ubusd_event.c:
+  86/87/90/96/107 + ubusd_proto.c:149 + ancestry. Claim 067 → Demonstrated.
+  CATEGORY F COMPLETE (062–067). H/G (068–074) launched: laneH-px5g,
+  laneH-mdnsd-libubox, laneH-uci-procd, laneG-shell (light source oracles).
 
 ### 2026-11-24 — 064/066 Demonstrated (uhttpd auth)
 

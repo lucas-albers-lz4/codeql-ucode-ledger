@@ -86,7 +86,7 @@ Together these move from source selection through extraction, query, and consume
 | [064](claims/064-uhttpd-ubus-params-type.md) | Demonstrated | Security-40: POST /ubus/call params type validation |
 | [065](claims/065-uhttpd-keepalive-drain.md) | Demonstrated | Security-40: Keep-alive body drain and parse-error desync |
 | [066](claims/066-uhttpd-realm-handler-enforce.md) | Demonstrated | Security-40: Basic Auth realm enforcement on handler dispatch |
-| [067](claims/067-ubusd-blobmsg-peer-bounds.md) | Proposed | Security-40: ubusd peer blobmsg parsing bounds |
+| [067](claims/067-ubusd-blobmsg-peer-bounds.md) | Demonstrated | Security-40: ubusd peer blobmsg parsing bounds |
 | [068](claims/068-px5g-signing-bounds.md) | Proposed | Security-40: px5g certificate-signing buffer bounds |
 | [069](claims/069-mdnsd-ptr-stack-bounds.md) | Proposed | Security-40: mdnsd PTR/reverse-lookup stack buffers |
 | [070](claims/070-libubox-blobmsg-json-bounds.md) | Proposed | Security-40: libubox blobmsg JSON serialization bounds |
