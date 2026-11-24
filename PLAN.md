@@ -5,6 +5,13 @@ current larger planning queue. It accounts for newer upstream markup CFG,
 receiver-observation and read-only v2 changes. Its packages are conditional
 decisions and checks, not promised claims or automatic execution.
 
+Separate active program (opened 2026-11-24):
+[Security-40](planning/security-40-20261124.md) — forty interface claims
+(035–074) grounded in OpenWrt advisory history, executed sequentially with
+local CodeQL. Its resume point is
+[security-40/progress.md](planning/security-40/progress.md). It does not lift
+any gate or hold of the 24-package program.
+
 The [12-wave roadmap](planning/roadmap-12-waves.md) extends the [next four evidence decisions](planning/wave-next-20261121.md). Its ordered gates take precedence over the older generic batch outline below; later waves are conditional, not automatic runs.
 
 The prior producer/consumer handoffs remain in [planning/batch-20261118.md](planning/batch-20261118.md). After the handoff branch merged to `main`, this

@@ -54,6 +54,46 @@ Together these move from source selection through extraction, query, and consume
 | [032](claims/032-markup-trim-matrix-implementation.md) | Demonstrated | Current markup CFG behavior across a six-fixture trim matrix |
 | [033](claims/033-bounded-markup-callable-call-order.md) | Demonstrated | Updated bounded callable ordering with a computed-callee control |
 | [034](claims/034-markup-trim-delimiters.md) | Demonstrated | Local trim-delimiter ordering patch with exact controls |
+| [035](claims/035-acl-file-read-glob-breadth.md) | Proposed | Security-40: ACL file-read globs spanning path separators |
+| [036](claims/036-acl-exec-in-read-scope.md) | Proposed | Security-40: Exec rules misplaced into read ACL scope |
+| [037](claims/037-acl-shell-interpreter-exec.md) | Proposed | Security-40: Shell-interpreter exec grants |
+| [038](claims/038-acl-init-action-argv.md) | Proposed | Security-40: Init-script exec grants and action argv control |
+| [039](claims/039-acl-persistence-write.md) | Proposed | Security-40: Write grants to persistence paths |
+| [040](claims/040-acl-read-scope-mutating-ubus.md) | Proposed | Security-40: Mutating ubus methods under read-only ACL |
+| [041](claims/041-ucode-app-request-system.md) | Proposed | Security-40: request.args to system() in application ucode backends |
+| [042](claims/042-ucode-app-request-popen.md) | Proposed | Security-40: request.args to popen() in application ucode backends |
+| [043](claims/043-ucode-app-fs-exec-argv.md) | Proposed | Security-40: request.args to fs.exec / fs.exec_direct argv |
+| [044](claims/044-app-shellquote-placement.md) | Proposed | Security-40: shellquote placement in application command templates |
+| [045](claims/045-app-sprintf-command-assembly.md) | Proposed | Security-40: sprintf/concatenation command assembly before sinks |
+| [046](claims/046-luci-base-getfeatures-templates.md) | Proposed | Security-40: Fixed-command template substitution in getFeatures |
+| [047](claims/047-ucode-request-path-read.md) | Proposed | Security-40: Request-controlled paths into ucode fs read/stat |
+| [048](claims/048-cgi-io-canonicalize-order.md) | Proposed | Security-40: cgi-io canonicalize_path vs ACL ordering |
+| [049](claims/049-rpcd-file-symlink-reauth.md) | Proposed | Security-40: rpcd file plugin symlink re-authorization |
+| [050](claims/050-rpcd-session-tmpdir.md) | Proposed | Security-40: Session-token-derived temporary UCI paths |
+| [051](claims/051-ucode-request-path-write.md) | Proposed | Security-40: Request-controlled destinations into fs.write/rename |
+| [052](claims/052-markup-unescaped-substitution.md) | Proposed | Security-40: Unescaped substitution in bounded markup subset |
+| [053](claims/053-lease-data-render-sites.md) | Proposed | Security-40: Lease/UCI-derived strings in status render paths |
+| [054](claims/054-js-dangerous-render-sinks.md) | Proposed | Security-40: JS dangerous-render sinks in pinned views |
+| [055](claims/055-uhttpd-cgi-uri-reflection.md) | Proposed | Security-40: uhttpd CGI error/URI reflection |
+| [056](claims/056-template-arg-untrusted.md) | Proposed | Security-40: Template/include argument propagation |
+| [057](claims/057-ucode-request-uci-set.md) | Proposed | Security-40: Request values into uci.set in ucode backends |
+| [058](claims/058-js-rpc-uci-set-sites.md) | Proposed | Security-40: JS rpc.declare UCI set call sites (enumeration only) |
+| [059](claims/059-shell-eval-config-values.md) | Proposed | Security-40: Package shell eval/sh -c of config values |
+| [060](claims/060-uci-newline-line-formats.md) | Proposed | Security-40: Newline-bearing UCI values into line-based formats |
+| [061](claims/061-ucode-commit-restart-adjacency.md) | Proposed | Security-40: uci.commit to service-restart adjacency |
+| [062](claims/062-uhttpd-te-case-match.md) | Proposed | Security-40: Transfer-Encoding matching case sensitivity |
+| [063](claims/063-uhttpd-cl-chunk-signedness.md) | Proposed | Security-40: Content-Length signedness and chunk-size state |
+| [064](claims/064-uhttpd-ubus-params-type.md) | Proposed | Security-40: POST /ubus/call params type validation |
+| [065](claims/065-uhttpd-keepalive-drain.md) | Proposed | Security-40: Keep-alive body drain and parse-error desync |
+| [066](claims/066-uhttpd-realm-handler-enforce.md) | Proposed | Security-40: Basic Auth realm enforcement on handler dispatch |
+| [067](claims/067-ubusd-blobmsg-peer-bounds.md) | Proposed | Security-40: ubusd peer blobmsg parsing bounds |
+| [068](claims/068-px5g-signing-bounds.md) | Proposed | Security-40: px5g certificate-signing buffer bounds |
+| [069](claims/069-mdnsd-ptr-stack-bounds.md) | Proposed | Security-40: mdnsd PTR/reverse-lookup stack buffers |
+| [070](claims/070-libubox-blobmsg-json-bounds.md) | Proposed | Security-40: libubox blobmsg JSON serialization bounds |
+| [071](claims/071-libuci-parse-package-lifecycle.md) | Proposed | Security-40: libuci uci_parse_package object lifecycle |
+| [072](claims/072-procd-path-env-filter.md) | Proposed | Security-40: procd PATH/environment filter in service exec |
+| [073](claims/073-banip-log-first-ip.md) | Proposed | Security-40: banip log-monitor first-IP extraction |
+| [074](claims/074-travelmate-fcheck-injection.md) | Proposed | Security-40: travelmate f_check script/script_args injection |
 
 Every demonstrated status is limited to the run, inputs, controls and revisions
 in that claim. These rows are not a coverage percentage.
