@@ -139,10 +139,16 @@ no internal scratch paths or model refs.
   is shell), ucode#57 + openwrt#68 (33 .ut census + markup reconciliation),
   openwrt#64 (application fs/exec downstream). Epic audit-trail: ucode#43,
   openwrt#56.
-- OPEN reconciliation question: ucode#56 (markup AST) closed COMPLETED 2026-11-21
-  yet producer main 734555a9 still hides ucode_markup node-types at init (README
-  L13), no .ut routing. Raised on #57/#68 as merge-state vs CFG/dataflow question,
-  not an assertion #56 is wrong.
+- Reconciliation question (raised on #57/#68) → investigation filed as ucode#160.
+  Grounding at producer CURRENT main 9166af76 (2026-11-24, incl. immutable release
+  #159): probe pin 734555a9 is STALE (not an ancestor of current main). Current main
+  DOES classify .ut (extractor.rs L151-152 Classification::Markup / ut_markup_extension)
+  and ships Markup.qll/MarkupCFG.qll/MarkupCreationCFG.qll + markup AST/CFG queries
+  via merged PRs #142/#144/#147/#148/#151/#152. So the gap is NOT "AST unmerged."
+  #160 resolves the remaining question: production markup dataflow vs bounded/
+  AST-test-only CFG; re-measure 052/056 at current main; reconcile #56 verification
+  pin 629a708 (not reachable from fetched refs). Pointer comments on #56/#57/#68.
+  No gate lifted; 052/056 stay Blocked pending re-measure (stale-pin receipts).
 - All four tickets OPEN with verified labels + companion cross-links; seven
   comments read back on intended targets. H/G lanes (068–074) still in flight.
 
