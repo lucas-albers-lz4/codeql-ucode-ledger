@@ -7,9 +7,9 @@ Update after every claim transition; newest entries first.
 
 - Program opened: 2026-11-24
 - Claims created: 035–074 (40); base commit `379b172` on main.
-  035–040, 046, 048–050, 055 Demonstrated (categories A + D complete);
-  041–045, 047, 051, 052, 056 Blocked; 053/054 (E) lane running;
-  057–074 Proposed.
+  035–040, 046, 048–050, 053–055 Demonstrated (A+B+D+E complete; 13);
+  041–045, 047, 051, 052, 056 Blocked (9); 057–074 Proposed (18);
+  no lanes running — next category C (057–061).
 - Wave 0: P1 DONE — **PASS, full-build-extraction** (probe-c/VERDICT.md):
   15/15 uhttpd .c files, 0 extractor diagnostics, semantic queries verified;
   claims 062–066 viable now; 067–071 need per-package P1-style probes.
@@ -35,9 +35,10 @@ Update after every claim transition; newest entries first.
     exit 0, compare all_match, e37ed9d ancestry + d99f703 fix subject
     confirmed; source-only, no CodeQL).
     047/051 transitioned Blocked (P2 routing + fs sink-model gap).
-  - Wave 4 E: proc_6ae83ddca088 (053+054 luci lease/UCI render chain + JS
-    dangerous-render sink syntax inventory; odhcpd @5d7be43f disposable
-    clone), log    lanes/laneE-render.log; proc_2b9ba58c6c16 (055 DONE exit 0: Demonstrated
+  - Wave 4 E: proc_6ae83ddca088 (053+054 DONE exit 0: both Demonstrated —
+    pipelines exit 0, 40 render sites / 138 JS sinks byte-verified, 3/3
+    controls each; luci + odhcpd pins clean; source/syntax only, JS hold
+    unchanged); proc_2b9ba58c6c16 (055 DONE exit 0: Demonstrated
     — orchestrator re-ran run_pipeline.sh exit 0/verify 0, cdfc902 ancestry
     confirmed, 5 sites all uh_htmlescape-encoded; source-only, no CodeQL).
     052/056 transitioned Blocked (markup_not_modeled).
@@ -79,6 +80,28 @@ Update after every claim transition; newest entries first.
 - CodeQL CLI: 2.27.4 (gh extension)
 
 ## Log
+
+### 2026-11-24 — 053/054 Demonstrated; category E complete (waves A/B/D/E done)
+
+- Lane proc_6ae83ddca088 (exit 0), source/syntax only (no CodeQL DB; JS UCI
+  hold + Track A unchanged). luci @b2e0be4b clean; odhcpd @5d7be43f clean.
+- 053: 40 render sites, completeness scan clean (56 chain-hop lines, 0
+  uncovered); odhcpd→leasefile→rpcd→LuCI chain end-to-end; odhcpd statefiles
+  escapes non-LDH hostname bytes (503–581), hostname cells %h-escaped; one
+  hostname-shaped unencoded scalar render 60_wifi.js:307; dnsmasq writer
+  outside odhcpd escape (boundary). Controls 3/3.
+- 054: 138 dangerous-render sinks (133 innerHTML + 5 d3 .html); 156 grep lines
+  = 138 + 18 exclusions, 0 uncovered; classes literal 58 / encoded 0 / raw 80;
+  no encoding helper at any sink arg; rustdesk general.js:447 public_key into
+  text + onclick attr. Controls 3/3.
+- Integrity: oracle revisions logged; pinned-byte re-reads caught transcription
+  errors. shared/openwrt tree dirty (pre-existing deletions) — all openwrt
+  evidence via git show blobs. Orchestrator re-ran both run_pipeline.sh
+  (exit 0); spot-checked statefiles.c 503/581, luci.js 1394, 60_wifi.js 307.
+  Claims 053/054 → Demonstrated; README + progress updated.
+- Waves A (035–040), B (041–046), D (047–051), E (052–056) closed:
+  13 Demonstrated, 9 Blocked. Next: C (057–061), F (062–067), H (068–071),
+  G (072–074). Extension waves (075+) designed after 074 closes.
 
 ### 2026-11-24 — 049/050 Demonstrated; category D complete
 
