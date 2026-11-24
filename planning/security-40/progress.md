@@ -7,9 +7,9 @@ Update after every claim transition; newest entries first.
 
 - Program opened: 2026-11-24
 - Claims created: 035–074 (40); base commit `379b172` on main.
-  035–040, 046, 048–050, 053–055 Demonstrated (13); 041–045, 047, 051,
-  052, 056, 057, 061 Blocked (11); 058/059/060 (C) lanes running;
-  062–074 Proposed (13). Waves A/B/D/E closed; C in flight.
+  035–040, 046, 048–050, 053–055, 058 Demonstrated (14); 041–045, 047,
+  051, 052, 056, 057, 061 Blocked (11); 059/060 (C shell) lane running;
+  062–074 Proposed (13). Waves A/B/D/E closed; C nearly done.
 - Wave 0: P1 DONE — **PASS, full-build-extraction** (probe-c/VERDICT.md):
   15/15 uhttpd .c files, 0 extractor diagnostics, semantic queries verified;
   claims 062–066 viable now; 067–071 need per-package P1-style probes.
@@ -53,8 +53,10 @@ Update after every claim transition; newest entries first.
 - Shared pinned checkouts (read-only): work/security-40/shared/{luci,rpcd,
   uhttpd,ubus,libubox,uci,mdnsd,procd,packages,openwrt} (last seven blobless,
   no checkout; openwrt/packages working trees dirty — read pins via git show)
-- Wave 5 C: proc_71c3742a3480 (058 JS rpc.declare UCI-set syntax enumeration
-    under hold; luci pin), log lanes/laneC-js-uci.log; proc_f3837a0c8487
+- Wave 5 C: proc_71c3742a3480 (058 DONE exit 0: Demonstrated — GATE PASS,
+    7 uci_write_literal sites, two-pass agreement, 0 uncovered/0 phantom,
+    controls 3/3; hold unchanged; tokenizer-revert incident caught by gate);
+    proc_f3837a0c8487
     (059 shell eval/sh -c config chains + 060 newline UCI→line-format; packages
     @07e0d163 via git show blobs — working tree dirty), log lanes/laneC-shell.log.
     057/061 Blocked (application-ucode routing gate).
@@ -83,6 +85,23 @@ Update after every claim transition; newest entries first.
 - CodeQL CLI: 2.27.4 (gh extension)
 
 ## Log
+
+### 2026-11-24 — 058 Demonstrated (JS rpc.declare UCI-write census)
+
+- Lane proc_71c3742a3480 (exit 0): syntax-only (no CodeQL DB / JS execution;
+  JS UCI hold + Track A unchanged). luci @b2e0be4b clean.
+- 7 uci_write_literal declares (uci.js order/add/set/delete/apply/confirm +
+  wireless.js rename); absence census commit/set_list/etc 0; no literal commit
+  declare (commit via apply+confirm). 420-file manifest; 308 grep lines = 7 +
+  301 exclusions; 0 uncovered/0 phantom; two independent passes agree on 303
+  calls; 127 files sha256-verified. Controls 3/3.
+- Incident logged: pass_b tokenizer reverted mid-lane (cause unknown),
+  detected by pipeline, rewritten; 2 regressions caught by two-pass agreement
+  gate; script sha256s recorded + re-verified. rpcd uci.c taxonomy ref is
+  upstream master (disclosed), family split corroborated by pinned uci.js docs.
+- Orchestrator gate: re-ran run_pipeline.sh (exit 0, GATE PASS); luci pin
+  clean; spot-checked all 7 rpc.declare lines. Claim 058 → Demonstrated;
+  README + progress updated.
 
 ### 2026-11-24 — Wave 5 C opened (057/061 Blocked; 058/059/060 lanes)
 
