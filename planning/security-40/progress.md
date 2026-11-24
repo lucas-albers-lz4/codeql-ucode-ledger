@@ -7,8 +7,8 @@ Update after every claim transition; newest entries first.
 
 - Program opened: 2026-11-24
 - Claims created: 035–074 (40); base commit `379b172` on main.
-  035–039 and 046 Demonstrated; 040 Partial (fix lane running);
-  041–045, 047, 051, 052, 056 Blocked; 048/049/050 (D) + 053/054/055 (E)
+  035–039, 046, 048 Demonstrated; 040 Partial (fix lane running);
+  041–045, 047, 051, 052, 056 Blocked; 049/050 (D) + 053/054/055 (E)
   lanes running; 057–074 Proposed.
 - Wave 0: P1 DONE — **PASS, full-build-extraction** (probe-c/VERDICT.md):
   15/15 uhttpd .c files, 0 extractor diagnostics, semantic queries verified;
@@ -27,9 +27,10 @@ Update after every claim transition; newest entries first.
     persistence_inventory.py (exit 0); 14 derived families, 6 grants
   - proc_4fa69f89a8af: 040 fix lane (repair D1–D3 mechanical reconciliation),
     log lanes/lane040fix.log
-  - Wave 3 D: proc_ebd4e790d96f (048 cgi-io canonicalize order; disposable
-    cgi-io clone @31cb3c89; consumer policy/cgi_download.py @ codeql-openwrt
-    cc5f8630), log lanes/laneD-cgiio.log; proc_e76dbc5f149e (049+050 rpcd
+  - Wave 3 D: proc_ebd4e790d96f (048 DONE exit 0: Demonstrated — orchestrator
+    re-ran run_pipeline.sh exit 0, spot-checked main.c 549/551/568/790/810/
+    818/826/869 + util.c:199; consumer cgi_download.py decides YES same pin);
+    proc_e76dbc5f149e (049+050 rpcd
     file.c/uci.c source oracles, sequential), log lanes/laneD-rpcd.log.
     047/051 transitioned Blocked (P2 routing + fs sink-model gap).
   - Wave 4 E: proc_6ae83ddca088 (053+054 luci lease/UCI render chain + JS
@@ -75,6 +76,23 @@ Update after every claim transition; newest entries first.
 - CodeQL CLI: 2.27.4 (gh extension)
 
 ## Log
+
+### 2026-11-24 — 048 Demonstrated (cgi-io canonicalize/ACL order)
+
+- Lane proc_ebd4e790d96f (exit 0): source-oracle only (no CodeQL DB). cgi-io
+  @31cb3c89 disposable clone clean; codeql-openwrt @cc5f8630 consumer clean.
+- Per-endpoint order transcribed (download canon-before-ACL-before-open with
+  in-source fix rationale 542–548; upload part-order-dependent ACL; backup no
+  path; exec PATH re-resolution between ACL#1 and ACL#2).
+- Consumer answer YES: policy/cgi_download.py already decides GHSA-jw5r /
+  CVE-2026-62947 shape at the same pin (C double 6/6); stop condition recorded.
+- Controls positive/near-miss/negative pass (near-miss eligible only in exec;
+  others fail-no-eligible-instance with census); 24/24 three-way battery.
+- Residuals recorded as follow-ups: exec canonicalize/ACL/PATH order, upload
+  part-order, symlink/cwd resolution (textual canon; UNKNOWN_FS in consumers).
+- Orchestrator gate: re-ran run_pipeline.sh (exit 0); spot-checked main.c
+  549/551/568/790/810/818/826/869 + util.c:199; cgi-io pin clean. Claim 048 →
+  Demonstrated; README + progress updated.
 
 ### 2026-11-24 — wave 4 E opened (052/056 Blocked; 053/054/055 lanes dispatched)
 

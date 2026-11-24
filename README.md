@@ -67,7 +67,7 @@ Together these move from source selection through extraction, query, and consume
 | [045](claims/045-app-sprintf-command-assembly.md) | Blocked | Security-40: sprintf/concatenation command assembly before sinks |
 | [046](claims/046-luci-base-getfeatures-templates.md) | Demonstrated | Security-40: Fixed-command template substitution in getFeatures |
 | [047](claims/047-ucode-request-path-read.md) | Blocked | Security-40: Request-controlled paths into ucode fs read/stat |
-| [048](claims/048-cgi-io-canonicalize-order.md) | Proposed | Security-40: cgi-io canonicalize_path vs ACL ordering |
+| [048](claims/048-cgi-io-canonicalize-order.md) | Demonstrated | Security-40: cgi-io canonicalize_path vs ACL ordering |
 | [049](claims/049-rpcd-file-symlink-reauth.md) | Proposed | Security-40: rpcd file plugin symlink re-authorization |
 | [050](claims/050-rpcd-session-tmpdir.md) | Proposed | Security-40: Session-token-derived temporary UCI paths |
 | [051](claims/051-ucode-request-path-write.md) | Blocked | Security-40: Request-controlled destinations into fs.write/rename |
