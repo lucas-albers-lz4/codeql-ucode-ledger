@@ -1,0 +1,199 @@
+{
+  "original_sha256": "9ca73f0fe11a4052ff19af2e3b946f22381e7c9c8917aa02d1f597391a8b1ed0",
+  "columns": [
+    {
+      "name": "path",
+      "kind": "String"
+    },
+    {
+      "name": "call_node",
+      "kind": "Entity"
+    },
+    {
+      "name": "callee_node",
+      "kind": "Entity"
+    },
+    {
+      "name": "import_node",
+      "kind": "Entity"
+    },
+    {
+      "name": "specifier_node",
+      "kind": "Entity"
+    },
+    {
+      "name": "handler_node",
+      "kind": "Entity"
+    },
+    {
+      "name": "formal_node",
+      "kind": "Entity"
+    },
+    {
+      "name": "argument_node",
+      "kind": "Entity"
+    },
+    {
+      "name": "substitution_node",
+      "kind": "Entity"
+    },
+    {
+      "name": "property_node",
+      "kind": "Entity"
+    },
+    {
+      "name": "args_node",
+      "kind": "Entity"
+    },
+    {
+      "name": "receiver_node",
+      "kind": "Entity"
+    }
+  ],
+  "tuples": [
+    [
+      "controls/negative-optional-call.uc",
+      {
+        "id": -16776543
+      },
+      {
+        "id": -16776542
+      },
+      {
+        "id": -16776702
+      },
+      {
+        "id": -16776695
+      },
+      {
+        "id": -16776599
+      },
+      {
+        "id": -16776593
+      },
+      {
+        "id": -16776535
+      },
+      {
+        "id": -16776522
+      },
+      {
+        "id": -16776519
+      },
+      {
+        "id": -16776518
+      },
+      {
+        "id": -16776517
+      }
+    ],
+    [
+      "controls/positive-direct.uc",
+      {
+        "id": -16774881
+      },
+      {
+        "id": -16774880
+      },
+      {
+        "id": -16775040
+      },
+      {
+        "id": -16775033
+      },
+      {
+        "id": -16774937
+      },
+      {
+        "id": -16774931
+      },
+      {
+        "id": -16774875
+      },
+      {
+        "id": -16774862
+      },
+      {
+        "id": -16774859
+      },
+      {
+        "id": -16774858
+      },
+      {
+        "id": -16774857
+      }
+    ],
+    [
+      "controls/positive-post-call-property.uc",
+      {
+        "id": -16774623
+      },
+      {
+        "id": -16774622
+      },
+      {
+        "id": -16774783
+      },
+      {
+        "id": -16774776
+      },
+      {
+        "id": -16774680
+      },
+      {
+        "id": -16774674
+      },
+      {
+        "id": -16774617
+      },
+      {
+        "id": -16774604
+      },
+      {
+        "id": -16774601
+      },
+      {
+        "id": -16774600
+      },
+      {
+        "id": -16774599
+      }
+    ],
+    [
+      "usr/share/rpcd/ucode/ddns.uc",
+      {
+        "id": -16773026
+      },
+      {
+        "id": -16773025
+      },
+      {
+        "id": -16774506
+      },
+      {
+        "id": -16774489
+      },
+      {
+        "id": -16773215
+      },
+      {
+        "id": -16773209
+      },
+      {
+        "id": -16773020
+      },
+      {
+        "id": -16773007
+      },
+      {
+        "id": -16773004
+      },
+      {
+        "id": -16773003
+      },
+      {
+        "id": -16773002
+      }
+    ]
+  ]
+}

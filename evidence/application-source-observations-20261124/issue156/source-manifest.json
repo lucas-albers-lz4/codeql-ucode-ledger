@@ -1,0 +1,6272 @@
+{
+  "schema": "issue156-portable-source-manifest-v1",
+  "producer_revision": "9166af76cf6944e1b3ea5856a9176366a1f7a6ee",
+  "source_positions": "1-based byte columns, half-open end, ASCII source tokens; tabs occupy one source byte",
+  "real_source": {
+    "commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "repo": "openwrt/luci",
+    "path": "applications/luci-app-adblock-fast/root/usr/share/rpcd/ucode/luci.adblock-fast",
+    "relative_stage_path": "usr/share/rpcd/ucode/luci.adblock-fast",
+    "git_mode": "100644",
+    "git_blob": "f7062814454328a5dd0bdbe7d7e724c410c95ae3",
+    "sha256": "3cb9d07b33a0aec36743326a5cb1e18885d245a132ef92174eb4c8b70aaebdd8",
+    "bytes": 23660,
+    "expected_route": {
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    }
+  },
+  "source_candidate_pairs": [
+    {
+      "case": "dnsmasq",
+      "case_label": [
+        579,
+        9,
+        579,
+        18
+      ],
+      "commit_receiver": [
+        611,
+        5,
+        611,
+        12
+      ],
+      "commit_property": [
+        611,
+        13,
+        611,
+        19
+      ],
+      "commit_call": [
+        611,
+        5,
+        611,
+        27
+      ],
+      "commit_package": "dhcp",
+      "restart_callee": [
+        612,
+        5,
+        612,
+        11
+      ],
+      "restart_call": [
+        612,
+        5,
+        612,
+        58
+      ],
+      "service": "dnsmasq",
+      "action": "restart",
+      "literal_suffix": " >/dev/null 2>&1",
+      "enclosing_function_ref": "enclosing_function_expression",
+      "handler_body_ref": "handler_body",
+      "cursor_binding_ref": "cursor_receiver_declaration_name",
+      "status": "positive",
+      "source_statement_ordinals": [
+        4,
+        5
+      ],
+      "case_block": {
+        "start": [
+          579,
+          20
+        ],
+        "end_exclusive": [
+          614,
+          5
+        ],
+        "byte_offsets": [
+          20519,
+          21826
+        ]
+      },
+      "case_source_span": {
+        "start": [
+          579,
+          4
+        ],
+        "end_exclusive": [
+          614,
+          5
+        ],
+        "byte_offsets": [
+          20503,
+          21826
+        ]
+      },
+      "statement_owner": "StatementBlock",
+      "commit": {
+        "statement": {
+          "start": [
+            611,
+            5
+          ],
+          "end_exclusive": [
+            611,
+            28
+          ],
+          "byte_offsets": [
+            21728,
+            21751
+          ]
+        },
+        "call": {
+          "start": [
+            611,
+            5
+          ],
+          "end_exclusive": [
+            611,
+            27
+          ],
+          "byte_offsets": [
+            21728,
+            21750
+          ]
+        },
+        "argument_zero_literal": {
+          "start": [
+            611,
+            20
+          ],
+          "end_exclusive": [
+            611,
+            26
+          ],
+          "byte_offsets": [
+            21743,
+            21749
+          ]
+        },
+        "optional_call_token": null,
+        "optional_member_token": null
+      },
+      "restart": {
+        "statement": {
+          "start": [
+            612,
+            5
+          ],
+          "end_exclusive": [
+            612,
+            59
+          ],
+          "byte_offsets": [
+            21756,
+            21810
+          ]
+        },
+        "call": {
+          "start": [
+            612,
+            5
+          ],
+          "end_exclusive": [
+            612,
+            58
+          ],
+          "byte_offsets": [
+            21756,
+            21809
+          ]
+        },
+        "argument_zero_literal": {
+          "start": [
+            612,
+            12
+          ],
+          "end_exclusive": [
+            612,
+            57
+          ],
+          "byte_offsets": [
+            21763,
+            21808
+          ]
+        },
+        "optional_call_token": null,
+        "optional_member_token": null
+      },
+      "restart_argument_value": "/etc/init.d/dnsmasq restart >/dev/null 2>&1"
+    },
+    {
+      "case": "smartdns",
+      "case_label": [
+        615,
+        9,
+        615,
+        19
+      ],
+      "commit_receiver": [
+        637,
+        5,
+        637,
+        12
+      ],
+      "commit_property": [
+        637,
+        13,
+        637,
+        19
+      ],
+      "commit_call": [
+        637,
+        5,
+        637,
+        31
+      ],
+      "commit_package": "smartdns",
+      "restart_callee": [
+        638,
+        5,
+        638,
+        11
+      ],
+      "restart_call": [
+        638,
+        5,
+        638,
+        59
+      ],
+      "service": "smartdns",
+      "action": "restart",
+      "literal_suffix": " >/dev/null 2>&1",
+      "enclosing_function_ref": "enclosing_function_expression",
+      "handler_body_ref": "handler_body",
+      "cursor_binding_ref": "cursor_receiver_declaration_name",
+      "status": "positive",
+      "source_statement_ordinals": [
+        4,
+        5
+      ],
+      "case_block": {
+        "start": [
+          615,
+          21
+        ],
+        "end_exclusive": [
+          640,
+          5
+        ],
+        "byte_offsets": [
+          21847,
+          22780
+        ]
+      },
+      "case_source_span": {
+        "start": [
+          615,
+          4
+        ],
+        "end_exclusive": [
+          640,
+          5
+        ],
+        "byte_offsets": [
+          21830,
+          22780
+        ]
+      },
+      "statement_owner": "StatementBlock",
+      "commit": {
+        "statement": {
+          "start": [
+            637,
+            5
+          ],
+          "end_exclusive": [
+            637,
+            32
+          ],
+          "byte_offsets": [
+            22677,
+            22704
+          ]
+        },
+        "call": {
+          "start": [
+            637,
+            5
+          ],
+          "end_exclusive": [
+            637,
+            31
+          ],
+          "byte_offsets": [
+            22677,
+            22703
+          ]
+        },
+        "argument_zero_literal": {
+          "start": [
+            637,
+            20
+          ],
+          "end_exclusive": [
+            637,
+            30
+          ],
+          "byte_offsets": [
+            22692,
+            22702
+          ]
+        },
+        "optional_call_token": null,
+        "optional_member_token": null
+      },
+      "restart": {
+        "statement": {
+          "start": [
+            638,
+            5
+          ],
+          "end_exclusive": [
+            638,
+            60
+          ],
+          "byte_offsets": [
+            22709,
+            22764
+          ]
+        },
+        "call": {
+          "start": [
+            638,
+            5
+          ],
+          "end_exclusive": [
+            638,
+            59
+          ],
+          "byte_offsets": [
+            22709,
+            22763
+          ]
+        },
+        "argument_zero_literal": {
+          "start": [
+            638,
+            12
+          ],
+          "end_exclusive": [
+            638,
+            58
+          ],
+          "byte_offsets": [
+            22716,
+            22762
+          ]
+        },
+        "optional_call_token": null,
+        "optional_member_token": null
+      },
+      "restart_argument_value": "/etc/init.d/smartdns restart >/dev/null 2>&1"
+    },
+    {
+      "case": "unbound",
+      "case_label": [
+        641,
+        9,
+        641,
+        18
+      ],
+      "commit_receiver": [
+        661,
+        5,
+        661,
+        12
+      ],
+      "commit_property": [
+        661,
+        13,
+        661,
+        19
+      ],
+      "commit_call": [
+        661,
+        5,
+        661,
+        30
+      ],
+      "commit_package": "unbound",
+      "restart_callee": [
+        662,
+        5,
+        662,
+        11
+      ],
+      "restart_call": [
+        662,
+        5,
+        662,
+        58
+      ],
+      "service": "unbound",
+      "action": "restart",
+      "literal_suffix": " >/dev/null 2>&1",
+      "enclosing_function_ref": "enclosing_function_expression",
+      "handler_body_ref": "handler_body",
+      "cursor_binding_ref": "cursor_receiver_declaration_name",
+      "status": "positive",
+      "source_statement_ordinals": [
+        3,
+        4
+      ],
+      "case_block": null,
+      "case_source_span": {
+        "start": [
+          641,
+          4
+        ],
+        "end_exclusive": [
+          663,
+          11
+        ],
+        "byte_offsets": [
+          22784,
+          23530
+        ]
+      },
+      "statement_owner": "SwitchCase",
+      "commit": {
+        "statement": {
+          "start": [
+            661,
+            5
+          ],
+          "end_exclusive": [
+            661,
+            31
+          ],
+          "byte_offsets": [
+            23434,
+            23460
+          ]
+        },
+        "call": {
+          "start": [
+            661,
+            5
+          ],
+          "end_exclusive": [
+            661,
+            30
+          ],
+          "byte_offsets": [
+            23434,
+            23459
+          ]
+        },
+        "argument_zero_literal": {
+          "start": [
+            661,
+            20
+          ],
+          "end_exclusive": [
+            661,
+            29
+          ],
+          "byte_offsets": [
+            23449,
+            23458
+          ]
+        },
+        "optional_call_token": null,
+        "optional_member_token": null
+      },
+      "restart": {
+        "statement": {
+          "start": [
+            662,
+            5
+          ],
+          "end_exclusive": [
+            662,
+            59
+          ],
+          "byte_offsets": [
+            23465,
+            23519
+          ]
+        },
+        "call": {
+          "start": [
+            662,
+            5
+          ],
+          "end_exclusive": [
+            662,
+            58
+          ],
+          "byte_offsets": [
+            23465,
+            23518
+          ]
+        },
+        "argument_zero_literal": {
+          "start": [
+            662,
+            12
+          ],
+          "end_exclusive": [
+            662,
+            57
+          ],
+          "byte_offsets": [
+            23472,
+            23517
+          ]
+        },
+        "optional_call_token": null,
+        "optional_member_token": null
+      },
+      "restart_argument_value": "/etc/init.d/unbound restart >/dev/null 2>&1"
+    }
+  ],
+  "controls": [
+    {
+      "id": "positive_matched",
+      "local_path": "controls/positive-matched.uc",
+      "proposed_staged_path": "controls/positive-matched.uc",
+      "bytes": 380,
+      "sha256": "5df2595688cb97476c639ff2548e2e1593dcc969b1dbe44c47cccc81d0cd5336",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 1,
+      "intended_result": "positive",
+      "expected_pair_fields": {
+        "package": "fixture-config",
+        "service": "fixture-service",
+        "action": "restart"
+      },
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            12,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            327
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            12,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            327
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            6,
+            7
+          ],
+          "end_exclusive": [
+            6,
+            23
+          ],
+          "byte_offsets": [
+            127,
+            143
+          ]
+        },
+        "left_case_block": {
+          "start": [
+            7,
+            22
+          ],
+          "end_exclusive": [
+            9,
+            75
+          ],
+          "byte_offsets": [
+            167,
+            287
+          ]
+        },
+        "right_case_block": {
+          "start": [
+            10,
+            23
+          ],
+          "end_exclusive": [
+            10,
+            26
+          ],
+          "byte_offsets": [
+            310,
+            313
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            5,
+            21
+          ],
+          "end_exclusive": [
+            5,
+            29
+          ],
+          "byte_offsets": [
+            111,
+            119
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            5,
+            11
+          ],
+          "end_exclusive": [
+            5,
+            18
+          ],
+          "byte_offsets": [
+            101,
+            108
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              44
+            ],
+            "byte_offsets": [
+              179,
+              212
+            ]
+          },
+          "call": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              43
+            ],
+            "byte_offsets": [
+              179,
+              211
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              8,
+              26
+            ],
+            "end_exclusive": [
+              8,
+              42
+            ],
+            "byte_offsets": [
+              194,
+              210
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              73
+            ],
+            "byte_offsets": [
+              223,
+              285
+            ]
+          },
+          "call": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              72
+            ],
+            "byte_offsets": [
+              223,
+              284
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              9,
+              18
+            ],
+            "end_exclusive": [
+              9,
+              71
+            ],
+            "byte_offsets": [
+              230,
+              283
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "left_case_block",
+        "restart_block": "left_case_block",
+        "source_statement_ordinals": [
+          1,
+          2
+        ],
+        "commit_container_kind": "StatementBlock",
+        "restart_container_kind": "StatementBlock"
+      }
+    },
+    {
+      "id": "cross_case",
+      "local_path": "controls/cross-case.uc",
+      "proposed_staged_path": "controls/cross-case.uc",
+      "bytes": 372,
+      "sha256": "38183a3e5b9e5e96cefdb06861c9f736eebecfb8cdebe35f88b1b762aa5e40ab",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "different_statement_blocks",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            11,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            319
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            11,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            319
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            6,
+            7
+          ],
+          "end_exclusive": [
+            6,
+            23
+          ],
+          "byte_offsets": [
+            127,
+            143
+          ]
+        },
+        "left_case_block": {
+          "start": [
+            7,
+            22
+          ],
+          "end_exclusive": [
+            8,
+            46
+          ],
+          "byte_offsets": [
+            167,
+            214
+          ]
+        },
+        "right_case_block": {
+          "start": [
+            8,
+            61
+          ],
+          "end_exclusive": [
+            9,
+            75
+          ],
+          "byte_offsets": [
+            229,
+            305
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            5,
+            21
+          ],
+          "end_exclusive": [
+            5,
+            29
+          ],
+          "byte_offsets": [
+            111,
+            119
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            5,
+            11
+          ],
+          "end_exclusive": [
+            5,
+            18
+          ],
+          "byte_offsets": [
+            101,
+            108
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              44
+            ],
+            "byte_offsets": [
+              179,
+              212
+            ]
+          },
+          "call": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              43
+            ],
+            "byte_offsets": [
+              179,
+              211
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              8,
+              26
+            ],
+            "end_exclusive": [
+              8,
+              42
+            ],
+            "byte_offsets": [
+              194,
+              210
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              73
+            ],
+            "byte_offsets": [
+              241,
+              303
+            ]
+          },
+          "call": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              72
+            ],
+            "byte_offsets": [
+              241,
+              302
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              9,
+              18
+            ],
+            "end_exclusive": [
+              9,
+              71
+            ],
+            "byte_offsets": [
+              248,
+              301
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "left_case_block",
+        "restart_block": "right_case_block",
+        "source_statement_ordinals": [
+          1,
+          1
+        ],
+        "commit_container_kind": "StatementBlock",
+        "restart_container_kind": "StatementBlock"
+      }
+    },
+    {
+      "id": "commented_restart",
+      "local_path": "controls/commented-restart.uc",
+      "proposed_staged_path": "controls/commented-restart.uc",
+      "bytes": 391,
+      "sha256": "133375edf84da41e089ad08c68b118b54fda7ece08b826540badb86a4df34781",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "no_executable_restart_statement",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            338
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            338
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            6,
+            7
+          ],
+          "end_exclusive": [
+            6,
+            23
+          ],
+          "byte_offsets": [
+            127,
+            143
+          ]
+        },
+        "left_case_block": {
+          "start": [
+            7,
+            22
+          ],
+          "end_exclusive": [
+            10,
+            10
+          ],
+          "byte_offsets": [
+            167,
+            298
+          ]
+        },
+        "right_case_block": {
+          "start": [
+            11,
+            23
+          ],
+          "end_exclusive": [
+            11,
+            26
+          ],
+          "byte_offsets": [
+            321,
+            324
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            5,
+            21
+          ],
+          "end_exclusive": [
+            5,
+            29
+          ],
+          "byte_offsets": [
+            111,
+            119
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            5,
+            11
+          ],
+          "end_exclusive": [
+            5,
+            18
+          ],
+          "byte_offsets": [
+            101,
+            108
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              44
+            ],
+            "byte_offsets": [
+              179,
+              212
+            ]
+          },
+          "call": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              43
+            ],
+            "byte_offsets": [
+              179,
+              211
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              8,
+              26
+            ],
+            "end_exclusive": [
+              8,
+              42
+            ],
+            "byte_offsets": [
+              194,
+              210
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": null,
+        "commit_block": "left_case_block",
+        "restart_block": null,
+        "commented_restart_text": {
+          "start": [
+            9,
+            11
+          ],
+          "end_exclusive": [
+            9,
+            76
+          ],
+          "byte_offsets": [
+            223,
+            288
+          ]
+        },
+        "source_statement_ordinals": [
+          1,
+          null
+        ],
+        "commit_container_kind": "StatementBlock",
+        "restart_container_kind": null
+      }
+    },
+    {
+      "id": "reload",
+      "local_path": "controls/reload.uc",
+      "proposed_staged_path": "controls/reload.uc",
+      "bytes": 379,
+      "sha256": "02fde423faed6d04809de30b2427185c2ec83c845b95a00c97dc67892a317c76",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "unsupported_action",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            12,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            326
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            12,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            326
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            6,
+            7
+          ],
+          "end_exclusive": [
+            6,
+            23
+          ],
+          "byte_offsets": [
+            127,
+            143
+          ]
+        },
+        "left_case_block": {
+          "start": [
+            7,
+            22
+          ],
+          "end_exclusive": [
+            9,
+            74
+          ],
+          "byte_offsets": [
+            167,
+            286
+          ]
+        },
+        "right_case_block": {
+          "start": [
+            10,
+            23
+          ],
+          "end_exclusive": [
+            10,
+            26
+          ],
+          "byte_offsets": [
+            309,
+            312
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            5,
+            21
+          ],
+          "end_exclusive": [
+            5,
+            29
+          ],
+          "byte_offsets": [
+            111,
+            119
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            5,
+            11
+          ],
+          "end_exclusive": [
+            5,
+            18
+          ],
+          "byte_offsets": [
+            101,
+            108
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              44
+            ],
+            "byte_offsets": [
+              179,
+              212
+            ]
+          },
+          "call": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              43
+            ],
+            "byte_offsets": [
+              179,
+              211
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              8,
+              26
+            ],
+            "end_exclusive": [
+              8,
+              42
+            ],
+            "byte_offsets": [
+              194,
+              210
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              72
+            ],
+            "byte_offsets": [
+              223,
+              284
+            ]
+          },
+          "call": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              71
+            ],
+            "byte_offsets": [
+              223,
+              283
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              9,
+              18
+            ],
+            "end_exclusive": [
+              9,
+              70
+            ],
+            "byte_offsets": [
+              230,
+              282
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "left_case_block",
+        "restart_block": "left_case_block",
+        "source_statement_ordinals": [
+          1,
+          2
+        ],
+        "commit_container_kind": "StatementBlock",
+        "restart_container_kind": "StatementBlock"
+      }
+    },
+    {
+      "id": "receiver_shadow",
+      "local_path": "controls/receiver-shadow.uc",
+      "proposed_staged_path": "controls/receiver-shadow.uc",
+      "bytes": 457,
+      "sha256": "092c5e1317bf6989164cd444164de82358528f3fc810a3d10d278df25ad2adda",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "receiver_binding_is_not_cursor",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            404
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            404
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            6,
+            7
+          ],
+          "end_exclusive": [
+            6,
+            23
+          ],
+          "byte_offsets": [
+            127,
+            143
+          ]
+        },
+        "left_case_block": {
+          "start": [
+            7,
+            22
+          ],
+          "end_exclusive": [
+            10,
+            75
+          ],
+          "byte_offsets": [
+            167,
+            364
+          ]
+        },
+        "right_case_block": {
+          "start": [
+            11,
+            23
+          ],
+          "end_exclusive": [
+            11,
+            26
+          ],
+          "byte_offsets": [
+            387,
+            390
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            5,
+            21
+          ],
+          "end_exclusive": [
+            5,
+            29
+          ],
+          "byte_offsets": [
+            111,
+            119
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            5,
+            11
+          ],
+          "end_exclusive": [
+            5,
+            18
+          ],
+          "byte_offsets": [
+            101,
+            108
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              44
+            ],
+            "byte_offsets": [
+              256,
+              289
+            ]
+          },
+          "call": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              43
+            ],
+            "byte_offsets": [
+              256,
+              288
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              9,
+              26
+            ],
+            "end_exclusive": [
+              9,
+              42
+            ],
+            "byte_offsets": [
+              271,
+              287
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              10,
+              11
+            ],
+            "end_exclusive": [
+              10,
+              73
+            ],
+            "byte_offsets": [
+              300,
+              362
+            ]
+          },
+          "call": {
+            "start": [
+              10,
+              11
+            ],
+            "end_exclusive": [
+              10,
+              72
+            ],
+            "byte_offsets": [
+              300,
+              361
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              10,
+              18
+            ],
+            "end_exclusive": [
+              10,
+              71
+            ],
+            "byte_offsets": [
+              307,
+              360
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "left_case_block",
+        "restart_block": "left_case_block",
+        "receiver_shadow_declaration": {
+          "start": [
+            8,
+            11
+          ],
+          "end_exclusive": [
+            8,
+            77
+          ],
+          "byte_offsets": [
+            179,
+            245
+          ]
+        },
+        "source_statement_ordinals": [
+          2,
+          3
+        ],
+        "commit_container_kind": "StatementBlock",
+        "restart_container_kind": "StatementBlock"
+      }
+    },
+    {
+      "id": "cursor_import_shadow",
+      "local_path": "controls/cursor-import-shadow.uc",
+      "proposed_staged_path": "controls/cursor-import-shadow.uc",
+      "bytes": 426,
+      "sha256": "5ee8cae0f8a4cb8a9399d801228f50217c7630449dff2a6ed0c809095fd59ded",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "initializer_target_shadowed",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            373
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            373
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            7,
+            7
+          ],
+          "end_exclusive": [
+            7,
+            23
+          ],
+          "byte_offsets": [
+            173,
+            189
+          ]
+        },
+        "left_case_block": {
+          "start": [
+            8,
+            22
+          ],
+          "end_exclusive": [
+            10,
+            75
+          ],
+          "byte_offsets": [
+            213,
+            333
+          ]
+        },
+        "right_case_block": {
+          "start": [
+            11,
+            23
+          ],
+          "end_exclusive": [
+            11,
+            26
+          ],
+          "byte_offsets": [
+            356,
+            359
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            6,
+            21
+          ],
+          "end_exclusive": [
+            6,
+            29
+          ],
+          "byte_offsets": [
+            157,
+            165
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            6,
+            11
+          ],
+          "end_exclusive": [
+            6,
+            18
+          ],
+          "byte_offsets": [
+            147,
+            154
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              44
+            ],
+            "byte_offsets": [
+              225,
+              258
+            ]
+          },
+          "call": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              43
+            ],
+            "byte_offsets": [
+              225,
+              257
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              9,
+              26
+            ],
+            "end_exclusive": [
+              9,
+              42
+            ],
+            "byte_offsets": [
+              240,
+              256
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              10,
+              11
+            ],
+            "end_exclusive": [
+              10,
+              73
+            ],
+            "byte_offsets": [
+              269,
+              331
+            ]
+          },
+          "call": {
+            "start": [
+              10,
+              11
+            ],
+            "end_exclusive": [
+              10,
+              72
+            ],
+            "byte_offsets": [
+              269,
+              330
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              10,
+              18
+            ],
+            "end_exclusive": [
+              10,
+              71
+            ],
+            "byte_offsets": [
+              276,
+              329
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "left_case_block",
+        "restart_block": "left_case_block",
+        "cursor_shadow_declaration": {
+          "start": [
+            5,
+            7
+          ],
+          "end_exclusive": [
+            5,
+            46
+          ],
+          "byte_offsets": [
+            97,
+            136
+          ]
+        },
+        "source_statement_ordinals": [
+          1,
+          2
+        ],
+        "commit_container_kind": "StatementBlock",
+        "restart_container_kind": "StatementBlock"
+      }
+    },
+    {
+      "id": "system_shadow",
+      "local_path": "controls/system-shadow.uc",
+      "proposed_staged_path": "controls/system-shadow.uc",
+      "bytes": 432,
+      "sha256": "44aef62b57a4c578f48eea019b2991a25e1d6f5c8a130ada2562e675adab272e",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "builtin_callee_not_established",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            379
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            379
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            7,
+            7
+          ],
+          "end_exclusive": [
+            7,
+            23
+          ],
+          "byte_offsets": [
+            179,
+            195
+          ]
+        },
+        "left_case_block": {
+          "start": [
+            8,
+            22
+          ],
+          "end_exclusive": [
+            10,
+            75
+          ],
+          "byte_offsets": [
+            219,
+            339
+          ]
+        },
+        "right_case_block": {
+          "start": [
+            11,
+            23
+          ],
+          "end_exclusive": [
+            11,
+            26
+          ],
+          "byte_offsets": [
+            362,
+            365
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            6,
+            21
+          ],
+          "end_exclusive": [
+            6,
+            29
+          ],
+          "byte_offsets": [
+            163,
+            171
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            6,
+            11
+          ],
+          "end_exclusive": [
+            6,
+            18
+          ],
+          "byte_offsets": [
+            153,
+            160
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              44
+            ],
+            "byte_offsets": [
+              231,
+              264
+            ]
+          },
+          "call": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              43
+            ],
+            "byte_offsets": [
+              231,
+              263
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              9,
+              26
+            ],
+            "end_exclusive": [
+              9,
+              42
+            ],
+            "byte_offsets": [
+              246,
+              262
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              10,
+              11
+            ],
+            "end_exclusive": [
+              10,
+              73
+            ],
+            "byte_offsets": [
+              275,
+              337
+            ]
+          },
+          "call": {
+            "start": [
+              10,
+              11
+            ],
+            "end_exclusive": [
+              10,
+              72
+            ],
+            "byte_offsets": [
+              275,
+              336
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              10,
+              18
+            ],
+            "end_exclusive": [
+              10,
+              71
+            ],
+            "byte_offsets": [
+              282,
+              335
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "left_case_block",
+        "restart_block": "left_case_block",
+        "system_shadow_declaration": {
+          "start": [
+            5,
+            7
+          ],
+          "end_exclusive": [
+            5,
+            52
+          ],
+          "byte_offsets": [
+            97,
+            142
+          ]
+        },
+        "source_statement_ordinals": [
+          1,
+          2
+        ],
+        "commit_container_kind": "StatementBlock",
+        "restart_container_kind": "StatementBlock"
+      }
+    },
+    {
+      "id": "intervening_statement",
+      "local_path": "controls/intervening-statement.uc",
+      "proposed_staged_path": "controls/intervening-statement.uc",
+      "bytes": 406,
+      "sha256": "425473d973c1e3fa6ea69f172b69b47a141af70cb0e0355b64649825ecb949ee",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "nonconsecutive_sibling_statements",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            353
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            353
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            6,
+            7
+          ],
+          "end_exclusive": [
+            6,
+            23
+          ],
+          "byte_offsets": [
+            127,
+            143
+          ]
+        },
+        "left_case_block": {
+          "start": [
+            7,
+            22
+          ],
+          "end_exclusive": [
+            10,
+            75
+          ],
+          "byte_offsets": [
+            167,
+            313
+          ]
+        },
+        "right_case_block": {
+          "start": [
+            11,
+            23
+          ],
+          "end_exclusive": [
+            11,
+            26
+          ],
+          "byte_offsets": [
+            336,
+            339
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            5,
+            21
+          ],
+          "end_exclusive": [
+            5,
+            29
+          ],
+          "byte_offsets": [
+            111,
+            119
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            5,
+            11
+          ],
+          "end_exclusive": [
+            5,
+            18
+          ],
+          "byte_offsets": [
+            101,
+            108
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              44
+            ],
+            "byte_offsets": [
+              179,
+              212
+            ]
+          },
+          "call": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              43
+            ],
+            "byte_offsets": [
+              179,
+              211
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              8,
+              26
+            ],
+            "end_exclusive": [
+              8,
+              42
+            ],
+            "byte_offsets": [
+              194,
+              210
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              10,
+              11
+            ],
+            "end_exclusive": [
+              10,
+              73
+            ],
+            "byte_offsets": [
+              249,
+              311
+            ]
+          },
+          "call": {
+            "start": [
+              10,
+              11
+            ],
+            "end_exclusive": [
+              10,
+              72
+            ],
+            "byte_offsets": [
+              249,
+              310
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              10,
+              18
+            ],
+            "end_exclusive": [
+              10,
+              71
+            ],
+            "byte_offsets": [
+              256,
+              309
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "left_case_block",
+        "restart_block": "left_case_block",
+        "intervening_executable_statement": {
+          "start": [
+            9,
+            11
+          ],
+          "end_exclusive": [
+            9,
+            26
+          ],
+          "byte_offsets": [
+            223,
+            238
+          ]
+        },
+        "source_statement_ordinals": [
+          1,
+          3
+        ],
+        "commit_container_kind": "StatementBlock",
+        "restart_container_kind": "StatementBlock"
+      }
+    },
+    {
+      "id": "intervening_comment",
+      "local_path": "controls/intervening-comment.uc",
+      "proposed_staged_path": "controls/intervening-comment.uc",
+      "bytes": 446,
+      "sha256": "912dd7010a3d5ecc8d8c405a8cb5d27058750943bc132201c6b89c4163d3ac29",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 1,
+      "intended_result": "comments_ignored_for_adjacency",
+      "expected_pair_fields": {
+        "package": "fixture-config",
+        "service": "fixture-service",
+        "action": "restart"
+      },
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            393
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            393
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            6,
+            7
+          ],
+          "end_exclusive": [
+            6,
+            23
+          ],
+          "byte_offsets": [
+            127,
+            143
+          ]
+        },
+        "left_case_block": {
+          "start": [
+            7,
+            22
+          ],
+          "end_exclusive": [
+            10,
+            75
+          ],
+          "byte_offsets": [
+            167,
+            353
+          ]
+        },
+        "right_case_block": {
+          "start": [
+            11,
+            23
+          ],
+          "end_exclusive": [
+            11,
+            26
+          ],
+          "byte_offsets": [
+            376,
+            379
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            5,
+            21
+          ],
+          "end_exclusive": [
+            5,
+            29
+          ],
+          "byte_offsets": [
+            111,
+            119
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            5,
+            11
+          ],
+          "end_exclusive": [
+            5,
+            18
+          ],
+          "byte_offsets": [
+            101,
+            108
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              44
+            ],
+            "byte_offsets": [
+              179,
+              212
+            ]
+          },
+          "call": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              43
+            ],
+            "byte_offsets": [
+              179,
+              211
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              8,
+              26
+            ],
+            "end_exclusive": [
+              8,
+              42
+            ],
+            "byte_offsets": [
+              194,
+              210
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              10,
+              11
+            ],
+            "end_exclusive": [
+              10,
+              73
+            ],
+            "byte_offsets": [
+              289,
+              351
+            ]
+          },
+          "call": {
+            "start": [
+              10,
+              11
+            ],
+            "end_exclusive": [
+              10,
+              72
+            ],
+            "byte_offsets": [
+              289,
+              350
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              10,
+              18
+            ],
+            "end_exclusive": [
+              10,
+              71
+            ],
+            "byte_offsets": [
+              296,
+              349
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "left_case_block",
+        "restart_block": "left_case_block",
+        "intervening_comment": {
+          "start": [
+            9,
+            11
+          ],
+          "end_exclusive": [
+            9,
+            66
+          ],
+          "byte_offsets": [
+            223,
+            278
+          ]
+        },
+        "source_statement_ordinals": [
+          1,
+          2
+        ],
+        "commit_container_kind": "StatementBlock",
+        "restart_container_kind": "StatementBlock"
+      }
+    },
+    {
+      "id": "reverse_order",
+      "local_path": "controls/reverse-order.uc",
+      "proposed_staged_path": "controls/reverse-order.uc",
+      "bytes": 380,
+      "sha256": "eeebf959e8a4d0eb2d8257f4c7521f3a1d568d2f4901fda8853bb296a66068a2",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "wrong_order",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            12,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            327
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            12,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            327
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            6,
+            7
+          ],
+          "end_exclusive": [
+            6,
+            23
+          ],
+          "byte_offsets": [
+            127,
+            143
+          ]
+        },
+        "left_case_block": {
+          "start": [
+            7,
+            22
+          ],
+          "end_exclusive": [
+            9,
+            46
+          ],
+          "byte_offsets": [
+            167,
+            287
+          ]
+        },
+        "right_case_block": {
+          "start": [
+            10,
+            23
+          ],
+          "end_exclusive": [
+            10,
+            26
+          ],
+          "byte_offsets": [
+            310,
+            313
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            5,
+            21
+          ],
+          "end_exclusive": [
+            5,
+            29
+          ],
+          "byte_offsets": [
+            111,
+            119
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            5,
+            11
+          ],
+          "end_exclusive": [
+            5,
+            18
+          ],
+          "byte_offsets": [
+            101,
+            108
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              44
+            ],
+            "byte_offsets": [
+              252,
+              285
+            ]
+          },
+          "call": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              43
+            ],
+            "byte_offsets": [
+              252,
+              284
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              9,
+              26
+            ],
+            "end_exclusive": [
+              9,
+              42
+            ],
+            "byte_offsets": [
+              267,
+              283
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              73
+            ],
+            "byte_offsets": [
+              179,
+              241
+            ]
+          },
+          "call": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              72
+            ],
+            "byte_offsets": [
+              179,
+              240
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              8,
+              18
+            ],
+            "end_exclusive": [
+              8,
+              71
+            ],
+            "byte_offsets": [
+              186,
+              239
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "left_case_block",
+        "restart_block": "left_case_block",
+        "source_statement_ordinals": [
+          2,
+          1
+        ],
+        "commit_container_kind": "StatementBlock",
+        "restart_container_kind": "StatementBlock"
+      }
+    },
+    {
+      "id": "restart_only",
+      "local_path": "controls/restart-only.uc",
+      "proposed_staged_path": "controls/restart-only.uc",
+      "bytes": 336,
+      "sha256": "8231bc99ca3d57e4aa5c5a8c728758e8090a3017b985c6b299fc32f2400fe9e9",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "no_commit",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            11,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            283
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            11,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            283
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            6,
+            7
+          ],
+          "end_exclusive": [
+            6,
+            23
+          ],
+          "byte_offsets": [
+            127,
+            143
+          ]
+        },
+        "left_case_block": {
+          "start": [
+            7,
+            22
+          ],
+          "end_exclusive": [
+            8,
+            75
+          ],
+          "byte_offsets": [
+            167,
+            243
+          ]
+        },
+        "right_case_block": {
+          "start": [
+            9,
+            23
+          ],
+          "end_exclusive": [
+            9,
+            26
+          ],
+          "byte_offsets": [
+            266,
+            269
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            5,
+            21
+          ],
+          "end_exclusive": [
+            5,
+            29
+          ],
+          "byte_offsets": [
+            111,
+            119
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            5,
+            11
+          ],
+          "end_exclusive": [
+            5,
+            18
+          ],
+          "byte_offsets": [
+            101,
+            108
+          ]
+        },
+        "commit": null,
+        "restart": {
+          "statement": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              73
+            ],
+            "byte_offsets": [
+              179,
+              241
+            ]
+          },
+          "call": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              72
+            ],
+            "byte_offsets": [
+              179,
+              240
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              8,
+              18
+            ],
+            "end_exclusive": [
+              8,
+              71
+            ],
+            "byte_offsets": [
+              186,
+              239
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": null,
+        "restart_block": "left_case_block",
+        "source_statement_ordinals": [
+          null,
+          1
+        ],
+        "commit_container_kind": null,
+        "restart_container_kind": "StatementBlock"
+      }
+    },
+    {
+      "id": "receiver_reassignment",
+      "local_path": "controls/receiver-reassignment.uc",
+      "proposed_staged_path": "controls/receiver-reassignment.uc",
+      "bytes": 449,
+      "sha256": "6009cd462611dd9deaa18b733a3377647728abb51601f98c4c32bb1390fd8dff",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "receiver_reassigned",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            396
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            396
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            7,
+            7
+          ],
+          "end_exclusive": [
+            7,
+            23
+          ],
+          "byte_offsets": [
+            196,
+            212
+          ]
+        },
+        "left_case_block": {
+          "start": [
+            8,
+            22
+          ],
+          "end_exclusive": [
+            10,
+            75
+          ],
+          "byte_offsets": [
+            236,
+            356
+          ]
+        },
+        "right_case_block": {
+          "start": [
+            11,
+            23
+          ],
+          "end_exclusive": [
+            11,
+            26
+          ],
+          "byte_offsets": [
+            379,
+            382
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            5,
+            21
+          ],
+          "end_exclusive": [
+            5,
+            29
+          ],
+          "byte_offsets": [
+            111,
+            119
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            5,
+            11
+          ],
+          "end_exclusive": [
+            5,
+            18
+          ],
+          "byte_offsets": [
+            101,
+            108
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              44
+            ],
+            "byte_offsets": [
+              248,
+              281
+            ]
+          },
+          "call": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              43
+            ],
+            "byte_offsets": [
+              248,
+              280
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              9,
+              26
+            ],
+            "end_exclusive": [
+              9,
+              42
+            ],
+            "byte_offsets": [
+              263,
+              279
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              10,
+              11
+            ],
+            "end_exclusive": [
+              10,
+              73
+            ],
+            "byte_offsets": [
+              292,
+              354
+            ]
+          },
+          "call": {
+            "start": [
+              10,
+              11
+            ],
+            "end_exclusive": [
+              10,
+              72
+            ],
+            "byte_offsets": [
+              292,
+              353
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              10,
+              18
+            ],
+            "end_exclusive": [
+              10,
+              71
+            ],
+            "byte_offsets": [
+              299,
+              352
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "left_case_block",
+        "restart_block": "left_case_block",
+        "receiver_assignment": {
+          "start": [
+            6,
+            7
+          ],
+          "end_exclusive": [
+            6,
+            69
+          ],
+          "byte_offsets": [
+            127,
+            189
+          ]
+        },
+        "source_statement_ordinals": [
+          1,
+          2
+        ],
+        "commit_container_kind": "StatementBlock",
+        "restart_container_kind": "StatementBlock"
+      }
+    },
+    {
+      "id": "fixed_token_boundary",
+      "local_path": "controls/fixed-token-boundary.uc",
+      "proposed_staged_path": "controls/fixed-token-boundary.uc",
+      "bytes": 384,
+      "sha256": "0a6266e552e628f4518dc32f139d847f6790448a166b1dd66299c54e374cca54",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "unsupported_action",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            12,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            331
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            12,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            331
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            6,
+            7
+          ],
+          "end_exclusive": [
+            6,
+            23
+          ],
+          "byte_offsets": [
+            127,
+            143
+          ]
+        },
+        "left_case_block": {
+          "start": [
+            7,
+            22
+          ],
+          "end_exclusive": [
+            9,
+            79
+          ],
+          "byte_offsets": [
+            167,
+            291
+          ]
+        },
+        "right_case_block": {
+          "start": [
+            10,
+            23
+          ],
+          "end_exclusive": [
+            10,
+            26
+          ],
+          "byte_offsets": [
+            314,
+            317
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            5,
+            21
+          ],
+          "end_exclusive": [
+            5,
+            29
+          ],
+          "byte_offsets": [
+            111,
+            119
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            5,
+            11
+          ],
+          "end_exclusive": [
+            5,
+            18
+          ],
+          "byte_offsets": [
+            101,
+            108
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              44
+            ],
+            "byte_offsets": [
+              179,
+              212
+            ]
+          },
+          "call": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              43
+            ],
+            "byte_offsets": [
+              179,
+              211
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              8,
+              26
+            ],
+            "end_exclusive": [
+              8,
+              42
+            ],
+            "byte_offsets": [
+              194,
+              210
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              77
+            ],
+            "byte_offsets": [
+              223,
+              289
+            ]
+          },
+          "call": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              76
+            ],
+            "byte_offsets": [
+              223,
+              288
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              9,
+              18
+            ],
+            "end_exclusive": [
+              9,
+              75
+            ],
+            "byte_offsets": [
+              230,
+              287
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "left_case_block",
+        "restart_block": "left_case_block",
+        "source_statement_ordinals": [
+          1,
+          2
+        ],
+        "commit_container_kind": "StatementBlock",
+        "restart_container_kind": "StatementBlock"
+      }
+    },
+    {
+      "id": "system_reassignment",
+      "local_path": "controls/system-reassignment.uc",
+      "proposed_staged_path": "controls/system-reassignment.uc",
+      "bytes": 428,
+      "sha256": "d330d80e1e0583f796169ad92337bd412afa544f9268f7fa1d4059047f6024af",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "builtin_callee_write",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            375
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            375
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            7,
+            7
+          ],
+          "end_exclusive": [
+            7,
+            23
+          ],
+          "byte_offsets": [
+            175,
+            191
+          ]
+        },
+        "left_case_block": {
+          "start": [
+            8,
+            22
+          ],
+          "end_exclusive": [
+            10,
+            75
+          ],
+          "byte_offsets": [
+            215,
+            335
+          ]
+        },
+        "right_case_block": {
+          "start": [
+            11,
+            23
+          ],
+          "end_exclusive": [
+            11,
+            26
+          ],
+          "byte_offsets": [
+            358,
+            361
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            6,
+            21
+          ],
+          "end_exclusive": [
+            6,
+            29
+          ],
+          "byte_offsets": [
+            159,
+            167
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            6,
+            11
+          ],
+          "end_exclusive": [
+            6,
+            18
+          ],
+          "byte_offsets": [
+            149,
+            156
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              44
+            ],
+            "byte_offsets": [
+              227,
+              260
+            ]
+          },
+          "call": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              43
+            ],
+            "byte_offsets": [
+              227,
+              259
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              9,
+              26
+            ],
+            "end_exclusive": [
+              9,
+              42
+            ],
+            "byte_offsets": [
+              242,
+              258
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              10,
+              11
+            ],
+            "end_exclusive": [
+              10,
+              73
+            ],
+            "byte_offsets": [
+              271,
+              333
+            ]
+          },
+          "call": {
+            "start": [
+              10,
+              11
+            ],
+            "end_exclusive": [
+              10,
+              72
+            ],
+            "byte_offsets": [
+              271,
+              332
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              10,
+              18
+            ],
+            "end_exclusive": [
+              10,
+              71
+            ],
+            "byte_offsets": [
+              278,
+              331
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "left_case_block",
+        "restart_block": "left_case_block",
+        "system_assignment": {
+          "start": [
+            5,
+            7
+          ],
+          "end_exclusive": [
+            5,
+            48
+          ],
+          "byte_offsets": [
+            97,
+            138
+          ]
+        },
+        "source_statement_ordinals": [
+          1,
+          2
+        ],
+        "commit_container_kind": "StatementBlock",
+        "restart_container_kind": "StatementBlock"
+      }
+    },
+    {
+      "id": "cursor_reassignment",
+      "local_path": "controls/cursor-reassignment.uc",
+      "proposed_staged_path": "controls/cursor-reassignment.uc",
+      "bytes": 422,
+      "sha256": "cb008d11b1437e21d11ed2021ed4c5041ca19b94ee17e53059d50de4fa72f198",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "initializer_binding_write",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            369
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            369
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            7,
+            7
+          ],
+          "end_exclusive": [
+            7,
+            23
+          ],
+          "byte_offsets": [
+            169,
+            185
+          ]
+        },
+        "left_case_block": {
+          "start": [
+            8,
+            22
+          ],
+          "end_exclusive": [
+            10,
+            75
+          ],
+          "byte_offsets": [
+            209,
+            329
+          ]
+        },
+        "right_case_block": {
+          "start": [
+            11,
+            23
+          ],
+          "end_exclusive": [
+            11,
+            26
+          ],
+          "byte_offsets": [
+            352,
+            355
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            6,
+            21
+          ],
+          "end_exclusive": [
+            6,
+            29
+          ],
+          "byte_offsets": [
+            153,
+            161
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            6,
+            11
+          ],
+          "end_exclusive": [
+            6,
+            18
+          ],
+          "byte_offsets": [
+            143,
+            150
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              44
+            ],
+            "byte_offsets": [
+              221,
+              254
+            ]
+          },
+          "call": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              43
+            ],
+            "byte_offsets": [
+              221,
+              253
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              9,
+              26
+            ],
+            "end_exclusive": [
+              9,
+              42
+            ],
+            "byte_offsets": [
+              236,
+              252
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              10,
+              11
+            ],
+            "end_exclusive": [
+              10,
+              73
+            ],
+            "byte_offsets": [
+              265,
+              327
+            ]
+          },
+          "call": {
+            "start": [
+              10,
+              11
+            ],
+            "end_exclusive": [
+              10,
+              72
+            ],
+            "byte_offsets": [
+              265,
+              326
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              10,
+              18
+            ],
+            "end_exclusive": [
+              10,
+              71
+            ],
+            "byte_offsets": [
+              272,
+              325
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "left_case_block",
+        "restart_block": "left_case_block",
+        "cursor_assignment": {
+          "start": [
+            5,
+            7
+          ],
+          "end_exclusive": [
+            5,
+            42
+          ],
+          "byte_offsets": [
+            97,
+            132
+          ]
+        },
+        "source_statement_ordinals": [
+          1,
+          2
+        ],
+        "commit_container_kind": "StatementBlock",
+        "restart_container_kind": "StatementBlock"
+      }
+    },
+    {
+      "id": "optional_commit_call",
+      "local_path": "controls/optional-commit-call.uc",
+      "proposed_staged_path": "controls/optional-commit-call.uc",
+      "bytes": 382,
+      "sha256": "738d694276ad08bca04c35e5ece0cbece0f2702594d22e9e852d4eddbd3f4af2",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "unsupported_optional_commit_call",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            12,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            329
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            12,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            329
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            6,
+            7
+          ],
+          "end_exclusive": [
+            6,
+            23
+          ],
+          "byte_offsets": [
+            127,
+            143
+          ]
+        },
+        "left_case_block": {
+          "start": [
+            7,
+            22
+          ],
+          "end_exclusive": [
+            9,
+            75
+          ],
+          "byte_offsets": [
+            167,
+            289
+          ]
+        },
+        "right_case_block": {
+          "start": [
+            10,
+            23
+          ],
+          "end_exclusive": [
+            10,
+            26
+          ],
+          "byte_offsets": [
+            312,
+            315
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            5,
+            21
+          ],
+          "end_exclusive": [
+            5,
+            29
+          ],
+          "byte_offsets": [
+            111,
+            119
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            5,
+            11
+          ],
+          "end_exclusive": [
+            5,
+            18
+          ],
+          "byte_offsets": [
+            101,
+            108
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              46
+            ],
+            "byte_offsets": [
+              179,
+              214
+            ]
+          },
+          "call": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              45
+            ],
+            "byte_offsets": [
+              179,
+              213
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              8,
+              28
+            ],
+            "end_exclusive": [
+              8,
+              44
+            ],
+            "byte_offsets": [
+              196,
+              212
+            ]
+          },
+          "optional_call_token": {
+            "start": [
+              8,
+              25
+            ],
+            "end_exclusive": [
+              8,
+              27
+            ],
+            "byte_offsets": [
+              193,
+              195
+            ]
+          },
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              73
+            ],
+            "byte_offsets": [
+              225,
+              287
+            ]
+          },
+          "call": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              72
+            ],
+            "byte_offsets": [
+              225,
+              286
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              9,
+              18
+            ],
+            "end_exclusive": [
+              9,
+              71
+            ],
+            "byte_offsets": [
+              232,
+              285
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "left_case_block",
+        "restart_block": "left_case_block",
+        "source_statement_ordinals": [
+          1,
+          2
+        ],
+        "commit_container_kind": "StatementBlock",
+        "restart_container_kind": "StatementBlock"
+      }
+    },
+    {
+      "id": "optional_commit_member",
+      "local_path": "controls/optional-commit-member.uc",
+      "proposed_staged_path": "controls/optional-commit-member.uc",
+      "bytes": 381,
+      "sha256": "77c1e8616dc11e6d6be73b3d0036ef3d8b082acae95b54f77a89d10bffdd3856",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "unsupported_optional_commit_member",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            12,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            328
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            12,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            328
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            6,
+            7
+          ],
+          "end_exclusive": [
+            6,
+            23
+          ],
+          "byte_offsets": [
+            127,
+            143
+          ]
+        },
+        "left_case_block": {
+          "start": [
+            7,
+            22
+          ],
+          "end_exclusive": [
+            9,
+            75
+          ],
+          "byte_offsets": [
+            167,
+            288
+          ]
+        },
+        "right_case_block": {
+          "start": [
+            10,
+            23
+          ],
+          "end_exclusive": [
+            10,
+            26
+          ],
+          "byte_offsets": [
+            311,
+            314
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            5,
+            21
+          ],
+          "end_exclusive": [
+            5,
+            29
+          ],
+          "byte_offsets": [
+            111,
+            119
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            5,
+            11
+          ],
+          "end_exclusive": [
+            5,
+            18
+          ],
+          "byte_offsets": [
+            101,
+            108
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              45
+            ],
+            "byte_offsets": [
+              179,
+              213
+            ]
+          },
+          "call": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              44
+            ],
+            "byte_offsets": [
+              179,
+              212
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              8,
+              27
+            ],
+            "end_exclusive": [
+              8,
+              43
+            ],
+            "byte_offsets": [
+              195,
+              211
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": {
+            "start": [
+              8,
+              18
+            ],
+            "end_exclusive": [
+              8,
+              20
+            ],
+            "byte_offsets": [
+              186,
+              188
+            ]
+          }
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              73
+            ],
+            "byte_offsets": [
+              224,
+              286
+            ]
+          },
+          "call": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              72
+            ],
+            "byte_offsets": [
+              224,
+              285
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              9,
+              18
+            ],
+            "end_exclusive": [
+              9,
+              71
+            ],
+            "byte_offsets": [
+              231,
+              284
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "left_case_block",
+        "restart_block": "left_case_block",
+        "source_statement_ordinals": [
+          1,
+          2
+        ],
+        "commit_container_kind": "StatementBlock",
+        "restart_container_kind": "StatementBlock"
+      }
+    },
+    {
+      "id": "optional_system_call",
+      "local_path": "controls/optional-system-call.uc",
+      "proposed_staged_path": "controls/optional-system-call.uc",
+      "bytes": 382,
+      "sha256": "ee38ba073fe79047ba9926856a79eac598902f0790175f25e66fca7372bc90ef",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "unsupported_optional_system_call",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            12,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            329
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            12,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            329
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            6,
+            7
+          ],
+          "end_exclusive": [
+            6,
+            23
+          ],
+          "byte_offsets": [
+            127,
+            143
+          ]
+        },
+        "left_case_block": {
+          "start": [
+            7,
+            22
+          ],
+          "end_exclusive": [
+            9,
+            77
+          ],
+          "byte_offsets": [
+            167,
+            289
+          ]
+        },
+        "right_case_block": {
+          "start": [
+            10,
+            23
+          ],
+          "end_exclusive": [
+            10,
+            26
+          ],
+          "byte_offsets": [
+            312,
+            315
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            5,
+            21
+          ],
+          "end_exclusive": [
+            5,
+            29
+          ],
+          "byte_offsets": [
+            111,
+            119
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            5,
+            11
+          ],
+          "end_exclusive": [
+            5,
+            18
+          ],
+          "byte_offsets": [
+            101,
+            108
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              44
+            ],
+            "byte_offsets": [
+              179,
+              212
+            ]
+          },
+          "call": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              43
+            ],
+            "byte_offsets": [
+              179,
+              211
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              8,
+              26
+            ],
+            "end_exclusive": [
+              8,
+              42
+            ],
+            "byte_offsets": [
+              194,
+              210
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              75
+            ],
+            "byte_offsets": [
+              223,
+              287
+            ]
+          },
+          "call": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              74
+            ],
+            "byte_offsets": [
+              223,
+              286
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              9,
+              20
+            ],
+            "end_exclusive": [
+              9,
+              73
+            ],
+            "byte_offsets": [
+              232,
+              285
+            ]
+          },
+          "optional_call_token": {
+            "start": [
+              9,
+              17
+            ],
+            "end_exclusive": [
+              9,
+              19
+            ],
+            "byte_offsets": [
+              229,
+              231
+            ]
+          },
+          "optional_member_token": null
+        },
+        "commit_block": "left_case_block",
+        "restart_block": "left_case_block",
+        "source_statement_ordinals": [
+          1,
+          2
+        ],
+        "commit_container_kind": "StatementBlock",
+        "restart_container_kind": "StatementBlock"
+      }
+    },
+    {
+      "id": "positive_unbraced_case",
+      "local_path": "controls/positive-unbraced-case.uc",
+      "proposed_staged_path": "controls/positive-unbraced-case.uc",
+      "bytes": 395,
+      "sha256": "01d816812d0c16d84980597ab2d608e5a9d4716ced37478337b35d1976810570",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 1,
+      "intended_result": "positive",
+      "expected_pair_fields": {
+        "package": "fixture-config",
+        "service": "fixture-service",
+        "action": "restart"
+      },
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            342
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            342
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            6,
+            7
+          ],
+          "end_exclusive": [
+            6,
+            23
+          ],
+          "byte_offsets": [
+            127,
+            143
+          ]
+        },
+        "left_switch_case": {
+          "start": [
+            7,
+            9
+          ],
+          "end_exclusive": [
+            9,
+            73
+          ],
+          "byte_offsets": [
+            154,
+            283
+          ]
+        },
+        "right_switch_case": {
+          "start": [
+            10,
+            9
+          ],
+          "end_exclusive": [
+            11,
+            23
+          ],
+          "byte_offsets": [
+            292,
+            328
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            5,
+            21
+          ],
+          "end_exclusive": [
+            5,
+            29
+          ],
+          "byte_offsets": [
+            111,
+            119
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              44
+            ],
+            "byte_offsets": [
+              177,
+              210
+            ]
+          },
+          "call": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              43
+            ],
+            "byte_offsets": [
+              177,
+              209
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              8,
+              26
+            ],
+            "end_exclusive": [
+              8,
+              42
+            ],
+            "byte_offsets": [
+              192,
+              208
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              73
+            ],
+            "byte_offsets": [
+              221,
+              283
+            ]
+          },
+          "call": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              72
+            ],
+            "byte_offsets": [
+              221,
+              282
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              9,
+              18
+            ],
+            "end_exclusive": [
+              9,
+              71
+            ],
+            "byte_offsets": [
+              228,
+              281
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "left_switch_case",
+        "restart_block": "left_switch_case",
+        "commit_container_kind": "SwitchCase",
+        "restart_container_kind": "SwitchCase",
+        "source_statement_ordinals": [
+          1,
+          2
+        ],
+        "cursor_receiver_binding": {
+          "start": [
+            5,
+            11
+          ],
+          "end_exclusive": [
+            5,
+            18
+          ],
+          "byte_offsets": [
+            101,
+            108
+          ]
+        }
+      }
+    },
+    {
+      "id": "cross_unbraced_case",
+      "local_path": "controls/cross-unbraced-case.uc",
+      "proposed_staged_path": "controls/cross-unbraced-case.uc",
+      "bytes": 387,
+      "sha256": "fecfc0e80302500fca3b923c24ae3dd290f1ff2b7f30f7f1b4609aa96a0c1e68",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "different_switch_cases",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            12,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            334
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            12,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            334
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "switch_header": {
+          "start": [
+            6,
+            7
+          ],
+          "end_exclusive": [
+            6,
+            23
+          ],
+          "byte_offsets": [
+            127,
+            143
+          ]
+        },
+        "left_switch_case": {
+          "start": [
+            7,
+            9
+          ],
+          "end_exclusive": [
+            8,
+            44
+          ],
+          "byte_offsets": [
+            154,
+            210
+          ]
+        },
+        "right_switch_case": {
+          "start": [
+            8,
+            45
+          ],
+          "end_exclusive": [
+            10,
+            23
+          ],
+          "byte_offsets": [
+            211,
+            320
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            5,
+            21
+          ],
+          "end_exclusive": [
+            5,
+            29
+          ],
+          "byte_offsets": [
+            111,
+            119
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              44
+            ],
+            "byte_offsets": [
+              177,
+              210
+            ]
+          },
+          "call": {
+            "start": [
+              8,
+              11
+            ],
+            "end_exclusive": [
+              8,
+              43
+            ],
+            "byte_offsets": [
+              177,
+              209
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              8,
+              26
+            ],
+            "end_exclusive": [
+              8,
+              42
+            ],
+            "byte_offsets": [
+              192,
+              208
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              73
+            ],
+            "byte_offsets": [
+              235,
+              297
+            ]
+          },
+          "call": {
+            "start": [
+              9,
+              11
+            ],
+            "end_exclusive": [
+              9,
+              72
+            ],
+            "byte_offsets": [
+              235,
+              296
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              9,
+              18
+            ],
+            "end_exclusive": [
+              9,
+              71
+            ],
+            "byte_offsets": [
+              242,
+              295
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "left_switch_case",
+        "restart_block": "right_switch_case",
+        "commit_container_kind": "SwitchCase",
+        "restart_container_kind": "SwitchCase",
+        "source_statement_ordinals": [
+          1,
+          1
+        ],
+        "cursor_receiver_binding": {
+          "start": [
+            5,
+            11
+          ],
+          "end_exclusive": [
+            5,
+            18
+          ],
+          "byte_offsets": [
+            101,
+            108
+          ]
+        }
+      }
+    },
+    {
+      "id": "cross_owner_ordinal_braced",
+      "local_path": "controls/cross-owner-ordinal-braced.uc",
+      "proposed_staged_path": "controls/cross-owner-ordinal-braced.uc",
+      "bytes": 397,
+      "sha256": "637fa3e40d601bb55b593a30d88b2e4ca5757604c2306aba7b356eb9e84cc9af",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "different_statement_container_identities",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            344
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            13,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            344
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            5,
+            21
+          ],
+          "end_exclusive": [
+            5,
+            29
+          ],
+          "byte_offsets": [
+            111,
+            119
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            5,
+            11
+          ],
+          "end_exclusive": [
+            5,
+            18
+          ],
+          "byte_offsets": [
+            101,
+            108
+          ]
+        },
+        "inner_statement_owner": {
+          "start": [
+            8,
+            11
+          ],
+          "end_exclusive": [
+            9,
+            48
+          ],
+          "byte_offsets": [
+            180,
+            229
+          ]
+        },
+        "outer_statement_owner": {
+          "start": [
+            7,
+            23
+          ],
+          "end_exclusive": [
+            10,
+            75
+          ],
+          "byte_offsets": [
+            168,
+            304
+          ]
+        },
+        "outer_owner_first_statement": {
+          "start": [
+            8,
+            11
+          ],
+          "end_exclusive": [
+            9,
+            48
+          ],
+          "byte_offsets": [
+            180,
+            229
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              9,
+              13
+            ],
+            "end_exclusive": [
+              9,
+              46
+            ],
+            "byte_offsets": [
+              194,
+              227
+            ]
+          },
+          "call": {
+            "start": [
+              9,
+              13
+            ],
+            "end_exclusive": [
+              9,
+              45
+            ],
+            "byte_offsets": [
+              194,
+              226
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              9,
+              28
+            ],
+            "end_exclusive": [
+              9,
+              44
+            ],
+            "byte_offsets": [
+              209,
+              225
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              10,
+              11
+            ],
+            "end_exclusive": [
+              10,
+              73
+            ],
+            "byte_offsets": [
+              240,
+              302
+            ]
+          },
+          "call": {
+            "start": [
+              10,
+              11
+            ],
+            "end_exclusive": [
+              10,
+              72
+            ],
+            "byte_offsets": [
+              240,
+              301
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              10,
+              18
+            ],
+            "end_exclusive": [
+              10,
+              71
+            ],
+            "byte_offsets": [
+              247,
+              300
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "inner_statement_owner",
+        "restart_block": "outer_statement_owner",
+        "commit_container_kind": "StatementBlock",
+        "restart_container_kind": "StatementBlock",
+        "source_statement_ordinals": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "cross_owner_ordinal_unbraced",
+      "local_path": "controls/cross-owner-ordinal-unbraced.uc",
+      "proposed_staged_path": "controls/cross-owner-ordinal-unbraced.uc",
+      "bytes": 457,
+      "sha256": "683076d3c86ea296fc7f76aeb51d1d243c9a96634c3cf59a7ebadb1d6f1500c3",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      "expected_pair_count": 0,
+      "intended_result": "different_statement_container_identities",
+      "expected_pair_fields": null,
+      "source_anchors": {
+        "enclosing_function": {
+          "start": [
+            4,
+            11
+          ],
+          "end_exclusive": [
+            15,
+            6
+          ],
+          "byte_offsets": [
+            71,
+            404
+          ]
+        },
+        "handler_body": {
+          "start": [
+            4,
+            29
+          ],
+          "end_exclusive": [
+            15,
+            6
+          ],
+          "byte_offsets": [
+            89,
+            404
+          ]
+        },
+        "handler_key": {
+          "start": [
+            3,
+            3
+          ],
+          "end_exclusive": [
+            3,
+            10
+          ],
+          "byte_offsets": [
+            50,
+            57
+          ]
+        },
+        "cursor_import_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            16
+          ],
+          "byte_offsets": [
+            9,
+            15
+          ]
+        },
+        "cursor_import_module": {
+          "start": [
+            1,
+            24
+          ],
+          "end_exclusive": [
+            1,
+            29
+          ],
+          "byte_offsets": [
+            23,
+            28
+          ]
+        },
+        "cursor_initializer": {
+          "start": [
+            5,
+            21
+          ],
+          "end_exclusive": [
+            5,
+            29
+          ],
+          "byte_offsets": [
+            111,
+            119
+          ]
+        },
+        "cursor_receiver_binding": {
+          "start": [
+            5,
+            11
+          ],
+          "end_exclusive": [
+            5,
+            18
+          ],
+          "byte_offsets": [
+            101,
+            108
+          ]
+        },
+        "inner_statement_owner": {
+          "start": [
+            9,
+            13
+          ],
+          "end_exclusive": [
+            10,
+            48
+          ],
+          "byte_offsets": [
+            209,
+            270
+          ]
+        },
+        "outer_statement_owner": {
+          "start": [
+            7,
+            9
+          ],
+          "end_exclusive": [
+            11,
+            73
+          ],
+          "byte_offsets": [
+            154,
+            345
+          ]
+        },
+        "outer_owner_first_statement": {
+          "start": [
+            8,
+            11
+          ],
+          "end_exclusive": [
+            10,
+            50
+          ],
+          "byte_offsets": [
+            178,
+            272
+          ]
+        },
+        "commit": {
+          "statement": {
+            "start": [
+              10,
+              15
+            ],
+            "end_exclusive": [
+              10,
+              48
+            ],
+            "byte_offsets": [
+              237,
+              270
+            ]
+          },
+          "call": {
+            "start": [
+              10,
+              15
+            ],
+            "end_exclusive": [
+              10,
+              47
+            ],
+            "byte_offsets": [
+              237,
+              269
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              10,
+              30
+            ],
+            "end_exclusive": [
+              10,
+              46
+            ],
+            "byte_offsets": [
+              252,
+              268
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "restart": {
+          "statement": {
+            "start": [
+              11,
+              11
+            ],
+            "end_exclusive": [
+              11,
+              73
+            ],
+            "byte_offsets": [
+              283,
+              345
+            ]
+          },
+          "call": {
+            "start": [
+              11,
+              11
+            ],
+            "end_exclusive": [
+              11,
+              72
+            ],
+            "byte_offsets": [
+              283,
+              344
+            ]
+          },
+          "argument_zero_literal": {
+            "start": [
+              11,
+              18
+            ],
+            "end_exclusive": [
+              11,
+              71
+            ],
+            "byte_offsets": [
+              290,
+              343
+            ]
+          },
+          "optional_call_token": null,
+          "optional_member_token": null
+        },
+        "commit_block": "inner_statement_owner",
+        "restart_block": "outer_statement_owner",
+        "commit_container_kind": "SwitchCase",
+        "restart_container_kind": "SwitchCase",
+        "source_statement_ordinals": [
+          1,
+          2
+        ]
+      }
+    }
+  ],
+  "source_first_oracle_sha256": "b86fca4414015649383f0a9677ecfd7f2b7244651b54bf08431434e62539de08"
+}

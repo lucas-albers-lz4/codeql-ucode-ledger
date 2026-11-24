@@ -1,0 +1,217 @@
+{
+  "original_sha256": "f5ad83a87379826d68240069c1d72993e2a363ea2672b3da1ecd430a1b2b1a86",
+  "columns": [
+    {
+      "name": "path",
+      "kind": "String"
+    },
+    {
+      "name": "function_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "import_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "import_specifier_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "declaration_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "initializer_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "receiver_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "owner_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "first_index",
+      "kind": "Integer"
+    },
+    {
+      "name": "first_statement_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "commit_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "package_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "package_name",
+      "kind": "String"
+    },
+    {
+      "name": "second_statement_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "restart_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "command_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "service_name",
+      "kind": "String"
+    },
+    {
+      "name": "action",
+      "kind": "String"
+    }
+  ],
+  "tuples": [
+    [
+      "controls/intervening-comment.uc",
+      {
+        "id": -16775173
+      },
+      {
+        "id": -16775223
+      },
+      {
+        "id": -16775216
+      },
+      {
+        "id": -16775156
+      },
+      {
+        "id": -16775151
+      },
+      {
+        "id": -16775104
+      },
+      {
+        "id": -16775110
+      },
+      0,
+      {
+        "id": -16775107
+      },
+      {
+        "id": -16775106
+      },
+      {
+        "id": -16775094
+      },
+      "fixture-config",
+      {
+        "id": -16775077
+      },
+      {
+        "id": -16775076
+      },
+      {
+        "id": -16775070
+      },
+      "fixture-service",
+      "restart"
+    ],
+    [
+      "controls/positive-matched.uc",
+      {
+        "id": -16773963
+      },
+      {
+        "id": -16774013
+      },
+      {
+        "id": -16774006
+      },
+      {
+        "id": -16773946
+      },
+      {
+        "id": -16773941
+      },
+      {
+        "id": -16773894
+      },
+      {
+        "id": -16773900
+      },
+      0,
+      {
+        "id": -16773897
+      },
+      {
+        "id": -16773896
+      },
+      {
+        "id": -16773884
+      },
+      "fixture-config",
+      {
+        "id": -16773869
+      },
+      {
+        "id": -16773868
+      },
+      {
+        "id": -16773862
+      },
+      "fixture-service",
+      "restart"
+    ],
+    [
+      "controls/positive-unbraced-case.uc",
+      {
+        "id": -16773725
+      },
+      {
+        "id": -16773775
+      },
+      {
+        "id": -16773768
+      },
+      {
+        "id": -16773708
+      },
+      {
+        "id": -16773703
+      },
+      {
+        "id": -16773659
+      },
+      {
+        "id": -16773675
+      },
+      0,
+      {
+        "id": -16773662
+      },
+      {
+        "id": -16773661
+      },
+      {
+        "id": -16773649
+      },
+      "fixture-config",
+      {
+        "id": -16773634
+      },
+      {
+        "id": -16773633
+      },
+      {
+        "id": -16773627
+      },
+      "fixture-service",
+      "restart"
+    ]
+  ]
+}

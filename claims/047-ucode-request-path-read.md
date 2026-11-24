@@ -2,7 +2,7 @@
 
 - Status: Blocked
 - Program: [Security-40](../planning/security-40-20261124.md), category D
-- Producer: `lucas-albers-lz4/codeql-ucode` (routing probe P2; application .uc not routed)
+- Producer: `lucas-albers-lz4/codeql-ucode` (historical routing probe P2; see current reconciliation)
 - Producer commit: codeql-ucode 734555a9f56893e89e678cdee63028fc17ea5bc8; luci b2e0be4b46ec0fd43394c081fa7c50657af14011
 - Consumer: none
 - Consumer commit: none
@@ -46,7 +46,7 @@ Bounded slice over manifested application set; record path-construction chains a
 
 None.
 
-## Result
+## Historical result at 734555a9
 
 Blocked — producer routing gate (probe P2, orchestrator-verified) plus a
 sink-model gap. Security-40 lifts no gate.
@@ -68,3 +68,10 @@ sink-model gap. Security-40 lifts no gate.
 - Evidence: `/root/workspace/work/security-40/probe-ucode/` (P2 receipts);
   gates verified in producer `extractor/src/extractor.rs` and
   `ql/src/m4/RequestArgsExec.ql`.
+
+
+## Current reconciliation (2026-11-24)
+
+[Scratch evidence](../evidence/application-source-observations-20261124/README.md) at producer `9166af76cf6944e1b3ea5856a9176366a1f7a6ee` and pinned LuCI shows one source-staged DDNS `stat` shape and two synthetic positives, with eight bounded negative-control mutations. The 11-file extraction and exact observations are separate from the historical P2 result above; they do not establish application-wide routing or coverage. The attribution uses a conservative source-declared import subset, not a modeled imported `stat` binding. No fs sink, request-to-path flow, canonicalization verdict, authorization or runtime claim follows.
+
+**Status remains Blocked.** [#155](https://github.com/lucas-albers-lz4/codeql-ucode/issues/155) retains its routing, honesty and modeled-control prerequisites. The applicable [#49](https://github.com/lucas-albers-lz4/codeql-ucode/issues/49) Grok honesty gate and [#54](https://github.com/lucas-albers-lz4/codeql-ucode/issues/54) promotion gate are not represented as passed. [Routing PR #162](https://github.com/lucas-albers-lz4/codeql-ucode/pull/162) was draft at this observation; no merge is assumed.

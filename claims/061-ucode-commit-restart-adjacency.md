@@ -2,7 +2,7 @@
 
 - Status: Blocked
 - Program: [Security-40](../planning/security-40-20261124.md), category C
-- Producer: `lucas-albers-lz4/codeql-ucode` (routing probe P2)
+- Producer: `lucas-albers-lz4/codeql-ucode` (historical routing probe P2; see current reconciliation)
 - Producer commit: codeql-ucode 734555a9f56893e89e678cdee63028fc17ea5bc8; luci b2e0be4b46ec0fd43394c081fa7c50657af14011
 - Consumer: none
 - Consumer commit: none
@@ -44,7 +44,7 @@ Bounded same-function observation of commit + fs.exec/system adjacency; record e
 
 None.
 
-## Result
+## Historical result at 734555a9
 
 Blocked — producer routing gate (same as 041–045/047/051/057). codeql-ucode
 `734555a9…` routes only luci-base `luci.uc`; application ucode backends (the
@@ -55,3 +55,10 @@ observation over application backends cannot be produced. Unblock: routing
 extension to application .uc + a commit/restart adjacency query with exact
 call identities. No causal/runtime claim made. Receipts:
 `/root/workspace/work/security-40/probe-ucode/{VERDICT.md,MANIFEST.yml,logs/}`.
+
+
+## Current reconciliation (2026-11-24)
+
+[Scratch evidence](../evidence/application-source-observations-20261124/README.md) at producer `9166af76cf6944e1b3ea5856a9176366a1f7a6ee` and pinned LuCI observes three adblock-fast same-function adjacent commit/restart source pairs at lines 611–612, 637–638 and 661–662, plus three synthetic positives and controlled owner-equality mutations. This is a bounded source-shape inventory using source attribution and lexical receiver identity; imported cursor runtime binding is not established. It is not a runtime, causal or trigger-chain result.
+
+**Status remains Blocked.** A shipped UCI commit model and the routing/exec dependencies in [#156](https://github.com/lucas-albers-lz4/codeql-ucode/issues/156) and [#53](https://github.com/lucas-albers-lz4/codeql-ucode/issues/53) remain outstanding. This scratch query does not lift those gates or claim a complete application census. [Routing PR #162](https://github.com/lucas-albers-lz4/codeql-ucode/pull/162) was draft at this observation; no merge is assumed.
