@@ -1,0 +1,217 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "init",
+        "$RUN/db/current",
+        "--language=ucode",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--source-root=$RUN/stage"
+      ],
+      "exit": 0,
+      "label": "init",
+      "peak_rss_bytes": null,
+      "stderr": "out/init.stderr",
+      "stdout": "out/init.stdout",
+      "wall_seconds": 0.693
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "index-files",
+        "--language=ucode",
+        "--include=**/*",
+        "--working-dir=$RUN/stage",
+        "$RUN/db/current",
+        "--common-caches=$RUN/cache/common",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "label": "index",
+      "peak_rss_bytes": null,
+      "stderr": "out/index.stderr",
+      "stdout": "out/index.stdout",
+      "wall_seconds": 0.803
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "finalize",
+        "$RUN/db/current",
+        "--common-caches=$RUN/cache/common"
+      ],
+      "exit": 0,
+      "label": "finalize",
+      "peak_rss_bytes": null,
+      "stderr": "out/finalize.stderr",
+      "stdout": "out/finalize.stdout",
+      "wall_seconds": 1.138
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db/current",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/success.bqrs"
+      ],
+      "exit": 0,
+      "label": "success-query",
+      "peak_rss_bytes": null,
+      "stderr": "out/success-query.stderr",
+      "stdout": "out/success-query.stdout",
+      "wall_seconds": 1.443
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/success.bqrs"
+      ],
+      "exit": 0,
+      "label": "success-decode",
+      "peak_rss_bytes": null,
+      "stderr": "out/success-decode.stderr",
+      "stdout": "out/success-decode.stdout",
+      "wall_seconds": 0.209
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db/current",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/errors.bqrs"
+      ],
+      "exit": 0,
+      "label": "errors-query",
+      "peak_rss_bytes": null,
+      "stderr": "out/errors-query.stderr",
+      "stdout": "out/errors-query.stdout",
+      "wall_seconds": 1.381
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/errors.bqrs"
+      ],
+      "exit": 0,
+      "label": "errors-decode",
+      "peak_rss_bytes": null,
+      "stderr": "out/errors-decode.stderr",
+      "stdout": "out/errors-decode.stdout",
+      "wall_seconds": 0.204
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "analyze",
+        "$RUN/db/current",
+        "$RUN/producer/ql/src/codeql-suites/code-scanning.qls",
+        "--format=sarifv2.1.0",
+        "--output=$RUN/out/default-suite.sarif",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "label": "suite-analyze",
+      "peak_rss_bytes": null,
+      "stderr": "out/suite-analyze.stderr",
+      "stdout": "out/suite-analyze.stdout",
+      "wall_seconds": 3.827
+    }
+  ],
+  "error_count": 0,
+  "expected_result_count": 5,
+  "normalization": "Absolute run root replaced by $RUN, CodeQL executable by $CODEQL; raw files under ignored work/.",
+  "observed_results": [
+    {
+      "endColumn": 55,
+      "endLine": 5,
+      "startColumn": 33,
+      "startLine": 5,
+      "uri": "usr/share/rpcd/ucode/different_field_pos.uc"
+    },
+    {
+      "endColumn": 46,
+      "endLine": 5,
+      "startColumn": 28,
+      "startLine": 5,
+      "uri": "usr/share/rpcd/ucode/direct_pos.uc"
+    },
+    {
+      "endColumn": 46,
+      "endLine": 5,
+      "startColumn": 31,
+      "startLine": 5,
+      "uri": "usr/share/rpcd/ucode/initialized_local_pos.uc"
+    },
+    {
+      "endColumn": 45,
+      "endLine": 5,
+      "startColumn": 28,
+      "startLine": 5,
+      "uri": "usr/share/rpcd/ucode/multi_substitution_quote_context.uc"
+    },
+    {
+      "endColumn": 77,
+      "endLine": 6,
+      "startColumn": 61,
+      "startLine": 6,
+      "uri": "usr/share/rpcd/ucode/quoted_first_raw_second.uc"
+    }
+  ],
+  "preflight": {
+    "CodeQL_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+    "platform_scope": "local macOS; source-staged; modified grammar",
+    "prototype_pack_extractor_sha256": "169b55b06aff74907411cf9614ffbbe45dfb522c30a5455c03271a7e8c40fa69",
+    "source_first_oracle_sha256": "3d507e590a6f7b4ca1eb083329fca9d3626d606aa2c20a5969625c2b121b6834",
+    "source_manifest_sha256": "5ec2d74cb21732189a41558ec59671126310679c6725f802614ac3fa9c19caf0",
+    "source_revision": "9166af76cf6944e1b3ea5856a9176366a1f7a6ee"
+  },
+  "raw_sha256": {
+    "out/default-suite.sarif": "e7712482d7fbc5ac1eb7e525352a9568e9c2c25b86e9b6601426f6ebc65ca491",
+    "out/errors.csv": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+    "out/routing.json": "722b6c192b732c25cab98f692014fc6a7f4f6692f0079715aad92fb0d490dcc1",
+    "out/success.csv": "104e8292bf6da00bf1853fdfa20ea68fc88ad424b241bb4eb44fc408aa8fe98f",
+    "preflight.json": "a416df9d7db1e2882d9b41f6e3bee6a559a040db76d5e758eba366b4d2de73ea",
+    "receipt.json": "c66f56b9795a18b00dfa35f94e146ff14593098d9f8f99048bfd545147a17351",
+    "source-first-oracle.json": "3d507e590a6f7b4ca1eb083329fca9d3626d606aa2c20a5969625c2b121b6834"
+  },
+  "routing_sha256": "722b6c192b732c25cab98f692014fc6a7f4f6692f0079715aad92fb0d490dcc1",
+  "sarif_sha256": "e7712482d7fbc5ac1eb7e525352a9568e9c2c25b86e9b6601426f6ebc65ca491",
+  "scope": "local macOS modified grammar direct-control matrix; not historical real-source pair or Linux",
+  "selected_count": 21,
+  "status": "pass",
+  "success_count": 21
+}

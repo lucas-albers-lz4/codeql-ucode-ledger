@@ -1,0 +1,114 @@
+{
+  "codeql_executable_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+  "exact_identities_csv_sha256": "713f6aee69a79f70405b6d79d7de1f18a00e2e7cb38cb2d33ba04a3e8ffd4efc",
+  "exact_identity_rows": 93,
+  "extraction_error_count": 0,
+  "extractor_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+  "limits": [
+    "One fresh 93-file source-staged local run; not actual package-installed bytes.",
+    "The 17 wifi-scripts Ucode paths assume CONFIG_WIFI_SCRIPTS_UCODE=y; no package configuration was built.",
+    "34 markup routes remain inconclusive even though successful-file diagnostics exist.",
+    "Zero direct-rule results do not prove safety or precision.",
+    "Local macOS cost does not substitute for Linux current-corpus timing."
+  ],
+  "peak_memory_note": "macOS time -l cannot read kern.clockrate in this sandbox; this run used time.monotonic and has no peak RSS",
+  "phase_metrics": [
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "database-init",
+      "wall_seconds": 0.457
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "index-files",
+      "wall_seconds": 1.056
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "database-finalize",
+      "wall_seconds": 1.578
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "success-query",
+      "wall_seconds": 1.374
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "success-decode",
+      "wall_seconds": 0.21
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "errors-query",
+      "wall_seconds": 1.389
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "errors-decode",
+      "wall_seconds": 0.208
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "resolve-suite",
+      "wall_seconds": 0.351
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "default-suite-analyze",
+      "wall_seconds": 16.483
+    }
+  ],
+  "preflight": {
+    "cpu_count": 10,
+    "free_disk_bytes": 131138695168,
+    "memory_free_percentage": 65
+  },
+  "producer_commit": "7c62553b7a81b236b75d1b1fa0d50c612a020cc5",
+  "raw_artifact_sha256": {
+    "commands.json": "949cf8b19a1bdc69d08b8f1530fb8eb764d858bad305b277a35755b2a2a9b07c",
+    "out/default-suite.sarif": "d53191ddcf729d35e380eec1478a78460effbbddc5af312398d220fad0d12eef",
+    "out/errors.csv": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+    "out/routing.json": "85860e4bd4aee5b95a1cac2b3b45806b554495eafa7896ff44cddbe443b7efff",
+    "out/success.csv": "1689466b19b48666a021e92f750a771ca6e8072e69cfa5008bbceb7a3c795a43",
+    "preflight.json": "28b66757e925c844456b552ceffd4d53f9cfb02b640f25b697a0dffc79494009",
+    "receipt.json": "e65709770bef56c370f215154a3d7a87c2f0dc03c0577f9cd4a48c68ceffb15c",
+    "source-oracle.json": "7c3e055ece88c13684efb100c2c248b35a448027d836697063c5d79a32a200fe"
+  },
+  "resolved_suite": [
+    "DirectRpcShellWord.ql",
+    "ExtractionErrors.ql",
+    "SuccessfullyExtractedFiles.ql"
+  ],
+  "route_counts": {
+    "excluded_count": 0,
+    "input_count": 93,
+    "markup_count": 34,
+    "plain_count": 59,
+    "uncertain_count": 0
+  },
+  "run_script_sha256": "fda961e9daca969260dfac4c99de90395bbc8fa9cdf44c2753818902e5f84991",
+  "sarif_result_count": 0,
+  "sarif_rule_descriptors": [
+    "ucode/m4/direct-rpc-shell-word"
+  ],
+  "schema": "mvp-corpus-v0.2-local-run-receipt",
+  "selected_count": 93,
+  "source_oracle_sha256": "7c3e055ece88c13684efb100c2c248b35a448027d836697063c5d79a32a200fe",
+  "source_pins": {
+    "luci": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "openwrt": "4e9642517b48bae612ff10fb72fb9199e559500e",
+    "packages": "07e0d16305d2b5903b37ad7913e33e18795f81a4"
+  },
+  "status": "completed source-staged local macOS run; no installed-byte or Linux gate",
+  "suite_sha256": "6d343f93e37c309b8461da9fafcf67d089737980d7ac42a5409e75df3bd442e5"
+}

@@ -1,0 +1,1191 @@
+{
+  "boundaries": [
+    "Candidate policy is a source superset, not proof of package selection or installation.",
+    "Files with a non-Ucode extension and no Ucode shebang outside the named roots may be missed.",
+    "No CodeQL route, extraction or query was run for the 72 newly inventoried paths."
+  ],
+  "candidates": [
+    {
+      "candidate_only": true,
+      "git_blob": "9fe302ce892315c2bcc36f0855e93a72ff296745",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/boot/uboot-tools/uboot-envtools",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_shebang"
+      ],
+      "sha256": "6a03dcf045db393a2bfbd94ca6dd56d635c425730f2118ff409d8c69f556d26a",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/boot/uboot-tools/uboot-envtools/files/fw_loadenv",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "69677bb159acaae8479e1aac0f19cbf7e472458e",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/netifd",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "f1a16867ac640108182e6fe2b5a02b18e66d302c55e2b9cd21ffefff3ee0cbf2",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/netifd/files/lib/netifd/main.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "84db69d2fae2dd1bbf64019315b18a43fe76912e",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/netifd",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "9601c500d498103eb3b22010fd6fba0885840f10f32d8c8db7f05911e4aedeb9",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/netifd/files/lib/netifd/utils.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "34df46d18ef5d894c75da599e8ac958c59b225c7",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/netifd",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension",
+        "ucode_shebang"
+      ],
+      "sha256": "f3621cb1b931cdff9f5359f9de043370f4c0014771a893a0f9324a4633026e60",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/netifd/files/usr/libexec/network/packet-steering.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "6b709e4593ba768f88d8c2ae3226565fcd8db3a9",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/wifi-scripts",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_shebang"
+      ],
+      "sha256": "f7d6ae091777a8eb77ba55c2c1f09bf8caff1a4364dc6de4f19a1ecb322801aa",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/lib/netifd/wireless/mac80211.sh",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "d36268b06e96c9c6a4e08957d65260742facb97a",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/wifi-scripts",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_shebang"
+      ],
+      "sha256": "c279f6cc7000ee1cb7609a0a60f77a63500a85d6be1b1fe32afa333fe176ff1c",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/bin/iwinfo",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "7fa5291de19c5d26ecf8612d59e2d6e7ad090131",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/wifi-scripts",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "df56c258702cb3bf60d4657031a2abf371df9ced2952da6ad13c04021fd4c3ea",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/iwinfo.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "57cacff14ab80aa3f0059d2afe7251c45ffd8de4",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/wifi-scripts",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "d036c64e14ae75297487ac4e572ee4e2504d5795e0c907267341d7b14931275a",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "de939b0c2f1385c2c7c1076f44ada6fdfbcf5b7c",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/wifi-scripts",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "92ecc237251e6dcb32ba0d230b339850adb9848cd7d6e1073e043bc3ae5d790d",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/common.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "2742552cc199ac3e6ddb83ee991761c0a5c34115",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/wifi-scripts",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "5fd200d76efb0a087ecb067003cae80819ee62a37cabf2a788a1daea9c80177e",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/hostapd.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "ff72f5b677051b9ba5edefa342b4c3e0ce99285c",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/wifi-scripts",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "be89c76e55e9f838421b99328a9e84ac10b76dac64f4f8950660014123bdfc5f",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/iface.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "5a4a9fafb37f25a9070d5cac4139446e1600e4f2",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/wifi-scripts",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "2a5f4c94d186d1be150c4bb8ba308810af41a4930fd1287636de3274595d7af6",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/netifd.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "a8fc00cd03fe11cd2c51da8599682ef89ca0a641",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/wifi-scripts",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "8bdbd9d2688f0ed008ad00e5d19c4baf589020853b615bafd9e9586dcc79e78d",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/supplicant.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "e675b7a6ca089364a0a1b333ba0e31b76a24f640",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/wifi-scripts",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "2710fca796071133b30abedb28a8615ad0172af2b66a7c47580dde2f804eb4ee",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/validate.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "8e6250e5cdb165b7d4ad99531743e17bedc053c9",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/wifi-scripts",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "d3e106d2fbc288d0af36c95bb97b9eae77630c4972c927c8d67a68a8822fa754",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/wifi-scripts/files/lib/netifd/wireless-device.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "41f48848e48ece61ee29d7d9bef7df33541e039d",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/wifi-scripts",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "36888bcfbf04c8b35c30e10b3b186bc4295c1c5f3d7403779eedb51a450f557d",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/wifi-scripts/files/lib/netifd/wireless.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "c6c973040eb8c01f8fb8618337f9d1cf3cce4447",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/wifi-scripts",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension",
+        "ucode_shebang"
+      ],
+      "sha256": "36da7b5286c98b8e82433c3656e2c4f02e12648ba7cb75899ab5546702b2ec1c",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "f801c4940c2b76947d34705e80305463b609768a",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/wifi-scripts",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "8f489d3c4fdde92b6dd027aadffc96880837664f3c2a1b1f6f3aeb9fdd484c0c",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/wifi-scripts/files/usr/share/hostap/common.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "a4f9bf7b8448cca2d04f17b8e4e098c7c9adda54",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/wifi-scripts",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension",
+        "ucode_shebang"
+      ],
+      "sha256": "84e0de1089f253d65272f1c29254ec890b46576565b4a92fd48ecc2f9b5156d2",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/wifi-scripts/files/usr/share/hostap/wdev.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "db862d40c2a901a83c08d06ce937905a2248a22e",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/wifi-scripts",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension",
+        "ucode_shebang"
+      ],
+      "sha256": "1b21c13ef3e8df83575303c9b75609f22b3e359e66128abc43ebd369652270ab",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/wifi-scripts/files/usr/share/hostap/wifi-detect.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "147c16205aa8dc64706bbdc17d3ae33edb20faca",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/config/wifi-scripts",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "bffaaff3e9ad9962206fb15aec190cd0fc2747990392885d346e0f6b3f5d61af",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/config/wifi-scripts/files/usr/share/ucode/wifi/utils.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "7f8c55da70c296adf6b6a5fe4683def4904b605c",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/services/hostapd",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "05f8881eb9f3d4458a7d5143f26396822fc43e8b560f1ee456de0480fa0694aa",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/services/hostapd/files/hostapd.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "c7da3bc1c4f30a1ca61b84e891112fc5db5a7630",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/services/hostapd",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "d6726b52e3825489ce267e3aaea2fa0c3aa23daad5b6affcc7384e68d6bf0b66",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/services/hostapd/files/wpa_supplicant.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "5b767847aae059f3d6c8840b7cb9deb9fc783533",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/services/umdns",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "f2b409874d5e6370bf187806da0bd1e3bd120fe41de0e9f67b9ac92f74996a31",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/services/umdns/files/mdns.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "44d1c83e5db23871c5495eff241a3fb967acdefa",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/services/unetd",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "bfa969fe226982529551163433615a87e91bee9620176ec7138314093b43d6e1",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/services/unetd/files/unet.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "727ac3be3fa17b5ecb3df82a0346eb735a734aa8",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/services/unetmsg",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_shebang"
+      ],
+      "sha256": "26cec8f7966a5a961518cc9360b3202716c197dd70c8f1f692887372d466ea9a",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/services/unetmsg/files/usr/sbin/unetmsgd",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "6519eac560c3a657dc390c1844e34dcd6cd0418b",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/services/unetmsg",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "72d3f45e4a91ecfe829e410e8c935c5d15fd592fba220b95a872a17d1add8b04",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/services/unetmsg/files/usr/share/ucode/unetmsg/client.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "6d38909347e0eee21aeca272fdb83e02853e840e",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/services/unetmsg",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "d853535f70b7a43940beb6096a6ba9abbee7af3716d1819ad6aa3ca5714ceffe",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/services/unetmsg/files/usr/share/ucode/unetmsg/unetmsgd-client.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "a02ba08c671a18c8914b4db279336ae114769f41",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/services/unetmsg",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "78e666b350f5d4e6177b4103786ec592578f3e08429c9af6f3f6d477b1861e95",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/services/unetmsg/files/usr/share/ucode/unetmsg/unetmsgd-remote.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "775d87b9c0bbee83cbefcc93c75026cdc11c4d02",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/services/unetmsg",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "e225e37f9f78f202c9b891eaee63550169f8c1439c908bfc7b722180b8a7e92b",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/services/unetmsg/files/usr/share/ucode/unetmsg/unetmsgd.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "3bad212e4133782819f5512b1092c97631a7852e",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/network/services/unetmsg",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "4003b2ec8667473e29264e106794f605dcc5456eaa11918d1f4239600881b228",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/network/services/unetmsg/files/usr/share/ucode/unetmsg/utils.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "90889f996a3805e86e910ab9eec951549146c6ec",
+      "in_bounded_corpus_v0_1": true,
+      "owner_hint": "package/utils/cli/files",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_shebang"
+      ],
+      "sha256": "f71b2a73fd6b2bd4a44cdb4fcbab896c5d2a945954c035a244d49603e4d87707",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/utils/cli/files/usr/sbin/cli",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "27cc049f73ffbee099931352db1eb24de71eaf17",
+      "in_bounded_corpus_v0_1": true,
+      "owner_hint": "package/utils/cli/files",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "4f9c21ab7517480ba50c7e7a41fcc17a788152d797abe99cdfd5ac748ee57c72",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/cache.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "39e5863533a73984affcd1f927b236893ab007c9",
+      "in_bounded_corpus_v0_1": true,
+      "owner_hint": "package/utils/cli/files",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "89ab6b082fc5e41567f70b88bd644f80f96a439ada5f9295ef2e1c37772b5d4d",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/color.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "18d6eb202ec44b7fd42d1ad54255b2562ea5ca47",
+      "in_bounded_corpus_v0_1": true,
+      "owner_hint": "package/utils/cli/files",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "fad2f165e6f78c9d310a912832e0cfa585e3341c34b240da6051e3179e0258c0",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/context-call.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "53b5f57047fd15b5bce9e65794cabf3e1716725c",
+      "in_bounded_corpus_v0_1": true,
+      "owner_hint": "package/utils/cli/files",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "190d5186e277eacfac80c1c3e80eaa483465f24ec19f0faefea08c318a1698d3",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/context.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "f6d9454dd7e3db5cb3ef575f09e5f8f2ed435bbf",
+      "in_bounded_corpus_v0_1": true,
+      "owner_hint": "package/utils/cli/files",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "0e271bdfff8da423e2e87f8fff95203f74e53aa1433d84a9b16d09f213500065",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/datamodel.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "3d5ef5b058ee6fcab9c658e1321f8c7f7eafe574",
+      "in_bounded_corpus_v0_1": true,
+      "owner_hint": "package/utils/cli/files",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "9d1fbe9682cafff2d4e55d89944de6b204130b82c272bba7f747623df106b19b",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/modules/network.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "a280f6559e862943b71b248cc1fd61036a3c3c2f",
+      "in_bounded_corpus_v0_1": true,
+      "owner_hint": "package/utils/cli/files",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "d0daab4ea0754ab059072a949b3ccc99e9a33c911396679be0c8055269522a75",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/modules/service.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "639313b72f4315b95ddf7755cef03a95a3f54138",
+      "in_bounded_corpus_v0_1": true,
+      "owner_hint": "package/utils/cli/files",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "e2cd1b56ca4468ab2d1ebf629c9fa2b5511e4f2775212dcde8ba6c6847f71e2a",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/object-editor.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "62f9683b45dae6a5b7305895a4e52634ab6b4890",
+      "in_bounded_corpus_v0_1": true,
+      "owner_hint": "package/utils/cli/files",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "124c3a1e35955492502bbe301ef8466de67480438f143ffd514020636baec2d5",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/types.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "f299ad361d667963f2c91d701cd8b42ec4d88d07",
+      "in_bounded_corpus_v0_1": true,
+      "owner_hint": "package/utils/cli/files",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "72d6ef87319f6658885f989e834fd1193175c3dafdca2dfb4aa2a4d1e16ccd53",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/utils.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "49542e5b8d2247260b19d851d5b261a992e4e5cb",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/utils/provision/files",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_shebang"
+      ],
+      "sha256": "1f520a39df42a6ff3b6316e5fd51c7a1758e2c73cc27c595dc65bfb253df879b",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/utils/provision/files/usr/sbin/provision",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "3f43331d00e76b933c7abf8af7f7e535c85c148a",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/utils/provision/files",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "4fe7b27fa214871b3042976d15f5eadebd2ab57830025852377f8f86f4c780d5",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/utils/provision/files/usr/share/ucode/provision.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "e37e5f5329d100b374bb4dcbd48a6f4aef6ccfdf",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "package/utils/ucode-mod-pkgen/files",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_shebang"
+      ],
+      "sha256": "5927d4050793b5f5b68ebcd87ff0f26dae695b31e2a16933945645752bd350dd",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "package/utils/ucode-mod-pkgen/files/pkgen",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "7dcf30986c045dd92b6ea010319d6f6dee026ed6",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "target/linux/ipq806x",
+      "repo": "openwrt",
+      "selection_flags": [
+        "ucode_extension",
+        "ucode_shebang"
+      ],
+      "sha256": "1ca194eb61dd9ed6a8e1954a7dc057c4b40e153d2da306b8e69d6db0ab909562",
+      "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "source_path": "target/linux/ipq806x/base-files/usr/bin/base64decode.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "55cfd30bfb0849701ebae44705df23a29ed17f91",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "net/adblock-fast",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "19727b189472f380b9791b1fc37c4acdec60eea06650f7d845fea8fafbd49315",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "net/adblock-fast/files/lib/adblock-fast/adblock-fast.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "6c6314531521cd25fc512aecfd0526b1d08eef75",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "net/adblock-fast",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "97d650438ffb335bdb575122225beb4057e551f5e1fc23cc53ad79f61198f7c9",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "net/adblock-fast/files/lib/adblock-fast/cli.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "fd2bbf0da058267681b58d01e021d3e22e6128cb",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "net/adblock-fast",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "175d8a671c7117943342968a7b2a2ca2de1f512f830a15508d219dbbaf7b9418",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "net/adblock-fast/tests/lib/mocklib.uc",
+      "test_fixture": true
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "ee6d48788457f6e909151bc2e78271a57917ee57",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "net/adblock-fast",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "7b2863e84460ab056322d60662cc2f6e978f82cc544a16a50fd308564331f551",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "net/adblock-fast/tests/lib/mocklib/ubus.uc",
+      "test_fixture": true
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "155cbef89d5dd00e79b2c06e0a162c4aa8006d75",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "net/adblock-fast",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "dd8f41b03feff8f2183470f554fa13a0a813dc3a8832da000ca5e014b7c308f7",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "net/adblock-fast/tests/lib/mocklib/uci.uc",
+      "test_fixture": true
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "2e145c72e5c24053c17b80427e82aca1b9c730bd",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "net/mwan3",
+      "repo": "packages",
+      "selection_flags": [
+        "extensionless_ucode_root"
+      ],
+      "sha256": "407610283e5e809e157a739d911403595122161fab4437eb150bb49c7dfbebf2",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "net/mwan3/files/usr/share/rpcd/ucode/mwan3",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "33361f2b1d4598db513b1bdcecf24d0e060d6d95",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "net/snort3",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "358b97e74b775508097f6e68be8b8d4a85bd073efd3baba9d5fa1a57648ed87d",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "net/snort3/files/main.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "74b1678d66fe8ede3be9fda009d96e5cad4c679f",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "net/snort3",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "b17ccd65327024d8ca1744b43429718dc0d7c7c2ec4435de7dfe8f1237873ed0",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "net/snort3/files/nftables.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "6e14a0ab76128b1c73102140db157b174dab8ddf",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "net/snort3",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "1ccf9d9df16a3bed345443ddb10bebc0f741e3d3acb3a082f094d8e62c472b65",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "net/snort3/files/snort.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "5acd60b04f5c0ce3a78b37d6f7587b6605ab5184",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "net/uneighbord",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_shebang"
+      ],
+      "sha256": "af610743fdfbb437307117c59d36db8d73a7d9973dea390e2c8da530ad3f2bbd",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "net/uneighbord/files/usr/sbin/uneighbord",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "2c3a078b8dce35b412ddeb516b0945b86d3b4367",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/librespeed-common",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_shebang"
+      ],
+      "sha256": "df226ea885b9b7cae910af86360727c3ff6b1e971887ad88f76c84eaf8d2ddf4",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/librespeed-common/files/librespeed-aggregate",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "fee8b9751a6b8af50475d3debf3643cd8fdf0ab6",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/librespeed-common",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension",
+        "ucode_shebang"
+      ],
+      "sha256": "921964c56638793e539a67644b0de849eeaf27c2fb858d346a438552ef7641b9",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/librespeed-common/files/librespeed.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "b3ee3f3bc94938c14fed46022a28b0d47d98ac2a",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "4024c9b34c57c4b1cf9f6079834ddb99a23ec36823125f8ab82096468905b98b",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/base/conntrack.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "574655df8e5a0c5c3affc7904994a8a93335df52",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "cf383d336f4e5b9a3a1d6b2c1e76d1b3779f341a90c613b7ffda535d216207a9",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/base/cpu.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "2df44261a323ca22d2ee41fc0893f28f3e3bfdee",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "d0077072760c216d55a35c1e212bf3dca93cf5f287e2b47fc0198506a608c942",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/base/entropy.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "359cffd4ebc059059cea5363c7a30f1531a5ea2f",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "271f7dfc8b36ff678a8a2b2eed9133d1acb494bb9b18bce4de16106f59f9bb82",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/base/filefd.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "ba67dafe34878de07e6c106d5e0ce3377084b68e",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "03a49b6acb5dcab4f813c23029b233318aafc96496090f5edaaed5c8684c225e",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/base/loadavg.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "3cecb124dcd87a96f5263913b94088d5c8d1050f",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "4feb8531e2c24059e8036cc2d5b6c9731307af980d4fe7008e5d859b34b33bea",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/base/meminfo.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "10b3cfd34391748d5a1e949507e86f9c311398bb",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "0af2dac8c378df529c053528a89041795618b327ea8c8de5af0b5294536662e9",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/base/netclass.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "f8fc68de44f4354970bdf3969d0a5d300ccddc76",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "2d48f65884df951910121e62df3161487d9c305ea657b8da435b8fbcf34fadc6",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/base/netdev.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "11840a8305b8b794786cdb22b04a565c5a3d2714",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "6e73a1c2863e92e09c4e5703eb25c5785e5ee0c736be11daa0452921e7f09312",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/base/selinux.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "7d13ea841a195ff72f36d519f241b3a23a780031",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "08fdaff56569c0d1a2b94b8b635bfc47400904ee303537d86f05b6c2fced705c",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/base/time.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "50cb352ac12d98ae6e3b29c5b4684770a3743e8f",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "c08111908e0adb80b4feae82c202e65d9060f396cfb8d7edcdb891ed4d830722",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/base/uname.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "3644b20f29f856f22284deb5ba59a48c1fefec6a",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "1fa541fd9d747544570831fa907d4d1ca0898bd5f1a1f4b846915f15fda06244",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/extra/dnsmasq.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "164449722edabc1e71b4e7b56371e3b489e2e89b",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "af463015c580a26b2e7e0df45ffcaf01d823908548c3c5ad17d6200acbcd8b8a",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/extra/ltq-dsl.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "7449305145366ac4ad9ecc5f1edb9dfca288b365",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "8c13e6f951b71f78b751dde48eb5849e520b422e3ad29d43ce82e5e863b38eb9",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/extra/netstat.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "10c15a10ca59138701c204b82f9864728a81d291",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "1cbc508f0a82958a9e6a5b55ad89afe5f5ab9af1d1073bd7e5cd6919a1811db6",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/extra/openwrt.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "d440a889e28ac99a086884dfadf664c7286dd0ca",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "b0224a7b23242d4791c8de1db8516b99087adaa8daf4101cb1f2833f455cf460",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/extra/snmp6.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "0d55724f9778b3e7b243959054329cd84e6b902b",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "d0ff8fd6f527686fcac80fdb09632560e94edcf0779c1a378d9cfc1ee5b7c527",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/extra/uci_dhcp_host.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "fb46b5509168e93976c50ce691f4c7a7b9548ea0",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "c33e01d8946e980802ed2489f34433d8686a82dee2ea7ceae167c46ec942a26e",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/extra/wifi.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "12ae56af9127dd71c2a83ce16095230a99db4416",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "adf5d92fe3c48a40813fa0ab6aba7e96f96d85f86246a6010947c889a357bcc3",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/extra/wireguard.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "3dce77accb520ca2b92e44ff14ea2ec7abd2abd6",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/prometheus-node-exporter-ucode",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "13acb074a41b16ebac4b5cbe287d5921d4f6cdd86a18bcbc68a2fee83b1fc44d",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/prometheus-node-exporter-ucode/files/metrics.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "f76508657feacc021f95d516d2bc134493f638f6",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/uvol",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "a2f9a68f7ba15355534abde0e7f6e5fb0c3b87e6abede9a1fca8a71da030da2e",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/uvol/files/blockdev_common.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "c93a50e8e60ad046c9fec91c3b1f19c60a9e7bdb",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/uvol",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "13508790b0f326b68a9f19749a84799aa281dce95375ece12f2d1f6ea58d275f",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/uvol/files/lvm.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "8b46112c75383c332f2578e64ef2055432c19483",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/uvol",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "5cba856ce13aad3c140b3169fa89a4affe8b2a2bcae38931f32dfb8edeb27f14",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/uvol/files/ubi.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "be3bae13639b5632d62d9d4dc3e2ca0353c37fb7",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/uvol",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_extension"
+      ],
+      "sha256": "10553087392f0785e070c27e5fad5c477b087dcd362ea4b22876412125c749e1",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/uvol/files/uci.uc",
+      "test_fixture": false
+    },
+    {
+      "candidate_only": true,
+      "git_blob": "2e2ea2928bec244bb42dce8332af52e06f70d932",
+      "in_bounded_corpus_v0_1": false,
+      "owner_hint": "utils/uvol",
+      "repo": "packages",
+      "selection_flags": [
+        "ucode_shebang"
+      ],
+      "sha256": "97dda9ef432ae84e4f8efb5d3903fad484fcf69ab043b77dd97ae059bb775498",
+      "source_commit": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "source_path": "utils/uvol/files/uvol",
+      "test_fixture": false
+    }
+  ],
+  "counts": {
+    "openwrt_additional_candidates": 35,
+    "openwrt_already_in_bounded_v0_1": 11,
+    "openwrt_candidates": 46,
+    "packages_candidates": 37,
+    "packages_test_fixtures": 3
+  },
+  "pins": {
+    "openwrt": "4e9642517b48bae612ff10fb72fb9199e559500e",
+    "packages": "07e0d16305d2b5903b37ad7913e33e18795f81a4"
+  },
+  "schema": "mvp-openwrt-packages-source-candidates-v0.1",
+  "selection_policy": "tracked .uc/.ucode/.ut; tracked first-line Ucode shebang; extensionless file under installed usr/share/ucode, usr/share/rpcd/ucode or usr/lib/ucode path root; no symlink target following",
+  "status": "source-only candidate census; not selected/extracted/installed denominator"
+}

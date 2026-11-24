@@ -1,0 +1,258 @@
+{
+  "bootstrap_metrics": [
+    {
+      "argv": [
+        "git",
+        "clone",
+        "--no-checkout",
+        "git@github.com:lucas-albers-lz4/codeql-ucode.git",
+        "$RUN/producer-checkout"
+      ],
+      "exit": 0,
+      "phase": "producer-clone",
+      "wall_seconds": 1.701
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "$RUN/producer-checkout",
+        "checkout",
+        "--detach",
+        "9166af76cf6944e1b3ea5856a9176366a1f7a6ee"
+      ],
+      "exit": 0,
+      "phase": "producer-checkout",
+      "wall_seconds": 0.088
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "$RUN/producer-checkout",
+        "fetch",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-release-bundle-producer",
+        "977331713b4b8b5574813bee0884245bf6db2752"
+      ],
+      "exit": 0,
+      "phase": "fetch-pack-build-base",
+      "wall_seconds": 0.047
+    }
+  ],
+  "cache_tree_sha256_at_preflight": "21f615fc2136c12840b679e2744fdc1431b8fa36cb7d3edeab3587a2353ed5ea",
+  "codeql_executable_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+  "codeql_version": "2.27.4",
+  "controls_sha256": "db5404d1552f8f7b321385b90296b33975c840b92d87071f38a43a43e0002edb",
+  "exact_identities_csv_sha256": "d5fe6c3077300010aa527e8d3afd31185855a1f29dc3e066a2330a0b5e0ec098",
+  "extraction_error_count": 0,
+  "first_attempt": "first-attempt.json",
+  "limits": [
+    "Source-staged files are not verified package-installed bytes.",
+    "Local macOS run is not Linux Gate 6/7 or full OpenWrt timing.",
+    "Markup-inconclusive routes are not modeled markup support.",
+    "Zero direct-rule alerts do not establish safety, precision, or security completeness.",
+    "Peak RSS unavailable in this sandbox; no substitute estimate."
+  ],
+  "lock_sha256": {
+    "Cargo.lock": "20678c3cbb29632a9369bdb3c735af9ee63c9443879db38847fbda9813aa0a77",
+    "ql/lib/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+    "ql/src/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3"
+  },
+  "manifest_sha256": "70ba39e2307b7c5c9905d572d85b0cca320214e48c0dc64065bad668cddb08fc",
+  "pack_tree_sha256": "891c6c3d4eae1accaf0c502775ef0077a81d542eac39c17241bdd769dde37674",
+  "phase_metrics": [
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "init",
+        "$RUN/db/current",
+        "--language=ucode",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--source-root=$RUN/stage"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "database-init",
+      "wall_seconds": 0.543
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "index-files",
+        "--language=ucode",
+        "--include=**/*",
+        "--working-dir=$RUN/stage",
+        "$RUN/db/current",
+        "--common-caches=$RUN/cache/common",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "index-files",
+      "wall_seconds": 1.157
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "finalize",
+        "$RUN/db/current",
+        "--common-caches=$RUN/cache/common"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "database-finalize",
+      "wall_seconds": 1.874
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db/current",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/success.bqrs"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "success-query",
+      "wall_seconds": 1.558
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/success.bqrs"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "success-decode",
+      "wall_seconds": 0.221
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db/current",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/errors.bqrs"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "errors-query",
+      "wall_seconds": 1.495
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/errors.bqrs"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "errors-decode",
+      "wall_seconds": 0.221
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "resolve",
+        "queries",
+        "$RUN/producer/ql/src/codeql-suites/code-scanning.qls",
+        "--format=json",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "resolve-suite",
+      "wall_seconds": 0.376
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "analyze",
+        "$RUN/db/current",
+        "$RUN/producer/ql/src/codeql-suites/code-scanning.qls",
+        "--format=sarifv2.1.0",
+        "--output=$RUN/out/default-suite.sarif",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "default-suite-analyze",
+      "wall_seconds": 39.423
+    }
+  ],
+  "preflight": {
+    "cpu_count": 10,
+    "free_disk_bytes": 130152951808,
+    "memory_free_percentage": 60
+  },
+  "producer_dirty": false,
+  "producer_sha": "9166af76cf6944e1b3ea5856a9176366a1f7a6ee",
+  "raw_artifact_sha256": {
+    "default-suite.sarif": "68ac7316656b43c950188f0adf993daacad9f543cf2cf053ab39a04b5598bd0d",
+    "errors.csv": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+    "routing.json": "ada0fffd3676241b61acccb50eea3878e5a0dce6cda326aecea4d5d4b90284af",
+    "success.csv": "2a99719918ca86113f112632a8db7ecd8da2d882c8e63298d5fd42919f2624ea"
+  },
+  "resolved_suite": [
+    "DirectRpcShellWord.ql",
+    "ExtractionErrors.ql",
+    "SuccessfullyExtractedFiles.ql"
+  ],
+  "route_counts": {
+    "duplicate_input_count": 0,
+    "excluded_count": 0,
+    "input_count": 123,
+    "markup_count": 35,
+    "markup_inconclusive_count": 35,
+    "plain_count": 88,
+    "uncertain_count": 0
+  },
+  "run_command": "python3 -B work/mvp-corpus-v0.5-prep/run.py",
+  "run_script_sha256": "48c33d02123dbbc21c24e5e333351ef1db687c4782ab907c52bd41a67b9c80c1",
+  "sarif_result_count": 0,
+  "sarif_rule_ids": [
+    "ucode/m4/direct-rpc-shell-word"
+  ],
+  "schema": "mvp-corpus-v0.5-local-run-receipt-v1",
+  "selected_count": 123,
+  "source_and_staging_rechecked": true,
+  "source_oracle_sha256": "d19401a66c581fad5860306f76f4a1815f6b4c057c1f6afc3268a8e3a1972e0e",
+  "source_pins": {
+    "luci": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "openwrt": "4e9642517b48bae612ff10fb72fb9199e559500e",
+    "packages": "07e0d16305d2b5903b37ad7913e33e18795f81a4"
+  },
+  "status": "completed corrected source-staged local macOS run; first attempt failed route oracle",
+  "successful_count": 123
+}

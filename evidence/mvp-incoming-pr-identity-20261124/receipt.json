@@ -1,0 +1,24 @@
+{
+  "schema": "incoming-event-receipt-v1",
+  "repository": "openwrt",
+  "repository_url": "https://github.com/openwrt/openwrt.git",
+  "pr_number": 26933,
+  "base_repository": "openwrt/openwrt",
+  "head_repository": "Jalakas/openwrt",
+  "head_repository_is_fork": true,
+  "event_type": "manual_sha_drill",
+  "event_time": "2026-11-24T18:30:56.168488Z",
+  "source": {
+    "commit": "bce40f6a15c273778061e8fceced7b9e0f58d99b",
+    "tree": "aad77be60ad2931cfc99f6eb49afd7d72843325e"
+  },
+  "control": {
+    "commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+    "tree": "328d4df01c038d365176b72753b778e10c3ff413"
+  },
+  "status": "identities_resolved_only",
+  "limitations": [
+    "PR membership is bound to the captured GitHub pull response and fetched PR head ref; it is not a scan result.",
+    "No source-policy discovery, CodeQL execution, SARIF, or consumer handoff is performed."
+  ]
+}

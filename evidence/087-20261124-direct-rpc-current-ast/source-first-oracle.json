@@ -1,0 +1,86 @@
+{
+  "expected_direct_rule_results": {
+    "usr/share/rpcd/ucode/controls.uc": 1,
+    "usr/share/rpcd/ucode/luci": 0
+  },
+  "expected_direct_sarif": [
+    {
+      "end_column_exclusive": 56,
+      "end_line": 11,
+      "rule_id": "ucode/m4/direct-rpc-shell-word",
+      "start_column": 37,
+      "start_line": 11,
+      "uri": "usr/share/rpcd/ucode/controls.uc"
+    }
+  ],
+  "expected_extraction_errors": 0,
+  "expected_plain_routes": [
+    "usr/share/rpcd/ucode/luci",
+    "usr/share/rpcd/ucode/controls.uc"
+  ],
+  "expected_successful_multiset": {
+    "usr/share/rpcd/ucode/controls.uc": 1,
+    "usr/share/rpcd/ucode/luci": 1
+  },
+  "fixture_returned_handler_shape": "top-level methods table returned as { probe: methods }",
+  "fixture_sha256": "1962ede2b346541a3eab838391957ede471f9f68d0ccd99e35d0cbb759596286",
+  "limits": [
+    "source-staged bytes, not package-installed bytes",
+    "AST identity and query behavior, not runtime reachability or vulnerability"
+  ],
+  "luci_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+  "luci_dirty": false,
+  "luci_git_blob": "64caf75c08bc0fa54520a0ef262dfd6f339dc89e",
+  "luci_source_path": "modules/luci-base/root/usr/share/rpcd/ucode/luci",
+  "luci_source_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+  "producer_commit": "7c62553b7a81b236b75d1b1fa0d50c612a020cc5",
+  "producer_dirty": false,
+  "quoted_other_control": {
+    "end_column_inclusive": 65,
+    "line": 18,
+    "start_column": 48,
+    "uri": "usr/share/rpcd/ucode/controls.uc"
+  },
+  "quoted_switch_witnesses": [
+    {
+      "end_column_inclusive": 67,
+      "line": 343,
+      "shellquote_end_column_inclusive": 68,
+      "shellquote_start_column": 38,
+      "sink_end_column_inclusive": 88,
+      "sink_start_column": 16,
+      "start_column": 49,
+      "substitution_end_column_inclusive": 69,
+      "substitution_start_column": 36,
+      "template_end_column_inclusive": 87,
+      "template_start_column": 22,
+      "uri": "usr/share/rpcd/ucode/luci"
+    },
+    {
+      "end_column_inclusive": 67,
+      "line": 400,
+      "shellquote_end_column_inclusive": 68,
+      "shellquote_start_column": 38,
+      "sink_end_column_inclusive": 88,
+      "sink_start_column": 16,
+      "start_column": 49,
+      "substitution_end_column_inclusive": 69,
+      "substitution_start_column": 36,
+      "template_end_column_inclusive": 87,
+      "template_start_column": 22,
+      "uri": "usr/share/rpcd/ucode/luci"
+    }
+  ],
+  "raw_direct_positive": {
+    "end_column_inclusive": 55,
+    "line": 11,
+    "start_column": 37,
+    "uri": "usr/share/rpcd/ucode/controls.uc"
+  },
+  "schema": "direct-rpc-current-ast-oracle-v1",
+  "source_first": true,
+  "stage_files": {
+    "usr/share/rpcd/ucode/controls.uc": "1962ede2b346541a3eab838391957ede471f9f68d0ccd99e35d0cbb759596286",
+    "usr/share/rpcd/ucode/luci": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e"
+  }
+}

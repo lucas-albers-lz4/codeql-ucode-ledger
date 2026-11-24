@@ -1,0 +1,72 @@
+{
+  "consumer_base_commit": "453da0d2592f64ba15cef380f0a7a3edd59e0594",
+  "consumer_checkout_dirty": true,
+  "identities_csv_sha256": "b68f878f8f7f2ee2533828294e0e1fde769f37cfd43924ff346c3e3a87fe6320",
+  "limits": [
+    "Source candidate inventory only; no recipe inference, installed bytes, extraction, CodeQL, SARIF or consumer handoff.",
+    "Pinned OpenWrt base=head control is not an incoming-change event.",
+    "The consumer selector change remains uncommitted in a disposable checkout."
+  ],
+  "luci_same_sha_control": {
+    "base_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "base_tree": "34b39b1f15d8a68898d84cab7f48e87f1ba80ac6",
+    "fail_closed": false,
+    "head_candidate_count": 69,
+    "head_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "head_excluded_count": 4,
+    "head_selected_count": 65,
+    "head_tree": "34b39b1f15d8a68898d84cab7f48e87f1ba80ac6",
+    "head_unreviewed_count": 0,
+    "status": "inventory_ready"
+  },
+  "policy_sha256": "70ba39e2307b7c5c9905d572d85b0cca320214e48c0dc64065bad668cddb08fc",
+  "raw_sha256": {
+    "luci": "ea454b7664f09c696fe95746b3f99f22dd5cfd051ca63d6c35ee996b752880fc",
+    "v04": "d7d12d49d08a3d7d2e5a9aa7b9be25bcd3fcc0b72032a15891bafba7fe0ecbaa",
+    "v05": "dee5945c05407bcc25d2e7678afed93a754e4b5903bbfdd60cb239591e8342b6"
+  },
+  "schema": "mvp-full-tree-v0.5-source-inventory-receipt-v1",
+  "selector_sha256": "6ae62ddd6ab0360563c620f99d6e517de03246c918a95de12722b2b9bebbaa85",
+  "selector_tests_sha256": "95fa32b80d918bd7997d1311e24c35cf213d67152b337c1055c0f008b889518e",
+  "source_checkout_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+  "source_checkout_dirty": false,
+  "tests": "9 local selector tests passed",
+  "v04_regression": {
+    "base_candidate_count": 47,
+    "fail_closed": true,
+    "head_candidate_count": 47,
+    "head_excluded_count": 1,
+    "head_selected_count": 34,
+    "head_unreviewed_count": 12,
+    "policy_sha256": "1e25cf9c2adc40c854502fed8d1ccc0977a3c4825d6ee4a1c0a543ffe0a76699",
+    "status": "review_required"
+  },
+  "v04_unreviewed_paths": [
+    "package/boot/uboot-tools/uboot-envtools/files/fw_loadenv",
+    "package/network/config/netifd/files/lib/netifd/main.uc",
+    "package/network/config/netifd/files/lib/netifd/utils.uc",
+    "package/network/config/netifd/files/usr/libexec/network/packet-steering.uc",
+    "package/network/services/hostapd/files/hostapd.uc",
+    "package/network/services/hostapd/files/wpa_supplicant.uc",
+    "package/network/services/umdns/files/mdns.uc",
+    "package/network/services/unetd/files/unet.uc",
+    "package/utils/provision/files/usr/sbin/provision",
+    "package/utils/provision/files/usr/share/ucode/provision.uc",
+    "package/utils/ucode-mod-pkgen/files/pkgen",
+    "target/linux/ipq806x/base-files/usr/bin/base64decode.uc"
+  ],
+  "v05": {
+    "base_candidate_count": 47,
+    "base_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+    "base_tree": "328d4df01c038d365176b72753b778e10c3ff413",
+    "fail_closed": false,
+    "head_candidate_count": 47,
+    "head_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+    "head_excluded_count": 1,
+    "head_selected_count": 46,
+    "head_tree": "328d4df01c038d365176b72753b778e10c3ff413",
+    "head_unreviewed_count": 0,
+    "missing_baseline_count": 0,
+    "status": "inventory_ready"
+  }
+}

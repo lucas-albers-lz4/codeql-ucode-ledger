@@ -1,0 +1,434 @@
+{
+  "ast_witnesses": {
+    "dynamic_import": {
+      "node_kind": "DynamicImportExpression",
+      "range": [
+        17,
+        15,
+        17,
+        33
+      ],
+      "source_child_kind": "String",
+      "staged_path": "lib/wifi/mac80211.uc"
+    },
+    "exported_functions": [
+      {
+        "export_entity_id": -16756585,
+        "export_range": [
+          61,
+          1,
+          72,
+          1
+        ],
+        "function_entity_id": -16756582,
+        "function_range": [
+          61,
+          8,
+          72,
+          1
+        ],
+        "name_entity_id": -16756579,
+        "name_range": [
+          61,
+          17,
+          61,
+          30
+        ],
+        "source_name": "json_file_read",
+        "staged_path": "usr/share/ucode/wifi/utils.uc"
+      },
+      {
+        "export_entity_id": -16756415,
+        "export_range": [
+          74,
+          1,
+          76,
+          1
+        ],
+        "function_entity_id": -16756412,
+        "function_range": [
+          74,
+          8,
+          76,
+          1
+        ],
+        "name_entity_id": -16756409,
+        "name_range": [
+          74,
+          17,
+          74,
+          26
+        ],
+        "source_name": "board_wlan",
+        "staged_path": "usr/share/ucode/wifi/utils.uc"
+      },
+      {
+        "export_entity_id": -16755531,
+        "export_range": [
+          145,
+          1,
+          151,
+          1
+        ],
+        "function_entity_id": -16755528,
+        "function_range": [
+          145,
+          8,
+          151,
+          1
+        ],
+        "name_entity_id": -16755525,
+        "name_range": [
+          145,
+          17,
+          145,
+          24
+        ],
+        "source_name": "find_phy",
+        "staged_path": "usr/share/ucode/wifi/utils.uc"
+      }
+    ]
+  },
+  "commands": [
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "init",
+        "$RUN/db",
+        "--language=ucode",
+        "--search-path=$RUN/pack",
+        "--source-root=$RUN/stage"
+      ],
+      "elapsed_seconds": 0.541,
+      "exit_status": 0,
+      "source_log": "database-commands.json"
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "index-files",
+        "$RUN/db",
+        "--language=ucode",
+        "--include=**/*.uc",
+        "--working-dir=$RUN/stage"
+      ],
+      "elapsed_seconds": 0.333,
+      "exit_status": 2,
+      "source_log": "database-commands.json"
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "index-files",
+        "$RUN/db",
+        "--language=ucode",
+        "--include=**/*.uc",
+        "--working-dir=$RUN/stage"
+      ],
+      "elapsed_seconds": 0.805,
+      "exit_status": 0,
+      "source_log": "index-files.json"
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "finalize",
+        "$RUN/db"
+      ],
+      "elapsed_seconds": 1.199,
+      "exit_status": 0,
+      "source_log": "finalize.json"
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$PRODUCER/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db",
+        "--search-path=$RUN/pack:$PRODUCER/ql/lib:$PRODUCER/ql/src",
+        "--output=$RUN/success.bqrs"
+      ],
+      "elapsed_seconds": 1.426,
+      "exit_status": 0,
+      "source_log": "diagnostic-queries.json"
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "$RUN/success.bqrs",
+        "--output=$RUN/success.json",
+        "--format=json"
+      ],
+      "elapsed_seconds": 0.214,
+      "exit_status": 0,
+      "source_log": "diagnostic-queries.json"
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$PRODUCER/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db",
+        "--search-path=$RUN/pack:$PRODUCER/ql/lib:$PRODUCER/ql/src",
+        "--output=$RUN/errors.bqrs"
+      ],
+      "elapsed_seconds": 1.391,
+      "exit_status": 0,
+      "source_log": "diagnostic-queries.json"
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "$RUN/errors.bqrs",
+        "--output=$RUN/errors.json",
+        "--format=json"
+      ],
+      "elapsed_seconds": 0.214,
+      "exit_status": 0,
+      "source_log": "diagnostic-queries.json"
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$PRODUCER/ql/src/extractor-smoke/DynamicImport.ql",
+        "--database=$RUN/db",
+        "--search-path=$RUN/pack:$PRODUCER/ql/lib:$PRODUCER/ql/src",
+        "--output=$RUN/DynamicImport.bqrs"
+      ],
+      "elapsed_seconds": 1.906,
+      "exit_status": 0,
+      "source_log": "ast-queries.json"
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "$RUN/DynamicImport.bqrs",
+        "--output=$RUN/DynamicImport.json",
+        "--format=json"
+      ],
+      "elapsed_seconds": 0.216,
+      "exit_status": 0,
+      "source_log": "ast-queries.json"
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$PRODUCER/ql/src/extractor-smoke/FunctionDeclarations.ql",
+        "--database=$RUN/db",
+        "--search-path=$RUN/pack:$PRODUCER/ql/lib:$PRODUCER/ql/src",
+        "--output=$RUN/FunctionDeclarations.bqrs"
+      ],
+      "elapsed_seconds": 1.848,
+      "exit_status": 0,
+      "source_log": "ast-queries.json"
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "$RUN/FunctionDeclarations.bqrs",
+        "--output=$RUN/FunctionDeclarations.json",
+        "--format=json"
+      ],
+      "elapsed_seconds": 0.215,
+      "exit_status": 0,
+      "source_log": "ast-queries.json"
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$PRODUCER/ql/src/extractor-smoke/ExportedFunctions.ql",
+        "--database=$RUN/db",
+        "--search-path=$RUN/pack:$PRODUCER/ql/lib:$PRODUCER/ql/src",
+        "--output=$RUN/ExportedFunctions.bqrs"
+      ],
+      "elapsed_seconds": 1.881,
+      "exit_status": 0,
+      "source_log": "export-query.json"
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "$RUN/ExportedFunctions.bqrs",
+        "--format=json",
+        "--entities=all",
+        "--output=$RUN/ExportedFunctions.json"
+      ],
+      "elapsed_seconds": 0.217,
+      "exit_status": 0,
+      "source_log": "export-query.json"
+    }
+  ],
+  "default_suite_run": false,
+  "dynamic_import_ast_rows": 1,
+  "exact_identities_csv_sha256": "31d12080e3bd8968ef6b4c0f3b72de2ad516eeb5ea00acf4752174e04b028af5",
+  "exported_function_ast_rows": 3,
+  "extraction_error_count": 0,
+  "extractor_sha256": "169b55b06aff74907411cf9614ffbbe45dfb522c30a5455c03271a7e8c40fa69",
+  "failed_setup_attempts": [
+    {
+      "elapsed_seconds": 0.2,
+      "exit_status": 101,
+      "operation": "cargo metadata --offline before grammar was copied into disposable producer",
+      "stderr_summary": "failed to read producer extractor/tree-sitter/Cargo.toml; no source mutation"
+    },
+    {
+      "cargo_exit_status": 0,
+      "elapsed_seconds": 16.86,
+      "operation": "/usr/bin/time -l env ... cargo build --release --offline ...",
+      "outer_wrapper_exit_status": 1,
+      "stderr_summary": "time: sysctl kern.clockrate: Operation not permitted; no peak RSS available"
+    },
+    {
+      "elapsed_seconds": 0.333,
+      "exit_status": 2,
+      "operation": "first database index-files attempt using incomplete manually assembled pack",
+      "stderr_summary": "ucode extractor did not provide file-indexing capabilities; omitted tools/index-files.sh and tools/pre-finalize.sh during pack copy. Rebuilt pack from the producer tools directory; retried successfully."
+    },
+    {
+      "elapsed_seconds_each": 0.798,
+      "exit_status": 2,
+      "operation": "first diagnostic query attempts with run-owned HOME before CodeQL pack cache was copied",
+      "stderr_summary": "codeql/controlflow@1.0.12 not found in pack cache. Existing cache was copied into wrong run-home directory level, then corrected to HOME/.codeql/packages; final retry succeeded."
+    },
+    {
+      "elapsed_seconds": 1.055,
+      "exit_status": 2,
+      "operation": "custom AST queries initially placed outside ql/src query pack",
+      "stderr_summary": "could not resolve codeql.ucode.ast.internal.TreeSitter; moved queries into disposable producer ql/src/extractor-smoke and reran successfully."
+    },
+    {
+      "exit_status": 1,
+      "operation": "diagnostic tuple validator invoked with non-canonical relative paths and BQRS JSON without entity URLs",
+      "stderr_summary": "validator rejected expected file multiset because actual URLs had canonical paths; re-decoded success with --entities=url,string and errors with --entities=all, then canonical-path validation passed."
+    },
+    {
+      "extractor_exit_status": 0,
+      "operation": "direct routing-only extractor call without CodeQL diagnostic environment",
+      "stderr_summary": "printed ERROR environment variable not found: CODEQL_EXTRACTOR_UCODE_DIAGNOSTIC_DIR but emitted routing.json; used only for route receipt. Successful CodeQL database indexing/finalization is the extraction evidence."
+    }
+  ],
+  "generated_dbscheme_sha256": "d4a9ef5db2dd934c94ddf59141331ded3531d4ec79d86702d8f75afc361fc9fd",
+  "generated_treesitter_qll_sha256": "ea77ca72e96d493545798f5a83894f3e08e1df9f62f5928848692033b6182d4f",
+  "grammar_base_commit": "4a243af329fae2f4ff01e0fc80133cbab8314600",
+  "grammar_override_diff_sha256": "008069fd058911c67429e89c29da153c6b007084a4f326f90d76ee2442176bd9",
+  "grammar_source_patch_sha256": "e95ad6f9ffcde810ce586a5efcf782973994ddf42f30cf868b516dfc302c343b",
+  "installed_bytes_verified": false,
+  "limits": [
+    "Grammar override is local and differs from locked grammar SHA; no published producer release.",
+    "Routing receipt came from a separate direct extractor invocation on the same staged bytes; CodeQL diagnostic queries authenticate the four extraction identities.",
+    "No default suite, SARIF, semantic/dataflow or runtime validation.",
+    "Peak RSS unavailable because macOS timing wrapper failed its resource query."
+  ],
+  "linux_run": false,
+  "openwrt_source_commit": "bce40f6a15c273778061e8fceced7b9e0f58d99b",
+  "phase_results": {
+    "cargo_build": {
+      "cargo_exit_status": 0,
+      "elapsed_seconds": 16.86,
+      "outer_time_error": "sysctl kern.clockrate: Operation not permitted; peak RSS unavailable",
+      "outer_time_l_exit_status": 1
+    },
+    "database_finalize": {
+      "elapsed_seconds": 1.199,
+      "exit_status": 0
+    },
+    "database_index_files": {
+      "elapsed_seconds": 0.805,
+      "exit_status": 0
+    },
+    "database_init": {
+      "elapsed_seconds": 0.541,
+      "exit_status": 0
+    },
+    "diagnostic_error_query": {
+      "elapsed_seconds": 1.391,
+      "evaluation_ms": 9,
+      "exit_status": 0
+    },
+    "diagnostic_success_query": {
+      "elapsed_seconds": 1.426,
+      "evaluation_ms": 31,
+      "exit_status": 0
+    },
+    "dynamic_import_query": {
+      "elapsed_seconds": 1.906,
+      "evaluation_ms": 113,
+      "exit_status": 0
+    },
+    "exported_functions_query": {
+      "elapsed_seconds": 1.881,
+      "evaluation_ms": 57,
+      "exit_status": 0
+    },
+    "function_declarations_query": {
+      "elapsed_seconds": 1.848,
+      "evaluation_ms": 60,
+      "exit_status": 0
+    },
+    "generate_schema": {
+      "elapsed_seconds": 0.365,
+      "exit_status": 0
+    }
+  },
+  "portable_oracle_sha256": "4bf591e90a3c5747f71961d80e948c00384850a9f6cd862a48b4abc2284e4418",
+  "producer_commit": "9166af76cf6944e1b3ea5856a9176366a1f7a6ee",
+  "producer_final_modified_paths": [
+    "ql/lib/codeql/ucode/ast/internal/TreeSitter.qll",
+    "ql/lib/ucode.dbscheme",
+    "ql/src/extractor-smoke/DynamicImport.ql",
+    "ql/src/extractor-smoke/FunctionDeclarations.ql",
+    "ql/src/extractor-smoke/ExportedFunctions.ql"
+  ],
+  "producer_initial_status": "clean",
+  "raw_sha256": {
+    "DynamicImport.json": "699fa907ff965257fe62825276afb3686adadb4de643834b255f6558d2475c41",
+    "ExportedFunctions.json": "63279640a698e90f73e936ff3c7ebc02f88ae8ef7aafe08e66a0e3f4e5af1f3b",
+    "direct-trap/routing.json": "9e1e366f7b54cc333206380c2f42e102ba7d387f1b179b1ef63f650791d6bd8d",
+    "errors.json": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "run-summary.json": "45b227daf409476bb4a65ead98a518bf21a593975144566c130e9f78da4470b1",
+    "success.json": "e02d54845e8b5554ee16b00e6270ed844ba2feab9d3b567ca63e2a7e96bf7f53"
+  },
+  "routing_counts": {
+    "duplicate_input_count": 0,
+    "excluded_count": 0,
+    "input_count": 4,
+    "markup_count": 0,
+    "markup_inconclusive_count": 0,
+    "plain_count": 4,
+    "uncertain_count": 0
+  },
+  "schema": "mvp-wifi-producer-prototype-receipt-v1",
+  "selected_count": 4,
+  "source_and_stage_rechecked_after_run": true,
+  "source_first_oracle_sha256": "51b88ef557d4ec8b7228598f9a6ab724efcc87f182673642fa36b153c7182341",
+  "status": "four-file local macOS grammar-override producer extraction pass",
+  "successful_count": 4,
+  "tool_versions": {
+    "cargo": "1.100.0",
+    "codeql": "2.27.4",
+    "codeql_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+    "rustc": "1.100.0"
+  }
+}

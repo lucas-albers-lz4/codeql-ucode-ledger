@@ -1,0 +1,989 @@
+{
+  "cases": {
+    "openvpn-fixed": {
+      "error_count": 0,
+      "expected_locations": [],
+      "observed_locations": [],
+      "routing_sha256": "4afd5a51c9c8c451cb043c72085ba3d63339697ae249678eb21b0581b97b9db5",
+      "sarif_sha256": "397c8c5948a24d77c15e6188372d4ca5bd0e04ffc0605417c48cb4bcdd4ef48f",
+      "source_count": 1,
+      "success_count": 1
+    },
+    "openvpn-parent": {
+      "error_count": 0,
+      "expected_locations": [
+        [
+          "usr/share/rpcd/ucode/luci.openvpn.uc",
+          71,
+          115,
+          132
+        ]
+      ],
+      "observed_locations": [
+        [
+          "usr/share/rpcd/ucode/luci.openvpn.uc",
+          71,
+          115,
+          132
+        ]
+      ],
+      "routing_sha256": "2177644d159f1318ee65941518723c692c04247d6c2ff841c568fc2532062398",
+      "sarif_sha256": "e8192a379ed33153852bca09d81951092b7a1f74560a4a58fdbb8629ce52e094",
+      "source_count": 1,
+      "success_count": 1
+    },
+    "tailscale-controls": {
+      "error_count": 0,
+      "expected_locations": [
+        [
+          "usr/share/rpcd/ucode/nested_pos.uc",
+          18,
+          5,
+          51
+        ]
+      ],
+      "observed_locations": [
+        [
+          "usr/share/rpcd/ucode/nested_pos.uc",
+          18,
+          5,
+          51
+        ]
+      ],
+      "routing_sha256": "748a28eb66a4f4725a189f1ba0f4a05faf5b75c00d2c32a763f353c4f9f3b0f7",
+      "sarif_sha256": "925b7d47e4784bb7ec963c8dbd1dff66ef76032d7997a11b537a20911287af4f",
+      "source_count": 11,
+      "success_count": 11
+    },
+    "tailscale-fixed": {
+      "error_count": 0,
+      "expected_locations": [],
+      "observed_locations": [],
+      "routing_sha256": "6af13c4edb935c01181a561f08734e549fd4fc0a53f4b86ea5e4e18ccc95fa24",
+      "sarif_sha256": "181dac38174ccb9a22dd5124c02424d0939188adb25c9d86e55c8c88253b013b",
+      "source_count": 1,
+      "success_count": 1
+    },
+    "tailscale-parent": {
+      "error_count": 0,
+      "expected_locations": [
+        [
+          "usr/share/rpcd/ucode/tailscale.uc",
+          164,
+          3,
+          49
+        ]
+      ],
+      "observed_locations": [
+        [
+          "usr/share/rpcd/ucode/tailscale.uc",
+          164,
+          3,
+          49
+        ]
+      ],
+      "routing_sha256": "d2c8b65e9b47678ce5634efa57cdf696665c8bd7996e143c31db2aa75dcd6814",
+      "sarif_sha256": "63371d7236c745e46f6243f18a4e804f6ec9d2181db84cc9ddd4f00977b1c2f9",
+      "source_count": 1,
+      "success_count": 1
+    }
+  },
+  "commands": [
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "init",
+        "$RUN/db/openvpn-parent",
+        "--language=ucode",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--source-root=$RUN/stage/openvpn-parent"
+      ],
+      "exit": 0,
+      "label": "openvpn-parent-init",
+      "peak_rss_bytes": null,
+      "stderr": "out/openvpn-parent-init.stderr",
+      "stdout": "out/openvpn-parent-init.stdout",
+      "wall_seconds": 0.472
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "index-files",
+        "--language=ucode",
+        "--include=**/*",
+        "--working-dir=$RUN/stage/openvpn-parent",
+        "$RUN/db/openvpn-parent",
+        "--common-caches=$RUN/cache/common",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "label": "openvpn-parent-index",
+      "peak_rss_bytes": null,
+      "stderr": "out/openvpn-parent-index.stderr",
+      "stdout": "out/openvpn-parent-index.stdout",
+      "wall_seconds": 0.66
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "finalize",
+        "$RUN/db/openvpn-parent",
+        "--common-caches=$RUN/cache/common"
+      ],
+      "exit": 0,
+      "label": "openvpn-parent-finalize",
+      "peak_rss_bytes": null,
+      "stderr": "out/openvpn-parent-finalize.stderr",
+      "stdout": "out/openvpn-parent-finalize.stdout",
+      "wall_seconds": 1.138
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db/openvpn-parent",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/openvpn-parent-success.bqrs"
+      ],
+      "exit": 0,
+      "label": "openvpn-parent-success-query",
+      "peak_rss_bytes": null,
+      "stderr": "out/openvpn-parent-success-query.stderr",
+      "stdout": "out/openvpn-parent-success-query.stdout",
+      "wall_seconds": 1.4
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/openvpn-parent-success.bqrs"
+      ],
+      "exit": 0,
+      "label": "openvpn-parent-success-decode",
+      "peak_rss_bytes": null,
+      "stderr": "out/openvpn-parent-success-decode.stderr",
+      "stdout": "out/openvpn-parent-success-decode.stdout",
+      "wall_seconds": 0.215
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db/openvpn-parent",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/openvpn-parent-errors.bqrs"
+      ],
+      "exit": 0,
+      "label": "openvpn-parent-errors-query",
+      "peak_rss_bytes": null,
+      "stderr": "out/openvpn-parent-errors-query.stderr",
+      "stdout": "out/openvpn-parent-errors-query.stdout",
+      "wall_seconds": 1.394
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/openvpn-parent-errors.bqrs"
+      ],
+      "exit": 0,
+      "label": "openvpn-parent-errors-decode",
+      "peak_rss_bytes": null,
+      "stderr": "out/openvpn-parent-errors-decode.stderr",
+      "stdout": "out/openvpn-parent-errors-decode.stdout",
+      "wall_seconds": 0.208
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "analyze",
+        "$RUN/db/openvpn-parent",
+        "$RUN/producer/ql/src/codeql-suites/code-scanning.qls",
+        "--format=sarifv2.1.0",
+        "--output=$RUN/out/openvpn-parent.sarif",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "label": "openvpn-parent-analyze",
+      "peak_rss_bytes": null,
+      "stderr": "out/openvpn-parent-analyze.stderr",
+      "stdout": "out/openvpn-parent-analyze.stdout",
+      "wall_seconds": 3.647
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "init",
+        "$RUN/db/openvpn-fixed",
+        "--language=ucode",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--source-root=$RUN/stage/openvpn-fixed"
+      ],
+      "exit": 0,
+      "label": "openvpn-fixed-init",
+      "peak_rss_bytes": null,
+      "stderr": "out/openvpn-fixed-init.stderr",
+      "stdout": "out/openvpn-fixed-init.stdout",
+      "wall_seconds": 0.481
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "index-files",
+        "--language=ucode",
+        "--include=**/*",
+        "--working-dir=$RUN/stage/openvpn-fixed",
+        "$RUN/db/openvpn-fixed",
+        "--common-caches=$RUN/cache/common",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "label": "openvpn-fixed-index",
+      "peak_rss_bytes": null,
+      "stderr": "out/openvpn-fixed-index.stderr",
+      "stdout": "out/openvpn-fixed-index.stdout",
+      "wall_seconds": 0.36
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "finalize",
+        "$RUN/db/openvpn-fixed",
+        "--common-caches=$RUN/cache/common"
+      ],
+      "exit": 0,
+      "label": "openvpn-fixed-finalize",
+      "peak_rss_bytes": null,
+      "stderr": "out/openvpn-fixed-finalize.stderr",
+      "stdout": "out/openvpn-fixed-finalize.stdout",
+      "wall_seconds": 0.97
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db/openvpn-fixed",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/openvpn-fixed-success.bqrs"
+      ],
+      "exit": 0,
+      "label": "openvpn-fixed-success-query",
+      "peak_rss_bytes": null,
+      "stderr": "out/openvpn-fixed-success-query.stderr",
+      "stdout": "out/openvpn-fixed-success-query.stdout",
+      "wall_seconds": 1.04
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/openvpn-fixed-success.bqrs"
+      ],
+      "exit": 0,
+      "label": "openvpn-fixed-success-decode",
+      "peak_rss_bytes": null,
+      "stderr": "out/openvpn-fixed-success-decode.stderr",
+      "stdout": "out/openvpn-fixed-success-decode.stdout",
+      "wall_seconds": 0.208
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db/openvpn-fixed",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/openvpn-fixed-errors.bqrs"
+      ],
+      "exit": 0,
+      "label": "openvpn-fixed-errors-query",
+      "peak_rss_bytes": null,
+      "stderr": "out/openvpn-fixed-errors-query.stderr",
+      "stdout": "out/openvpn-fixed-errors-query.stdout",
+      "wall_seconds": 1.028
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/openvpn-fixed-errors.bqrs"
+      ],
+      "exit": 0,
+      "label": "openvpn-fixed-errors-decode",
+      "peak_rss_bytes": null,
+      "stderr": "out/openvpn-fixed-errors-decode.stderr",
+      "stdout": "out/openvpn-fixed-errors-decode.stdout",
+      "wall_seconds": 0.208
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "analyze",
+        "$RUN/db/openvpn-fixed",
+        "$RUN/producer/ql/src/codeql-suites/code-scanning.qls",
+        "--format=sarifv2.1.0",
+        "--output=$RUN/out/openvpn-fixed.sarif",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "label": "openvpn-fixed-analyze",
+      "peak_rss_bytes": null,
+      "stderr": "out/openvpn-fixed-analyze.stderr",
+      "stdout": "out/openvpn-fixed-analyze.stdout",
+      "wall_seconds": 1.806
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "init",
+        "$RUN/db/tailscale-parent",
+        "--language=ucode",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--source-root=$RUN/stage/tailscale-parent"
+      ],
+      "exit": 0,
+      "label": "tailscale-parent-init",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-parent-init.stderr",
+      "stdout": "out/tailscale-parent-init.stdout",
+      "wall_seconds": 0.468
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "index-files",
+        "--language=ucode",
+        "--include=**/*",
+        "--working-dir=$RUN/stage/tailscale-parent",
+        "$RUN/db/tailscale-parent",
+        "--common-caches=$RUN/cache/common",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "label": "tailscale-parent-index",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-parent-index.stderr",
+      "stdout": "out/tailscale-parent-index.stdout",
+      "wall_seconds": 0.363
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "finalize",
+        "$RUN/db/tailscale-parent",
+        "--common-caches=$RUN/cache/common"
+      ],
+      "exit": 0,
+      "label": "tailscale-parent-finalize",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-parent-finalize.stderr",
+      "stdout": "out/tailscale-parent-finalize.stdout",
+      "wall_seconds": 1.006
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db/tailscale-parent",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/tailscale-parent-success.bqrs"
+      ],
+      "exit": 0,
+      "label": "tailscale-parent-success-query",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-parent-success-query.stderr",
+      "stdout": "out/tailscale-parent-success-query.stdout",
+      "wall_seconds": 1.068
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/tailscale-parent-success.bqrs"
+      ],
+      "exit": 0,
+      "label": "tailscale-parent-success-decode",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-parent-success-decode.stderr",
+      "stdout": "out/tailscale-parent-success-decode.stdout",
+      "wall_seconds": 0.21
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db/tailscale-parent",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/tailscale-parent-errors.bqrs"
+      ],
+      "exit": 0,
+      "label": "tailscale-parent-errors-query",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-parent-errors-query.stderr",
+      "stdout": "out/tailscale-parent-errors-query.stdout",
+      "wall_seconds": 1.031
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/tailscale-parent-errors.bqrs"
+      ],
+      "exit": 0,
+      "label": "tailscale-parent-errors-decode",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-parent-errors-decode.stderr",
+      "stdout": "out/tailscale-parent-errors-decode.stdout",
+      "wall_seconds": 0.209
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "analyze",
+        "$RUN/db/tailscale-parent",
+        "$RUN/producer/ql/src/m4/TailscaleNestedShell.ql",
+        "--format=sarifv2.1.0",
+        "--output=$RUN/out/tailscale-parent.sarif",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "label": "tailscale-parent-analyze",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-parent-analyze.stderr",
+      "stdout": "out/tailscale-parent-analyze.stdout",
+      "wall_seconds": 3.526
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "init",
+        "$RUN/db/tailscale-fixed",
+        "--language=ucode",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--source-root=$RUN/stage/tailscale-fixed"
+      ],
+      "exit": 0,
+      "label": "tailscale-fixed-init",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-fixed-init.stderr",
+      "stdout": "out/tailscale-fixed-init.stdout",
+      "wall_seconds": 0.46
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "index-files",
+        "--language=ucode",
+        "--include=**/*",
+        "--working-dir=$RUN/stage/tailscale-fixed",
+        "$RUN/db/tailscale-fixed",
+        "--common-caches=$RUN/cache/common",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "label": "tailscale-fixed-index",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-fixed-index.stderr",
+      "stdout": "out/tailscale-fixed-index.stdout",
+      "wall_seconds": 0.371
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "finalize",
+        "$RUN/db/tailscale-fixed",
+        "--common-caches=$RUN/cache/common"
+      ],
+      "exit": 0,
+      "label": "tailscale-fixed-finalize",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-fixed-finalize.stderr",
+      "stdout": "out/tailscale-fixed-finalize.stdout",
+      "wall_seconds": 2.792
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db/tailscale-fixed",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/tailscale-fixed-success.bqrs"
+      ],
+      "exit": 0,
+      "label": "tailscale-fixed-success-query",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-fixed-success-query.stderr",
+      "stdout": "out/tailscale-fixed-success-query.stdout",
+      "wall_seconds": 2.044
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/tailscale-fixed-success.bqrs"
+      ],
+      "exit": 0,
+      "label": "tailscale-fixed-success-decode",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-fixed-success-decode.stderr",
+      "stdout": "out/tailscale-fixed-success-decode.stdout",
+      "wall_seconds": 0.225
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db/tailscale-fixed",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/tailscale-fixed-errors.bqrs"
+      ],
+      "exit": 0,
+      "label": "tailscale-fixed-errors-query",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-fixed-errors-query.stderr",
+      "stdout": "out/tailscale-fixed-errors-query.stdout",
+      "wall_seconds": 1.14
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/tailscale-fixed-errors.bqrs"
+      ],
+      "exit": 0,
+      "label": "tailscale-fixed-errors-decode",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-fixed-errors-decode.stderr",
+      "stdout": "out/tailscale-fixed-errors-decode.stdout",
+      "wall_seconds": 0.223
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "analyze",
+        "$RUN/db/tailscale-fixed",
+        "$RUN/producer/ql/src/m4/TailscaleNestedShell.ql",
+        "--format=sarifv2.1.0",
+        "--output=$RUN/out/tailscale-fixed.sarif",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "label": "tailscale-fixed-analyze",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-fixed-analyze.stderr",
+      "stdout": "out/tailscale-fixed-analyze.stdout",
+      "wall_seconds": 1.988
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "init",
+        "$RUN/db/tailscale-controls",
+        "--language=ucode",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--source-root=$RUN/stage/tailscale-controls"
+      ],
+      "exit": 0,
+      "label": "tailscale-controls-init",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-controls-init.stderr",
+      "stdout": "out/tailscale-controls-init.stdout",
+      "wall_seconds": 0.506
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "index-files",
+        "--language=ucode",
+        "--include=**/*",
+        "--working-dir=$RUN/stage/tailscale-controls",
+        "$RUN/db/tailscale-controls",
+        "--common-caches=$RUN/cache/common",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "label": "tailscale-controls-index",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-controls-index.stderr",
+      "stdout": "out/tailscale-controls-index.stdout",
+      "wall_seconds": 0.398
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "finalize",
+        "$RUN/db/tailscale-controls",
+        "--common-caches=$RUN/cache/common"
+      ],
+      "exit": 0,
+      "label": "tailscale-controls-finalize",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-controls-finalize.stderr",
+      "stdout": "out/tailscale-controls-finalize.stdout",
+      "wall_seconds": 1.061
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db/tailscale-controls",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/tailscale-controls-success.bqrs"
+      ],
+      "exit": 0,
+      "label": "tailscale-controls-success-query",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-controls-success-query.stderr",
+      "stdout": "out/tailscale-controls-success-query.stdout",
+      "wall_seconds": 1.076
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/tailscale-controls-success.bqrs"
+      ],
+      "exit": 0,
+      "label": "tailscale-controls-success-decode",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-controls-success-decode.stderr",
+      "stdout": "out/tailscale-controls-success-decode.stdout",
+      "wall_seconds": 0.213
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db/tailscale-controls",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/tailscale-controls-errors.bqrs"
+      ],
+      "exit": 0,
+      "label": "tailscale-controls-errors-query",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-controls-errors-query.stderr",
+      "stdout": "out/tailscale-controls-errors-query.stdout",
+      "wall_seconds": 1.051
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/tailscale-controls-errors.bqrs"
+      ],
+      "exit": 0,
+      "label": "tailscale-controls-errors-decode",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-controls-errors-decode.stderr",
+      "stdout": "out/tailscale-controls-errors-decode.stdout",
+      "wall_seconds": 0.216
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "analyze",
+        "$RUN/db/tailscale-controls",
+        "$RUN/producer/ql/src/m4/TailscaleNestedShell.ql",
+        "--format=sarifv2.1.0",
+        "--output=$RUN/out/tailscale-controls.sarif",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "label": "tailscale-controls-analyze",
+      "peak_rss_bytes": null,
+      "stderr": "out/tailscale-controls-analyze.stderr",
+      "stdout": "out/tailscale-controls-analyze.stdout",
+      "wall_seconds": 1.86
+    }
+  ],
+  "known_noninvalidating_warning": "CodeQL reported query-stage caching disabled at the configured 2048 MB RAM cap; results and exit statuses were unaffected.",
+  "normalization": "Absolute run root replaced with $RUN and CodeQL executable with $CODEQL; raw outputs remain under ignored work/.",
+  "preflight": {
+    "codeql_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+    "oracle_sha256": "4b4d15fd311f794abb9bdc749312c40c377eb6c7bd1a24672cca370407deb5be",
+    "producer_sha": "9166af76cf6944e1b3ea5856a9176366a1f7a6ee",
+    "prototype_extractor_sha256": "169b55b06aff74907411cf9614ffbbe45dfb522c30a5455c03271a7e8c40fa69",
+    "scope": "local macOS modified grammar, source-staged; not Linux/installed",
+    "source_dirty": false,
+    "source_pins": {
+      "openvpn-fixed": "e4ff45ecbc6ad212951815c8c99b2749fbd7de6b",
+      "openvpn-parent": "b45584b4e6068b9b096872dd02494a048d869c36",
+      "tailscale-fixed": "507ab5e45c304543d4111af9a331db0f03be6bcb",
+      "tailscale-parent": "46cd82328dfb7fbb15961c63f9e674a41cef2500"
+    },
+    "tailscale_manifest_sha256": "b1a538d03d60e356ae94cf374a2bfdc9338d81068b9e0a7233ac3bcbf89ac114"
+  },
+  "raw_sha256": {
+    "commands.json": "fe29f76a347a225c0d163ecd273036d0cc68357e0c4bf6c20c8965825f40c543",
+    "out/openvpn-fixed-errors.csv": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+    "out/openvpn-fixed-routing.json": "4afd5a51c9c8c451cb043c72085ba3d63339697ae249678eb21b0581b97b9db5",
+    "out/openvpn-fixed-success.csv": "6ee7711ad13aab6b294f777a9844bf613d8e55db0a3752ff1c5e0138b14c990c",
+    "out/openvpn-fixed.sarif": "397c8c5948a24d77c15e6188372d4ca5bd0e04ffc0605417c48cb4bcdd4ef48f",
+    "out/openvpn-parent-errors.csv": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+    "out/openvpn-parent-routing.json": "2177644d159f1318ee65941518723c692c04247d6c2ff841c568fc2532062398",
+    "out/openvpn-parent-success.csv": "e32abb1de190a1a45d24e79dc1c625a5c2f7deb0bd757f881985c5b2fbbfe271",
+    "out/openvpn-parent.sarif": "e8192a379ed33153852bca09d81951092b7a1f74560a4a58fdbb8629ce52e094",
+    "out/tailscale-controls-errors.csv": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+    "out/tailscale-controls-routing.json": "748a28eb66a4f4725a189f1ba0f4a05faf5b75c00d2c32a763f353c4f9f3b0f7",
+    "out/tailscale-controls-success.csv": "3f83e06f5f142bfe096d1bb9205220fd4876a8e0789aa951573d7c6b8ce6c824",
+    "out/tailscale-controls.sarif": "925b7d47e4784bb7ec963c8dbd1dff66ef76032d7997a11b537a20911287af4f",
+    "out/tailscale-fixed-errors.csv": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+    "out/tailscale-fixed-routing.json": "6af13c4edb935c01181a561f08734e549fd4fc0a53f4b86ea5e4e18ccc95fa24",
+    "out/tailscale-fixed-success.csv": "b1b83bd59c694f4f9fcbaffbb8a11f3f8dd63d046856c4cb492fcf7a974412c2",
+    "out/tailscale-fixed.sarif": "181dac38174ccb9a22dd5124c02424d0939188adb25c9d86e55c8c88253b013b",
+    "out/tailscale-parent-errors.csv": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+    "out/tailscale-parent-routing.json": "d2c8b65e9b47678ce5634efa57cdf696665c8bd7996e143c31db2aa75dcd6814",
+    "out/tailscale-parent-success.csv": "55983bbc1c2a073e8be1a1f7955cc27c481de723aa2e303595d972d8a6ff0357",
+    "out/tailscale-parent.sarif": "63371d7236c745e46f6243f18a4e804f6ec9d2181db84cc9ddd4f00977b1c2f9",
+    "preflight.json": "32a5ff2e291ec1c323bd5912a5dd68cd57c7a4fae2f1709f56432c1cfd33de27",
+    "receipt.json": "396b54148dda8c55291b970c90332d913a056aff8768ddb5652731570ce92cdc",
+    "source-first-oracle.json": "4b4d15fd311f794abb9bdc749312c40c377eb6c7bd1a24672cca370407deb5be"
+  },
+  "scope": "local macOS modified grammar parent/fix and controls; not Linux or installed bytes",
+  "source_and_stage_rechecked": true,
+  "source_records": [
+    {
+      "case": "openvpn-parent",
+      "git_blob": "da389170328212f8f0a3b7bea42be11d42bd0c38",
+      "revision": "b45584b4e6068b9b096872dd02494a048d869c36",
+      "source_path": "protocols/luci-proto-openvpn/root/usr/share/rpcd/ucode/luci.openvpn.uc",
+      "source_sha256": "051c8162f826683333e11264615806df5ab08415676c0bd098921cb1b05af991",
+      "staged_path": "usr/share/rpcd/ucode/luci.openvpn.uc"
+    },
+    {
+      "case": "openvpn-fixed",
+      "git_blob": "eb3b418f855d24ae0a34d5d09a289b9342098129",
+      "revision": "e4ff45ecbc6ad212951815c8c99b2749fbd7de6b",
+      "source_path": "protocols/luci-proto-openvpn/root/usr/share/rpcd/ucode/luci.openvpn.uc",
+      "source_sha256": "6593792678951fd500c2b090d17d9e500a05a642cfb996ee02c1649473152410",
+      "staged_path": "usr/share/rpcd/ucode/luci.openvpn.uc"
+    },
+    {
+      "case": "tailscale-parent",
+      "git_blob": "8e2b7aa56a0b37c0cf392fc4c182d6ae1167e858",
+      "revision": "46cd82328dfb7fbb15961c63f9e674a41cef2500",
+      "source_path": "applications/luci-app-tailscale-community/root/usr/share/rpcd/ucode/tailscale.uc",
+      "source_sha256": "3029c32d7ccd18efb95355aa915841e2bf467b0de147ce1a65b68c55fec9d280",
+      "staged_path": "usr/share/rpcd/ucode/tailscale.uc"
+    },
+    {
+      "case": "tailscale-fixed",
+      "git_blob": "b7bf94b0baff7817dad2a010b04e1ba293d59733",
+      "revision": "507ab5e45c304543d4111af9a331db0f03be6bcb",
+      "source_path": "applications/luci-app-tailscale-community/root/usr/share/rpcd/ucode/tailscale.uc",
+      "source_sha256": "12bffca1f06aae14363f12d98680c0ca3a07223babd26131cc7c1612baf8fc4e",
+      "staged_path": "usr/share/rpcd/ucode/tailscale.uc"
+    },
+    {
+      "case": "tailscale-controls",
+      "source_path": "controls/usr/share/rpcd/ucode/model_pos.uc",
+      "source_sha256": "b406488ab29d7c63d4698896239afed0a55b584e8b892d9983567a646b3e67be",
+      "staged_path": "usr/share/rpcd/ucode/model_pos.uc"
+    },
+    {
+      "case": "tailscale-controls",
+      "source_path": "controls/usr/share/rpcd/ucode/nested_closure.uc",
+      "source_sha256": "ddd8db07d721b4d8cb79c45995cb7662ea695c19f1b59983aa5e6ae2ad90153f",
+      "staged_path": "usr/share/rpcd/ucode/nested_closure.uc"
+    },
+    {
+      "case": "tailscale-controls",
+      "source_path": "controls/usr/share/rpcd/ucode/nested_fixed.uc",
+      "source_sha256": "8723f5da9d9d12f14fba1dd6ca35f3540d906d5679b7a68edaa7a5a09f88bf0c",
+      "staged_path": "usr/share/rpcd/ucode/nested_fixed.uc"
+    },
+    {
+      "case": "tailscale-controls",
+      "source_path": "controls/usr/share/rpcd/ucode/nested_helper_constant.uc",
+      "source_sha256": "54f212c0dbdba05f96cd8b390f9a882f727ffe487351de3bd472cf290fcebcb1",
+      "staged_path": "usr/share/rpcd/ucode/nested_helper_constant.uc"
+    },
+    {
+      "case": "tailscale-controls",
+      "source_path": "controls/usr/share/rpcd/ucode/nested_near_miss.uc",
+      "source_sha256": "1d4abd74484a16973168aa3cf994540b0d462d01da48a86b5ecaf3e74bf44602",
+      "staged_path": "usr/share/rpcd/ucode/nested_near_miss.uc"
+    },
+    {
+      "case": "tailscale-controls",
+      "source_path": "controls/usr/share/rpcd/ucode/nested_pos.uc",
+      "source_sha256": "f410af3bbbea20098e78e863c56967bf90af94f908c26f771c2f89c1cdb50592",
+      "staged_path": "usr/share/rpcd/ucode/nested_pos.uc"
+    },
+    {
+      "case": "tailscale-controls",
+      "source_path": "controls/usr/share/rpcd/ucode/nested_reassigned.uc",
+      "source_sha256": "d000925cbbdee53535652c91413c81c9829e230349dfef0707b0fd911187ae62",
+      "staged_path": "usr/share/rpcd/ucode/nested_reassigned.uc"
+    },
+    {
+      "case": "tailscale-controls",
+      "source_path": "controls/usr/share/rpcd/ucode/nested_shadow.uc",
+      "source_sha256": "220edda6f27c547b04916b509b79c0c27170d001d0b1eb5a59269bcb31091a22",
+      "staged_path": "usr/share/rpcd/ucode/nested_shadow.uc"
+    },
+    {
+      "case": "tailscale-controls",
+      "source_path": "controls/usr/share/rpcd/ucode/nested_trim_fallback_constant.uc",
+      "source_sha256": "a9d47da924e1fb718f4b1a1861ebd9198a875f7134a725501fdb6dcac92c1592",
+      "staged_path": "usr/share/rpcd/ucode/nested_trim_fallback_constant.uc"
+    },
+    {
+      "case": "tailscale-controls",
+      "source_path": "controls/usr/share/rpcd/ucode/nested_push_fallback_constant.uc",
+      "source_sha256": "9ce453d8c77bea019f2c05fb8c8b478d49813f130bd5a2b7b7ee5a771de164f9",
+      "staged_path": "usr/share/rpcd/ucode/nested_push_fallback_constant.uc"
+    },
+    {
+      "case": "tailscale-controls",
+      "source_path": "controls/usr/share/rpcd/ucode/nested_join_fallback_constant.uc",
+      "source_sha256": "3c8e686fd0cc4b0b890d1a6c226027b59c0bfecb2d2f03b9aeb740eb8b458310",
+      "staged_path": "usr/share/rpcd/ucode/nested_join_fallback_constant.uc"
+    }
+  ],
+  "status": "pass"
+}

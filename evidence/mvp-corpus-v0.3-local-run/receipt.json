@@ -1,0 +1,114 @@
+{
+  "codeql_executable_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+  "exact_identities_csv_sha256": "92de806a770a8b07c9094a248deb66b7779259f0048c6330d1a388b3d7a15e6a",
+  "exact_identity_rows": 99,
+  "extraction_error_count": 0,
+  "extractor_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+  "limits": [
+    "One fresh 99-file source-staged local run; not actual package-installed bytes.",
+    "The 17 wifi-scripts paths assume CONFIG_WIFI_SCRIPTS_UCODE=y; no package configuration was built.",
+    "34 markup routes remain inconclusive despite successful-file diagnostics.",
+    "Zero direct-rule results do not prove safety or precision.",
+    "Local macOS cost does not substitute for Linux current-corpus timing."
+  ],
+  "peak_memory_note": "macOS time -l cannot read kern.clockrate in this sandbox; this run used time.monotonic and has no peak RSS",
+  "phase_metrics": [
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "database-init",
+      "wall_seconds": 0.464
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "index-files",
+      "wall_seconds": 0.985
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "database-finalize",
+      "wall_seconds": 1.609
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "success-query",
+      "wall_seconds": 1.411
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "success-decode",
+      "wall_seconds": 0.21
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "errors-query",
+      "wall_seconds": 1.398
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "errors-decode",
+      "wall_seconds": 0.208
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "resolve-suite",
+      "wall_seconds": 0.355
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "default-suite-analyze",
+      "wall_seconds": 17.997
+    }
+  ],
+  "preflight": {
+    "cpu_count": 10,
+    "free_disk_bytes": 131117772800,
+    "memory_free_percentage": 65
+  },
+  "producer_commit": "7c62553b7a81b236b75d1b1fa0d50c612a020cc5",
+  "raw_artifact_sha256": {
+    "commands.json": "9d41d46dc21d4a6c58295151b7a21058f4b5ab078e532ffd49cae39ce668e748",
+    "out/default-suite.sarif": "acf8d40e9f92022e2d5071eb548feab4560bfebddfb4af0e90188f9651d24478",
+    "out/errors.csv": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+    "out/routing.json": "48ee45248f4908c92028c285c84ca83a88537f847ad921170fa1eefdee82c27b",
+    "out/success.csv": "efdcf6e5140c187748402071cdf4f9e2e8bc5c3999c670a1f51c3c067cd55049",
+    "preflight.json": "3c4ee41e071e6a32f0635417115177f612ca10cfbb67fdcc803e05461abb0e8e",
+    "receipt.json": "c736824352ef34699a08e3871c72dafb4b7643bdf1918c5ca72dc5735cbb1887",
+    "source-oracle.json": "22c0a0434b583913715cdbbd1fbfe0930bb876252fd2823c41cd38bf3a1c870b"
+  },
+  "resolved_suite": [
+    "DirectRpcShellWord.ql",
+    "ExtractionErrors.ql",
+    "SuccessfullyExtractedFiles.ql"
+  ],
+  "route_counts": {
+    "excluded_count": 0,
+    "input_count": 99,
+    "markup_count": 34,
+    "plain_count": 65,
+    "uncertain_count": 0
+  },
+  "run_script_sha256": "961a5cc63c150cad1370142b2d5f0b946b571656c7f1abd388c63884bcedac69",
+  "sarif_result_count": 0,
+  "sarif_rule_descriptors": [
+    "ucode/m4/direct-rpc-shell-word"
+  ],
+  "schema": "mvp-corpus-v0.3-local-run-receipt",
+  "selected_count": 99,
+  "source_oracle_sha256": "22c0a0434b583913715cdbbd1fbfe0930bb876252fd2823c41cd38bf3a1c870b",
+  "source_pins": {
+    "luci": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "openwrt": "4e9642517b48bae612ff10fb72fb9199e559500e",
+    "packages": "07e0d16305d2b5903b37ad7913e33e18795f81a4"
+  },
+  "status": "completed source-staged local macOS run; no installed-byte or Linux gate",
+  "suite_sha256": "6d343f93e37c309b8461da9fafcf67d089737980d7ac42a5409e75df3bd442e5"
+}

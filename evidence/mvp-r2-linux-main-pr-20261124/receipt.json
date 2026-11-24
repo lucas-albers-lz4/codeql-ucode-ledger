@@ -1,0 +1,54 @@
+{
+  "all_command_exits_zero": true,
+  "artifact_kind": "ci-candidate",
+  "bundle_sha256": "3e33fc59276c71f4c7c01023b3dfc1cfd8d008b3ca5b189468708a7597019b6e",
+  "ci_checkout_merge_sha": "6560ba57116ba74af2d63206c0f220503b8b319b",
+  "command_count": 104,
+  "direct_control_result_count": 5,
+  "github_head_sha": "91e22839092c697843f40dd37ca795a036e49ebf",
+  "github_run_id": 45453107382,
+  "limits": [
+    "PR merge-ref CI candidate, not a versioned or immutable release",
+    "Linux R2 source-pinned historical matrix, not current OpenWrt corpus or installed-byte scan"
+  ],
+  "luci_swconfig_count": 0,
+  "manifest_sha256": "aaa65cb5aeed454b24b5d86493f6b330fdf76145bb67b5b48b83dbc9ac800cb7",
+  "openvpn_fixed_count": 0,
+  "openvpn_parent_result": {
+    "count": 1,
+    "region": {
+      "endColumn": 132,
+      "startColumn": 115,
+      "startLine": 71
+    },
+    "rule_id": "ucode/m4/direct-rpc-shell-word",
+    "uri": "usr/share/rpcd/ucode/luci.openvpn.uc"
+  },
+  "raw_artifact_sha256": {
+    "artifact/codeql-ucode-linux.tar.gz": "3e33fc59276c71f4c7c01023b3dfc1cfd8d008b3ca5b189468708a7597019b6e",
+    "commands.json": "8ac2a73c6cadc04d68f0f7a6ec44e1292153541926835ab0c970b4f957678260",
+    "out/direct-controls/default-suite.sarif": "1301625e3df4c8ac8583f53ad1ee82d4957ef38cad44618f0ba9a0b77ac2a77d",
+    "out/luci-swconfig/default-suite.sarif": "20bb32d7e7d036b034aa475040678cf2ce498dc85dc7932bd26380e7d2f413d9",
+    "out/openvpn-fixed/default-suite.sarif": "296aed5dec70c1faa0b92cf519654e8c0b6905f78ece316f3a90830e9765dfc2",
+    "out/openvpn-parent/default-suite.sarif": "e25288e88b7144b9d9800cf138082b85120c9ab1d4d19a1ccf9deaa7cd9daa1d",
+    "out/resolved-default-suite.json": "b5ab632e735dd30f8a9530ec3ddbc4c81950c72d3a4263fc1ed5d03b19b3f4a2",
+    "out/tailscale-controls/candidate.sarif": "8ae1e3981065a31b5a74d937e3e1db7c6c19874a335b60b97bf77a09582eab05",
+    "out/tailscale-fixed/candidate.sarif": "0bccac68f909fbed3ce9acb1e67763cfd0b91826c2f1bc92b0553a60da1ce228",
+    "out/tailscale-parent/candidate.sarif": "033ca10b17503ff0cdf54086a7e6710f7d20526f1e79c8de964e05f535e9ae48",
+    "preflight.json": "fb351cd094aead7da2d4e519ebd729100c9ec77c573176a6167ec14df4356f85",
+    "receipt.json": "aa9853a2b8f75699e63ad8600298aebe12280dd6b2a53df706a111828c5c668c",
+    "source-oracle.json": "e45264baa0988085ed5761fbb23f0e0107fe045e230cb884a9689c58697b584c"
+  },
+  "resolved_queries": [
+    "DirectRpcShellWord.ql",
+    "ExtractionErrors.ql",
+    "SuccessfullyExtractedFiles.ql"
+  ],
+  "schema": "mvp-r2-linux-main-pr-v1",
+  "tailscale_candidate_counts": {
+    "controls": 1,
+    "fixed": 0,
+    "parent": 1
+  },
+  "verified_bundle_files": 290
+}

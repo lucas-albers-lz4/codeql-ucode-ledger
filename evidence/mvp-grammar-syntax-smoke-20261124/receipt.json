@@ -1,0 +1,244 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "init",
+        "$RUN/db/newer-grammar-syntax",
+        "--language=ucode",
+        "--search-path=$PRODUCER/extractor-pack:$PRODUCER/ql/lib:$PRODUCER/ql/src",
+        "--common-caches=$RUN/cache/codeql-common/newer-grammar-syntax",
+        "--source-root=$RUN/stage/newer-grammar-syntax"
+      ],
+      "cwd": "$PRODUCER",
+      "exit": 0,
+      "label": "newer-grammar-syntax-database-init",
+      "peak_rss_bytes": null,
+      "stderr": "out/commands/newer-grammar-syntax-database-init.stderr",
+      "stdout": "out/commands/newer-grammar-syntax-database-init.stdout",
+      "time": "out/commands/newer-grammar-syntax-database-init.time",
+      "wall_seconds": 0.462
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "index-files",
+        "--language=ucode",
+        "--include=**/*",
+        "--working-dir=$RUN/stage/newer-grammar-syntax",
+        "--common-caches=$RUN/cache/codeql-common/newer-grammar-syntax",
+        "$RUN/db/newer-grammar-syntax"
+      ],
+      "cwd": "$PRODUCER",
+      "exit": 0,
+      "label": "newer-grammar-syntax-database-index",
+      "peak_rss_bytes": null,
+      "stderr": "out/commands/newer-grammar-syntax-database-index.stderr",
+      "stdout": "out/commands/newer-grammar-syntax-database-index.stdout",
+      "time": "out/commands/newer-grammar-syntax-database-index.time",
+      "wall_seconds": 0.363
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "finalize",
+        "$RUN/db/newer-grammar-syntax",
+        "--common-caches=$RUN/cache/codeql-common/newer-grammar-syntax"
+      ],
+      "cwd": "$PRODUCER",
+      "exit": 0,
+      "label": "newer-grammar-syntax-database-finalize",
+      "peak_rss_bytes": null,
+      "stderr": "out/commands/newer-grammar-syntax-database-finalize.stderr",
+      "stdout": "out/commands/newer-grammar-syntax-database-finalize.stdout",
+      "time": "out/commands/newer-grammar-syntax-database-finalize.time",
+      "wall_seconds": 0.958
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$PRODUCER/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db/newer-grammar-syntax",
+        "--search-path=$PRODUCER/extractor-pack:$PRODUCER/ql/lib:$PRODUCER/ql/src",
+        "--common-caches=$RUN/cache/codeql-common/newer-grammar-syntax",
+        "--compilation-cache=$RUN/cache/codeql-compile/newer-grammar-syntax",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/newer-grammar-syntax/success.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "$PRODUCER",
+      "exit": 0,
+      "label": "newer-grammar-syntax-success-query",
+      "peak_rss_bytes": null,
+      "stderr": "out/commands/newer-grammar-syntax-success-query.stderr",
+      "stdout": "out/commands/newer-grammar-syntax-success-query.stdout",
+      "time": "out/commands/newer-grammar-syntax-success-query.time",
+      "wall_seconds": 1.394
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "$RUN/out/newer-grammar-syntax/success.bqrs"
+      ],
+      "cwd": "$PRODUCER",
+      "exit": 0,
+      "label": "newer-grammar-syntax-success-decode",
+      "peak_rss_bytes": null,
+      "stderr": "out/commands/newer-grammar-syntax-success-decode.stderr",
+      "stdout": "out/commands/newer-grammar-syntax-success-decode.stdout",
+      "time": "out/commands/newer-grammar-syntax-success-decode.time",
+      "wall_seconds": 0.216
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$PRODUCER/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db/newer-grammar-syntax",
+        "--search-path=$PRODUCER/extractor-pack:$PRODUCER/ql/lib:$PRODUCER/ql/src",
+        "--common-caches=$RUN/cache/codeql-common/newer-grammar-syntax",
+        "--compilation-cache=$RUN/cache/codeql-compile/newer-grammar-syntax",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/newer-grammar-syntax/errors.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "$PRODUCER",
+      "exit": 0,
+      "label": "newer-grammar-syntax-errors-query",
+      "peak_rss_bytes": null,
+      "stderr": "out/commands/newer-grammar-syntax-errors-query.stderr",
+      "stdout": "out/commands/newer-grammar-syntax-errors-query.stdout",
+      "time": "out/commands/newer-grammar-syntax-errors-query.time",
+      "wall_seconds": 1.394
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "$RUN/out/newer-grammar-syntax/errors.bqrs"
+      ],
+      "cwd": "$PRODUCER",
+      "exit": 0,
+      "label": "newer-grammar-syntax-errors-decode",
+      "peak_rss_bytes": null,
+      "stderr": "out/commands/newer-grammar-syntax-errors-decode.stderr",
+      "stdout": "out/commands/newer-grammar-syntax-errors-decode.stdout",
+      "time": "out/commands/newer-grammar-syntax-errors-decode.time",
+      "wall_seconds": 0.215
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$PRODUCER/ql/src/extractor-smoke/NewerGrammarSyntax.ql",
+        "--database=$RUN/db/newer-grammar-syntax",
+        "--search-path=$PRODUCER/extractor-pack:$PRODUCER/ql/lib:$PRODUCER/ql/src",
+        "--common-caches=$RUN/cache/codeql-common/newer-grammar-syntax",
+        "--compilation-cache=$RUN/cache/codeql-compile/newer-grammar-syntax",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/newer-grammar-syntax/syntax.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "$PRODUCER",
+      "exit": 0,
+      "label": "newer-grammar-syntax-syntax-query",
+      "peak_rss_bytes": null,
+      "stderr": "out/commands/newer-grammar-syntax-syntax-query.stderr",
+      "stdout": "out/commands/newer-grammar-syntax-syntax-query.stdout",
+      "time": "out/commands/newer-grammar-syntax-syntax-query.time",
+      "wall_seconds": 1.594
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/newer-grammar-syntax/syntax.bqrs"
+      ],
+      "cwd": "$PRODUCER",
+      "exit": 0,
+      "label": "newer-grammar-syntax-syntax-decode",
+      "peak_rss_bytes": null,
+      "stderr": "out/commands/newer-grammar-syntax-syntax-decode.stderr",
+      "stdout": "out/commands/newer-grammar-syntax-syntax-decode.stdout",
+      "time": "out/commands/newer-grammar-syntax-syntax-decode.time",
+      "wall_seconds": 0.209
+    }
+  ],
+  "normalization": "Absolute run path=$RUN, producer checkout=$PRODUCER, CodeQL executable=$CODEQL; raw files under ignored work/.",
+  "platform": "local macOS; modified producer",
+  "raw_sha256": {
+    "out/newer-grammar-syntax/errors.json": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "out/newer-grammar-syntax/routing.json": "f0902dca78fdb45e6fc6ed89f503a40f0f6dbf12a7114b18763bdb4e9d190ddd",
+    "out/newer-grammar-syntax/success.json": "5c06c2942b22bccca5a2fbd9b26852c7cfa8523667a0d3ca98a023497d07d4cd",
+    "out/newer-grammar-syntax/syntax.csv": "ffc0ace63c19e35b968fd1b2dc99f08dd63fb0dc6b2fd18dd5571224ec8dc30e",
+    "receipt.json": "4bcb01b12a16b71f217dff52232ca26d0bd8850a2913a2f2eabc94e0f2b02330",
+    "source-first-oracle.json": "cccd4b4e8f716c31e730f140d416e37bedfd8d0257af41c126613237704a556d"
+  },
+  "status": "pass",
+  "syntax": {
+    "extraction_errors": 0,
+    "manifest_sha256": "cccd4b4e8f716c31e730f140d416e37bedfd8d0257af41c126613237704a556d",
+    "note": "exact projected typed AST locations; entity uniqueness is not inferred from CSV rows",
+    "observed_ast_rows": [
+      [
+        "markup-export",
+        "markup.ut",
+        3,
+        4
+      ],
+      [
+        "markup-import",
+        "markup.ut",
+        2,
+        18
+      ],
+      [
+        "plain-export",
+        "plain.uc",
+        4,
+        1
+      ],
+      [
+        "plain-export",
+        "plain.uc",
+        5,
+        1
+      ],
+      [
+        "plain-import",
+        "plain.uc",
+        2,
+        15
+      ]
+    ],
+    "query_sha256": "2a5faf46bb5d95c47553057bf5f576b23190bbf4c0b5d5791324f1ac5331a15a",
+    "route_sha256": "f0902dca78fdb45e6fc6ed89f503a40f0f6dbf12a7114b18763bdb4e9d190ddd",
+    "selected": [
+      "markup.ut",
+      "plain.uc"
+    ],
+    "successful_multiset": {
+      "markup.ut": 1,
+      "plain.uc": 1
+    }
+  }
+}

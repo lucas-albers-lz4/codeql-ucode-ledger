@@ -1,0 +1,38 @@
+{
+  "schema": "wol-assembly-ast-preflight-v1",
+  "run_root": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/wol-assembly-ast-20261124-a",
+  "oracle_sha256": "92d86039566cf085e424f763d0bceb8427d4ce313ed43a6a3fdfcfeb08116e5a",
+  "luci_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+  "luci_dirty": false,
+  "producer_commit": "977331713b4b8b5574813bee0884245bf6db2752",
+  "producer_dirty": false,
+  "luci_blob": "fd9e9f0485ab6baec96ae089caf1089a6d471c99",
+  "source_sha256": "51214ec57bcbd8d50e65016efda2a05e8eb7822dc7e510d014965834c61ef92b",
+  "fixture_sha256": "7fccfa4d3991e3bd63174539fa3dccb8bfef7444c8028f21a8ef2c19420e5e1c",
+  "query_sha256": "403551cb47ecf3a8a44780298dd4ce8b3a5c850170b6cd7df2be8e96f2fff263",
+  "ql_locks": {
+    "ql/lib/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+    "ql/src/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3"
+  },
+  "pack_build_revision": "8375887ed14825dd59addbfd0df43616d9e684fb",
+  "pack_binary_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+  "tool_path": "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+  "tool_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+  "tool_version": "CodeQL command-line toolchain release 2.27.4.",
+  "free_disk_bytes": 131004383232,
+  "cpu_count": 10,
+  "run_owned_paths": [
+    "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/wol-assembly-ast-20261124-a/db",
+    "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/wol-assembly-ast-20261124-a/out",
+    "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/wol-assembly-ast-20261124-a/home",
+    "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/wol-assembly-ast-20261124-a/tmp",
+    "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/wol-assembly-ast-20261124-a/cache",
+    "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/wol-assembly-ast-20261124-a/stage"
+  ],
+  "grammar_revision": "4a243af329fae2f4ff01e0fc80133cbab8314600",
+  "pack_source_diff": "no extractor or schema diff from 8375887ed14825dd59addbfd0df43616d9e684fb to selected producer HEAD",
+  "dependency_cache_count": 10,
+  "memory_pressure": "System-wide memory free percentage: 65%",
+  "dependency_home_count": 10,
+  "preparation_failure": "initial compile exit 2: dependencies copied only to common query cache; copied same locked packages into run-owned HOME before retry"
+}

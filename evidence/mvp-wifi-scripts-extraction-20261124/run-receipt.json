@@ -1,0 +1,435 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "$RUN/pack/tools/osx64/extractor",
+        "extract",
+        "--source-archive-dir",
+        "$RUN/route/archive",
+        "--output-dir",
+        "$RUN/route/trap",
+        "--file-list",
+        "$RUN/route/file-list.txt",
+        "--staged-root",
+        "$RUN/stage"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "route-probe",
+      "wall_seconds": 0.31
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "init",
+        "$RUN/db/wifi-scripts",
+        "--language=ucode",
+        "--search-path=$RUN/pack",
+        "--common-caches=$RUN/cache/common",
+        "--source-root=$RUN/stage"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "database-init",
+      "wall_seconds": 0.486
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "index-files",
+        "$RUN/db/wifi-scripts",
+        "--language=ucode",
+        "--include=**/*.uc",
+        "--include=**/mac80211.sh",
+        "--include=**/iwinfo",
+        "--working-dir=$RUN/stage",
+        "--common-caches=$RUN/cache/common"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "index-files",
+      "wall_seconds": 0.573
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "finalize",
+        "$RUN/db/wifi-scripts",
+        "--common-caches=$RUN/cache/common"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "database-finalize",
+      "wall_seconds": 1.29
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer-copy/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db/wifi-scripts",
+        "--search-path=$RUN/pack:$RUN/producer-copy/ql/lib:$RUN/producer-copy/ql/src",
+        "--additional-packs=$RUN/producer-copy/ql/lib:$RUN/producer-copy/ql/src:$RUN/producer-copy/deps",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/SuccessfullyExtractedFiles.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "SuccessfullyExtractedFiles-query",
+      "wall_seconds": 1.412
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "$RUN/out/SuccessfullyExtractedFiles.bqrs"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "SuccessfullyExtractedFiles-decode",
+      "wall_seconds": 0.214
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer-copy/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db/wifi-scripts",
+        "--search-path=$RUN/pack:$RUN/producer-copy/ql/lib:$RUN/producer-copy/ql/src",
+        "--additional-packs=$RUN/producer-copy/ql/lib:$RUN/producer-copy/ql/src:$RUN/producer-copy/deps",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/ExtractionErrors.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "ExtractionErrors-query",
+      "wall_seconds": 1.411
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "$RUN/out/ExtractionErrors.bqrs"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "ExtractionErrors-decode",
+      "wall_seconds": 0.212
+    }
+  ],
+  "excluded_alternative": {
+    "bytes": 32923,
+    "condition": "initial files/* copy; overwritten by ucode-shebang variant when CONFIG_WIFI_SCRIPTS_UCODE=y",
+    "git_blob": "30d08a301547ffe71794eefc8f3c4884cc1c3a4f",
+    "git_mode": "100755",
+    "proposed_installed_path": "lib/netifd/wireless/mac80211.sh",
+    "reason": "CONFIG_WIFI_SCRIPTS_UCODE=y installs files-ucode/* over this shell variant",
+    "sha256": "5f87f07cca56b20b0cf08cf02711c1c4fc4ddbbb17de7c8780282625c8d3be07",
+    "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+    "source_path": "package/network/config/wifi-scripts/files/lib/netifd/wireless/mac80211.sh",
+    "source_repo": "openwrt",
+    "status": "excluded_alternative"
+  },
+  "extraction": {
+    "error_count": 0,
+    "error_rows": [],
+    "exact_multiset_match": true,
+    "expected_file_identity_multiset": [
+      "lib/netifd/wireless/mac80211.sh",
+      "usr/bin/iwinfo",
+      "usr/share/ucode/iwinfo.uc",
+      "usr/share/ucode/wifi/ap.uc",
+      "usr/share/ucode/wifi/common.uc",
+      "usr/share/ucode/wifi/hostapd.uc",
+      "usr/share/ucode/wifi/iface.uc",
+      "usr/share/ucode/wifi/netifd.uc",
+      "usr/share/ucode/wifi/supplicant.uc",
+      "usr/share/ucode/wifi/validate.uc",
+      "lib/netifd/wireless-device.uc",
+      "lib/netifd/wireless.uc",
+      "lib/wifi/mac80211.uc",
+      "usr/share/hostap/common.uc",
+      "usr/share/hostap/wdev.uc",
+      "usr/share/hostap/wifi-detect.uc",
+      "usr/share/ucode/wifi/utils.uc"
+    ],
+    "success_count": 17,
+    "successful_file_identity_multiset": [
+      "lib/netifd/wireless/mac80211.sh",
+      "lib/netifd/wireless-device.uc",
+      "lib/netifd/wireless.uc",
+      "lib/wifi/mac80211.uc",
+      "usr/bin/iwinfo",
+      "usr/share/hostap/common.uc",
+      "usr/share/hostap/wdev.uc",
+      "usr/share/hostap/wifi-detect.uc",
+      "usr/share/ucode/iwinfo.uc",
+      "usr/share/ucode/wifi/ap.uc",
+      "usr/share/ucode/wifi/common.uc",
+      "usr/share/ucode/wifi/hostapd.uc",
+      "usr/share/ucode/wifi/iface.uc",
+      "usr/share/ucode/wifi/netifd.uc",
+      "usr/share/ucode/wifi/supplicant.uc",
+      "usr/share/ucode/wifi/utils.uc",
+      "usr/share/ucode/wifi/validate.uc"
+    ]
+  },
+  "limits": [
+    "No package build/configuration was executed; installed package/IPK/rootfs bytes are unverified.",
+    "The `CONFIG_WIFI_SCRIPTS_UCODE=y` value is a source-selection assumption; both shell alternative and Ucode path share an installed path, and the staged bytes match the Ucode variant.",
+    "Successful extraction and plain route selection do not establish semantic model support or safety.",
+    "No default suite or security query was run."
+  ],
+  "memory_measurement": {
+    "peak_rss_bytes": null,
+    "reason": "macOS /usr/bin/time -l failed with `sysctl kern.clockrate: Operation not permitted`; run records monotonic wall time only"
+  },
+  "producer": {
+    "codeql_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+    "codeql_version": "CodeQL command-line toolchain release 2.27.4.",
+    "commit": "18afe771568d373088edee7a790825ee46dec9e0",
+    "dependency_pack_identities": [
+      "codeql/controlflow/1.0.12",
+      "codeql/dataflow/1.1.6",
+      "codeql/regex/1.0.12",
+      "codeql/ssa/1.0.12",
+      "codeql/threat-models/1.1.1",
+      "codeql/typetracking/1.0.12",
+      "codeql/util/1.0.12",
+      "codeql/yaml/1.0.61"
+    ],
+    "dependency_tree_sha256": "3409e9c3d7a563353794348a5e092b0ee9913cef6557973cb17ddaf3bd59816b",
+    "dirty": false,
+    "extractor_pack_tree_sha256": "891c6c3d4eae1accaf0c502775ef0077a81d542eac39c17241bdd769dde37674",
+    "extractor_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+    "origin_receipt": "evidence/077-20261124-current-slice-extraction/receipt.json",
+    "pack_query_metadata_transform": "workspace ucode-all dependency resolved to locked 0.1.0 in run-owned copy if source carried ${workspace}; query QL bytes unchanged",
+    "producer_cargo_lock_sha256": "20678c3cbb29632a9369bdb3c735af9ee63c9443879db38847fbda9813aa0a77",
+    "ql_library_lock_sha256": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+    "ql_query_lock_sha256": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3"
+  },
+  "raw_artifact_sha256": {
+    "commands.json": "afb7cc47c14674c7d2eeec0eb6a9a82cacbcac553d92fc948e90355e597f0048",
+    "copied-inputs.json": "14e6284b8e73edce12f3d8c63eeed8682a4f7752701434605c9f7e056150eade",
+    "out/ExtractionErrors.bqrs": "10baec86e20106ef1c2f08bb72fde677d831e67cd9a1e572c27fc17f06141d8e",
+    "out/ExtractionErrors.json": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "out/SuccessfullyExtractedFiles.bqrs": "ae953e8f0b931ec13e28a6ffaeb94f7827f97c70a12e735d2d10223437183099",
+    "out/SuccessfullyExtractedFiles.json": "651acc53a9ea2bbb0841892d758cf6f748e8df7be6f0e979b966f4fb5ecd30e5",
+    "out/routing.json": "e982ce83b31aeb95eefdd65c86c91fdeff43ba6286f9883a4ad77e13007e2bd8",
+    "route/trap/routing.json": "0b3500d780385d1ecf2b428d068cca857c6d3e9fce333bad247129a59cba20a9",
+    "run.py": "481aa44f39edee2bfc32de1a3e5eaf80ab644a91f31de61d14a1cf46f58a52d5",
+    "source-first-oracle.json": "383027edf0d8da28ea94a5e9f40c9159dc9194940f5ba81322f0d3af3fdadd6d"
+  },
+  "raw_tree_file_count": 683,
+  "raw_tree_sha256": "2798404710d3648359ee715cf9966940456ce71d7f16feacd9fb1e13c27e6289",
+  "route_correction": {
+    "basis": "source-first correction before run-d output: inspect each staged source first line and pinned extractor source route order; has_ucode_shebang is tested before .uc/ucode extension. This corrects, rather than passes, the original planning expectation; run-c mismatch retained separately.",
+    "corrections": [
+      {
+        "corrected_route": {
+          "classification": "plain",
+          "reason": "ucode_shebang"
+        },
+        "first_line": "#!/usr/bin/env ucode",
+        "original_manifest_route": {
+          "classification": "plain",
+          "reason": "ucode_extension"
+        },
+        "source_path": "package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc",
+        "stage_path": "lib/wifi/mac80211.uc"
+      },
+      {
+        "corrected_route": {
+          "classification": "plain",
+          "reason": "ucode_shebang"
+        },
+        "first_line": "#!/usr/bin/env ucode",
+        "original_manifest_route": {
+          "classification": "plain",
+          "reason": "ucode_extension"
+        },
+        "source_path": "package/network/config/wifi-scripts/files/usr/share/hostap/wdev.uc",
+        "stage_path": "usr/share/hostap/wdev.uc"
+      },
+      {
+        "corrected_route": {
+          "classification": "plain",
+          "reason": "ucode_shebang"
+        },
+        "first_line": "#!/usr/bin/env ucode",
+        "original_manifest_route": {
+          "classification": "plain",
+          "reason": "ucode_extension"
+        },
+        "source_path": "package/network/config/wifi-scripts/files/usr/share/hostap/wifi-detect.uc",
+        "stage_path": "usr/share/hostap/wifi-detect.uc"
+      }
+    ],
+    "extractor_source_commit": "18afe771568d373088edee7a790825ee46dec9e0",
+    "extractor_source_path": "extractor/src/extractor.rs",
+    "extractor_source_sha256": "bc54d2fc6e4dfba095977053d92275c3474bb01ff7e6da7c5301002bde701a11",
+    "precedence_excerpt": "if has_ucode_shebang(source) -> ucode_shebang; later if extension == uc || ucode -> ucode_extension"
+  },
+  "routing": {
+    "decision_count": 17,
+    "decisions": [
+      {
+        "classification": "plain",
+        "installed_path": "lib/netifd/wireless/mac80211.sh",
+        "reason": "ucode_shebang",
+        "stage_path": "lib/netifd/wireless/mac80211.sh",
+        "status": "plain_route_selected"
+      },
+      {
+        "classification": "plain",
+        "installed_path": "usr/bin/iwinfo",
+        "reason": "ucode_shebang",
+        "stage_path": "usr/bin/iwinfo",
+        "status": "plain_route_selected"
+      },
+      {
+        "classification": "plain",
+        "installed_path": "usr/share/ucode/iwinfo.uc",
+        "reason": "ucode_extension",
+        "stage_path": "usr/share/ucode/iwinfo.uc",
+        "status": "plain_route_selected"
+      },
+      {
+        "classification": "plain",
+        "installed_path": "usr/share/ucode/wifi/ap.uc",
+        "reason": "ucode_extension",
+        "stage_path": "usr/share/ucode/wifi/ap.uc",
+        "status": "plain_route_selected"
+      },
+      {
+        "classification": "plain",
+        "installed_path": "usr/share/ucode/wifi/common.uc",
+        "reason": "ucode_extension",
+        "stage_path": "usr/share/ucode/wifi/common.uc",
+        "status": "plain_route_selected"
+      },
+      {
+        "classification": "plain",
+        "installed_path": "usr/share/ucode/wifi/hostapd.uc",
+        "reason": "ucode_extension",
+        "stage_path": "usr/share/ucode/wifi/hostapd.uc",
+        "status": "plain_route_selected"
+      },
+      {
+        "classification": "plain",
+        "installed_path": "usr/share/ucode/wifi/iface.uc",
+        "reason": "ucode_extension",
+        "stage_path": "usr/share/ucode/wifi/iface.uc",
+        "status": "plain_route_selected"
+      },
+      {
+        "classification": "plain",
+        "installed_path": "usr/share/ucode/wifi/netifd.uc",
+        "reason": "ucode_extension",
+        "stage_path": "usr/share/ucode/wifi/netifd.uc",
+        "status": "plain_route_selected"
+      },
+      {
+        "classification": "plain",
+        "installed_path": "usr/share/ucode/wifi/supplicant.uc",
+        "reason": "ucode_extension",
+        "stage_path": "usr/share/ucode/wifi/supplicant.uc",
+        "status": "plain_route_selected"
+      },
+      {
+        "classification": "plain",
+        "installed_path": "usr/share/ucode/wifi/validate.uc",
+        "reason": "ucode_extension",
+        "stage_path": "usr/share/ucode/wifi/validate.uc",
+        "status": "plain_route_selected"
+      },
+      {
+        "classification": "plain",
+        "installed_path": "lib/netifd/wireless-device.uc",
+        "reason": "ucode_extension",
+        "stage_path": "lib/netifd/wireless-device.uc",
+        "status": "plain_route_selected"
+      },
+      {
+        "classification": "plain",
+        "installed_path": "lib/netifd/wireless.uc",
+        "reason": "ucode_extension",
+        "stage_path": "lib/netifd/wireless.uc",
+        "status": "plain_route_selected"
+      },
+      {
+        "classification": "plain",
+        "installed_path": "lib/wifi/mac80211.uc",
+        "reason": "ucode_shebang",
+        "stage_path": "lib/wifi/mac80211.uc",
+        "status": "plain_route_selected"
+      },
+      {
+        "classification": "plain",
+        "installed_path": "usr/share/hostap/common.uc",
+        "reason": "ucode_extension",
+        "stage_path": "usr/share/hostap/common.uc",
+        "status": "plain_route_selected"
+      },
+      {
+        "classification": "plain",
+        "installed_path": "usr/share/hostap/wdev.uc",
+        "reason": "ucode_shebang",
+        "stage_path": "usr/share/hostap/wdev.uc",
+        "status": "plain_route_selected"
+      },
+      {
+        "classification": "plain",
+        "installed_path": "usr/share/hostap/wifi-detect.uc",
+        "reason": "ucode_shebang",
+        "stage_path": "usr/share/hostap/wifi-detect.uc",
+        "status": "plain_route_selected"
+      },
+      {
+        "classification": "plain",
+        "installed_path": "usr/share/ucode/wifi/utils.uc",
+        "reason": "ucode_extension",
+        "stage_path": "usr/share/ucode/wifi/utils.uc",
+        "status": "plain_route_selected"
+      }
+    ],
+    "exact_corrected_oracle_match": true,
+    "excluded_count": 0,
+    "plain_count": 17,
+    "reason_counts": {
+      "ucode_extension": 12,
+      "ucode_shebang": 5
+    }
+  },
+  "run_artifact_path": "work/mvp-wifi-scripts-extraction-20261124/run-e",
+  "schema": "mvp-wifi-scripts-extraction-receipt-v1",
+  "source": {
+    "commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+    "config_assumption": "CONFIG_WIFI_SCRIPTS_UCODE=y; source-stage copy only",
+    "corrected_oracle_sha256": "383027edf0d8da28ea94a5e9f40c9159dc9194940f5ba81322f0d3af3fdadd6d",
+    "dirty": false,
+    "git_blob_hashes_match": true,
+    "repo": "openwrt",
+    "selected_count": 17,
+    "selection_manifest_sha256": "f3fb3f2c53f7f905d3f8a4a612300d9a5ab2a6ef32874b15d2d3dcd93949c41e",
+    "source_stage_hashes_match": true
+  },
+  "status": "passed"
+}

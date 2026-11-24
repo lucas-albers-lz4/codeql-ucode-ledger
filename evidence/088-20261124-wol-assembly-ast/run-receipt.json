@@ -1,0 +1,444 @@
+{
+  "schema": "wol-assembly-ast-run-v1",
+  "oracle_sha256": "92d86039566cf085e424f763d0bceb8427d4ce313ed43a6a3fdfcfeb08116e5a",
+  "preflight_sha256": "0d2c303a0fc8abf9beea99fc26a9c32ddda074a3c5a2fa852f10339b4481074e",
+  "routing_sha256": "2b11432368ad247f515e423ea7f107dc4d9d463fa2213adb6eb6ef49053d556d",
+  "successful_multiset": {
+    "usr/share/rpcd/ucode/controls.uc": 1,
+    "usr/share/rpcd/ucode/luci.wol": 1
+  },
+  "extraction_errors": [],
+  "ast_rows_sha256": "9029f4498dffaec55299cef8e621afaf90798918040b0e6c8c0fb2a1f7ba3f12",
+  "ast_rows": 2,
+  "commands": [
+    {
+      "label": "compile",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "query",
+        "compile",
+        "<RUN_ROOT>/producer-copy/ql/src/testing/WolAssemblyAst.ql",
+        "--search-path=<RUN_ROOT>/producer-copy/extractor-pack:<RUN_ROOT>/producer-copy/ql/lib:<RUN_ROOT>/producer-copy/ql/src",
+        "--compilation-cache=<RUN_ROOT>/cache/compile",
+        "--no-default-compilation-cache"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "wall_seconds": 3.07,
+      "peak_rss_bytes": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "95b4d15b4ab373675e8681aceaf2dad796a1ed566f2cfb120241a8301bdde2d1"
+    },
+    {
+      "label": "init",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "database",
+        "init",
+        "<RUN_ROOT>/db",
+        "--language=ucode",
+        "--search-path=<RUN_ROOT>/producer-copy/extractor-pack",
+        "--common-caches=<RUN_ROOT>/cache/db",
+        "--source-root=<RUN_ROOT>/stage"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "wall_seconds": 0.501,
+      "peak_rss_bytes": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "4b19388932ff105776b8263d4bd16b62956a4ccf2a0fa1be4540f4fad8f1aec0"
+    },
+    {
+      "label": "index",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "database",
+        "index-files",
+        "--language=ucode",
+        "--include=**/rpcd/ucode/*",
+        "--working-dir=<RUN_ROOT>/stage",
+        "--common-caches=<RUN_ROOT>/cache/db",
+        "<RUN_ROOT>/db"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "wall_seconds": 0.779,
+      "peak_rss_bytes": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "4d57f157027dab22d1d7281a1978190a911c9956f38ffff0484ed1204320f92f"
+    },
+    {
+      "label": "finalize",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "database",
+        "finalize",
+        "<RUN_ROOT>/db",
+        "--common-caches=<RUN_ROOT>/cache/db"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "wall_seconds": 1.102,
+      "peak_rss_bytes": null,
+      "stdout_sha256": "30bf75fc4b03b9334333eb35a1bd95547d62c72368786b58ef3957e24953c735",
+      "stderr_sha256": "54284f5346755d23721966fb2e67d69f74ab29d69100614cbca51d5c2bb3a195"
+    },
+    {
+      "label": "success-run",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "query",
+        "run",
+        "<RUN_ROOT>/producer-copy/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=<RUN_ROOT>/db",
+        "--search-path=<RUN_ROOT>/producer-copy/extractor-pack:<RUN_ROOT>/producer-copy/ql/lib:<RUN_ROOT>/producer-copy/ql/src",
+        "--common-caches=<RUN_ROOT>/cache/query",
+        "--compilation-cache=<RUN_ROOT>/cache/compile",
+        "--no-default-compilation-cache",
+        "--output=<RUN_ROOT>/out/success.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "wall_seconds": 1.39,
+      "peak_rss_bytes": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "b75bf28aa9ac5a6102a1bff582d9dbeab3d2cdaecd1275079560d9b955e7e596"
+    },
+    {
+      "label": "success-decode",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<RUN_ROOT>/out/success.bqrs"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "wall_seconds": 0.215,
+      "peak_rss_bytes": null,
+      "stdout_sha256": "555130aa08adc2d76a10077c13b17fba238754433c3244387b17b1e260e184d5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "errors-run",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "query",
+        "run",
+        "<RUN_ROOT>/producer-copy/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=<RUN_ROOT>/db",
+        "--search-path=<RUN_ROOT>/producer-copy/extractor-pack:<RUN_ROOT>/producer-copy/ql/lib:<RUN_ROOT>/producer-copy/ql/src",
+        "--common-caches=<RUN_ROOT>/cache/query",
+        "--compilation-cache=<RUN_ROOT>/cache/compile",
+        "--no-default-compilation-cache",
+        "--output=<RUN_ROOT>/out/errors.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "wall_seconds": 1.399,
+      "peak_rss_bytes": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "a68f8c3622c12a266fe0853b880bea630b4e4f403b51e0e9976b5df71d37b21f"
+    },
+    {
+      "label": "errors-decode",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<RUN_ROOT>/out/errors.bqrs"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "wall_seconds": 0.213,
+      "peak_rss_bytes": null,
+      "stdout_sha256": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "ast-run",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "query",
+        "run",
+        "<RUN_ROOT>/producer-copy/ql/src/testing/WolAssemblyAst.ql",
+        "--database=<RUN_ROOT>/db",
+        "--search-path=<RUN_ROOT>/producer-copy/extractor-pack:<RUN_ROOT>/producer-copy/ql/lib:<RUN_ROOT>/producer-copy/ql/src",
+        "--common-caches=<RUN_ROOT>/cache/query",
+        "--compilation-cache=<RUN_ROOT>/cache/compile",
+        "--no-default-compilation-cache",
+        "--output=<RUN_ROOT>/out/ast.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "wall_seconds": 1.175,
+      "peak_rss_bytes": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "4880f384695bb7b378a8eda07f9c4fda034ac23296d3ebf8000eddeb40f79f90"
+    },
+    {
+      "label": "ast-decode",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<RUN_ROOT>/out/ast.bqrs"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "wall_seconds": 0.216,
+      "peak_rss_bytes": null,
+      "stdout_sha256": "b481bec9d95d345af488f71b49b7c5a0be64fd09fe6889fa673030b175bdf964",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "total_wall_seconds": 10.06,
+  "peak_rss_limit": "unavailable: macOS /usr/bin/time -l denied by sandbox",
+  "run_root_normalized": "<RUN_ROOT>",
+  "raw_hashes": {
+    "index.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "success-decode.stdout": "555130aa08adc2d76a10077c13b17fba238754433c3244387b17b1e260e184d5",
+    "errors-run.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "finalize.stderr": "54284f5346755d23721966fb2e67d69f74ab29d69100614cbca51d5c2bb3a195",
+    "errors.json": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "errors-decode.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "success.json": "555130aa08adc2d76a10077c13b17fba238754433c3244387b17b1e260e184d5",
+    "finalize.stdout": "30bf75fc4b03b9334333eb35a1bd95547d62c72368786b58ef3957e24953c735",
+    "errors-decode.stdout": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "errors-run.stderr": "a68f8c3622c12a266fe0853b880bea630b4e4f403b51e0e9976b5df71d37b21f",
+    "ast.bqrs": "34a26584e15589c0719fae0a7fbef997846485145908dd827f37aa7c5fd4bb03",
+    "success-decode.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "index.stderr": "4d57f157027dab22d1d7281a1978190a911c9956f38ffff0484ed1204320f92f",
+    "ast-rows.json": "9029f4498dffaec55299cef8e621afaf90798918040b0e6c8c0fb2a1f7ba3f12",
+    "commands.json": "67ed3bd41113bdb6182988441a8c44981e50778b616964be1c02643b4117bc5a",
+    "compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "success.bqrs": "67e0b27c506c47a6109e54ffc5d8954534f737435f9e3115651d4c1a2e5d4cf1",
+    "errors.bqrs": "f24d478ff83cc66e24573b6125eca95026fb51b4021c3be78554b465bdc6a968",
+    "ast-decode.stdout": "b481bec9d95d345af488f71b49b7c5a0be64fd09fe6889fa673030b175bdf964",
+    "success-run.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ast-run.stderr": "4880f384695bb7b378a8eda07f9c4fda034ac23296d3ebf8000eddeb40f79f90",
+    "init.stderr": "4b19388932ff105776b8263d4bd16b62956a4ccf2a0fa1be4540f4fad8f1aec0",
+    "init.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ast-decode.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ast.json": "b481bec9d95d345af488f71b49b7c5a0be64fd09fe6889fa673030b175bdf964",
+    "routing.json": "2b11432368ad247f515e423ea7f107dc4d9d463fa2213adb6eb6ef49053d556d",
+    "ast-run.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "success-run.stderr": "b75bf28aa9ac5a6102a1bff582d9dbeab3d2cdaecd1275079560d9b955e7e596",
+    "compile.stderr": "95b4d15b4ab373675e8681aceaf2dad796a1ed566f2cfb120241a8301bdde2d1"
+  },
+  "entity_rows": [
+    {
+      "source": "usr/share/rpcd/ucode/controls.uc",
+      "src_line": 11,
+      "sink_line": 12,
+      "entities": [
+        {
+          "kind": "MemberExpression",
+          "uri": "usr/share/rpcd/ucode/controls.uc",
+          "range": [
+            11,
+            25,
+            11,
+            41
+          ]
+        },
+        {
+          "kind": "FunctionDeclaration",
+          "uri": "usr/share/rpcd/ucode/controls.uc",
+          "range": [
+            3,
+            1,
+            3,
+            36
+          ]
+        },
+        {
+          "kind": "shellquote",
+          "uri": "usr/share/rpcd/ucode/controls.uc",
+          "range": [
+            11,
+            44,
+            11,
+            53
+          ]
+        },
+        {
+          "kind": "CallExpression",
+          "uri": "usr/share/rpcd/ucode/controls.uc",
+          "range": [
+            11,
+            21,
+            11,
+            54
+          ]
+        },
+        {
+          "kind": "VariableDeclarator",
+          "uri": "usr/share/rpcd/ucode/controls.uc",
+          "range": [
+            11,
+            13,
+            11,
+            54
+          ]
+        },
+        {
+          "kind": "parts",
+          "uri": "usr/share/rpcd/ucode/controls.uc",
+          "range": [
+            12,
+            62,
+            12,
+            66
+          ]
+        },
+        {
+          "kind": "CallExpression",
+          "uri": "usr/share/rpcd/ucode/controls.uc",
+          "range": [
+            12,
+            52,
+            12,
+            67
+          ]
+        },
+        {
+          "kind": "BinaryExpression",
+          "uri": "usr/share/rpcd/ucode/controls.uc",
+          "range": [
+            12,
+            26,
+            12,
+            67
+          ]
+        },
+        {
+          "kind": "CallExpression",
+          "uri": "usr/share/rpcd/ucode/controls.uc",
+          "range": [
+            12,
+            20,
+            12,
+            68
+          ]
+        }
+      ]
+    },
+    {
+      "source": "usr/share/rpcd/ucode/luci.wol",
+      "src_line": 41,
+      "sink_line": 42,
+      "entities": [
+        {
+          "kind": "MemberExpression",
+          "uri": "usr/share/rpcd/ucode/luci.wol",
+          "range": [
+            41,
+            21,
+            41,
+            37
+          ]
+        },
+        {
+          "kind": "FunctionDeclaration",
+          "uri": "usr/share/rpcd/ucode/luci.wol",
+          "range": [
+            11,
+            1,
+            13,
+            1
+          ]
+        },
+        {
+          "kind": "shellquote",
+          "uri": "usr/share/rpcd/ucode/luci.wol",
+          "range": [
+            41,
+            40,
+            41,
+            49
+          ]
+        },
+        {
+          "kind": "CallExpression",
+          "uri": "usr/share/rpcd/ucode/luci.wol",
+          "range": [
+            41,
+            17,
+            41,
+            50
+          ]
+        },
+        {
+          "kind": "VariableDeclarator",
+          "uri": "usr/share/rpcd/ucode/luci.wol",
+          "range": [
+            41,
+            9,
+            41,
+            50
+          ]
+        },
+        {
+          "kind": "parts",
+          "uri": "usr/share/rpcd/ucode/luci.wol",
+          "range": [
+            42,
+            58,
+            42,
+            62
+          ]
+        },
+        {
+          "kind": "CallExpression",
+          "uri": "usr/share/rpcd/ucode/luci.wol",
+          "range": [
+            42,
+            48,
+            42,
+            63
+          ]
+        },
+        {
+          "kind": "BinaryExpression",
+          "uri": "usr/share/rpcd/ucode/luci.wol",
+          "range": [
+            42,
+            22,
+            42,
+            63
+          ]
+        },
+        {
+          "kind": "CallExpression",
+          "uri": "usr/share/rpcd/ucode/luci.wol",
+          "range": [
+            42,
+            16,
+            42,
+            64
+          ]
+        }
+      ]
+    }
+  ],
+  "source_and_query_hashes": {
+    "luci.wol": "51214ec57bcbd8d50e65016efda2a05e8eb7822dc7e510d014965834c61ef92b",
+    "controls.uc": "7fccfa4d3991e3bd63174539fa3dccb8bfef7444c8028f21a8ef2c19420e5e1c",
+    "WolAssemblyAst.ql": "403551cb47ecf3a8a44780298dd4ce8b3a5c850170b6cd7df2be8e96f2fff263"
+  },
+  "model_sha256": "a24ea29d142a80c005daccb28f91da3850feb719953ca0de640ea0ab6f67563c",
+  "current_producer_model_sha256": "a24ea29d142a80c005daccb28f91da3850feb719953ca0de640ea0ab6f67563c"
+}

@@ -1,0 +1,125 @@
+{
+  "codeql_executable_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+  "codeql_version": "2.27.4",
+  "exact_identities_csv_sha256": "b033c38cb5fd7529a57a3c8ee9133f894e65023c281b13a87b75809cf94f250e",
+  "exact_identity_rows": 76,
+  "extraction_error_count": 0,
+  "extractor_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+  "limits": [
+    "One fresh 76-file source-staged local run; not actual package-installed bytes.",
+    "34 markup routes are inconclusive even though successful-file diagnostics exist.",
+    "Zero direct-rule results are not a safety or precision claim.",
+    "Local cost cannot substitute for Linux current-corpus timing."
+  ],
+  "peak_memory_note": "macOS time -l failed with kern.clockrate permission error in prior attempt; this successful run used time.monotonic and has no peak RSS",
+  "phase_metrics": [
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "database-init",
+      "wall_seconds": 0.461
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "index-files",
+      "wall_seconds": 0.918
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "database-finalize",
+      "wall_seconds": 1.501
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "success-query",
+      "wall_seconds": 1.408
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "success-decode",
+      "wall_seconds": 0.21
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "errors-query",
+      "wall_seconds": 1.393
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "errors-decode",
+      "wall_seconds": 0.208
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "resolve-suite",
+      "wall_seconds": 0.354
+    },
+    {
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "default-suite-analyze",
+      "wall_seconds": 7.756
+    }
+  ],
+  "preflight": {
+    "cpu_count": 10,
+    "free_disk_bytes": 131368816640,
+    "memory_free_percentage": 66
+  },
+  "prior_attempts": [
+    {
+      "cause": "macOS time -l could not read kern.clockrate; database-init wrapper exited 1",
+      "run": "work/mvp-corpus-v0.1-run-20261124-a",
+      "status": "failed"
+    },
+    {
+      "cause": "memory availability was not checked before run",
+      "run": "work/mvp-corpus-v0.1-run-20261124-b",
+      "status": "completed but excluded as canonical"
+    }
+  ],
+  "producer_commit": "0681a937e707929f20c244b7e58948eefe8c5198",
+  "raw_artifact_sha256": {
+    "commands.json": "7d73b8a8b88fb73c1429c70f1218a6e0a8f2e1ee64bdc78d9e20e49b1a999c0d",
+    "out/default-suite.sarif": "5326e080e32cfb09429df351a6ef68c2a72e43f870589fe0f2370ec3b98d5741",
+    "out/errors.csv": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+    "out/routing.json": "078dd26141426e44e894f88091f62e60e9b6701e150f11bf89096aa7e452e893",
+    "out/success.csv": "06c6e71a1114f6de1632e94516978ed76701ea0f955cdf0a17fc7033e157d08f",
+    "preflight.json": "25edbae0ba48e1bc1b08370e9afd3ed6fce1a534ee3fbfa91238f74dee240510",
+    "receipt.json": "3c4ef1c7d0a2a9bf04e16218e0222f7996895e769b3c504084aa97da3a5ae849",
+    "source-oracle.json": "7c71634e7a02c5aa5776820f6b141b086935b8cff117d5bbfdd5cced668db601"
+  },
+  "resolved_suite": [
+    "DirectRpcShellWord.ql",
+    "ExtractionErrors.ql",
+    "SuccessfullyExtractedFiles.ql"
+  ],
+  "route_counts": {
+    "excluded_count": 0,
+    "input_count": 76,
+    "markup_count": 34,
+    "plain_count": 42,
+    "uncertain_count": 0
+  },
+  "run_script_sha256": "f794c62757342dfb6901bfec6d9c10777fb456f634ec99f1ff2c099a92cc4bf2",
+  "sarif_result_count": 0,
+  "sarif_rule_descriptors": [
+    "ucode/m4/direct-rpc-shell-word"
+  ],
+  "schema": "mvp-corpus-v0.1-local-run-receipt",
+  "selected_count": 76,
+  "source_oracle_sha256": "7c71634e7a02c5aa5776820f6b141b086935b8cff117d5bbfdd5cced668db601",
+  "source_pins": {
+    "luci": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "openwrt": "4e9642517b48bae612ff10fb72fb9199e559500e",
+    "packages": "07e0d16305d2b5903b37ad7913e33e18795f81a4"
+  },
+  "status": "completed source-staged local macOS run; no installed-byte or Linux gate"
+}

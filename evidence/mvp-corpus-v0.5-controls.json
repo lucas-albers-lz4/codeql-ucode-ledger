@@ -1,0 +1,38 @@
+{
+  "basis": "Pinned source bytes and install recipes, independently checked against git objects; controls are validation expectations, not scan observations.",
+  "near_miss_controls": [
+    {
+      "expected": "excluded competing shell source; CONFIG_WIFI_SCRIPTS_UCODE=y selects the files-ucode counterpart at same installed path; must not appear as an eligible selected source identity",
+      "git_blob": "30d08a301547ffe71794eefc8f3c4884cc1c3a4f",
+      "sha256": "5f87f07cca56b20b0cf08cf02711c1c4fc4ddbbb17de7c8780282625c8d3be07",
+      "source_path": "package/network/config/wifi-scripts/files/lib/netifd/wireless/mac80211.sh"
+    },
+    {
+      "expected": "absent at pinned SHA; no identity or extraction expected; fail closed (not a fabricated negative extraction result)",
+      "source_path": "package/network/utils/wireguard-tools/files/wireguard.uc"
+    }
+  ],
+  "positive_controls": [
+    {
+      "expected": "eligible selected source identity with stated route; verify exactly one successful extraction identity after future scan",
+      "git_blob": "9fe302ce892315c2bcc36f0855e93a72ff296745",
+      "sha256": "6a03dcf045db393a2bfbd94ca6dd56d635c425730f2118ff409d8c69f556d26a",
+      "source_path": "package/boot/uboot-tools/uboot-envtools/files/fw_loadenv"
+    },
+    {
+      "expected": "eligible selected source identity with stated route; verify exactly one successful extraction identity after future scan",
+      "git_blob": "69677bb159acaae8479e1aac0f19cbf7e472458e",
+      "sha256": "f1a16867ac640108182e6fe2b5a02b18e66d302c55e2b9cd21ffefff3ee0cbf2",
+      "source_path": "package/network/config/netifd/files/lib/netifd/main.uc"
+    },
+    {
+      "expected": "eligible selected source identity with stated route; verify exactly one successful extraction identity after future scan",
+      "git_blob": "44d1c83e5db23871c5495eff241a3fb967acdefa",
+      "sha256": "bfa969fe226982529551163433615a87e91bee9620176ec7138314093b43d6e1",
+      "source_path": "package/network/services/unetd/files/unet.uc"
+    }
+  ],
+  "prepared_before_scan": true,
+  "scan_performed": false,
+  "schema": "mvp-corpus-v0.5-independent-controls-v1"
+}

@@ -1,0 +1,85 @@
+{
+  "commands_and_results": [
+    {
+      "command": "bash scripts/clone-grammar.sh",
+      "exit": 0,
+      "raw_stderr_sha256": "69a001058bab7e0f7e0890384f81e46ff9282e36aa34f6d97f86e6a27fdb2353",
+      "raw_stdout_sha256": "8b129fe566849f34896132a8c9cc7f6f0e06d59dda1085f6a0fa45180fdba8bc"
+    },
+    {
+      "command": "npm test",
+      "corpus": "244 plain / 89 markup / 151 docs passed",
+      "exit": 0,
+      "raw_stderr_sha256": "a9c035f8f08cc6b01567e702ed9eb369ec76a64f9ae40836743bb1d9be528a26",
+      "raw_stdout_sha256": "f9b0750dc3a90285045e69df3b0e8cd65e1f0e8ee4c05e3745ab8317f7a31fa0"
+    },
+    {
+      "command": "cargo test --offline --locked",
+      "exit": 0,
+      "raw_stderr_sha256": "750a37411bd7199ff45da63b98d383f9ac94d7dfe5d502f846816346a4b03b82",
+      "raw_stdout_sha256": "4ccfd03225e30bfaf4acb1698745c8c385fba3c56e7550f30e45a1d7015df013",
+      "tests": "12 extractor / 3 grammar-load / 1 doc passed"
+    },
+    {
+      "command": "bash scripts/create-extractor-pack.sh with run-owned CARGO_TARGET_DIR and target symlink",
+      "exit": 0,
+      "raw_stderr_sha256": "2ce787fb06cda8c8d7dfaa93d72383d4b06b071098d3e71d87309a1e2149f65d",
+      "raw_stdout_sha256": "15c4444db8dd9266b76d411c5645f63c5aabb9e9f7099523be5c2c8db2e896b6"
+    },
+    {
+      "command": "python3 -B scripts/test-package-linux-release.py",
+      "exit": 0,
+      "tests": "7 passed"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tests -p test_clone_grammar.py -v",
+      "exit": 0,
+      "tests": "1 passed"
+    }
+  ],
+  "extractor_sha256": "6ed90de2e6b352daa939ad1d0c627f847383307f212168ad11d9dd06f4faf15b",
+  "failed_setup_attempts": [
+    "offline npm ci without downloaded Tree-sitter CLI failed; tested manual cached CLI before later full network bootstrap",
+    "first pack command failed because create-extractor-pack.sh expects target/release when CARGO_TARGET_DIR points elsewhere; a disposable symlink supplied that path for final successful build"
+  ],
+  "grammar_base_sha": "4a243af329fae2f4ff01e0fc80133cbab8314600",
+  "grammar_generated_sha256": {
+    "ucode/src/grammar.json": "c59703860b908a0e8ee7a5241258182c5bd51593997bd3e141e3017971993f3b",
+    "ucode/src/node-types.json": "3c5a2ad8f83828495779f69ef650b37cf9f79a3a46c5f1354cf65bfe847ea5f3",
+    "ucode/src/parser.c": "6002d96df3aa22e2f2e5fd27d4a64a2bb4c0126f2f6aff4dc1197a65b70b9fae",
+    "ucode_markup/src/grammar.json": "476c5d98e35b7892c7be1433963071faf385e44c2b41ed93ed7cdb0cf8fc4838",
+    "ucode_markup/src/node-types.json": "5b55bc4968a9600ff4e2f40b3709eb20afebdb240b5bf111ab8c6970a54c098c",
+    "ucode_markup/src/parser.c": "1b2f6331daeef2232b8da2c0556f0ecd6566ecdb8d5cb865771558ae2c00916f"
+  },
+  "limits": [
+    "local macOS, not hosted Linux",
+    "no installed OpenWrt bytes",
+    "QL syntax fixture query not yet run by CodeQL",
+    "candidate producer changes remain uncommitted"
+  ],
+  "producer_base_sha": "9166af76cf6944e1b3ea5856a9176366a1f7a6ee",
+  "producer_file_sha256": {
+    ".github/workflows/direct-rpc-release-gate.yml": "43260f2747bf7ca993a2df10f24795d1a13bc86e92da823242caa767f7a5183d",
+    ".github/workflows/publish-linux-release.yml": "dd56b5ecc34e9e3ca2dd1e701ebb5137bb748f4b181a76c2c465565220070e9c",
+    "patches/0005-newer-wifi-ucode-grammar.patch": "49cd041dbe78498694467dd5c2725554a0b4a3b620e2c2c69f924bea76128b85",
+    "ql/lib/codeql/ucode/ast/internal/TreeSitter.qll": "ea77ca72e96d493545798f5a83894f3e08e1df9f62f5928848692033b6182d4f",
+    "ql/lib/ucode.dbscheme": "d4a9ef5db2dd934c94ddf59141331ded3531d4ec79d86702d8f75afc361fc9fd",
+    "ql/test/newer-grammar-syntax/SyntaxShape.ql": "2a5faf46bb5d95c47553057bf5f576b23190bbf4c0b5d5791324f1ac5331a15a",
+    "ql/test/newer-grammar-syntax/expected.json": "cccd4b4e8f716c31e730f140d416e37bedfd8d0257af41c126613237704a556d",
+    "ql/test/newer-grammar-syntax/markup.ut": "86cfd6dfb6e496dc8d40f66ffffbbf3021ba3a58c7683c820623a75c3cd9e4b9",
+    "ql/test/newer-grammar-syntax/plain.uc": "6702b745c6fb28296667a8420843fe9266c5a166619b8cc77c1c423a34cbecfb",
+    "scripts/clone-grammar.sh": "25cf593944d90c2a798542572a05b649a0e57bb8f93766829d51b208ca35f0f5",
+    "scripts/direct-rpc-release-gate.py": "7d94162c6b4c97171ad9490830f0c1bee3433c96d0693a9ef85bcd1bb5f9dba2",
+    "scripts/package-linux-release.py": "6957b561ce580421fa3ded5c78b09e0a186621330e00139c2eda34d9db485db7",
+    "scripts/verify-linux-release-bundle.py": "448c4fd9a36f7a0e9b0f9f5608534b300bb412a27ef4b5dc746e066a858a6401"
+  },
+  "status": "local disposable producer-owned integration candidate; uncommitted",
+  "tool_versions": {
+    "Cargo": "1.100.0",
+    "CodeQL": "2.27.4",
+    "Node": "v26.13.1",
+    "npm": "11.20.0",
+    "tree-sitter": "tree-sitter 0.27.1"
+  },
+  "upstream_main_sha_at_fetch": "9166af76cf6944e1b3ea5856a9176366a1f7a6ee"
+}

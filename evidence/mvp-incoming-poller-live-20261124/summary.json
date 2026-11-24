@@ -1,0 +1,44 @@
+{
+  "schema": "mvp-incoming-live-summary-v1",
+  "date_utc": "2026-11-24",
+  "poller_commit": "05312d6c6fa31c821e5f13abbe61f3188febf4c3",
+  "poller_schema": "incoming-poll-v3",
+  "python_version": "3.15.2",
+  "run_command": "python3 tools/incoming_poll.py --genesis --capacity 2 --output-dir <new ignored work path>",
+  "exit_status": 0,
+  "checkpoint_sha256": "91bc6fa58b155206d3b7a2d6e3284d58d34c04a385e7e86ab70e5d6cabe5e95a",
+  "checkpoint_bytes": 45711359,
+  "observed_at": "2026-11-24T23:28:12.458575+00:00",
+  "successful_api_requests": 81,
+  "retained_http_errors": 0,
+  "openwrt_pr_pages": 67,
+  "luci_pr_pages": 8,
+  "openwrt_pr_rows": 1651,
+  "luci_pr_rows": 198,
+  "default_tip_rows": 2,
+  "total_pending_decisions": 1851,
+  "selected_decisions": 2,
+  "backlog_decisions": 1849,
+  "selected": [
+    {
+      "repository": "openwrt/luci",
+      "kind": "default_branch",
+      "source_commit": "ff373d85c30a3c668f249cf7bc6c47b859d37be8",
+      "source_tree": "1f684139344384f977dfccd966f3a94d64a704d1"
+    },
+    {
+      "repository": "openwrt/luci",
+      "kind": "pull_request",
+      "number": 5041,
+      "source_commit": "3f8835e1929e288ec55c07e09e6d29d10a910a35",
+      "source_tree": null
+    }
+  ],
+  "checkpoint_revalidation": {
+    "result": "passed",
+    "validated_pending_rows": 1851,
+    "body_digests": "validated by v3 checkpoint parser",
+    "recomputed_checkpoint_sha256": "91bc6fa58b155206d3b7a2d6e3284d58d34c04a385e7e86ab70e5d6cabe5e95a"
+  },
+  "limit": "Discovery only; no producer, consumer, CodeQL or Gate 8 handoff."
+}
