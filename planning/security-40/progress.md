@@ -8,7 +8,8 @@ Update after every claim transition; newest entries first.
 - Program opened: 2026-11-24
 - Claims created: 035–074 (40); base commit `379b172` on main.
   035–038 and 046 Demonstrated; 039/040 Partial (closure lanes running);
-  041–045 Blocked (wave 2, commit `2757d61`); 047–074 Proposed.
+  041–045, 047, 051 Blocked; 048/049/050 lanes running (wave 3 D);
+  052–074 Proposed.
 - Wave 0: P1 DONE — **PASS, full-build-extraction** (probe-c/VERDICT.md):
   15/15 uhttpd .c files, 0 extractor diagnostics, semantic queries verified;
   claims 062–066 viable now; 067–071 need per-package P1-style probes.
@@ -25,6 +26,11 @@ Update after every claim transition; newest entries first.
     base-files/procd layout), log lanes/lane039up.log
   - proc_4fa69f89a8af: 040 fix lane (repair D1–D3 mechanical reconciliation),
     log lanes/lane040fix.log
+  - Wave 3 D: proc_ebd4e790d96f (048 cgi-io canonicalize order; disposable
+    cgi-io clone @31cb3c89; consumer policy/cgi_download.py @ codeql-openwrt
+    cc5f8630), log lanes/laneD-cgiio.log; proc_e76dbc5f149e (049+050 rpcd
+    file.c/uci.c source oracles, sequential), log lanes/laneD-rpcd.log.
+    047/051 transitioned Blocked (P2 routing + fs sink-model gap).
   - P2: DONE (proc_4027700a0cc1, exit 0) — verdict not-routed; receipts
     probe-ucode/{VERDICT.md,MANIFEST.yml,logs/,db/p2-slice}
   - 046 lane DONE (proc_0e309702728b, exit 0): Demonstrated — orchestrator
@@ -36,13 +42,12 @@ Update after every claim transition; newest entries first.
 - Shared pinned checkouts (read-only): work/security-40/shared/{luci,rpcd,
   uhttpd,ubus,libubox,uci,mdnsd,procd,packages,openwrt} (last seven blobless,
   no checkout; openwrt/packages working trees dirty — read pins via git show)
-- Next: gate 039-upgrade / 040-fix / 046 lanes on completion → transition →
-  commit (wave 1 fully closed); then wave 3 D: 048/049/050 C source-oracle
-  lanes + 047/051 Blocked (same routing gate). Routing-blocked set also
-  includes 057/061 (C). E: 053/054/055 viable; 052/056 stay inside documented
-  markup subset (feasibility check, no gate lift). F: 062–066 viable (P1
-  PASS); 067 needs ubusd probe. H: 068–071 per-package probes. G: 072–074
-  shell source oracle. Wave order stays A→B→D→E→C→F→H→G.
+- Next: gate 039-upgrade / 040-fix / 048 / 049+050 lanes on completion →
+  transition → commit; then wave 4 E (052–056): 053/054/055 viable; 052/056
+  stay inside documented markup subset (feasibility check, no gate lift).
+  Then C (057–061): 058/059/060 viable, 057/061 routing-blocked. F: 062–066
+  viable (P1 PASS); 067 needs ubusd probe. H: 068–071 per-package probes.
+  G: 072–074 shell source oracle. Wave order stays A→B→D→E→C→F→H→G.
 
 ## Pins (plan-time observations; re-resolve at execution)
 
@@ -55,6 +60,21 @@ Update after every claim transition; newest entries first.
 - CodeQL CLI: 2.27.4 (gh extension)
 
 ## Log
+
+### 2026-11-24 — wave 3 D opened (047/051 Blocked; 048/049/050 lanes dispatched)
+
+- 047/051 → Blocked: same P2 routing gate as 041–045 (application .uc not
+  extracted) PLUS fs read-side (open/read/stat/readlink) and write-side
+  (write/rename/mkdir) sinks outside the M4 popen/system model. Unblock
+  needs routing extension + fs sink-model decision. Receipts probe-ucode/.
+- 048 lane (proc_ebd4e790d96f): cgi-io @31cb3c89 (disposable blobless clone;
+  no shared checkout existed) — per-endpoint canonicalize/ACL/open order +
+  comparison to codeql-openwrt policy/cgi_download.py oracle (repo clean @
+  cc5f863021a099437beb8da66f53207712974a47). CodeQL C optional (P1 pattern).
+- 049+050 lane (proc_e76dbc5f149e): rpcd @d99f703e file.c symlink
+  re-authorization inventory + uci.c session-tmpdir construction/modes/
+  cleanup; sequential, separate oracles/controls. Source-oracle default.
+- Heavy CodeQL slot free (046 done). Closure lanes 039up/040fix still running.
 
 ### 2026-11-24 — 046 Demonstrated; wave 2 fully closed
 

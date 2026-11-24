@@ -1,11 +1,11 @@
 # Claim 051: Request-controlled destinations into fs.write/rename
 
-- Status: Proposed
+- Status: Blocked
 - Program: [Security-40](../planning/security-40-20261124.md), category D
-- Producer: `lucas-albers-lz4/codeql-ucode` (ucode lanes) / `lucas-albers-lz4/codeql-openwrt` (policy, C and JS lanes); pin resolved at execution
-- Producer commit: not yet resolved for this claim
-- Consumer: `lucas-albers-lz4/codeql-openwrt` where a join is named; otherwise none
-- Consumer commit: not yet resolved for this claim
+- Producer: `lucas-albers-lz4/codeql-ucode` (routing probe P2; application .uc not routed)
+- Producer commit: codeql-ucode 734555a9f56893e89e678cdee63028fc17ea5bc8; luci b2e0be4b46ec0fd43394c081fa7c50657af14011
+- Consumer: none
+- Consumer commit: none
 - Environment: local CodeQL CLI 2.27.4 (`gh codeql`), no CI; host details recorded per run
 
 ## Historical anchor
@@ -46,4 +46,21 @@ None.
 
 ## Result
 
-Not yet evaluated.
+Blocked — producer routing gate (probe P2, orchestrator-verified) plus a
+sink-model gap. Security-40 lifts no gate.
+
+- P2 at codeql-ucode `734555a9f56893e89e678cdee63028fc17ea5bc8` (clean):
+  application `.uc` backends skipped by literal-basename `file_globs`;
+  `RequestArgsExec.ql` l.18 gates `getBaseName() = "luci"`. The manifested
+  application set this claim's method requires is not extracted (receipts
+  probe-ucode/{VERDICT.md,MANIFEST.yml,logs/}).
+- Additionally `fs.write` / `fs.rename` / `fs.mkdir` are outside the M4
+  request-args sink model (NamedFsPopenCall / BuiltinSystemCall only), so
+  write-side destination flows would not surface even in routed files.
+- No source prefix-pinning observation was made (claim method is the bounded
+  producer slice).
+- Unblock: producer routing extension to application `.uc` + a write-side fs
+  sink model decision in codeql-ucode; then re-run this claim's slice.
+- Evidence: `/root/workspace/work/security-40/probe-ucode/` (P2 receipts);
+  gates verified in producer `extractor/src/extractor.rs` and
+  `ql/src/m4/RequestArgsExec.ql`.
