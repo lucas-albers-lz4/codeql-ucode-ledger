@@ -1,11 +1,11 @@
 # Claim 060: Newline-bearing UCI values into line-based formats
 
-- Status: Proposed
+- Status: Demonstrated
 - Program: [Security-40](../planning/security-40-20261124.md), category C
-- Producer: `lucas-albers-lz4/codeql-ucode` (ucode lanes) / `lucas-albers-lz4/codeql-openwrt` (policy, C and JS lanes); pin resolved at execution
-- Producer commit: not yet resolved for this claim
-- Consumer: `lucas-albers-lz4/codeql-openwrt` where a join is named; otherwise none
-- Consumer commit: not yet resolved for this claim
+- Producer: source oracle (pinned packages-feed shell census; no CodeQL run)
+- Producer commit: packages 07e0d16305d2b5903b37ad7913e33e18795f81a4
+- Consumer: none
+- Consumer commit: none
 - Environment: local CodeQL CLI 2.27.4 (`gh codeql`), no CI; host details recorded per run
 
 ## Historical anchor
@@ -46,4 +46,31 @@ None.
 
 ## Result
 
-Not yet evaluated.
+Demonstrated — source oracle at packages `07e0d163…` (pinned blobs only;
+working tree dirty, never read); shell not CodeQL-extracted; no database /
+runtime / exploitability verdict; bounded declared manifest.
+
+- 19 transcribed chains → 17 eligible (14 direct, 3 indirect), 1 near_miss,
+  1 negative. Eligible format counts: YAML 7, line-based-conf 6, dnsmasq-conf
+  1, cron 1, hosts/dnsmasq 1, hosts/dnsmasq/nft 1. Source classes:
+  uci-config_get 11, uci-get 1, uci-load-validate 2, program-output 1,
+  file-content 2.
+- Census: 107 write+source scripts over the 1618-path shell universe;
+  14-writer manifest (bounded, declared).
+- Anchor cross-check (GHSA-w6q2-vr4f-49x3): ser2net.init renders UCI into
+  /tmp/ser2net.yaml gensio config (echo :224/:231-234). Only the options list
+  (custom_options :189) is filtered by list_cb_append `tr -cd ' -~'` (:19,
+  rejects newline); the value: (:54/:63/:77), accepter host (:95), led device
+  (:113), gensio connector serialdev,$device (:195), led *$val (:202) paths
+  render UCI values WITHOUT newline rejection — advisory source-shape present
+  on the device/value paths.
+- Controls 3/3 (POS ser2net.init:63; NEAR ser2net.init:19/:189; NEG
+  acme.init:150 literal cron). Independent second pass 17/17. 14/14 cited
+  blobs sha256-verified.
+- Limits: bounded manifest; indirect sources (adblock/banip downloaded-list
+  content, vpnc-script VPN-env) declared not asserted; unbound.sh/tcpproxy/
+  radsecproxy classified from ctx dumps (representative directive writes).
+- Evidence: `/root/workspace/work/security-40/060/` (oracle.{md,json},
+  chains.json, census.json, controls.json, provenance.json, run_pipeline.sh,
+  build_060.py). Orchestrator re-ran `run_pipeline.sh` (exit 0, VERDICT PASS);
+  spot-checked ser2net.init:19/54/63/189.

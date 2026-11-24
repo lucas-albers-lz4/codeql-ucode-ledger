@@ -7,9 +7,9 @@ Update after every claim transition; newest entries first.
 
 - Program opened: 2026-11-24
 - Claims created: 035–074 (40); base commit `379b172` on main.
-  035–040, 046, 048–050, 053–055, 058 Demonstrated (14); 041–045, 047,
-  051, 052, 056, 057, 061 Blocked (11); 059/060 (C shell) lane running;
-  062–074 Proposed (13). Waves A/B/D/E closed; C nearly done.
+  035–040, 046, 048–050, 053–055, 058–060 Demonstrated (16); 041–045, 047,
+  051, 052, 056, 057, 061 Blocked (11); 062–074 Proposed (13). Waves
+  A/B/C/D/E closed; F (062–067) lanes running; H/G pending.
 - Wave 0: P1 DONE — **PASS, full-build-extraction** (probe-c/VERDICT.md):
   15/15 uhttpd .c files, 0 extractor diagnostics, semantic queries verified;
   claims 062–066 viable now; 067–071 need per-package P1-style probes.
@@ -56,13 +56,21 @@ Update after every claim transition; newest entries first.
 - Wave 5 C: proc_71c3742a3480 (058 DONE exit 0: Demonstrated — GATE PASS,
     7 uci_write_literal sites, two-pass agreement, 0 uncovered/0 phantom,
     controls 3/3; hold unchanged; tokenizer-revert incident caught by gate);
-    proc_f3837a0c8487
-    (059 shell eval/sh -c config chains + 060 newline UCI→line-format; packages
-    @07e0d163 via git show blobs — working tree dirty), log lanes/laneC-shell.log.
-    057/061 Blocked (application-ucode routing gate).
-- Next: gate 058 / 059+060 lanes on completion → transition → commit; then
-  F (062–067): 062–066 viable (P1 PASS), 067 needs ubusd probe. H: 068–071
-  per-package probes. G: 072–074 shell source oracle. Wave order A→B→D→E→C→F→H→G.
+    proc_f3837a0c8487 (059+060 DONE exit 0: Demonstrated — VERDICT PASS;
+    059: 34 eligible chains/65-script manifest; 060: 17 eligible/14-writer;
+    controls 3/3 each; second-pass 34/34 + 17/17; packages @07e0d163 blobs,
+    working tree never read). 057/061 Blocked (application-ucode routing gate).
+    CATEGORY C COMPLETE (058/059/060 Demonstrated).
+- Wave 6 F (light source-oracle lanes; heavy slot free): proc_b4e13b5c0d4b
+    (062 TE case + 063 CL/chunk signedness + 065 keepalive drain; uhttpd
+    @93b05e0b clean), log lanes/laneF-uhttpd-parse.log; proc_3eaeb1f75860
+    (064 ubus params type + 066 realm enforcement; uhttpd @93b05e0b), log
+    lanes/laneF-uhttpd-auth.log; proc_2730fa24420d (067 ubusd blobmsg peer
+    bounds; ubus @24864e78 via git show blobs — working tree dirty), log
+    lanes/laneF-ubusd.log.
+- Next: gate F lanes on completion → transition → commit; then H 068–071
+  (luci/rpcd source oracles), G 072–074 (shell source oracle). Wave order
+  A→B→D→E→C→F→H→G. After 074 closes, design extension waves 075+.
 - **User directive (2026-11-24, mid-run):** after Security-40 (035–074) is
   complete, find and design **3–10 additional waves** of new high-value
   claims (075+) from uncovered interfaces/advisories, then work through them
@@ -85,6 +93,28 @@ Update after every claim transition; newest entries first.
 - CodeQL CLI: 2.27.4 (gh extension)
 
 ## Log
+
+### 2026-11-24 — 059/060 Demonstrated; category C complete; wave 6 F opened
+
+- Lane proc_f3837a0c8487 (exit 0): source oracle, packages @07e0d163 pinned
+  blobs only (working tree dirty, never read); shell not CodeQL-extracted.
+- 059: 85 chains → 34 eligible (16 direct/18 indirect), 33 near-miss/18 neg;
+  1618-path shell universe, 179 census rows, 65-script manifest. ddns anchor:
+  lucihelper has NO eval at pin; machinery in dynamic_dns_functions.sh fed by
+  updater.sh:145 (eval "$ip_script" :893 etc.). Controls 3/3; second pass
+  34/34 (caught+fixed snort-mgr citation :287/:429); 65/65 blobs sha-verified.
+- 060: 19 chains → 17 eligible (14 direct/3 indirect); YAML 7/line-conf 6/
+  dnsmasq 1/cron 1/hosts 2. ser2net anchor: options list filtered (tr -cd
+  ' -~' :19) but value/accepter/led/gensio paths render UCI WITHOUT newline
+  rejection → advisory shape present on device/value paths. Controls 3/3;
+  second pass 17/17; 14/14 blobs sha-verified.
+- Both bounded declared manifests (not whole-feed); indirect sources declared.
+  Orchestrator gate: re-ran both run_pipeline.sh (exit 0, VERDICT PASS);
+  spot-checked dynamic_dns_functions.sh:893 + ser2net.init:19/54/63/189.
+  Claims 059/060 → Demonstrated; README + progress updated. CATEGORY C COMPLETE.
+- Wave 6 F opened: 3 light source-oracle lanes — uhttpd parse (062/063/065),
+  uhttpd auth (064/066) @93b05e0b clean; ubusd (067) @24864e78 blobs. Heavy
+  slot free. H 068–071 / G 072–074 next.
 
 ### 2026-11-24 — 058 Demonstrated (JS rpc.declare UCI-write census)
 

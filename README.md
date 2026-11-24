@@ -78,8 +78,8 @@ Together these move from source selection through extraction, query, and consume
 | [056](claims/056-template-arg-untrusted.md) | Blocked | Security-40: Template/include argument propagation |
 | [057](claims/057-ucode-request-uci-set.md) | Blocked | Security-40: Request values into uci.set in ucode backends |
 | [058](claims/058-js-rpc-uci-set-sites.md) | Demonstrated | Security-40: JS rpc.declare UCI set call sites (enumeration only) |
-| [059](claims/059-shell-eval-config-values.md) | Proposed | Security-40: Package shell eval/sh -c of config values |
-| [060](claims/060-uci-newline-line-formats.md) | Proposed | Security-40: Newline-bearing UCI values into line-based formats |
+| [059](claims/059-shell-eval-config-values.md) | Demonstrated | Security-40: Package shell eval/sh -c of config values |
+| [060](claims/060-uci-newline-line-formats.md) | Demonstrated | Security-40: Newline-bearing UCI values into line-based formats |
 | [061](claims/061-ucode-commit-restart-adjacency.md) | Blocked | Security-40: uci.commit to service-restart adjacency |
 | [062](claims/062-uhttpd-te-case-match.md) | Proposed | Security-40: Transfer-Encoding matching case sensitivity |
 | [063](claims/063-uhttpd-cl-chunk-signedness.md) | Proposed | Security-40: Content-Length signedness and chunk-size state |
