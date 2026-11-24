@@ -71,11 +71,11 @@ Together these move from source selection through extraction, query, and consume
 | [049](claims/049-rpcd-file-symlink-reauth.md) | Proposed | Security-40: rpcd file plugin symlink re-authorization |
 | [050](claims/050-rpcd-session-tmpdir.md) | Proposed | Security-40: Session-token-derived temporary UCI paths |
 | [051](claims/051-ucode-request-path-write.md) | Blocked | Security-40: Request-controlled destinations into fs.write/rename |
-| [052](claims/052-markup-unescaped-substitution.md) | Proposed | Security-40: Unescaped substitution in bounded markup subset |
+| [052](claims/052-markup-unescaped-substitution.md) | Blocked | Security-40: Unescaped substitution in bounded markup subset |
 | [053](claims/053-lease-data-render-sites.md) | Proposed | Security-40: Lease/UCI-derived strings in status render paths |
 | [054](claims/054-js-dangerous-render-sinks.md) | Proposed | Security-40: JS dangerous-render sinks in pinned views |
 | [055](claims/055-uhttpd-cgi-uri-reflection.md) | Proposed | Security-40: uhttpd CGI error/URI reflection |
-| [056](claims/056-template-arg-untrusted.md) | Proposed | Security-40: Template/include argument propagation |
+| [056](claims/056-template-arg-untrusted.md) | Blocked | Security-40: Template/include argument propagation |
 | [057](claims/057-ucode-request-uci-set.md) | Proposed | Security-40: Request values into uci.set in ucode backends |
 | [058](claims/058-js-rpc-uci-set-sites.md) | Proposed | Security-40: JS rpc.declare UCI set call sites (enumeration only) |
 | [059](claims/059-shell-eval-config-values.md) | Proposed | Security-40: Package shell eval/sh -c of config values |

@@ -1,11 +1,11 @@
 # Claim 056: Template/include argument propagation
 
-- Status: Proposed
+- Status: Blocked
 - Program: [Security-40](../planning/security-40-20261124.md), category E
-- Producer: `lucas-albers-lz4/codeql-ucode` (ucode lanes) / `lucas-albers-lz4/codeql-openwrt` (policy, C and JS lanes); pin resolved at execution
-- Producer commit: not yet resolved for this claim
-- Consumer: `lucas-albers-lz4/codeql-openwrt` where a join is named; otherwise none
-- Consumer commit: not yet resolved for this claim
+- Producer: `lucas-albers-lz4/codeql-ucode` (markup not modeled; no .ut routing)
+- Producer commit: codeql-ucode 734555a9f56893e89e678cdee63028fc17ea5bc8; luci b2e0be4b46ec0fd43394c081fa7c50657af14011
+- Consumer: `lucas-albers-lz4/codeql-openwrt` (file-routing / pack-contract receipts)
+- Consumer commit: codeql-openwrt cc5f863021a099437beb8da66f53207712974a47
 - Environment: local CodeQL CLI 2.27.4 (`gh codeql`), no CI; host details recorded per run
 
 ## Historical anchor
@@ -47,4 +47,25 @@ None.
 
 ## Result
 
-Not yet evaluated.
+Blocked — same markup extractor gate as claim 052; the argument→substitution
+edge is unobservable. Security-40 lifts no gate and does not lift the old
+template-argument deferral.
+
+- codeql-openwrt `docs/file-routing.md` l.20: markup is `markup_not_modeled`;
+  `docs/pack-contract.md` l.27/29: do not extract markup in M0–M3; the
+  seven-case extractor gate remains codeql-ucode work, not claimed.
+- Producer codeql-ucode @734555a9 (clean): no `.ut` routing in `extractor.rs`;
+  `ucode_markup` grammar hidden at init; no markup query pack (m3 taint / m4
+  request-args). The "new bounded decision justified by the XSS class" still
+  requires a supported bounded markup subset, which is documented as
+  `markup_not_modeled` — so no call-site multiset or argument-edge observation
+  receipt can be produced.
+- 33 `.ut` templates in pinned luci b2e0be4b are manifestable but not
+  extracted. Detection gap: GHSA-q335-4c83-c88h (adblock-fast status errors)
+  anchor shape present in source, invisible to the analyzer.
+- Unblock: codeql-ucode markup extractor seven-case gate pass + `.ut` routing
+  + markup query pack defining the bounded subset and argument edges; then
+  re-run this bounded decision.
+- Evidence: codeql-openwrt/docs/{file-routing.md,pack-contract.md}; producer
+  extractor/src/extractor.rs, README.md, ql/src/{m3,m4};
+  `/root/workspace/work/security-40/probe-ucode/`.

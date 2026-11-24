@@ -8,8 +8,8 @@ Update after every claim transition; newest entries first.
 - Program opened: 2026-11-24
 - Claims created: 035–074 (40); base commit `379b172` on main.
   035–039 and 046 Demonstrated; 040 Partial (fix lane running);
-  041–045, 047, 051 Blocked; 048/049/050 lanes running (wave 3 D);
-  052–074 Proposed.
+  041–045, 047, 051, 052, 056 Blocked; 048/049/050 (D) + 053/054/055 (E)
+  lanes running; 057–074 Proposed.
 - Wave 0: P1 DONE — **PASS, full-build-extraction** (probe-c/VERDICT.md):
   15/15 uhttpd .c files, 0 extractor diagnostics, semantic queries verified;
   claims 062–066 viable now; 067–071 need per-package P1-style probes.
@@ -32,6 +32,11 @@ Update after every claim transition; newest entries first.
     cc5f8630), log lanes/laneD-cgiio.log; proc_e76dbc5f149e (049+050 rpcd
     file.c/uci.c source oracles, sequential), log lanes/laneD-rpcd.log.
     047/051 transitioned Blocked (P2 routing + fs sink-model gap).
+  - Wave 4 E: proc_6ae83ddca088 (053+054 luci lease/UCI render chain + JS
+    dangerous-render sink syntax inventory; odhcpd @5d7be43f disposable
+    clone), log lanes/laneE-render.log; proc_2b9ba58c6c16 (055 uhttpd CGI
+    URI reflection, C source oracle, optional P1-pattern CodeQL), log
+    lanes/laneE-uhttpd.log. 052/056 transitioned Blocked (markup_not_modeled).
   - P2: DONE (proc_4027700a0cc1, exit 0) — verdict not-routed; receipts
     probe-ucode/{VERDICT.md,MANIFEST.yml,logs/,db/p2-slice}
   - 046 lane DONE (proc_0e309702728b, exit 0): Demonstrated — orchestrator
@@ -43,12 +48,21 @@ Update after every claim transition; newest entries first.
 - Shared pinned checkouts (read-only): work/security-40/shared/{luci,rpcd,
   uhttpd,ubus,libubox,uci,mdnsd,procd,packages,openwrt} (last seven blobless,
   no checkout; openwrt/packages working trees dirty — read pins via git show)
-- Next: gate 040-fix / 048 / 049+050 lanes on completion →
-  transition → commit; then wave 4 E (052–056): 053/054/055 viable; 052/056
-  stay inside documented markup subset (feasibility check, no gate lift).
-  Then C (057–061): 058/059/060 viable, 057/061 routing-blocked. F: 062–066
-  viable (P1 PASS); 067 needs ubusd probe. H: 068–071 per-package probes.
-  G: 072–074 shell source oracle. Wave order stays A→B→D→E→C→F→H→G.
+- Next: gate 040-fix / 048 / 049+050 / 053+054 / 055 lanes on completion →
+  transition → commit; then wave 5 C (057–061): 058/059/060 viable, 057/061
+  routing-blocked. F: 062–066 viable (P1 PASS); 067 needs ubusd probe.
+  H: 068–071 per-package probes. G: 072–074 shell source oracle. Wave order
+  stays A→B→D→E→C→F→H→G.
+- **User directive (2026-11-24, mid-run):** after Security-40 (035–074) is
+  complete, find and design **3–10 additional waves** of new high-value
+  claims (075+) from uncovered interfaces/advisories, then work through them
+  sequentially with the same discipline (pinned scope, source-first oracles,
+  controls, orchestrator gating, no gate lifts). Candidate surfaces to
+  cross-check against catalog.json for unused advisories: uhttpd TLS/HTTP
+  parsing, ubusd ACL/peer-creds/blobmsg, luci session/CSRF/sysauth, rpcd
+  iwinfo, netifd/firewall4 ucode, dnsmasq/odhcpd, cgi-io upload/exec,
+  attendedsysupgrade/opkg verification, procd service/jail. Design happens
+  AFTER 074 closes; record plan addendum + claims before dispatch.
 
 ## Pins (plan-time observations; re-resolve at execution)
 
@@ -61,6 +75,22 @@ Update after every claim transition; newest entries first.
 - CodeQL CLI: 2.27.4 (gh extension)
 
 ## Log
+
+### 2026-11-24 — wave 4 E opened (052/056 Blocked; 053/054/055 lanes dispatched)
+
+- 052/056 → Blocked: markup extractor gate. codeql-openwrt docs/file-routing.md
+  l.20 marks markup `markup_not_modeled`; pack-contract.md l.27/29 forbids
+  markup extraction in M0–M3 (seven-case gate remains codeql-ucode work).
+  Producer extractor.rs has no .ut routing; ucode_markup grammar hidden at
+  init; no markup query pack (m3 taint / m4 request-args). 33 pinned .ut
+  templates manifestable but unextracted → XSS-class anchor shapes
+  (GHSA-p5pg/c6vf/q335) invisible. Detection gap recorded; no gate lifted.
+- 053+054 lane (proc_6ae83ddca088): luci @b2e0be4b lease/UCI render chain
+  (odhcpd @5d7be43f lease write → LuCI read → render) + JS dangerous-render
+  sink syntax inventory. Source/syntax only; JS UCI hold unchanged.
+- 055 lane (proc_2b9ba58c6c16): uhttpd @93b05e0b CGI error/URI reflection
+  (CVE-2018-19630); C source oracle, optional P1-pattern CodeQL (heavy slot
+  free). 5 lanes now running (040fix, D-cgiio, D-rpcd, E-render, E-uhttpd).
 
 ### 2026-11-24 — 039 Demonstrated (pinned-layout derivation closed)
 
