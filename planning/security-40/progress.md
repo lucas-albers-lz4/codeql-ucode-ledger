@@ -68,6 +68,14 @@ Update after every claim transition; newest entries first.
     lanes/laneF-uhttpd-auth.log; proc_2730fa24420d (067 ubusd blobmsg peer
     bounds; ubus @24864e78 via git show blobs — working tree dirty), log
     lanes/laneF-ubusd.log.
+- H/G pre-staged (prompts in lanes/, launch after F gates): laneH-px5g (068,
+  luci @b2e0be4b clean, libs/luci-lib-px5g/src); laneH-mdnsd-libubox (069 mdnsd
+  @defe7ccfd20281b9ef4dfa45437813386a64f8ba — shared HEAD, mdnsd LEFT the feed,
+  disclosed; 070 libubox @ff13b89e82e64cdd7853419504e51ec0c7e487e0); laneH-uci-procd
+  (071 libuci @66127cd76c5d0bd46d5a90302cc6110f53a4e2f8; 072 procd
+  @58eb263d5abe03f8c1280bdfa65a3b052614215d); laneG-shell (073 banip + 074
+  travelmate, packages @07e0d163 blobs). libubox/uci/procd pins reachable;
+  shared trees dirty → git show blobs. All light source oracles.
 - Next: gate F lanes on completion → transition → commit; then H 068–071
   (luci/rpcd source oracles), G 072–074 (shell source oracle). Wave order
   A→B→D→E→C→F→H→G. After 074 closes, design extension waves 075+.
