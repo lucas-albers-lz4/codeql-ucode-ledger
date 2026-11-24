@@ -548,6 +548,11 @@ template/include argument propagation. MVP claim 086 checks route/extraction
 for 22 markup-inconclusive templates and two plain shebang scripts; it does not
 resolve those semantic gaps. Different producer revisions and staging
 contracts mean these results do not contradict each other.
+The run receipts and source-first oracles retain their original local 035–046
+labels where those labels were embedded in raw evidence. Their directories,
+claim pages and index links use 075–086. The raw labels are provenance for the
+pre-reconciliation runs, not references to Security-40 claims with the same
+old numbers; rewriting hashed receipts would obscure their original bytes.
 
 ## Active work block after claims 075–076 (historical snapshot)
 

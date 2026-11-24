@@ -160,7 +160,7 @@ negative. The initial local CSV validator failed on a filename typo and its
 corrected check is recorded separately.
 
 
-These paths overlap in the pinned LuCI fixture; they are not a representative
+Some earlier paths overlap in the pinned LuCI fixture; these slices are not a representative
 sample of all OpenWrt software or ucode syntax. The inventory deliberately
 separates source extraction, model/query behavior, consumer handling and policy
 interpretation. A successful earlier step is a prerequisite, not proof of a
