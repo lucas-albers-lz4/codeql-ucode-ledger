@@ -1,0 +1,46 @@
+{
+  "schema": "wol-assembly-ast-oracle-v1",
+  "source_first": true,
+  "luci_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+  "luci_dirty": false,
+  "luci_source_path": "applications/luci-app-wol/root/usr/share/rpcd/ucode/luci.wol",
+  "luci_git_blob": "fd9e9f0485ab6baec96ae089caf1089a6d471c99",
+  "luci_sha256": "51214ec57bcbd8d50e65016efda2a05e8eb7822dc7e510d014965834c61ef92b",
+  "producer_commit": "977331713b4b8b5574813bee0884245bf6db2752",
+  "producer_dirty": false,
+  "fixture_sha256": "7fccfa4d3991e3bd63174539fa3dccb8bfef7444c8028f21a8ef2c19420e5e1c",
+  "query_sha256": "403551cb47ecf3a8a44780298dd4ce8b3a5c850170b6cd7df2be8e96f2fff263",
+  "stage_files": {
+    "usr/share/rpcd/ucode/luci.wol": "51214ec57bcbd8d50e65016efda2a05e8eb7822dc7e510d014965834c61ef92b",
+    "usr/share/rpcd/ucode/controls.uc": "7fccfa4d3991e3bd63174539fa3dccb8bfef7444c8028f21a8ef2c19420e5e1c"
+  },
+  "expected_successful_multiset": {
+    "usr/share/rpcd/ucode/luci.wol": 1,
+    "usr/share/rpcd/ucode/controls.uc": 1
+  },
+  "expected_extraction_errors": 0,
+  "expected_witnesses": [
+    {
+      "uri": "usr/share/rpcd/ucode/luci.wol",
+      "src_line": 41,
+      "sink_line": 42,
+      "role": "quoted current-source near miss"
+    },
+    {
+      "uri": "usr/share/rpcd/ucode/controls.uc",
+      "src_line": 11,
+      "sink_line": 12,
+      "role": "unquoted identity callback synthetic positive"
+    }
+  ],
+  "excluded_controls": {
+    "fixed_args": "map source is a fixed array",
+    "other_callback": "map callback differs",
+    "no_join": "popen assembly lacks join"
+  },
+  "limits": [
+    "AST syntax and named-import model only; local name matching does not prove callback binding or data flow",
+    "source-staged bytes, not installed package bytes",
+    "no query alert, runtime safety or vulnerability conclusion"
+  ]
+}

@@ -1,0 +1,5 @@
+source_path,source_sha256,git_blob,staged_path,route_reason,successful_file_count,error_count
+package/network/utils/wireguard-tools/files/wireguard.uc,5b895085d72c3feb297d18f378676daae596ab40145113d354ff345d8d8b5d39,fe876ebdbbc8e1b66328c5fcad60acf3680ac810,lib/netifd/proto/wireguard.uc,ucode_shebang,1,0
+package/network/config/wifi-scripts/files/lib/netifd/wireless.uc,32620c888230e4329e3d8cc91fe3e53ab8435e45b1f07855de2d3b2d08cb4810,525c01d60a4a0e8d8d8c2110d15f71ec0596aeb3,lib/netifd/wireless.uc,ucode_extension,1,0
+package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc,17143a060e91dd83476e864b484c402a8c88bf70b15b8af59a87d6d72a3d3bb8,da5d0975ceb3931bf4b8dd9906f03364add0e002,lib/wifi/mac80211.uc,ucode_shebang,1,0
+package/network/config/wifi-scripts/files/usr/share/ucode/wifi/utils.uc,0cbbcda771ec40c8d9d394f2d3fa7cf5e36c039d08f26d8fd6aef71fba44380d,5158b84600f2692e0e918deeb04b38805e6558d6,usr/share/ucode/wifi/utils.uc,ucode_extension,1,0

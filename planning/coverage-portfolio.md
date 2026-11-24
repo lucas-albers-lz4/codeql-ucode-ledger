@@ -173,6 +173,21 @@ not infer coverage from their presence in this list.
 
 ## Working order and refresh
 
+[087](../claims/087-current-luci-quoted-switch-ast.md) and
+[088](../claims/088-current-luci-wol-assembly-ast.md) retain current LuCI AST
+prerequisite observations without claiming command-flow or sanitizer behavior.
+[089](../claims/089-newer-openwrt-wifi-parse-boundary.md) records a newer
+OpenWrt source-revision boundary: the v0.6 selected set routed exactly, but
+two changed wifi files failed parsing, so the aggregate run stopped before
+suite SARIF. This is an extractor coverage gap, not a security-negative result.
+[090](../claims/090-wifi-grammar-prototype-extraction.md) tests a disposable
+grammar override on those two sources and two controls: fresh CodeQL
+extraction and focused AST rows pass. A later separate local 128-path corpus
+run passed under the refined pack, and producer PR #161 merged grammar
+support. A released Linux corpus run, installed-byte scan and consumer
+handoff remain open.
+
+
 1. Claim 005 has no identified existing fresh query-to-record path at the pinned
    pair. Keep the source-to-call evidence partial and revisit an interface only
    if it serves a concrete analysis need; do not relabel the historical snapshot.

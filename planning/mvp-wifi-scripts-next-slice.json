@@ -1,0 +1,227 @@
+{
+  "boundaries": [
+    "No configured build, package-staging or IPK bytes inspected.",
+    "Proposed installed paths are recipe projections, not byte-verified outputs.",
+    "Ucode route/extraction/query behavior has not been run on this slice."
+  ],
+  "install_recipe": "package/network/config/wifi-scripts/Makefile:44-50",
+  "overwritten_alternative": {
+    "condition": "initial files/* copy; overwritten by ucode-shebang variant when CONFIG_WIFI_SCRIPTS_UCODE=y",
+    "proposed_installed_path": "lib/netifd/wireless/mac80211.sh",
+    "sha256": "5f87f07cca56b20b0cf08cf02711c1c4fc4ddbbb17de7c8780282625c8d3be07",
+    "source_path": "package/network/config/wifi-scripts/files/lib/netifd/wireless/mac80211.sh"
+  },
+  "package": "wifi-scripts",
+  "schema": "mvp-wifi-scripts-source-first-v0.1",
+  "selected": [
+    {
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_shebang"
+      },
+      "git_blob": "6b709e4593ba768f88d8c2ae3226565fcd8db3a9",
+      "kind": "ucode_shebang",
+      "proposed_installed_path": "lib/netifd/wireless/mac80211.sh",
+      "sha256": "f7d6ae091777a8eb77ba55c2c1f09bf8caff1a4364dc6de4f19a1ecb322801aa",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/lib/netifd/wireless/mac80211.sh"
+    },
+    {
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_shebang"
+      },
+      "git_blob": "d36268b06e96c9c6a4e08957d65260742facb97a",
+      "kind": "ucode_shebang",
+      "proposed_installed_path": "usr/bin/iwinfo",
+      "sha256": "c279f6cc7000ee1cb7609a0a60f77a63500a85d6be1b1fe32afa333fe176ff1c",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/bin/iwinfo"
+    },
+    {
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "git_blob": "7fa5291de19c5d26ecf8612d59e2d6e7ad090131",
+      "kind": "ucode_extension",
+      "proposed_installed_path": "usr/share/ucode/iwinfo.uc",
+      "sha256": "df56c258702cb3bf60d4657031a2abf371df9ced2952da6ad13c04021fd4c3ea",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/iwinfo.uc"
+    },
+    {
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "git_blob": "57cacff14ab80aa3f0059d2afe7251c45ffd8de4",
+      "kind": "ucode_extension",
+      "proposed_installed_path": "usr/share/ucode/wifi/ap.uc",
+      "sha256": "d036c64e14ae75297487ac4e572ee4e2504d5795e0c907267341d7b14931275a",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc"
+    },
+    {
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "git_blob": "de939b0c2f1385c2c7c1076f44ada6fdfbcf5b7c",
+      "kind": "ucode_extension",
+      "proposed_installed_path": "usr/share/ucode/wifi/common.uc",
+      "sha256": "92ecc237251e6dcb32ba0d230b339850adb9848cd7d6e1073e043bc3ae5d790d",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/common.uc"
+    },
+    {
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "git_blob": "2742552cc199ac3e6ddb83ee991761c0a5c34115",
+      "kind": "ucode_extension",
+      "proposed_installed_path": "usr/share/ucode/wifi/hostapd.uc",
+      "sha256": "5fd200d76efb0a087ecb067003cae80819ee62a37cabf2a788a1daea9c80177e",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/hostapd.uc"
+    },
+    {
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "git_blob": "ff72f5b677051b9ba5edefa342b4c3e0ce99285c",
+      "kind": "ucode_extension",
+      "proposed_installed_path": "usr/share/ucode/wifi/iface.uc",
+      "sha256": "be89c76e55e9f838421b99328a9e84ac10b76dac64f4f8950660014123bdfc5f",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/iface.uc"
+    },
+    {
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "git_blob": "5a4a9fafb37f25a9070d5cac4139446e1600e4f2",
+      "kind": "ucode_extension",
+      "proposed_installed_path": "usr/share/ucode/wifi/netifd.uc",
+      "sha256": "2a5f4c94d186d1be150c4bb8ba308810af41a4930fd1287636de3274595d7af6",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/netifd.uc"
+    },
+    {
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "git_blob": "a8fc00cd03fe11cd2c51da8599682ef89ca0a641",
+      "kind": "ucode_extension",
+      "proposed_installed_path": "usr/share/ucode/wifi/supplicant.uc",
+      "sha256": "8bdbd9d2688f0ed008ad00e5d19c4baf589020853b615bafd9e9586dcc79e78d",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/supplicant.uc"
+    },
+    {
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "git_blob": "e675b7a6ca089364a0a1b333ba0e31b76a24f640",
+      "kind": "ucode_extension",
+      "proposed_installed_path": "usr/share/ucode/wifi/validate.uc",
+      "sha256": "2710fca796071133b30abedb28a8615ad0172af2b66a7c47580dde2f804eb4ee",
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/validate.uc"
+    },
+    {
+      "config_condition": "always under inspected install recipe",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "git_blob": "8e6250e5cdb165b7d4ad99531743e17bedc053c9",
+      "kind": "ucode_extension",
+      "proposed_installed_path": "lib/netifd/wireless-device.uc",
+      "sha256": "d3e106d2fbc288d0af36c95bb97b9eae77630c4972c927c8d67a68a8822fa754",
+      "source_path": "package/network/config/wifi-scripts/files/lib/netifd/wireless-device.uc"
+    },
+    {
+      "config_condition": "always under inspected install recipe",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "git_blob": "41f48848e48ece61ee29d7d9bef7df33541e039d",
+      "kind": "ucode_extension",
+      "proposed_installed_path": "lib/netifd/wireless.uc",
+      "sha256": "36888bcfbf04c8b35c30e10b3b186bc4295c1c5f3d7403779eedb51a450f557d",
+      "source_path": "package/network/config/wifi-scripts/files/lib/netifd/wireless.uc"
+    },
+    {
+      "config_condition": "always under inspected install recipe",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "git_blob": "c6c973040eb8c01f8fb8618337f9d1cf3cce4447",
+      "kind": "ucode_extension",
+      "proposed_installed_path": "lib/wifi/mac80211.uc",
+      "sha256": "36da7b5286c98b8e82433c3656e2c4f02e12648ba7cb75899ab5546702b2ec1c",
+      "source_path": "package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc"
+    },
+    {
+      "config_condition": "always under inspected install recipe",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "git_blob": "f801c4940c2b76947d34705e80305463b609768a",
+      "kind": "ucode_extension",
+      "proposed_installed_path": "usr/share/hostap/common.uc",
+      "sha256": "8f489d3c4fdde92b6dd027aadffc96880837664f3c2a1b1f6f3aeb9fdd484c0c",
+      "source_path": "package/network/config/wifi-scripts/files/usr/share/hostap/common.uc"
+    },
+    {
+      "config_condition": "always under inspected install recipe",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "git_blob": "a4f9bf7b8448cca2d04f17b8e4e098c7c9adda54",
+      "kind": "ucode_extension",
+      "proposed_installed_path": "usr/share/hostap/wdev.uc",
+      "sha256": "84e0de1089f253d65272f1c29254ec890b46576565b4a92fd48ecc2f9b5156d2",
+      "source_path": "package/network/config/wifi-scripts/files/usr/share/hostap/wdev.uc"
+    },
+    {
+      "config_condition": "always under inspected install recipe",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "git_blob": "db862d40c2a901a83c08d06ce937905a2248a22e",
+      "kind": "ucode_extension",
+      "proposed_installed_path": "usr/share/hostap/wifi-detect.uc",
+      "sha256": "1b21c13ef3e8df83575303c9b75609f22b3e359e66128abc43ebd369652270ab",
+      "source_path": "package/network/config/wifi-scripts/files/usr/share/hostap/wifi-detect.uc"
+    },
+    {
+      "config_condition": "always under inspected install recipe",
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "git_blob": "147c16205aa8dc64706bbdc17d3ae33edb20faca",
+      "kind": "ucode_extension",
+      "proposed_installed_path": "usr/share/ucode/wifi/utils.uc",
+      "sha256": "bffaaff3e9ad9962206fb15aec190cd0fc2747990392885d346e0f6b3f5d61af",
+      "source_path": "package/network/config/wifi-scripts/files/usr/share/ucode/wifi/utils.uc"
+    }
+  ],
+  "selected_count": 17,
+  "selection_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y for files-ucode/*; files/* always copied first",
+  "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+  "source_repo": "openwrt",
+  "status": "source-only next-slice oracle; not extracted or installed"
+}

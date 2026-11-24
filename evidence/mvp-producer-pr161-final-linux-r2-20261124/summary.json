@@ -1,0 +1,45 @@
+{
+  "schema": "mvp-producer-final-r2-summary-v1",
+  "run_id": 45498511187,
+  "run_conclusion": "success",
+  "pr_head": "b25bdd34f2dfb701f52f996702fd1a8830be048d",
+  "clean_synthetic_merge_checkout": "7aba3e7481d5419167c534b54663a050136bdb83",
+  "producer_dirty_before_run": false,
+  "codeql_version": "2.27.4",
+  "artifact_name": "direct-rpc-r2-45498511187-1",
+  "receipt_sha256": "89c02a5722a2bbf8512af9fac8d3b069b99aaaa356137734732ef40c181fdd44",
+  "preflight_sha256": "6978bf47a910b343dbf148254987f1880805c39f2443f495c10889a984d82017",
+  "source_oracle_sha256": "66d2323fefcaf85c1233cb2935fbae70aa4af3ba084bf45779d5347b6b580440",
+  "command_count": 116,
+  "nonzero_command_exits": 0,
+  "command_wall_seconds_sum": 272.884,
+  "max_reported_per_command_peak_rss_bytes": 532508672,
+  "default_suite_cases": {
+    "openvpn-parent": {
+      "successful_multiset": {"usr/share/rpcd/ucode/luci.openvpn.uc": 1},
+      "extraction_errors": 0,
+      "result_count": 1,
+      "result": {"rule_id": "ucode/m4/direct-rpc-shell-word", "uri": "usr/share/rpcd/ucode/luci.openvpn.uc", "start_line": 71, "start_column": 115, "end_column": 132}
+    },
+    "openvpn-fixed": {
+      "successful_multiset": {"usr/share/rpcd/ucode/luci.openvpn.uc": 1},
+      "extraction_errors": 0,
+      "result_count": 0
+    },
+    "luci-swconfig": {
+      "successful_multiset": {"usr/share/rpcd/ucode/luci": 1},
+      "extraction_errors": 0,
+      "result_count": 0
+    }
+  },
+  "tailscale_explicit_cases": {
+    "parent": {"candidate_count": 1, "location": ["usr/share/rpcd/ucode/tailscale.uc", 164, 3, 49]},
+    "fixed": {"candidate_count": 0},
+    "controls": {"candidate_count": 1, "location": ["usr/share/rpcd/ucode/nested_pos.uc", 18, 5, 51]}
+  },
+  "syntax_fixture_successful_multiset": {"plain.uc": 1, "markup.ut": 1},
+  "syntax_fixture_extraction_errors": 0,
+  "candidate_archive_sha256": "e60c8f7c1d126706fda3cff27d9b9e8985fc4664fb7746f069a3227ef6839676",
+  "candidate_artifact_kind": "ci-candidate",
+  "limit": "No versioned release, installed-byte scan, or downstream handoff."
+}

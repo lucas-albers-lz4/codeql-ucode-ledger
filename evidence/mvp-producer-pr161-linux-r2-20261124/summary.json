@@ -1,0 +1,777 @@
+{
+  "bundle": {
+    "archive_sha256": "e7df86f81c9056f70973ed376443941201c4f49dc4fba8f4d7bcbf50bf52dd82",
+    "artifact_kind": "ci-candidate",
+    "build": {
+      "built_extractor_sha256": "7d87a7592935aede30535e798da6dc35093226bedca77f1de3b7a72e42ba2faa",
+      "codeql_cli_linux_zip_sha256": "393bf92b66596141ec93baf9b483f4a350f3749916c922fed0dd63c67706047d",
+      "grammar_generated_files_sha256": "fe9d0b26123407a2934776628dc92b09c9ccc9c7c059b1495924bc4ad1737348",
+      "grammar_patch_sha256": "6520260dba0f72437603f6aa977bbd5c8dd59d2f54c7df6cd41a1e642ef41ad5",
+      "grammar_revision": "4a243af329fae2f4ff01e0fc80133cbab8314600"
+    },
+    "manifest_sha256": "577ef4f3483d2945bb9ba3eb2125a73aaf1d1ee4d770a629d0d81250ea682471",
+    "verification_status": "verified"
+  },
+  "ci_checkout_sha": "996a270beea379dbb6409e99d03336642dbcc043",
+  "codeql_version": "CodeQL command-line toolchain release 2.27.4.",
+  "command_count": 116,
+  "command_nonzero": [],
+  "command_wall_seconds_sum": 282.882,
+  "default_suite": {
+    "cases": {
+      "luci-swconfig": {
+        "extraction_errors": 0,
+        "route_sha256": "55124041be74adb8821bbedb1818c2fa315ca01ffccab43f87e61d163441f0dd",
+        "sarif": {
+          "result_count": 0,
+          "results": [],
+          "rule_ids": [
+            "ucode/m4/direct-rpc-shell-word"
+          ],
+          "sha256": "d8bdcd0794ff2078073c1fb6314ddf3d3ef947754559611a195f5296b005565b"
+        },
+        "selected": [
+          "usr/share/rpcd/ucode/luci"
+        ],
+        "source": {
+          "bytes": 16161,
+          "git_blob": "64caf75c08bc0fa54520a0ef262dfd6f339dc89e",
+          "revision": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+          "source_path": "modules/luci-base/root/usr/share/rpcd/ucode/luci",
+          "source_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+          "stage_path": "$RUN/stage/luci-swconfig/usr/share/rpcd/ucode/luci",
+          "stage_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e"
+        },
+        "successful_multiset": {
+          "usr/share/rpcd/ucode/luci": 1
+        }
+      },
+      "openvpn-fixed": {
+        "extraction_errors": 0,
+        "route_sha256": "f0a0afa719a714a96291e94b31084207317a9bc9885f03db1275bfdba4f21bb9",
+        "sarif": {
+          "result_count": 0,
+          "results": [],
+          "rule_ids": [
+            "ucode/m4/direct-rpc-shell-word"
+          ],
+          "sha256": "723a2a137c335d7f681cb414ee800312725013b0e70ea4e439a669593a7d9963"
+        },
+        "selected": [
+          "usr/share/rpcd/ucode/luci.openvpn.uc"
+        ],
+        "source": {
+          "bytes": 2910,
+          "git_blob": "eb3b418f855d24ae0a34d5d09a289b9342098129",
+          "revision": "e4ff45ecbc6ad212951815c8c99b2749fbd7de6b",
+          "source_path": "protocols/luci-proto-openvpn/root/usr/share/rpcd/ucode/luci.openvpn.uc",
+          "source_sha256": "6593792678951fd500c2b090d17d9e500a05a642cfb996ee02c1649473152410",
+          "stage_path": "$RUN/stage/openvpn-fixed/usr/share/rpcd/ucode/luci.openvpn.uc",
+          "stage_sha256": "6593792678951fd500c2b090d17d9e500a05a642cfb996ee02c1649473152410"
+        },
+        "successful_multiset": {
+          "usr/share/rpcd/ucode/luci.openvpn.uc": 1
+        }
+      },
+      "openvpn-parent": {
+        "extraction_errors": 0,
+        "route_sha256": "2c35bfcd703f657f0023dcb35f2ab112d17c9f3c107ee3efb72484bb9fa760da",
+        "sarif": {
+          "result_count": 1,
+          "results": [
+            {
+              "locations": [
+                {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "index": 0,
+                      "uri": "usr/share/rpcd/ucode/luci.openvpn.uc",
+                      "uriBaseId": "%SRCROOT%"
+                    },
+                    "region": {
+                      "endColumn": 132,
+                      "startColumn": 115,
+                      "startLine": 71
+                    }
+                  }
+                }
+              ],
+              "message": {
+                "text": "A returned call-handler argument is directly interpolated between literal whitespace into a command passed to imported fs.popen at line 77. Review registration and the full quote context."
+              },
+              "partialFingerprints": {
+                "primaryLocationLineHash": "6f8cf9687458a63e:1",
+                "primaryLocationStartColumnFingerprint": "110"
+              },
+              "rule": {
+                "id": "ucode/m4/direct-rpc-shell-word",
+                "index": 0
+              },
+              "ruleId": "ucode/m4/direct-rpc-shell-word",
+              "ruleIndex": 0
+            }
+          ],
+          "rule_ids": [
+            "ucode/m4/direct-rpc-shell-word"
+          ],
+          "sha256": "71d0483138e7e060cc0a3cd9b1516be54263489a62a6f3ec6a50df2cf9d84e21"
+        },
+        "selected": [
+          "usr/share/rpcd/ucode/luci.openvpn.uc"
+        ],
+        "source": {
+          "bytes": 2898,
+          "git_blob": "da389170328212f8f0a3b7bea42be11d42bd0c38",
+          "revision": "b45584b4e6068b9b096872dd02494a048d869c36",
+          "source_path": "protocols/luci-proto-openvpn/root/usr/share/rpcd/ucode/luci.openvpn.uc",
+          "source_sha256": "051c8162f826683333e11264615806df5ab08415676c0bd098921cb1b05af991",
+          "stage_path": "$RUN/stage/openvpn-parent/usr/share/rpcd/ucode/luci.openvpn.uc",
+          "stage_sha256": "051c8162f826683333e11264615806df5ab08415676c0bd098921cb1b05af991"
+        },
+        "successful_multiset": {
+          "usr/share/rpcd/ucode/luci.openvpn.uc": 1
+        }
+      }
+    },
+    "resolved_queries": [
+      "DirectRpcShellWord.ql",
+      "ExtractionErrors.ql",
+      "SuccessfullyExtractedFiles.ql"
+    ],
+    "resolved_suite_sha256": "30c92b4ecff032f3c7689152203cf4e70033588ecce7c1b493b0ae92f7ba9b53"
+  },
+  "direct_control_matrix": {
+    "extraction_errors": 0,
+    "manifest_sha256": "5ec2d74cb21732189a41558ec59671126310679c6725f802614ac3fa9c19caf0",
+    "observed_results": [
+      {
+        "endColumn": 55,
+        "endLine": 5,
+        "startColumn": 33,
+        "startLine": 5,
+        "uri": "usr/share/rpcd/ucode/different_field_pos.uc"
+      },
+      {
+        "endColumn": 46,
+        "endLine": 5,
+        "startColumn": 28,
+        "startLine": 5,
+        "uri": "usr/share/rpcd/ucode/direct_pos.uc"
+      },
+      {
+        "endColumn": 46,
+        "endLine": 5,
+        "startColumn": 31,
+        "startLine": 5,
+        "uri": "usr/share/rpcd/ucode/initialized_local_pos.uc"
+      },
+      {
+        "endColumn": 45,
+        "endLine": 5,
+        "startColumn": 28,
+        "startLine": 5,
+        "uri": "usr/share/rpcd/ucode/multi_substitution_quote_context.uc"
+      },
+      {
+        "endColumn": 77,
+        "endLine": 6,
+        "startColumn": 61,
+        "startLine": 6,
+        "uri": "usr/share/rpcd/ucode/quoted_first_raw_second.uc"
+      }
+    ],
+    "sarif_sha256": "d72328ab16bf5e48129963136989731509bad89c6c1188b79164b13d20b822e0",
+    "selected": [
+      "usr/share/rpcd/ucode/catch_formal_shadow.uc",
+      "usr/share/rpcd/ucode/catch_local_shadow.uc",
+      "usr/share/rpcd/ucode/constant_sink.uc",
+      "usr/share/rpcd/ucode/different_field_pos.uc",
+      "usr/share/rpcd/ucode/direct_pos.uc",
+      "usr/share/rpcd/ucode/exclusive_branches.uc",
+      "usr/share/rpcd/ucode/for_formal_shadow.uc",
+      "usr/share/rpcd/ucode/for_local_shadow.uc",
+      "usr/share/rpcd/ucode/function_formal_shadow.uc",
+      "usr/share/rpcd/ucode/function_local_shadow.uc",
+      "usr/share/rpcd/ucode/initialized_local_pos.uc",
+      "usr/share/rpcd/ucode/multi_substitution_quote_context.uc",
+      "usr/share/rpcd/ucode/nested_callable.uc",
+      "usr/share/rpcd/ucode/quoted_arg.uc",
+      "usr/share/rpcd/ucode/quoted_context.uc",
+      "usr/share/rpcd/ucode/quoted_first_raw_second.uc",
+      "usr/share/rpcd/ucode/reassigned_formal.uc",
+      "usr/share/rpcd/ucode/shadowed_local.uc",
+      "usr/share/rpcd/ucode/unimported_popen.uc",
+      "usr/share/rpcd/ucode/unregistered_object.uc",
+      "usr/share/rpcd/ucode/word_fragment.uc"
+    ],
+    "successful_multiset": {
+      "usr/share/rpcd/ucode/catch_formal_shadow.uc": 1,
+      "usr/share/rpcd/ucode/catch_local_shadow.uc": 1,
+      "usr/share/rpcd/ucode/constant_sink.uc": 1,
+      "usr/share/rpcd/ucode/different_field_pos.uc": 1,
+      "usr/share/rpcd/ucode/direct_pos.uc": 1,
+      "usr/share/rpcd/ucode/exclusive_branches.uc": 1,
+      "usr/share/rpcd/ucode/for_formal_shadow.uc": 1,
+      "usr/share/rpcd/ucode/for_local_shadow.uc": 1,
+      "usr/share/rpcd/ucode/function_formal_shadow.uc": 1,
+      "usr/share/rpcd/ucode/function_local_shadow.uc": 1,
+      "usr/share/rpcd/ucode/initialized_local_pos.uc": 1,
+      "usr/share/rpcd/ucode/multi_substitution_quote_context.uc": 1,
+      "usr/share/rpcd/ucode/nested_callable.uc": 1,
+      "usr/share/rpcd/ucode/quoted_arg.uc": 1,
+      "usr/share/rpcd/ucode/quoted_context.uc": 1,
+      "usr/share/rpcd/ucode/quoted_first_raw_second.uc": 1,
+      "usr/share/rpcd/ucode/reassigned_formal.uc": 1,
+      "usr/share/rpcd/ucode/shadowed_local.uc": 1,
+      "usr/share/rpcd/ucode/unimported_popen.uc": 1,
+      "usr/share/rpcd/ucode/unregistered_object.uc": 1,
+      "usr/share/rpcd/ucode/word_fragment.uc": 1
+    }
+  },
+  "grammar": {
+    "grammar_cli_sha256": "6de5f5c0f6d2e281ad2643d3874b66cf240fa77140c5346b670889483982b0c7",
+    "grammar_cli_version": "tree-sitter 0.27.1",
+    "grammar_generated_sha256": {
+      "ucode/src/grammar.json": "c59703860b908a0e8ee7a5241258182c5bd51593997bd3e141e3017971993f3b",
+      "ucode/src/node-types.json": "3c5a2ad8f83828495779f69ef650b37cf9f79a3a46c5f1354cf65bfe847ea5f3",
+      "ucode/src/parser.c": "6002d96df3aa22e2f2e5fd27d4a64a2bb4c0126f2f6aff4dc1197a65b70b9fae",
+      "ucode_markup/src/grammar.json": "476c5d98e35b7892c7be1433963071faf385e44c2b41ed93ed7cdb0cf8fc4838",
+      "ucode_markup/src/node-types.json": "5b55bc4968a9600ff4e2f40b3709eb20afebdb240b5bf111ab8c6970a54c098c",
+      "ucode_markup/src/parser.c": "1b2f6331daeef2232b8da2c0556f0ecd6566ecdb8d5cb865771558ae2c00916f"
+    },
+    "grammar_node_version": "v22.23.5",
+    "grammar_npm_lock_sha256": "57aad774d0d6cb3095d98986bf8425724347b475082604bfb1ab1d32eb7cae4f",
+    "grammar_npm_version": "10.9.9",
+    "grammar_patch_sha256": "6520260dba0f72437603f6aa977bbd5c8dd59d2f54c7df6cd41a1e642ef41ad5",
+    "grammar_revision": "4a243af329fae2f4ff01e0fc80133cbab8314600",
+    "language_model_generated_sha256": {
+      "ql/lib/codeql/ucode/ast/internal/TreeSitter.qll": "ea77ca72e96d493545798f5a83894f3e08e1df9f62f5928848692033b6182d4f",
+      "ql/lib/ucode.dbscheme": "d4a9ef5db2dd934c94ddf59141331ded3531d4ec79d86702d8f75afc361fc9fd"
+    }
+  },
+  "max_reported_peak_rss_bytes": 587087872,
+  "newer_grammar_syntax": {
+    "extraction_errors": 0,
+    "manifest_sha256": "cccd4b4e8f716c31e730f140d416e37bedfd8d0257af41c126613237704a556d",
+    "note": "exact projected typed AST locations; entity uniqueness is not inferred from CSV rows",
+    "observed_ast_rows": [
+      [
+        "markup-export",
+        "markup.ut",
+        3,
+        4
+      ],
+      [
+        "markup-import",
+        "markup.ut",
+        2,
+        18
+      ],
+      [
+        "plain-export",
+        "plain.uc",
+        4,
+        1
+      ],
+      [
+        "plain-export",
+        "plain.uc",
+        5,
+        1
+      ],
+      [
+        "plain-import",
+        "plain.uc",
+        2,
+        15
+      ]
+    ],
+    "query_sha256": "2a5faf46bb5d95c47553057bf5f576b23190bbf4c0b5d5791324f1ac5331a15a",
+    "route_sha256": "4a252ab2f696f3d64403015b353d95f4da10267ba9f1b0fa0e528eb7352c0794",
+    "selected": [
+      "markup.ut",
+      "plain.uc"
+    ],
+    "successful_multiset": {
+      "markup.ut": 1,
+      "plain.uc": 1
+    }
+  },
+  "path_normalization": "$RUN replaces the GitHub Actions run-scoped temporary directory; raw artifact hashes refer to unnormalized files.",
+  "platform": "GitHub Actions ubuntu-24.04 Linux R2 candidate; not versioned release or installed OpenWrt bytes",
+  "pr_base_sha": "9166af76cf6944e1b3ea5856a9176366a1f7a6ee",
+  "pr_head_sha": "d39b1e19eb3c9cb63b493f44f2be2e95d89c17f4",
+  "pr_number": 161,
+  "raw_artifact_location": "Downloaded GitHub Actions artifact direct-rpc-r2-45488088083-1 under ignored work/producer-grammar-pr161-r2-20261124; source run https://github.com/lucas-albers-lz4/codeql-ucode/actions/runs/45488088083",
+  "raw_artifacts_sha256": {
+    "commands.json": "52f22e48cfe66081eab12a28878a4d3bd72f4604ebd1ac047ccf100be2009a92",
+    "out/direct-controls/default-suite.sarif": "d72328ab16bf5e48129963136989731509bad89c6c1188b79164b13d20b822e0",
+    "out/luci-swconfig/default-suite.sarif": "d8bdcd0794ff2078073c1fb6314ddf3d3ef947754559611a195f5296b005565b",
+    "out/openvpn-fixed/default-suite.sarif": "723a2a137c335d7f681cb414ee800312725013b0e70ea4e439a669593a7d9963",
+    "out/openvpn-parent/default-suite.sarif": "71d0483138e7e060cc0a3cd9b1516be54263489a62a6f3ec6a50df2cf9d84e21",
+    "out/tailscale-controls/candidate.sarif": "fe065ec898f41c875672c3516fa7495b4b0ad55132db96b09fd4eeba1ed8ecfd",
+    "out/tailscale-fixed/candidate.sarif": "a44a00156f032eded42bee5e05c3c3b8dd6b98f076eb6cab63a025a7072a359c",
+    "out/tailscale-parent/candidate.sarif": "36704d0afacc52e2e05477f972a858aacdaf92ccf392ba48f8c120ecba106c74",
+    "preflight.json": "a60690bd4d3c4851a8c549b61e5da066ac1a41a10564baafd49f9d7f9a01bc14",
+    "receipt.json": "e6c7306d1e33bef014c5b3832a3cf7ab18d4560bd9689ed61c622b1a6c78e827",
+    "source-oracle.json": "66d2323fefcaf85c1233cb2935fbae70aa4af3ba084bf45779d5347b6b580440"
+  },
+  "run_attempt": 1,
+  "run_id": 45488088083,
+  "schema": "mvp-pr161-linux-r2-portable-summary-v1",
+  "source_oracle": {
+    "direct_controls": {
+      "expectations": {
+        "expected_results": [
+          {
+            "endColumn": 55,
+            "endLine": 5,
+            "startColumn": 33,
+            "startLine": 5,
+            "uri": "usr/share/rpcd/ucode/different_field_pos.uc"
+          },
+          {
+            "endColumn": 46,
+            "endLine": 5,
+            "startColumn": 28,
+            "startLine": 5,
+            "uri": "usr/share/rpcd/ucode/direct_pos.uc"
+          },
+          {
+            "endColumn": 46,
+            "endLine": 5,
+            "startColumn": 31,
+            "startLine": 5,
+            "uri": "usr/share/rpcd/ucode/initialized_local_pos.uc"
+          },
+          {
+            "endColumn": 45,
+            "endLine": 5,
+            "startColumn": 28,
+            "startLine": 5,
+            "uri": "usr/share/rpcd/ucode/multi_substitution_quote_context.uc"
+          },
+          {
+            "endColumn": 77,
+            "endLine": 6,
+            "startColumn": 61,
+            "startLine": 6,
+            "uri": "usr/share/rpcd/ucode/quoted_first_raw_second.uc"
+          }
+        ],
+        "files": [
+          {
+            "path": "usr/share/rpcd/ucode/catch_formal_shadow.uc",
+            "sha256": "3adee04376ebbddf70c6b746091d0fc2b820efde630e22cd6fab1b257c865fbe"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/catch_local_shadow.uc",
+            "sha256": "75aee861cc6a04f7c7a41cd87bc3f33ed518860fd1fb9a18f22d2c5b76861acf"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/constant_sink.uc",
+            "sha256": "435432d86baca2be2cf20c134ec255383b7cc4ae49ae9750737627279c4b7854"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/different_field_pos.uc",
+            "sha256": "c8834db1a5580a3198d5887c33b5a9721728a6509b87b06c9d50990c654f8996"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/direct_pos.uc",
+            "sha256": "d288103a16e64d54eee2990d9f032e4b194f5916266c181d5e3bc099da991562"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/exclusive_branches.uc",
+            "sha256": "ec3cf0e2ec18bab903d84bc4055d1e188afc685c86da1dfd11160dc2560e8f30"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/for_formal_shadow.uc",
+            "sha256": "aa2a8a2860d9530660b33ed57a923e16cedcbb1d3ad8920950cd73fe4fafbbe3"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/for_local_shadow.uc",
+            "sha256": "47d3169e804dbe0032f025e5d4624d10d04fc89dd0120fdd92fb5b35712f2221"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/function_formal_shadow.uc",
+            "sha256": "d961c9dfb9d330ead678087aa144c53351442e93998d001dc90a7a6bd080d82e"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/function_local_shadow.uc",
+            "sha256": "9628ff484c6cf83a143a62954e22809fe88febd1ede028adc10e373c5aaf2a90"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/initialized_local_pos.uc",
+            "sha256": "56a4800a8d5fc5e5d5fd2f530641e129b5b4645e1bd00f2290db7b8914580c1c"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/multi_substitution_quote_context.uc",
+            "sha256": "b6f92489e562cd742daee0a2162162e35129ef6a2bac98a30a8bc02b48bca474"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/nested_callable.uc",
+            "sha256": "752fae7ead4c425212b1e9310e0ecd766f3a67007539ffcf9829fba12ffcfa1f"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/quoted_arg.uc",
+            "sha256": "4d41c72dc4a2ed78c75e2cb201ceb00fd96976a3ad157360cb470ead4b35cbff"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/quoted_context.uc",
+            "sha256": "a92b848ed4b76f5eb5417fbf8b6625c66c0864aa83933dfbb3bd9e6a731f3c60"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/quoted_first_raw_second.uc",
+            "sha256": "33e3941022583feef1825b95a68d8370df7d5869e77f7776c360b3199940c160"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/reassigned_formal.uc",
+            "sha256": "62735eb45820f19a348eb996cffffb9e8f8db7383cee6e5ef3a90ed5bbfa5ab3"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/shadowed_local.uc",
+            "sha256": "c9306a8e43e78b35372afb4ff6beb13d1399870dbe8ced2d7b2818cc64ed8613"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/unimported_popen.uc",
+            "sha256": "486fcfbdc63f57f23b1ea8bcb6ae0a34188f792476555c60ea03418bf23ca94e"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/unregistered_object.uc",
+            "sha256": "5cda4f2a884d3095a96cf9f58ae2addc82a919ac9c0e590b295c67df497036d7"
+          },
+          {
+            "path": "usr/share/rpcd/ucode/word_fragment.uc",
+            "sha256": "6d830dade60f00926f0ea03b707e03f884bd64461e9101ba5ced6a51f15f9e53"
+          }
+        ],
+        "schema": "direct-rpc-shell-word-controls-v1",
+        "source": "Reviewed claim 080 source-first control matrix; SHA pins updated from current fixture bytes before Linux output"
+      },
+      "manifest_sha256": "5ec2d74cb21732189a41558ec59671126310679c6725f802614ac3fa9c19caf0"
+    },
+    "direct_rpc_cases": {
+      "luci-swconfig": {
+        "expected_location": null,
+        "expected_rule_count": 0,
+        "git_blob": "64caf75c08bc0fa54520a0ef262dfd6f339dc89e",
+        "path": "modules/luci-base/root/usr/share/rpcd/ucode/luci",
+        "revision": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+        "sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e"
+      },
+      "openvpn-fixed": {
+        "expected_location": null,
+        "expected_rule_count": 0,
+        "git_blob": "eb3b418f855d24ae0a34d5d09a289b9342098129",
+        "path": "protocols/luci-proto-openvpn/root/usr/share/rpcd/ucode/luci.openvpn.uc",
+        "revision": "e4ff45ecbc6ad212951815c8c99b2749fbd7de6b",
+        "sha256": "6593792678951fd500c2b090d17d9e500a05a642cfb996ee02c1649473152410"
+      },
+      "openvpn-parent": {
+        "expected_location": [
+          "usr/share/rpcd/ucode/luci.openvpn.uc",
+          71,
+          115,
+          132
+        ],
+        "expected_rule_count": 1,
+        "git_blob": "da389170328212f8f0a3b7bea42be11d42bd0c38",
+        "path": "protocols/luci-proto-openvpn/root/usr/share/rpcd/ucode/luci.openvpn.uc",
+        "revision": "b45584b4e6068b9b096872dd02494a048d869c36",
+        "sha256": "051c8162f826683333e11264615806df5ab08415676c0bd098921cb1b05af991"
+      }
+    },
+    "newer_grammar_syntax": {
+      "expectations": {
+        "files": [
+          {
+            "path": "plain.uc",
+            "route": "ucode_extension",
+            "sha256": "6702b745c6fb28296667a8420843fe9266c5a166619b8cc77c1c423a34cbecfb"
+          },
+          {
+            "path": "markup.ut",
+            "route": "ut_markup_extension",
+            "sha256": "86cfd6dfb6e496dc8d40f66ffffbbf3021ba3a58c7683c820623a75c3cd9e4b9"
+          }
+        ],
+        "rows": [
+          [
+            "plain-import",
+            "plain.uc",
+            2,
+            15
+          ],
+          [
+            "plain-export",
+            "plain.uc",
+            4,
+            1
+          ],
+          [
+            "plain-export",
+            "plain.uc",
+            5,
+            1
+          ],
+          [
+            "markup-import",
+            "markup.ut",
+            2,
+            18
+          ],
+          [
+            "markup-export",
+            "markup.ut",
+            3,
+            4
+          ]
+        ],
+        "schema": "newer-grammar-syntax-v1"
+      },
+      "manifest_sha256": "cccd4b4e8f716c31e730f140d416e37bedfd8d0257af41c126613237704a556d"
+    },
+    "tailscale_explicit_regression": {
+      "expectations": {
+        "exactly_one_successful_extraction_per_file": true,
+        "files": {
+          "controls/usr/share/rpcd/ucode/model_pos.uc": {
+            "candidate_sinks": [],
+            "role": "Direct baseline ShellInjection positive; outside this nested rule",
+            "sha256": "b406488ab29d7c63d4698896239afed0a55b584e8b892d9983567a646b3e67be"
+          },
+          "controls/usr/share/rpcd/ucode/nested_closure.uc": {
+            "candidate_sinks": [],
+            "role": "Push resides in nested function; excluded, no cross-function claim",
+            "sha256": "ddd8db07d721b4d8cb79c45995cb7662ea695c19f1b59983aa5e6ae2ad90153f"
+          },
+          "controls/usr/share/rpcd/ucode/nested_fixed.uc": {
+            "candidate_sinks": [],
+            "role": "Whole outer shell argument quoted; syntactic negative",
+            "sha256": "8723f5da9d9d12f14fba1dd6ca35f3540d906d5679b7a68edaa7a5a09f88bf0c"
+          },
+          "controls/usr/share/rpcd/ucode/nested_helper_constant.uc": {
+            "candidate_sinks": [],
+            "role": "Same helper name and call, helper body returns constant; negative",
+            "sha256": "54f212c0dbdba05f96cd8b390f9a882f727ffe487351de3bd472cf290fcebcb1"
+          },
+          "controls/usr/share/rpcd/ucode/nested_join_fallback_constant.uc": {
+            "candidate_sinks": [],
+            "role": "Constant-first OR command initializer, join is not the selected value; zero candidate",
+            "sha256": "3c8e686fd0cc4b0b890d1a6c226027b59c0bfecb2d2f03b9aeb740eb8b458310"
+          },
+          "controls/usr/share/rpcd/ucode/nested_near_miss.uc": {
+            "candidate_sinks": [],
+            "role": "Request read but only constant pushed; negative",
+            "sha256": "1d4abd74484a16973168aa3cf994540b0d462d01da48a86b5ecaf3e74bf44602"
+          },
+          "controls/usr/share/rpcd/ucode/nested_pos.uc": {
+            "candidate_sinks": [
+              "18:5-50"
+            ],
+            "role": "Nested vulnerable-form positive",
+            "sha256": "f410af3bbbea20098e78e863c56967bf90af94f908c26f771c2f89c1cdb50592"
+          },
+          "controls/usr/share/rpcd/ucode/nested_push_fallback_constant.uc": {
+            "candidate_sinks": [],
+            "role": "Constant-first OR push argument, quote call is not the selected value; zero candidate",
+            "sha256": "9ce453d8c77bea019f2c05fb8c8b478d49813f130bd5a2b7b7ee5a771de164f9"
+          },
+          "controls/usr/share/rpcd/ucode/nested_reassigned.uc": {
+            "candidate_sinks": [],
+            "role": "Derived local overwritten with constant before push; conservative negative",
+            "sha256": "d000925cbbdee53535652c91413c81c9829e230349dfef0707b0fd911187ae62"
+          },
+          "controls/usr/share/rpcd/ucode/nested_shadow.uc": {
+            "candidate_sinks": [],
+            "role": "Nested declaration shadows same name; conservative exclusion even though outer flow remains",
+            "sha256": "220edda6f27c547b04916b509b79c0c27170d001d0b1eb5a59269bcb31091a22"
+          },
+          "controls/usr/share/rpcd/ucode/nested_trim_fallback_constant.uc": {
+            "candidate_sinks": [],
+            "role": "Constant-first OR initializer, trim read is not the selected value; zero candidate",
+            "sha256": "a9d47da924e1fb718f4b1a1861ebd9198a875f7134a725501fdb6dcac92c1592"
+          },
+          "fixed/usr/share/rpcd/ucode/tailscale.uc": {
+            "candidate_sinks": [],
+            "field_witnesses": [],
+            "sha256": "12bffca1f06aae14363f12d98680c0ca3a07223babd26131cc7c1612baf8fc4e"
+          },
+          "parent/usr/share/rpcd/ucode/tailscale.uc": {
+            "candidate_sinks": [
+              "164:3-48"
+            ],
+            "field_witnesses": [
+              "loginserver",
+              "loginserver_authkey"
+            ],
+            "sha256": "3029c32d7ccd18efb95355aa915841e2bf467b0de147ce1a65b68c55fec9d280"
+          }
+        },
+        "historical_fix": "507ab5e45c304543d4111af9a331db0f03be6bcb",
+        "historical_parent": "46cd82328dfb7fbb15961c63f9e674a41cef2500",
+        "producer_pin": "18afe771568d373088edee7a790825ee46dec9e0",
+        "status": "source-first expectations before supplemental CodeQL control run",
+        "zero_extraction_errors": true
+      },
+      "manifest_sha256": "b1a538d03d60e356ae94cf374a2bfdc9338d81068b9e0a7233ac3bcbf89ac114"
+    }
+  },
+  "source_oracle_sha256": "66d2323fefcaf85c1233cb2935fbae70aa4af3ba084bf45779d5347b6b580440",
+  "tailscale_explicit_regression": {
+    "cases": {
+      "controls": {
+        "candidate_count": 1,
+        "expected_candidate_locations": [
+          [
+            "usr/share/rpcd/ucode/nested_pos.uc",
+            18,
+            5,
+            51
+          ]
+        ],
+        "files": [
+          {
+            "git_blob": null,
+            "manifest_path": "controls/usr/share/rpcd/ucode/model_pos.uc",
+            "sha256": "b406488ab29d7c63d4698896239afed0a55b584e8b892d9983567a646b3e67be",
+            "stage_path": "$RUN/stage/tailscale/controls/usr/share/rpcd/ucode/model_pos.uc"
+          },
+          {
+            "git_blob": null,
+            "manifest_path": "controls/usr/share/rpcd/ucode/nested_closure.uc",
+            "sha256": "ddd8db07d721b4d8cb79c45995cb7662ea695c19f1b59983aa5e6ae2ad90153f",
+            "stage_path": "$RUN/stage/tailscale/controls/usr/share/rpcd/ucode/nested_closure.uc"
+          },
+          {
+            "git_blob": null,
+            "manifest_path": "controls/usr/share/rpcd/ucode/nested_fixed.uc",
+            "sha256": "8723f5da9d9d12f14fba1dd6ca35f3540d906d5679b7a68edaa7a5a09f88bf0c",
+            "stage_path": "$RUN/stage/tailscale/controls/usr/share/rpcd/ucode/nested_fixed.uc"
+          },
+          {
+            "git_blob": null,
+            "manifest_path": "controls/usr/share/rpcd/ucode/nested_helper_constant.uc",
+            "sha256": "54f212c0dbdba05f96cd8b390f9a882f727ffe487351de3bd472cf290fcebcb1",
+            "stage_path": "$RUN/stage/tailscale/controls/usr/share/rpcd/ucode/nested_helper_constant.uc"
+          },
+          {
+            "git_blob": null,
+            "manifest_path": "controls/usr/share/rpcd/ucode/nested_near_miss.uc",
+            "sha256": "1d4abd74484a16973168aa3cf994540b0d462d01da48a86b5ecaf3e74bf44602",
+            "stage_path": "$RUN/stage/tailscale/controls/usr/share/rpcd/ucode/nested_near_miss.uc"
+          },
+          {
+            "git_blob": null,
+            "manifest_path": "controls/usr/share/rpcd/ucode/nested_pos.uc",
+            "sha256": "f410af3bbbea20098e78e863c56967bf90af94f908c26f771c2f89c1cdb50592",
+            "stage_path": "$RUN/stage/tailscale/controls/usr/share/rpcd/ucode/nested_pos.uc"
+          },
+          {
+            "git_blob": null,
+            "manifest_path": "controls/usr/share/rpcd/ucode/nested_reassigned.uc",
+            "sha256": "d000925cbbdee53535652c91413c81c9829e230349dfef0707b0fd911187ae62",
+            "stage_path": "$RUN/stage/tailscale/controls/usr/share/rpcd/ucode/nested_reassigned.uc"
+          },
+          {
+            "git_blob": null,
+            "manifest_path": "controls/usr/share/rpcd/ucode/nested_shadow.uc",
+            "sha256": "220edda6f27c547b04916b509b79c0c27170d001d0b1eb5a59269bcb31091a22",
+            "stage_path": "$RUN/stage/tailscale/controls/usr/share/rpcd/ucode/nested_shadow.uc"
+          },
+          {
+            "git_blob": null,
+            "manifest_path": "controls/usr/share/rpcd/ucode/nested_trim_fallback_constant.uc",
+            "sha256": "a9d47da924e1fb718f4b1a1861ebd9198a875f7134a725501fdb6dcac92c1592",
+            "stage_path": "$RUN/stage/tailscale/controls/usr/share/rpcd/ucode/nested_trim_fallback_constant.uc"
+          },
+          {
+            "git_blob": null,
+            "manifest_path": "controls/usr/share/rpcd/ucode/nested_push_fallback_constant.uc",
+            "sha256": "9ce453d8c77bea019f2c05fb8c8b478d49813f130bd5a2b7b7ee5a771de164f9",
+            "stage_path": "$RUN/stage/tailscale/controls/usr/share/rpcd/ucode/nested_push_fallback_constant.uc"
+          },
+          {
+            "git_blob": null,
+            "manifest_path": "controls/usr/share/rpcd/ucode/nested_join_fallback_constant.uc",
+            "sha256": "3c8e686fd0cc4b0b890d1a6c226027b59c0bfecb2d2f03b9aeb740eb8b458310",
+            "stage_path": "$RUN/stage/tailscale/controls/usr/share/rpcd/ucode/nested_join_fallback_constant.uc"
+          }
+        ],
+        "observed_candidate_locations": [
+          [
+            "usr/share/rpcd/ucode/nested_pos.uc",
+            18,
+            5,
+            51
+          ]
+        ],
+        "sarif_sha256": "fe065ec898f41c875672c3516fa7495b4b0ad55132db96b09fd4eeba1ed8ecfd",
+        "selected": [
+          "usr/share/rpcd/ucode/model_pos.uc",
+          "usr/share/rpcd/ucode/nested_closure.uc",
+          "usr/share/rpcd/ucode/nested_fixed.uc",
+          "usr/share/rpcd/ucode/nested_helper_constant.uc",
+          "usr/share/rpcd/ucode/nested_join_fallback_constant.uc",
+          "usr/share/rpcd/ucode/nested_near_miss.uc",
+          "usr/share/rpcd/ucode/nested_pos.uc",
+          "usr/share/rpcd/ucode/nested_push_fallback_constant.uc",
+          "usr/share/rpcd/ucode/nested_reassigned.uc",
+          "usr/share/rpcd/ucode/nested_shadow.uc",
+          "usr/share/rpcd/ucode/nested_trim_fallback_constant.uc"
+        ]
+      },
+      "fixed": {
+        "candidate_count": 0,
+        "expected_candidate_locations": [],
+        "files": [
+          {
+            "git_blob": "b7bf94b0baff7817dad2a010b04e1ba293d59733",
+            "manifest_path": "fixed/usr/share/rpcd/ucode/tailscale.uc",
+            "sha256": "12bffca1f06aae14363f12d98680c0ca3a07223babd26131cc7c1612baf8fc4e",
+            "stage_path": "$RUN/stage/tailscale/fixed/usr/share/rpcd/ucode/tailscale.uc"
+          }
+        ],
+        "observed_candidate_locations": [],
+        "sarif_sha256": "a44a00156f032eded42bee5e05c3c3b8dd6b98f076eb6cab63a025a7072a359c",
+        "selected": [
+          "usr/share/rpcd/ucode/tailscale.uc"
+        ]
+      },
+      "parent": {
+        "candidate_count": 1,
+        "expected_candidate_locations": [
+          [
+            "usr/share/rpcd/ucode/tailscale.uc",
+            164,
+            3,
+            49
+          ]
+        ],
+        "files": [
+          {
+            "git_blob": "8e2b7aa56a0b37c0cf392fc4c182d6ae1167e858",
+            "manifest_path": "parent/usr/share/rpcd/ucode/tailscale.uc",
+            "sha256": "3029c32d7ccd18efb95355aa915841e2bf467b0de147ce1a65b68c55fec9d280",
+            "stage_path": "$RUN/stage/tailscale/parent/usr/share/rpcd/ucode/tailscale.uc"
+          }
+        ],
+        "observed_candidate_locations": [
+          [
+            "usr/share/rpcd/ucode/tailscale.uc",
+            164,
+            3,
+            49
+          ]
+        ],
+        "sarif_sha256": "36704d0afacc52e2e05477f972a858aacdaf92ccf392ba48f8c120ecba106c74",
+        "selected": [
+          "usr/share/rpcd/ucode/tailscale.uc"
+        ]
+      }
+    },
+    "explicit_testing_query": "TailscaleNestedShell.ql",
+    "manifest_sha256": "b1a538d03d60e356ae94cf374a2bfdc9338d81068b9e0a7233ac3bcbf89ac114",
+    "separate_from_default_suite": true
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema": "mvp-incoming-poller-preflight-v1",
+  "date_utc": "2026-11-24",
+  "status": "partial-failed-probes-only",
+  "python_version": "3.15.2",
+  "checkout_dirty_before_probes": false,
+  "runs": [
+    {
+      "run": "incoming-live-20261124-2312",
+      "poller_commit": "9f1172ede0b1d8d9a36fd01117a5155f08bad907",
+      "failure_sha256": "322ab466e05c57c9e68abf9b6c79709bc3abdb4b40d233fda472d3071ef9e67b",
+      "failure_bytes": 12184435,
+      "error": "API response exceeds byte limit",
+      "successful_requests": 8,
+      "last_successful_path": "/repos/openwrt/openwrt/pulls?state=open&per_page=100&page=5"
+    },
+    {
+      "run": "incoming-live-20261124-2315",
+      "poller_commit": "cfdc277ab1170aabf1446d67afc5cbfb0ab88364",
+      "failure_sha256": "de8bc4c4ab2c2e76a057a923ed66b212b384a4647497a3de3f0176e2e4cdf093",
+      "failure_bytes": 6168222,
+      "error": "HTTP 401",
+      "successful_requests": 13,
+      "last_successful_path": "/repos/openwrt/openwrt/pulls?state=open&per_page=25&page=10"
+    },
+    {
+      "run": "incoming-live-20261124-2318",
+      "poller_commit": "cfdc277ab1170aabf1446d67afc5cbfb0ab88364",
+      "failure_sha256": "4ec4e383c10c90356b0c67dacf579d7502133354da2107602715244f25e8a0df",
+      "failure_bytes": 596597,
+      "error": "HTTP 401",
+      "successful_requests": 4,
+      "last_successful_path": "/repos/openwrt/openwrt/pulls?state=open&per_page=25&page=1"
+    },
+    {
+      "run": "incoming-live-20261124-2320",
+      "poller_commit": "74ed270cd704a1b637be92fe60bf29d9f2d44c31",
+      "failure_sha256": "0ab98cdbed0e551d5046bc36a23214dcc6264daca07768bf9f832ecb5746f02d",
+      "failure_bytes": 15533369,
+      "error": "request history exceeds byte limit",
+      "successful_requests": 28,
+      "last_successful_path": "/repos/openwrt/openwrt/pulls?state=open&per_page=25&page=25"
+    },
+    {
+      "run": "incoming-live-20261124-2325",
+      "poller_commit": "002500b5c0bf144df44d12bd1f0d36c6f7bb6ee7",
+      "failure_sha256": "b9065a3911149a6eb5a8312f846efffe91b95bd1852d7ddf52e7fd1f79a9a668",
+      "failure_bytes": 31913577,
+      "error": "HTTP 504",
+      "successful_requests": 55,
+      "last_successful_path": "/repos/openwrt/openwrt/pulls?state=open&per_page=25&page=52",
+      "failed_path": "/repos/openwrt/openwrt/pulls?state=open&per_page=25&page=53",
+      "github_request_id": "C954:127FD1:658DF2:13FD191:6B061BF4"
+    },
+    {
+      "run": "incoming-live-20261124-2330",
+      "poller_commit": "2d16d41a0c5915359c0414d7a103082611ad42e6",
+      "failure_sha256": "0c4cc4b9adf424131052f169dab9151312172ae804c65c9d0f8b8d79a8e5baba",
+      "failure_bytes": 39962925,
+      "error": "invalid cross-repository head",
+      "successful_requests": 70,
+      "last_successful_path": "/repos/openwrt/openwrt/pulls?state=open&per_page=25&page=67",
+      "openwrt_pr_pages": 67,
+      "openwrt_pr_rows": 1651,
+      "example_mismatch_pr": 24444
+    }
+  ],
+  "result_identity": "No complete checkpoint or discovered-event decision record was produced."
+}

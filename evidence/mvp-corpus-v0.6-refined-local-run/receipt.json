@@ -1,0 +1,334 @@
+{
+  "bootstrap_commands": [],
+  "commands": [
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "init",
+        "$RUN/db/current",
+        "--language=ucode",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--source-root=$RUN/stage"
+      ],
+      "exit": 0,
+      "label": "database-init",
+      "memory_note": "Peak RSS unavailable in this sandbox; no estimate substituted",
+      "peak_rss_bytes": null,
+      "stderr": "out/database-init.stderr",
+      "stdout": "out/database-init.stdout",
+      "timing_method": "Python time.monotonic",
+      "wall_seconds": 0.465
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "index-files",
+        "--language=ucode",
+        "--include=**/*",
+        "--working-dir=$RUN/stage",
+        "$RUN/db/current",
+        "--common-caches=$RUN/cache/common",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "label": "index-files",
+      "memory_note": "Peak RSS unavailable in this sandbox; no estimate substituted",
+      "peak_rss_bytes": null,
+      "stderr": "out/index-files.stderr",
+      "stdout": "out/index-files.stdout",
+      "timing_method": "Python time.monotonic",
+      "wall_seconds": 1.24
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "finalize",
+        "$RUN/db/current",
+        "--common-caches=$RUN/cache/common"
+      ],
+      "exit": 0,
+      "label": "database-finalize",
+      "memory_note": "Peak RSS unavailable in this sandbox; no estimate substituted",
+      "peak_rss_bytes": null,
+      "stderr": "out/database-finalize.stderr",
+      "stdout": "out/database-finalize.stdout",
+      "timing_method": "Python time.monotonic",
+      "wall_seconds": 1.778
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db/current",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/success.bqrs"
+      ],
+      "exit": 0,
+      "label": "success-query",
+      "memory_note": "Peak RSS unavailable in this sandbox; no estimate substituted",
+      "peak_rss_bytes": null,
+      "stderr": "out/success-query.stderr",
+      "stdout": "out/success-query.stdout",
+      "timing_method": "Python time.monotonic",
+      "wall_seconds": 1.422
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/success.bqrs"
+      ],
+      "exit": 0,
+      "label": "success-decode",
+      "memory_note": "Peak RSS unavailable in this sandbox; no estimate substituted",
+      "peak_rss_bytes": null,
+      "stderr": "out/success-decode.stderr",
+      "stdout": "out/success-decode.stdout",
+      "timing_method": "Python time.monotonic",
+      "wall_seconds": 0.213
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db/current",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/errors.bqrs"
+      ],
+      "exit": 0,
+      "label": "errors-query",
+      "memory_note": "Peak RSS unavailable in this sandbox; no estimate substituted",
+      "peak_rss_bytes": null,
+      "stderr": "out/errors-query.stderr",
+      "stdout": "out/errors-query.stdout",
+      "timing_method": "Python time.monotonic",
+      "wall_seconds": 1.416
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/errors.bqrs"
+      ],
+      "exit": 0,
+      "label": "errors-decode",
+      "memory_note": "Peak RSS unavailable in this sandbox; no estimate substituted",
+      "peak_rss_bytes": null,
+      "stderr": "out/errors-decode.stderr",
+      "stdout": "out/errors-decode.stdout",
+      "timing_method": "Python time.monotonic",
+      "wall_seconds": 0.208
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "resolve",
+        "queries",
+        "$RUN/producer/ql/src/codeql-suites/code-scanning.qls",
+        "--format=json",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common"
+      ],
+      "exit": 0,
+      "label": "resolve-suite",
+      "memory_note": "Peak RSS unavailable in this sandbox; no estimate substituted",
+      "peak_rss_bytes": null,
+      "stderr": "out/resolve-suite.stderr",
+      "stdout": "out/resolve-suite.stdout",
+      "timing_method": "Python time.monotonic",
+      "wall_seconds": 0.35
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "analyze",
+        "$RUN/db/current",
+        "$RUN/producer/ql/src/codeql-suites/code-scanning.qls",
+        "--format=sarifv2.1.0",
+        "--output=$RUN/out/default-suite.sarif",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "label": "default-suite-analyze",
+      "memory_note": "Peak RSS unavailable in this sandbox; no estimate substituted",
+      "peak_rss_bytes": null,
+      "stderr": "out/default-suite-analyze.stderr",
+      "stdout": "out/default-suite-analyze.stdout",
+      "timing_method": "Python time.monotonic",
+      "wall_seconds": 10.981
+    }
+  ],
+  "normalization": "Run path=$RUN, disposable producer path=$PRODUCER, CodeQL executable=$CODEQL; raw artifacts remain under ignored work/.",
+  "portable_exact_identities_sha256": "0e21b1bfb16e7006d7b255eff3e08f6da40178d68cc9b171f6d6f522be0dee23",
+  "preflight": {
+    "codeql_executable_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+    "controls_sha256": "cb6bc3beb59a21e83c9c906ec2d77019b04513d8f93f467f502485259c625c93",
+    "cpu_count": 10,
+    "dependency_packages_tree_sha256": "44c25ffd5e2a4b39bd6c9514bebd49ae571269a8f902c6b4f055f5d81eed5892",
+    "free_disk_bytes": 119988867072,
+    "installed_bytes_verified": false,
+    "lock_sha256": {
+      "Cargo.lock": "20678c3cbb29632a9369bdb3c735af9ee63c9443879db38847fbda9813aa0a77",
+      "ql/lib/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+      "ql/src/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3"
+    },
+    "manifest_sha256": "9c004ed477665f6567a071eac45051445c61019af927bfa4e51bae4c50ebd490",
+    "memory_free_percentage": 53,
+    "pack_tree_sha256": "04e645e41e4f7ca0c835168169ec010e9bc16aa70f1bcd35453d5ff6a78f68e2",
+    "pins": {
+      "luci": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+      "openwrt": "bce40f6a15c273778061e8fceced7b9e0f58d99b",
+      "packages": "07e0d16305d2b5903b37ad7913e33e18795f81a4"
+    },
+    "producer_dirty": true,
+    "producer_dirty_paths": [
+      " M .github/workflows/direct-rpc-release-gate.yml",
+      " M .github/workflows/publish-linux-release.yml",
+      " M patches/README.md",
+      " M ql/lib/codeql/ucode/ast/internal/TreeSitter.qll",
+      " M ql/lib/ucode.dbscheme",
+      " M scripts/clone-grammar.sh",
+      " M scripts/direct-rpc-release-gate.py",
+      " M scripts/package-linux-release.py",
+      " M scripts/test-package-linux-release.py",
+      " M scripts/verify-linux-release-bundle.py",
+      " M tests/test_clone_grammar.py",
+      "?? patches/0005-newer-wifi-ucode-grammar.patch",
+      "?? ql/test/newer-grammar-syntax/"
+    ],
+    "producer_sha": "9166af76cf6944e1b3ea5856a9176366a1f7a6ee",
+    "refined_producer": {
+      "base_commit": "9166af76cf6944e1b3ea5856a9176366a1f7a6ee",
+      "built_extractor_sha256": "6ed90de2e6b352daa939ad1d0c627f847383307f212168ad11d9dd06f4faf15b",
+      "dirty_patch_sha256": "dc416f32e9a41f187ffe955b18a5a0fd8ef52c833817dc42992cae99ac6128f4",
+      "generated_dbscheme_sha256": "d4a9ef5db2dd934c94ddf59141331ded3531d4ec79d86702d8f75afc361fc9fd",
+      "generated_treesitter_qll_sha256": "ea77ca72e96d493545798f5a83894f3e08e1df9f62f5928848692033b6182d4f",
+      "grammar_patch_sha256": "49cd041dbe78498694467dd5c2725554a0b4a3b620e2c2c69f924bea76128b85",
+      "note": "local macOS refined producer integration; not merged/released or Linux"
+    },
+    "scope": "local source-staged 128-file corpus; not installed bytes or Linux",
+    "selected_count": 128,
+    "source_oracle_sha256": "c30bbd8108c44519b8f63f0861d14dbbb5ef8f533f09a20b79942181ec360c64",
+    "status": "passed before database init; no query output inspected"
+  },
+  "producer_provenance": {
+    "base_sha": "9166af76cf6944e1b3ea5856a9176366a1f7a6ee",
+    "dirty_status": [
+      " M .github/workflows/direct-rpc-release-gate.yml",
+      " M .github/workflows/publish-linux-release.yml",
+      " M patches/README.md",
+      " M ql/lib/codeql/ucode/ast/internal/TreeSitter.qll",
+      " M ql/lib/ucode.dbscheme",
+      " M scripts/clone-grammar.sh",
+      " M scripts/direct-rpc-release-gate.py",
+      " M scripts/package-linux-release.py",
+      " M scripts/test-package-linux-release.py",
+      " M scripts/verify-linux-release-bundle.py",
+      " M tests/test_clone_grammar.py",
+      "?? patches/0005-newer-wifi-ucode-grammar.patch",
+      "?? ql/test/newer-grammar-syntax/"
+    ],
+    "extractor_sha256": "6ed90de2e6b352daa939ad1d0c627f847383307f212168ad11d9dd06f4faf15b",
+    "generated_dbscheme_sha256": "d4a9ef5db2dd934c94ddf59141331ded3531d4ec79d86702d8f75afc361fc9fd",
+    "generated_treesitter_qll_sha256": "ea77ca72e96d493545798f5a83894f3e08e1df9f62f5928848692033b6182d4f",
+    "grammar_patch_sha256": "49cd041dbe78498694467dd5c2725554a0b4a3b620e2c2c69f924bea76128b85",
+    "pack_tree_sha256": "04e645e41e4f7ca0c835168169ec010e9bc16aa70f1bcd35453d5ff6a78f68e2",
+    "tracked_diff_sha256": "dc416f32e9a41f187ffe955b18a5a0fd8ef52c833817dc42992cae99ac6128f4",
+    "untracked_file_sha256": {
+      "patches/0005-newer-wifi-ucode-grammar.patch": "49cd041dbe78498694467dd5c2725554a0b4a3b620e2c2c69f924bea76128b85",
+      "ql/test/newer-grammar-syntax/SyntaxShape.ql": "2a5faf46bb5d95c47553057bf5f576b23190bbf4c0b5d5791324f1ac5331a15a",
+      "ql/test/newer-grammar-syntax/expected.json": "cccd4b4e8f716c31e730f140d416e37bedfd8d0257af41c126613237704a556d",
+      "ql/test/newer-grammar-syntax/markup.ut": "86cfd6dfb6e496dc8d40f66ffffbbf3021ba3a58c7683c820623a75c3cd9e4b9",
+      "ql/test/newer-grammar-syntax/plain.uc": "6702b745c6fb28296667a8420843fe9266c5a166619b8cc77c1c423a34cbecfb"
+    }
+  },
+  "raw_sha256": {
+    "commands.json": "5bcd1203520557879e7aa1f3342930b21fa6dae13194601a297ece5e45e94534",
+    "out/default-suite.sarif": "aa85a64369421e626a71e11cdeb5a1edd2b5bc95c71fad8b987299d0ad7957ac",
+    "out/errors.csv": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+    "out/routing.json": "473b405817e27da408c0f070c3c60a5f9105e82d223ad686285b05e68b211745",
+    "out/success.csv": "023fea9e5351fb6b51c95613e4ecbd1b93d6e213293da98584b09e0fa5f90fab",
+    "preflight.json": "f53bcfd4ad49045d4cbe16b2196373b660aee19cf4fb14c2235803863c777485",
+    "producer-dirty.patch": "dc416f32e9a41f187ffe955b18a5a0fd8ef52c833817dc42992cae99ac6128f4",
+    "producer-provenance.json": "8e63c5a30522f2711c65819cfb2465d11afd090ebae4367af82d2210caea4cd6",
+    "receipt.json": "96c1403e3bff8d488b410615d13ae07c6954a0d11f3bf57a5e3a943c6fcbdfe3"
+  },
+  "summary": {
+    "controls_sha256": "cb6bc3beb59a21e83c9c906ec2d77019b04513d8f93f467f502485259c625c93",
+    "diagnostic_csv_sha256": {
+      "errors": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+      "success": "023fea9e5351fb6b51c95613e4ecbd1b93d6e213293da98584b09e0fa5f90fab"
+    },
+    "extraction_error_count": 0,
+    "installed_bytes_verified": false,
+    "linux_run": false,
+    "manifest_sha256": "9c004ed477665f6567a071eac45051445c61019af927bfa4e51bae4c50ebd490",
+    "pins": {
+      "luci": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+      "openwrt": "bce40f6a15c273778061e8fceced7b9e0f58d99b",
+      "packages": "07e0d16305d2b5903b37ad7913e33e18795f81a4"
+    },
+    "producer_platform_scope": "local macOS arm64 refined producer; not Linux or installed package bytes",
+    "producer_sha": "9166af76cf6944e1b3ea5856a9176366a1f7a6ee",
+    "resolved_suite": [
+      "DirectRpcShellWord.ql",
+      "ExtractionErrors.ql",
+      "SuccessfullyExtractedFiles.ql"
+    ],
+    "routing_counts": {
+      "duplicate_input_count": 0,
+      "excluded_count": 0,
+      "input_count": 128,
+      "markup_count": 35,
+      "markup_inconclusive_count": 35,
+      "plain_count": 93,
+      "uncertain_count": 0
+    },
+    "routing_json_sha256": "473b405817e27da408c0f070c3c60a5f9105e82d223ad686285b05e68b211745",
+    "sarif_result_count": 0,
+    "sarif_results": [],
+    "sarif_rule_ids": [
+      "ucode/m4/direct-rpc-shell-word"
+    ],
+    "sarif_sha256": "aa85a64369421e626a71e11cdeb5a1edd2b5bc95c71fad8b987299d0ad7957ac",
+    "selected_count": 128,
+    "source_and_staging_rechecked": true,
+    "source_oracle_sha256": "c30bbd8108c44519b8f63f0861d14dbbb5ef8f533f09a20b79942181ec360c64",
+    "status": "fresh local source-staged v0.6 run",
+    "successful_count": 128,
+    "suite_query_ids": {
+      "diagnostics/ExtractionErrors.ql": "ucode/diagnostics/extraction-errors",
+      "diagnostics/SuccessfullyExtractedFiles.ql": "ucode/diagnostics/successfully-extracted-files",
+      "m4/DirectRpcShellWord.ql": "ucode/m4/direct-rpc-shell-word"
+    }
+  }
+}

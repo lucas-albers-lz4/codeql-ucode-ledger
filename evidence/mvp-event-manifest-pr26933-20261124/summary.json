@@ -1,0 +1,69 @@
+{
+  "consumer_checkout": {
+    "dirty_paths": [
+      "M .github/workflows/incoming-event-preflight.yml",
+      " M docs/event-corpus-manifest.md",
+      " M tools/event_corpus_manifest.py",
+      " M tools/test_event_corpus_manifest.py"
+    ],
+    "head": "41734244deff61582d86d74bd34d92ac580aea1d"
+  },
+  "counts": {
+    "excluded": 13,
+    "repo_selected": {
+      "luci": 65,
+      "openwrt": 51,
+      "packages": 12
+    },
+    "route_classes": {
+      "markup": 35,
+      "plain": 93
+    },
+    "selected": 128
+  },
+  "event": {
+    "base_commit": "727d8d2f8e5b19a2121e2cf05824e9e5cac35310",
+    "candidate_inventory_sha256": "9507c1949394f0637d03af8126c525a4ccdbedfe356a848fc8a336468cdedacc",
+    "head_commit": "bce40f6a15c273778061e8fceced7b9e0f58d99b",
+    "head_tree": "aad77be60ad2931cfc99f6eb49afd7d72843325e",
+    "identity_receipt_sha256": "0482ee4cb4cf200576cae5817fee71a59d2e28f8b9c37fdb69644242a020d917",
+    "policy_sha256": "9c004ed477665f6567a071eac45051445c61019af927bfa4e51bae4c50ebd490",
+    "pr_number": 26933,
+    "repository": "openwrt",
+    "route_oracle_basis": {
+      "extractor_source_sha256": "bc54d2fc6e4dfba095977053d92275c3474bb01ff7e6da7c5301002bde701a11",
+      "producer_pr_head": "d39b1e19eb3c9cb63b493f44f2be2e95d89c17f4",
+      "release_equivalence_verified": false
+    },
+    "route_oracle_script_sha256": "d543072110cb39d59ae06b670801b6d5fe6d3151e67b8f2f9191f068acea1ad7"
+  },
+  "input_sha256": {
+    "event.json": "53b1a7c37a9754df9b2ef9687ed39ef11bc63ae0ffee7ca7ee97364a62128702",
+    "inventory.json": "9507c1949394f0637d03af8126c525a4ccdbedfe356a848fc8a336468cdedacc",
+    "receipt.json": "0482ee4cb4cf200576cae5817fee71a59d2e28f8b9c37fdb69644242a020d917"
+  },
+  "output_sha256": "f9685c1cf134c7916317454b24786557de42cac85a952bcf7b93eb35ddcf54f3",
+  "producer_route_basis": {
+    "extractor_source_sha256": "bc54d2fc6e4dfba095977053d92275c3474bb01ff7e6da7c5301002bde701a11",
+    "producer_pr_head": "d39b1e19eb3c9cb63b493f44f2be2e95d89c17f4",
+    "release_equivalence_verified": false
+  },
+  "schema": "mvp-event-manifest-local-summary-v1",
+  "selected_unique_installed_paths": 128,
+  "selected_unique_source_identities": 128,
+  "source_checkout": {
+    "dirty": false,
+    "head": "bce40f6a15c273778061e8fceced7b9e0f58d99b",
+    "tree": "aad77be60ad2931cfc99f6eb49afd7d72843325e"
+  },
+  "source_pins": {
+    "luci": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "openwrt": "bce40f6a15c273778061e8fceced7b9e0f58d99b",
+    "packages": "07e0d16305d2b5903b37ad7913e33e18795f81a4"
+  },
+  "status": "local source-first oracle generated; no CodeQL or consumer handoff",
+  "tools": {
+    "git": "git version 2.56.1",
+    "python": "3.15.2"
+  }
+}

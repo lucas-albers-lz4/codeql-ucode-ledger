@@ -1,0 +1,50 @@
+{
+  "consumer_base_commit": "453da0d2592f64ba15cef380f0a7a3edd59e0594",
+  "consumer_checkout_dirty": true,
+  "identities_csv_sha256": "bca16046a9e0b0e0b67916a3db0056dd52ae7f45a7602412ff5c7b63a381a0ab",
+  "limits": [
+    "Source candidate inventory only; no recipe inference, installed bytes, extraction, CodeQL, SARIF or consumer handoff.",
+    "Package-feed paths are outside this selector CLI.",
+    "Separate v0.6 local CodeQL extraction stopped on two wifi parse failures.",
+    "Captured OpenWrt PR #26933 pair, not an authenticated current upstream event trigger."
+  ],
+  "manifest_sha256": "9c004ed477665f6567a071eac45051445c61019af927bfa4e51bae4c50ebd490",
+  "raw_report_sha256": {
+    "luci": "2a8d942989a6c17160e21a5d50c738e235a28a506abcb3f83f3a1b3d322da56c",
+    "openwrt": "9507c1949394f0637d03af8126c525a4ccdbedfe356a848fc8a336468cdedacc"
+  },
+  "reports": {
+    "luci": {
+      "base_candidate_count": 69,
+      "base_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+      "base_tree": "34b39b1f15d8a68898d84cab7f48e87f1ba80ac6",
+      "fail_closed": false,
+      "head_candidate_count": 69,
+      "head_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+      "head_excluded_count": 4,
+      "head_selected_count": 65,
+      "head_tree": "34b39b1f15d8a68898d84cab7f48e87f1ba80ac6",
+      "head_unreviewed_count": 0,
+      "missing_baseline_count": 0,
+      "status": "inventory_ready"
+    },
+    "openwrt": {
+      "base_candidate_count": 52,
+      "base_commit": "727d8d2f8e5b19a2121e2cf05824e9e5cac35310",
+      "base_tree": "8396fc6de47e8e208dd52b725d327742ab1e0838",
+      "fail_closed": false,
+      "head_candidate_count": 52,
+      "head_commit": "bce40f6a15c273778061e8fceced7b9e0f58d99b",
+      "head_excluded_count": 1,
+      "head_selected_count": 51,
+      "head_tree": "aad77be60ad2931cfc99f6eb49afd7d72843325e",
+      "head_unreviewed_count": 0,
+      "missing_baseline_count": 0,
+      "status": "inventory_ready"
+    }
+  },
+  "schema": "mvp-full-tree-v0.6-source-inventory-v1",
+  "selector_sha256": "67419dee8409e7da9dd2218169a0936f4036019887766e971de65513a10e0833",
+  "selector_tests_sha256": "ea09290d91d81d815d76909d35a9d4e648f1ef5e78eac19e697d17da0fd0696e",
+  "tests": "11 local selector tests passed"
+}

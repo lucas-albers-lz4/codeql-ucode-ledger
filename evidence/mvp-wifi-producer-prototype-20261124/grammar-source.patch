@@ -1,0 +1,150 @@
+diff --git a/common/define-grammar.js b/common/define-grammar.js
+index 05df78f..dc15dd4 100644
+--- a/common/define-grammar.js
++++ b/common/define-grammar.js
+@@ -227,7 +227,7 @@ module.exports = function defineGrammar(name) {
+         seq(
+           'export',
+           field('declaration', $.function_declaration),
+-          ';',
++          optional($._automatic_semicolon),
+         ),
+         seq(
+           'export',
+@@ -277,6 +277,13 @@ module.exports = function defineGrammar(name) {
+         $._semicolon,
+       ),
+ 
++      dynamic_import_expression: $ => seq(
++        'import',
++        '(',
++        field('source', $.expression),
++        ')',
++      ),
++
+       import_clause: $ => choice(
+         field('namespace', $.namespace_import),
+         field('named', $.named_imports),
+@@ -574,6 +581,7 @@ module.exports = function defineGrammar(name) {
+         $.array,
+         $.function_expression,
+         $.arrow_function,
++        $.dynamic_import_expression,
+         $.call_expression,
+       ),
+ 
+diff --git a/ucode/test/corpus/js_differences.txt b/ucode/test/corpus/js_differences.txt
+index f4752ef..0fbcacb 100644
+--- a/ucode/test/corpus/js_differences.txt
++++ b/ucode/test/corpus/js_differences.txt
+@@ -354,14 +354,20 @@ export { z, };
+ --------------------------------------------------------------------------------
+ 
+ ================================================================================
+-export function requires a trailing semicolon — produces ERROR
+-:error
++export function without trailing semicolon
+ ================================================================================
+ 
+ export function f() {}
+ 
+ --------------------------------------------------------------------------------
+ 
++(program
++  (export_statement
++    declaration: (function_declaration
++      name: (identifier)
++      parameters: (formal_parameters)
++      body: (statement_block))))
++
+ ================================================================================
+ Braced unicode escape \u{...} is not supported in strings — produces ERROR
+ :error
+diff --git a/ucode/test/corpus/modules.txt b/ucode/test/corpus/modules.txt
+index 38f7be6..6683f86 100644
+--- a/ucode/test/corpus/modules.txt
++++ b/ucode/test/corpus/modules.txt
+@@ -80,16 +80,38 @@ import * as ns from "./mod.uc";
+       (string_fragment))))
+ 
+ ================================================================================
+-Dynamic import expression — not in the targeted release, produces ERROR
+-:error
++Dynamic import expression
+ ================================================================================
+ 
+ let mod = import("./mod.uc");
+ 
+ --------------------------------------------------------------------------------
+ 
+-; `import(...)` as an expression came after the targeted ucode release
+-; (master 926f20b); only the static `import` statement is supported.
++(program
++  (lexical_declaration
++    (variable_declarator
++      name: (identifier)
++      value: (dynamic_import_expression
++        source: (string
++          (string_fragment))))))
++
++================================================================================
++Dynamic import expression with missing argument produces ERROR
++:error
++================================================================================
++
++let mod = import();
++
++--------------------------------------------------------------------------------
++
++================================================================================
++Dynamic import expression with extra argument produces ERROR
++:error
++================================================================================
++
++let mod = import("./mod.uc", "extra");
++
++--------------------------------------------------------------------------------
+ 
+ ================================================================================
+ Export let
+@@ -107,7 +129,7 @@ export let x = 1;
+         value: (number)))))
+ 
+ ================================================================================
+-Export named function (requires trailing semicolon)
++Export named function with trailing semicolon
+ ================================================================================
+ 
+ export function named() { return 1; };
+@@ -121,7 +143,30 @@ export function named() { return 1; };
+       parameters: (formal_parameters)
+       body: (statement_block
+         (return_statement
+-          (number))))))
++          (number)))))
++  (empty_statement))
++
++================================================================================
++Export named function without trailing semicolon followed by declaration
++================================================================================
++
++export function named() { return 1; }
++let after = 2;
++
++--------------------------------------------------------------------------------
++
++(program
++  (export_statement
++    declaration: (function_declaration
++      name: (identifier)
++      parameters: (formal_parameters)
++      body: (statement_block
++        (return_statement
++          (number)))))
++  (lexical_declaration
++    (variable_declarator
++      name: (identifier)
++      value: (number))))
+ 
+ ================================================================================
+ Export default expression (requires trailing semicolon)

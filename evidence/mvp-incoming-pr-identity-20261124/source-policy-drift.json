@@ -1,0 +1,1116 @@
+{
+  "schema": "source-policy-drift-v1",
+  "baseline_schema": "mvp-bounded-corpus-v0.4",
+  "baseline_manifest_sha256": "1e25cf9c2adc40c854502fed8d1ccc0977a3c4825d6ee4a1c0a543ffe0a76699",
+  "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+  "repository": "openwrt",
+  "base_commit": "727d8d2f8e5b19a2121e2cf05824e9e5cac35310",
+  "base_tree": "8396fc6de47e8e208dd52b725d327742ab1e0838",
+  "event_commit": "bce40f6a15c273778061e8fceced7b9e0f58d99b",
+  "event_tree": "aad77be60ad2931cfc99f6eb49afd7d72843325e",
+  "baseline_selected_count_for_repo": 34,
+  "baseline_excluded_count_for_repo": 1,
+  "selected_and_excluded_identities": [
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/lib/netifd/wireless/mac80211.sh",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_shebang"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "6b709e4593ba768f88d8c2ae3226565fcd8db3a9",
+      "baseline_sha256": "f7d6ae091777a8eb77ba55c2c1f09bf8caff1a4364dc6de4f19a1ecb322801aa",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/lib/netifd/wireless/mac80211.sh",
+        "git_blob": "506be9f47a42e080d9c112c55fff47a3891fc1cb",
+        "sha256": "e56a6b39a5fbcc39f39ffe79a07ec39a019ef135b714385f8391935d88677d47"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/bin/iwinfo",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_shebang"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "d36268b06e96c9c6a4e08957d65260742facb97a",
+      "baseline_sha256": "c279f6cc7000ee1cb7609a0a60f77a63500a85d6be1b1fe32afa333fe176ff1c",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/usr/bin/iwinfo",
+        "git_blob": "8bda0bd15f5f6e7f145f0b92d54ac3831aeb419b",
+        "sha256": "ecd3a04a31f6fbbf4426f330a67ffffbed7455f40373b9f1452f27b452686674"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/iwinfo.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "7fa5291de19c5d26ecf8612d59e2d6e7ad090131",
+      "baseline_sha256": "df56c258702cb3bf60d4657031a2abf371df9ced2952da6ad13c04021fd4c3ea",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/iwinfo.uc",
+        "git_blob": "9a3a772d6d378351ca1d6767fe6b5f85f9b3b3dc",
+        "sha256": "617dc0f90b44f2e1b2e09efffc795ffe29f3e7d823881ffb95620c4a6469db43"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "57cacff14ab80aa3f0059d2afe7251c45ffd8de4",
+      "baseline_sha256": "d036c64e14ae75297487ac4e572ee4e2504d5795e0c907267341d7b14931275a",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+        "git_blob": "755b18267af8bd357922af2f601ee49ae71d77fb",
+        "sha256": "2efdf21e680b46c33cdeb3a8e135cd92d37fefc311399cea350ebdec8915ea14"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/common.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "de939b0c2f1385c2c7c1076f44ada6fdfbcf5b7c",
+      "baseline_sha256": "92ecc237251e6dcb32ba0d230b339850adb9848cd7d6e1073e043bc3ae5d790d",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/common.uc",
+        "git_blob": "e477b1f4554fd95af8d3b2aa60f246bcbf70b36d",
+        "sha256": "e42a0c0b06421fa98d1177f7cfe4ffd4e661ca9a5a207389c6f2350e44c75c37"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/hostapd.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "2742552cc199ac3e6ddb83ee991761c0a5c34115",
+      "baseline_sha256": "5fd200d76efb0a087ecb067003cae80819ee62a37cabf2a788a1daea9c80177e",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/hostapd.uc",
+        "git_blob": "5d53e954a61cf4d43b1132cfc0570696f87d2b3b",
+        "sha256": "6ba4d995f0ab29c90b9aa5a18b8dad1c69436153ba9ecb72d2979575ab318883"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/iface.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "ff72f5b677051b9ba5edefa342b4c3e0ce99285c",
+      "baseline_sha256": "be89c76e55e9f838421b99328a9e84ac10b76dac64f4f8950660014123bdfc5f",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/iface.uc",
+        "git_blob": "b9291f3381e8a439161e16f356fc6b35ca2ca8e7",
+        "sha256": "ada3f4121e2fe3ac74d1ed55d16681667847802d85ad99cfb43262e8315d3853"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/netifd.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "5a4a9fafb37f25a9070d5cac4139446e1600e4f2",
+      "baseline_sha256": "2a5f4c94d186d1be150c4bb8ba308810af41a4930fd1287636de3274595d7af6",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/netifd.uc",
+        "git_blob": "022979f1f7d0130ff7eb4e24f86a67d0d95fffb1",
+        "sha256": "24fc17c5c8e4e4916ea6a63faa691d5c7b4e2c631ca3e37cc050937a9413567a"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/supplicant.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "a8fc00cd03fe11cd2c51da8599682ef89ca0a641",
+      "baseline_sha256": "8bdbd9d2688f0ed008ad00e5d19c4baf589020853b615bafd9e9586dcc79e78d",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/supplicant.uc",
+        "git_blob": "7d04b349fa21f56736b1e5acc510ab187f54b780",
+        "sha256": "4d92075177b08ab71ee90e657fbd706079028794c2f0fc0651741a14509b4d27"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/validate.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "e675b7a6ca089364a0a1b333ba0e31b76a24f640",
+      "baseline_sha256": "2710fca796071133b30abedb28a8615ad0172af2b66a7c47580dde2f804eb4ee",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/validate.uc",
+        "git_blob": "5f093af20153fb0e3823a2bc5f03a66628bb63dc",
+        "sha256": "9dd6ca06003cceafc0a9d97c667aad5b41811de7d3d5eb3fa5483d01fe4b9f4b"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files/lib/netifd/wireless-device.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "always under inspected install recipe",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "8e6250e5cdb165b7d4ad99531743e17bedc053c9",
+      "baseline_sha256": "d3e106d2fbc288d0af36c95bb97b9eae77630c4972c927c8d67a68a8822fa754",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files/lib/netifd/wireless-device.uc",
+        "git_blob": "b54afeee781b194d650861bef201a34dab666640",
+        "sha256": "76ab671c461ba680d3ad22c691bf23bcef41f3d8b18f68391872c9e68735c7f9"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files/lib/netifd/wireless.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "always under inspected install recipe",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "41f48848e48ece61ee29d7d9bef7df33541e039d",
+      "baseline_sha256": "36888bcfbf04c8b35c30e10b3b186bc4295c1c5f3d7403779eedb51a450f557d",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files/lib/netifd/wireless.uc",
+        "git_blob": "525c01d60a4a0e8d8d8c2110d15f71ec0596aeb3",
+        "sha256": "32620c888230e4329e3d8cc91fe3e53ab8435e45b1f07855de2d3b2d08cb4810"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "always under inspected install recipe",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_shebang"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "c6c973040eb8c01f8fb8618337f9d1cf3cce4447",
+      "baseline_sha256": "36da7b5286c98b8e82433c3656e2c4f02e12648ba7cb75899ab5546702b2ec1c",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc",
+        "git_blob": "da5d0975ceb3931bf4b8dd9906f03364add0e002",
+        "sha256": "17143a060e91dd83476e864b484c402a8c88bf70b15b8af59a87d6d72a3d3bb8"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files/usr/share/hostap/common.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "always under inspected install recipe",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "f801c4940c2b76947d34705e80305463b609768a",
+      "baseline_sha256": "8f489d3c4fdde92b6dd027aadffc96880837664f3c2a1b1f6f3aeb9fdd484c0c",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files/usr/share/hostap/common.uc",
+        "git_blob": "a7a829bd04c59058d23ff228a584c4fbfe3534c7",
+        "sha256": "517d3202c1a75fca80aaf1cfcbb6ee0c7fa130403dc948dbb8518315f2dd70eb"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files/usr/share/hostap/wdev.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "always under inspected install recipe",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_shebang"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "a4f9bf7b8448cca2d04f17b8e4e098c7c9adda54",
+      "baseline_sha256": "84e0de1089f253d65272f1c29254ec890b46576565b4a92fd48ecc2f9b5156d2",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files/usr/share/hostap/wdev.uc",
+        "git_blob": "c84f109e2177e98119652aece44c4665a2aed482",
+        "sha256": "fa8de4333f95c3dd8473aef64f883ae4b6078430d4c7726daaeeae37a753999e"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files/usr/share/hostap/wifi-detect.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "always under inspected install recipe",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_shebang"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "db862d40c2a901a83c08d06ce937905a2248a22e",
+      "baseline_sha256": "1b21c13ef3e8df83575303c9b75609f22b3e359e66128abc43ebd369652270ab",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files/usr/share/hostap/wifi-detect.uc",
+        "git_blob": "1ec39c88863bf5ca4f6fc9e6c923630069ee7fa5",
+        "sha256": "02f6d7aa2a55f47de65d4c99254a234bbea4fe3cc56fea3d1bad340830c792de"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files/usr/share/ucode/wifi/utils.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "always under inspected install recipe",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "147c16205aa8dc64706bbdc17d3ae33edb20faca",
+      "baseline_sha256": "bffaaff3e9ad9962206fb15aec190cd0fc2747990392885d346e0f6b3f5d61af",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files/usr/share/ucode/wifi/utils.uc",
+        "git_blob": "5158b84600f2692e0e918deeb04b38805e6558d6",
+        "sha256": "0cbbcda771ec40c8d9d394f2d3fa7cf5e36c039d08f26d8fd6aef71fba44380d"
+      }
+    },
+    {
+      "source_path": "package/network/services/unetmsg/files/usr/sbin/unetmsgd",
+      "baseline_class": "selected",
+      "package_owner": "unetmsg",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_shebang"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "727ac3be3fa17b5ecb3df82a0346eb735a734aa8",
+      "baseline_sha256": "26cec8f7966a5a961518cc9360b3202716c197dd70c8f1f692887372d466ea9a",
+      "event_identity": {
+        "path": "package/network/services/unetmsg/files/usr/sbin/unetmsgd",
+        "git_blob": "727ac3be3fa17b5ecb3df82a0346eb735a734aa8",
+        "sha256": "26cec8f7966a5a961518cc9360b3202716c197dd70c8f1f692887372d466ea9a"
+      }
+    },
+    {
+      "source_path": "package/network/services/unetmsg/files/usr/share/ucode/unetmsg/client.uc",
+      "baseline_class": "selected",
+      "package_owner": "unetmsg",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "6519eac560c3a657dc390c1844e34dcd6cd0418b",
+      "baseline_sha256": "72d3f45e4a91ecfe829e410e8c935c5d15fd592fba220b95a872a17d1add8b04",
+      "event_identity": {
+        "path": "package/network/services/unetmsg/files/usr/share/ucode/unetmsg/client.uc",
+        "git_blob": "6519eac560c3a657dc390c1844e34dcd6cd0418b",
+        "sha256": "72d3f45e4a91ecfe829e410e8c935c5d15fd592fba220b95a872a17d1add8b04"
+      }
+    },
+    {
+      "source_path": "package/network/services/unetmsg/files/usr/share/ucode/unetmsg/unetmsgd-client.uc",
+      "baseline_class": "selected",
+      "package_owner": "unetmsg",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "6d38909347e0eee21aeca272fdb83e02853e840e",
+      "baseline_sha256": "d853535f70b7a43940beb6096a6ba9abbee7af3716d1819ad6aa3ca5714ceffe",
+      "event_identity": {
+        "path": "package/network/services/unetmsg/files/usr/share/ucode/unetmsg/unetmsgd-client.uc",
+        "git_blob": "6d38909347e0eee21aeca272fdb83e02853e840e",
+        "sha256": "d853535f70b7a43940beb6096a6ba9abbee7af3716d1819ad6aa3ca5714ceffe"
+      }
+    },
+    {
+      "source_path": "package/network/services/unetmsg/files/usr/share/ucode/unetmsg/unetmsgd-remote.uc",
+      "baseline_class": "selected",
+      "package_owner": "unetmsg",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "a02ba08c671a18c8914b4db279336ae114769f41",
+      "baseline_sha256": "78e666b350f5d4e6177b4103786ec592578f3e08429c9af6f3f6d477b1861e95",
+      "event_identity": {
+        "path": "package/network/services/unetmsg/files/usr/share/ucode/unetmsg/unetmsgd-remote.uc",
+        "git_blob": "6ddbc3fd580b9fe3a60074ef98830846c98a39c3",
+        "sha256": "34c9d092ad0d79f83e4176b26a03130e45fd1244feef16241153681d5c6900cf"
+      }
+    },
+    {
+      "source_path": "package/network/services/unetmsg/files/usr/share/ucode/unetmsg/unetmsgd.uc",
+      "baseline_class": "selected",
+      "package_owner": "unetmsg",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "775d87b9c0bbee83cbefcc93c75026cdc11c4d02",
+      "baseline_sha256": "e225e37f9f78f202c9b891eaee63550169f8c1439c908bfc7b722180b8a7e92b",
+      "event_identity": {
+        "path": "package/network/services/unetmsg/files/usr/share/ucode/unetmsg/unetmsgd.uc",
+        "git_blob": "775d87b9c0bbee83cbefcc93c75026cdc11c4d02",
+        "sha256": "e225e37f9f78f202c9b891eaee63550169f8c1439c908bfc7b722180b8a7e92b"
+      }
+    },
+    {
+      "source_path": "package/network/services/unetmsg/files/usr/share/ucode/unetmsg/utils.uc",
+      "baseline_class": "selected",
+      "package_owner": "unetmsg",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "3bad212e4133782819f5512b1092c97631a7852e",
+      "baseline_sha256": "4003b2ec8667473e29264e106794f605dcc5456eaa11918d1f4239600881b228",
+      "event_identity": {
+        "path": "package/network/services/unetmsg/files/usr/share/ucode/unetmsg/utils.uc",
+        "git_blob": "3bad212e4133782819f5512b1092c97631a7852e",
+        "sha256": "4003b2ec8667473e29264e106794f605dcc5456eaa11918d1f4239600881b228"
+      }
+    },
+    {
+      "source_path": "package/utils/cli/files/usr/sbin/cli",
+      "baseline_class": "selected",
+      "package_owner": "cli",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_shebang"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "90889f996a3805e86e910ab9eec951549146c6ec",
+      "baseline_sha256": "f71b2a73fd6b2bd4a44cdb4fcbab896c5d2a945954c035a244d49603e4d87707",
+      "event_identity": {
+        "path": "package/utils/cli/files/usr/sbin/cli",
+        "git_blob": "90889f996a3805e86e910ab9eec951549146c6ec",
+        "sha256": "f71b2a73fd6b2bd4a44cdb4fcbab896c5d2a945954c035a244d49603e4d87707"
+      }
+    },
+    {
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/cache.uc",
+      "baseline_class": "selected",
+      "package_owner": "cli",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "27cc049f73ffbee099931352db1eb24de71eaf17",
+      "baseline_sha256": "4f9c21ab7517480ba50c7e7a41fcc17a788152d797abe99cdfd5ac748ee57c72",
+      "event_identity": {
+        "path": "package/utils/cli/files/usr/share/ucode/cli/cache.uc",
+        "git_blob": "27cc049f73ffbee099931352db1eb24de71eaf17",
+        "sha256": "4f9c21ab7517480ba50c7e7a41fcc17a788152d797abe99cdfd5ac748ee57c72"
+      }
+    },
+    {
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/color.uc",
+      "baseline_class": "selected",
+      "package_owner": "cli",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "39e5863533a73984affcd1f927b236893ab007c9",
+      "baseline_sha256": "89ab6b082fc5e41567f70b88bd644f80f96a439ada5f9295ef2e1c37772b5d4d",
+      "event_identity": {
+        "path": "package/utils/cli/files/usr/share/ucode/cli/color.uc",
+        "git_blob": "39e5863533a73984affcd1f927b236893ab007c9",
+        "sha256": "89ab6b082fc5e41567f70b88bd644f80f96a439ada5f9295ef2e1c37772b5d4d"
+      }
+    },
+    {
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/context-call.uc",
+      "baseline_class": "selected",
+      "package_owner": "cli",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "18d6eb202ec44b7fd42d1ad54255b2562ea5ca47",
+      "baseline_sha256": "fad2f165e6f78c9d310a912832e0cfa585e3341c34b240da6051e3179e0258c0",
+      "event_identity": {
+        "path": "package/utils/cli/files/usr/share/ucode/cli/context-call.uc",
+        "git_blob": "18d6eb202ec44b7fd42d1ad54255b2562ea5ca47",
+        "sha256": "fad2f165e6f78c9d310a912832e0cfa585e3341c34b240da6051e3179e0258c0"
+      }
+    },
+    {
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/context.uc",
+      "baseline_class": "selected",
+      "package_owner": "cli",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "53b5f57047fd15b5bce9e65794cabf3e1716725c",
+      "baseline_sha256": "190d5186e277eacfac80c1c3e80eaa483465f24ec19f0faefea08c318a1698d3",
+      "event_identity": {
+        "path": "package/utils/cli/files/usr/share/ucode/cli/context.uc",
+        "git_blob": "6cd74d1983f413d263fafa1f001e9772e6f5359b",
+        "sha256": "0f897e72d0421147db71d78998b75186023e3859bd0dfd11f29dcd92aa2983b1"
+      }
+    },
+    {
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/datamodel.uc",
+      "baseline_class": "selected",
+      "package_owner": "cli",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "f6d9454dd7e3db5cb3ef575f09e5f8f2ed435bbf",
+      "baseline_sha256": "0e271bdfff8da423e2e87f8fff95203f74e53aa1433d84a9b16d09f213500065",
+      "event_identity": {
+        "path": "package/utils/cli/files/usr/share/ucode/cli/datamodel.uc",
+        "git_blob": "f6d9454dd7e3db5cb3ef575f09e5f8f2ed435bbf",
+        "sha256": "0e271bdfff8da423e2e87f8fff95203f74e53aa1433d84a9b16d09f213500065"
+      }
+    },
+    {
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/modules/network.uc",
+      "baseline_class": "selected",
+      "package_owner": "cli",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "3d5ef5b058ee6fcab9c658e1321f8c7f7eafe574",
+      "baseline_sha256": "9d1fbe9682cafff2d4e55d89944de6b204130b82c272bba7f747623df106b19b",
+      "event_identity": {
+        "path": "package/utils/cli/files/usr/share/ucode/cli/modules/network.uc",
+        "git_blob": "3d5ef5b058ee6fcab9c658e1321f8c7f7eafe574",
+        "sha256": "9d1fbe9682cafff2d4e55d89944de6b204130b82c272bba7f747623df106b19b"
+      }
+    },
+    {
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/modules/service.uc",
+      "baseline_class": "selected",
+      "package_owner": "cli",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "a280f6559e862943b71b248cc1fd61036a3c3c2f",
+      "baseline_sha256": "d0daab4ea0754ab059072a949b3ccc99e9a33c911396679be0c8055269522a75",
+      "event_identity": {
+        "path": "package/utils/cli/files/usr/share/ucode/cli/modules/service.uc",
+        "git_blob": "a280f6559e862943b71b248cc1fd61036a3c3c2f",
+        "sha256": "d0daab4ea0754ab059072a949b3ccc99e9a33c911396679be0c8055269522a75"
+      }
+    },
+    {
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/object-editor.uc",
+      "baseline_class": "selected",
+      "package_owner": "cli",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "639313b72f4315b95ddf7755cef03a95a3f54138",
+      "baseline_sha256": "e2cd1b56ca4468ab2d1ebf629c9fa2b5511e4f2775212dcde8ba6c6847f71e2a",
+      "event_identity": {
+        "path": "package/utils/cli/files/usr/share/ucode/cli/object-editor.uc",
+        "git_blob": "c1fe4524f61e1b1efee937dfee79c0dbe4979c00",
+        "sha256": "510442efb956e9728334fc48da4761829f22a640871727e14af9a7244ab3a206"
+      }
+    },
+    {
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/types.uc",
+      "baseline_class": "selected",
+      "package_owner": "cli",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "62f9683b45dae6a5b7305895a4e52634ab6b4890",
+      "baseline_sha256": "124c3a1e35955492502bbe301ef8466de67480438f143ffd514020636baec2d5",
+      "event_identity": {
+        "path": "package/utils/cli/files/usr/share/ucode/cli/types.uc",
+        "git_blob": "39f369f38628fd9d3d8bc05e9a425701a4a2bac7",
+        "sha256": "a688b862740335385a895fdb8c383fb23293d50b192b0066768b73cb887dabef"
+      }
+    },
+    {
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/utils.uc",
+      "baseline_class": "selected",
+      "package_owner": "cli",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "f299ad361d667963f2c91d701cd8b42ec4d88d07",
+      "baseline_sha256": "72d6ef87319f6658885f989e834fd1193175c3dafdca2dfb4aa2a4d1e16ccd53",
+      "event_identity": {
+        "path": "package/utils/cli/files/usr/share/ucode/cli/utils.uc",
+        "git_blob": "f299ad361d667963f2c91d701cd8b42ec4d88d07",
+        "sha256": "72d6ef87319f6658885f989e834fd1193175c3dafdca2dfb4aa2a4d1e16ccd53"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files/lib/netifd/wireless/mac80211.sh",
+      "baseline_class": "excluded",
+      "package_owner": null,
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": "competing shell source overwritten when CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "expected_route": null,
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "30d08a301547ffe71794eefc8f3c4884cc1c3a4f",
+      "baseline_sha256": "5f87f07cca56b20b0cf08cf02711c1c4fc4ddbbb17de7c8780282625c8d3be07",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files/lib/netifd/wireless/mac80211.sh",
+        "git_blob": "79109593447e116a09eec66e7187bf809b5bf184",
+        "sha256": "d108db6f8aed5e37f1e978edfd5807c4e511a44d0ee582c7582ab7b8376f90ac"
+      }
+    }
+  ],
+  "removed_baseline_identities": [],
+  "changed_selected_or_excluded": [
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/lib/netifd/wireless/mac80211.sh",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_shebang"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "6b709e4593ba768f88d8c2ae3226565fcd8db3a9",
+      "baseline_sha256": "f7d6ae091777a8eb77ba55c2c1f09bf8caff1a4364dc6de4f19a1ecb322801aa",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/lib/netifd/wireless/mac80211.sh",
+        "git_blob": "506be9f47a42e080d9c112c55fff47a3891fc1cb",
+        "sha256": "e56a6b39a5fbcc39f39ffe79a07ec39a019ef135b714385f8391935d88677d47"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/bin/iwinfo",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_shebang"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "d36268b06e96c9c6a4e08957d65260742facb97a",
+      "baseline_sha256": "c279f6cc7000ee1cb7609a0a60f77a63500a85d6be1b1fe32afa333fe176ff1c",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/usr/bin/iwinfo",
+        "git_blob": "8bda0bd15f5f6e7f145f0b92d54ac3831aeb419b",
+        "sha256": "ecd3a04a31f6fbbf4426f330a67ffffbed7455f40373b9f1452f27b452686674"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/iwinfo.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "7fa5291de19c5d26ecf8612d59e2d6e7ad090131",
+      "baseline_sha256": "df56c258702cb3bf60d4657031a2abf371df9ced2952da6ad13c04021fd4c3ea",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/iwinfo.uc",
+        "git_blob": "9a3a772d6d378351ca1d6767fe6b5f85f9b3b3dc",
+        "sha256": "617dc0f90b44f2e1b2e09efffc795ffe29f3e7d823881ffb95620c4a6469db43"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "57cacff14ab80aa3f0059d2afe7251c45ffd8de4",
+      "baseline_sha256": "d036c64e14ae75297487ac4e572ee4e2504d5795e0c907267341d7b14931275a",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+        "git_blob": "755b18267af8bd357922af2f601ee49ae71d77fb",
+        "sha256": "2efdf21e680b46c33cdeb3a8e135cd92d37fefc311399cea350ebdec8915ea14"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/common.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "de939b0c2f1385c2c7c1076f44ada6fdfbcf5b7c",
+      "baseline_sha256": "92ecc237251e6dcb32ba0d230b339850adb9848cd7d6e1073e043bc3ae5d790d",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/common.uc",
+        "git_blob": "e477b1f4554fd95af8d3b2aa60f246bcbf70b36d",
+        "sha256": "e42a0c0b06421fa98d1177f7cfe4ffd4e661ca9a5a207389c6f2350e44c75c37"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/hostapd.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "2742552cc199ac3e6ddb83ee991761c0a5c34115",
+      "baseline_sha256": "5fd200d76efb0a087ecb067003cae80819ee62a37cabf2a788a1daea9c80177e",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/hostapd.uc",
+        "git_blob": "5d53e954a61cf4d43b1132cfc0570696f87d2b3b",
+        "sha256": "6ba4d995f0ab29c90b9aa5a18b8dad1c69436153ba9ecb72d2979575ab318883"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/iface.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "ff72f5b677051b9ba5edefa342b4c3e0ce99285c",
+      "baseline_sha256": "be89c76e55e9f838421b99328a9e84ac10b76dac64f4f8950660014123bdfc5f",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/iface.uc",
+        "git_blob": "b9291f3381e8a439161e16f356fc6b35ca2ca8e7",
+        "sha256": "ada3f4121e2fe3ac74d1ed55d16681667847802d85ad99cfb43262e8315d3853"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/netifd.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "5a4a9fafb37f25a9070d5cac4139446e1600e4f2",
+      "baseline_sha256": "2a5f4c94d186d1be150c4bb8ba308810af41a4930fd1287636de3274595d7af6",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/netifd.uc",
+        "git_blob": "022979f1f7d0130ff7eb4e24f86a67d0d95fffb1",
+        "sha256": "24fc17c5c8e4e4916ea6a63faa691d5c7b4e2c631ca3e37cc050937a9413567a"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/supplicant.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "a8fc00cd03fe11cd2c51da8599682ef89ca0a641",
+      "baseline_sha256": "8bdbd9d2688f0ed008ad00e5d19c4baf589020853b615bafd9e9586dcc79e78d",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/supplicant.uc",
+        "git_blob": "7d04b349fa21f56736b1e5acc510ab187f54b780",
+        "sha256": "4d92075177b08ab71ee90e657fbd706079028794c2f0fc0651741a14509b4d27"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/validate.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "e675b7a6ca089364a0a1b333ba0e31b76a24f640",
+      "baseline_sha256": "2710fca796071133b30abedb28a8615ad0172af2b66a7c47580dde2f804eb4ee",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/validate.uc",
+        "git_blob": "5f093af20153fb0e3823a2bc5f03a66628bb63dc",
+        "sha256": "9dd6ca06003cceafc0a9d97c667aad5b41811de7d3d5eb3fa5483d01fe4b9f4b"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files/lib/netifd/wireless-device.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "always under inspected install recipe",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "8e6250e5cdb165b7d4ad99531743e17bedc053c9",
+      "baseline_sha256": "d3e106d2fbc288d0af36c95bb97b9eae77630c4972c927c8d67a68a8822fa754",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files/lib/netifd/wireless-device.uc",
+        "git_blob": "b54afeee781b194d650861bef201a34dab666640",
+        "sha256": "76ab671c461ba680d3ad22c691bf23bcef41f3d8b18f68391872c9e68735c7f9"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files/lib/netifd/wireless.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "always under inspected install recipe",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "41f48848e48ece61ee29d7d9bef7df33541e039d",
+      "baseline_sha256": "36888bcfbf04c8b35c30e10b3b186bc4295c1c5f3d7403779eedb51a450f557d",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files/lib/netifd/wireless.uc",
+        "git_blob": "525c01d60a4a0e8d8d8c2110d15f71ec0596aeb3",
+        "sha256": "32620c888230e4329e3d8cc91fe3e53ab8435e45b1f07855de2d3b2d08cb4810"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "always under inspected install recipe",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_shebang"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "c6c973040eb8c01f8fb8618337f9d1cf3cce4447",
+      "baseline_sha256": "36da7b5286c98b8e82433c3656e2c4f02e12648ba7cb75899ab5546702b2ec1c",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc",
+        "git_blob": "da5d0975ceb3931bf4b8dd9906f03364add0e002",
+        "sha256": "17143a060e91dd83476e864b484c402a8c88bf70b15b8af59a87d6d72a3d3bb8"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files/usr/share/hostap/common.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "always under inspected install recipe",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "f801c4940c2b76947d34705e80305463b609768a",
+      "baseline_sha256": "8f489d3c4fdde92b6dd027aadffc96880837664f3c2a1b1f6f3aeb9fdd484c0c",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files/usr/share/hostap/common.uc",
+        "git_blob": "a7a829bd04c59058d23ff228a584c4fbfe3534c7",
+        "sha256": "517d3202c1a75fca80aaf1cfcbb6ee0c7fa130403dc948dbb8518315f2dd70eb"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files/usr/share/hostap/wdev.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "always under inspected install recipe",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_shebang"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "a4f9bf7b8448cca2d04f17b8e4e098c7c9adda54",
+      "baseline_sha256": "84e0de1089f253d65272f1c29254ec890b46576565b4a92fd48ecc2f9b5156d2",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files/usr/share/hostap/wdev.uc",
+        "git_blob": "c84f109e2177e98119652aece44c4665a2aed482",
+        "sha256": "fa8de4333f95c3dd8473aef64f883ae4b6078430d4c7726daaeeae37a753999e"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files/usr/share/hostap/wifi-detect.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "always under inspected install recipe",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_shebang"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "db862d40c2a901a83c08d06ce937905a2248a22e",
+      "baseline_sha256": "1b21c13ef3e8df83575303c9b75609f22b3e359e66128abc43ebd369652270ab",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files/usr/share/hostap/wifi-detect.uc",
+        "git_blob": "1ec39c88863bf5ca4f6fc9e6c923630069ee7fa5",
+        "sha256": "02f6d7aa2a55f47de65d4c99254a234bbea4fe3cc56fea3d1bad340830c792de"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files/usr/share/ucode/wifi/utils.uc",
+      "baseline_class": "selected",
+      "package_owner": "wifi-scripts",
+      "config_condition": "always under inspected install recipe",
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "147c16205aa8dc64706bbdc17d3ae33edb20faca",
+      "baseline_sha256": "bffaaff3e9ad9962206fb15aec190cd0fc2747990392885d346e0f6b3f5d61af",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files/usr/share/ucode/wifi/utils.uc",
+        "git_blob": "5158b84600f2692e0e918deeb04b38805e6558d6",
+        "sha256": "0cbbcda771ec40c8d9d394f2d3fa7cf5e36c039d08f26d8fd6aef71fba44380d"
+      }
+    },
+    {
+      "source_path": "package/network/services/unetmsg/files/usr/share/ucode/unetmsg/unetmsgd-remote.uc",
+      "baseline_class": "selected",
+      "package_owner": "unetmsg",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "a02ba08c671a18c8914b4db279336ae114769f41",
+      "baseline_sha256": "78e666b350f5d4e6177b4103786ec592578f3e08429c9af6f3f6d477b1861e95",
+      "event_identity": {
+        "path": "package/network/services/unetmsg/files/usr/share/ucode/unetmsg/unetmsgd-remote.uc",
+        "git_blob": "6ddbc3fd580b9fe3a60074ef98830846c98a39c3",
+        "sha256": "34c9d092ad0d79f83e4176b26a03130e45fd1244feef16241153681d5c6900cf"
+      }
+    },
+    {
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/context.uc",
+      "baseline_class": "selected",
+      "package_owner": "cli",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "53b5f57047fd15b5bce9e65794cabf3e1716725c",
+      "baseline_sha256": "190d5186e277eacfac80c1c3e80eaa483465f24ec19f0faefea08c318a1698d3",
+      "event_identity": {
+        "path": "package/utils/cli/files/usr/share/ucode/cli/context.uc",
+        "git_blob": "6cd74d1983f413d263fafa1f001e9772e6f5359b",
+        "sha256": "0f897e72d0421147db71d78998b75186023e3859bd0dfd11f29dcd92aa2983b1"
+      }
+    },
+    {
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/object-editor.uc",
+      "baseline_class": "selected",
+      "package_owner": "cli",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "639313b72f4315b95ddf7755cef03a95a3f54138",
+      "baseline_sha256": "e2cd1b56ca4468ab2d1ebf629c9fa2b5511e4f2775212dcde8ba6c6847f71e2a",
+      "event_identity": {
+        "path": "package/utils/cli/files/usr/share/ucode/cli/object-editor.uc",
+        "git_blob": "c1fe4524f61e1b1efee937dfee79c0dbe4979c00",
+        "sha256": "510442efb956e9728334fc48da4761829f22a640871727e14af9a7244ab3a206"
+      }
+    },
+    {
+      "source_path": "package/utils/cli/files/usr/share/ucode/cli/types.uc",
+      "baseline_class": "selected",
+      "package_owner": "cli",
+      "config_condition": null,
+      "reason": null,
+      "expected_route": {
+        "classification": "plain",
+        "reason": "ucode_extension"
+      },
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "62f9683b45dae6a5b7305895a4e52634ab6b4890",
+      "baseline_sha256": "124c3a1e35955492502bbe301ef8466de67480438f143ffd514020636baec2d5",
+      "event_identity": {
+        "path": "package/utils/cli/files/usr/share/ucode/cli/types.uc",
+        "git_blob": "39f369f38628fd9d3d8bc05e9a425701a4a2bac7",
+        "sha256": "a688b862740335385a895fdb8c383fb23293d50b192b0066768b73cb887dabef"
+      }
+    },
+    {
+      "source_path": "package/network/config/wifi-scripts/files/lib/netifd/wireless/mac80211.sh",
+      "baseline_class": "excluded",
+      "package_owner": null,
+      "config_condition": "CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "reason": "competing shell source overwritten when CONFIG_WIFI_SCRIPTS_UCODE=y",
+      "expected_route": null,
+      "baseline_source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "baseline_git_blob": "30d08a301547ffe71794eefc8f3c4884cc1c3a4f",
+      "baseline_sha256": "5f87f07cca56b20b0cf08cf02711c1c4fc4ddbbb17de7c8780282625c8d3be07",
+      "event_identity": {
+        "path": "package/network/config/wifi-scripts/files/lib/netifd/wireless/mac80211.sh",
+        "git_blob": "79109593447e116a09eec66e7187bf809b5bf184",
+        "sha256": "d108db6f8aed5e37f1e978edfd5807c4e511a44d0ee582c7582ab7b8376f90ac"
+      }
+    }
+  ],
+  "drift": [],
+  "owner_package_roots": [
+    "package/network/config/wifi-scripts",
+    "package/network/services/unetmsg",
+    "package/utils/cli"
+  ],
+  "unrelated_policy_files": [
+    {
+      "status": "modified",
+      "path": "package/utils/bzip2/Makefile",
+      "class": "policy_condition_or_routing_input_changed"
+    }
+  ],
+  "status": "content_changes_observed",
+  "fail_closed": false,
+  "limitations": [
+    "Only baseline identities and paths in the explicit base-to-event Git diff are compared.",
+    "Unrelated package build-file changes are reported but do not fail; Makefile-only activation of previously unselected sources is not covered.",
+    "No full-tree discovery, install-path inference, package condition evaluation, extraction, CodeQL, SARIF, or consumer handoff is performed.",
+    "Extensionless candidate heuristic is intentionally broad; unrecognized source layouts may be missed."
+  ]
+}

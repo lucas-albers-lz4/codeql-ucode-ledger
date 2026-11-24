@@ -1,0 +1,57 @@
+{
+  "changed_file_sha256": {
+    "common/define-grammar.js": "048a73bbe010bba06079da52c6879280bac0fb6e6808bf8c2dc0ed71d2638e88",
+    "ucode/src/node-types.json": "3c5a2ad8f83828495779f69ef650b37cf9f79a3a46c5f1354cf65bfe847ea5f3",
+    "ucode/src/parser.c": "4c8df4b32943a409b0451b468838c38ffcd65ab611ddf9a42851ca4dc59a2fe5",
+    "ucode/test/corpus/js_differences.txt": "22f720431ac812dc80ff34f2679370dec0d5cc8a1671968447079736e2558e1e",
+    "ucode/test/corpus/modules.txt": "0942a579698349b057b46f41a949b67ba7fc9b0aa2f25e021e787ef2236e4604",
+    "ucode_markup/src/node-types.json": "5b55bc4968a9600ff4e2f40b3709eb20afebdb240b5bf111ab8c6970a54c098c",
+    "ucode_markup/src/parser.c": "0fc74d252cc5d760a126536a8375ca0f0a18ae30dc1a32a5ab32ca826ef50d83"
+  },
+  "corpus_counts": {
+    "ucdocs": 151,
+    "ucode": 244,
+    "ucode_markup": 89
+  },
+  "exact_source_parse_rows": [
+    {
+      "bytes": 3373,
+      "source_path": "package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc",
+      "successful": true
+    },
+    {
+      "bytes": 2955,
+      "source_path": "package/network/config/wifi-scripts/files/usr/share/ucode/wifi/utils.uc",
+      "successful": true
+    },
+    {
+      "bytes": 15250,
+      "source_path": "package/network/config/wifi-scripts/files/lib/netifd/wireless.uc",
+      "successful": true
+    },
+    {
+      "bytes": 9372,
+      "source_path": "package/network/utils/wireguard-tools/files/wireguard.uc",
+      "successful": true
+    }
+  ],
+  "grammar_base_commit": "4a243af329fae2f4ff01e0fc80133cbab8314600",
+  "grammar_checkout_dirty": true,
+  "limits": [
+    "Grammar prototype only; generated CodeQL AST schema/model and actual extractor not yet integrated or tested.",
+    "The parser is deliberately broader than the pinned 0.9.0 target; release-version compatibility and AST semantics need review.",
+    "No runtime Ucode execution, package-installed byte mapping, Linux CodeQL run or SARIF."
+  ],
+  "node_version": "v26.13.1",
+  "npm_ci_exit": 0,
+  "npm_run_build_exit": 0,
+  "npm_test_exit": 0,
+  "npm_version": "11.20.0",
+  "raw_corpus_test_log_sha256": "8131c90b7e5616e18561391a216924be41cdd3989c0e16d111c0f7cfa63a3ef1",
+  "raw_parse_summary_sha256": "f65253d6d40c9fc2fde182ef5e3a44762cc516f0c289d443ade5696bf749f70d",
+  "schema": "mvp-wifi-grammar-prototype-v1",
+  "source_pins": {
+    "openwrt": "bce40f6a15c273778061e8fceced7b9e0f58d99b"
+  },
+  "tree_sitter_cli_version": "0.27.1"
+}

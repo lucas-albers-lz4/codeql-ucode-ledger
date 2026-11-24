@@ -1,0 +1,39 @@
+{
+  "counts": {
+    "base_candidate_count": 52,
+    "head_candidate_count": 52,
+    "head_excluded_count": 1,
+    "head_selected_count": 46,
+    "head_unreviewed_count": 5,
+    "missing_baseline_count": 0
+  },
+  "event_reasons": [
+    "no_reviewed_disposition"
+  ],
+  "fail_closed": true,
+  "identity_csv_sha256": "4717d5a3d4d934ca77c93771ce75f7925e97e97e92d5e8727ec22994368f3e93",
+  "limits": [
+    "Source candidate inventory only; no installed-byte mapping, extraction, query or SARIF.",
+    "Five newer candidates lack approved source-policy disposition, so selector correctly fails closed.",
+    "This captured PR pair is not proof of an active upstream trigger or current PR head."
+  ],
+  "policy_sha256": "70ba39e2307b7c5c9905d572d85b0cca320214e48c0dc64065bad668cddb08fc",
+  "raw_report_sha256": "f94e05348d418897ba8e8058e54a0fdeec0427028061c146d9aa5f4736dd59a0",
+  "schema": "mvp-full-tree-v0.5-pr26933-source-inventory-v1",
+  "selected_content_changed_count": 0,
+  "source_pair": "captured OpenWrt PR #26933; not reauthenticated as current PR head",
+  "source_pair_identity": {
+    "base_commit": "727d8d2f8e5b19a2121e2cf05824e9e5cac35310",
+    "base_tree": "8396fc6de47e8e208dd52b725d327742ab1e0838",
+    "head_commit": "bce40f6a15c273778061e8fceced7b9e0f58d99b",
+    "head_tree": "aad77be60ad2931cfc99f6eb49afd7d72843325e"
+  },
+  "status": "review_required",
+  "unreviewed_paths": [
+    "package/base-files/files/usr/libexec/duid-generate",
+    "package/network/config/netifd/files/lib/netifd/proto-ucode.uc",
+    "package/network/config/netifd/files/lib/netifd/proto.uc",
+    "package/network/config/wifi-scripts/files/lib/netifd/wireless-macaddr.uc",
+    "package/network/utils/wireguard-tools/files/wireguard.uc"
+  ]
+}

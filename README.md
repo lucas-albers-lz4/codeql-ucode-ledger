@@ -106,6 +106,10 @@ Together these move from source selection through extraction, query, and consume
 | [084](claims/084-current-luci-package-ucode-slice.md) | Demonstrated | Fresh disjoint four-file LuCI package Ucode slice: exact source/route/extraction identities; zero default-suite and testing-query rows without a security-negative claim |
 | [085](claims/085-pinned-luci-ucode-source-census.md) | Demonstrated | Pinned 69-path LuCI Ucode/markup source census with exact Git bytes and overlap accounting; 24 remaining install-shaped source candidates, not a full extraction |
 | [086](claims/086-current-luci-markup-shebang-route-slice.md) | Demonstrated | Fresh disjoint 24-file LuCI routing/extraction check: 22 markup-inconclusive templates, two plain shebang scripts, exact successes and zero errors |
+| [087](claims/087-current-luci-quoted-switch-ast.md) | Demonstrated | Current LuCI quoted switch source-shape AST identities and bounded controls |
+| [088](claims/088-current-luci-wol-assembly-ast.md) | Demonstrated | Current LuCI WOL command-assembly AST identities and bounded controls |
+| [089](claims/089-newer-openwrt-wifi-parse-boundary.md) | Demonstrated | Newer pinned OpenWrt wifi corpus: 128 exact routes, 126 extraction successes and two parse-failed source identities |
+| [090](claims/090-wifi-grammar-prototype-extraction.md) | Demonstrated | Disposable grammar override restores exact four-file extraction and observes dynamic-import/export AST nodes; later grammar support merged, released corpus untested |
 
 Every demonstrated status is limited to the run, inputs, controls and revisions
 in that claim. These rows are not a coverage percentage.

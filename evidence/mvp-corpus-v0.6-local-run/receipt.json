@@ -1,0 +1,205 @@
+{
+  "codeql_executable_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+  "controls_sha256": "cb6bc3beb59a21e83c9c906ec2d77019b04513d8f93f467f502485259c625c93",
+  "diagnostic_row_count": 4,
+  "diagnostics_by_staged_path": {
+    "lib/wifi/mac80211.uc": [
+      {
+        "end_column": 21,
+        "end_line": 17,
+        "message": "A parse error occurred. Check the syntax of the file. If the file is invalid, correct the error or exclude the file from analysis.",
+        "source_id": "ucode/parse-error",
+        "start_column": 15,
+        "start_line": 17
+      },
+      {
+        "end_column": 33,
+        "end_line": 17,
+        "message": "A parse error occurred. Check the syntax of the file. If the file is invalid, correct the error or exclude the file from analysis.",
+        "source_id": "ucode/parse-error",
+        "start_column": 33,
+        "start_line": 17
+      }
+    ],
+    "usr/share/ucode/wifi/utils.uc": [
+      {
+        "end_column": 1,
+        "end_line": 72,
+        "message": "A parse error occurred (expected ; symbol). Check the syntax of the file. If the file is invalid, correct the error or exclude the file from analysis.",
+        "source_id": "ucode/parse-error",
+        "start_column": 2,
+        "start_line": 72
+      },
+      {
+        "end_column": 1,
+        "end_line": 76,
+        "message": "A parse error occurred (expected ; symbol). Check the syntax of the file. If the file is invalid, correct the error or exclude the file from analysis.",
+        "source_id": "ucode/parse-error",
+        "start_column": 2,
+        "start_line": 76
+      }
+    ]
+  },
+  "error_file_count": 2,
+  "identities_csv_sha256": "30c0959403d1d61a8236d64e00a5748cd5ee05216b95030c788b16d2c61b8ad1",
+  "installed_bytes_verified": false,
+  "limits": [
+    "Stopped on extraction diagnostics as required; no current-suite SARIF or alert conclusion.",
+    "Local source-staged macOS result; package-installed bytes and Linux cost unverified.",
+    "Diagnostic messages alone do not establish whether pinned source syntax is valid runtime Ucode or identify a grammar fix."
+  ],
+  "linux_run": false,
+  "manifest_sha256": "9c004ed477665f6567a071eac45051445c61019af927bfa4e51bae4c50ebd490",
+  "pack_tree_sha256": "891c6c3d4eae1accaf0c502775ef0077a81d542eac39c17241bdd769dde37674",
+  "phase_metrics": [
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "init",
+        "$RUN/db/current",
+        "--language=ucode",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--source-root=$RUN/stage"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "database-init",
+      "wall_seconds": 0.579
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "index-files",
+        "--language=ucode",
+        "--include=**/*",
+        "--working-dir=$RUN/stage",
+        "$RUN/db/current",
+        "--common-caches=$RUN/cache/common",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "index-files",
+      "wall_seconds": 1.208
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "finalize",
+        "$RUN/db/current",
+        "--common-caches=$RUN/cache/common"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "database-finalize",
+      "wall_seconds": 1.806
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db/current",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/success.bqrs"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "success-query",
+      "wall_seconds": 1.458
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/success.bqrs"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "success-decode",
+      "wall_seconds": 0.207
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db/current",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/errors.bqrs"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "errors-query",
+      "wall_seconds": 1.444
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/errors.bqrs"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "errors-decode",
+      "wall_seconds": 0.208
+    }
+  ],
+  "preflight_resources": {
+    "cpu_count": 10,
+    "free_disk_bytes": 129638080512,
+    "memory_free_percentage": 60
+  },
+  "producer_dirty": false,
+  "producer_sha": "9166af76cf6944e1b3ea5856a9176366a1f7a6ee",
+  "raw_sha256": {
+    "errors.csv": "df2966fdd2b275ad808476d87babab8303047ecf38e6670df7410b6e7d7bf2c6",
+    "extractor_diagnostics.jsonl": "56b053c297687cdcb75763b8dc6207f2e007c62b0a6ed7374304ddccb42592b3",
+    "routing.json": "405ce6cee70f4849a66c37f6a7ebf044d3bb78b1c31e2cf94e0a9e9169d609c6",
+    "success.csv": "f1b03f45b97a2bd91410c71bc0634c20347f3395a991b327fbb6c1ef7a130237"
+  },
+  "routing_counts": {
+    "duplicate_input_count": 0,
+    "excluded_count": 0,
+    "input_count": 128,
+    "markup_count": 35,
+    "markup_inconclusive_count": 35,
+    "plain_count": 93,
+    "uncertain_count": 0
+  },
+  "run_command": "python3 -B work/mvp-corpus-v0.6-prep/run.py",
+  "run_script_sha256": "4bd0fe98d7ce33b82c3598801dbc8754c9f8b63e7e8d389eeae478262f7f11b4",
+  "sarif_run": false,
+  "schema": "mvp-corpus-v0.6-local-failure-v1",
+  "selected_count": 128,
+  "source_and_staging_rechecked_after_failure": true,
+  "source_oracle_sha256": "c30bbd8108c44519b8f63f0861d14dbbb5ef8f533f09a20b79942181ec360c64",
+  "source_pins": {
+    "luci": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "openwrt": "bce40f6a15c273778061e8fceced7b9e0f58d99b",
+    "packages": "07e0d16305d2b5903b37ad7913e33e18795f81a4"
+  },
+  "status": "failed at exact successful identities and nonempty parse diagnostics; no suite/SARIF run",
+  "successful_identity_count": 126
+}

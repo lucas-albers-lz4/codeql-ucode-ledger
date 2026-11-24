@@ -1,0 +1,36 @@
+{
+  "commands": [
+    {
+      "exit": 0,
+      "label": "database-init",
+      "wall_seconds": 0.609
+    },
+    {
+      "exit": 0,
+      "label": "index-files",
+      "wall_seconds": 1.236
+    }
+  ],
+  "initial_manifest_sha256": "28a3fa6a6257468f5b36380470d97747b177fa81073db61f994e4dcfde9afc15",
+  "initial_oracle_sha256": "7647329cdf947b2ae18aca8e3b50dffc07c1f355a714914adbda19e047df6822",
+  "interpretation": "Initial source-derived route oracle was wrong; no extraction/query/SARIF pass claimed. Raw run and initial oracle copies retained under ignored work/.",
+  "mismatches": [
+    {
+      "expected_reason": "ucode_extension",
+      "observed_reason": "ucode_shebang",
+      "source_first_line": "#!/usr/bin/env ucode",
+      "staged_path": "usr/libexec/network/packet-steering.uc"
+    },
+    {
+      "expected_reason": "ucode_extension",
+      "observed_reason": "ucode_shebang",
+      "source_first_line": "#!/usr/bin/ucode",
+      "staged_path": "usr/bin/base64decode.uc"
+    }
+  ],
+  "phase": "route-oracle-comparison-before-finalize",
+  "routing_json_sha256": "c07985bbc3151cdfe4234a1316c1f874535958b3c2dbef49f655f09967b35a61",
+  "run_root_normalized": "work/mvp-corpus-v0.5-run-20261124-a",
+  "schema": "mvp-corpus-v0.5-first-attempt-failure-v1",
+  "script_exit": 1
+}

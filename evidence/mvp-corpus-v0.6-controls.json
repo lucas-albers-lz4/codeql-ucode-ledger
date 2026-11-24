@@ -1,0 +1,76 @@
+{
+  "basis": "Independently checked pinned source bytes, Git objects, and recipe/condition review; controls define expectations only, not CodeQL observations.",
+  "near_miss_controls": [
+    {
+      "expected": "excluded competing shell source; CONFIG_WIFI_SCRIPTS_UCODE=y selects the files-ucode counterpart at same installed path; must not appear as an eligible selected source identity",
+      "git_blob": "79109593447e116a09eec66e7187bf809b5bf184",
+      "sha256": "d108db6f8aed5e37f1e978edfd5807c4e511a44d0ee582c7582ab7b8376f90ac",
+      "source_commit": "bce40f6a15c273778061e8fceced7b9e0f58d99b",
+      "source_path": "package/network/config/wifi-scripts/files/lib/netifd/wireless/mac80211.sh"
+    }
+  ],
+  "positive_controls": [
+    {
+      "expected": "eligible selected source identity with stated route; verify exactly one successful extraction identity after future scan",
+      "git_blob": "9fe302ce892315c2bcc36f0855e93a72ff296745",
+      "sha256": "6a03dcf045db393a2bfbd94ca6dd56d635c425730f2118ff409d8c69f556d26a",
+      "source_path": "package/boot/uboot-tools/uboot-envtools/files/fw_loadenv"
+    },
+    {
+      "expected": "eligible selected source identity with stated route; verify exactly one successful extraction identity after future scan",
+      "git_blob": "56911347a75d1b85211eecf3cc33d34d93924041",
+      "sha256": "0643779b5403e23d91e55550942e695d6901e3ddff605898b9f40f368cf830cf",
+      "source_path": "package/network/config/netifd/files/lib/netifd/main.uc"
+    },
+    {
+      "expected": "eligible selected source identity with stated route; verify exactly one successful extraction identity after future scan",
+      "git_blob": "45f023e2036d42829adb15543745b4d5d49ad093",
+      "sha256": "b952432a1e79e7336447a03c4045723427b07dcf335b686e1e46dd68e72aae32",
+      "source_path": "package/network/services/unetd/files/unet.uc"
+    },
+    {
+      "expected": "newly eligible source identity under stated package/option condition; verify exactly one successful extraction identity and expected route after a future scan",
+      "git_blob": "2318239feb7b41dd44d92a0b1b363f5075376d8c",
+      "package_or_target_condition": "package selected: base-files for an image",
+      "proposed_installed_path": "usr/libexec/duid-generate",
+      "sha256": "b1bd9cd34dc960f22eb65cfb666b3746dae21143f3b83668e26354c4f48a7af0",
+      "source_path": "package/base-files/files/usr/libexec/duid-generate"
+    },
+    {
+      "expected": "newly eligible source identity under stated package/option condition; verify exactly one successful extraction identity and expected route after a future scan",
+      "git_blob": "7db61cdb2c16a608c2e13a5d6408d2a17f38ec1d",
+      "package_or_target_condition": "package selected: netifd",
+      "proposed_installed_path": "lib/netifd/proto-ucode.uc",
+      "sha256": "798f452425e7f0dd48774588fec9753c20bfc6ae74622f370ca1eb24cab6e399",
+      "source_path": "package/network/config/netifd/files/lib/netifd/proto-ucode.uc"
+    },
+    {
+      "expected": "newly eligible source identity under stated package/option condition; verify exactly one successful extraction identity and expected route after a future scan",
+      "git_blob": "b1a4e2ee1269c439dd4d64eadb74d85a3ccd8657",
+      "package_or_target_condition": "package selected: netifd",
+      "proposed_installed_path": "lib/netifd/proto.uc",
+      "sha256": "de46a4cf72156d5364ed91d150fd710203d64a8772df03e6ff2cd783490afee6",
+      "source_path": "package/network/config/netifd/files/lib/netifd/proto.uc"
+    },
+    {
+      "expected": "newly eligible source identity under stated package/option condition; verify exactly one successful extraction identity and expected route after a future scan",
+      "git_blob": "8ff487629760ca239c78fa947b79f01084b5fb7a",
+      "package_or_target_condition": "package selected: wifi-scripts and CONFIG_WIFI_SCRIPTS_UCODE=y; no same-path files-ucode override in captured tree",
+      "proposed_installed_path": "lib/netifd/wireless-macaddr.uc",
+      "sha256": "7f1c7e78220b0062f876bf48f5251bbe02850b634340e2cfc23543da33b9644c",
+      "source_path": "package/network/config/wifi-scripts/files/lib/netifd/wireless-macaddr.uc"
+    },
+    {
+      "expected": "newly eligible source identity under stated package/option condition; verify exactly one successful extraction identity and expected route after a future scan",
+      "git_blob": "fe876ebdbbc8e1b66328c5fcad60acf3680ac810",
+      "package_or_target_condition": "package selected: wireguard-tools",
+      "proposed_installed_path": "lib/netifd/proto/wireguard.uc",
+      "sha256": "5b895085d72c3feb297d18f378676daae596ab40145113d354ff345d8d8b5d39",
+      "source_path": "package/network/utils/wireguard-tools/files/wireguard.uc"
+    }
+  ],
+  "preparation_context": "Corrected stale carried-forward absent-wireguard near miss after independent manifest/control review, before any v0.6 analyzer output. wireguard.uc is an eligible positive at this source pin; the competing wifi shell remains the discriminating eligible near miss. Corrected five proposed installed paths from absolute to stage-relative and refreshed carried-forward positive control blob/hash identities against the new source pin, before analyzer output.",
+  "prepared_before_scan": true,
+  "scan_performed": false,
+  "schema": "mvp-corpus-v0.6-independent-controls-v1"
+}

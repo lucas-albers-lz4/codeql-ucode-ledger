@@ -1,0 +1,75 @@
+{
+  "codeql_executable_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+  "codeql_version": "2.27.4",
+  "commands": "commands.json, all 18 exit zero",
+  "oracle_sha256": "5a0cef5a4a06dc42f192ce9e924b47a79f939cda702f1e440a39e32aba5d2c2a",
+  "peak_rss": "unavailable",
+  "prior_route_mismatch": "work/inert-positive-local-routed-20261124/summary.json; corrected expectation was frozen v0.6 corpus policy and was also observed in prior run",
+  "producer_base": "9166af76cf6944e1b3ea5856a9176366a1f7a6ee",
+  "producer_state": "dirty copied source; original full diff and build provenance in pack-provenance-producer.json and pack-provenance-preflight.json",
+  "query_sha256": "a071facd947a65d3eb48906070cf17ad53d2bd62b54116991437f77fef5e52d8",
+  "results": {
+    "control": {
+      "extraction_errors": 0,
+      "installed_path": "usr/share/rpcd/ucode/example.uc",
+      "phase_seconds": {
+        "database-finalize": 0.967,
+        "database-init": 0.473,
+        "default-suite-analyze": 3.591,
+        "errors-decode": 0.212,
+        "errors-query": 1.45,
+        "index-files": 0.363,
+        "resolve-suite": 0.362,
+        "success-decode": 0.212,
+        "success-query": 1.414
+      },
+      "phase_sum_seconds": 9.044,
+      "results": [],
+      "route_classification": "plain",
+      "route_reason": "rpcd_raw_mode_full_path",
+      "route_status": "plain_route_selected",
+      "sarif_sha256": "1b1af5ae59867222f37273d9614b1bfff5c14c6d346998eca20874e2bae54e31",
+      "source_sha256": "d8584ee08ac8e94bc6b20860a7385074c0bee18046f1ebacfdfef9033cb6f4bd",
+      "successful_identities": 1
+    },
+    "positive": {
+      "extraction_errors": 0,
+      "installed_path": "usr/share/rpcd/ucode/example.uc",
+      "phase_seconds": {
+        "database-finalize": 1.1,
+        "database-init": 0.454,
+        "default-suite-analyze": 3.704,
+        "errors-decode": 0.211,
+        "errors-query": 1.422,
+        "index-files": 0.587,
+        "resolve-suite": 0.36,
+        "success-decode": 0.208,
+        "success-query": 1.411
+      },
+      "phase_sum_seconds": 9.457,
+      "results": [
+        {
+          "region": {
+            "endColumn": 44,
+            "startColumn": 26,
+            "startLine": 53
+          },
+          "rule": "ucode/m4/direct-rpc-shell-word",
+          "uri": "usr/share/rpcd/ucode/example.uc"
+        }
+      ],
+      "route_classification": "plain",
+      "route_reason": "rpcd_raw_mode_full_path",
+      "route_status": "plain_route_selected",
+      "sarif_sha256": "0debe4539976e8c6e6655051950d780cffa8b36e68eae6875ae3c93e11ab4f88",
+      "source_sha256": "c39fcb1e8337c2282cfd51a465a6b6216260f369858abdedea620040a5fa27aa",
+      "successful_identities": 1
+    }
+  },
+  "schema": "mvp-inert-positive-local-feasibility-v1",
+  "scope": "local inert single-file source-staged experimental probe; no PR, released handoff, execution or installed-byte claim",
+  "source_checkout_clean_post_run": true,
+  "source_git_blob": "d6e21fcfeb8ff49d0387a605313b2b6f11fed56f",
+  "source_path": "applications/luci-app-example/root/usr/share/rpcd/ucode/example.uc",
+  "source_pin": "b2e0be4b46ec0fd43394c081fa7c50657af14011"
+}

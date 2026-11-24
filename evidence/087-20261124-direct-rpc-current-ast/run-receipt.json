@@ -1,0 +1,408 @@
+{
+  "ast_identity_rows": [
+    {
+      "entities": [
+        {
+          "end_column_inclusive": 67,
+          "end_line": 343,
+          "kind": "MemberExpression",
+          "line": 343,
+          "stage_uri": "usr/share/rpcd/ucode/luci",
+          "start_column": 49
+        },
+        {
+          "end_column_inclusive": 68,
+          "end_line": 343,
+          "kind": "CallExpression",
+          "line": 343,
+          "stage_uri": "usr/share/rpcd/ucode/luci",
+          "start_column": 38
+        },
+        {
+          "end_column_inclusive": 69,
+          "end_line": 343,
+          "kind": "TemplateSubstitution",
+          "line": 343,
+          "stage_uri": "usr/share/rpcd/ucode/luci",
+          "start_column": 36
+        },
+        {
+          "end_column_inclusive": 87,
+          "end_line": 343,
+          "kind": "TemplateString",
+          "line": 343,
+          "stage_uri": "usr/share/rpcd/ucode/luci",
+          "start_column": 22
+        },
+        {
+          "end_column_inclusive": 88,
+          "end_line": 343,
+          "kind": "CallExpression",
+          "line": 343,
+          "stage_uri": "usr/share/rpcd/ucode/luci",
+          "start_column": 16
+        }
+      ],
+      "projected_tuple": [
+        "usr/share/rpcd/ucode/luci",
+        343,
+        49,
+        343,
+        67,
+        36,
+        22,
+        16
+      ],
+      "source_line": 343
+    },
+    {
+      "entities": [
+        {
+          "end_column_inclusive": 67,
+          "end_line": 400,
+          "kind": "MemberExpression",
+          "line": 400,
+          "stage_uri": "usr/share/rpcd/ucode/luci",
+          "start_column": 49
+        },
+        {
+          "end_column_inclusive": 68,
+          "end_line": 400,
+          "kind": "CallExpression",
+          "line": 400,
+          "stage_uri": "usr/share/rpcd/ucode/luci",
+          "start_column": 38
+        },
+        {
+          "end_column_inclusive": 69,
+          "end_line": 400,
+          "kind": "TemplateSubstitution",
+          "line": 400,
+          "stage_uri": "usr/share/rpcd/ucode/luci",
+          "start_column": 36
+        },
+        {
+          "end_column_inclusive": 87,
+          "end_line": 400,
+          "kind": "TemplateString",
+          "line": 400,
+          "stage_uri": "usr/share/rpcd/ucode/luci",
+          "start_column": 22
+        },
+        {
+          "end_column_inclusive": 88,
+          "end_line": 400,
+          "kind": "CallExpression",
+          "line": 400,
+          "stage_uri": "usr/share/rpcd/ucode/luci",
+          "start_column": 16
+        }
+      ],
+      "projected_tuple": [
+        "usr/share/rpcd/ucode/luci",
+        400,
+        49,
+        400,
+        67,
+        36,
+        22,
+        16
+      ],
+      "source_line": 400
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "query",
+        "compile",
+        "<RUN_ROOT>/producer-copy/ql/src/testing/QuotedSwitchAst.ql",
+        "--search-path=<RUN_ROOT>/producer-copy/extractor-pack:<RUN_ROOT>/producer-copy/ql/lib:<RUN_ROOT>/producer-copy/ql/src",
+        "--compilation-cache=<RUN_ROOT>/cache/compile",
+        "--no-default-compilation-cache"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "label": "compile-ast-query",
+      "peak_rss_bytes": null,
+      "stderr_sha256": "28d2838569ee1cde0e96ecec7cc708be391250727627d884d92b014bd9606b2d",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 1.99
+    },
+    {
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "database",
+        "init",
+        "<RUN_ROOT>/db",
+        "--language=ucode",
+        "--search-path=<RUN_ROOT>/producer-copy/extractor-pack",
+        "--common-caches=<RUN_ROOT>/cache/db",
+        "--source-root=<RUN_ROOT>/stage"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "label": "database-init",
+      "peak_rss_bytes": null,
+      "stderr_sha256": "090e84cfb16f06391a2fc3c48797b270a1413f12bda13cfff5f7f4cedb6c1d32",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 0.489
+    },
+    {
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "database",
+        "index-files",
+        "--language=ucode",
+        "--include=**/rpcd/ucode/*",
+        "--working-dir=<RUN_ROOT>/stage",
+        "--common-caches=<RUN_ROOT>/cache/db",
+        "<RUN_ROOT>/db"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "label": "database-index",
+      "peak_rss_bytes": null,
+      "stderr_sha256": "fbcb84e9338d1536125560f9841227ccd9e3ec5069eb190b460af577ce5742e3",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 0.719
+    },
+    {
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "database",
+        "finalize",
+        "<RUN_ROOT>/db",
+        "--common-caches=<RUN_ROOT>/cache/db"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "label": "database-finalize",
+      "peak_rss_bytes": null,
+      "stderr_sha256": "f7d81892004f6c5c71fca7db01af95eddd900582049e05d4cdfbb30aa73b204e",
+      "stdout_sha256": "a5fd077015464f71ff1e8007c2e4cc41e8efbace3feda44cf954874bf306028a",
+      "wall_seconds": 1.152
+    },
+    {
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "query",
+        "run",
+        "<RUN_ROOT>/producer-copy/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=<RUN_ROOT>/db",
+        "--search-path=<RUN_ROOT>/producer-copy/extractor-pack:<RUN_ROOT>/producer-copy/ql/lib:<RUN_ROOT>/producer-copy/ql/src",
+        "--common-caches=<RUN_ROOT>/cache/query",
+        "--compilation-cache=<RUN_ROOT>/cache/compile",
+        "--no-default-compilation-cache",
+        "--output=<RUN_ROOT>/out/success.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "label": "success-run",
+      "peak_rss_bytes": null,
+      "stderr_sha256": "ed3a531a93f185b698aa0a685cdcfa5714823cfde1d15242b1c8a8ab5165bd44",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 1.391
+    },
+    {
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<RUN_ROOT>/out/success.bqrs"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "label": "success-decode",
+      "peak_rss_bytes": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "65a024293ab0697c95c88aea97f7c3b57dc75238a35628b58462be988396bbd9",
+      "wall_seconds": 0.214
+    },
+    {
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "query",
+        "run",
+        "<RUN_ROOT>/producer-copy/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=<RUN_ROOT>/db",
+        "--search-path=<RUN_ROOT>/producer-copy/extractor-pack:<RUN_ROOT>/producer-copy/ql/lib:<RUN_ROOT>/producer-copy/ql/src",
+        "--common-caches=<RUN_ROOT>/cache/query",
+        "--compilation-cache=<RUN_ROOT>/cache/compile",
+        "--no-default-compilation-cache",
+        "--output=<RUN_ROOT>/out/errors.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "label": "errors-run",
+      "peak_rss_bytes": null,
+      "stderr_sha256": "030a9ec2e63dfd1005b4de0e05c5bc81049ab1e1ef533b6e77eb6015fc2fa5bb",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 1.397
+    },
+    {
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<RUN_ROOT>/out/errors.bqrs"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "label": "errors-decode",
+      "peak_rss_bytes": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+      "wall_seconds": 0.213
+    },
+    {
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "query",
+        "run",
+        "<RUN_ROOT>/producer-copy/ql/src/testing/QuotedSwitchAst.ql",
+        "--database=<RUN_ROOT>/db",
+        "--search-path=<RUN_ROOT>/producer-copy/extractor-pack:<RUN_ROOT>/producer-copy/ql/lib:<RUN_ROOT>/producer-copy/ql/src",
+        "--common-caches=<RUN_ROOT>/cache/query",
+        "--compilation-cache=<RUN_ROOT>/cache/compile",
+        "--no-default-compilation-cache",
+        "--output=<RUN_ROOT>/out/ast-witness.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "label": "ast-witness-run",
+      "peak_rss_bytes": null,
+      "stderr_sha256": "f75de4c8a0c5f24b496d41dd4e86f4a75cb3efed50fd3eab948875fa5e17d682",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 1.169
+    },
+    {
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<RUN_ROOT>/out/ast-witness.bqrs"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "label": "ast-witness-decode",
+      "peak_rss_bytes": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "aeba64184d9e2d93ca92184ed37894271c3c7ae822117f6a46589807fb50e24c",
+      "wall_seconds": 0.216
+    },
+    {
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "database",
+        "analyze",
+        "<RUN_ROOT>/db",
+        "<RUN_ROOT>/producer-copy/ql/src/m4/DirectRpcShellWord.ql",
+        "--format=sarifv2.1.0",
+        "--output=<RUN_ROOT>/out/direct-rule.sarif",
+        "--search-path=<RUN_ROOT>/producer-copy/extractor-pack:<RUN_ROOT>/producer-copy/ql/lib:<RUN_ROOT>/producer-copy/ql/src",
+        "--common-caches=<RUN_ROOT>/cache/query",
+        "--compilation-cache=<RUN_ROOT>/cache/compile",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "cwd": "<RUN_ROOT>/producer-copy",
+      "exit": 0,
+      "label": "direct-rule-analyze",
+      "peak_rss_bytes": null,
+      "stderr_sha256": "695917216b42948ba71cbf90ff3cd4c0c16f9f4e37c70215b0fc2b9f425aae11",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 3.774
+    }
+  ],
+  "extraction_errors": [],
+  "fixture_sha256": "1962ede2b346541a3eab838391957ede471f9f68d0ccd99e35d0cbb759596286",
+  "grammar_diff_sha256": "d3cf51e807b842c1eecbe55982a7a91782a8b97e60c4fe08ffbf64d0fe05be2b",
+  "grammar_revision": "4a243af329fae2f4ff01e0fc80133cbab8314600",
+  "pack_binary_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+  "pack_build_revision": "8375887ed14825dd59addbfd0df43616d9e684fb",
+  "peak_rss_bytes": null,
+  "peak_rss_limit": "unavailable: macOS /usr/bin/time -l exits 1 under sandbox",
+  "producer_commit": "7c62553b7a81b236b75d1b1fa0d50c612a020cc5",
+  "ql_locks": {
+    "ql/lib/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+    "ql/src/codeql-pack.lock.yml": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3"
+  },
+  "query_sha256": "056d611a0351131bd4e018387d1dda04ee266e648488abe26f2fac8510acb737",
+  "raw_hashes": {
+    "ast_rows_json": "b85452e3a1684cc8b1045b7630440eb7be50e096b7596ab2ced76e72738bc449",
+    "commands_json": "2aadef28716d185a24c95968a6b9da0ce2f14ca5f42ae57a61d94e13b51da99a",
+    "errors_json": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "preflight_json": "a9c41bc0b70bd29e4750baf7f32b3e74fadbcd6e291153cbe8b84c7b6f8c9a86",
+    "receipt_json": "94ef9a75f5e7c01928bee259469aa57913015e1cdb1a914ccbdfb2f6eceed2b2",
+    "route_json": "24dc0dcee55e063026634a17f17e85cee65a5086c805ed1fd3563ce34c29c930",
+    "run_script": "c91f7940f53625ce83ffc6ec70a8bcd909ed70d73adc161bc7cac9b612b0a29d",
+    "sarif": "d3d04d07b658ec621ddb24cfbb492bfa614218b9f56f4b52b9f783e746a949e6",
+    "success_json": "65a024293ab0697c95c88aea97f7c3b57dc75238a35628b58462be988396bbd9"
+  },
+  "resource_preflight": {
+    "cpu_count": 10,
+    "disk_free_bytes": 131167887360,
+    "memory_pressure": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 65%"
+  },
+  "route": {
+    "counts": {
+      "duplicate_input_count": 0,
+      "excluded_count": 0,
+      "input_count": 2,
+      "markup_count": 0,
+      "markup_inconclusive_count": 0,
+      "plain_count": 2,
+      "uncertain_count": 0
+    },
+    "decisions": [
+      {
+        "classification": "plain",
+        "installed_path": "usr/share/rpcd/ucode/controls.uc",
+        "reason": "rpcd_raw_mode_full_path",
+        "status": "plain_route_selected"
+      },
+      {
+        "classification": "plain",
+        "installed_path": "usr/share/rpcd/ucode/luci",
+        "reason": "rpcd_raw_mode_full_path",
+        "status": "plain_route_selected"
+      }
+    ],
+    "sha256": "24dc0dcee55e063026634a17f17e85cee65a5086c805ed1fd3563ce34c29c930"
+  },
+  "sarif_result": {
+    "region": {
+      "endColumn": 56,
+      "startColumn": 37,
+      "startLine": 11
+    },
+    "rule_id": "ucode/m4/direct-rpc-shell-word",
+    "uri": "usr/share/rpcd/ucode/controls.uc"
+  },
+  "schema": "direct-rpc-current-ast-portable-receipt-v1",
+  "source_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+  "source_first_oracle_sha256": "6350940a793c7f2ed1f45fc9ca4aeebfec58a67e257c36f0953627dd61b94604",
+  "status": "source-first controls matched",
+  "successful_multiset": {
+    "usr/share/rpcd/ucode/controls.uc": 1,
+    "usr/share/rpcd/ucode/luci": 1
+  },
+  "tool_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+  "tool_version": "CodeQL command-line toolchain release 2.27.4.",
+  "total_wall_seconds": 12.724
+}

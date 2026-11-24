@@ -1,0 +1,28 @@
+{
+  "consumer_commit": "33a27a4d75b8381c92823b71c1856e1e746f358a",
+  "consumer_dirty": false,
+  "control_commit": "727d8d2f8e5b19a2121e2cf05824e9e5cac35310",
+  "control_dirty": false,
+  "control_tree": "8396fc6de47e8e208dd52b725d327742ab1e0838",
+  "excluded_count": 13,
+  "fail_closed": false,
+  "input_sha256": {
+    "captured_pull_api": "e3f2227ef4709d155760f96cc879f7bde12e41ecf2f868b31a48ca7108434f47",
+    "control_binding": "1ecbea0722e1df059ed1424bf3479cb2694564af874acf1ea5cdf99ae913b873",
+    "control_inventory": "2527b075d7fcf7a80c512658cd2dd837787586c5aaf849d6f8ff84cc4a22d31a",
+    "control_manifest": "86276158f4aba6486d4554f60e9830a5fa627052b7a2f9d56d293d72391e71e2",
+    "event_input": "1cd4088337dd67631dee3a650d0aab76e8388c91416f089489d02a75e7edd3ed",
+    "identity_receipt": "e45d4335051556dc3f6abecfdfb1c437d4e4dd4ad0e3df26eb398b803a265b10"
+  },
+  "inventory_status": "inventory_ready",
+  "pull_api": "captured 2026-11-24 response, not a fresh current API observation",
+  "routes": {
+    "markup": 35,
+    "plain": 93
+  },
+  "schema": "mvp-event-control-preflight-v1",
+  "selected_count": 128,
+  "source_commit": "bce40f6a15c273778061e8fceced7b9e0f58d99b",
+  "source_dirty": false,
+  "status": "source-first control input accepted; no released CodeQL scan"
+}

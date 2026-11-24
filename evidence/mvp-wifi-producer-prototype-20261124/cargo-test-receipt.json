@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "cargo",
+    "test",
+    "--offline",
+    "--locked"
+  ],
+  "exit": 0,
+  "producer_sha": "9166af76cf6944e1b3ea5856a9176366a1f7a6ee",
+  "scope": "local modified grammar and generated schema; existing producer test suite",
+  "stderr": "cargo-test.stderr",
+  "stderr_sha256": "476b77cea251a087efec496f69bd4065dd1a82958284a7d8d8985385d3770c16",
+  "stdout": "cargo-test.stdout",
+  "stdout_sha256": "bb8f18adf0bb92c84f121c9358fe4717884602512ac4c05e0d3d8e60648a305c",
+  "wall_seconds": 0.643
+}
