@@ -1,0 +1,30 @@
+# Six-backend bounded source inventory
+
+2026-11-24 UTC. Read-only #151 source inventory, excluding Dockerman (see [Dockerman](DOCKERMAN.md)) and without repeating DDNS get_services_log. This is not extraction, call binding, runtime execution, a grant/effect join, authorization, a security finding, or completeness for other fs families. #151 remains gated by accepted producer scope and models. Live issue state (open, no comments) was supplied by orchestrator. The reviewed #155 source packet and named wave plan retain their limits.
+
+Inputs: LuCI commit b2e0be4b46ec0fd43394c081fa7c50657af14011; seven-file source manifest SHA-256 aa73b3d266e8687581476de97294205708ed292650d162c19e22e5bd6d031fc1. Each of the six retained staged source files matched `git show` at the pin and matched its manifest Git blob and SHA-256:
+
+| file | Git blob | SHA-256 |
+|---|---|---|
+| ddns.uc | 32d1da738b4932159a39bcda7ee6c72b5c58a8fd | 924bd2b53fbc64d2a00a479e36ef3c9239488445fc1ced70122e8ac3735fdc2b |
+| example.uc | d6e21fcfeb8ff49d0387a605313b2b6f11fed56f | 8108ebde4152d186b33f9e7447adf7dee6350e3b1ecc673d0bce2bda72fda927 |
+| rustdesk-server.uc | 184bb2f0b42ca70ee7e1f2fe16a43c476a7602dd | 16c86ab0d8537eb6def1130e4fd28f9597b5d37a4e499dbd8d9d2774c2c7da7e |
+| tailscale.uc | 2a30bdbfbadc285133c25b3d50dd6ae4b5317bf4 | 353f00bed64f81c74689ff2297704c4ba87ad9563abd60d265c61711c88441a4 |
+| weechat.uc | 9f17ae3718a278eab2813ccfae4f2c732a9118e8 | 548213868a38bd84d8a9cb9b9842c647d4e79fa9df21b815b6b869f26a54e44e |
+| wifihistory.uc | 918ad9818b2e769d7b5a95f3855cb180fb8e82a7 | b9ce671467adf519ac61e0f18e134856c4704497457949d774cb1af68830397c |
+
+Bounded textual scan: `rg -n '\b(exec_direct|exec|popen|system)\s*\(' <six staged files>`. The following lists every hit from this expression, including declaration and comment. It does not find alternate spellings, multiline token separation beyond this regex, aliases, computed properties or dynamically selected calls; identifier spelling is not binding proof. No literal `fs.exec` or `fs.exec_direct` occurrence is among the hits. The nearest named handler or helper is source structure, not proof of a semantic call edge.
+
+| source | line(s), classification |
+|---|---|
+| ddns | 38 `system` in helper killcmd; referenced from get_services_status at 148. 46 `popen` in helper get_date, called via epoch2date (50–57), used in get_services_status and get_ddns_state (214–215). 139 `system` nested in get_services_status callback. 227 `system` in nested hasCommand; 234, 238, 246, 258, 262 `system` in nested helpers in get_env. Object `luci.ddns` returned at 319. |
+| rustdesk-server | 33 `popen` in helper execCommand; get_version calls it at 126–127. Object `luci.rustdesk-server` returned at 163. |
+| tailscale | 10 local `exec` function declaration, 12 `popen` inside it. Local wrapper calls: get_status 55, set_settings 159, do_login 214, do_logout 239, get_subroutes 251, setup_firewall 371 and 377. 174 is commented-out `popen`; 207 is a live textual `popen` in do_login. do_login 189 and do_logout 234 also call `methods.get_status.call()`, which contains the wrapper call at 55; these are indirect source relationships. Object `tailscale` returned at 393. Wrapper spelling is not evidence of fs.exec. |
+| weechat | 36 `popen` in helper px5g_supports_addext, referenced by generate_certificate at 256 and 306. 118 `system` in cleanup_temp_dir, referenced in generate_certificate at 323, 328, 344. 151 and 157 `popen` in get_daemon_info; 341 `system` in generate_certificate. Object `weechat` returned at 389. |
+| example, wifihistory | No regex hits. This is not absence of other effects. |
+
+`popen` is named in the fs import in ddns (5), rustdesk-server (4), tailscale (5), and weechat (4); spelling and import do not settle shadowing or binding. Dynamic arguments, helpers, nested callbacks, aliases and unexamined forms remain unresolved. In particular no interprocedural or source-to-sink flow follows from these textual relationships.
+
+Package ACLs are `applications/luci-app-<name>/root/usr/share/rpcd/acl.d/luci-app-<name>.json` at the same pin. Git blob / SHA-256: ddns `298378452d28f3b4a67f2ee01602aed5f4aa1168` / `7761a8c64b4fc7a752f3d2e12f85c9a375ea4ff72b20c65ada3af46bb66b0da3`; example `b6849ffe6ccd53aa68f30e7d150fa478a0e4ca11` / `ff90cd1531ba7906e299b677ec55f4fb883dc931da2ef8b67bc56b8ac1dbd4aa`; rustdesk-server `9066cf12798b2161d166ce9b8403aa2a26168e72` / `c438a50afe39fff827b368371144560a3641722550ac18372f6d1adb500a5cba`; tailscale-community `f80185ff12b09080d1507edb4d6578cfc335bcbe` / `4fce3b16eacca177e1a1444119d64c5f8c0a36305538ec50dfe52df4291234d2`; weechat `1df8c03855a2b77e45ed0e1e75ef6a83bdd72b3b` / `5fbea3f0f2de461b478a6300e6006c87dc0cd26bdd136e696d867a838cd79335`; wifihistory `b0f790fc415aa475212f0ce6da5793537fe031d1` / `0045156d95332aa6bc2a1711489f3f1bec1f3a48b7eec02802a8e0827b0186ce`. Each group has the same name as its package. Literal ACL ubus declarations for the above associated exact pairs are: read `luci.ddns/{get_services_status,get_ddns_state,get_env}`, `luci.rustdesk-server/get_version`, `tailscale/{get_status,get_subroutes}`, `weechat/get_daemon_info`; write `tailscale/{set_settings,do_login,do_logout,setup_firewall}`, `weechat/generate_certificate`. This states declared text only, including helper-associated candidates, not installed/effective permissions or wildcard resolution.
+
+Catalog: consumer a1c9875575814329e5abdc70bc36e30f5ef0b987, `policy/grants.json` blob 47a522fa080acd554e7fa941ec4ad8f7a94efd54, SHA-256 b34cdc9b9403c0ca21761ca340d6840e2b23f522486c4d6f7e139a4fa77b12bc (retained file bytes verified). Full 110-row JSON scan comparing exact `ubus_object` and `method` found zero rows for each of the 12 listed pairs. This does not show the absence of grants outside the catalog or make an effect/policy conclusion. No catalog comparisons were made for helpers alone, missing/unknown object-method identities, or other fs families. Independent review verified the stated source associations, hashes and catalog comparisons.
