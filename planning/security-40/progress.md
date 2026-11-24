@@ -7,9 +7,9 @@ Update after every claim transition; newest entries first.
 
 - Program opened: 2026-11-24
 - Claims created: 035–074 (40); base commit `379b172` on main.
-  035–040, 046, 048, 055 Demonstrated (category A complete);
-  041–045, 047, 051, 052, 056 Blocked; 049/050 (D) + 053/054 (E)
-  lanes running; 057–074 Proposed.
+  035–040, 046, 048–050, 055 Demonstrated (categories A + D complete);
+  041–045, 047, 051, 052, 056 Blocked; 053/054 (E) lane running;
+  057–074 Proposed.
 - Wave 0: P1 DONE — **PASS, full-build-extraction** (probe-c/VERDICT.md):
   15/15 uhttpd .c files, 0 extractor diagnostics, semantic queries verified;
   claims 062–066 viable now; 067–071 need per-package P1-style probes.
@@ -31,8 +31,9 @@ Update after every claim transition; newest entries first.
   - Wave 3 D: proc_ebd4e790d96f (048 DONE exit 0: Demonstrated — orchestrator
     re-ran run_pipeline.sh exit 0, spot-checked main.c 549/551/568/790/810/
     818/826/869 + util.c:199; consumer cgi_download.py decides YES same pin);
-    proc_e76dbc5f149e (049+050 rpcd
-    file.c/uci.c source oracles, sequential), log lanes/laneD-rpcd.log.
+    proc_e76dbc5f149e (049+050 DONE exit 0: both Demonstrated — pipelines
+    exit 0, compare all_match, e37ed9d ancestry + d99f703 fix subject
+    confirmed; source-only, no CodeQL).
     047/051 transitioned Blocked (P2 routing + fs sink-model gap).
   - Wave 4 E: proc_6ae83ddca088 (053+054 luci lease/UCI render chain + JS
     dangerous-render sink syntax inventory; odhcpd @5d7be43f disposable
@@ -78,6 +79,27 @@ Update after every claim transition; newest entries first.
 - CodeQL CLI: 2.27.4 (gh extension)
 
 ## Log
+
+### 2026-11-24 — 049/050 Demonstrated; category D complete
+
+- Lane proc_e76dbc5f149e (exit 0), source-only (no CodeQL DB). rpcd @d99f703e
+  clean; file.c sha 03aae01e, uci.c bc3ca56c.
+- 049: 8 file methods; 5 re-resolve+re-authorize (realpath 269 → access 274 →
+  *path replace 289; dangling rejected 300); lstat/remove/exec textual-only
+  (exec derefs before ACL 859/882<1065 and at execv 1172). Residuals: list
+  per-entry stat 709 follows symlinks w/o re-auth; sid==NULL skips ACL
+  183–184; fnmatch lacks FNM_PATHNAME. Symlink fix e37ed9d ancestor (verified).
+- 050: pin IS fix d99f703 "session: stop naming runtime files after the session
+  id" (GHSA-r2w2). 17 sites, ZERO token-named; random 32-hex dirname
+  (session.c 334/360) independent of id; modes 0700/umask 0077/O_EXCL 0600;
+  cleanup purges enumerated; libuci delta-dir context out-of-pin labeled.
+- Controls both: positive fail-no-eligible-instance with census (shapes fixed
+  at pin), near-miss/negative PASS; compare all_match true.
+- Integrity: lane caught read_file rendering divergence from disk bytes;
+  re-derived all citations via nl -ba on sha256-verified bytes (oracle revs
+  logged). Orchestrator re-ran both run_pipeline.sh (exit 0); spot-checked
+  file.c 183/184/269/274/289/300/709, uci.c 311/1537, session.c 334/360,
+  main.c 99/101. Claims 049/050 → Demonstrated; README + progress updated.
 
 ### 2026-11-24 — 040 Demonstrated; category A complete (035–040)
 
