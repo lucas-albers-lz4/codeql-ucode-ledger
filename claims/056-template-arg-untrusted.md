@@ -2,7 +2,7 @@
 
 - Status: Blocked
 - Program: [Security-40](../planning/security-40-20261124.md), category E
-- Producer: `lucas-albers-lz4/codeql-ucode` (markup not modeled; no .ut routing)
+- Producer: `lucas-albers-lz4/codeql-ucode` (historical pin: no .ut routing; see current reconciliation below)
 - Producer commit: codeql-ucode 734555a9f56893e89e678cdee63028fc17ea5bc8; luci b2e0be4b46ec0fd43394c081fa7c50657af14011
 - Consumer: `lucas-albers-lz4/codeql-openwrt` (file-routing / pack-contract receipts)
 - Consumer commit: codeql-openwrt cc5f863021a099437beb8da66f53207712974a47
@@ -45,7 +45,7 @@ New bounded decision justified by the XSS class (the old template-argument defer
 
 None.
 
-## Result
+## Historical result at 734555a9
 
 Blocked — same markup extractor gate as claim 052; the argument→substitution
 edge is unobservable. Security-40 lifts no gate and does not lift the old
@@ -69,3 +69,10 @@ template-argument deferral.
 - Evidence: codeql-openwrt/docs/{file-routing.md,pack-contract.md}; producer
   extractor/src/extractor.rs, README.md, ql/src/{m3,m4};
   `/root/workspace/work/security-40/probe-ucode/`.
+
+
+## Current reconciliation (2026-11-24)
+
+The historical finding above is scoped to divergent producer pin `734555a9` and must not be read as current-main behavior. At `9166af76cf6944e1b3ea5856a9176366a1f7a6ee`, markup AST and bounded CFG libraries exist and `.ut` routing is present. In the independently audited local fresh-pack 33-file run, all 33 pinned LuCI templates had one successful-file row and zero returned `ExtractionErrors` rows; every route remained `inconclusive` / `markup_not_modeled`. See the [portable identities and receipt](../evidence/issue160-20261124-markup-33-reconciliation/README.md) for exact paths, hashes, build-source edit, diagnostics and limitations. Extraction does not establish complete ASTs or modeled flow.
+
+**Status remains blocked.** No supported executable markup-taint or template argument-to-substitution edge probe has been established in the inspected current source. A valid source-first positive and discriminating eligible near miss, a supported model/query, and exact extraction and result evidence are still needed to answer this claim; no gate or deferred track has been lifted. This observation makes no runtime, vulnerability, rendering or security-coverage claim. The historical verification prefix `629a708` and 641/641 result remain unknown; the bounded search does not prove a history rewrite.
