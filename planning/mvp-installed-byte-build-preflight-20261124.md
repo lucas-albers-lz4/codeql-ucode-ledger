@@ -6,7 +6,11 @@ Later the source-corrected manual Linux experiment merged through
 [codeql-openwrt PR #161](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/161)
 at `8215fc7931fa62309bc2a5dd861ebfa10ba07a24`. Hosted
 [run `45503598387`](https://github.com/lucas-albers-lz4/codeql-openwrt/actions/runs/45503598387)
-has begun its package build; this preflight note does not claim its result.
+later failed before package compilation because a `make -n` probe executed
+recursive OpenWrt recipes. The retained
+[failure receipt](../evidence/mvp-installed-byte-first-linux-failure-20261124/README.md)
+records exact phase outcomes. Fix PR #163 merged and manual rerun
+`45513606386` is live; neither run has an installed-byte result yet.
 The source pins are clean LuCI
 `b2e0be4b46ec0fd43394c081fa7c50657af14011`, OpenWrt
 `4e9642517b48bae612ff10fb72fb9199e559500e` and packages feed
