@@ -7,8 +7,8 @@ Update after every claim transition; newest entries first.
 
 - Program opened: 2026-11-24
 - Claims created: 035–074 (40); base commit `379b172` on main.
-  035–039, 046, 048 Demonstrated; 040 Partial (fix lane running);
-  041–045, 047, 051, 052, 056 Blocked; 049/050 (D) + 053/054/055 (E)
+  035–039, 046, 048, 055 Demonstrated; 040 Partial (fix lane running);
+  041–045, 047, 051, 052, 056 Blocked; 049/050 (D) + 053/054 (E)
   lanes running; 057–074 Proposed.
 - Wave 0: P1 DONE — **PASS, full-build-extraction** (probe-c/VERDICT.md):
   15/15 uhttpd .c files, 0 extractor diagnostics, semantic queries verified;
@@ -35,9 +35,10 @@ Update after every claim transition; newest entries first.
     047/051 transitioned Blocked (P2 routing + fs sink-model gap).
   - Wave 4 E: proc_6ae83ddca088 (053+054 luci lease/UCI render chain + JS
     dangerous-render sink syntax inventory; odhcpd @5d7be43f disposable
-    clone), log lanes/laneE-render.log; proc_2b9ba58c6c16 (055 uhttpd CGI
-    URI reflection, C source oracle, optional P1-pattern CodeQL), log
-    lanes/laneE-uhttpd.log. 052/056 transitioned Blocked (markup_not_modeled).
+    clone), log    lanes/laneE-render.log; proc_2b9ba58c6c16 (055 DONE exit 0: Demonstrated
+    — orchestrator re-ran run_pipeline.sh exit 0/verify 0, cdfc902 ancestry
+    confirmed, 5 sites all uh_htmlescape-encoded; source-only, no CodeQL).
+    052/056 transitioned Blocked (markup_not_modeled).
   - P2: DONE (proc_4027700a0cc1, exit 0) — verdict not-routed; receipts
     probe-ucode/{VERDICT.md,MANIFEST.yml,logs/,db/p2-slice}
   - 046 lane DONE (proc_0e309702728b, exit 0): Demonstrated — orchestrator
@@ -76,6 +77,21 @@ Update after every claim transition; newest entries first.
 - CodeQL CLI: 2.27.4 (gh extension)
 
 ## Log
+
+### 2026-11-24 — 055 Demonstrated (uhttpd URI reflection fixed in-pin)
+
+- Lane proc_2b9ba58c6c16 (exit 0): source-only oracle (P1 C extraction viable
+  but exhaustive census left no distinct decision; 0 DB/queries). uhttpd
+  @93b05e0b clean.
+- 5 request-data→HTML sites all pass uh_htmlescape (utils.c:300–323; escape
+  set " & ' < > → &#xNN;). No unencoded URI→HTML emission at pin. 24
+  fixed-string error pages negative context; 27 emitter sites enumerated.
+- CVE-2018-19630 fixed in-pin: cdfc902 ancestor of HEAD (verified).
+- Controls: near-miss/negative PASS; positive FAIL-NO-ELIGIBLE-INSTANCE with
+  census (no synthetic). Non-HTML header echoes out-of-scope (F territory).
+- Orchestrator gate: re-ran run_pipeline.sh (exit 0, verify 0, citation
+  checks PASS); spot-checked utils.c 300/318, cgi.c 79/81–83, file.c 727/729,
+  client.c 259. Claim 055 → Demonstrated; README + progress updated.
 
 ### 2026-11-24 — 048 Demonstrated (cgi-io canonicalize/ACL order)
 
