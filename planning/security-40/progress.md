@@ -117,6 +117,35 @@ Update after every claim transition; newest entries first.
 
 ## Log
 
+### 2026-11-24 — Follow-up coverage-gap wave filed in both analyzer repos
+
+The 11 Blocked claims trace to two analyzer blind spots (9 application-routing,
+2 markup). Filed as `later:` coverage-gap tickets + evidence comments, preserving
+each repo's do-not-staff / none-honest discipline (no gate lifted, no production
+taint authorized). Public-safe bodies: advisory IDs + pinned public source links;
+no internal scratch paths or model refs.
+
+- codeql-ucode#154 — route luci-app application .uc backends (extractor
+  file_globs L45–64 + RequestArgsExec.ql L18 basename gate). later,extractor,dataflow.
+- codeql-ucode#155 — application-scope fs read/write/exec sink models
+  (043/047/051). later,dataflow,queries.
+- codeql-ucode#156 — uci.commit → service-restart adjacency query (061).
+  later,queries.
+- codeql-openwrt#151 — consumer application exec/fs effect + grant coverage
+  (043/047/051), gated on ucode#154/#155. later,policy,queries.
+- Evidence comments: ucode#50 (application request-args named cases:
+  CVE-2026-69096 docker_rpc run_ttyd, tailscale do_login), ucode#53 (application
+  uci.set dependency note — no extractable .uc write asserted; travelmate anchor
+  is shell), ucode#57 + openwrt#68 (33 .ut census + markup reconciliation),
+  openwrt#64 (application fs/exec downstream). Epic audit-trail: ucode#43,
+  openwrt#56.
+- OPEN reconciliation question: ucode#56 (markup AST) closed COMPLETED 2026-11-21
+  yet producer main 734555a9 still hides ucode_markup node-types at init (README
+  L13), no .ut routing. Raised on #57/#68 as merge-state vs CFG/dataflow question,
+  not an assertion #56 is wrong.
+- All four tickets OPEN with verified labels + companion cross-links; seven
+  comments read back on intended targets. H/G lanes (068–074) still in flight.
+
 ### 2026-11-24 — 067 Demonstrated; category F complete; H/G launched
 
 - Lane proc_2730fa24420d (exit 0): source oracle, ubus @24864e78 (2026-06-28;
