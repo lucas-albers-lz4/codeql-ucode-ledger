@@ -8,13 +8,14 @@ scaffold assumed an `ar` outer IPK; source review of pinned OpenWrt
 synthetic tests were corrected. Earlier preparation receipts describe the
 then-current scaffold, not evidence that its archive assumption was true.
 
-The executable hosted version is
-[codeql-openwrt draft PR #161](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/161),
+The executable hosted version merged through
+[codeql-openwrt PR #161](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/161),
 which runs the same corrected comparator plus an isolated Ubuntu build script.
-Its manual workflow is the next intended experiment after hosted contract
-checks and review. A fresh `workflow_dispatch` can run only once that workflow
-exists on the repository default branch. Keep the build informational; do
-not treat a contract test or a synthetic archive as installed-byte evidence.
+Its first manual run `45503598387` stopped in an executing dry-run probe
+before package compilation. [PR #163](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/163)
+removed that probe and merged; manual rerun `45513606386` is live. Keep the
+build informational; neither a contract test nor the first failed probe is
+installed-byte evidence.
 
 ## Fixed source and output decision
 

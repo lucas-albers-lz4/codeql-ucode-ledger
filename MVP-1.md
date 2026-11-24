@@ -45,7 +45,9 @@ prepares a same-job released event and clean-control scan; its offline hosted
 checks pass, but both live scans skip on the null release lock.
 Downstream [PR #161](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/161)
 merged its manual installed-byte experiment; run `45503598387` began a
-Linux package build, with its result still unreviewed. Downstream
+Linux build but failed in an executing dry-run probe before package
+compilation. Fix PR #163 merged and manual rerun `45513606386` is live;
+no installed-byte result is established. Downstream
 [PR #162](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/162)
 adds read-only incoming discovery with no scheduled scan. A manual live
 [v3 discovery snapshot](evidence/mvp-incoming-poller-live-20261124/README.md)
@@ -1348,8 +1350,15 @@ incoming OpenWrt/LuCI changes.
   syntax pass locally. Hosted contract and repository checks passed; PR #161
   merged as `8215fc7931fa62309bc2a5dd861ebfa10ba07a24`.
   [Manual run `45503598387`](https://github.com/lucas-albers-lz4/codeql-openwrt/actions/runs/45503598387)
-  passed its contract job and began the Linux experiment job. No IPK byte
-  result has been reviewed yet.
+  passed its contract job, host-tools build and toolchain build, then
+  [failed before the intended package build](evidence/mvp-installed-byte-first-linux-failure-20261124/README.md).
+  The supposed `make -n` target probe executed recursive OpenWrt recipes and
+  hit an opaque `libjson-c` dependency failure without verbose output.
+  No IPK or byte comparison exists. Downstream
+  [PR #163](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/163)
+  removed that probe and runs one verbose serial package build; hosted checks
+  passed and it merged as `9018c7633e9dce303d48e2a3ee8d9d78054d03de`.
+  Manual rerun `45513606386` is live and must be inspected independently.
 - A [source-only census](planning/mvp-openwrt-packages-candidates-v0.1.md)
   of pinned OpenWrt core and packages-feed source found
   35 additional OpenWrt candidates beyond the 11 CLI paths and 37

@@ -1,0 +1,40 @@
+{
+  "schema": "mvp-installed-byte-first-failure-v1",
+  "run_id": 45503598387,
+  "run_status": "completed",
+  "run_conclusion": "failure",
+  "consumer_commit": "8215fc7931fa62309bc2a5dd861ebfa10ba07a24",
+  "source_commits": {
+    "openwrt": "4e9642517b48bae612ff10fb72fb9199e559500e",
+    "luci": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "packages": "07e0d16305d2b5903b37ad7913e33e18795f81a4"
+  },
+  "artifact_name": "luci-ipk-byte-45503598387-1",
+  "raw_local_artifact": "work/luci-ipk-byte-failure-45503598387/",
+  "raw_sha256": {
+    "run_log": "f959d0cc4ae21df5f60c48709694e08c3bc34649753233011482aedf0c0bc2fd",
+    "target_probe_time": "c45f8d64d69d63251b02f742776e62db2d90c103846a9447f3e03607b37e17c4",
+    "config_final": "e0dc30db2219dfbf503042a7403419f181a6ed38a922e95fb9097bddffecb9ff",
+    "source_digests": "8cf9fa7bea1440f6b6928a84f0e24d634dd244e5a6bd65d4e2a1569138e541aa"
+  },
+  "phase_outcomes": {
+    "clone_openwrt": {"exit": 0, "elapsed": "0:19.67"},
+    "clone_luci": {"exit": 0, "elapsed": "1:27.59"},
+    "clone_packages": {"exit": 0, "elapsed": "0:09.19"},
+    "feeds_update": {"exit": 0, "elapsed": "0:27.77"},
+    "feeds_install": {"exit": 0, "elapsed": "0:27.81"},
+    "defconfig": {"exit": 0, "elapsed": "0:25.92"},
+    "tools_install": {"exit": 0, "elapsed": "20:02.21", "max_reported_rss_kbytes": 534512},
+    "toolchain_install": {"exit": 0, "elapsed": "35:34.27", "max_reported_rss_kbytes": 1483236},
+    "target_probe": {"exit": 2, "elapsed": "0:06.43", "max_reported_rss_kbytes": 57864},
+    "package_build": {"status": "not_started"},
+    "byte_compare": {"status": "not_started"}
+  },
+  "failed_command": "make -n package/feeds/luci/luci-base/compile",
+  "observed_generic_dependency_error": "package/libs/libjson-c failed to build",
+  "underlying_dependency_error": "unknown: V=s omitted by executing dry-run probe",
+  "fix_pr": 163,
+  "fix_merge_commit": "9018c7633e9dce303d48e2a3ee8d9d78054d03de",
+  "rerun_id": 45513606386,
+  "installed_byte_result": "none"
+}
