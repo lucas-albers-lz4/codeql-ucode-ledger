@@ -1,6 +1,6 @@
 # Claim 040: Mutating ubus methods under read-only ACL
 
-- Status: Partial
+- Status: Demonstrated
 - Program: [Security-40](../planning/security-40-20261124.md), category A
 - Producer: source-oracle (pinned luci + rpcd source; no CodeQL run)
 - Producer commit: luci b2e0be4b46ec0fd43394c081fa7c50657af14011; rpcd d99f703e4035d03fbcfbada3cb697db346c2b984
@@ -49,40 +49,52 @@ Distinct from consumer handler_effects (which covers inventoried luci-ssl exec m
 
 ## Result
 
-Partial — source traces complete and line-anchored; the mechanical
-grant→handler→effect reconciliation failed its oracle gate on three
-identified script defects (fix lane dispatched).
+Demonstrated — at luci `b2e0be4b…` + rpcd `d99f703e…` (clean). The
+mechanical grant→handler→effect reconciliation passes its predeclared oracle
+gate (exit 0; 21/21 oracle checks, 5/5 controls gate-enforced) after repair
+of three script defects: D1 C object registry built from `struct ubus_object`
+`.name` registrations (not policy fields); D2 both ucode export forms plus
+quoted-key / block-comment / regex-literal / arrow-entry parsing repairs;
+D3 per-method/per-call-site literal verb classification with string-safe
+identifier tracing. Source-observation only; no CodeQL run; no
+authorization/vulnerability claim.
 
-- 337 ubus-scope grants (240 read / 97 write), 55 distinct objects, 168
-  distinct (object,function) pairs; multiset mechanically complete and
-  oracle shape checks PASS; 17 ucode backends (10 extensionless).
-- **8 read-scope grants across 5 packages cover mutating handlers**, in
-  three traces orchestrator-verified at the cited lines:
-  - A1 dockerman: read `docker:["*"]` L10 + `docker.*:["*"]` L11 →
-    `docker_rpc.uc` `ttyd_start` L387 → `run_ttyd` L289 (`request.args.id`
-    L291) → `system()` L319/L322, caller-influenced cmd. **GHSA-cq4h shape
-    present under READ scope at this pin.**
-  - A2 `luci.setInitAction` read-granted by ddns L7 / sqm L14 / upnp L7 →
-    backend L75/L85 → `sys.uc` `init_action` L153 →
-    `system(env -i /etc/init.d/${basename(name)} ${action})` L159;
-    basename-guarded, action-whitelisted in the backend.
-  - A3 `rc:init` read-granted by dockerman L15 / ocserv L17 → pinned rpcd
-    `rc.c` `rc_init` L318 → `execl` L385; action-whitelisted.
-- Counter-cases verified read-only (tailscale getters, advanced-reboot
-  `obtain_device_info`); negative controls write-scoped only (tailscale
-  `do_login`, advanced-reboot `boot_partition`); openvpn `generateKey`
-  absent at this pin.
-- Why Partial: mechanical reconciliation exit 1 (recorded stop) — C registry
-  matches policy-field `.name` instead of object registration;
-  `docker_rpc.uc` "return methods;" export form unparsed (A1 rows=0); verb
-  classification too coarse for mixed-literal bodies (N1/N2 misclassified);
-  255/337 join rows unresolved by the defective registry stage. Full join
-  table retained; fix lane repairs the three defects and re-runs.
-- Gaps: uhttpd ubus-scope enforcement layer outside pinned trees (no
-  authorization claims); objects from unpinned packages honestly unresolved;
-  JS syntax-level only.
-- Evidence: `/root/workspace/work/security-40/040/` (ubus_grants.json,
+- Base multiset byte-identical (grants.json sha `4d47fe68…`, ubus_grants.json
+  `ec861e55…`): **337 ubus grants (240 read / 97 write)**, 55 objects, 168
+  (object,function) pairs. Full 337-row join: 226 resolved (369 pairs), 111
+  honestly unresolved (110 NOT_IN_PINNED_TREES across 31 unpinned-package
+  objects + 1 `luci:p910nd` method absent at this pin).
+- **15 read-scope grants across 10 packages cover mutating handlers**
+  (corrects the prior lane's 8/5):
+  - A1 dockerman `docker.*:["*"]` L11 → `docker.container.ttyd_start` L387 →
+    `run_ttyd` L289 (`request.args.id` L291) → `system()` L319/L322,
+    caller-influenced cmd (**GHSA-cq4h shape under READ scope**). Note:
+    `docker:["*"]` L10 reaches only the GET-method `docker` — rpcd's fnmatch
+    matcher (session.c L143–147, `FNM_NOESCAPE`) does not match object
+    `docker` against `docker.container`; ttyd_start flows through `docker.*`
+    only.
+  - A2 `luci.setInitAction` read-granted ddns/sqm/upnp → `sys.uc`
+    `init_action` L153 → `system(env -i /etc/init.d/<basename(name)>
+    <action>)` L159; basename-guarded, action-whitelisted.
+  - A3 `rc:init` read-granted dockerman/ocserv → `rc.c` `rc_init` L318 →
+    `execl` L385; action-whitelisted.
+  - Nine `file:exec`/`file:*` read grants (dockerman, ocserv, rustdesk-server,
+    luci-mod-dashboard/network×2/status×2/system) → rpcd `file.c`
+    `rpc_file_exec_run` L1034 → fork + `execv` L1172 of a caller-supplied
+    command (`file.write`/`file.remove` mutating writes). `rpc_file_access`
+    checks at L1065 (executable) / L1086 (per-cmdstr) noted as source
+    observation, no authorization claim. These were invisible to the broken
+    C registry pre-fix.
+- Counter-cases read-only (tailscale getters, `obtain_device_info`);
+  write-scope negatives (`do_login`, `boot_partition`) pass; openvpn
+  `generateKey` absent.
+- Gaps: uhttpd ubus-scope enforcement outside pinned trees (no authorization
+  claims); unpinned-package objects a disclosed coverage limit; JS
+  syntax-level only.
+- Evidence: `/root/workspace/work/security-40/040/` (ubus_inventory.py,
   handler_registry.json, grant_handler_effect_table.json,
-  oracle_comparison.json [FAIL record], controls.json, js_syntax_shapes.json,
-  summary.md); orchestrator re-ran `ubus_inventory.py` (exit 1, same
-  identified failures).
+  oracle_comparison.json [all_pass], controls.json, inventory_stats.json,
+  ubus_grants.json, summary.md). Orchestrator re-ran `ubus_inventory.py`
+  (exit 0, ORACLE+CONTROLS PASS); base hashes immutable; spot-checked
+  dockerman acl L10/L11, docker_rpc.uc 289/319/387, session.c 143–147,
+  file.c 1034/1065/1086/1172.

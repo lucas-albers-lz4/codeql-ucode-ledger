@@ -7,7 +7,7 @@ Update after every claim transition; newest entries first.
 
 - Program opened: 2026-11-24
 - Claims created: 035–074 (40); base commit `379b172` on main.
-  035–039, 046, 048, 055 Demonstrated; 040 Partial (fix lane running);
+  035–040, 046, 048, 055 Demonstrated (category A complete);
   041–045, 047, 051, 052, 056 Blocked; 049/050 (D) + 053/054 (E)
   lanes running; 057–074 Proposed.
 - Wave 0: P1 DONE — **PASS, full-build-extraction** (probe-c/VERDICT.md):
@@ -25,8 +25,9 @@ Update after every claim transition; newest entries first.
   - proc_e3a216ca2ae9: 039 upgrade lane DONE (exit 0): Demonstrated —
     orchestrator re-ran build_derivation.py (62 citations verified) +
     persistence_inventory.py (exit 0); 14 derived families, 6 grants
-  - proc_4fa69f89a8af: 040 fix lane (repair D1–D3 mechanical reconciliation),
-    log lanes/lane040fix.log
+  - proc_4fa69f89a8af: 040 fix lane DONE (exit 0) — Demonstrated; D1–D3
+    repaired, gate exit 0 (21/21 oracle, 5/5 controls), base byte-identical;
+    corrected 15 read-scope mutating grants / 10 packages.
   - Wave 3 D: proc_ebd4e790d96f (048 DONE exit 0: Demonstrated — orchestrator
     re-ran run_pipeline.sh exit 0, spot-checked main.c 549/551/568/790/810/
     818/826/869 + util.c:199; consumer cgi_download.py decides YES same pin);
@@ -77,6 +78,24 @@ Update after every claim transition; newest entries first.
 - CodeQL CLI: 2.27.4 (gh extension)
 
 ## Log
+
+### 2026-11-24 — 040 Demonstrated; category A complete (035–040)
+
+- Fix lane proc_4fa69f89a8af (exit 0) repaired D1 (C object registry from
+  struct ubus_object .name), D2 (both ucode export forms + parsing repairs),
+  D3 (per-call-site literal verb classification). Gate not weakened:
+  ubus_inventory.py exit 0, 21/21 oracle checks, 5/5 controls.
+- Base multiset byte-identical (337/240/97/55/168; grants.json 4d47fe68,
+  ubus_grants.json ec861e55). Join 226 resolved / 111 honestly unresolved.
+- Substantive correction: 15 read-scope grants across 10 packages cover
+  mutating handlers (prior 8/5). A1 ttyd_start flows via docker.* L11 (rpcd
+  fnmatch session.c L143–147 doesn't match docker vs docker.container); nine
+  file:exec/file:* read grants → file.c rpc_file_exec_run L1034 → execv L1172
+  were invisible to the broken registry. GHSA-cq4h shape under READ scope.
+- Orchestrator gate: re-ran ubus_inventory.py (exit 0, ORACLE+CONTROLS PASS);
+  spot-checked dockerman acl L10/L11, docker_rpc.uc 289/319/387, session.c
+  143–147, file.c 1034/1065/1086/1172. Claim 040 → Demonstrated; README +
+  progress updated. Category A (035–040) all Demonstrated.
 
 ### 2026-11-24 — 055 Demonstrated (uhttpd URI reflection fixed in-pin)
 
