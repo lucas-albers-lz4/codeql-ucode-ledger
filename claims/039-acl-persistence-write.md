@@ -1,11 +1,11 @@
 # Claim 039: Write grants to persistence paths
 
-- Status: Proposed
+- Status: Partial
 - Program: [Security-40](../planning/security-40-20261124.md), category A
-- Producer: `lucas-albers-lz4/codeql-ucode` (ucode lanes) / `lucas-albers-lz4/codeql-openwrt` (policy, C and JS lanes); pin resolved at execution
-- Producer commit: not yet resolved for this claim
-- Consumer: `lucas-albers-lz4/codeql-openwrt` where a join is named; otherwise none
-- Consumer commit: not yet resolved for this claim
+- Producer: source-oracle (pinned luci source + glibc fnmatch witness; no CodeQL run)
+- Producer commit: luci b2e0be4b46ec0fd43394c081fa7c50657af14011
+- Consumer: none
+- Consumer commit: none
 - Environment: local CodeQL CLI 2.27.4 (`gh codeql`), no CI; host details recorded per run
 
 ## Historical anchor
@@ -46,4 +46,29 @@ None.
 
 ## Result
 
-Not yet evaluated.
+Partial — inventory and witness complete; the method's pinned-layout
+derivation of the persistence path list is outstanding (upgrade lane
+dispatched).
+
+- 56 distinct file-write patterns: hand-transcribed set exactly equals the
+  mechanical set (empty diff both ways); base extraction byte-identical to
+  claims 035/038 (sha256-verified).
+- **5 persistence-covering write grants from 3 packages** (luci-mod-system,
+  filemanager, filebrowser). 4 of 6 analyst-fixed families covered by
+  explicit luci-mod-system patterns (`/etc/crontabs/*`, `/etc/rc.local`,
+  `/etc/init.d/*`, `/etc/uci-defaults/*`); `hotplug.d` and `profile.d` only
+  via the two catch-all `/*` write grants (filemanager, filebrowser).
+- Controls: 19 witness expectations PASS (span/boundary probes); openvpn
+  `/etc/openvpn/*` write at L10 non-persistence; dockerman/luci-base `/*`
+  read-only; `/etc/config/network` absent tree-wide. Two logged oracle
+  revisions (openvpn line 15→10; pattern count 55→56).
+- Why Partial: the claim method requires the persistence list fixed from
+  pinned base-files/procd layout evidence; the lane used an analyst-fixed
+  list without that derivation. Upgrade lane derives it from openwrt
+  `4e9642517b48bae612ff10fb72fb9199e559500e` (package/base-files,
+  package/system/procd) and re-runs the inventory.
+- Gaps: glibc witness only (musl not exercised).
+- Evidence: `/root/workspace/work/security-40/039/` (write_grants.json,
+  persistence_multiset.json, witness_receipts.json, controls.json,
+  out_of_list_observations.json, summary.md); orchestrator re-ran
+  `persistence_inventory.py` (exit 0, all gates true).
