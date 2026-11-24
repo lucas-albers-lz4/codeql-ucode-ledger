@@ -7,9 +7,9 @@ Update after every claim transition; newest entries first.
 
 - Program opened: 2026-11-24
 - Claims created: 035–074 (40); base commit `379b172` on main.
-  035–040, 046, 048–050, 053–055 Demonstrated (A+B+D+E complete; 13);
-  041–045, 047, 051, 052, 056 Blocked (9); 057–074 Proposed (18);
-  no lanes running — next category C (057–061).
+  035–040, 046, 048–050, 053–055 Demonstrated (13); 041–045, 047, 051,
+  052, 056, 057, 061 Blocked (11); 058/059/060 (C) lanes running;
+  062–074 Proposed (13). Waves A/B/D/E closed; C in flight.
 - Wave 0: P1 DONE — **PASS, full-build-extraction** (probe-c/VERDICT.md):
   15/15 uhttpd .c files, 0 extractor diagnostics, semantic queries verified;
   claims 062–066 viable now; 067–071 need per-package P1-style probes.
@@ -53,11 +53,14 @@ Update after every claim transition; newest entries first.
 - Shared pinned checkouts (read-only): work/security-40/shared/{luci,rpcd,
   uhttpd,ubus,libubox,uci,mdnsd,procd,packages,openwrt} (last seven blobless,
   no checkout; openwrt/packages working trees dirty — read pins via git show)
-- Next: gate 040-fix / 048 / 049+050 / 053+054 / 055 lanes on completion →
-  transition → commit; then wave 5 C (057–061): 058/059/060 viable, 057/061
-  routing-blocked. F: 062–066 viable (P1 PASS); 067 needs ubusd probe.
-  H: 068–071 per-package probes. G: 072–074 shell source oracle. Wave order
-  stays A→B→D→E→C→F→H→G.
+- Wave 5 C: proc_71c3742a3480 (058 JS rpc.declare UCI-set syntax enumeration
+    under hold; luci pin), log lanes/laneC-js-uci.log; proc_f3837a0c8487
+    (059 shell eval/sh -c config chains + 060 newline UCI→line-format; packages
+    @07e0d163 via git show blobs — working tree dirty), log lanes/laneC-shell.log.
+    057/061 Blocked (application-ucode routing gate).
+- Next: gate 058 / 059+060 lanes on completion → transition → commit; then
+  F (062–067): 062–066 viable (P1 PASS), 067 needs ubusd probe. H: 068–071
+  per-package probes. G: 072–074 shell source oracle. Wave order A→B→D→E→C→F→H→G.
 - **User directive (2026-11-24, mid-run):** after Security-40 (035–074) is
   complete, find and design **3–10 additional waves** of new high-value
   claims (075+) from uncovered interfaces/advisories, then work through them
@@ -80,6 +83,20 @@ Update after every claim transition; newest entries first.
 - CodeQL CLI: 2.27.4 (gh extension)
 
 ## Log
+
+### 2026-11-24 — Wave 5 C opened (057/061 Blocked; 058/059/060 lanes)
+
+- 057 (request→uci.set) + 061 (uci.commit→restart adjacency) → Blocked:
+  application-ucode routing gate (same receipts as 041–045/047/051); only
+  luci-base luci.uc routed, application backends (travelmate anchor) skipped.
+- 058 (JS rpc.declare UCI-set enumeration under hold) → proc_71c3742a3480,
+  source/syntax census like 054; no CodeQL, no JS execution, hold unchanged.
+- 059 (shell eval/sh -c config chains; ddns anchor) + 060 (newline UCI→
+  line-format; ser2net anchor) → proc_f3837a0c8487, sequential separate
+  oracles. packages @07e0d163 reachable; shared/packages working tree DIRTY
+  (HEAD 45ad85cb, ~5356 deletions) → lane reads pinned blobs via git show only.
+  Shell not CodeQL-extracted (stated honestly); source oracle, no DB.
+- Heavy slot free (all C lanes light). README 057/061 → Blocked.
 
 ### 2026-11-24 — 053/054 Demonstrated; category E complete (waves A/B/D/E done)
 

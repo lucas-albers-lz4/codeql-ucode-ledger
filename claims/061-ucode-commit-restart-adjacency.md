@@ -1,11 +1,11 @@
 # Claim 061: uci.commit to service-restart adjacency
 
-- Status: Proposed
+- Status: Blocked
 - Program: [Security-40](../planning/security-40-20261124.md), category C
-- Producer: `lucas-albers-lz4/codeql-ucode` (ucode lanes) / `lucas-albers-lz4/codeql-openwrt` (policy, C and JS lanes); pin resolved at execution
-- Producer commit: not yet resolved for this claim
-- Consumer: `lucas-albers-lz4/codeql-openwrt` where a join is named; otherwise none
-- Consumer commit: not yet resolved for this claim
+- Producer: `lucas-albers-lz4/codeql-ucode` (routing probe P2)
+- Producer commit: codeql-ucode 734555a9f56893e89e678cdee63028fc17ea5bc8; luci b2e0be4b46ec0fd43394c081fa7c50657af14011
+- Consumer: none
+- Consumer commit: none
 - Environment: local CodeQL CLI 2.27.4 (`gh codeql`), no CI; host details recorded per run
 
 ## Historical anchor
@@ -46,4 +46,12 @@ None.
 
 ## Result
 
-Not yet evaluated.
+Blocked — producer routing gate (same as 041–045/047/051/057). codeql-ucode
+`734555a9…` routes only luci-base `luci.uc`; application ucode backends (the
+GHSA-p35r travelmate commit→auto-login anchor scope) are not extracted
+("No matching language found, skipping file", probe-ucode/VERDICT.md). The
+claimed bounded same-function uci.commit + fs.exec/system adjacency
+observation over application backends cannot be produced. Unblock: routing
+extension to application .uc + a commit/restart adjacency query with exact
+call identities. No causal/runtime claim made. Receipts:
+`/root/workspace/work/security-40/probe-ucode/{VERDICT.md,MANIFEST.yml,logs/}`.
