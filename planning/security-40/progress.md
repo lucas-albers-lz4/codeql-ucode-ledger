@@ -6,10 +6,27 @@ Update after every claim transition; newest entries first.
 ## State
 
 - Program opened: 2026-11-24
-- Claims created: 035–074 (40), all Proposed
-- Active wave: 0 (probes) → 1 (category A)
-- Last finished claim: none
-- Next eligible: P1/P2 probes; 035–040 after shared pinned checkout exists
+- Claims created: 035–074 (40); base commit `379b172` on main.
+  035–037 Demonstrated (wave 1A, this commit); 038–074 Proposed.
+- Wave 0: P1 DONE — **PASS, full-build-extraction** (probe-c/VERDICT.md):
+  15/15 uhttpd .c files, 0 extractor diagnostics, semantic queries verified;
+  claims 062–066 viable now; 067–071 need per-package P1-style probes.
+  Dependency SHAs were probe-time HEADs — claim lanes must re-pin against
+  the corpus lock. P3 fnmatch witness DONE. P2 launching (heavy slot).
+- Wave 1: lane A DONE — 035/036/037 gated by orchestrator (full pipeline
+  re-runs: controls green, witness 0 mismatches, pinned JSON spot-checks,
+  shared pins clean) and transitioned to Demonstrated.
+  - proc_95e20daccda0: lane B — claims 038–040 — still running, log
+    lanes/laneB.log (no notify; wait/poll via process_manage)
+  - P2: ucode application-routing probe (gates 041–046), log lanes/p2.log
+- Lanes: isolated `hermes chat` on alibaba/qwen4-max-preview (delegate_task
+  codex-pipeline routing hit invalidated openai-codex OAuth; smoke SMOKE_OK).
+  -Q logs stay empty until exit; progress visible via artifact dirs.
+- Shared pinned checkouts (read-only): work/security-40/shared/{luci,rpcd,
+  uhttpd,ubus,libubox,uci,mdnsd,procd,packages,openwrt} (last seven blobless,
+  no checkout; openwrt/packages working trees dirty — read pins via git show)
+- Next: gate lane B → transition 038–040 → commit; P2 verdict → wave 2
+  (category B, 041–046) lanes. Wave order stays A→B→D→E→C→F→H→G.
 
 ## Pins (plan-time observations; re-resolve at execution)
 
@@ -22,6 +39,35 @@ Update after every claim transition; newest entries first.
 - CodeQL CLI: 2.27.4 (gh extension)
 
 ## Log
+
+### 2026-11-24 — wave 0 P1 PASS; wave 1A (035–037) demonstrated
+
+- P1 verdict: full-build-extraction PASS. Real CMake build (TLS/LUA/UBUS/UCODE
+  ON) wrapped by `gh codeql database create --language=c`; 15/15 uhttpd .c,
+  221 functions / 1386 calls, 0 diagnostics; semantic smoke on client.c
+  header/Content-Length parse sites. Blockers overcome and logged:
+  libblobmsg-json ships inside current libubox; ucode mirror is jow-/ucode;
+  mbedtls 3.6 LTS (main API-incompatible); liblua.a rebuilt -fPIC; MODULE
+  targets need CMAKE_MODULE_LINKER_FLAGS. Caveats: dep SHAs probe-time HEADs
+  (re-pin per claim); mbedtls backend vs OpenWrt wolfssl/openssl; no peak-RSS
+  receipts; `@kind table` CSV interpretation rejected → BQRS decode used.
+- Lane A results (orchestrator re-ran all three pipelines; every gate pass):
+  - 035: 117 file read grants, 37 breadth-positive; three `/*` read grants
+    (dockerman:7 read block; filebrowser:10, filemanager:10 write blocks)
+    match all 10 sensitive probes incl /etc/shadow. uhttpd anchor shape
+    ABSENT at pin; shape class persists. Witness 1189/1189, controls 4/4.
+  - 036: 96 exec-in-read across 37 packages; 77 exec-in-write across 18.
+    travelmate anchor ABSENT from read (6 exec under write); uhttpd still
+    carries init.d restart exec under read. Controls 5/5. 167 read-scope
+    ubus entries enumerated; mutation verdict deferred to 040.
+  - 037: 173 exec-capable; 0 exact interpreter grants + 1 glob-covering
+    (filemanager `/*` write exec covers all five allowlist paths).
+    advanced-reboot /bin/sh anchor ABSENT. Allowlist derived from pinned
+    busybox 1.37.0 bytes (ASH=y, ENV=y, BASH_IS_NONE=y). Witness 220/220,
+    controls 5/5.
+- Pattern: historical anchor shapes are patched at the 25.12 pins, but the
+  shape classes persist in other packages — detection-relevant results.
+- P2 launched (ucode application routing; gates wave 2 claims 041–046).
 
 ### 2026-11-24 — program opened
 

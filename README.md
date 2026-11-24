@@ -54,9 +54,9 @@ Together these move from source selection through extraction, query, and consume
 | [032](claims/032-markup-trim-matrix-implementation.md) | Demonstrated | Current markup CFG behavior across a six-fixture trim matrix |
 | [033](claims/033-bounded-markup-callable-call-order.md) | Demonstrated | Updated bounded callable ordering with a computed-callee control |
 | [034](claims/034-markup-trim-delimiters.md) | Demonstrated | Local trim-delimiter ordering patch with exact controls |
-| [035](claims/035-acl-file-read-glob-breadth.md) | Proposed | Security-40: ACL file-read globs spanning path separators |
-| [036](claims/036-acl-exec-in-read-scope.md) | Proposed | Security-40: Exec rules misplaced into read ACL scope |
-| [037](claims/037-acl-shell-interpreter-exec.md) | Proposed | Security-40: Shell-interpreter exec grants |
+| [035](claims/035-acl-file-read-glob-breadth.md) | Demonstrated | Security-40: ACL file-read globs spanning path separators |
+| [036](claims/036-acl-exec-in-read-scope.md) | Demonstrated | Security-40: Exec rules misplaced into read ACL scope |
+| [037](claims/037-acl-shell-interpreter-exec.md) | Demonstrated | Security-40: Shell-interpreter exec grants |
 | [038](claims/038-acl-init-action-argv.md) | Proposed | Security-40: Init-script exec grants and action argv control |
 | [039](claims/039-acl-persistence-write.md) | Proposed | Security-40: Write grants to persistence paths |
 | [040](claims/040-acl-read-scope-mutating-ubus.md) | Proposed | Security-40: Mutating ubus methods under read-only ACL |
