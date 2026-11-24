@@ -1,0 +1,177 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/db",
+        "--search-path=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/extractor-pack:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/ql/lib:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/ql/src",
+        "--common-caches=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/cache/common",
+        "--compilation-cache=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--output=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/out/success.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "label": "success-query",
+      "peak_rss_bytes": 294977536,
+      "stderr": "out/success-query.stderr",
+      "stdout": "out/success-query.stdout",
+      "wall_seconds": 1.491
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/out/success.bqrs"
+      ],
+      "exit": 0,
+      "label": "success-decode",
+      "peak_rss_bytes": 88899584,
+      "stderr": "out/success-decode.stderr",
+      "stdout": "out/success-decode.stdout",
+      "wall_seconds": 0.228
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/db",
+        "--search-path=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/extractor-pack:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/ql/lib:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/ql/src",
+        "--common-caches=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/cache/common",
+        "--compilation-cache=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--output=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/out/errors.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "label": "errors-query",
+      "peak_rss_bytes": 302022656,
+      "stderr": "out/errors-query.stderr",
+      "stdout": "out/errors-query.stdout",
+      "wall_seconds": 1.484
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/out/errors.bqrs"
+      ],
+      "exit": 0,
+      "label": "errors-decode",
+      "peak_rss_bytes": 88719360,
+      "stderr": "out/errors-decode.stderr",
+      "stdout": "out/errors-decode.stdout",
+      "wall_seconds": 0.226
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/ql/src/m4/DirectRpcShellWord.ql",
+        "--database=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/db",
+        "--search-path=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/extractor-pack:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/ql/lib:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/ql/src",
+        "--common-caches=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/cache/common",
+        "--compilation-cache=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--output=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/out/rule.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "label": "rule-query",
+      "peak_rss_bytes": 481148928,
+      "stderr": "out/rule-query.stderr",
+      "stdout": "out/rule-query.stdout",
+      "wall_seconds": 5.846
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/out/rule.bqrs"
+      ],
+      "exit": 0,
+      "label": "rule-decode",
+      "peak_rss_bytes": 87080960,
+      "stderr": "out/rule-decode.stderr",
+      "stdout": "out/rule-decode.stdout",
+      "wall_seconds": 0.222
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "analyze",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/db",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/ql/src/m4/DirectRpcShellWord.ql",
+        "--format=sarifv2.1.0",
+        "--output=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/out/rule.sarif",
+        "--search-path=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/extractor-pack:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/ql/lib:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/ql/src",
+        "--common-caches=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/cache/common",
+        "--compilation-cache=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "label": "rule-sarif",
+      "peak_rss_bytes": 258228224,
+      "stderr": "out/rule-sarif.stderr",
+      "stdout": "out/rule-sarif.stdout",
+      "wall_seconds": 4.074
+    }
+  ],
+  "csv_rows": [],
+  "error_rows": [],
+  "preflight": {
+    "codeql_version": "CodeQL command-line toolchain release 2.27.4.",
+    "note": "Existing Stage-6 source-derived database copied into a new owned path; no fresh extraction or installed-byte verification.",
+    "original_extracted_files": 21,
+    "original_extraction_errors": 0,
+    "original_preflight_sha256": "da476e5d143918e87b04e21e634e8d5c9705797a8c6cabaf0ad498164f9c9a2c",
+    "original_stage_receipt_sha256": "5e598e54c3c4ad37d729d5a936a9f432a1e2beefd37f6926b639cd75fac9e066",
+    "producer_base": "18afe771568d373088edee7a790825ee46dec9e0",
+    "producer_query_commit": "29d8a6e9b352e0904065ec5572db4d845ff15919",
+    "query_sha256": "046c57aa2003c5b0a5c1a8eec9afc7ca00fdb727928839bff51a4236f5e93f48"
+  },
+  "sarif_results": [],
+  "source_first_oracle_file": "probe-c-source-first.json",
+  "source_first_oracle_sha256": "3943f4cec7739867178ceb94f2ba1026d24f5379d4137bf90aff7215c51e92da",
+  "successful_paths": [
+    "stage/usr/sbin/cli",
+    "stage/usr/share/rpcd/ucode/luci",
+    "stage/usr/share/ucode/cli/cache.uc",
+    "stage/usr/share/ucode/cli/color.uc",
+    "stage/usr/share/ucode/cli/context-call.uc",
+    "stage/usr/share/ucode/cli/context.uc",
+    "stage/usr/share/ucode/cli/datamodel.uc",
+    "stage/usr/share/ucode/cli/modules/network.uc",
+    "stage/usr/share/ucode/cli/modules/service.uc",
+    "stage/usr/share/ucode/cli/object-editor.uc",
+    "stage/usr/share/ucode/cli/types.uc",
+    "stage/usr/share/ucode/cli/utils.uc",
+    "stage/usr/share/ucode/luci/controller/admin/index.uc",
+    "stage/usr/share/ucode/luci/controller/admin/uci.uc",
+    "stage/usr/share/ucode/luci/dispatcher.uc",
+    "stage/usr/share/ucode/luci/http.uc",
+    "stage/usr/share/ucode/luci/runtime.uc",
+    "stage/usr/share/ucode/luci/sys.uc",
+    "stage/usr/share/ucode/luci/uhttpd.uc",
+    "stage/usr/share/ucode/luci/zoneinfo.uc",
+    "stage/www/cgi-bin/luci"
+  ]
+}

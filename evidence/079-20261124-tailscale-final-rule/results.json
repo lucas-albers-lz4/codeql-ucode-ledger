@@ -1,0 +1,255 @@
+{
+  "cases": {
+    "controls": {
+      "candidate_rows": [
+        [
+          {
+            "label": "CallExpression"
+          },
+          "A request-derived value matches this bounded nested-shell command construction."
+        ]
+      ],
+      "error_rows": [],
+      "field_rows": [
+        [
+          {
+            "label": "MemberExpression"
+          },
+          "usr/share/rpcd/ucode/nested_pos.uc",
+          "loginserver",
+          "loginserver",
+          {
+            "label": "CallExpression"
+          },
+          18,
+          5,
+          50
+        ]
+      ],
+      "multiplicity": {
+        "candidate": 1,
+        "errors": 0,
+        "fields": 1,
+        "success": 11
+      },
+      "successful_paths": [
+        "stage/usr/share/rpcd/ucode/model_pos.uc",
+        "stage/usr/share/rpcd/ucode/nested_closure.uc",
+        "stage/usr/share/rpcd/ucode/nested_fixed.uc",
+        "stage/usr/share/rpcd/ucode/nested_helper_constant.uc",
+        "stage/usr/share/rpcd/ucode/nested_join_fallback_constant.uc",
+        "stage/usr/share/rpcd/ucode/nested_near_miss.uc",
+        "stage/usr/share/rpcd/ucode/nested_pos.uc",
+        "stage/usr/share/rpcd/ucode/nested_push_fallback_constant.uc",
+        "stage/usr/share/rpcd/ucode/nested_reassigned.uc",
+        "stage/usr/share/rpcd/ucode/nested_shadow.uc",
+        "stage/usr/share/rpcd/ucode/nested_trim_fallback_constant.uc"
+      ]
+    },
+    "fixed": {
+      "candidate_rows": [],
+      "error_rows": [],
+      "field_rows": [],
+      "multiplicity": {
+        "candidate": 0,
+        "errors": 0,
+        "fields": 0,
+        "success": 1
+      },
+      "successful_paths": [
+        "stage/usr/share/rpcd/ucode/tailscale.uc"
+      ]
+    },
+    "parent": {
+      "candidate_rows": [
+        [
+          {
+            "label": "CallExpression"
+          },
+          "A request-derived value matches this bounded nested-shell command construction."
+        ]
+      ],
+      "error_rows": [],
+      "field_rows": [
+        [
+          {
+            "label": "MemberExpression"
+          },
+          "usr/share/rpcd/ucode/tailscale.uc",
+          "loginserver",
+          "loginserver",
+          {
+            "label": "CallExpression"
+          },
+          164,
+          3,
+          48
+        ],
+        [
+          {
+            "label": "MemberExpression"
+          },
+          "usr/share/rpcd/ucode/tailscale.uc",
+          "loginserver_authkey",
+          "loginserver_authkey",
+          {
+            "label": "CallExpression"
+          },
+          164,
+          3,
+          48
+        ]
+      ],
+      "multiplicity": {
+        "candidate": 1,
+        "errors": 0,
+        "fields": 2,
+        "success": 1
+      },
+      "successful_paths": [
+        "stage/usr/share/rpcd/ucode/tailscale.uc"
+      ]
+    }
+  },
+  "control_staged_files": [
+    {
+      "path": "stage/controls/usr/share/rpcd/ucode/model_pos.uc",
+      "sha256": "b406488ab29d7c63d4698896239afed0a55b584e8b892d9983567a646b3e67be"
+    },
+    {
+      "path": "stage/controls/usr/share/rpcd/ucode/nested_closure.uc",
+      "sha256": "ddd8db07d721b4d8cb79c45995cb7662ea695c19f1b59983aa5e6ae2ad90153f"
+    },
+    {
+      "path": "stage/controls/usr/share/rpcd/ucode/nested_fixed.uc",
+      "sha256": "8723f5da9d9d12f14fba1dd6ca35f3540d906d5679b7a68edaa7a5a09f88bf0c"
+    },
+    {
+      "path": "stage/controls/usr/share/rpcd/ucode/nested_helper_constant.uc",
+      "sha256": "54f212c0dbdba05f96cd8b390f9a882f727ffe487351de3bd472cf290fcebcb1"
+    },
+    {
+      "path": "stage/controls/usr/share/rpcd/ucode/nested_join_fallback_constant.uc",
+      "sha256": "3c8e686fd0cc4b0b890d1a6c226027b59c0bfecb2d2f03b9aeb740eb8b458310"
+    },
+    {
+      "path": "stage/controls/usr/share/rpcd/ucode/nested_near_miss.uc",
+      "sha256": "1d4abd74484a16973168aa3cf994540b0d462d01da48a86b5ecaf3e74bf44602"
+    },
+    {
+      "path": "stage/controls/usr/share/rpcd/ucode/nested_pos.uc",
+      "sha256": "f410af3bbbea20098e78e863c56967bf90af94f908c26f771c2f89c1cdb50592"
+    },
+    {
+      "path": "stage/controls/usr/share/rpcd/ucode/nested_push_fallback_constant.uc",
+      "sha256": "9ce453d8c77bea019f2c05fb8c8b478d49813f130bd5a2b7b7ee5a771de164f9"
+    },
+    {
+      "path": "stage/controls/usr/share/rpcd/ucode/nested_reassigned.uc",
+      "sha256": "d000925cbbdee53535652c91413c81c9829e230349dfef0707b0fd911187ae62"
+    },
+    {
+      "path": "stage/controls/usr/share/rpcd/ucode/nested_shadow.uc",
+      "sha256": "220edda6f27c547b04916b509b79c0c27170d001d0b1eb5a59269bcb31091a22"
+    },
+    {
+      "path": "stage/controls/usr/share/rpcd/ucode/nested_trim_fallback_constant.uc",
+      "sha256": "a9d47da924e1fb718f4b1a1861ebd9198a875f7134a725501fdb6dcac92c1592"
+    }
+  ],
+  "query_sha256": "136ec48e2f38c0da03d3dd975fcccae348997dbb6e6ec4a014444c42b6e09bfc",
+  "rule_id": "ucode/m4/tailscale-nested-shell-candidate",
+  "source_expectations_verified": {
+    "controls/usr/share/rpcd/ucode/model_pos.uc": {
+      "candidate_sinks": [],
+      "role": "Direct baseline ShellInjection positive; outside this nested rule",
+      "sha256": "b406488ab29d7c63d4698896239afed0a55b584e8b892d9983567a646b3e67be"
+    },
+    "controls/usr/share/rpcd/ucode/nested_closure.uc": {
+      "candidate_sinks": [],
+      "role": "Push resides in nested function; excluded, no cross-function claim",
+      "sha256": "ddd8db07d721b4d8cb79c45995cb7662ea695c19f1b59983aa5e6ae2ad90153f"
+    },
+    "controls/usr/share/rpcd/ucode/nested_fixed.uc": {
+      "candidate_sinks": [],
+      "role": "Whole outer shell argument quoted; syntactic negative",
+      "sha256": "8723f5da9d9d12f14fba1dd6ca35f3540d906d5679b7a68edaa7a5a09f88bf0c"
+    },
+    "controls/usr/share/rpcd/ucode/nested_helper_constant.uc": {
+      "candidate_sinks": [],
+      "role": "Same helper name and call, helper body returns constant; negative",
+      "sha256": "54f212c0dbdba05f96cd8b390f9a882f727ffe487351de3bd472cf290fcebcb1"
+    },
+    "controls/usr/share/rpcd/ucode/nested_join_fallback_constant.uc": {
+      "candidate_sinks": [],
+      "role": "Constant-first OR command initializer, join is not the selected value; zero candidate",
+      "sha256": "3c8e686fd0cc4b0b890d1a6c226027b59c0bfecb2d2f03b9aeb740eb8b458310"
+    },
+    "controls/usr/share/rpcd/ucode/nested_near_miss.uc": {
+      "candidate_sinks": [],
+      "role": "Request read but only constant pushed; negative",
+      "sha256": "1d4abd74484a16973168aa3cf994540b0d462d01da48a86b5ecaf3e74bf44602"
+    },
+    "controls/usr/share/rpcd/ucode/nested_pos.uc": {
+      "candidate_sinks": [
+        "18:5-50"
+      ],
+      "role": "Nested vulnerable-form positive",
+      "sha256": "f410af3bbbea20098e78e863c56967bf90af94f908c26f771c2f89c1cdb50592"
+    },
+    "controls/usr/share/rpcd/ucode/nested_push_fallback_constant.uc": {
+      "candidate_sinks": [],
+      "role": "Constant-first OR push argument, quote call is not the selected value; zero candidate",
+      "sha256": "9ce453d8c77bea019f2c05fb8c8b478d49813f130bd5a2b7b7ee5a771de164f9"
+    },
+    "controls/usr/share/rpcd/ucode/nested_reassigned.uc": {
+      "candidate_sinks": [],
+      "role": "Derived local overwritten with constant before push; conservative negative",
+      "sha256": "d000925cbbdee53535652c91413c81c9829e230349dfef0707b0fd911187ae62"
+    },
+    "controls/usr/share/rpcd/ucode/nested_shadow.uc": {
+      "candidate_sinks": [],
+      "role": "Nested declaration shadows same name; conservative exclusion even though outer flow remains",
+      "sha256": "220edda6f27c547b04916b509b79c0c27170d001d0b1eb5a59269bcb31091a22"
+    },
+    "controls/usr/share/rpcd/ucode/nested_trim_fallback_constant.uc": {
+      "candidate_sinks": [],
+      "role": "Constant-first OR initializer, trim read is not the selected value; zero candidate",
+      "sha256": "a9d47da924e1fb718f4b1a1861ebd9198a875f7134a725501fdb6dcac92c1592"
+    },
+    "fixed/usr/share/rpcd/ucode/tailscale.uc": {
+      "candidate_sinks": [],
+      "role": null,
+      "sha256": "12bffca1f06aae14363f12d98680c0ca3a07223babd26131cc7c1612baf8fc4e"
+    },
+    "parent/usr/share/rpcd/ucode/tailscale.uc": {
+      "candidate_sinks": [
+        "164:3-48"
+      ],
+      "role": null,
+      "sha256": "3029c32d7ccd18efb95355aa915841e2bf467b0de147ce1a65b68c55fec9d280"
+    }
+  },
+  "source_identity": [
+    {
+      "case": "parent",
+      "expected_sha256": "3029c32d7ccd18efb95355aa915841e2bf467b0de147ce1a65b68c55fec9d280",
+      "git_blob": "8e2b7aa56a0b37c0cf392fc4c182d6ae1167e858",
+      "git_path": "applications/luci-app-tailscale-community/root/usr/share/rpcd/ucode/tailscale.uc",
+      "observed_sha256": "3029c32d7ccd18efb95355aa915841e2bf467b0de147ce1a65b68c55fec9d280",
+      "source_commit": "46cd82328dfb7fbb15961c63f9e674a41cef2500",
+      "stage_path": "stage/parent/usr/share/rpcd/ucode/tailscale.uc"
+    },
+    {
+      "case": "fixed",
+      "expected_sha256": "12bffca1f06aae14363f12d98680c0ca3a07223babd26131cc7c1612baf8fc4e",
+      "git_blob": "b7bf94b0baff7817dad2a010b04e1ba293d59733",
+      "git_path": "applications/luci-app-tailscale-community/root/usr/share/rpcd/ucode/tailscale.uc",
+      "observed_sha256": "12bffca1f06aae14363f12d98680c0ca3a07223babd26131cc7c1612baf8fc4e",
+      "source_commit": "507ab5e45c304543d4111af9a331db0f03be6bcb",
+      "stage_path": "stage/fixed/usr/share/rpcd/ucode/tailscale.uc"
+    }
+  ],
+  "source_manifest_sha256": "b1a538d03d60e356ae94cf374a2bfdc9338d81068b9e0a7233ac3bcbf89ac114",
+  "source_oracle_sha256": "b1a538d03d60e356ae94cf374a2bfdc9338d81068b9e0a7233ac3bcbf89ac114"
+}

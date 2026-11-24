@@ -1,0 +1,605 @@
+{
+  "normalization": {
+    "$RUN": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/mvp-tailscale-baseline-20261124-a",
+    "$PRODUCER_SOURCE": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/mvp-postmerge-producer-20261124"
+  },
+  "commands": [
+    {
+      "case": "parent",
+      "label": "init",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "init",
+        "$RUN/db/parent",
+        "--language=ucode",
+        "--search-path=$RUN/producer/extractor-pack",
+        "--common-caches=$RUN/cache/parent/common",
+        "--source-root=$RUN/stage/parent"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.574,
+      "stdout": "out/parent/init.stdout",
+      "stderr": "out/parent/init.stderr"
+    },
+    {
+      "case": "parent",
+      "label": "index",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "index-files",
+        "$RUN/db/parent",
+        "--language=ucode",
+        "--include=**/*.uc",
+        "--working-dir=$RUN/stage/parent",
+        "--common-caches=$RUN/cache/parent/common"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.639,
+      "stdout": "out/parent/index.stdout",
+      "stderr": "out/parent/index.stderr"
+    },
+    {
+      "case": "parent",
+      "label": "finalize",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "finalize",
+        "$RUN/db/parent",
+        "--common-caches=$RUN/cache/parent/common"
+      ],
+      "exit": 0,
+      "wall_seconds": 1.286,
+      "stdout": "out/parent/finalize.stdout",
+      "stderr": "out/parent/finalize.stderr"
+    },
+    {
+      "case": "parent",
+      "label": "success-query",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db/parent",
+        "--search-path=$RUN/producer/extractor-pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/parent/common",
+        "--compilation-cache=$RUN/cache/parent/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/parent/success.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "wall_seconds": 1.557,
+      "stdout": "out/parent/success-query.stdout",
+      "stderr": "out/parent/success-query.stderr"
+    },
+    {
+      "case": "parent",
+      "label": "success-decode",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "$RUN/out/parent/success.bqrs"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.231,
+      "stdout": "out/parent/success-decode.stdout",
+      "stderr": "out/parent/success-decode.stderr"
+    },
+    {
+      "case": "parent",
+      "label": "errors-query",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db/parent",
+        "--search-path=$RUN/producer/extractor-pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/parent/common",
+        "--compilation-cache=$RUN/cache/parent/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/parent/errors.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "wall_seconds": 1.527,
+      "stdout": "out/parent/errors-query.stdout",
+      "stderr": "out/parent/errors-query.stderr"
+    },
+    {
+      "case": "parent",
+      "label": "errors-decode",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "$RUN/out/parent/errors.bqrs"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.24,
+      "stdout": "out/parent/errors-decode.stdout",
+      "stderr": "out/parent/errors-decode.stderr"
+    },
+    {
+      "case": "parent",
+      "label": "shell-query",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/m4/ShellInjection.ql",
+        "--database=$RUN/db/parent",
+        "--search-path=$RUN/producer/extractor-pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/parent/common",
+        "--compilation-cache=$RUN/cache/parent/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/parent/shell.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "wall_seconds": 2.703,
+      "stdout": "out/parent/shell-query.stdout",
+      "stderr": "out/parent/shell-query.stderr"
+    },
+    {
+      "case": "parent",
+      "label": "shell-decode",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/parent/shell.bqrs"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.228,
+      "stdout": "out/parent/shell-decode.stdout",
+      "stderr": "out/parent/shell-decode.stderr"
+    },
+    {
+      "case": "fixed",
+      "label": "init",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "init",
+        "$RUN/db/fixed",
+        "--language=ucode",
+        "--search-path=$RUN/producer/extractor-pack",
+        "--common-caches=$RUN/cache/fixed/common",
+        "--source-root=$RUN/stage/fixed"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.502,
+      "stdout": "out/fixed/init.stdout",
+      "stderr": "out/fixed/init.stderr"
+    },
+    {
+      "case": "fixed",
+      "label": "index",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "index-files",
+        "$RUN/db/fixed",
+        "--language=ucode",
+        "--include=**/*.uc",
+        "--working-dir=$RUN/stage/fixed",
+        "--common-caches=$RUN/cache/fixed/common"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.396,
+      "stdout": "out/fixed/index.stdout",
+      "stderr": "out/fixed/index.stderr"
+    },
+    {
+      "case": "fixed",
+      "label": "finalize",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "finalize",
+        "$RUN/db/fixed",
+        "--common-caches=$RUN/cache/fixed/common"
+      ],
+      "exit": 0,
+      "wall_seconds": 1.09,
+      "stdout": "out/fixed/finalize.stdout",
+      "stderr": "out/fixed/finalize.stderr"
+    },
+    {
+      "case": "fixed",
+      "label": "success-query",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db/fixed",
+        "--search-path=$RUN/producer/extractor-pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/fixed/common",
+        "--compilation-cache=$RUN/cache/fixed/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/fixed/success.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "wall_seconds": 1.518,
+      "stdout": "out/fixed/success-query.stdout",
+      "stderr": "out/fixed/success-query.stderr"
+    },
+    {
+      "case": "fixed",
+      "label": "success-decode",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "$RUN/out/fixed/success.bqrs"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.232,
+      "stdout": "out/fixed/success-decode.stdout",
+      "stderr": "out/fixed/success-decode.stderr"
+    },
+    {
+      "case": "fixed",
+      "label": "errors-query",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db/fixed",
+        "--search-path=$RUN/producer/extractor-pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/fixed/common",
+        "--compilation-cache=$RUN/cache/fixed/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/fixed/errors.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "wall_seconds": 1.538,
+      "stdout": "out/fixed/errors-query.stdout",
+      "stderr": "out/fixed/errors-query.stderr"
+    },
+    {
+      "case": "fixed",
+      "label": "errors-decode",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "$RUN/out/fixed/errors.bqrs"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.229,
+      "stdout": "out/fixed/errors-decode.stdout",
+      "stderr": "out/fixed/errors-decode.stderr"
+    },
+    {
+      "case": "fixed",
+      "label": "shell-query",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/m4/ShellInjection.ql",
+        "--database=$RUN/db/fixed",
+        "--search-path=$RUN/producer/extractor-pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/fixed/common",
+        "--compilation-cache=$RUN/cache/fixed/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/fixed/shell.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "wall_seconds": 2.612,
+      "stdout": "out/fixed/shell-query.stdout",
+      "stderr": "out/fixed/shell-query.stderr"
+    },
+    {
+      "case": "fixed",
+      "label": "shell-decode",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/fixed/shell.bqrs"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.227,
+      "stdout": "out/fixed/shell-decode.stdout",
+      "stderr": "out/fixed/shell-decode.stderr"
+    },
+    {
+      "case": "controls",
+      "label": "init",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "init",
+        "$RUN/db/controls",
+        "--language=ucode",
+        "--search-path=$RUN/producer/extractor-pack",
+        "--common-caches=$RUN/cache/controls/common",
+        "--source-root=$RUN/stage/controls"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.489,
+      "stdout": "out/controls/init.stdout",
+      "stderr": "out/controls/init.stderr"
+    },
+    {
+      "case": "controls",
+      "label": "index",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "index-files",
+        "$RUN/db/controls",
+        "--language=ucode",
+        "--include=**/*.uc",
+        "--working-dir=$RUN/stage/controls",
+        "--common-caches=$RUN/cache/controls/common"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.393,
+      "stdout": "out/controls/index.stdout",
+      "stderr": "out/controls/index.stderr"
+    },
+    {
+      "case": "controls",
+      "label": "finalize",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "finalize",
+        "$RUN/db/controls",
+        "--common-caches=$RUN/cache/controls/common"
+      ],
+      "exit": 0,
+      "wall_seconds": 1.062,
+      "stdout": "out/controls/finalize.stdout",
+      "stderr": "out/controls/finalize.stderr"
+    },
+    {
+      "case": "controls",
+      "label": "success-query",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db/controls",
+        "--search-path=$RUN/producer/extractor-pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/controls/common",
+        "--compilation-cache=$RUN/cache/controls/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/controls/success.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "wall_seconds": 1.505,
+      "stdout": "out/controls/success-query.stdout",
+      "stderr": "out/controls/success-query.stderr"
+    },
+    {
+      "case": "controls",
+      "label": "success-decode",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "$RUN/out/controls/success.bqrs"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.233,
+      "stdout": "out/controls/success-decode.stdout",
+      "stderr": "out/controls/success-decode.stderr"
+    },
+    {
+      "case": "controls",
+      "label": "errors-query",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db/controls",
+        "--search-path=$RUN/producer/extractor-pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/controls/common",
+        "--compilation-cache=$RUN/cache/controls/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/controls/errors.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "wall_seconds": 1.52,
+      "stdout": "out/controls/errors-query.stdout",
+      "stderr": "out/controls/errors-query.stderr"
+    },
+    {
+      "case": "controls",
+      "label": "errors-decode",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "$RUN/out/controls/errors.bqrs"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.233,
+      "stdout": "out/controls/errors-decode.stdout",
+      "stderr": "out/controls/errors-decode.stderr"
+    },
+    {
+      "case": "controls",
+      "label": "shell-query",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/m4/ShellInjection.ql",
+        "--database=$RUN/db/controls",
+        "--search-path=$RUN/producer/extractor-pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/controls/common",
+        "--compilation-cache=$RUN/cache/controls/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/controls/shell.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "wall_seconds": 2.782,
+      "stdout": "out/controls/shell-query.stdout",
+      "stderr": "out/controls/shell-query.stderr"
+    },
+    {
+      "case": "controls",
+      "label": "shell-decode",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/controls/shell.bqrs"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.232,
+      "stdout": "out/controls/shell-decode.stdout",
+      "stderr": "out/controls/shell-decode.stderr"
+    },
+    {
+      "case": "parent",
+      "label": "witness-query",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/m4/TailscaleAstWitness.ql",
+        "--database=$RUN/db/parent",
+        "--search-path=$RUN/producer/extractor-pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/parent/common",
+        "--compilation-cache=$RUN/cache/parent/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/parent/ast-witness.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "wall_seconds": 2.158,
+      "stdout": "out/parent/witness-query.stdout",
+      "stderr": "out/parent/witness-query.stderr"
+    },
+    {
+      "case": "parent",
+      "label": "witness-decode",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/parent/ast-witness.bqrs"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.227,
+      "stdout": "out/parent/witness-decode.stdout",
+      "stderr": "out/parent/witness-decode.stderr"
+    },
+    {
+      "case": "fixed",
+      "label": "witness-query",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/m4/TailscaleAstWitness.ql",
+        "--database=$RUN/db/fixed",
+        "--search-path=$RUN/producer/extractor-pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/fixed/common",
+        "--compilation-cache=$RUN/cache/fixed/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/fixed/ast-witness.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "wall_seconds": 2.129,
+      "stdout": "out/fixed/witness-query.stdout",
+      "stderr": "out/fixed/witness-query.stderr"
+    },
+    {
+      "case": "fixed",
+      "label": "witness-decode",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/fixed/ast-witness.bqrs"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.23,
+      "stdout": "out/fixed/witness-decode.stdout",
+      "stderr": "out/fixed/witness-decode.stderr"
+    },
+    {
+      "case": "controls",
+      "label": "control-witness-query",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/m4/TailscaleControlWitness.ql",
+        "--database=$RUN/db/controls",
+        "--search-path=$RUN/producer/extractor-pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/controls/common",
+        "--compilation-cache=$RUN/cache/controls/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/controls/control-witness.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "wall_seconds": 2.091,
+      "stdout": "out/controls/control-witness-query.stdout",
+      "stderr": "out/controls/control-witness-query.stderr"
+    },
+    {
+      "case": "controls",
+      "label": "control-witness-decode",
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/controls/control-witness.bqrs"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.227,
+      "stdout": "out/controls/control-witness-decode.stdout",
+      "stderr": "out/controls/control-witness-decode.stderr"
+    }
+  ]
+}

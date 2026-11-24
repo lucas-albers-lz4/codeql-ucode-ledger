@@ -1,0 +1,497 @@
+{
+  "date_utc": "2026-11-24",
+  "environment": "macOS arm64; CodeQL 2.27.4; 16 GiB physical RAM; 127 GiB available disk at prior preflight",
+  "run_id": "mvp-tailscale-baseline-20261124-a",
+  "producer_pin": "18afe771568d373088edee7a790825ee46dec9e0",
+  "producer_clean_at_start": true,
+  "source_first_sha256": "cec83bf05d9fd853a58109748e26664a90a3b274ab593d725d326be6115b60b6",
+  "source_first_file": "source-first.json",
+  "tool_executable": "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+  "tool_version": "2.27.4",
+  "pack_build_pin": "8375887ed14825dd59addbfd0df43616d9e684fb",
+  "pack_extractor_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+  "pack_source_compatibility": "selected producer and pack build pin have zero diff in Cargo.lock, codeql-extractor.yml, dbscheme, generated TreeSitter, and inspected build/grammar scripts; pack copied into owned $RUN/producer",
+  "pack_build_provenance": "work/pkg20-typed-run-20261122-a/preflight/provenance.json (raw local, not portable)",
+  "raw_artifacts": "$RUN contains exact commands.json, preflight.json, databases, BQRS, query/decoded outputs and time logs; this local ignored path is not portable",
+  "home_note": "HOME inherited; TMPDIR, common and compilation caches run-owned per case",
+  "witness_query_sha256": {
+    "TailscaleAstWitness.ql": "59534b40ddeabbd285a8ab4fc2902953948cbeefc32bc8d584ca9565f121b68d",
+    "TailscaleControlWitness.ql": "dfc36f07340b4947342eabbe6b6ec5ba5cf6980489436c849be45884656f30ba"
+  },
+  "results": {
+    "parent": {
+      "expected_files": [
+        "$RUN/stage/parent/usr/share/rpcd/ucode/tailscale.uc"
+      ],
+      "success_count": 1,
+      "errors": [],
+      "shell_header": [
+        "src",
+        "col1",
+        "sink",
+        "col3",
+        "col4",
+        "col5",
+        "col6"
+      ],
+      "shell_rows": [],
+      "post_run_sha256": {
+        "usr/share/rpcd/ucode/tailscale.uc": "3029c32d7ccd18efb95355aa915841e2bf467b0de147ce1a65b68c55fec9d280"
+      },
+      "ast_witness_rows": [
+        [
+          "MemberExpression",
+          "form_data",
+          "140",
+          "21",
+          "140",
+          "42",
+          "CallExpression",
+          "164",
+          "3",
+          "164",
+          "48"
+        ],
+        [
+          "MemberExpression",
+          "loginserver",
+          "152",
+          "28",
+          "152",
+          "48",
+          "CallExpression",
+          "164",
+          "3",
+          "164",
+          "48"
+        ],
+        [
+          "MemberExpression",
+          "loginserver_authkey",
+          "153",
+          "36",
+          "153",
+          "64",
+          "CallExpression",
+          "164",
+          "3",
+          "164",
+          "48"
+        ]
+      ],
+      "timings": [
+        {
+          "phase": "init",
+          "exit": 0,
+          "wall_seconds": 0.574,
+          "peak_rss_bytes": 121667584
+        },
+        {
+          "phase": "index",
+          "exit": 0,
+          "wall_seconds": 0.639,
+          "peak_rss_bytes": 120078336
+        },
+        {
+          "phase": "finalize",
+          "exit": 0,
+          "wall_seconds": 1.286,
+          "peak_rss_bytes": 248348672
+        },
+        {
+          "phase": "success-query",
+          "exit": 0,
+          "wall_seconds": 1.557,
+          "peak_rss_bytes": 293093376
+        },
+        {
+          "phase": "success-decode",
+          "exit": 0,
+          "wall_seconds": 0.231,
+          "peak_rss_bytes": 89604096
+        },
+        {
+          "phase": "errors-query",
+          "exit": 0,
+          "wall_seconds": 1.527,
+          "peak_rss_bytes": 305577984
+        },
+        {
+          "phase": "errors-decode",
+          "exit": 0,
+          "wall_seconds": 0.24,
+          "peak_rss_bytes": 88440832
+        },
+        {
+          "phase": "shell-query",
+          "exit": 0,
+          "wall_seconds": 2.703,
+          "peak_rss_bytes": 664682496
+        },
+        {
+          "phase": "shell-decode",
+          "exit": 0,
+          "wall_seconds": 0.228,
+          "peak_rss_bytes": 86786048
+        },
+        {
+          "phase": "witness-query",
+          "exit": 0,
+          "wall_seconds": 2.158,
+          "peak_rss_bytes": 414515200
+        },
+        {
+          "phase": "witness-decode",
+          "exit": 0,
+          "wall_seconds": 0.227,
+          "peak_rss_bytes": 86982656
+        }
+      ],
+      "observed_success_files": [
+        "$RUN/stage/parent/usr/share/rpcd/ucode/tailscale.uc"
+      ],
+      "shell_query_warnings": [
+        "WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.",
+        "WARNING: A problem query must select an even number of columns. ($RUN/producer/ql/src/m4/ShellInjection.ql:24,1-33,46)"
+      ]
+    },
+    "fixed": {
+      "expected_files": [
+        "$RUN/stage/fixed/usr/share/rpcd/ucode/tailscale.uc"
+      ],
+      "success_count": 1,
+      "errors": [],
+      "shell_header": [
+        "src",
+        "col1",
+        "sink",
+        "col3",
+        "col4",
+        "col5",
+        "col6"
+      ],
+      "shell_rows": [],
+      "post_run_sha256": {
+        "usr/share/rpcd/ucode/tailscale.uc": "12bffca1f06aae14363f12d98680c0ca3a07223babd26131cc7c1612baf8fc4e"
+      },
+      "ast_witness_rows": [
+        [
+          "MemberExpression",
+          "form_data",
+          "140",
+          "21",
+          "140",
+          "42",
+          "CallExpression",
+          "164",
+          "3",
+          "164",
+          "59"
+        ],
+        [
+          "MemberExpression",
+          "loginserver",
+          "152",
+          "28",
+          "152",
+          "48",
+          "CallExpression",
+          "164",
+          "3",
+          "164",
+          "59"
+        ],
+        [
+          "MemberExpression",
+          "loginserver_authkey",
+          "153",
+          "36",
+          "153",
+          "64",
+          "CallExpression",
+          "164",
+          "3",
+          "164",
+          "59"
+        ]
+      ],
+      "timings": [
+        {
+          "phase": "init",
+          "exit": 0,
+          "wall_seconds": 0.502,
+          "peak_rss_bytes": 121716736
+        },
+        {
+          "phase": "index",
+          "exit": 0,
+          "wall_seconds": 0.396,
+          "peak_rss_bytes": 120274944
+        },
+        {
+          "phase": "finalize",
+          "exit": 0,
+          "wall_seconds": 1.09,
+          "peak_rss_bytes": 245137408
+        },
+        {
+          "phase": "success-query",
+          "exit": 0,
+          "wall_seconds": 1.518,
+          "peak_rss_bytes": 300433408
+        },
+        {
+          "phase": "success-decode",
+          "exit": 0,
+          "wall_seconds": 0.232,
+          "peak_rss_bytes": 89915392
+        },
+        {
+          "phase": "errors-query",
+          "exit": 0,
+          "wall_seconds": 1.538,
+          "peak_rss_bytes": 312442880
+        },
+        {
+          "phase": "errors-decode",
+          "exit": 0,
+          "wall_seconds": 0.229,
+          "peak_rss_bytes": 88752128
+        },
+        {
+          "phase": "shell-query",
+          "exit": 0,
+          "wall_seconds": 2.612,
+          "peak_rss_bytes": 624181248
+        },
+        {
+          "phase": "shell-decode",
+          "exit": 0,
+          "wall_seconds": 0.227,
+          "peak_rss_bytes": 87392256
+        },
+        {
+          "phase": "witness-query",
+          "exit": 0,
+          "wall_seconds": 2.129,
+          "peak_rss_bytes": 375324672
+        },
+        {
+          "phase": "witness-decode",
+          "exit": 0,
+          "wall_seconds": 0.23,
+          "peak_rss_bytes": 87425024
+        }
+      ],
+      "observed_success_files": [
+        "$RUN/stage/fixed/usr/share/rpcd/ucode/tailscale.uc"
+      ],
+      "shell_query_warnings": [
+        "WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.",
+        "WARNING: A problem query must select an even number of columns. ($RUN/producer/ql/src/m4/ShellInjection.ql:24,1-33,46)"
+      ]
+    },
+    "controls": {
+      "expected_files": [
+        "$RUN/stage/controls/usr/share/rpcd/ucode/model_pos.uc",
+        "$RUN/stage/controls/usr/share/rpcd/ucode/nested_fixed.uc",
+        "$RUN/stage/controls/usr/share/rpcd/ucode/nested_near_miss.uc",
+        "$RUN/stage/controls/usr/share/rpcd/ucode/nested_pos.uc"
+      ],
+      "success_count": 4,
+      "errors": [],
+      "shell_header": [
+        "src",
+        "col1",
+        "sink",
+        "col3",
+        "col4",
+        "col5",
+        "col6"
+      ],
+      "shell_rows": [
+        [
+          "MemberExpression",
+          "shell-injection candidate via popen in model_pos.uc",
+          "CallExpression",
+          "popen",
+          "probe",
+          "6",
+          "6"
+        ]
+      ],
+      "post_run_sha256": {
+        "usr/share/rpcd/ucode/model_pos.uc": "b406488ab29d7c63d4698896239afed0a55b584e8b892d9983567a646b3e67be",
+        "usr/share/rpcd/ucode/nested_fixed.uc": "8723f5da9d9d12f14fba1dd6ca35f3540d906d5679b7a68edaa7a5a09f88bf0c",
+        "usr/share/rpcd/ucode/nested_near_miss.uc": "1d4abd74484a16973168aa3cf994540b0d462d01da48a86b5ecaf3e74bf44602",
+        "usr/share/rpcd/ucode/nested_pos.uc": "f410af3bbbea20098e78e863c56967bf90af94f908c26f771c2f89c1cdb50592"
+      },
+      "ast_witness_rows": [
+        [
+          "MemberExpression",
+          "model_pos.uc",
+          "cmd",
+          "6",
+          "30",
+          "45",
+          "CallExpression",
+          "6",
+          "7",
+          "59"
+        ],
+        [
+          "MemberExpression",
+          "nested_fixed.uc",
+          "form_data",
+          "11",
+          "23",
+          "44",
+          "CallExpression",
+          "18",
+          "5",
+          "61"
+        ],
+        [
+          "MemberExpression",
+          "nested_fixed.uc",
+          "loginserver",
+          "13",
+          "30",
+          "50",
+          "CallExpression",
+          "18",
+          "5",
+          "61"
+        ],
+        [
+          "MemberExpression",
+          "nested_near_miss.uc",
+          "form_data",
+          "11",
+          "23",
+          "44",
+          "CallExpression",
+          "16",
+          "5",
+          "50"
+        ],
+        [
+          "MemberExpression",
+          "nested_near_miss.uc",
+          "loginserver",
+          "13",
+          "37",
+          "57",
+          "CallExpression",
+          "16",
+          "5",
+          "50"
+        ],
+        [
+          "MemberExpression",
+          "nested_pos.uc",
+          "form_data",
+          "11",
+          "23",
+          "44",
+          "CallExpression",
+          "18",
+          "5",
+          "50"
+        ],
+        [
+          "MemberExpression",
+          "nested_pos.uc",
+          "loginserver",
+          "13",
+          "30",
+          "50",
+          "CallExpression",
+          "18",
+          "5",
+          "50"
+        ]
+      ],
+      "timings": [
+        {
+          "phase": "init",
+          "exit": 0,
+          "wall_seconds": 0.489,
+          "peak_rss_bytes": 122060800
+        },
+        {
+          "phase": "index",
+          "exit": 0,
+          "wall_seconds": 0.393,
+          "peak_rss_bytes": 120029184
+        },
+        {
+          "phase": "finalize",
+          "exit": 0,
+          "wall_seconds": 1.062,
+          "peak_rss_bytes": 212484096
+        },
+        {
+          "phase": "success-query",
+          "exit": 0,
+          "wall_seconds": 1.505,
+          "peak_rss_bytes": 290324480
+        },
+        {
+          "phase": "success-decode",
+          "exit": 0,
+          "wall_seconds": 0.233,
+          "peak_rss_bytes": 89620480
+        },
+        {
+          "phase": "errors-query",
+          "exit": 0,
+          "wall_seconds": 1.52,
+          "peak_rss_bytes": 303300608
+        },
+        {
+          "phase": "errors-decode",
+          "exit": 0,
+          "wall_seconds": 0.233,
+          "peak_rss_bytes": 88768512
+        },
+        {
+          "phase": "shell-query",
+          "exit": 0,
+          "wall_seconds": 2.782,
+          "peak_rss_bytes": 798081024
+        },
+        {
+          "phase": "shell-decode",
+          "exit": 0,
+          "wall_seconds": 0.232,
+          "peak_rss_bytes": 86622208
+        },
+        {
+          "phase": "control-witness-query",
+          "exit": 0,
+          "wall_seconds": 2.091,
+          "peak_rss_bytes": 398131200
+        },
+        {
+          "phase": "control-witness-decode",
+          "exit": 0,
+          "wall_seconds": 0.227,
+          "peak_rss_bytes": 86900736
+        }
+      ],
+      "observed_success_files": [
+        "$RUN/stage/controls/usr/share/rpcd/ucode/model_pos.uc",
+        "$RUN/stage/controls/usr/share/rpcd/ucode/nested_fixed.uc",
+        "$RUN/stage/controls/usr/share/rpcd/ucode/nested_near_miss.uc",
+        "$RUN/stage/controls/usr/share/rpcd/ucode/nested_pos.uc"
+      ],
+      "shell_query_warnings": [
+        "WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.",
+        "WARNING: A problem query must select an even number of columns. ($RUN/producer/ql/src/m4/ShellInjection.ql:24,1-33,46)"
+      ]
+    }
+  },
+  "interpretation": "Exact extracted files and zero errors. The current testing-tagged candidate query has zero rows for both historical source versions and all three nested controls, one exact direct positive control row. Exact real and control AST witnesses exist. Zero on fixed source does not prove fix discrimination; current bounded model lacks push/join and nested shell context. No default-suite SARIF, Linux run or consumer handoff was performed.",
+  "query_warning_interpretation": "The existing ShellInjection.ql is tagged testing and its seven-column @kind problem select emits a CodeQL warning requiring an even number of columns. BQRS/CSV query runs exited 0 and yielded the stated rows; this query is not a validated SARIF alert contract. Low-heap cache warning also appears in raw stderr."
+}

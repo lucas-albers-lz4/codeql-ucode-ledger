@@ -1,0 +1,141 @@
+{
+  "schema": "ucode-sarif-run-v1",
+  "producer": {
+    "sha": "299731d8e22112cf88680b89ee08915ff531d273",
+    "pack_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+    "codeql_version": "2.27.4",
+    "suite_sha256": "6d343f93e37c309b8461da9fafcf67d089737980d7ac42a5409e75df3bd442e5"
+  },
+  "run_id": "local-run-b-fixed",
+  "sarif_sha256": "50be4250998610cdafb93f809f76c0b77cc729cbe244c0c80397211a40f08eea",
+  "successful_files": [
+    "usr/share/rpcd/ucode/luci.openvpn.uc"
+  ],
+  "extraction_errors": [],
+  "resolved_rules": [
+    "ucode/m4/direct-rpc-shell-word",
+    "ucode/diagnostics/extraction-errors",
+    "ucode/diagnostics/successfully-extracted-files"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "init",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/db/fixed",
+        "--language=ucode",
+        "--search-path=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/producer/extractor-pack",
+        "--common-caches=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/cache/fixed/common",
+        "--source-root=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/stage/fixed"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "index-files",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/db/fixed",
+        "--language=ucode",
+        "--include=**/luci.openvpn.uc",
+        "--working-dir=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/stage/fixed",
+        "--common-caches=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/cache/fixed/common"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "finalize",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/db/fixed",
+        "--common-caches=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/cache/fixed/common"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/db/fixed",
+        "--search-path=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/producer/extractor-pack:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/producer/ql/lib:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/producer/ql/src",
+        "--common-caches=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/cache/fixed/common",
+        "--compilation-cache=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/cache/fixed/compilation",
+        "--no-default-compilation-cache",
+        "--output=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/out/fixed/SuccessfullyExtractedFiles.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/out/fixed/SuccessfullyExtractedFiles.bqrs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "query",
+        "run",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/db/fixed",
+        "--search-path=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/producer/extractor-pack:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/producer/ql/lib:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/producer/ql/src",
+        "--common-caches=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/cache/fixed/common",
+        "--compilation-cache=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/cache/fixed/compilation",
+        "--no-default-compilation-cache",
+        "--output=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/out/fixed/ExtractionErrors.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/out/fixed/ExtractionErrors.bqrs"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "resolve",
+        "queries",
+        "--format=json",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/producer/ql/src/codeql-suites/code-scanning.qls",
+        "--search-path=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/producer/extractor-pack:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/producer/ql/lib:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/producer/ql/src"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+        "database",
+        "analyze",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/db/fixed",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/producer/ql/src/codeql-suites/code-scanning.qls",
+        "--format=sarifv2.1.0",
+        "--output=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/out/fixed/result.sarif",
+        "--search-path=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/producer/extractor-pack:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/producer/ql/lib:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/producer/ql/src",
+        "--common-caches=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/cache/fixed/common",
+        "--compilation-cache=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/cache/fixed/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0
+    }
+  ]
+}

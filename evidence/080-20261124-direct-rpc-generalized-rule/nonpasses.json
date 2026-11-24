@@ -1,0 +1,24 @@
+{
+  "current_slice_a": {
+    "commands_raw_sha256": "aba15cde70a3efc85c8df15d9e3f0e7f820b3103c6ae4eec197fde967bce3b30",
+    "note": "rule query was interrupted at 183.36 seconds (exit 130); no result accepted",
+    "query_exit": 130,
+    "stderr_path": "out/rule-query.stderr",
+    "stderr_sha256": "29fc9ca4d449425b716916e7d23a29ee9cde6a842cdab172e23099fa79674466",
+    "wall_seconds": 183.36
+  },
+  "run_h": {
+    "control_error_count": 2,
+    "error_rows": [
+      "Extraction failed in /Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-shell-run-20261124-h/stage/controls/usr/share/rpcd/ucode/catch_formal_shadow.uc with error A parse error occurred. Check the syntax of the file. If the file is invalid, correct the error or exclude the file from analysis.",
+      "Extraction failed in /Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-shell-run-20261124-h/stage/controls/usr/share/rpcd/ucode/catch_local_shadow.uc with error A parse error occurred. Check the syntax of the file. If the file is invalid, correct the error or exclude the file from analysis."
+    ],
+    "oracle_sha256": "d9eedf9393047fc0e18f0e162f18cacd2a236dcaa6d7acd3b70c7f4df44d008f",
+    "producer_commit": "5ce2706ec5fe70a61bba981a4166c3beedaa613d",
+    "raw_sha256": {
+      "commands.json": "385be079c1fb5d31482b7536f8071702153752922cf8c6ca97129883501d4120",
+      "errors.json": "8779f66e340e41b8990bd85e9d9d73c9c39ca91d9ede0eb9e36e487bfa399679",
+      "preflight.json": "bb918aa3cf89c26e105c786f1cb2e4c55184319b4c922c27c511fc5d4f87c90c"
+    }
+  }
+}

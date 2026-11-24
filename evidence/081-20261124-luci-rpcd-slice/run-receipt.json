@@ -1,0 +1,295 @@
+{
+  "schema": "claim-041-luci-rpcd-slice-run/v1",
+  "scope": "Exact source-staged extraction and default code-scanning suite observation for the 17 tracked raw LuCI rpcd ucode plugin files selected in the accompanying source-first oracle.",
+  "pins": {
+    "luci_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "luci_clean": true,
+    "producer_commit": "78590f24ab20a69eb1ac70258a00165f453d305d",
+    "producer_clean": true,
+    "source_first_oracle_sha256": "ef4abca47ed268c3ef59a64c5c4c33d289d147e6b0bd94695f728c9c77b50be1",
+    "codeql_version": "CodeQL command-line toolchain release 2.27.4.",
+    "codeql_extractor_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+    "direct_rule_query_sha256": "a071facd947a65d3eb48906070cf17ad53d2bd62b54116991437f77fef5e52d8",
+    "default_suite_sha256": "6d343f93e37c309b8461da9fafcf67d089737980d7ac42a5409e75df3bd442e5",
+    "consumer_lock_path": "corpus/lock.json",
+    "consumer_lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "consumer_checkout_commit": "66a9c78cd605dbe63645235074b9747ab57b187e"
+  },
+  "files": [
+    {
+      "source_path": "applications/luci-app-adblock-fast/root/usr/share/rpcd/ucode/luci.adblock-fast",
+      "package_owner": "luci-app-adblock-fast",
+      "git_blob": "f7062814454328a5dd0bdbe7d7e724c410c95ae3",
+      "source_sha256": "3cb9d07b33a0aec36743326a5cb1e18885d245a132ef92174eb4c8b70aaebdd8",
+      "stage_path": "stage/usr/share/rpcd/ucode/luci.adblock-fast",
+      "stage_sha256": "3cb9d07b33a0aec36743326a5cb1e18885d245a132ef92174eb4c8b70aaebdd8",
+      "proposed_installed_path": "/usr/share/rpcd/ucode/luci.adblock-fast"
+    },
+    {
+      "source_path": "applications/luci-app-advanced-reboot/root/usr/share/rpcd/ucode/luci.advanced-reboot",
+      "package_owner": "luci-app-advanced-reboot",
+      "git_blob": "f903b6297ea68b43398f5e091e2409f5e162edf7",
+      "source_sha256": "b6b5562036c1f2f93ec9ea9261943a17d667d5a742c71ce128ec4859279d4b11",
+      "stage_path": "stage/usr/share/rpcd/ucode/luci.advanced-reboot",
+      "stage_sha256": "b6b5562036c1f2f93ec9ea9261943a17d667d5a742c71ce128ec4859279d4b11",
+      "proposed_installed_path": "/usr/share/rpcd/ucode/luci.advanced-reboot"
+    },
+    {
+      "source_path": "applications/luci-app-ddns/root/usr/share/rpcd/ucode/ddns.uc",
+      "package_owner": "luci-app-ddns",
+      "git_blob": "32d1da738b4932159a39bcda7ee6c72b5c58a8fd",
+      "source_sha256": "924bd2b53fbc64d2a00a479e36ef3c9239488445fc1ced70122e8ac3735fdc2b",
+      "stage_path": "stage/usr/share/rpcd/ucode/ddns.uc",
+      "stage_sha256": "924bd2b53fbc64d2a00a479e36ef3c9239488445fc1ced70122e8ac3735fdc2b",
+      "proposed_installed_path": "/usr/share/rpcd/ucode/ddns.uc"
+    },
+    {
+      "source_path": "applications/luci-app-dockerman/root/usr/share/rpcd/ucode/docker_rpc.uc",
+      "package_owner": "luci-app-dockerman",
+      "git_blob": "5fb85394d77466f0cfa3961b31f442182c809a10",
+      "source_sha256": "f9c8482fb58d6d56d9b749f9206513b24c169fd8cb59e0619a29b7f2a2b55381",
+      "stage_path": "stage/usr/share/rpcd/ucode/docker_rpc.uc",
+      "stage_sha256": "f9c8482fb58d6d56d9b749f9206513b24c169fd8cb59e0619a29b7f2a2b55381",
+      "proposed_installed_path": "/usr/share/rpcd/ucode/docker_rpc.uc"
+    },
+    {
+      "source_path": "applications/luci-app-example/root/usr/share/rpcd/ucode/example.uc",
+      "package_owner": "luci-app-example",
+      "git_blob": "d6e21fcfeb8ff49d0387a605313b2b6f11fed56f",
+      "source_sha256": "8108ebde4152d186b33f9e7447adf7dee6350e3b1ecc673d0bce2bda72fda927",
+      "stage_path": "stage/usr/share/rpcd/ucode/example.uc",
+      "stage_sha256": "8108ebde4152d186b33f9e7447adf7dee6350e3b1ecc673d0bce2bda72fda927",
+      "proposed_installed_path": "/usr/share/rpcd/ucode/example.uc"
+    },
+    {
+      "source_path": "applications/luci-app-lldpd/root/usr/share/rpcd/ucode/luci.lldpd",
+      "package_owner": "luci-app-lldpd",
+      "git_blob": "3774e222cec2f43f73edb6fb07978dab14ed6d36",
+      "source_sha256": "a9d6e6477307408a130ce20ad9f92813dfeca611e5c8a5a7a86f2ca746081eac",
+      "stage_path": "stage/usr/share/rpcd/ucode/luci.lldpd",
+      "stage_sha256": "a9d6e6477307408a130ce20ad9f92813dfeca611e5c8a5a7a86f2ca746081eac",
+      "proposed_installed_path": "/usr/share/rpcd/ucode/luci.lldpd"
+    },
+    {
+      "source_path": "applications/luci-app-rustdesk-server/root/usr/share/rpcd/ucode/rustdesk-server.uc",
+      "package_owner": "luci-app-rustdesk-server",
+      "git_blob": "184bb2f0b42ca70ee7e1f2fe16a43c476a7602dd",
+      "source_sha256": "16c86ab0d8537eb6def1130e4fd28f9597b5d37a4e499dbd8d9d2774c2c7da7e",
+      "stage_path": "stage/usr/share/rpcd/ucode/rustdesk-server.uc",
+      "stage_sha256": "16c86ab0d8537eb6def1130e4fd28f9597b5d37a4e499dbd8d9d2774c2c7da7e",
+      "proposed_installed_path": "/usr/share/rpcd/ucode/rustdesk-server.uc"
+    },
+    {
+      "source_path": "applications/luci-app-tailscale-community/root/usr/share/rpcd/ucode/tailscale.uc",
+      "package_owner": "luci-app-tailscale-community",
+      "git_blob": "2a30bdbfbadc285133c25b3d50dd6ae4b5317bf4",
+      "source_sha256": "353f00bed64f81c74689ff2297704c4ba87ad9563abd60d265c61711c88441a4",
+      "stage_path": "stage/usr/share/rpcd/ucode/tailscale.uc",
+      "stage_sha256": "353f00bed64f81c74689ff2297704c4ba87ad9563abd60d265c61711c88441a4",
+      "proposed_installed_path": "/usr/share/rpcd/ucode/tailscale.uc"
+    },
+    {
+      "source_path": "applications/luci-app-upnp/root/usr/share/rpcd/ucode/luci.upnp",
+      "package_owner": "luci-app-upnp",
+      "git_blob": "f72b57b7ba84188b9b78854bf7ad0711394a0045",
+      "source_sha256": "e149db4350cdfa2e3f3ccc529244d3a3143d72016fa4216f72cf2792f3fd202d",
+      "stage_path": "stage/usr/share/rpcd/ucode/luci.upnp",
+      "stage_sha256": "e149db4350cdfa2e3f3ccc529244d3a3143d72016fa4216f72cf2792f3fd202d",
+      "proposed_installed_path": "/usr/share/rpcd/ucode/luci.upnp"
+    },
+    {
+      "source_path": "applications/luci-app-weechat/root/usr/share/rpcd/ucode/weechat.uc",
+      "package_owner": "luci-app-weechat",
+      "git_blob": "9f17ae3718a278eab2813ccfae4f2c732a9118e8",
+      "source_sha256": "548213868a38bd84d8a9cb9b9842c647d4e79fa9df21b815b6b869f26a54e44e",
+      "stage_path": "stage/usr/share/rpcd/ucode/weechat.uc",
+      "stage_sha256": "548213868a38bd84d8a9cb9b9842c647d4e79fa9df21b815b6b869f26a54e44e",
+      "proposed_installed_path": "/usr/share/rpcd/ucode/weechat.uc"
+    },
+    {
+      "source_path": "applications/luci-app-wifihistory/root/usr/share/rpcd/ucode/wifihistory.uc",
+      "package_owner": "luci-app-wifihistory",
+      "git_blob": "918ad9818b2e769d7b5a95f3855cb180fb8e82a7",
+      "source_sha256": "b9ce671467adf519ac61e0f18e134856c4704497457949d774cb1af68830397c",
+      "stage_path": "stage/usr/share/rpcd/ucode/wifihistory.uc",
+      "stage_sha256": "b9ce671467adf519ac61e0f18e134856c4704497457949d774cb1af68830397c",
+      "proposed_installed_path": "/usr/share/rpcd/ucode/wifihistory.uc"
+    },
+    {
+      "source_path": "applications/luci-app-wol/root/usr/share/rpcd/ucode/luci.wol",
+      "package_owner": "luci-app-wol",
+      "git_blob": "fd9e9f0485ab6baec96ae089caf1089a6d471c99",
+      "source_sha256": "51214ec57bcbd8d50e65016efda2a05e8eb7822dc7e510d014965834c61ef92b",
+      "stage_path": "stage/usr/share/rpcd/ucode/luci.wol",
+      "stage_sha256": "51214ec57bcbd8d50e65016efda2a05e8eb7822dc7e510d014965834c61ef92b",
+      "proposed_installed_path": "/usr/share/rpcd/ucode/luci.wol"
+    },
+    {
+      "source_path": "modules/luci-base/root/usr/share/rpcd/ucode/luci",
+      "package_owner": "luci-base",
+      "git_blob": "64caf75c08bc0fa54520a0ef262dfd6f339dc89e",
+      "source_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+      "stage_path": "stage/usr/share/rpcd/ucode/luci",
+      "stage_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+      "proposed_installed_path": "/usr/share/rpcd/ucode/luci"
+    },
+    {
+      "source_path": "modules/luci-mod-dashboard/root/usr/share/rpcd/ucode/luci.dashboard",
+      "package_owner": "luci-mod-dashboard",
+      "git_blob": "d87679d9b0273fdf2f682e7e58092a29f8d3cc90",
+      "source_sha256": "45be5fbe337a5dcdec88480d147bfb388ca8cb98919499fc3cf608220f2c2fa5",
+      "stage_path": "stage/usr/share/rpcd/ucode/luci.dashboard",
+      "stage_sha256": "45be5fbe337a5dcdec88480d147bfb388ca8cb98919499fc3cf608220f2c2fa5",
+      "proposed_installed_path": "/usr/share/rpcd/ucode/luci.dashboard"
+    },
+    {
+      "source_path": "protocols/luci-proto-openconnect/root/usr/share/rpcd/ucode/luci.openconnect",
+      "package_owner": "luci-proto-openconnect",
+      "git_blob": "1bc13a17068aaba4f30e58e3c76d9e7ca955c931",
+      "source_sha256": "03cc44e87879ef0acac11db7a5e303b83e00c3abc6b4a244cb55db4188761053",
+      "stage_path": "stage/usr/share/rpcd/ucode/luci.openconnect",
+      "stage_sha256": "03cc44e87879ef0acac11db7a5e303b83e00c3abc6b4a244cb55db4188761053",
+      "proposed_installed_path": "/usr/share/rpcd/ucode/luci.openconnect"
+    },
+    {
+      "source_path": "protocols/luci-proto-openfortivpn/root/usr/share/rpcd/ucode/luci.openfortivpn",
+      "package_owner": "luci-proto-openfortivpn",
+      "git_blob": "8588f7453288ff47159b6d7859a8286b73cf3e7f",
+      "source_sha256": "b1da8fcb811651037a7f2dbbd3db0c99ea4ebad82f8d923456448e3358dee2af",
+      "stage_path": "stage/usr/share/rpcd/ucode/luci.openfortivpn",
+      "stage_sha256": "b1da8fcb811651037a7f2dbbd3db0c99ea4ebad82f8d923456448e3358dee2af",
+      "proposed_installed_path": "/usr/share/rpcd/ucode/luci.openfortivpn"
+    },
+    {
+      "source_path": "protocols/luci-proto-wireguard/root/usr/share/rpcd/ucode/luci.wireguard",
+      "package_owner": "luci-proto-wireguard",
+      "git_blob": "b8e20daf94c2d4fa5d133c227f8882dd0b23eb2e",
+      "source_sha256": "8b5784a6d0df8c945e5df15ee37365c90d078706b58d160fd92f44c114d4f458",
+      "stage_path": "stage/usr/share/rpcd/ucode/luci.wireguard",
+      "stage_sha256": "8b5784a6d0df8c945e5df15ee37365c90d078706b58d160fd92f44c114d4f458",
+      "proposed_installed_path": "/usr/share/rpcd/ucode/luci.wireguard"
+    }
+  ],
+  "extraction": {
+    "selected_count": 17,
+    "successful_tuple_count": 17,
+    "successful_path_multiset_matches_selection": true,
+    "error_tuple_count": 0,
+    "error_tuples": [],
+    "summary_sha256": "0a87328908d3a561e6f1241c8cade7757cf395430484fe7c04e7dbe44f6934a3",
+    "success_query_json_sha256": "5617457e7dca6d10a6e0825d00d682181a3b21929cf05449e3e07ecf78467800",
+    "errors_query_json_sha256": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc"
+  },
+  "route_probe": {
+    "exit": 0,
+    "input_count": 17,
+    "plain_count": 17,
+    "markup_count": 0,
+    "markup_inconclusive_count": 0,
+    "uncertain_count": 0,
+    "excluded_count": 0,
+    "duplicate_input_count": 0,
+    "all_decisions": "plain_route_selected via rpcd_raw_mode_full_path",
+    "raw_routing_json_sha256": "06b156c31643150f9a32da9216768bb7271f625dc849b67cf0151de7fddf8756",
+    "raw_file_list_sha256": "866d64c89d536e92ba4a5a20a8864d0e85a7ff1d7cf6f264dce1918374f207ac",
+    "independent_of_database_run": true
+  },
+  "suite": {
+    "resolved_queries": [
+      "DirectRpcShellWord.ql",
+      "ExtractionErrors.ql",
+      "SuccessfullyExtractedFiles.ql"
+    ],
+    "sarif_rule_descriptors": [
+      {
+        "id": "ucode/m4/direct-rpc-shell-word",
+        "name": "ucode/m4/direct-rpc-shell-word"
+      }
+    ],
+    "sarif_result_count": 0,
+    "raw_sarif_sha256": "1944fa23a84e359ffd37495de0a6380dfdb5e6d1d7acaa3ac7ee928a4133a9a8",
+    "resolved_suite_json_sha256": "09a462068a9e317a77206ed5ffc170d8ff0bbf7a9f4a0eb6d3887fcf7781d918",
+    "direct_rule_ran_via_default_suite_analyze": true,
+    "sarif_notification_ids": [
+      "ucode/diagnostics/extraction-errors",
+      "ucode/diagnostics/successfully-extracted-files",
+      "cli/file-coverage-baseline",
+      "cli/platform",
+      "cli/sip-enablement"
+    ]
+  },
+  "commands": [
+    {
+      "label": "init",
+      "exit": 0,
+      "wall_seconds": 0.475,
+      "peak_rss_bytes": 122093568
+    },
+    {
+      "label": "index",
+      "exit": 0,
+      "wall_seconds": 0.834,
+      "peak_rss_bytes": 121274368
+    },
+    {
+      "label": "finalize",
+      "exit": 0,
+      "wall_seconds": 1.261,
+      "peak_rss_bytes": 277037056
+    },
+    {
+      "label": "SuccessfullyExtractedFiles-query",
+      "exit": 0,
+      "wall_seconds": 1.394,
+      "peak_rss_bytes": 298303488
+    },
+    {
+      "label": "SuccessfullyExtractedFiles-decode",
+      "exit": 0,
+      "wall_seconds": 0.216,
+      "peak_rss_bytes": 88948736
+    },
+    {
+      "label": "ExtractionErrors-query",
+      "exit": 0,
+      "wall_seconds": 1.402,
+      "peak_rss_bytes": 308396032
+    },
+    {
+      "label": "ExtractionErrors-decode",
+      "exit": 0,
+      "wall_seconds": 0.215,
+      "peak_rss_bytes": 88588288
+    },
+    {
+      "label": "resolve-suite",
+      "exit": 0,
+      "wall_seconds": 0.361,
+      "peak_rss_bytes": 119799808
+    },
+    {
+      "label": "suite-sarif",
+      "exit": 0,
+      "wall_seconds": 3.568,
+      "peak_rss_bytes": 468008960
+    }
+  ],
+  "raw_receipt_sha256": {
+    "preflight.json": "38421cb559a33ead5b02249117e61a995dc28c6d7c912acdc6b670f07a8f2551",
+    "commands.json": "9c62a1ed5e10e0035c1cc2267405e39aa9c4a14844af3de9c21f6b7c4ec5ba23",
+    "out/extraction-summary.json": "0a87328908d3a561e6f1241c8cade7757cf395430484fe7c04e7dbe44f6934a3",
+    "out/SuccessfullyExtractedFiles.json": "5617457e7dca6d10a6e0825d00d682181a3b21929cf05449e3e07ecf78467800",
+    "out/ExtractionErrors.json": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "out/resolved-suite.json": "09a462068a9e317a77206ed5ffc170d8ff0bbf7a9f4a0eb6d3887fcf7781d918",
+    "out/results.sarif": "1944fa23a84e359ffd37495de0a6380dfdb5e6d1d7acaa3ac7ee928a4133a9a8",
+    "route-probe/trap/routing.json": "06b156c31643150f9a32da9216768bb7271f625dc849b67cf0151de7fddf8756",
+    "route-probe/file-list.txt": "866d64c89d536e92ba4a5a20a8864d0e85a7ff1d7cf6f264dce1918374f207ac"
+  },
+  "limits": [
+    "Staged source bytes match pinned tracked source bytes; proposed install paths are source/package-recipe mappings, not verified package or installed-image bytes.",
+    "The route probe uses the same staged source paths but is a separate direct invocation and does not authenticate the database run.",
+    "Zero direct-rule SARIF results are not a security negative, completeness or safety result; no eligible positive/near-miss control is claimed.",
+    "Sol-reviewed WOL popen site is out of scope for the template rule and remains unknown.",
+    "No consumer handoff or runtime reachability is established."
+  ]
+}

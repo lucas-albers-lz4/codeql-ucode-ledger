@@ -1,0 +1,251 @@
+{
+  "cases": [
+    {
+      "case": "parent",
+      "command_exit": 0,
+      "command_wall_seconds": 3.418,
+      "error_count": 0,
+      "expected_sink_span": [
+        77,
+        16,
+        77,
+        25
+      ],
+      "expected_source_span": [
+        71,
+        115,
+        71,
+        131
+      ],
+      "rule_rows": [
+        [
+          "MemberExpression",
+          "RPC metadata is directly interpolated into a command later passed to fs.popen at line 77; review the command path."
+        ]
+      ],
+      "source_sha256_oracle": "051c8162f826683333e11264615806df5ab08415676c0bd098921cb1b05af991",
+      "staged_sha256": "051c8162f826683333e11264615806df5ab08415676c0bd098921cb1b05af991",
+      "successful_paths": [
+        "usr/share/rpcd/ucode/luci.openvpn.uc"
+      ],
+      "witness_rows": [
+        [
+          "MemberExpression",
+          "MemberExpression",
+          "71",
+          "115",
+          "71",
+          "131",
+          "CallExpression",
+          "CallExpression",
+          "77",
+          "16",
+          "77",
+          "25"
+        ]
+      ]
+    },
+    {
+      "case": "fixed",
+      "command_exit": 0,
+      "command_wall_seconds": 4.081,
+      "error_count": 0,
+      "expected_sink_span": [
+        77,
+        16,
+        77,
+        25
+      ],
+      "expected_source_span": [
+        71,
+        126,
+        71,
+        142
+      ],
+      "rule_rows": [],
+      "source_sha256_oracle": "6593792678951fd500c2b090d17d9e500a05a642cfb996ee02c1649473152410",
+      "staged_sha256": "6593792678951fd500c2b090d17d9e500a05a642cfb996ee02c1649473152410",
+      "successful_paths": [
+        "usr/share/rpcd/ucode/luci.openvpn.uc"
+      ],
+      "witness_rows": [
+        [
+          "MemberExpression",
+          "MemberExpression",
+          "71",
+          "126",
+          "71",
+          "142",
+          "CallExpression",
+          "CallExpression",
+          "77",
+          "16",
+          "77",
+          "25"
+        ]
+      ]
+    },
+    {
+      "case": "constant_sink",
+      "command_exit": 0,
+      "command_wall_seconds": 4.057,
+      "error_count": 0,
+      "expected_sink_span": [
+        77,
+        16,
+        77,
+        34
+      ],
+      "expected_source_span": [
+        71,
+        115,
+        71,
+        131
+      ],
+      "rule_rows": [],
+      "source_sha256_oracle": "08f8ed832129d2e48be12facfeb304dffc7353b2be26873c08b6b233cfd6bb6e",
+      "staged_sha256": "08f8ed832129d2e48be12facfeb304dffc7353b2be26873c08b6b233cfd6bb6e",
+      "successful_paths": [
+        "usr/share/rpcd/ucode/luci.openvpn.uc"
+      ],
+      "witness_rows": [
+        [
+          "MemberExpression",
+          "MemberExpression",
+          "71",
+          "115",
+          "71",
+          "131",
+          "CallExpression",
+          "CallExpression",
+          "77",
+          "16",
+          "77",
+          "34"
+        ]
+      ]
+    },
+    {
+      "case": "req_reassigned",
+      "command_exit": 0,
+      "command_wall_seconds": 3.831,
+      "error_count": 0,
+      "expected_sink_span": [
+        78,
+        16,
+        78,
+        25
+      ],
+      "expected_source_span": [
+        72,
+        115,
+        72,
+        131
+      ],
+      "rule_rows": [],
+      "source_sha256_oracle": "849d941590711f4f1e520165fade8d18d292ddb134dcca163afb1caf96715a82",
+      "staged_sha256": "849d941590711f4f1e520165fade8d18d292ddb134dcca163afb1caf96715a82",
+      "successful_paths": [
+        "usr/share/rpcd/ucode/luci.openvpn.uc"
+      ],
+      "witness_rows": [
+        [
+          "MemberExpression",
+          "MemberExpression",
+          "72",
+          "115",
+          "72",
+          "131",
+          "CallExpression",
+          "CallExpression",
+          "78",
+          "16",
+          "78",
+          "25"
+        ]
+      ]
+    },
+    {
+      "case": "cmd_shadowed",
+      "command_exit": 0,
+      "command_wall_seconds": 3.248,
+      "error_count": 0,
+      "expected_sink_span": [
+        78,
+        36,
+        78,
+        45
+      ],
+      "expected_source_span": [
+        71,
+        115,
+        71,
+        131
+      ],
+      "rule_rows": [],
+      "source_sha256_oracle": "273638453f355fc6e33d6b9d58d66f1e61c62f6450e26b6ba503879b094de14a",
+      "staged_sha256": "273638453f355fc6e33d6b9d58d66f1e61c62f6450e26b6ba503879b094de14a",
+      "successful_paths": [
+        "usr/share/rpcd/ucode/luci.openvpn.uc"
+      ],
+      "witness_rows": [
+        [
+          "MemberExpression",
+          "MemberExpression",
+          "71",
+          "115",
+          "71",
+          "131",
+          "CallExpression",
+          "CallExpression",
+          "78",
+          "36",
+          "78",
+          "45"
+        ]
+      ]
+    },
+    {
+      "case": "nested_assignment",
+      "command_exit": 0,
+      "command_wall_seconds": 2.621,
+      "error_count": 0,
+      "expected_sink_span": [
+        78,
+        16,
+        78,
+        25
+      ],
+      "expected_source_span": [
+        71,
+        133,
+        71,
+        149
+      ],
+      "rule_rows": [],
+      "source_sha256_oracle": "c04c486095b06910d5492763601410422500608b3591f86161bf480e9757ac50",
+      "staged_sha256": "c04c486095b06910d5492763601410422500608b3591f86161bf480e9757ac50",
+      "successful_paths": [
+        "usr/share/rpcd/ucode/luci.openvpn.uc"
+      ],
+      "witness_rows": [
+        [
+          "MemberExpression",
+          "MemberExpression",
+          "71",
+          "133",
+          "71",
+          "149",
+          "CallExpression",
+          "CallExpression",
+          "78",
+          "16",
+          "78",
+          "25"
+        ]
+      ]
+    }
+  ],
+  "query_sha256": "559c5174ace56a3b5081906849e3584c4019de14292fbd5ebf34dd97fcb155d5",
+  "rule_id": "ucode/m4/openvpn-raw-metadata-command"
+}

@@ -94,6 +94,18 @@ Together these move from source selection through extraction, query, and consume
 | [072](claims/072-procd-path-env-filter.md) | Proposed | Security-40: procd PATH/environment filter in service exec |
 | [073](claims/073-banip-log-first-ip.md) | Proposed | Security-40: banip log-monitor first-IP extraction |
 | [074](claims/074-travelmate-fcheck-injection.md) | Proposed | Security-40: travelmate f_check script/script_args injection |
+| [075](claims/075-historical-openvpn-baseline.md) | Demonstrated | Local CodeQL baseline: historical OpenVPN source/sink AST present, current candidate query absent, positive/near-miss controls discriminate |
+| [076](claims/076-historical-tailscale-baseline.md) | Demonstrated | Post-merge local CodeQL baseline: historical Tailscale and nested control AST present, current candidate query absent, direct positive control live |
+| [077](claims/077-current-luci-openwrt-extraction.md) | Demonstrated | First source-staged current LuCI/OpenWrt slice: 21 exact extraction identities, zero errors, 20 plain and one markup-inconclusive route |
+| [078](claims/078-openvpn-experimental-historical-rule.md) | Demonstrated | Experimental OpenVPN explicit query: historical parent once, actual fix and four controls absent, exact extraction and SARIF location |
+| [079](claims/079-tailscale-experimental-historical-rule.md) | Demonstrated | Experimental Tailscale explicit query: historical parent once, fix absent, one of eleven controls positive, exact SARIF locations and bounded query timing |
+| [080](claims/080-final-direct-rpc-rule.md) | Demonstrated | Experimental reusable direct-handler query: OpenVPN parent once, fix and pinned swconfig absent, exact controls and SARIF; copied 21-file query probe |
+| [081](claims/081-current-luci-rpcd-direct-shell-slice.md) | Demonstrated | Fresh source-staged 17-file LuCI rpcd slice: exact extraction, raw-mode routes and draft default-suite SARIF with zero results |
+| [082](claims/082-local-direct-rpc-sarif-handoff.md) | Demonstrated | Fresh local draft-suite producer-to-consumer SARIF handoff: OpenVPN parent alert accepted, fix and swconfig empty |
+| [083](claims/083-named-helper-shell-word-experiment.md) | Demonstrated | Testing-tagged named-helper shell-word query: exact 21-file extraction, two synthetic positives, real fixed-literal near miss and scope controls; no default-suite or current-source alert claim |
+| [084](claims/084-current-luci-package-ucode-slice.md) | Demonstrated | Fresh disjoint four-file LuCI package Ucode slice: exact source/route/extraction identities; zero default-suite and testing-query rows without a security-negative claim |
+| [085](claims/085-pinned-luci-ucode-source-census.md) | Demonstrated | Pinned 69-path LuCI Ucode/markup source census with exact Git bytes and overlap accounting; 24 remaining install-shaped source candidates, not a full extraction |
+| [086](claims/086-current-luci-markup-shebang-route-slice.md) | Demonstrated | Fresh disjoint 24-file LuCI routing/extraction check: 22 markup-inconclusive templates, two plain shebang scripts, exact successes and zero errors |
 
 Every demonstrated status is limited to the run, inputs, controls and revisions
 in that claim. These rows are not a coverage percentage.

@@ -1,0 +1,27 @@
+{
+  "all_commands_exit_zero": true,
+  "cargo_lock_sha256": "20678c3cbb29632a9369bdb3c735af9ee63c9443879db38847fbda9813aa0a77",
+  "case_count": 6,
+  "case_results": "case-results.json",
+  "claim": "038",
+  "codeql_version": "2.27.4",
+  "extractor_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+  "limits": [
+    "historical source distinction only; no claim that this identifies the actual vulnerability or proves the fix safe",
+    "explicit experimental query only; not default suite or release gate",
+    "no runtime exploitability, reachability or authorization conclusion"
+  ],
+  "producer_base": "18afe771568d373088edee7a790825ee46dec9e0",
+  "producer_branch": "security/openvpn-metadata-shell",
+  "producer_commit": "c4829ff1d30225ca758b0f7979f47c3265cf882d",
+  "ql_lock_sha256": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+  "query_sha256": "559c5174ace56a3b5081906849e3584c4019de14292fbd5ebf34dd97fcb155d5",
+  "raw_artifact_sha256": {
+    "commands.json": "c849910bede0a7e42b425f812aa5c850e9edcf935ea69ecbcc1a069583ec341b",
+    "sarif-probe/openvpn.sarif": "e0a02931c5187f9bc7a51ac5c6ffdbea996d04282c493338dd2d8562dd94294a",
+    "sarif-probe/receipt.json": "efb7991326fde645568561711d534615ff132505aef1ff75968e6fecff640425",
+    "source-first.json": "02499bf391eb7a4abe06216705ddf331a800e1e8b2c44bc84c202127bfa92fb8",
+    "witness-results.json": "7ec280adc107493c8adf29a74b2cb981492e4552c4f37b1a15ba790947159de8"
+  },
+  "sarif_summary": "sarif-summary.json"
+}

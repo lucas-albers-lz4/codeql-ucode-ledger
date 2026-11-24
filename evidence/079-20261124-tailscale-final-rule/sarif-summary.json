@@ -1,0 +1,50 @@
+{
+  "sarif_runs": [
+    {
+      "case": "parent",
+      "raw_sha256": "fe085e94fadffa246ab002e17d46916b50f0b0c7e3d3ebd5af6c59f087131cb8",
+      "results": [
+        {
+          "message": "A request-derived value matches this bounded nested-shell command construction.",
+          "region": {
+            "endColumn": 49,
+            "startColumn": 3,
+            "startLine": 164
+          },
+          "ruleId": "ucode/m4/tailscale-nested-shell-candidate",
+          "uri": "usr/share/rpcd/ucode/tailscale.uc"
+        }
+      ],
+      "rules": [
+        "ucode/m4/tailscale-nested-shell-candidate"
+      ]
+    },
+    {
+      "case": "fixed",
+      "raw_sha256": "df588e30abe55097b22b1a831a532837042bf3f086177ec79d0e46fea2f3518c",
+      "results": [],
+      "rules": [
+        "ucode/m4/tailscale-nested-shell-candidate"
+      ]
+    },
+    {
+      "case": "controls",
+      "raw_sha256": "079e6109a0dcce81e230557f9a1382d7a432fd2b2e6fad1716d86859828c7433",
+      "results": [
+        {
+          "message": "A request-derived value matches this bounded nested-shell command construction.",
+          "region": {
+            "endColumn": 51,
+            "startColumn": 5,
+            "startLine": 18
+          },
+          "ruleId": "ucode/m4/tailscale-nested-shell-candidate",
+          "uri": "usr/share/rpcd/ucode/nested_pos.uc"
+        }
+      ],
+      "rules": [
+        "ucode/m4/tailscale-nested-shell-candidate"
+      ]
+    }
+  ]
+}

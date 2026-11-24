@@ -1,0 +1,44 @@
+{
+  "all_exit_zero": true,
+  "cases": {
+    "fixed": {
+      "accepted_results": 0,
+      "errors": 0,
+      "sarif_results": 0,
+      "sarif_sha256": "50be4250998610cdafb93f809f76c0b77cc729cbe244c0c80397211a40f08eea",
+      "successes": 1
+    },
+    "parent": {
+      "accepted_results": 1,
+      "errors": 0,
+      "sarif_results": 1,
+      "sarif_sha256": "9a52f514b1f993f304b256fe1c4231855a15ca042e20bf9930e03297224f015f",
+      "successes": 1
+    },
+    "swconfig": {
+      "accepted_results": 0,
+      "errors": 0,
+      "sarif_results": 0,
+      "sarif_sha256": "1db6b8bbc0536ef988884110cb60a4b95d5f3e77403541c938662b8f1d309331",
+      "successes": 1
+    }
+  },
+  "claim": "042",
+  "commands": 30,
+  "consumer_commit": "a6f4956507e2cd2078ba7c3ac7270c2e0c343cd6",
+  "consumer_validator_sha256": "e2ec2b713c7597e486eb704e3e7e26d1167046c1b6a5b5935c27b433a47c74f6",
+  "pack_directory_digest_sha256": "42e5c2267849a4ef6429025f274e545594457f41be7f6fe5e588579956a2736e",
+  "pack_executable_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+  "producer_commit": "299731d8e22112cf88680b89ee08915ff531d273",
+  "provenance_notes": [
+    "run_b.py is the final runner; run.py is superseded run-a",
+    "producer workspace starts from 29d8 snapshot and overlays final direct/Tailscale queries from 299731d; relevant executed query/suite/diagnostic/lock files match integrated checkout",
+    "producer pack_sha256 is executable hash; full 14-file pack inventory is separately hashed",
+    "pack provenance records dirty grammar Cargo.toml and diff digest",
+    "receipt is self-supplied; consumer checks consistency but does not authenticate arbitrary execution"
+  ],
+  "query_sha256": "a071facd947a65d3eb48906070cf17ad53d2bd62b54116991437f77fef5e52d8",
+  "scope": "local macOS draft producer through local parser; not Linux/release/installed-image/runtime security",
+  "source_first_oracle_sha256": "fcab0ad97ee83389e62ecaafb6491675f6605e4a7987c3d666f8ee8669e712ea",
+  "suite_sha256": "6d343f93e37c309b8461da9fafcf67d089737980d7ac42a5409e75df3bd442e5"
+}

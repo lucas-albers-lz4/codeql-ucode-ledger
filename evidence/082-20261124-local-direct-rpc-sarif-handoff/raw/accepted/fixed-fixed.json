@@ -1,0 +1,15 @@
+{
+  "accepted_results": [],
+  "producer": {
+    "codeql_version": "2.27.4",
+    "pack_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+    "sha": "299731d8e22112cf88680b89ee08915ff531d273",
+    "suite_sha256": "6d343f93e37c309b8461da9fafcf67d089737980d7ac42a5409e75df3bd442e5"
+  },
+  "run_id": "local-run-b-fixed",
+  "sarif_sha256": "50be4250998610cdafb93f809f76c0b77cc729cbe244c0c80397211a40f08eea",
+  "schema": "ucode-sarif-acceptance-v1",
+  "successful_files": [
+    "usr/share/rpcd/ucode/luci.openvpn.uc"
+  ]
+}

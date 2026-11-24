@@ -1,0 +1,66 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/ql/src/m4/TailscaleNestedShell.ql",
+        "--database=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/db",
+        "--search-path=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/extractor-pack:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/ql/lib:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/ql/src",
+        "--additional-packs=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/ql/lib:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/ql/src:/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/producer/deps",
+        "--common-caches=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/cache/common",
+        "--compilation-cache=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--output=/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/out/tailscale.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": 450052096,
+      "stderr": "out/query.stderr",
+      "stdout": "out/query.stdout",
+      "timeout": false,
+      "wall_seconds": 3.196
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/$RUN/out/tailscale.bqrs"
+      ],
+      "exit": 0,
+      "stderr": "out/decode.stderr",
+      "stdout": "out/decode.stdout",
+      "wall_seconds": 0.23
+    }
+  ],
+  "preflight": {
+    "codeql_version": "CodeQL command-line toolchain release 2.27.4.",
+    "db_copy_bytes": 42527916,
+    "free_disk_bytes": 134622707712,
+    "inherited_HOME": "/Users/lalbers",
+    "producer_dirty": "",
+    "producer_head": "2dde7010e9bcf7cb445743fc48221bbfadfcaa34",
+    "query_sha256": "136ec48e2f38c0da03d3dd975fcccae348997dbb6e6ec4a014444c42b6e09bfc",
+    "source_count": 21,
+    "source_db": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/stage6-first-slice-prep-20261123-a/run-b/db",
+    "source_stage_oracle_sha256": "3943f4cec7739867178ceb94f2ba1026d24f5379d4137bf90aff7215c51e92da"
+  },
+  "result": {
+    "#select": {
+      "columns": [
+        {
+          "kind": "Entity",
+          "name": "sink"
+        },
+        {
+          "kind": "String"
+        }
+      ],
+      "tuples": []
+    }
+  }
+}

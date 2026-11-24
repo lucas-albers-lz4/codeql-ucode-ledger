@@ -1,0 +1,504 @@
+{
+  "cases": {
+    "controls": {
+      "ast_witness_rows": [
+        [
+          "usr/share/rpcd/ucode/catch_formal_shadow.uc",
+          "6",
+          "44",
+          "59",
+          "value",
+          "6",
+          "30",
+          "67"
+        ],
+        [
+          "usr/share/rpcd/ucode/catch_local_shadow.uc",
+          "6",
+          "25",
+          "40",
+          "value",
+          "8",
+          "32",
+          "45"
+        ],
+        [
+          "usr/share/rpcd/ucode/constant_sink.uc",
+          "5",
+          "18",
+          "35",
+          "value",
+          "6",
+          "14",
+          "40"
+        ],
+        [
+          "usr/share/rpcd/ucode/different_field_pos.uc",
+          "5",
+          "33",
+          "54",
+          "other_field",
+          "5",
+          "14",
+          "61"
+        ],
+        [
+          "usr/share/rpcd/ucode/direct_pos.uc",
+          "5",
+          "28",
+          "45",
+          "value",
+          "5",
+          "14",
+          "53"
+        ],
+        [
+          "usr/share/rpcd/ucode/exclusive_branches.uc",
+          "6",
+          "11",
+          "24",
+          "use",
+          "9",
+          "16",
+          "29"
+        ],
+        [
+          "usr/share/rpcd/ucode/exclusive_branches.uc",
+          "7",
+          "27",
+          "42",
+          "value",
+          "9",
+          "16",
+          "29"
+        ],
+        [
+          "usr/share/rpcd/ucode/for_formal_shadow.uc",
+          "6",
+          "30",
+          "45",
+          "value",
+          "6",
+          "16",
+          "53"
+        ],
+        [
+          "usr/share/rpcd/ucode/for_local_shadow.uc",
+          "6",
+          "25",
+          "40",
+          "value",
+          "8",
+          "16",
+          "29"
+        ],
+        [
+          "usr/share/rpcd/ucode/function_formal_shadow.uc",
+          "6",
+          "28",
+          "43",
+          "value",
+          "6",
+          "14",
+          "51"
+        ],
+        [
+          "usr/share/rpcd/ucode/function_local_shadow.uc",
+          "6",
+          "25",
+          "40",
+          "value",
+          "8",
+          "14",
+          "27"
+        ],
+        [
+          "usr/share/rpcd/ucode/initialized_local_pos.uc",
+          "5",
+          "31",
+          "45",
+          "item",
+          "6",
+          "14",
+          "27"
+        ],
+        [
+          "usr/share/rpcd/ucode/multi_substitution_quote_context.uc",
+          "5",
+          "28",
+          "44",
+          "prefix",
+          "5",
+          "14",
+          "72"
+        ],
+        [
+          "usr/share/rpcd/ucode/multi_substitution_quote_context.uc",
+          "5",
+          "49",
+          "64",
+          "value",
+          "5",
+          "14",
+          "72"
+        ],
+        [
+          "usr/share/rpcd/ucode/nested_callable.uc",
+          "6",
+          "30",
+          "47",
+          "value",
+          "6",
+          "16",
+          "55"
+        ],
+        [
+          "usr/share/rpcd/ucode/quoted_arg.uc",
+          "6",
+          "39",
+          "56",
+          "value",
+          "6",
+          "14",
+          "65"
+        ],
+        [
+          "usr/share/rpcd/ucode/quoted_context.uc",
+          "5",
+          "30",
+          "47",
+          "value",
+          "5",
+          "14",
+          "57"
+        ],
+        [
+          "usr/share/rpcd/ucode/quoted_first_raw_second.uc",
+          "6",
+          "39",
+          "55",
+          "prefix",
+          "6",
+          "14",
+          "84"
+        ],
+        [
+          "usr/share/rpcd/ucode/quoted_first_raw_second.uc",
+          "6",
+          "61",
+          "76",
+          "value",
+          "6",
+          "14",
+          "84"
+        ],
+        [
+          "usr/share/rpcd/ucode/reassigned_formal.uc",
+          "6",
+          "28",
+          "45",
+          "value",
+          "6",
+          "14",
+          "53"
+        ],
+        [
+          "usr/share/rpcd/ucode/shadowed_local.uc",
+          "6",
+          "21",
+          "38",
+          "value",
+          "9",
+          "16",
+          "25"
+        ],
+        [
+          "usr/share/rpcd/ucode/unregistered_object.uc",
+          "5",
+          "28",
+          "43",
+          "value",
+          "5",
+          "14",
+          "51"
+        ],
+        [
+          "usr/share/rpcd/ucode/word_fragment.uc",
+          "5",
+          "31",
+          "48",
+          "value",
+          "5",
+          "14",
+          "56"
+        ]
+      ],
+      "error_rows": [],
+      "multiplicity": {
+        "ast_witness": 23,
+        "errors": 0,
+        "rule": 5,
+        "success": 21
+      },
+      "rule_rows": [
+        [
+          "MemberExpression",
+          "A returned call-handler argument is directly interpolated between literal whitespace into a command passed to imported fs.popen at line 5. Review registration and the full quote context."
+        ],
+        [
+          "MemberExpression",
+          "A returned call-handler argument is directly interpolated between literal whitespace into a command passed to imported fs.popen at line 5. Review registration and the full quote context."
+        ],
+        [
+          "MemberExpression",
+          "A returned call-handler argument is directly interpolated between literal whitespace into a command passed to imported fs.popen at line 6. Review registration and the full quote context."
+        ],
+        [
+          "MemberExpression",
+          "A returned call-handler argument is directly interpolated between literal whitespace into a command passed to imported fs.popen at line 5. Review registration and the full quote context."
+        ],
+        [
+          "MemberExpression",
+          "A returned call-handler argument is directly interpolated between literal whitespace into a command passed to imported fs.popen at line 6. Review registration and the full quote context."
+        ]
+      ],
+      "successful_paths": [
+        "stage/controls/usr/share/rpcd/ucode/catch_formal_shadow.uc",
+        "stage/controls/usr/share/rpcd/ucode/catch_local_shadow.uc",
+        "stage/controls/usr/share/rpcd/ucode/constant_sink.uc",
+        "stage/controls/usr/share/rpcd/ucode/different_field_pos.uc",
+        "stage/controls/usr/share/rpcd/ucode/direct_pos.uc",
+        "stage/controls/usr/share/rpcd/ucode/exclusive_branches.uc",
+        "stage/controls/usr/share/rpcd/ucode/for_formal_shadow.uc",
+        "stage/controls/usr/share/rpcd/ucode/for_local_shadow.uc",
+        "stage/controls/usr/share/rpcd/ucode/function_formal_shadow.uc",
+        "stage/controls/usr/share/rpcd/ucode/function_local_shadow.uc",
+        "stage/controls/usr/share/rpcd/ucode/initialized_local_pos.uc",
+        "stage/controls/usr/share/rpcd/ucode/multi_substitution_quote_context.uc",
+        "stage/controls/usr/share/rpcd/ucode/nested_callable.uc",
+        "stage/controls/usr/share/rpcd/ucode/quoted_arg.uc",
+        "stage/controls/usr/share/rpcd/ucode/quoted_context.uc",
+        "stage/controls/usr/share/rpcd/ucode/quoted_first_raw_second.uc",
+        "stage/controls/usr/share/rpcd/ucode/reassigned_formal.uc",
+        "stage/controls/usr/share/rpcd/ucode/shadowed_local.uc",
+        "stage/controls/usr/share/rpcd/ucode/unimported_popen.uc",
+        "stage/controls/usr/share/rpcd/ucode/unregistered_object.uc",
+        "stage/controls/usr/share/rpcd/ucode/word_fragment.uc"
+      ]
+    },
+    "fixed": {
+      "ast_witness_rows": [
+        [
+          "usr/share/rpcd/ucode/luci.openvpn.uc",
+          "71",
+          "126",
+          "142",
+          "cl_meta",
+          "51",
+          "25",
+          "63"
+        ],
+        [
+          "usr/share/rpcd/ucode/luci.openvpn.uc",
+          "71",
+          "126",
+          "142",
+          "cl_meta",
+          "77",
+          "16",
+          "25"
+        ]
+      ],
+      "error_rows": [],
+      "multiplicity": {
+        "ast_witness": 2,
+        "errors": 0,
+        "rule": 0,
+        "success": 1
+      },
+      "rule_rows": [],
+      "successful_paths": [
+        "stage/fixed/usr/share/rpcd/ucode/luci.openvpn.uc"
+      ]
+    },
+    "parent": {
+      "ast_witness_rows": [
+        [
+          "usr/share/rpcd/ucode/luci.openvpn.uc",
+          "71",
+          "115",
+          "131",
+          "cl_meta",
+          "51",
+          "25",
+          "63"
+        ],
+        [
+          "usr/share/rpcd/ucode/luci.openvpn.uc",
+          "71",
+          "115",
+          "131",
+          "cl_meta",
+          "77",
+          "16",
+          "25"
+        ]
+      ],
+      "error_rows": [],
+      "multiplicity": {
+        "ast_witness": 2,
+        "errors": 0,
+        "rule": 1,
+        "success": 1
+      },
+      "rule_rows": [
+        [
+          "MemberExpression",
+          "A returned call-handler argument is directly interpolated between literal whitespace into a command passed to imported fs.popen at line 77. Review registration and the full quote context."
+        ]
+      ],
+      "successful_paths": [
+        "stage/parent/usr/share/rpcd/ucode/luci.openvpn.uc"
+      ]
+    },
+    "swconfig": {
+      "ast_witness_rows": [
+        [
+          "usr/share/rpcd/ucode/luci",
+          "343",
+          "49",
+          "67",
+          "switch",
+          "343",
+          "16",
+          "88"
+        ],
+        [
+          "usr/share/rpcd/ucode/luci",
+          "400",
+          "49",
+          "67",
+          "switch",
+          "400",
+          "16",
+          "88"
+        ]
+      ],
+      "error_rows": [],
+      "multiplicity": {
+        "ast_witness": 2,
+        "errors": 0,
+        "rule": 0,
+        "success": 1
+      },
+      "rule_rows": [],
+      "successful_paths": [
+        "stage/swconfig/usr/share/rpcd/ucode/luci"
+      ]
+    }
+  },
+  "query_sha256": "046c57aa2003c5b0a5c1a8eec9afc7ca00fdb727928839bff51a4236f5e93f48",
+  "rule_id": "ucode/m4/direct-rpc-shell-word",
+  "sarif": [
+    {
+      "case": "parent",
+      "raw_sha256": "49fefc0f4ab5e60f95fa366bcd1ea3333a2d0e8076b4fb2c54610fbb2116acb3",
+      "results": [
+        {
+          "message": "A returned call-handler argument is directly interpolated between literal whitespace into a command passed to imported fs.popen at line 77. Review registration and the full quote context.",
+          "region": {
+            "endColumn": 132,
+            "startColumn": 115,
+            "startLine": 71
+          },
+          "ruleId": "ucode/m4/direct-rpc-shell-word",
+          "uri": "usr/share/rpcd/ucode/luci.openvpn.uc",
+          "uriBaseId": "%SRCROOT%"
+        }
+      ],
+      "rule_ids": [
+        "ucode/m4/direct-rpc-shell-word"
+      ]
+    },
+    {
+      "case": "fixed",
+      "raw_sha256": "2cd8fd825feb86b72ab4d1bb2342b2eb4a1d456b2d46cc2f3c94bf7748a6f060",
+      "results": [],
+      "rule_ids": [
+        "ucode/m4/direct-rpc-shell-word"
+      ]
+    },
+    {
+      "case": "swconfig",
+      "raw_sha256": "b74b1375619d3d94c412b5fc65265851b582a8b7f844d737e9ab381e0a844a06",
+      "results": [],
+      "rule_ids": [
+        "ucode/m4/direct-rpc-shell-word"
+      ]
+    },
+    {
+      "case": "controls",
+      "raw_sha256": "8f1402ab396599e345519359bb4c47f7680d14130ad9d02b4aa7937158096f22",
+      "results": [
+        {
+          "message": "A returned call-handler argument is directly interpolated between literal whitespace into a command passed to imported fs.popen at line 5. Review registration and the full quote context.",
+          "region": {
+            "endColumn": 55,
+            "startColumn": 33,
+            "startLine": 5
+          },
+          "ruleId": "ucode/m4/direct-rpc-shell-word",
+          "uri": "usr/share/rpcd/ucode/different_field_pos.uc",
+          "uriBaseId": "%SRCROOT%"
+        },
+        {
+          "message": "A returned call-handler argument is directly interpolated between literal whitespace into a command passed to imported fs.popen at line 5. Review registration and the full quote context.",
+          "region": {
+            "endColumn": 46,
+            "startColumn": 28,
+            "startLine": 5
+          },
+          "ruleId": "ucode/m4/direct-rpc-shell-word",
+          "uri": "usr/share/rpcd/ucode/direct_pos.uc",
+          "uriBaseId": "%SRCROOT%"
+        },
+        {
+          "message": "A returned call-handler argument is directly interpolated between literal whitespace into a command passed to imported fs.popen at line 6. Review registration and the full quote context.",
+          "region": {
+            "endColumn": 46,
+            "startColumn": 31,
+            "startLine": 5
+          },
+          "ruleId": "ucode/m4/direct-rpc-shell-word",
+          "uri": "usr/share/rpcd/ucode/initialized_local_pos.uc",
+          "uriBaseId": "%SRCROOT%"
+        },
+        {
+          "message": "A returned call-handler argument is directly interpolated between literal whitespace into a command passed to imported fs.popen at line 5. Review registration and the full quote context.",
+          "region": {
+            "endColumn": 45,
+            "startColumn": 28,
+            "startLine": 5
+          },
+          "ruleId": "ucode/m4/direct-rpc-shell-word",
+          "uri": "usr/share/rpcd/ucode/multi_substitution_quote_context.uc",
+          "uriBaseId": "%SRCROOT%"
+        },
+        {
+          "message": "A returned call-handler argument is directly interpolated between literal whitespace into a command passed to imported fs.popen at line 6. Review registration and the full quote context.",
+          "region": {
+            "endColumn": 77,
+            "startColumn": 61,
+            "startLine": 6
+          },
+          "ruleId": "ucode/m4/direct-rpc-shell-word",
+          "uri": "usr/share/rpcd/ucode/quoted_first_raw_second.uc",
+          "uriBaseId": "%SRCROOT%"
+        }
+      ],
+      "rule_ids": [
+        "ucode/m4/direct-rpc-shell-word"
+      ]
+    }
+  ]
+}

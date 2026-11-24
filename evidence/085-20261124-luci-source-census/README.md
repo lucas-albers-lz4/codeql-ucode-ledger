@@ -1,0 +1,3 @@
+# Claim 045 portable source census
+
+`inventory.json` is a source-only, Git-object-derived LuCI candidate census at the pinned commit. Each of its 69 unique paths was independently checked against `git rev-parse <commit>:<path>` and `git show <commit>:<path>` SHA-256; zero mismatches occurred. Symlink entries hash the Git link-target blob bytes rather than dereferencing them. Route and install paths are source-policy projections, not fresh extractor output or installed-byte observations. The manifest was produced in ignored `work/` and copied here after review. No CodeQL database or query was run for this census.

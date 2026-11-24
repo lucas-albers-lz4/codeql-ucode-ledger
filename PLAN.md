@@ -1,5 +1,16 @@
 # Next batch: prioritize bounded evidence leads
 
+The active [MVP-1.md](MVP-1.md) plan uses three internal release tickets and
+two historical shell cases as its first gate, then advances through
+current-corpus scanning, incoming-change CI, maintained releases, alert triage
+and a separate maintainer-ready decision. It records parallel lanes and
+post-merge gates.
+
+For the internal security-check release track, use the
+[historical LuCI case selection and release gates](planning/mvp-historical-security-20261123.md).
+That plan is source-backed triage, not a demonstrated alert or a replacement
+for the evidence batches below.
+
 The [24-package evidence program](planning/next-program-20261122.md) is the
 current larger planning queue. It accounts for newer upstream markup CFG,
 receiver-observation and read-only v2 changes. Its packages are conditional

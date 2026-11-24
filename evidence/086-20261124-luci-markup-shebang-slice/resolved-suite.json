@@ -1,0 +1,5 @@
+[
+  "$SLICE_WORK/prep/producer/ql/src/m4/DirectRpcShellWord.ql",
+  "$SLICE_WORK/prep/producer/ql/src/diagnostics/ExtractionErrors.ql",
+  "$SLICE_WORK/prep/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql"
+]

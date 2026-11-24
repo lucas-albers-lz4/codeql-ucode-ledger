@@ -1,0 +1,6 @@
+{"#select":{"columns":[
+   {"name":"f","kind":"Entity"}
+  ,{"kind":"String"}]
+ ,"tuples":[
+   [{"label":"/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/direct-rpc-local-handoff/run-b/stage/fixed/usr/share/rpcd/ucode/luci.openvpn.uc"},""]]
+ }}

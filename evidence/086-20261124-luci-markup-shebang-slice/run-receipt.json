@@ -1,0 +1,544 @@
+{
+  "status": "completed fresh 24-file source-staged route and extraction run; default suite executed after corrected offline validation",
+  "scope_limit": "Source staging, direct routing, successful-file/error diagnostics and default-suite execution observation only. Markup routing is inconclusive; no installed package bytes, semantic coverage, security-negative or vulnerability inference.",
+  "source_first_oracle_sha256": "9560c11c00a094b86a8f12591c067f346cb1a4159f759430f875b726261630bd",
+  "inventory_sha256": "ec86e2f2a7cd1e9ac97f3d54db48d90d62674e2e05abd4fa937ccdae829392e9",
+  "preflight_sha256": "c8ae7d74035cee52e3ed79b3f54efc9227719c474d422e7ccd01f0992aedcaeb",
+  "stage_manifest_sha256": "ed4b7f431bdc3c467a195104c053140c2e4d81297f19607c1f0622c18721913e",
+  "preflight": {
+    "status": "preflight complete before CodeQL extraction",
+    "run_root": "$RUN",
+    "source_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "source_dirty": false,
+    "producer_commit": "977331713b4b8b5574813bee0884245bf6db2752",
+    "producer_dirty": false,
+    "consumer_commit": "48c6a65b7578234644c6b06780fc82ccf6d61a8b",
+    "consumer_dirty": false,
+    "consumer_lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "codeql": "CodeQL command-line toolchain release 2.27.4.\nCopyright (C) 2019-2026 GitHub, Inc.\nUnpacked in: /Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql\n   Analysis results depend critically on separately distributed query and\n   extractor modules. To list modules that are visible to the toolchain,\n   use 'codeql resolve packs' and 'codeql resolve languages'.",
+    "codeql_executable": "$CODEQL",
+    "codeql_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+    "oracle_sha256": "9560c11c00a094b86a8f12591c067f346cb1a4159f759430f875b726261630bd",
+    "stage_manifest_sha256": "ed4b7f431bdc3c467a195104c053140c2e4d81297f19607c1f0622c18721913e",
+    "pack_source": "$LEDGER/work/stage6-next-install-shaped/run-g/pack",
+    "pack_source_tree_sha256": "891c6c3d4eae1accaf0c502775ef0077a81d542eac39c17241bdd769dde37674",
+    "pack_run_owned_tree_sha256": "891c6c3d4eae1accaf0c502775ef0077a81d542eac39c17241bdd769dde37674",
+    "pack_binary_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+    "pack_build_provenance": "Built previously from producer source 78590f24ab20a69eb1ac70258a00165f453d305d; pack-relevant inputs and extractor source have no diff to selected producer 977331713b4b8b5574813bee0884245bf6db2752; Cargo/QL lock digests match those recorded for 9773317; CodeQL CLI 2.27.4.",
+    "dependency_cache_source": "$LEDGER/work/stage6-next-install-shaped/run-g/cache/common",
+    "dependency_cache_source_tree_sha256": "21f615fc2136c12840b679e2744fdc1431b8fa36cb7d3edeab3587a2353ed5ea",
+    "dependency_cache_run_owned_tree_sha256": "21f615fc2136c12840b679e2744fdc1431b8fa36cb7d3edeab3587a2353ed5ea",
+    "resolved_packs_json_sha256": "dd9210c4f413e70a7ccf5bd37b7dd601f2a22a2e03212336e7142897f922f305",
+    "HOME": "/Users/lalbers",
+    "HOME_note": "Inherited HOME retained per task constraint; all writable CodeQL caches, TMPDIR, stage, database, pack copy and outputs are run-owned.",
+    "TMPDIR": "$RUN/tmp",
+    "XDG_CACHE_HOME": "$RUN/cache",
+    "writable_paths": [
+      "$RUN/db",
+      "$RUN/cache",
+      "$RUN/out",
+      "$RUN/tmp",
+      "$RUN/pack",
+      "$RUN/stage"
+    ],
+    "luci_mk_sha256": "9716c9a7a1c276b867df5887558e2b63b78f7d3695915adb7fcd0a7f0182ed0d",
+    "producer_extractor_sha256": "bc54d2fc6e4dfba095977053d92275c3474bb01ff7e6da7c5301002bde701a11",
+    "producer_cargo_lock_sha256": "20678c3cbb29632a9369bdb3c735af9ee63c9443879db38847fbda9813aa0a77",
+    "producer_ql_src_lock_sha256": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+    "producer_ql_lib_lock_sha256": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+    "stage_file_count": 24,
+    "stage_file_hashes_match_oracle": true,
+    "resolved_packs_json": "$RUN/provenance/resolve-packs-run-cache.json",
+    "resolved_packs_check": {
+      "command": [
+        "$CODEQL",
+        "resolve",
+        "packs",
+        "--kind",
+        "all",
+        "--format=json",
+        "--common-caches",
+        "$RUN/cache/common",
+        "--search-path",
+        "$RUN/pack:$SLICE_WORK/prep/producer/ql/lib:$SLICE_WORK/prep/producer/ql/src"
+      ],
+      "exit_status": 0,
+      "wall_rss_metrics_file": "$RUN/provenance/resolve-packs-run-cache.time",
+      "dependency_packs_seen_under_run_owned_cache": [
+        "codeql/controlflow@1.0.12",
+        "codeql/dataflow@1.1.6",
+        "codeql/regex@1.0.12",
+        "codeql/ssa@1.0.12",
+        "codeql/threat-models@1.1.1",
+        "codeql/threat-models@1.1.2",
+        "codeql/typetracking@1.0.12",
+        "codeql/util@1.0.12",
+        "codeql/yaml@1.0.61",
+        "codeql/yaml@1.0.62"
+      ]
+    },
+    "initial_read_only_resolve_packs_check": {
+      "command_used_inherited_default_pack_cache": true,
+      "exit_status": 0,
+      "artifact_sha256": "c9891723ae43b8b31d3609e0ea94b72e8d4eb635575ff5da43433f96feaade80",
+      "used_for_run": false,
+      "note": "Preflight discovery only; execution uses explicit run-owned --common-caches path."
+    }
+  },
+  "selection": {
+    "count": 24,
+    "paths": [
+      "applications/luci-app-bmx7/ucode/template/bmx7/bmxnodes.ut",
+      "applications/luci-app-bmx7/ucode/template/bmx7/bmxstatus.ut",
+      "applications/luci-app-bmx7/ucode/template/bmx7/bmxtopology.ut",
+      "applications/luci-app-bmx7/ucode/template/bmx7/bmxtunnels.ut",
+      "applications/luci-app-commands/ucode/template/commands.ut",
+      "applications/luci-app-commands/ucode/template/commands_public.ut",
+      "applications/luci-app-statistics/root/usr/libexec/stat-genconfig",
+      "applications/luci-app-wifihistory/root/usr/sbin/wifihistory",
+      "themes/luci-theme-footstrap/ucode/template/themes/footstrap/footer.ut",
+      "themes/luci-theme-footstrap/ucode/template/themes/footstrap/header.ut",
+      "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/brand.ut",
+      "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/head.ut",
+      "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/icon.ut",
+      "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/logout.ut",
+      "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/notice.ut",
+      "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/notices.ut",
+      "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/search.ut",
+      "themes/luci-theme-footstrap/ucode/template/themes/footstrap/sysauth.ut",
+      "themes/luci-theme-material/ucode/template/themes/material/footer.ut",
+      "themes/luci-theme-material/ucode/template/themes/material/header.ut",
+      "themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/footer.ut",
+      "themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/header.ut",
+      "themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/footer.ut",
+      "themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/header.ut"
+    ],
+    "route_counts": {
+      "markup:ut_markup_extension": 22,
+      "plain:ucode_shebang": 2
+    },
+    "prior_selection_overlap": {
+      "021": [],
+      "037": [],
+      "041": [],
+      "044": []
+    },
+    "disjoint": true
+  },
+  "route_check": {
+    "artifact_sha256": "92a310b85a4c39674d36bc590d0d261412593d14f906ecb520f121e9ff2920fb",
+    "comparison_sha256": "2c648b2fa7f3ad6a8a65d179754b2dd7b4e17fdc234d7dbac04c84bbb759f13f",
+    "aggregate_counts": {
+      "input_count": 24,
+      "plain_count": 2,
+      "markup_count": 22,
+      "markup_inconclusive_count": 22,
+      "uncertain_count": 0,
+      "excluded_count": 0,
+      "duplicate_input_count": 0
+    },
+    "decision_count": 24,
+    "mismatches": [],
+    "markup_inconclusive_identities": [
+      "$RUN/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxnodes.ut",
+      "$RUN/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxstatus.ut",
+      "$RUN/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxtopology.ut",
+      "$RUN/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxtunnels.ut",
+      "$RUN/stage/applications/luci-app-commands/ucode/template/commands.ut",
+      "$RUN/stage/applications/luci-app-commands/ucode/template/commands_public.ut",
+      "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/footer.ut",
+      "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/header.ut",
+      "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/brand.ut",
+      "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/head.ut",
+      "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/icon.ut",
+      "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/logout.ut",
+      "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/notice.ut",
+      "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/notices.ut",
+      "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/search.ut",
+      "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/sysauth.ut",
+      "$RUN/stage/themes/luci-theme-material/ucode/template/themes/material/footer.ut",
+      "$RUN/stage/themes/luci-theme-material/ucode/template/themes/material/header.ut",
+      "$RUN/stage/themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/footer.ut",
+      "$RUN/stage/themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/header.ut",
+      "$RUN/stage/themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/footer.ut",
+      "$RUN/stage/themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/header.ut"
+    ]
+  },
+  "extraction": {
+    "success_csv_sha256": "a6670788d28354e64ec86f0f4ae90ac6d873a87b0adcd3361a36686a0a10571d",
+    "errors_csv_sha256": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+    "success_count": 24,
+    "successful_file_rows": [
+      {
+        "f": "$RUN/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxnodes.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxstatus.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxtopology.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxtunnels.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/applications/luci-app-commands/ucode/template/commands.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/applications/luci-app-commands/ucode/template/commands_public.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/applications/luci-app-statistics/root/usr/libexec/stat-genconfig",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/applications/luci-app-wifihistory/root/usr/sbin/wifihistory",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/footer.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/header.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/brand.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/head.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/icon.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/logout.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/notice.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/notices.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/search.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/sysauth.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/themes/luci-theme-material/ucode/template/themes/material/footer.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/themes/luci-theme-material/ucode/template/themes/material/header.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/footer.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/header.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/footer.ut",
+        "col1": ""
+      },
+      {
+        "f": "$RUN/stage/themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/header.ut",
+        "col1": ""
+      }
+    ],
+    "identity_multiset_matches": true,
+    "expected_identity_multiplicity": 1,
+    "extraction_error_count": 0,
+    "extraction_error_rows": [],
+    "stage_hashes_match_source": true,
+    "comparison_sha256": "b322f55bd408959a7efde806de87073494e7d50f9de391739e629426faf22bab"
+  },
+  "default_suite": {
+    "suite_sha256": "6d343f93e37c309b8461da9fafcf67d089737980d7ac42a5409e75df3bd442e5",
+    "resolved_queries": [
+      "DirectRpcShellWord.ql",
+      "ExtractionErrors.ql",
+      "SuccessfullyExtractedFiles.ql"
+    ],
+    "resolved_json_sha256": "399165a8ff6ff8424e8352fcd6fea2a1eb7d54fb74aa697c70432d84b9b2ae7f",
+    "sarif_sha256": "eddc6d5f808d5e0060d54989a9908ddb825a7c67a372694479c0db73b97e760f",
+    "rule_descriptors": [
+      "ucode/m4/direct-rpc-shell-word"
+    ],
+    "result_count": 0,
+    "results": [],
+    "interpretation": "Suite execution output recorded only; no security interpretation."
+  },
+  "runner_harness_incident": {
+    "run_script_sha256": "4d08d3513f62f2fbc36cd19fd4c2177e3b969c1b7248c2a7975bb84a6b940f14",
+    "initial_run_script_exit": 1,
+    "initial_validator_phase_exit": 1,
+    "cause": "Initial runner validation opened extracted.csv/errors.csv although time_decode produced extracted-decode.csv/errors-decode.csv. CodeQL queries completed with exit 0; exact decoded outputs were preserved. A corrected offline comparison of existing decoded outputs passed; no extraction phase was rerun.",
+    "corrected_validator_path": "$SLICE_WORK/prep/validate_existing_outputs.py",
+    "corrected_validator_sha256": "e7ca2c6ededacf4c2f3be3e5e86f068a06a592f08735ebfee8e06751e840ccae",
+    "corrected_validation_exit": 0
+  },
+  "commands_and_metrics": [
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "init",
+        "$RUN/db/current",
+        "--language=ucode",
+        "--search-path=$RUN/pack:$SLICE_WORK/prep/producer/ql/lib:$SLICE_WORK/prep/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--source-root=$RUN/stage"
+      ],
+      "exit_status": 0,
+      "peak_rss_bytes": 122912768,
+      "phase": "database-init",
+      "timing_file": "$RUN/out/database-init.time",
+      "wall_seconds": 0.49
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "index-files",
+        "--language=ucode",
+        "--include=**/*",
+        "--working-dir=$RUN/stage",
+        "$RUN/db/current",
+        "--common-caches=$RUN/cache/common",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit_status": 0,
+      "peak_rss_bytes": 121421824,
+      "phase": "index-files",
+      "timing_file": "$RUN/out/index-files.time",
+      "wall_seconds": 0.78
+    },
+    {
+      "argv": [
+        "python3",
+        "-",
+        "$RUN/provenance/source-first-oracle.json",
+        "$RUN/out/routing.json",
+        "$RUN/stage",
+        "$RUN/out/routing-comparison.json"
+      ],
+      "exit_status": 0,
+      "peak_rss_bytes": 13729792,
+      "phase": "route-validation",
+      "timing_file": "$RUN/out/route-validation.time",
+      "wall_seconds": 0.01
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "finalize",
+        "$RUN/db/current",
+        "--common-caches=$RUN/cache/common"
+      ],
+      "exit_status": 0,
+      "peak_rss_bytes": 277037056,
+      "phase": "database-finalize",
+      "timing_file": "$RUN/out/database-finalize.time",
+      "wall_seconds": 1.21
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$SLICE_WORK/prep/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db/current",
+        "--search-path=$RUN/pack:$SLICE_WORK/prep/producer/ql/lib:$SLICE_WORK/prep/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/extracted.bqrs"
+      ],
+      "exit_status": 0,
+      "peak_rss_bytes": 296992768,
+      "phase": "extracted-query",
+      "timing_file": "$RUN/out/extracted-query.time",
+      "wall_seconds": 1.4
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/extracted.bqrs"
+      ],
+      "exit_status": 0,
+      "peak_rss_bytes": 86900736,
+      "phase": "extracted-decode",
+      "timing_file": "$RUN/out/extracted-decode.time",
+      "wall_seconds": 0.2
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$SLICE_WORK/prep/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db/current",
+        "--search-path=$RUN/pack:$SLICE_WORK/prep/producer/ql/lib:$SLICE_WORK/prep/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048",
+        "--output=$RUN/out/errors.bqrs"
+      ],
+      "exit_status": 0,
+      "peak_rss_bytes": 302661632,
+      "phase": "errors-query",
+      "timing_file": "$RUN/out/errors-query.time",
+      "wall_seconds": 1.38
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/errors.bqrs"
+      ],
+      "exit_status": 0,
+      "peak_rss_bytes": 86392832,
+      "phase": "errors-decode",
+      "timing_file": "$RUN/out/errors-decode.time",
+      "wall_seconds": 0.2
+    },
+    {
+      "argv": [
+        "python3",
+        "-",
+        "$RUN/provenance/source-first-oracle.json",
+        "$RUN/out/extracted.csv",
+        "$RUN/out/errors.csv",
+        "$RUN/stage",
+        "$RUN/out/extraction-comparison.json"
+      ],
+      "exit_status": 1,
+      "peak_rss_bytes": 16334848,
+      "phase": "extraction-validation",
+      "timing_file": "$RUN/out/extraction-validation.time",
+      "wall_seconds": 0.02
+    },
+    {
+      "argv": [
+        "python3",
+        "$SLICE_WORK/prep/validate_existing_outputs.py",
+        "$RUN"
+      ],
+      "exit_status": 0,
+      "peak_rss_bytes": 16039936,
+      "phase": "extraction-validation-corrected",
+      "timing_file": "$RUN/out/extraction-validation-corrected.time",
+      "wall_seconds": 0.02
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "resolve",
+        "queries",
+        "$SLICE_WORK/prep/producer/ql/src/codeql-suites/code-scanning.qls",
+        "--format=json",
+        "--search-path=$RUN/pack:$SLICE_WORK/prep/producer/ql/lib:$SLICE_WORK/prep/producer/ql/src",
+        "--common-caches=$RUN/cache/common"
+      ],
+      "exit_status": 0,
+      "peak_rss_bytes": 119390208,
+      "phase": "resolve-default-suite",
+      "timing_file": "$RUN/out/resolve-default-suite.time",
+      "wall_seconds": 0.35
+    },
+    {
+      "argv": [
+        "python3",
+        "-",
+        "$RUN/out/resolve-default-suite.log",
+        "$RUN/out/resolved-suite.json"
+      ],
+      "exit_status": 0,
+      "peak_rss_bytes": 13271040,
+      "phase": "normalize-resolved-suite",
+      "timing_file": "$RUN/out/normalize-resolved-suite.time",
+      "wall_seconds": 0.01
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "analyze",
+        "$RUN/db/current",
+        "$SLICE_WORK/prep/producer/ql/src/codeql-suites/code-scanning.qls",
+        "--format=sarif-latest",
+        "--output=$RUN/out/default-suite.sarif",
+        "--search-path=$RUN/pack:$SLICE_WORK/prep/producer/ql/lib:$SLICE_WORK/prep/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit_status": 0,
+      "peak_rss_bytes": 480821248,
+      "phase": "default-suite-analyze",
+      "timing_file": "$RUN/out/default-suite-analyze.time",
+      "wall_seconds": 3.5
+    }
+  ],
+  "run_command": {
+    "argv": [
+      "/usr/bin/time",
+      "-l",
+      "-o",
+      "$RUN/provenance/run-script.time",
+      "/bin/bash",
+      "$SLICE_WORK/prep/run.sh"
+    ],
+    "exit_status": 1,
+    "script_sha256": "4d08d3513f62f2fbc36cd19fd4c2177e3b969c1b7248c2a7975bb84a6b940f14",
+    "wall_seconds": 6.11,
+    "peak_rss_bytes": 302661632
+  },
+  "output_sha256": {
+    "default-suite.sarif": "eddc6d5f808d5e0060d54989a9908ddb825a7c67a372694479c0db73b97e760f",
+    "errors-decode.csv": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5",
+    "errors.bqrs": "078d1d787dfeeef42deeaccff102960fb7354c4e1ef8d3ce74a829a4ab46bcd8",
+    "extracted-decode.csv": "a6670788d28354e64ec86f0f4ae90ac6d873a87b0adcd3361a36686a0a10571d",
+    "extracted.bqrs": "5234edefce3ce6173cb89d5eb1f09fb655206b3e7d0ee54cf04e7b64a429132b",
+    "extraction-comparison.json": "b322f55bd408959a7efde806de87073494e7d50f9de391739e629426faf22bab",
+    "resolved-suite.json": "399165a8ff6ff8424e8352fcd6fea2a1eb7d54fb74aa697c70432d84b9b2ae7f",
+    "routing-comparison.json": "2c648b2fa7f3ad6a8a65d179754b2dd7b4e17fdc234d7dbac04c84bbb759f13f",
+    "routing.json": "92a310b85a4c39674d36bc590d0d261412593d14f906ecb520f121e9ff2920fb"
+  },
+  "installed_bytes_verified": false,
+  "raw_run_receipt_sha256": "6c527f38ff83e145b9c3593e06ba89346adc05d3b4a832863dd4eec7c738bbd5"
+}

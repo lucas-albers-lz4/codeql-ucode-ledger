@@ -1,0 +1,405 @@
+{
+  "expected_counts": {
+    "input_count": 24,
+    "plain_count": 2,
+    "markup_count": 22,
+    "markup_inconclusive_count": 22,
+    "uncertain_count": 0,
+    "excluded_count": 0,
+    "duplicate_input_count": 0
+  },
+  "actual_counts": {
+    "input_count": 24,
+    "plain_count": 2,
+    "markup_count": 22,
+    "markup_inconclusive_count": 22,
+    "uncertain_count": 0,
+    "excluded_count": 0,
+    "duplicate_input_count": 0
+  },
+  "expected_decisions": [
+    {
+      "path": "$RUN/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxnodes.ut",
+      "installed_path": "usr/share/ucode/luci/template/bmx7/bmxnodes.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxstatus.ut",
+      "installed_path": "usr/share/ucode/luci/template/bmx7/bmxstatus.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxtopology.ut",
+      "installed_path": "usr/share/ucode/luci/template/bmx7/bmxtopology.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxtunnels.ut",
+      "installed_path": "usr/share/ucode/luci/template/bmx7/bmxtunnels.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/applications/luci-app-commands/ucode/template/commands.ut",
+      "installed_path": "usr/share/ucode/luci/template/commands.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/applications/luci-app-commands/ucode/template/commands_public.ut",
+      "installed_path": "usr/share/ucode/luci/template/commands_public.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/applications/luci-app-statistics/root/usr/libexec/stat-genconfig",
+      "installed_path": "usr/libexec/stat-genconfig",
+      "classification": "plain",
+      "reason": "ucode_shebang",
+      "status": "plain_route_selected"
+    },
+    {
+      "path": "$RUN/stage/applications/luci-app-wifihistory/root/usr/sbin/wifihistory",
+      "installed_path": "usr/sbin/wifihistory",
+      "classification": "plain",
+      "reason": "ucode_shebang",
+      "status": "plain_route_selected"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/footer.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/footer.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/header.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/header.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/brand.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/brand.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/head.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/head.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/icon.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/icon.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/logout.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/logout.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/notice.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/notice.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/notices.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/notices.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/search.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/search.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/sysauth.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/sysauth.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-material/ucode/template/themes/material/footer.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/material/footer.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-material/ucode/template/themes/material/header.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/material/header.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/footer.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/openwrt2020/footer.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/header.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/openwrt2020/header.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/footer.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/openwrt.org/footer.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/header.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/openwrt.org/header.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    }
+  ],
+  "actual_decisions": [
+    {
+      "path": "$RUN/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxnodes.ut",
+      "installed_path": "usr/share/ucode/luci/template/bmx7/bmxnodes.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxstatus.ut",
+      "installed_path": "usr/share/ucode/luci/template/bmx7/bmxstatus.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxtopology.ut",
+      "installed_path": "usr/share/ucode/luci/template/bmx7/bmxtopology.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxtunnels.ut",
+      "installed_path": "usr/share/ucode/luci/template/bmx7/bmxtunnels.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/applications/luci-app-commands/ucode/template/commands.ut",
+      "installed_path": "usr/share/ucode/luci/template/commands.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/applications/luci-app-commands/ucode/template/commands_public.ut",
+      "installed_path": "usr/share/ucode/luci/template/commands_public.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/applications/luci-app-statistics/root/usr/libexec/stat-genconfig",
+      "installed_path": "usr/libexec/stat-genconfig",
+      "classification": "plain",
+      "reason": "ucode_shebang",
+      "status": "plain_route_selected"
+    },
+    {
+      "path": "$RUN/stage/applications/luci-app-wifihistory/root/usr/sbin/wifihistory",
+      "installed_path": "usr/sbin/wifihistory",
+      "classification": "plain",
+      "reason": "ucode_shebang",
+      "status": "plain_route_selected"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/footer.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/footer.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/header.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/header.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/brand.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/brand.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/head.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/head.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/icon.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/icon.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/logout.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/logout.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/notice.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/notice.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/notices.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/notices.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/search.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/search.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/sysauth.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/footstrap/sysauth.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-material/ucode/template/themes/material/footer.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/material/footer.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-material/ucode/template/themes/material/header.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/material/header.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/footer.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/openwrt2020/footer.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/header.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/openwrt2020/header.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/footer.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/openwrt.org/footer.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    },
+    {
+      "path": "$RUN/stage/themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/header.ut",
+      "installed_path": "usr/share/ucode/luci/template/themes/openwrt.org/header.ut",
+      "classification": "markup",
+      "reason": "ut_markup_extension",
+      "status": "inconclusive",
+      "inconclusive_reason": "markup_not_modeled"
+    }
+  ],
+  "mismatches": []
+}

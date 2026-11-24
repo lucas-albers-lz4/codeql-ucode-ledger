@@ -1,0 +1,5 @@
+"f","col1"
+"$RUN/stage/applications/luci-app-commands/ucode/controller/commands.uc",""
+"$RUN/stage/applications/luci-app-dockerman/ucode/controller/docker.uc",""
+"$RUN/stage/applications/luci-app-dockerman/ucode/docker_socket.uc",""
+"$RUN/stage/applications/luci-app-lxc/ucode/controller/lxc.uc",""

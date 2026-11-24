@@ -1,0 +1,459 @@
+{
+  "consumer_lock": {
+    "checkout_commit": "66a9c78cd605dbe63645235074b9747ab57b187e",
+    "lock_path": "corpus/lock.json",
+    "lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a"
+  },
+  "expected_selection": {
+    "all_selected_count": 21,
+    "exact_staged_paths": [
+      "usr/sbin/cli",
+      "usr/share/rpcd/ucode/luci",
+      "usr/share/ucode/cli/cache.uc",
+      "usr/share/ucode/cli/color.uc",
+      "usr/share/ucode/cli/context-call.uc",
+      "usr/share/ucode/cli/context.uc",
+      "usr/share/ucode/cli/datamodel.uc",
+      "usr/share/ucode/cli/modules/network.uc",
+      "usr/share/ucode/cli/modules/service.uc",
+      "usr/share/ucode/cli/object-editor.uc",
+      "usr/share/ucode/cli/types.uc",
+      "usr/share/ucode/cli/utils.uc",
+      "usr/share/ucode/luci/controller/admin/index.uc",
+      "usr/share/ucode/luci/controller/admin/uci.uc",
+      "usr/share/ucode/luci/dispatcher.uc",
+      "usr/share/ucode/luci/http.uc",
+      "usr/share/ucode/luci/runtime.uc",
+      "usr/share/ucode/luci/sys.uc",
+      "usr/share/ucode/luci/uhttpd.uc",
+      "usr/share/ucode/luci/zoneinfo.uc",
+      "www/cgi-bin/luci"
+    ],
+    "expected_routing_counts": {
+      "markup_sensitive": 1,
+      "plain": 20
+    },
+    "extensionless_ucode_count": 3,
+    "files": [
+      {
+        "classification_expected": "plain",
+        "git_blob": "d433e1161ea1069a72d7ace916915e82df3ce4b8",
+        "package_owner": "luci-base",
+        "route_reason_expected": "ucode_extension",
+        "selection_pattern": "**/*.uc",
+        "source_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+        "source_kind": "tracked .uc",
+        "source_path": "modules/luci-base/ucode/controller/admin/index.uc",
+        "source_repo": "luci",
+        "source_sha256": "7d7a5dc3e694ad232e4e0f3d01db17c2f5502338aa8c4fc44fa714b0b1147620",
+        "staged_path": "usr/share/ucode/luci/controller/admin/index.uc",
+        "transform_flags": {
+          "actual_postbuild_diff_measured": false,
+          "prepare_copy": true,
+          "substitute_version": true
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "c38a42b10bfefbaa31741feae9395abd8a1f8e40",
+        "package_owner": "luci-base",
+        "route_reason_expected": "ucode_extension",
+        "selection_pattern": "**/*.uc",
+        "source_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+        "source_kind": "tracked .uc",
+        "source_path": "modules/luci-base/ucode/controller/admin/uci.uc",
+        "source_repo": "luci",
+        "source_sha256": "ac75cfef7d74f87ed7f957778004a7bf486c76df699398c215795b4947e0c93e",
+        "staged_path": "usr/share/ucode/luci/controller/admin/uci.uc",
+        "transform_flags": {
+          "actual_postbuild_diff_measured": false,
+          "prepare_copy": true,
+          "substitute_version": true
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "99712b85e7bd1a22f300b00403bd66621b3d40f4",
+        "package_owner": "luci-base",
+        "route_reason_expected": "ucode_extension",
+        "selection_pattern": "**/*.uc",
+        "source_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+        "source_kind": "tracked .uc",
+        "source_path": "modules/luci-base/ucode/dispatcher.uc",
+        "source_repo": "luci",
+        "source_sha256": "4f9923cf569aeebb956343d208bcc38f40d8a26d2f46f12c5539a9582fa4f037",
+        "staged_path": "usr/share/ucode/luci/dispatcher.uc",
+        "transform_flags": {
+          "actual_postbuild_diff_measured": false,
+          "prepare_copy": true,
+          "substitute_version": true
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "e7f64ae6e9fe00bd1981518927565829a14b11ba",
+        "package_owner": "luci-base",
+        "route_reason_expected": "ucode_extension",
+        "selection_pattern": "**/*.uc",
+        "source_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+        "source_kind": "tracked .uc",
+        "source_path": "modules/luci-base/ucode/http.uc",
+        "source_repo": "luci",
+        "source_sha256": "68f8a7dffc7bccdfe98956cb3b6e0e087592c86049a2b83d061e5be3585fa5fa",
+        "staged_path": "usr/share/ucode/luci/http.uc",
+        "transform_flags": {
+          "actual_postbuild_diff_measured": false,
+          "prepare_copy": true,
+          "substitute_version": true
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "e5f11690dfbdb2fe2a7fed6531d66cc7e25a331f",
+        "package_owner": "luci-base",
+        "route_reason_expected": "ucode_extension",
+        "selection_pattern": "**/*.uc",
+        "source_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+        "source_kind": "tracked .uc",
+        "source_path": "modules/luci-base/ucode/runtime.uc",
+        "source_repo": "luci",
+        "source_sha256": "b15afce07020e2a7ad50718d49a874da30d0582ede7de65e54acaceb6e9d0926",
+        "staged_path": "usr/share/ucode/luci/runtime.uc",
+        "transform_flags": {
+          "actual_postbuild_diff_measured": false,
+          "prepare_copy": true,
+          "substitute_version": true
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "35b5fcdebfaf1210be16ab1552752cb249346899",
+        "package_owner": "luci-base",
+        "route_reason_expected": "ucode_extension",
+        "selection_pattern": "**/*.uc",
+        "source_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+        "source_kind": "tracked .uc",
+        "source_path": "modules/luci-base/ucode/sys.uc",
+        "source_repo": "luci",
+        "source_sha256": "0380fba5d843a8950bab0ef70982cb40ab8f475e8d267c873e4199a736b55656",
+        "staged_path": "usr/share/ucode/luci/sys.uc",
+        "transform_flags": {
+          "actual_postbuild_diff_measured": false,
+          "prepare_copy": true,
+          "substitute_version": true
+        }
+      },
+      {
+        "classification_expected": "markup",
+        "git_blob": "df1ecc78657d9db618ab253c71497db4c66335fc",
+        "package_owner": "luci-base",
+        "route_reason_expected": "markup_tag_content",
+        "selection_pattern": "**/*.uc",
+        "source_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+        "source_kind": "tracked .uc",
+        "source_path": "modules/luci-base/ucode/uhttpd.uc",
+        "source_repo": "luci",
+        "source_sha256": "a2b2694f52c021af16dd06ac8c988b8a0a726d9e8186d308708268ebb8849493",
+        "staged_path": "usr/share/ucode/luci/uhttpd.uc",
+        "transform_flags": {
+          "actual_postbuild_diff_measured": false,
+          "prepare_copy": true,
+          "substitute_version": true
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "d54041752e2e168cd7b9d744c36530ea6ed5f8a2",
+        "package_owner": "luci-base",
+        "route_reason_expected": "ucode_extension",
+        "selection_pattern": "**/*.uc",
+        "source_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+        "source_kind": "tracked .uc",
+        "source_path": "modules/luci-base/ucode/zoneinfo.uc",
+        "source_repo": "luci",
+        "source_sha256": "54162a073660ea65706aa920a10cfbd3ee4d345e1e4ab3bed8a8d56c9cab3863",
+        "staged_path": "usr/share/ucode/luci/zoneinfo.uc",
+        "transform_flags": {
+          "actual_postbuild_diff_measured": false,
+          "prepare_copy": true,
+          "substitute_version": true
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "27cc049f73ffbee099931352db1eb24de71eaf17",
+        "package_owner": "cli",
+        "route_reason_expected": "ucode_extension",
+        "selection_pattern": "**/*.uc",
+        "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+        "source_kind": "tracked .uc",
+        "source_path": "package/utils/cli/files/usr/share/ucode/cli/cache.uc",
+        "source_repo": "openwrt",
+        "source_sha256": "4f9c21ab7517480ba50c7e7a41fcc17a788152d797abe99cdfd5ac748ee57c72",
+        "staged_path": "usr/share/ucode/cli/cache.uc",
+        "transform_flags": {
+          "direct_copy_rule": true,
+          "package_install_executed": false
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "39e5863533a73984affcd1f927b236893ab007c9",
+        "package_owner": "cli",
+        "route_reason_expected": "ucode_extension",
+        "selection_pattern": "**/*.uc",
+        "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+        "source_kind": "tracked .uc",
+        "source_path": "package/utils/cli/files/usr/share/ucode/cli/color.uc",
+        "source_repo": "openwrt",
+        "source_sha256": "89ab6b082fc5e41567f70b88bd644f80f96a439ada5f9295ef2e1c37772b5d4d",
+        "staged_path": "usr/share/ucode/cli/color.uc",
+        "transform_flags": {
+          "direct_copy_rule": true,
+          "package_install_executed": false
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "18d6eb202ec44b7fd42d1ad54255b2562ea5ca47",
+        "package_owner": "cli",
+        "route_reason_expected": "ucode_extension",
+        "selection_pattern": "**/*.uc",
+        "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+        "source_kind": "tracked .uc",
+        "source_path": "package/utils/cli/files/usr/share/ucode/cli/context-call.uc",
+        "source_repo": "openwrt",
+        "source_sha256": "fad2f165e6f78c9d310a912832e0cfa585e3341c34b240da6051e3179e0258c0",
+        "staged_path": "usr/share/ucode/cli/context-call.uc",
+        "transform_flags": {
+          "direct_copy_rule": true,
+          "package_install_executed": false
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "53b5f57047fd15b5bce9e65794cabf3e1716725c",
+        "package_owner": "cli",
+        "route_reason_expected": "ucode_extension",
+        "selection_pattern": "**/*.uc",
+        "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+        "source_kind": "tracked .uc",
+        "source_path": "package/utils/cli/files/usr/share/ucode/cli/context.uc",
+        "source_repo": "openwrt",
+        "source_sha256": "190d5186e277eacfac80c1c3e80eaa483465f24ec19f0faefea08c318a1698d3",
+        "staged_path": "usr/share/ucode/cli/context.uc",
+        "transform_flags": {
+          "direct_copy_rule": true,
+          "package_install_executed": false
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "f6d9454dd7e3db5cb3ef575f09e5f8f2ed435bbf",
+        "package_owner": "cli",
+        "route_reason_expected": "ucode_extension",
+        "selection_pattern": "**/*.uc",
+        "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+        "source_kind": "tracked .uc",
+        "source_path": "package/utils/cli/files/usr/share/ucode/cli/datamodel.uc",
+        "source_repo": "openwrt",
+        "source_sha256": "0e271bdfff8da423e2e87f8fff95203f74e53aa1433d84a9b16d09f213500065",
+        "staged_path": "usr/share/ucode/cli/datamodel.uc",
+        "transform_flags": {
+          "direct_copy_rule": true,
+          "package_install_executed": false
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "3d5ef5b058ee6fcab9c658e1321f8c7f7eafe574",
+        "package_owner": "cli",
+        "route_reason_expected": "ucode_extension",
+        "selection_pattern": "**/*.uc",
+        "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+        "source_kind": "tracked .uc",
+        "source_path": "package/utils/cli/files/usr/share/ucode/cli/modules/network.uc",
+        "source_repo": "openwrt",
+        "source_sha256": "9d1fbe9682cafff2d4e55d89944de6b204130b82c272bba7f747623df106b19b",
+        "staged_path": "usr/share/ucode/cli/modules/network.uc",
+        "transform_flags": {
+          "direct_copy_rule": true,
+          "package_install_executed": false
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "a280f6559e862943b71b248cc1fd61036a3c3c2f",
+        "package_owner": "cli",
+        "route_reason_expected": "ucode_extension",
+        "selection_pattern": "**/*.uc",
+        "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+        "source_kind": "tracked .uc",
+        "source_path": "package/utils/cli/files/usr/share/ucode/cli/modules/service.uc",
+        "source_repo": "openwrt",
+        "source_sha256": "d0daab4ea0754ab059072a949b3ccc99e9a33c911396679be0c8055269522a75",
+        "staged_path": "usr/share/ucode/cli/modules/service.uc",
+        "transform_flags": {
+          "direct_copy_rule": true,
+          "package_install_executed": false
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "639313b72f4315b95ddf7755cef03a95a3f54138",
+        "package_owner": "cli",
+        "route_reason_expected": "ucode_extension",
+        "selection_pattern": "**/*.uc",
+        "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+        "source_kind": "tracked .uc",
+        "source_path": "package/utils/cli/files/usr/share/ucode/cli/object-editor.uc",
+        "source_repo": "openwrt",
+        "source_sha256": "e2cd1b56ca4468ab2d1ebf629c9fa2b5511e4f2775212dcde8ba6c6847f71e2a",
+        "staged_path": "usr/share/ucode/cli/object-editor.uc",
+        "transform_flags": {
+          "direct_copy_rule": true,
+          "package_install_executed": false
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "62f9683b45dae6a5b7305895a4e52634ab6b4890",
+        "package_owner": "cli",
+        "route_reason_expected": "ucode_extension",
+        "selection_pattern": "**/*.uc",
+        "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+        "source_kind": "tracked .uc",
+        "source_path": "package/utils/cli/files/usr/share/ucode/cli/types.uc",
+        "source_repo": "openwrt",
+        "source_sha256": "124c3a1e35955492502bbe301ef8466de67480438f143ffd514020636baec2d5",
+        "staged_path": "usr/share/ucode/cli/types.uc",
+        "transform_flags": {
+          "direct_copy_rule": true,
+          "package_install_executed": false
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "f299ad361d667963f2c91d701cd8b42ec4d88d07",
+        "package_owner": "cli",
+        "route_reason_expected": "ucode_extension",
+        "selection_pattern": "**/*.uc",
+        "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+        "source_kind": "tracked .uc",
+        "source_path": "package/utils/cli/files/usr/share/ucode/cli/utils.uc",
+        "source_repo": "openwrt",
+        "source_sha256": "72d6ef87319f6658885f989e834fd1193175c3dafdca2dfb4aa2a4d1e16ccd53",
+        "staged_path": "usr/share/ucode/cli/utils.uc",
+        "transform_flags": {
+          "direct_copy_rule": true,
+          "package_install_executed": false
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "64caf75c08bc0fa54520a0ef262dfd6f339dc89e",
+        "package_owner": "luci-base",
+        "route_reason_expected": "rpcd_raw_mode_full_path",
+        "selection_pattern": "**/rpcd/ucode/luci",
+        "source_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+        "source_kind": "extensionless raw-mode ucode plugin",
+        "source_path": "modules/luci-base/root/usr/share/rpcd/ucode/luci",
+        "source_repo": "luci",
+        "source_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+        "staged_path": "usr/share/rpcd/ucode/luci",
+        "transform_flags": {
+          "package_install_executed": false,
+          "root_copy": true,
+          "substitute_version_rule_applies": false
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "442e427d410f1824b7b07d48bab8a2730012989b",
+        "package_owner": "luci-base",
+        "route_reason_expected": "ucode_shebang",
+        "selection_pattern": "**/cgi-bin/luci",
+        "source_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+        "source_kind": "extensionless ucode shebang entrypoint",
+        "source_path": "modules/luci-base/htdocs/cgi-bin/luci",
+        "source_repo": "luci",
+        "source_sha256": "aced6c9b2e621bb6e1dd1bb7d675925e9325ed901f49b1aabb0696a06942dacb",
+        "staged_path": "www/cgi-bin/luci",
+        "transform_flags": {
+          "conditional_js_css_postprocessors_present": true,
+          "htdocs_copy": true,
+          "package_install_executed": false,
+          "per_file_postprocessor_effect_unverified": true
+        }
+      },
+      {
+        "classification_expected": "plain",
+        "git_blob": "90889f996a3805e86e910ab9eec951549146c6ec",
+        "package_owner": "cli",
+        "route_reason_expected": "ucode_shebang",
+        "selection_pattern": "**/usr/sbin/cli",
+        "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+        "source_kind": "extensionless ucode shebang entrypoint",
+        "source_path": "package/utils/cli/files/usr/sbin/cli",
+        "source_repo": "openwrt",
+        "source_sha256": "f71b2a73fd6b2bd4a44cdb4fcbab896c5d2a945954c035a244d49603e4d87707",
+        "staged_path": "usr/sbin/cli",
+        "transform_flags": {
+          "direct_copy_rule": true,
+          "package_install_executed": false
+        }
+      }
+    ],
+    "selection_is_multiset": true,
+    "tracked_uc_count": 18
+  },
+  "future_check_requirements": [
+    "Verify routing.json decisions by staged path, class, reason, and multiplicity.",
+    "Verify successful-file identities and extraction diagnostics against this oracle after a future run.",
+    "uhttpd.uc is markup-sensitive and must not be merged into a plain-only subset; no query/output expectation is declared here.",
+    "The generic extensionless include patterns for cgi-bin/luci and usr/sbin/cli are proposed selectors; the producer metadata declares .uc and only its raw-mode luci example is documented. Confirm those selectors in a bounded extraction gate before relying on them.",
+    "No package build was performed; luci.mk version substitution and conditional htdocs processing remain unmeasured."
+  ],
+  "generated_excluded": [
+    {
+      "expected_generated_path": "usr/share/ucode/luci/version.uc",
+      "generator_blob": "8ac82464458c8f268625455c32075902f774a09b",
+      "generator_path": "modules/luci-base/src/Makefile",
+      "generator_sha256": "f49e4d9472eef6052b6e3565f4e029fd3131d1a7721a016c995e402e363f169c",
+      "included_in_stage": false,
+      "reason": "generated package output requires luci-base build; no generated bytes staged",
+      "source_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+      "source_repo": "luci"
+    }
+  ],
+  "oracle_version": "stage6-source-first-v1",
+  "producer_contract": {
+    "checkout_commit": "18afe771568d373088edee7a790825ee46dec9e0",
+    "declared_extensions": [
+      ".uc"
+    ],
+    "dirty": false,
+    "extensionless_known_example": "usr/share/rpcd/ucode/luci",
+    "files_sha256": {
+      "codeql-extractor.yml": "350977db453446af1081fa844e0cbdefb9fc3de7bd51b14e57938063c83b42c4",
+      "extractor/src/autobuilder.rs": "7bcda475e9564b1f05ae1f8a06cc75f55b4e67cd267fa084ceb8b88dde359039",
+      "extractor/src/extractor.rs": "bc54d2fc6e4dfba095977053d92275c3474bb01ff7e6da7c5301002bde701a11",
+      "tools/index-files.sh": "1fc6de73c0ea285d944d0e9ab11beec34342808198a5716ce2d51e5c29fd995e"
+    },
+    "staged_root_env": "CODEQL_UCODE_STAGED_ROOT"
+  },
+  "scope": "Pre-extraction source and selection oracle for a proposed isolated package slice; no CodeQL execution, extraction outcome, consumer acceptance, or installed-byte claim.",
+  "source_checkouts": {
+    "luci": {
+      "commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+      "dirty": false,
+      "url": "https://github.com/openwrt/luci.git"
+    },
+    "openwrt": {
+      "commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "dirty": false,
+      "url": "https://github.com/openwrt/openwrt.git"
+    }
+  },
+  "stage_root_rel": "stage"
+}

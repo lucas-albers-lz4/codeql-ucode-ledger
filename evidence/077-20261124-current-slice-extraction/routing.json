@@ -1,0 +1,160 @@
+{
+  "decisions": [
+    {
+      "classification": "plain",
+      "installed_path": "usr/sbin/cli",
+      "path": "$RUN/stage/usr/sbin/cli",
+      "reason": "ucode_shebang",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/rpcd/ucode/luci",
+      "path": "$RUN/stage/usr/share/rpcd/ucode/luci",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/ucode/cli/cache.uc",
+      "path": "$RUN/stage/usr/share/ucode/cli/cache.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/ucode/cli/color.uc",
+      "path": "$RUN/stage/usr/share/ucode/cli/color.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/ucode/cli/context-call.uc",
+      "path": "$RUN/stage/usr/share/ucode/cli/context-call.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/ucode/cli/context.uc",
+      "path": "$RUN/stage/usr/share/ucode/cli/context.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/ucode/cli/datamodel.uc",
+      "path": "$RUN/stage/usr/share/ucode/cli/datamodel.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/ucode/cli/modules/network.uc",
+      "path": "$RUN/stage/usr/share/ucode/cli/modules/network.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/ucode/cli/modules/service.uc",
+      "path": "$RUN/stage/usr/share/ucode/cli/modules/service.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/ucode/cli/object-editor.uc",
+      "path": "$RUN/stage/usr/share/ucode/cli/object-editor.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/ucode/cli/types.uc",
+      "path": "$RUN/stage/usr/share/ucode/cli/types.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/ucode/cli/utils.uc",
+      "path": "$RUN/stage/usr/share/ucode/cli/utils.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/ucode/luci/controller/admin/index.uc",
+      "path": "$RUN/stage/usr/share/ucode/luci/controller/admin/index.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/ucode/luci/controller/admin/uci.uc",
+      "path": "$RUN/stage/usr/share/ucode/luci/controller/admin/uci.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/ucode/luci/dispatcher.uc",
+      "path": "$RUN/stage/usr/share/ucode/luci/dispatcher.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/ucode/luci/http.uc",
+      "path": "$RUN/stage/usr/share/ucode/luci/http.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/ucode/luci/runtime.uc",
+      "path": "$RUN/stage/usr/share/ucode/luci/runtime.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/ucode/luci/sys.uc",
+      "path": "$RUN/stage/usr/share/ucode/luci/sys.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "markup",
+      "inconclusive_reason": "markup_not_modeled",
+      "installed_path": "usr/share/ucode/luci/uhttpd.uc",
+      "path": "$RUN/stage/usr/share/ucode/luci/uhttpd.uc",
+      "reason": "markup_tag_content",
+      "status": "inconclusive"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "usr/share/ucode/luci/zoneinfo.uc",
+      "path": "$RUN/stage/usr/share/ucode/luci/zoneinfo.uc",
+      "reason": "ucode_extension",
+      "status": "plain_route_selected"
+    },
+    {
+      "classification": "plain",
+      "installed_path": "www/cgi-bin/luci",
+      "path": "$RUN/stage/www/cgi-bin/luci",
+      "reason": "ucode_shebang",
+      "status": "plain_route_selected"
+    }
+  ],
+  "duplicate_input_count": 0,
+  "excluded_count": 0,
+  "input_count": 21,
+  "markup_count": 1,
+  "markup_inconclusive_count": 1,
+  "plain_count": 20,
+  "schema": "route-probe-normalized-v1",
+  "uncertain_count": 0
+}

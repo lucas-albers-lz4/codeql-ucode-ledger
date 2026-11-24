@@ -1,0 +1,147 @@
+{
+  "status": "Source-derived expectations only. No CodeQL commands or results.",
+  "advisory": "https://github.com/openwrt/luci/security/advisories/GHSA-pm9w-522m-8rrh",
+  "advisory_affected_commit": "769cb13c6999afcd30fd63bad28e96f0a676534e",
+  "affected_file_equivalence": "Advisory affected source and fix parent have identical bytes.",
+  "spans": "One-based line and byte columns, inclusive, tabs count as one byte. These describe source text and are distinct from extracted CodeQL locations.",
+  "producer_pin": "6010ff2c0f101f7629c6fe117a421f671c311a2b",
+  "producer_checkout_status_porcelain": "",
+  "producer_objects": [
+    {
+      "path": "ql/src/m4/ShellInjection.ql",
+      "git_blob": "0ac0d4fcc817e7a71a6a6607432274662f573c45",
+      "sha256": "a94a4cd20c532a11c0544b3ba24b1e07f3ff6f9554b4904a6632731547bdc6d5"
+    },
+    {
+      "path": "ql/lib/codeql/ucode/m3/Models.qll",
+      "git_blob": "44af84170a264890df54f4c230333cad2a88904a",
+      "sha256": "a24ea29d142a80c005daccb28f91da3850feb719953ca0de640ea0ab6f67563c"
+    },
+    {
+      "path": "ql/src/codeql-suites/code-scanning.qls",
+      "git_blob": "f481b753b05e21b0f994ca74db47618d0e6a5c5e",
+      "sha256": "6d343f93e37c309b8461da9fafcf67d089737980d7ac42a5409e75df3bd442e5"
+    },
+    {
+      "path": "scripts/m4-quote-smoke.sh",
+      "git_blob": "969a0a5d35b37112ca12469f5616941dcc640559",
+      "sha256": "9a3c91edc0369d0fa2257cb46d8f90b4ef2e70dac13c7b9fe33a8063a54d3018"
+    }
+  ],
+  "parent": {
+    "source_commit": "b45584b4e6068b9b096872dd02494a048d869c36",
+    "git_path": "protocols/luci-proto-openvpn/root/usr/share/rpcd/ucode/luci.openvpn.uc",
+    "git_blob": "da389170328212f8f0a3b7bea42be11d42bd0c38",
+    "stage_path": "parent/usr/share/rpcd/ucode/luci.openvpn.uc",
+    "bytes": 2898,
+    "sha256": "051c8162f826683333e11264615806df5ab08415676c0bd098921cb1b05af991",
+    "route_expectation": "plain ucode",
+    "advisory_source_span": [
+      71,
+      115,
+      71,
+      131
+    ],
+    "sink_span": [
+      77,
+      16,
+      77,
+      25
+    ],
+    "expected_target_candidate_rows": 0
+  },
+  "fixed": {
+    "source_commit": "e4ff45ecbc6ad212951815c8c99b2749fbd7de6b",
+    "git_path": "protocols/luci-proto-openvpn/root/usr/share/rpcd/ucode/luci.openvpn.uc",
+    "git_blob": "eb3b418f855d24ae0a34d5d09a289b9342098129",
+    "stage_path": "fixed/usr/share/rpcd/ucode/luci.openvpn.uc",
+    "bytes": 2910,
+    "sha256": "6593792678951fd500c2b090d17d9e500a05a642cfb996ee02c1649473152410",
+    "route_expectation": "plain ucode",
+    "advisory_source_span": [
+      71,
+      126,
+      71,
+      142
+    ],
+    "sink_span": [
+      77,
+      16,
+      77,
+      25
+    ],
+    "expected_target_candidate_rows": 0,
+    "changed_enclosing_expression_span": [
+      71,
+      115,
+      71,
+      143
+    ]
+  },
+  "controls": [
+    {
+      "source_commit": "6010ff2c0f101f7629c6fe117a421f671c311a2b",
+      "git_path": "ql/test/extractor-smoke/taint_pos",
+      "git_blob": "118057c48e1507ff71733fd12a64a6c7fbbb0245",
+      "stage_path": "controls/usr/share/rpcd/ucode/taint_pos.uc",
+      "bytes": 155,
+      "sha256": "0953202200e81c0dd1bfa4c733f632157bdaab6b413846fced09378729863eb8",
+      "route_expectation": "plain ucode",
+      "source_span": [
+        8,
+        10,
+        8,
+        25
+      ],
+      "sink_span": [
+        8,
+        4,
+        8,
+        26
+      ],
+      "expected_rows": [
+        [
+          "MemberExpression",
+          "shell-injection candidate via popen in taint_pos.uc",
+          "CallExpression",
+          "popen",
+          "probe",
+          "8",
+          "8"
+        ]
+      ]
+    },
+    {
+      "source_commit": "6010ff2c0f101f7629c6fe117a421f671c311a2b",
+      "git_path": "ql/test/extractor-smoke/taint_neg",
+      "git_blob": "78e8d7d0027fe931c4f9d543b794446ce227da02",
+      "stage_path": "controls/usr/share/rpcd/ucode/taint_neg.uc",
+      "bytes": 203,
+      "sha256": "977a3f330f3614f605a43b180b55f9461f1810982a667baa779aed5ed1080389",
+      "route_expectation": "plain ucode",
+      "source_span": [
+        8,
+        19,
+        8,
+        34
+      ],
+      "sink_span": [
+        9,
+        4,
+        9,
+        38
+      ],
+      "expected_rows": []
+    }
+  ],
+  "expected_extraction": "Separate roots parent/, fixed/, controls/. Stage each exactly as listed. Every file must appear exactly once under successful extraction with zero extraction errors before interpreting a query result. Record complete diagnostics and stop on router or extractor mismatches.",
+  "control_provenance": "Controls use byte-exact upstream taint_pos and taint_neg test fixtures, relocated under the rpcd installed path with explicit .uc names for deterministic plain routing. The extension changes the positive row basename only. taint_neg preserves the RPC access and execution sink in the same relevant function while using an unrelated constant sink argument.",
+  "model_boundaries": [
+    "RequestArgsAccess in Models.qll requires a base identifier literally named request. The advisory expression has another base identifier, req. Optional member extraction and full local flow are separate unverified gates.",
+    "The exact historical source/sink row is expected absent in both snapshots under this query; that outcome establishes a model gap only after extraction, AST presence and the positive control are verified. Existing control expectations are source-derived. Unrelated rows, if present, must be recorded separately.",
+    "ShellInjection is tagged testing and the standard code-scanning suite excludes testing. Explicit candidate rows and default scanning alerts have different contracts.",
+    "The fixed source preserves the target source and sink and wraps the changed substitution in the existing quote helper. The unmodified query cannot validate its fix discrimination when the original case is also absent.",
+    "Runtime/access prerequisites and historical impact are attributed to the upstream advisory. The staged source paths do not establish installed package bytes."
+  ],
+  "positive_control_comparison": "Assert the complete ordered-column tuple and multiplicity; where the runner can retain identity, compare source and sink entity locations too. Verify the same query emits no row for the exact eligible taint_neg source/sink pair."
+}

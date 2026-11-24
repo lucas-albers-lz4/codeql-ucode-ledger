@@ -1,0 +1,60 @@
+{
+  "cargo_lock_sha256": "20678c3cbb29632a9369bdb3c735af9ee63c9443879db38847fbda9813aa0a77",
+  "claim": "037",
+  "codeql_version": "CodeQL command-line toolchain release 2.27.4.",
+  "consumer_lock": {
+    "checkout_commit": "66a9c78cd605dbe63645235074b9747ab57b187e",
+    "lock_path": "corpus/lock.json",
+    "lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a"
+  },
+  "error_count": 0,
+  "execution_only_qlpack_transform": "ql/src workspace dependency replaced by locked 0.1.0 in run-owned copy; query/library bytes unchanged",
+  "extractor_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+  "generated_version_uc": "excluded",
+  "known_warning": "Diagnostic queries warned stages not cached because max heap was 1256 MB.",
+  "limitations": [
+    "staged source only; no installed package/rootfs byte equivalence",
+    "not full package/repository coverage",
+    "no semantic query, SARIF, or consumer handoff evaluated"
+  ],
+  "oracle_sha256": "3943f4cec7739867178ceb94f2ba1026d24f5379d4137bf90aff7215c51e92da",
+  "producer_commit": "18afe771568d373088edee7a790825ee46dec9e0",
+  "producer_dirty": false,
+  "ql_lock_sha256": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+  "raw_artifact_sha256": {
+    "commands.json": "89ef64f03ddcaf53ee055bf03bff941bf7c58535fecfd2f90e0996d0153472af",
+    "out/ExtractionErrors.bqrs": "295ef946d181aaa4f57833cde1eedbff5287bf390fd3bcc7ddc306e2514ee305",
+    "out/ExtractionErrors.json": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "out/SuccessfullyExtractedFiles.bqrs": "7cd3f90e2ac555c16d86a242a35ebe1e8904ecf3b68027f9c236f3db9db66e2f",
+    "out/SuccessfullyExtractedFiles.json": "219a53a317bd93a345914c9076aa61866c6ccbdf8228ae2b65413bbc7eadfe81",
+    "preflight.json": "da476e5d143918e87b04e21e634e8d5c9705797a8c6cabaf0ad498164f9c9a2c",
+    "route-probe-b/file-list.txt": "c21c47d6170dad673e101e2f7b875af9510612654bfbb2bc9b25b03ce11fdb58",
+    "route-probe-b/trap/routing.json": "366bca5208fecdb023a4612f8d1a43679edff2f6806530bfffeced5f1d487177",
+    "stage-receipt.json": "5e598e54c3c4ad37d729d5a936a9f432a1e2beefd37f6926b639cd75fac9e066"
+  },
+  "routing": {
+    "duplicates": 0,
+    "excluded": 0,
+    "markup_inconclusive": 1,
+    "plain": 20,
+    "uncertain": 0
+  },
+  "run_a": "not accepted: extraction query exit 2 because codeql/controlflow@1.0.12 unavailable; no extraction result",
+  "run_b": "fresh database/output/cache/tmp; seven commands exit 0",
+  "scope": "one staged 21-file LuCI luci-base + OpenWrt utils/cli slice",
+  "source_checkouts": {
+    "luci": {
+      "commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+      "dirty": false,
+      "url": "https://github.com/openwrt/luci.git"
+    },
+    "openwrt": {
+      "commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "dirty": false,
+      "url": "https://github.com/openwrt/openwrt.git"
+    }
+  },
+  "stage_receipt_sha256": "5e598e54c3c4ad37d729d5a936a9f432a1e2beefd37f6926b639cd75fac9e066",
+  "successful_file_count": 21,
+  "uhttpd_uc": "markup_tag_content, markup_not_modeled, inconclusive"
+}

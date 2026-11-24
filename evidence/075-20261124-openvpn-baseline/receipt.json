@@ -1,0 +1,372 @@
+{
+  "date_utc": "2026-11-24",
+  "environment": "macOS arm64; CodeQL 2.27.4; 16 GiB physical RAM; 127 GiB available disk at preflight",
+  "run_id": "mvp-openvpn-baseline-20261123-b",
+  "producer_pin": "6010ff2c0f101f7629c6fe117a421f671c311a2b",
+  "producer_clean_at_start": true,
+  "source_first_sha256": "21cf169752cdd7dd01b8e3b31a42f6cd362c3ef4e52660df292f38663044b595",
+  "source_first_file": "source-first.json",
+  "tool_executable": "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+  "tool_version": "2.27.4",
+  "pack_build_pin": "8375887ed14825dd59addbfd0df43616d9e684fb",
+  "pack_extractor_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+  "pack_source_compatibility": "selected producer and pack build pin have zero diff in Cargo.lock, codeql-extractor.yml, scripts/create-extractor-pack.sh, scripts/clone-grammar.sh; pack copied into owned $RUN/producer",
+  "pack_build_provenance": "work/pkg20-typed-run-20261122-a/preflight/provenance.json (raw local, not portable)",
+  "raw_artifacts": "$RUN contains exact commands.json, preflight.json, all databases, BQRS, query/decoded outputs and time logs; this local ignored path is not portable",
+  "home_note": "HOME inherited; TMPDIR, common and compilation caches run-owned per case",
+  "prior_attempt": "A distinct preparatory run a failed its first database init (exit 2) because the database parent directory was absent; no extraction or query ran. Run b created the parent before init and completed. An incorrect transcription of Cargo.lock hash was corrected before run a was created.",
+  "results": {
+    "parent": {
+      "expected_files": [
+        "$RUN/stage/parent/usr/share/rpcd/ucode/luci.openvpn.uc"
+      ],
+      "success_count": 1,
+      "errors": [],
+      "shell_header": [
+        "src",
+        "col1",
+        "sink",
+        "col3",
+        "col4",
+        "col5",
+        "col6"
+      ],
+      "shell_rows": [],
+      "target_ast_rows": [
+        [
+          "MemberExpression",
+          "MemberExpression",
+          "71",
+          "115",
+          "71",
+          "131",
+          "CallExpression",
+          "CallExpression",
+          "77",
+          "16",
+          "77",
+          "25"
+        ]
+      ],
+      "post_run_sha256": {
+        "usr/share/rpcd/ucode/luci.openvpn.uc": "051c8162f826683333e11264615806df5ab08415676c0bd098921cb1b05af991"
+      },
+      "timings": [
+        {
+          "phase": "init",
+          "exit": 0,
+          "wall_seconds": 0.534,
+          "peak_rss_bytes": 121274368
+        },
+        {
+          "phase": "index",
+          "exit": 0,
+          "wall_seconds": 0.732,
+          "peak_rss_bytes": 120061952
+        },
+        {
+          "phase": "finalize",
+          "exit": 0,
+          "wall_seconds": 1.208,
+          "peak_rss_bytes": 239665152
+        },
+        {
+          "phase": "success-query",
+          "exit": 0,
+          "wall_seconds": 1.56,
+          "peak_rss_bytes": 292814848
+        },
+        {
+          "phase": "success-decode",
+          "exit": 0,
+          "wall_seconds": 0.23,
+          "peak_rss_bytes": 89194496
+        },
+        {
+          "phase": "errors-query",
+          "exit": 0,
+          "wall_seconds": 1.563,
+          "peak_rss_bytes": 305971200
+        },
+        {
+          "phase": "errors-decode",
+          "exit": 0,
+          "wall_seconds": 0.234,
+          "peak_rss_bytes": 89145344
+        },
+        {
+          "phase": "shell-query",
+          "exit": 0,
+          "wall_seconds": 2.621,
+          "peak_rss_bytes": 762085376
+        },
+        {
+          "phase": "shell-decode",
+          "exit": 0,
+          "wall_seconds": 0.231,
+          "peak_rss_bytes": 86589440
+        },
+        {
+          "phase": "witness-query",
+          "exit": 0,
+          "wall_seconds": 2.174,
+          "peak_rss_bytes": 414285824
+        },
+        {
+          "phase": "witness-decode",
+          "exit": 0,
+          "wall_seconds": 0.226,
+          "peak_rss_bytes": 86917120
+        },
+        {
+          "phase": "witness-target-query",
+          "exit": 0,
+          "wall_seconds": 2.113,
+          "peak_rss_bytes": 406192128
+        },
+        {
+          "phase": "witness-target-decode",
+          "exit": 0,
+          "wall_seconds": 0.226,
+          "peak_rss_bytes": 86786048
+        }
+      ],
+      "observed_success_files": [
+        "$RUN/stage/parent/usr/share/rpcd/ucode/luci.openvpn.uc"
+      ],
+      "shell_query_warnings": [
+        "WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.",
+        "WARNING: A problem query must select an even number of columns. ($RUN/producer/ql/src/m4/ShellInjection.ql:24,1-33,46)"
+      ]
+    },
+    "fixed": {
+      "expected_files": [
+        "$RUN/stage/fixed/usr/share/rpcd/ucode/luci.openvpn.uc"
+      ],
+      "success_count": 1,
+      "errors": [],
+      "shell_header": [
+        "src",
+        "col1",
+        "sink",
+        "col3",
+        "col4",
+        "col5",
+        "col6"
+      ],
+      "shell_rows": [],
+      "target_ast_rows": [
+        [
+          "MemberExpression",
+          "MemberExpression",
+          "71",
+          "126",
+          "71",
+          "142",
+          "CallExpression",
+          "CallExpression",
+          "77",
+          "16",
+          "77",
+          "25"
+        ]
+      ],
+      "post_run_sha256": {
+        "usr/share/rpcd/ucode/luci.openvpn.uc": "6593792678951fd500c2b090d17d9e500a05a642cfb996ee02c1649473152410"
+      },
+      "timings": [
+        {
+          "phase": "init",
+          "exit": 0,
+          "wall_seconds": 0.496,
+          "peak_rss_bytes": 121667584
+        },
+        {
+          "phase": "index",
+          "exit": 0,
+          "wall_seconds": 0.389,
+          "peak_rss_bytes": 119963648
+        },
+        {
+          "phase": "finalize",
+          "exit": 0,
+          "wall_seconds": 1.066,
+          "peak_rss_bytes": 240435200
+        },
+        {
+          "phase": "success-query",
+          "exit": 0,
+          "wall_seconds": 1.506,
+          "peak_rss_bytes": 292290560
+        },
+        {
+          "phase": "success-decode",
+          "exit": 0,
+          "wall_seconds": 0.234,
+          "peak_rss_bytes": 89620480
+        },
+        {
+          "phase": "errors-query",
+          "exit": 0,
+          "wall_seconds": 1.538,
+          "peak_rss_bytes": 302907392
+        },
+        {
+          "phase": "errors-decode",
+          "exit": 0,
+          "wall_seconds": 0.234,
+          "peak_rss_bytes": 88948736
+        },
+        {
+          "phase": "shell-query",
+          "exit": 0,
+          "wall_seconds": 2.619,
+          "peak_rss_bytes": 554024960
+        },
+        {
+          "phase": "shell-decode",
+          "exit": 0,
+          "wall_seconds": 0.23,
+          "peak_rss_bytes": 86917120
+        },
+        {
+          "phase": "witness-query",
+          "exit": 0,
+          "wall_seconds": 2.262,
+          "peak_rss_bytes": 395329536
+        },
+        {
+          "phase": "witness-decode",
+          "exit": 0,
+          "wall_seconds": 0.232,
+          "peak_rss_bytes": 87588864
+        },
+        {
+          "phase": "witness-target-query",
+          "exit": 0,
+          "wall_seconds": 2.121,
+          "peak_rss_bytes": 427704320
+        },
+        {
+          "phase": "witness-target-decode",
+          "exit": 0,
+          "wall_seconds": 0.237,
+          "peak_rss_bytes": 88489984
+        }
+      ],
+      "observed_success_files": [
+        "$RUN/stage/fixed/usr/share/rpcd/ucode/luci.openvpn.uc"
+      ],
+      "shell_query_warnings": [
+        "WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.",
+        "WARNING: A problem query must select an even number of columns. ($RUN/producer/ql/src/m4/ShellInjection.ql:24,1-33,46)"
+      ]
+    },
+    "controls": {
+      "expected_files": [
+        "$RUN/stage/controls/usr/share/rpcd/ucode/taint_neg.uc",
+        "$RUN/stage/controls/usr/share/rpcd/ucode/taint_pos.uc"
+      ],
+      "success_count": 2,
+      "errors": [],
+      "shell_header": [
+        "src",
+        "col1",
+        "sink",
+        "col3",
+        "col4",
+        "col5",
+        "col6"
+      ],
+      "shell_rows": [
+        [
+          "MemberExpression",
+          "shell-injection candidate via popen in taint_pos.uc",
+          "CallExpression",
+          "popen",
+          "probe",
+          "8",
+          "8"
+        ]
+      ],
+      "post_run_sha256": {
+        "usr/share/rpcd/ucode/taint_neg.uc": "977a3f330f3614f605a43b180b55f9461f1810982a667baa779aed5ed1080389",
+        "usr/share/rpcd/ucode/taint_pos.uc": "0953202200e81c0dd1bfa4c733f632157bdaab6b413846fced09378729863eb8"
+      },
+      "timings": [
+        {
+          "phase": "init",
+          "exit": 0,
+          "wall_seconds": 0.488,
+          "peak_rss_bytes": 121077760
+        },
+        {
+          "phase": "index",
+          "exit": 0,
+          "wall_seconds": 0.386,
+          "peak_rss_bytes": 120406016
+        },
+        {
+          "phase": "finalize",
+          "exit": 0,
+          "wall_seconds": 1.037,
+          "peak_rss_bytes": 193708032
+        },
+        {
+          "phase": "success-query",
+          "exit": 0,
+          "wall_seconds": 1.514,
+          "peak_rss_bytes": 295960576
+        },
+        {
+          "phase": "success-decode",
+          "exit": 0,
+          "wall_seconds": 0.235,
+          "peak_rss_bytes": 89407488
+        },
+        {
+          "phase": "errors-query",
+          "exit": 0,
+          "wall_seconds": 1.514,
+          "peak_rss_bytes": 303661056
+        },
+        {
+          "phase": "errors-decode",
+          "exit": 0,
+          "wall_seconds": 0.232,
+          "peak_rss_bytes": 89063424
+        },
+        {
+          "phase": "shell-query",
+          "exit": 0,
+          "wall_seconds": 2.727,
+          "peak_rss_bytes": 649363456
+        },
+        {
+          "phase": "shell-decode",
+          "exit": 0,
+          "wall_seconds": 0.228,
+          "peak_rss_bytes": 86671360
+        }
+      ],
+      "observed_success_files": [
+        "$RUN/stage/controls/usr/share/rpcd/ucode/taint_neg.uc",
+        "$RUN/stage/controls/usr/share/rpcd/ucode/taint_pos.uc"
+      ],
+      "shell_query_warnings": [
+        "WARNING: Not caching stages during query-loading, since max heap size is only 1256 MB.",
+        "WARNING: A problem query must select an even number of columns. ($RUN/producer/ql/src/m4/ShellInjection.ql:24,1-33,46)"
+      ]
+    }
+  },
+  "interpretation": "Exact extracted files and zero errors. The current testing-tagged candidate query has zero rows for both historical parent and fixed source, one exact positive control row and no negative-control row. Exact target source/sink AST witnesses exist. The zero on the fixed source does not prove the query recognizes the fix; the model requires receiver spelling request while source uses req. No default-suite SARIF, Linux run or consumer handoff was performed.",
+  "witness_query_versions": {
+    "witness-query": "OpenvpnAstWitnessBroad.ql (first ran with three same-file popen sites)",
+    "witness-target-query": "OpenvpnAstWitnessTarget.ql (narrowed to predeclared line-77 sink)"
+  },
+  "witness_query_sha256": {
+    "OpenvpnAstWitnessBroad.ql": "61433399c641e8ce3b7185c94e0a1804e8a02f2f21b6f014ae3d510263b94a43",
+    "OpenvpnAstWitnessTarget.ql": "9578d98630cc35eb8cdb377853616d0d30b2b65c873059d565f4da73b49aa999"
+  },
+  "query_warning_interpretation": "The existing ShellInjection.ql is tagged testing and its seven-column @kind problem select emits a CodeQL warning requiring an even number of columns. BQRS/CSV query runs exited 0 and yielded the stated rows; this query is not a validated SARIF alert contract. Low-heap cache warning also appears in raw stderr."
+}

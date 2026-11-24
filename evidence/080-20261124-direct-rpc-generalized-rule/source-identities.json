@@ -1,0 +1,250 @@
+{
+  "oracle_sha256": "fcab0ad97ee83389e62ecaafb6491675f6605e4a7987c3d666f8ee8669e712ea",
+  "source_files": [
+    {
+      "expected_rule_rows": 0,
+      "oracle_path": "control/catch_formal_shadow.uc",
+      "sha256_expected": "3adee04376ebbddf70c6b746091d0fc2b820efde630e22cd6fab1b257c865fbe",
+      "sha256_observed": "3adee04376ebbddf70c6b746091d0fc2b820efde630e22cd6fab1b257c865fbe",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/catch_formal_shadow.uc"
+    },
+    {
+      "expected_rule_rows": 0,
+      "oracle_path": "control/catch_local_shadow.uc",
+      "sha256_expected": "75aee861cc6a04f7c7a41cd87bc3f33ed518860fd1fb9a18f22d2c5b76861acf",
+      "sha256_observed": "75aee861cc6a04f7c7a41cd87bc3f33ed518860fd1fb9a18f22d2c5b76861acf",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/catch_local_shadow.uc"
+    },
+    {
+      "expected_rule_rows": 0,
+      "oracle_path": "control/constant_sink.uc",
+      "sha256_expected": "435432d86baca2be2cf20c134ec255383b7cc4ae49ae9750737627279c4b7854",
+      "sha256_observed": "435432d86baca2be2cf20c134ec255383b7cc4ae49ae9750737627279c4b7854",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/constant_sink.uc"
+    },
+    {
+      "expected_rule_rows": 1,
+      "oracle_path": "control/different_field_pos.uc",
+      "sha256_expected": "c8834db1a5580a3198d5887c33b5a9721728a6509b87b06c9d50990c654f8996",
+      "sha256_observed": "c8834db1a5580a3198d5887c33b5a9721728a6509b87b06c9d50990c654f8996",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/different_field_pos.uc"
+    },
+    {
+      "expected_rule_rows": 1,
+      "oracle_path": "control/direct_pos.uc",
+      "sha256_expected": "d288103a16e64d54eee2990d9f032e4b194f5916266c181d5e3bc099da991562",
+      "sha256_observed": "d288103a16e64d54eee2990d9f032e4b194f5916266c181d5e3bc099da991562",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/direct_pos.uc"
+    },
+    {
+      "expected_rule_rows": 0,
+      "oracle_path": "control/exclusive_branches.uc",
+      "sha256_expected": "ec3cf0e2ec18bab903d84bc4055d1e188afc685c86da1dfd11160dc2560e8f30",
+      "sha256_observed": "ec3cf0e2ec18bab903d84bc4055d1e188afc685c86da1dfd11160dc2560e8f30",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/exclusive_branches.uc"
+    },
+    {
+      "expected_rule_rows": 0,
+      "oracle_path": "control/for_formal_shadow.uc",
+      "sha256_expected": "aa2a8a2860d9530660b33ed57a923e16cedcbb1d3ad8920950cd73fe4fafbbe3",
+      "sha256_observed": "aa2a8a2860d9530660b33ed57a923e16cedcbb1d3ad8920950cd73fe4fafbbe3",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/for_formal_shadow.uc"
+    },
+    {
+      "expected_rule_rows": 0,
+      "oracle_path": "control/for_local_shadow.uc",
+      "sha256_expected": "47d3169e804dbe0032f025e5d4624d10d04fc89dd0120fdd92fb5b35712f2221",
+      "sha256_observed": "47d3169e804dbe0032f025e5d4624d10d04fc89dd0120fdd92fb5b35712f2221",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/for_local_shadow.uc"
+    },
+    {
+      "expected_rule_rows": 0,
+      "oracle_path": "control/function_formal_shadow.uc",
+      "sha256_expected": "d961c9dfb9d330ead678087aa144c53351442e93998d001dc90a7a6bd080d82e",
+      "sha256_observed": "d961c9dfb9d330ead678087aa144c53351442e93998d001dc90a7a6bd080d82e",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/function_formal_shadow.uc"
+    },
+    {
+      "expected_rule_rows": 0,
+      "oracle_path": "control/function_local_shadow.uc",
+      "sha256_expected": "9628ff484c6cf83a143a62954e22809fe88febd1ede028adc10e373c5aaf2a90",
+      "sha256_observed": "9628ff484c6cf83a143a62954e22809fe88febd1ede028adc10e373c5aaf2a90",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/function_local_shadow.uc"
+    },
+    {
+      "expected_rule_rows": 1,
+      "oracle_path": "control/initialized_local_pos.uc",
+      "sha256_expected": "56a4800a8d5fc5e5d5fd2f530641e129b5b4645e1bd00f2290db7b8914580c1c",
+      "sha256_observed": "56a4800a8d5fc5e5d5fd2f530641e129b5b4645e1bd00f2290db7b8914580c1c",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/initialized_local_pos.uc"
+    },
+    {
+      "expected_rule_rows": 1,
+      "oracle_path": "control/multi_substitution_quote_context.uc",
+      "sha256_expected": "b6f92489e562cd742daee0a2162162e35129ef6a2bac98a30a8bc02b48bca474",
+      "sha256_observed": "b6f92489e562cd742daee0a2162162e35129ef6a2bac98a30a8bc02b48bca474",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/multi_substitution_quote_context.uc"
+    },
+    {
+      "expected_rule_rows": 0,
+      "oracle_path": "control/nested_callable.uc",
+      "sha256_expected": "752fae7ead4c425212b1e9310e0ecd766f3a67007539ffcf9829fba12ffcfa1f",
+      "sha256_observed": "752fae7ead4c425212b1e9310e0ecd766f3a67007539ffcf9829fba12ffcfa1f",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/nested_callable.uc"
+    },
+    {
+      "expected_rule_rows": 0,
+      "oracle_path": "control/quoted_arg.uc",
+      "sha256_expected": "4d41c72dc4a2ed78c75e2cb201ceb00fd96976a3ad157360cb470ead4b35cbff",
+      "sha256_observed": "4d41c72dc4a2ed78c75e2cb201ceb00fd96976a3ad157360cb470ead4b35cbff",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/quoted_arg.uc"
+    },
+    {
+      "expected_rule_rows": 0,
+      "oracle_path": "control/quoted_context.uc",
+      "sha256_expected": "a92b848ed4b76f5eb5417fbf8b6625c66c0864aa83933dfbb3bd9e6a731f3c60",
+      "sha256_observed": "a92b848ed4b76f5eb5417fbf8b6625c66c0864aa83933dfbb3bd9e6a731f3c60",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/quoted_context.uc"
+    },
+    {
+      "expected_rule_rows": 1,
+      "oracle_path": "control/quoted_first_raw_second.uc",
+      "sha256_expected": "33e3941022583feef1825b95a68d8370df7d5869e77f7776c360b3199940c160",
+      "sha256_observed": "33e3941022583feef1825b95a68d8370df7d5869e77f7776c360b3199940c160",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/quoted_first_raw_second.uc"
+    },
+    {
+      "expected_rule_rows": 0,
+      "oracle_path": "control/reassigned_formal.uc",
+      "sha256_expected": "62735eb45820f19a348eb996cffffb9e8f8db7383cee6e5ef3a90ed5bbfa5ab3",
+      "sha256_observed": "62735eb45820f19a348eb996cffffb9e8f8db7383cee6e5ef3a90ed5bbfa5ab3",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/reassigned_formal.uc"
+    },
+    {
+      "expected_rule_rows": 0,
+      "oracle_path": "control/shadowed_local.uc",
+      "sha256_expected": "c9306a8e43e78b35372afb4ff6beb13d1399870dbe8ced2d7b2818cc64ed8613",
+      "sha256_observed": "c9306a8e43e78b35372afb4ff6beb13d1399870dbe8ced2d7b2818cc64ed8613",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/shadowed_local.uc"
+    },
+    {
+      "expected_rule_rows": 0,
+      "oracle_path": "control/unimported_popen.uc",
+      "sha256_expected": "486fcfbdc63f57f23b1ea8bcb6ae0a34188f792476555c60ea03418bf23ca94e",
+      "sha256_observed": "486fcfbdc63f57f23b1ea8bcb6ae0a34188f792476555c60ea03418bf23ca94e",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/unimported_popen.uc"
+    },
+    {
+      "expected_rule_rows": 0,
+      "oracle_path": "control/unregistered_object.uc",
+      "sha256_expected": "5cda4f2a884d3095a96cf9f58ae2addc82a919ac9c0e590b295c67df497036d7",
+      "sha256_observed": "5cda4f2a884d3095a96cf9f58ae2addc82a919ac9c0e590b295c67df497036d7",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/unregistered_object.uc"
+    },
+    {
+      "expected_rule_rows": 0,
+      "oracle_path": "control/word_fragment.uc",
+      "sha256_expected": "6d830dade60f00926f0ea03b707e03f884bd64461e9101ba5ced6a51f15f9e53",
+      "sha256_observed": "6d830dade60f00926f0ea03b707e03f884bd64461e9101ba5ced6a51f15f9e53",
+      "stage_path": "stage/controls/usr/share/rpcd/ucode/word_fragment.uc"
+    },
+    {
+      "expected_rule_rows": 0,
+      "oracle_path": "real/luci-swconfig/luci",
+      "sha256_expected": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+      "sha256_observed": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+      "stage_path": "stage/swconfig/usr/share/rpcd/ucode/luci"
+    },
+    {
+      "expected_rule_rows": 0,
+      "oracle_path": "real/openvpn-fixed/luci.openvpn.uc",
+      "sha256_expected": "6593792678951fd500c2b090d17d9e500a05a642cfb996ee02c1649473152410",
+      "sha256_observed": "6593792678951fd500c2b090d17d9e500a05a642cfb996ee02c1649473152410",
+      "stage_path": "stage/fixed/usr/share/rpcd/ucode/luci.openvpn.uc"
+    },
+    {
+      "expected_rule_rows": 1,
+      "oracle_path": "real/openvpn-parent/luci.openvpn.uc",
+      "sha256_expected": "051c8162f826683333e11264615806df5ab08415676c0bd098921cb1b05af991",
+      "sha256_observed": "051c8162f826683333e11264615806df5ab08415676c0bd098921cb1b05af991",
+      "stage_path": "stage/parent/usr/share/rpcd/ucode/luci.openvpn.uc"
+    }
+  ],
+  "source_first_expected_sites": [
+    {
+      "expected": 1,
+      "line": 71,
+      "sink": "popen(cmd)",
+      "sink_line": 77,
+      "site": "generateKey req.args?.cl_meta",
+      "stage": "openvpn-parent"
+    },
+    {
+      "expected": 0,
+      "line": 71,
+      "sink": "popen(cmd)",
+      "sink_line": 77,
+      "site": "shellquote(req.args?.cl_meta)",
+      "stage": "openvpn-fixed"
+    },
+    {
+      "expected": 0,
+      "line": 343,
+      "sink": "popen(template)",
+      "site": "getSwconfigFeatures request.args.switch",
+      "stage": "luci-swconfig"
+    },
+    {
+      "expected": 0,
+      "line": 400,
+      "sink": "popen(template)",
+      "site": "getSwconfigPortState request.args.switch",
+      "stage": "luci-swconfig"
+    },
+    {
+      "expected": 1,
+      "line": 5,
+      "sink": "popen(command)",
+      "sink_line": 6,
+      "site": "input.args.item",
+      "stage": "control/initialized_local_pos.uc"
+    },
+    {
+      "expected": 0,
+      "line": 5,
+      "sink": "popen(template)",
+      "sink_line": 5,
+      "site": "input.args.value",
+      "stage": "control/unregistered_object.uc"
+    },
+    {
+      "expected": 0,
+      "line": 7,
+      "sink": "popen(command)",
+      "sink_line": 9,
+      "site": "input.args.value",
+      "stage": "control/exclusive_branches.uc"
+    },
+    {
+      "expected": 1,
+      "line": 5,
+      "sink": "popen(template)",
+      "sink_line": 5,
+      "site": "input.args.prefix (first), input.args.value (second suppressed)",
+      "stage": "control/multi_substitution_quote_context.uc"
+    },
+    {
+      "expected": 1,
+      "line": 6,
+      "sink": "popen(template)",
+      "sink_line": 6,
+      "site": "input.args.prefix (quoted), input.args.value (raw)",
+      "stage": "control/quoted_first_raw_second.uc"
+    }
+  ],
+  "upstream_pins": {
+    "openvpn_fixed": "e4ff45ecbc6ad212951815c8c99b2749fbd7de6b",
+    "openvpn_parent": "b45584b4e6068b9b096872dd02494a048d869c36",
+    "swconfig": "b2e0be4b46ec0fd43394c081fa7c50657af14011"
+  }
+}

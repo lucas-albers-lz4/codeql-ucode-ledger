@@ -1,0 +1,152 @@
+{
+  "status": "Source-derived expectations only; no CodeQL run or query result",
+  "advisory": "https://github.com/openwrt/luci/security/advisories/GHSA-xwc5-mx58-rh35",
+  "mainline_pair": {
+    "parent": {
+      "source_commit": "46cd82328dfb7fbb15961c63f9e674a41cef2500",
+      "git_path": "applications/luci-app-tailscale-community/root/usr/share/rpcd/ucode/tailscale.uc",
+      "git_blob": "8e2b7aa56a0b37c0cf392fc4c182d6ae1167e858",
+      "stage_path": "parent/usr/share/rpcd/ucode/tailscale.uc",
+      "bytes": 10622,
+      "sha256": "3029c32d7ccd18efb95355aa915841e2bf467b0de147ce1a65b68c55fec9d280",
+      "route_expectation": "plain ucode",
+      "source_lines": [
+        140,
+        152,
+        153,
+        156,
+        158,
+        163
+      ],
+      "sink_line": 164
+    },
+    "fixed": {
+      "source_commit": "507ab5e45c304543d4111af9a331db0f03be6bcb",
+      "git_path": "applications/luci-app-tailscale-community/root/usr/share/rpcd/ucode/tailscale.uc",
+      "git_blob": "b7bf94b0baff7817dad2a010b04e1ba293d59733",
+      "stage_path": "fixed/usr/share/rpcd/ucode/tailscale.uc",
+      "bytes": 10633,
+      "sha256": "12bffca1f06aae14363f12d98680c0ca3a07223babd26131cc7c1612baf8fc4e",
+      "route_expectation": "plain ucode",
+      "source_lines": [
+        140,
+        152,
+        153,
+        156,
+        158,
+        163
+      ],
+      "sink_line": 164
+    }
+  },
+  "expected_extraction": "Run parent and fixed in separate run-owned databases; each must route as plain ucode and produce exactly one successful file identity and zero extraction errors before interpreting query output. AST witnesses must identify request.args.form_data and the popen call with multiplicity.",
+  "expected_security_discrimination": "An eventual scoped detector should report the vulnerable outer double-quoted /bin/sh -c source at line 164 and no corresponding alert at the fixed line 164; a known-positive and eligible same-sink constant-command near miss are also required. This is a target, not a current-query expectation.",
+  "limitations": [
+    "No package release or installed-byte mapping established",
+    "No local CodeQL run performed",
+    "No runtime reproduction performed; runtime conditions and impact attributed to maintainer advisory",
+    "Existing RequestArgsAccess recognizes the initial request expression but array push/join and nested shell context need separate modeling"
+  ],
+  "source_first_review": {
+    "prepared_before_codeql_run": true,
+    "control_stage": "controls/usr/share/rpcd/ucode",
+    "model_inspected": {
+      "context": "Clean disposable producer checkout work/mvp-postmerge-producer-20261124 at 18afe771568d373088edee7a790825ee46dec9e0 (empty git status), inspected before any Tailscale CodeQL run. ShellInjection.ql and Models.qll SHA-256s match the claim 035 baseline copies.",
+      "ShellInjection.ql_sha256": "a94a4cd20c532a11c0544b3ba24b1e07f3ff6f9554b4904a6632731547bdc6d5",
+      "Models.qll_sha256": "a24ea29d142a80c005daccb28f91da3850feb719953ca0de640ea0ab6f67563c",
+      "inference": "RequestArgsAccess recognizes literal request.args.form_data. taintedBinding follows same-method named initializers, but does not model mutation of loginargs through push or join. completeQuotedTemplateArg is disabled. The existing query does not establish outer shell interpretation or trusted local shell_quote semantics."
+    },
+    "ast_identity_convention": "Predeclared 1-based source-text spans, including end columns; verify actual AST classes and ranges after extraction, and retain multiplicity. CallExpression spans describe the full popen(...) call, excluding semicolon.",
+    "source_sink_expectations": {
+      "parent": {
+        "source": [
+          "MemberExpression request.args.form_data 140:21-42",
+          "MemberExpression form_data.loginserver 152:28-48",
+          "MemberExpression form_data.loginserver_authkey 153:36-64"
+        ],
+        "sink": "CallExpression popen(...) 164:3-48",
+        "outer_context": "/bin/sh -c receives a double-quoted argument containing login_cmd; inner shell_quote is applied only to loginserver and loginserver_authkey"
+      },
+      "fixed": {
+        "source": [
+          "MemberExpression request.args.form_data 140:21-42",
+          "MemberExpression form_data.loginserver 152:28-48",
+          "MemberExpression form_data.loginserver_authkey 153:36-64"
+        ],
+        "sink": "CallExpression popen(...) 164:3-59",
+        "outer_context": "/bin/sh -c receives shell_quote(login_cmd + space-ampersand) as its entire argument"
+      }
+    },
+    "controls": {
+      "model_pos.uc": {
+        "stage_path": "controls/usr/share/rpcd/ucode/model_pos.uc",
+        "bytes": 191,
+        "sha256": "b406488ab29d7c63d4698896239afed0a55b584e8b892d9983567a646b3e67be",
+        "route_expectation": "plain ucode",
+        "expected_source": "MemberExpression request.args.cmd 6:30-45",
+        "expected_sink": "CallExpression popen(...) 6:7-59",
+        "role": "Direct source within outer double-quoted /bin/sh -c sink; current-query positive"
+      },
+      "nested_pos.uc": {
+        "stage_path": "controls/usr/share/rpcd/ucode/nested_pos.uc",
+        "bytes": 622,
+        "sha256": "f410af3bbbea20098e78e863c56967bf90af94f908c26f771c2f89c1cdb50592",
+        "route_expectation": "plain ucode",
+        "expected_source": "MemberExpression request.args.form_data 11:23-44; MemberExpression form_data.loginserver 13:30-50",
+        "expected_sink": "CallExpression popen(...) 18:5-50",
+        "role": "Inner value shell_quote, outer double quotes; nested-shell positive"
+      },
+      "nested_fixed.uc": {
+        "stage_path": "controls/usr/share/rpcd/ucode/nested_fixed.uc",
+        "bytes": 633,
+        "sha256": "8723f5da9d9d12f14fba1dd6ca35f3540d906d5679b7a68edaa7a5a09f88bf0c",
+        "route_expectation": "plain ucode",
+        "expected_source": "MemberExpression request.args.form_data 11:23-44; MemberExpression form_data.loginserver 13:30-50",
+        "expected_sink": "CallExpression popen(...) 18:5-61",
+        "role": "Inner value shell_quote plus outer whole-argument shell_quote; fixed-form negative"
+      },
+      "nested_near_miss.uc": {
+        "stage_path": "controls/usr/share/rpcd/ucode/nested_near_miss.uc",
+        "bytes": 610,
+        "sha256": "1d4abd74484a16973168aa3cf994540b0d462d01da48a86b5ecaf3e74bf44602",
+        "route_expectation": "plain ucode",
+        "expected_source": "MemberExpression request.args.form_data 11:23-44; MemberExpression form_data.loginserver 13:37-57",
+        "expected_sink": "CallExpression popen(...) 16:5-50",
+        "role": "Request source read but only a literal is pushed into loginargs; eligible negative"
+      }
+    },
+    "current_candidate_query_expected_multiset": [
+      {
+        "file": "model_pos.uc",
+        "source": "MemberExpression request.args.cmd 6:30-45",
+        "sink": "CallExpression popen(...) 6:7-59",
+        "tuple": [
+          "MemberExpression",
+          "shell-injection candidate via popen in model_pos.uc",
+          "CallExpression",
+          "popen",
+          "probe",
+          "6",
+          "6"
+        ],
+        "count": 1
+      }
+    ],
+    "current_candidate_query_expected_zero_files": [
+      "parent/tailscale.uc",
+      "fixed/tailscale.uc",
+      "nested_pos.uc",
+      "nested_fixed.uc",
+      "nested_near_miss.uc"
+    ],
+    "future_scoped_detector_expected_alerts": {
+      "parent/tailscale.uc": 1,
+      "fixed/tailscale.uc": 0,
+      "model_pos.uc": 1,
+      "nested_pos.uc": 1,
+      "nested_fixed.uc": 0,
+      "nested_near_miss.uc": 0
+    },
+    "controls_boundary": "model_pos is a current-query liveness control. nested_pos and nested_fixed isolate the outer quote while preserving the trim/push/array/join path. nested_near_miss retains request.args.form_data, a derived read, and the vulnerable-form sink, but its array receives only a literal command argument. Source-based expectations do not establish runtime reachability, helper binding, a CodeQL result, or a release alert."
+  }
+}

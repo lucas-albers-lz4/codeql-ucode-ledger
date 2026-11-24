@@ -1,0 +1,5 @@
+[
+  "$LEDGER/work/direct-rpc-promotion-producer/ql/src/m4/DirectRpcShellWord.ql",
+  "$LEDGER/work/direct-rpc-promotion-producer/ql/src/diagnostics/ExtractionErrors.ql",
+  "$LEDGER/work/direct-rpc-promotion-producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql"
+]

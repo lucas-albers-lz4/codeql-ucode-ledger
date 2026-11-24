@@ -1,0 +1,274 @@
+{
+  "producer_base": "18afe771568d373088edee7a790825ee46dec9e0",
+  "producer_branch": "security/openvpn-metadata-shell",
+  "query_sha256": "559c5174ace56a3b5081906849e3584c4019de14292fbd5ebf34dd97fcb155d5",
+  "tool_version": "2.27.4",
+  "staged_path": "usr/share/rpcd/ucode/luci.openvpn.uc",
+  "cases": {
+    "parent": {
+      "sha256": "051c8162f826683333e11264615806df5ab08415676c0bd098921cb1b05af991",
+      "expected_successful_files": 1,
+      "expected_errors": 0,
+      "expected_rule_rows": 1,
+      "expected_source_property": "cl_meta",
+      "expected_sink": "fs.popen",
+      "derivation": "Pinned historical parent/fix or prior constant-sink control",
+      "source_occurrences": [
+        [
+          71,
+          115,
+          71,
+          131
+        ]
+      ],
+      "popen_cmd_occurrences": [
+        [
+          17,
+          14,
+          17,
+          23
+        ],
+        [
+          77,
+          16,
+          77,
+          25
+        ]
+      ],
+      "target_source_span": [
+        71,
+        115,
+        71,
+        131
+      ],
+      "target_sink_span": [
+        77,
+        16,
+        77,
+        25
+      ]
+    },
+    "fixed": {
+      "sha256": "6593792678951fd500c2b090d17d9e500a05a642cfb996ee02c1649473152410",
+      "expected_successful_files": 1,
+      "expected_errors": 0,
+      "expected_rule_rows": 0,
+      "expected_source_property": "cl_meta",
+      "expected_sink": "fs.popen",
+      "derivation": "Pinned historical parent/fix or prior constant-sink control",
+      "source_occurrences": [
+        [
+          71,
+          126,
+          71,
+          142
+        ]
+      ],
+      "popen_cmd_occurrences": [
+        [
+          17,
+          14,
+          17,
+          23
+        ],
+        [
+          77,
+          16,
+          77,
+          25
+        ]
+      ],
+      "target_source_span": [
+        71,
+        126,
+        71,
+        142
+      ],
+      "target_sink_span": [
+        77,
+        16,
+        77,
+        25
+      ]
+    },
+    "constant_sink": {
+      "sha256": "08f8ed832129d2e48be12facfeb304dffc7353b2be26873c08b6b233cfd6bb6e",
+      "expected_successful_files": 1,
+      "expected_errors": 0,
+      "expected_rule_rows": 0,
+      "expected_source_property": "cl_meta",
+      "expected_sink": "fs.popen",
+      "derivation": "Pinned historical parent/fix or prior constant-sink control",
+      "source_occurrences": [
+        [
+          71,
+          115,
+          71,
+          131
+        ]
+      ],
+      "popen_cmd_occurrences": [
+        [
+          17,
+          14,
+          17,
+          23
+        ]
+      ],
+      "target_source_span": [
+        71,
+        115,
+        71,
+        131
+      ],
+      "target_sink_span": [
+        77,
+        16,
+        77,
+        34
+      ]
+    },
+    "req_reassigned": {
+      "sha256": "849d941590711f4f1e520165fade8d18d292ddb134dcca163afb1caf96715a82",
+      "expected_successful_files": 1,
+      "expected_errors": 0,
+      "expected_rule_rows": 0,
+      "expected_source_property": "cl_meta",
+      "expected_sink": "fs.popen",
+      "derivation": "In vulnerable source, assign req to a constant metadata object immediately before raw interpolation.",
+      "source_occurrences": [
+        [
+          72,
+          115,
+          72,
+          131
+        ]
+      ],
+      "popen_cmd_occurrences": [
+        [
+          17,
+          14,
+          17,
+          23
+        ],
+        [
+          78,
+          16,
+          78,
+          25
+        ]
+      ],
+      "target_source_span": [
+        72,
+        115,
+        72,
+        131
+      ],
+      "target_sink_span": [
+        78,
+        16,
+        78,
+        25
+      ]
+    },
+    "cmd_shadowed": {
+      "sha256": "273638453f355fc6e33d6b9d58d66f1e61c62f6450e26b6ba503879b094de14a",
+      "expected_successful_files": 1,
+      "expected_errors": 0,
+      "expected_rule_rows": 0,
+      "expected_source_property": "cl_meta",
+      "expected_sink": "fs.popen",
+      "derivation": "In vulnerable source, execute popen(cmd) inside a block with a new constant cmd local.",
+      "source_occurrences": [
+        [
+          71,
+          115,
+          71,
+          131
+        ]
+      ],
+      "popen_cmd_occurrences": [
+        [
+          17,
+          14,
+          17,
+          23
+        ],
+        [
+          78,
+          36,
+          78,
+          45
+        ]
+      ],
+      "target_source_span": [
+        71,
+        115,
+        71,
+        131
+      ],
+      "target_sink_span": [
+        78,
+        36,
+        78,
+        45
+      ]
+    },
+    "nested_assignment": {
+      "sha256": "c04c486095b06910d5492763601410422500608b3591f86161bf480e9757ac50",
+      "expected_successful_files": 1,
+      "expected_errors": 0,
+      "expected_rule_rows": 0,
+      "expected_source_property": "cl_meta",
+      "expected_sink": "fs.popen",
+      "derivation": "In vulnerable source, place the raw assignment in an uncalled nested function; assign constant cmd on the executed outer path.",
+      "source_occurrences": [
+        [
+          71,
+          133,
+          71,
+          149
+        ]
+      ],
+      "popen_cmd_occurrences": [
+        [
+          17,
+          14,
+          17,
+          23
+        ],
+        [
+          78,
+          16,
+          78,
+          25
+        ]
+      ],
+      "target_source_span": [
+        71,
+        133,
+        71,
+        149
+      ],
+      "target_sink_span": [
+        78,
+        16,
+        78,
+        25
+      ]
+    }
+  },
+  "extractor_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+  "cargo_lock_sha256": "20678c3cbb29632a9369bdb3c735af9ee63c9443879db38847fbda9813aa0a77",
+  "ql_lock_sha256": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+  "home_note": "Inherited HOME because developer instruction prohibits repurposing it; each case owns TMPDIR, common cache, compilation cache, database and outputs.",
+  "expected_parent_result": [
+    "MemberExpression",
+    "RPC metadata is directly interpolated into a command later passed to fs.popen at line 77; review the command path."
+  ],
+  "dependency_note": "Copied dependency pack cache from successful prior isolated baseline cache into each case-owned common cache; no network bootstrap. The pack and lock hashes match selected producer.",
+  "producer_commit": "c4829ff1d30225ca758b0f7979f47c3265cf882d",
+  "run_note": "Fresh final-commit verification; six separate writable databases and caches, inherited HOME per developer instruction.",
+  "preflight_free_bytes": 135132512256,
+  "preflight_home": "/Users/lalbers"
+}

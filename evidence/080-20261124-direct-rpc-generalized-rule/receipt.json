@@ -1,0 +1,37 @@
+{
+  "all_run_i_commands_exit_zero": true,
+  "claim": "040",
+  "codeql_version": "2.27.4",
+  "extraction_errors": 0,
+  "extractor_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+  "limitations": [
+    "explicit experimental query only; no default-suite or release readiness",
+    "no security exploit, runtime reachability, or authorization conclusion",
+    "no shell quote-state proof",
+    "no installed-byte equivalence or live consumer handoff"
+  ],
+  "nonpasses_file": "nonpasses.json",
+  "oracle_sha256": "fcab0ad97ee83389e62ecaafb6491675f6605e4a7987c3d666f8ee8669e712ea",
+  "pack_build_revision": "8375887ed14825dd59addbfd0df43616d9e684fb",
+  "probe_c": "copied 21-file Stage-6 database; seven commands exit 0; fresh extraction not performed; zero CSV/SARIF results",
+  "producer_base": "18afe771568d373088edee7a790825ee46dec9e0",
+  "producer_commit": "29d8a6e9b352e0904065ec5572db4d845ff15919",
+  "producer_status": [],
+  "query_sha256": "046c57aa2003c5b0a5c1a8eec9afc7ca00fdb727928839bff51a4236f5e93f48",
+  "raw_artifact_hashes_file": "raw-hashes.json",
+  "rule_rows": {
+    "controls": 5,
+    "fixed": 0,
+    "parent": 1,
+    "swconfig": 0
+  },
+  "run_i_command_count": 48,
+  "sarif_results": {
+    "controls": 5,
+    "fixed": 0,
+    "parent": 1,
+    "swconfig": 0
+  },
+  "selected_input_count": 24,
+  "witness_sha256": "9400b7e68f1ba229dfb662418476640451f5fb14ab52c60348afe0982a577460"
+}

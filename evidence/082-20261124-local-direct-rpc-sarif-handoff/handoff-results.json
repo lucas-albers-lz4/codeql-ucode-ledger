@@ -1,0 +1,202 @@
+{
+  "cases": [
+    {
+      "accepted_results": [
+        {
+          "end_column": 132,
+          "end_line": 71,
+          "level": "warning",
+          "rule_id": "ucode/m4/direct-rpc-shell-word",
+          "start_column": 115,
+          "start_line": 71,
+          "uri": "usr/share/rpcd/ucode/luci.openvpn.uc"
+        }
+      ],
+      "accepted_sha256": "d7ba49f93ecbe00eb25ca0e9b90ee5b813b50bd335946a6b2e08038d035a72df",
+      "case": "parent",
+      "errors": 0,
+      "manifest_sha256": "d132b77153a8c24569c9b23d1d793f2e82e39ba914ade38c3a0d057344d82bfa",
+      "receipt_sha256": "4ee1ed5c4f299ea4244cf25516dec293c818de04f95bdd4402a7a862ab921965",
+      "resolved_rules": [
+        "ucode/m4/direct-rpc-shell-word",
+        "ucode/diagnostics/extraction-errors",
+        "ucode/diagnostics/successfully-extracted-files"
+      ],
+      "sarif_descriptors": [
+        "ucode/m4/direct-rpc-shell-word"
+      ],
+      "sarif_results": [
+        {
+          "end_column": 132,
+          "end_line": 71,
+          "level": "warning",
+          "rule_id": "ucode/m4/direct-rpc-shell-word",
+          "start_column": 115,
+          "start_line": 71,
+          "uri": "usr/share/rpcd/ucode/luci.openvpn.uc"
+        }
+      ],
+      "sarif_sha256": "9a52f514b1f993f304b256fe1c4231855a15ca042e20bf9930e03297224f015f",
+      "source_oracle_path": "real/openvpn-parent/luci.openvpn.uc",
+      "source_sha256": "051c8162f826683333e11264615806df5ab08415676c0bd098921cb1b05af991",
+      "staged_path": "stage/parent/usr/share/rpcd/ucode/luci.openvpn.uc",
+      "staged_sha256": "051c8162f826683333e11264615806df5ab08415676c0bd098921cb1b05af991",
+      "successful_paths": [
+        "usr/share/rpcd/ucode/luci.openvpn.uc"
+      ]
+    },
+    {
+      "accepted_results": [],
+      "accepted_sha256": "d7edbd0e3c7a81f393d6e7b2bc9c78a294f72cc587cf8846f95913e9ee2d7e21",
+      "case": "fixed",
+      "errors": 0,
+      "manifest_sha256": "e70298c13495b393d65b33a5bfd9590dadbc6d7ecc737d6c8f871fb0b958c5f9",
+      "receipt_sha256": "031a47b4971eefe0f126a4b21d7df0c7649c368b11e1e7f3ad92ea67cd7da3d1",
+      "resolved_rules": [
+        "ucode/m4/direct-rpc-shell-word",
+        "ucode/diagnostics/extraction-errors",
+        "ucode/diagnostics/successfully-extracted-files"
+      ],
+      "sarif_descriptors": [
+        "ucode/m4/direct-rpc-shell-word"
+      ],
+      "sarif_results": [],
+      "sarif_sha256": "50be4250998610cdafb93f809f76c0b77cc729cbe244c0c80397211a40f08eea",
+      "source_oracle_path": "real/openvpn-fixed/luci.openvpn.uc",
+      "source_sha256": "6593792678951fd500c2b090d17d9e500a05a642cfb996ee02c1649473152410",
+      "staged_path": "stage/fixed/usr/share/rpcd/ucode/luci.openvpn.uc",
+      "staged_sha256": "6593792678951fd500c2b090d17d9e500a05a642cfb996ee02c1649473152410",
+      "successful_paths": [
+        "usr/share/rpcd/ucode/luci.openvpn.uc"
+      ]
+    },
+    {
+      "accepted_results": [],
+      "accepted_sha256": "7e6b8023db9b0f4ea4001029639d8c690c68d590b36b531dcc5202a8c5493478",
+      "case": "swconfig",
+      "errors": 0,
+      "manifest_sha256": "1c835ed86a009b94f3e6d9d641265a7f7aa74aec26c063704a2dfd3c87ca5fff",
+      "receipt_sha256": "4a813c2fc7460f55eae4b60519b2a6823e4832fdeb4a86363bc6680befeecd68",
+      "resolved_rules": [
+        "ucode/m4/direct-rpc-shell-word",
+        "ucode/diagnostics/extraction-errors",
+        "ucode/diagnostics/successfully-extracted-files"
+      ],
+      "sarif_descriptors": [
+        "ucode/m4/direct-rpc-shell-word"
+      ],
+      "sarif_results": [],
+      "sarif_sha256": "1db6b8bbc0536ef988884110cb60a4b95d5f3e77403541c938662b8f1d309331",
+      "source_oracle_path": "real/luci-swconfig/luci",
+      "source_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+      "staged_path": "stage/swconfig/usr/share/rpcd/ucode/luci",
+      "staged_sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+      "successful_paths": [
+        "usr/share/rpcd/ucode/luci"
+      ]
+    }
+  ],
+  "consumer": {
+    "clean": true,
+    "commit": "a6f4956507e2cd2078ba7c3ac7270c2e0c343cd6",
+    "validator_contract": "checks source bytes, SARIF hash, producer identity equality, extraction inventory, errors, resolved suite IDs, descriptor IDs and exact expected-result multiset; documentation says it cannot authenticate arbitrary receipts",
+    "validator_sha256": "e2ec2b713c7597e486eb704e3e7e26d1167046c1b6a5b5935c27b433a47c74f6"
+  },
+  "pack": {
+    "build_revision": "8375887ed14825dd59addbfd0df43616d9e684fb",
+    "directory_digest_sha256": "42e5c2267849a4ef6429025f274e545594457f41be7f6fe5e588579956a2736e",
+    "extractor_binary_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+    "files": {
+      "codeql-extractor.yml": "350977db453446af1081fa844e0cbdefb9fc3de7bd51b14e57938063c83b42c4",
+      "downgrades/qlpack.yml": "52302981ad5f13e5344cbd3927037b3546939d7ce93b8b450c59a22cbaff15bf",
+      "tools/autobuild.cmd": "f93d73fcc4669fab57cfa3391f2f42e19028d2576503a93ca673f23322dd7272",
+      "tools/autobuild.sh": "190d821560f9be595a1ba0a10361d3071168f4e7e6db985478fe79ee8fc522d3",
+      "tools/export_setblock_detect.py": "a970c5c3350677ada8cfb5a342050f214e6e5eb5678313f01efd38115192ccd6",
+      "tools/index-files.cmd": "1867afda8666ae3871bc534ad1a80c117f68219dadf54e6df022ce17b29f004d",
+      "tools/index-files.sh": "1fc6de73c0ea285d944d0e9ab11beec34342808198a5716ce2d51e5c29fd995e",
+      "tools/osx64/extractor": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+      "tools/pre-finalize.cmd": "9142cc3503e20cc507536c6c132be55d98fdd6d2b7bb19e84d5eb651fb7b6903",
+      "tools/pre-finalize.sh": "0636921f55488cbf1934543fe8ea113ea240817d15a0cda56e6e16a00743c4b6",
+      "tools/qltest.cmd": "6c9e02e6ad51155bf7512d338f1643be7a7388fc417e52c8b71710ce47d749dd",
+      "tools/qltest.sh": "ffda5bdd6df90e343e431b801cee093d38aaece142d5c1a519b0b6f41d9e8924",
+      "ucode.dbscheme": "a32b8f63d4545439bc632b4afd0d58ad64aa2a634736bcd341fba68b7690ad2b",
+      "ucode.dbscheme.stats": "90d6939a021bb0cb71fd491117d1ecb4c7968fb5a80262ddc44975a75bd97767"
+    },
+    "grammar_diff_sha256": "d3cf51e807b842c1eecbe55982a7a91782a8b97e60c4fe08ffbf64d0fe05be2b",
+    "provenance_sha256": "4eb225c310d59afe4be994723f2ecc5822a1098d0538def69cafe2218d145dc6",
+    "source_grammar_commit": "4a243af329fae2f4ff01e0fc80133cbab8314600",
+    "source_grammar_dirty": "M Cargo.toml"
+  },
+  "producer_copy_reconciliation": {
+    "base_snapshot_commit": "29d8a6e9b352e0904065ec5572db4d845ff15919",
+    "git_diff_name_status_ql_src_lib": [
+      "M\tql/src/m4/DirectRpcShellWord.ql",
+      "A\tql/src/m4/TailscaleNestedShell.ql"
+    ],
+    "integrated_commit": "299731d8e22112cf88680b89ee08915ff531d273",
+    "relevant_executed_files_match_integrated_checkout": true
+  },
+  "resolved_suite": [
+    {
+      "case": "parent",
+      "resolved_queries": [
+        {
+          "file": "ExtractionErrors.ql",
+          "id": "ucode/diagnostics/extraction-errors",
+          "sha256": "91e228a2e644e7036aeb0f717e796e2c734de334e60db749b9c7f3a95138dff4"
+        },
+        {
+          "file": "SuccessfullyExtractedFiles.ql",
+          "id": "ucode/diagnostics/successfully-extracted-files",
+          "sha256": "0dd7a39eeab54c8edb0267a2985f39e9de1971aadfad73755b2245e163bc17b6"
+        },
+        {
+          "file": "DirectRpcShellWord.ql",
+          "id": "ucode/m4/direct-rpc-shell-word",
+          "sha256": "a071facd947a65d3eb48906070cf17ad53d2bd62b54116991437f77fef5e52d8"
+        }
+      ]
+    },
+    {
+      "case": "fixed",
+      "resolved_queries": [
+        {
+          "file": "ExtractionErrors.ql",
+          "id": "ucode/diagnostics/extraction-errors",
+          "sha256": "91e228a2e644e7036aeb0f717e796e2c734de334e60db749b9c7f3a95138dff4"
+        },
+        {
+          "file": "SuccessfullyExtractedFiles.ql",
+          "id": "ucode/diagnostics/successfully-extracted-files",
+          "sha256": "0dd7a39eeab54c8edb0267a2985f39e9de1971aadfad73755b2245e163bc17b6"
+        },
+        {
+          "file": "DirectRpcShellWord.ql",
+          "id": "ucode/m4/direct-rpc-shell-word",
+          "sha256": "a071facd947a65d3eb48906070cf17ad53d2bd62b54116991437f77fef5e52d8"
+        }
+      ]
+    },
+    {
+      "case": "swconfig",
+      "resolved_queries": [
+        {
+          "file": "ExtractionErrors.ql",
+          "id": "ucode/diagnostics/extraction-errors",
+          "sha256": "91e228a2e644e7036aeb0f717e796e2c734de334e60db749b9c7f3a95138dff4"
+        },
+        {
+          "file": "SuccessfullyExtractedFiles.ql",
+          "id": "ucode/diagnostics/successfully-extracted-files",
+          "sha256": "0dd7a39eeab54c8edb0267a2985f39e9de1971aadfad73755b2245e163bc17b6"
+        },
+        {
+          "file": "DirectRpcShellWord.ql",
+          "id": "ucode/m4/direct-rpc-shell-word",
+          "sha256": "a071facd947a65d3eb48906070cf17ad53d2bd62b54116991437f77fef5e52d8"
+        }
+      ]
+    }
+  ],
+  "source_first_oracle_sha256": "fcab0ad97ee83389e62ecaafb6491675f6605e4a7987c3d666f8ee8669e712ea"
+}

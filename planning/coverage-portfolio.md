@@ -94,6 +94,72 @@ and a computed-callee sibling remains unsupported on the selected fixtures.
 policy in a disposable producer checkout. The reviewed patch is local and has
 not been merged upstream; rendering and runtime semantics remain outside it.
 
+[075](../claims/075-historical-openvpn-baseline.md) measures the current
+testing-tagged shell candidate query against the upstream OpenVPN vulnerable
+parent and actual fix, with exact extraction, target AST witnesses and
+positive/near-miss controls. It records a bounded model gap, not detection of
+the historical issue or default-suite SARIF.
+[076](../claims/076-historical-tailscale-baseline.md) repeats that bounded
+baseline decision on the post-merge producer for the upstream Tailscale
+parent/fix, a direct model-positive control and three nested-shell controls.
+The real source/sink AST sites exist but the current candidate query emits no
+nested-path row; it does not recognize the fix or produce a scanning alert.
+[077](../claims/077-current-luci-openwrt-extraction.md) establishes exact
+source-staged extraction identities for a current LuCI `luci-base` and OpenWrt
+`utils/cli` slice: 21 selected files extracted once, zero errors, 20 plain
+routes and one markup-inconclusive route. It does not establish installed
+package bytes, full-repository selection or semantic security coverage.
+[078](../claims/078-openvpn-experimental-historical-rule.md) and
+[079](../claims/079-tailscale-experimental-historical-rule.md) record fresh
+explicit-query historical source/fix distinctions with exact extraction,
+controls and SARIF locations on separate experimental producer branches.
+Both remain testing-tagged outside the default suite. They demonstrate
+bounded syntax matching, not generic shell-injection detection or a fresh
+downstream consumer handoff.
+[080](../claims/080-final-direct-rpc-rule.md) records a separate, less
+source-specific direct returned-handler interpolation query at its final
+testing-tagged producer commit. The source-first OpenVPN parent/fix and pinned
+LuCI swconfig plus 21 controls had exact extraction and explicit-query/SARIF
+identities. A copied 21-file current-source query finished with zero rows;
+that empty result is not negative security proof or a fresh extraction.
+[081](../claims/081-current-luci-rpcd-direct-shell-slice.md) widens the
+source-staged LuCI rpcd inventory to 17 tracked plugin files across package
+owners. All selected files extracted once with zero errors and raw-mode
+routing; the local draft default suite emitted zero alerts. It does not
+establish installed bytes, a current rule positive or downstream acceptance.
+[082](../claims/082-local-direct-rpc-sarif-handoff.md) records a fresh local
+macOS draft-suite handoff to the actual disposable consumer parser: one
+OpenVPN parent SARIF warning and empty fix/swconfig cases were accepted after
+exact source staging, extraction and suite checks. It is not a versioned
+Linux release, installed-image mapping or incoming-change CI result.
+[083](../claims/083-named-helper-shell-word-experiment.md) records a separate
+testing-tagged named-helper argument-to-formal shell-word query. A fresh local
+21-file matrix extracted each staged file once, had zero errors and emitted
+only two planned synthetic positives; pinned LuCI `luci.lldpd` and the
+fixed-literal/scope controls had no rows. This is bounded syntax evidence,
+not a current-source alert, default-suite promotion or runtime finding.
+[084](../claims/084-current-luci-package-ucode-slice.md) adds four pinned
+LuCI files from package `ucode/` trees that are disjoint from the earlier
+21-file and rpcd-17 source sets. Their proposed install paths, `.uc` extension
+routes, exact successful extraction identities and zero errors were verified
+in a fresh run. Both the draft default suite and a separate testing query
+returned zero rows; without an eligible positive/near-miss pair, these are
+only bounded observations and do not establish security coverage.
+[085](../claims/085-pinned-luci-ucode-source-census.md) provides a pinned
+69-path Git-source candidate census with independently checked blob and byte
+identities. After exact overlap with earlier slices and claim 021 templates,
+24 install-shaped source candidates remain for a next routing/extraction batch:
+22 `.ut` markup templates and two Ucode-shebang scripts. The projected routes
+have not been run as one census, and installed bytes remain unknown.
+[086](../claims/086-current-luci-markup-shebang-route-slice.md) runs that
+disjoint 24-file source batch. Exact routing selected 22 markup-inconclusive
+templates and two plain shebang scripts; all 24 appeared once in successful
+extraction with zero errors. The successful-file diagnostic does not override
+`markup_not_modeled`, and the zero-result default suite is not a security
+negative. The initial local CSV validator failed on a filename typo and its
+corrected check is recorded separately.
+
+
 These paths overlap in the pinned LuCI fixture; they are not a representative
 sample of all OpenWrt software or ucode syntax. The inventory deliberately
 separates source extraction, model/query behavior, consumer handling and policy

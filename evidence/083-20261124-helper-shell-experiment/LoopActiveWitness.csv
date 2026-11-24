@@ -1,0 +1,4 @@
+"col0","col1","col2","role"
+"usr/share/rpcd/ucode/loop_helper_formal.uc",6,6,"popen"
+"usr/share/rpcd/ucode/loop_helper_shadow.uc",12,12,"helper-call"
+"usr/share/rpcd/ucode/loop_request_formal.uc",12,12,"helper-call"

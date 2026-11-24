@@ -1,0 +1,676 @@
+{
+  "purpose": "Source-first oracle for the exactly pinned next_feasible_larger_disjoint_batch; prepared before route/extraction outputs.",
+  "inventory_sha256": "ec86e2f2a7cd1e9ac97f3d54db48d90d62674e2e05abd4fa937ccdae829392e9",
+  "selection": "Remaining package-mapped candidates after exact source-path exclusion of claims 037, 041, 044 and the 11 real templates selected by claim 021; additionally excludes its two known extensionless symlink exclusions and two tracked test fixtures with no package install mapping.",
+  "selected_count": 24,
+  "expected_route_counts": {
+    "markup:ut_markup_extension": 22,
+    "plain:ucode_shebang": 2
+  },
+  "source": {
+    "repo": "https://github.com/openwrt/luci.git",
+    "ref": "openwrt-25.12",
+    "commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "dirty_state": "",
+    "checkout": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/prep/luci",
+    "files": [
+      {
+        "source_path": "applications/luci-app-bmx7/ucode/template/bmx7/bmxnodes.ut",
+        "git_mode": "100644",
+        "git_object": "032f1060d835459ba0c07ba41a13a4c8f2d2f20c",
+        "git_blob": "032f1060d835459ba0c07ba41a13a4c8f2d2f20c",
+        "source_sha256": "76a832d90e6e382189259320416d577ac6600e6a14d82e5f81edaaac7cffcf7a",
+        "source_bytes": 4765,
+        "stage_path_relative": "applications/luci-app-bmx7/ucode/template/bmx7/bmxnodes.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxnodes.ut",
+        "expected_stage_sha256": "76a832d90e6e382189259320416d577ac6600e6a14d82e5f81edaaac7cffcf7a",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxnodes.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/bmx7/bmxnodes.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 1,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "applications/luci-app-bmx7/ucode/template/bmx7/bmxstatus.ut",
+        "git_mode": "100644",
+        "git_object": "12a85187e4c335d1c06c11fa13cf7417748e5b40",
+        "git_blob": "12a85187e4c335d1c06c11fa13cf7417748e5b40",
+        "source_sha256": "13945589b4b0ee743dc7b97c3085bad87eb7ede2d6028aafb9cb9cd6df0e0430",
+        "source_bytes": 4039,
+        "stage_path_relative": "applications/luci-app-bmx7/ucode/template/bmx7/bmxstatus.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxstatus.ut",
+        "expected_stage_sha256": "13945589b4b0ee743dc7b97c3085bad87eb7ede2d6028aafb9cb9cd6df0e0430",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxstatus.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/bmx7/bmxstatus.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 1,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "applications/luci-app-bmx7/ucode/template/bmx7/bmxtopology.ut",
+        "git_mode": "100644",
+        "git_object": "8af2a885e0bea69d870b330e404b3b51d889935d",
+        "git_blob": "8af2a885e0bea69d870b330e404b3b51d889935d",
+        "source_sha256": "7a5991e80585c2e4ec73054bb0dcab67c81c42fb40c0801d6d0e19869f718363",
+        "source_bytes": 1306,
+        "stage_path_relative": "applications/luci-app-bmx7/ucode/template/bmx7/bmxtopology.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxtopology.ut",
+        "expected_stage_sha256": "7a5991e80585c2e4ec73054bb0dcab67c81c42fb40c0801d6d0e19869f718363",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxtopology.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/bmx7/bmxtopology.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 2,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "applications/luci-app-bmx7/ucode/template/bmx7/bmxtunnels.ut",
+        "git_mode": "100644",
+        "git_object": "81b9f5b73a26f27b92e3877e99b2b8b518fc38e9",
+        "git_blob": "81b9f5b73a26f27b92e3877e99b2b8b518fc38e9",
+        "source_sha256": "c811f8701453f02870652580d2de6577ed5f159c3e7de6f5b5d51f2aaa7de7e9",
+        "source_bytes": 2779,
+        "stage_path_relative": "applications/luci-app-bmx7/ucode/template/bmx7/bmxtunnels.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxtunnels.ut",
+        "expected_stage_sha256": "c811f8701453f02870652580d2de6577ed5f159c3e7de6f5b5d51f2aaa7de7e9",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/applications/luci-app-bmx7/ucode/template/bmx7/bmxtunnels.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/bmx7/bmxtunnels.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 1,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "applications/luci-app-commands/ucode/template/commands.ut",
+        "git_mode": "100644",
+        "git_object": "5191e4b953dbce2b90aacea32055d2a53a3926c1",
+        "git_blob": "5191e4b953dbce2b90aacea32055d2a53a3926c1",
+        "source_sha256": "67ab30c1252df2dc8b3bdfeb4b19a2544ffac296b9c9bf8f0aca8c922b165a77",
+        "source_bytes": 4631,
+        "stage_path_relative": "applications/luci-app-commands/ucode/template/commands.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/applications/luci-app-commands/ucode/template/commands.ut",
+        "expected_stage_sha256": "67ab30c1252df2dc8b3bdfeb4b19a2544ffac296b9c9bf8f0aca8c922b165a77",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/applications/luci-app-commands/ucode/template/commands.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/commands.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 0,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "applications/luci-app-commands/ucode/template/commands_public.ut",
+        "git_mode": "100644",
+        "git_object": "aef072f8026a3e89e78a8e1e499dad7a995404d6",
+        "git_blob": "aef072f8026a3e89e78a8e1e499dad7a995404d6",
+        "source_sha256": "ebe4ec5f703db4707b0239a121f5d227178b4c44ca3ae5789356ddfe55579ab3",
+        "source_bytes": 1184,
+        "stage_path_relative": "applications/luci-app-commands/ucode/template/commands_public.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/applications/luci-app-commands/ucode/template/commands_public.ut",
+        "expected_stage_sha256": "ebe4ec5f703db4707b0239a121f5d227178b4c44ca3ae5789356ddfe55579ab3",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/applications/luci-app-commands/ucode/template/commands_public.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/commands_public.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 0,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "applications/luci-app-statistics/root/usr/libexec/stat-genconfig",
+        "git_mode": "100755",
+        "git_object": "68c9b09e889356ce3e678f2789f608e270208d1e",
+        "git_blob": "68c9b09e889356ce3e678f2789f608e270208d1e",
+        "source_sha256": "5c45628d2a6a4c9414a93e26cff9c1c5d35ea4c0160f86575ee6c2f3f92c629b",
+        "source_bytes": 6895,
+        "stage_path_relative": "applications/luci-app-statistics/root/usr/libexec/stat-genconfig",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/applications/luci-app-statistics/root/usr/libexec/stat-genconfig",
+        "expected_stage_sha256": "5c45628d2a6a4c9414a93e26cff9c1c5d35ea4c0160f86575ee6c2f3f92c629b",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/applications/luci-app-statistics/root/usr/libexec/stat-genconfig",
+        "proposed_installed_path": "usr/libexec/stat-genconfig",
+        "route": {
+          "classification": "plain",
+          "reason": "ucode_shebang",
+          "status": "plain_route_selected",
+          "inconclusive_reason": null
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 0,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "applications/luci-app-wifihistory/root/usr/sbin/wifihistory",
+        "git_mode": "100755",
+        "git_object": "c0cfcd2a6fdddba2a5b52cd798a979b851489b08",
+        "git_blob": "c0cfcd2a6fdddba2a5b52cd798a979b851489b08",
+        "source_sha256": "e58a3d2bace9aa188ec4c0a0272fa462f88138e0639587326ab72a99f1c45200",
+        "source_bytes": 2398,
+        "stage_path_relative": "applications/luci-app-wifihistory/root/usr/sbin/wifihistory",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/applications/luci-app-wifihistory/root/usr/sbin/wifihistory",
+        "expected_stage_sha256": "e58a3d2bace9aa188ec4c0a0272fa462f88138e0639587326ab72a99f1c45200",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/applications/luci-app-wifihistory/root/usr/sbin/wifihistory",
+        "proposed_installed_path": "usr/sbin/wifihistory",
+        "route": {
+          "classification": "plain",
+          "reason": "ucode_shebang",
+          "status": "plain_route_selected",
+          "inconclusive_reason": null
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 0,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/footer.ut",
+        "git_mode": "100644",
+        "git_object": "6ae667d6163ff424c12f09911c20438ade88eb4d",
+        "git_blob": "6ae667d6163ff424c12f09911c20438ade88eb4d",
+        "source_sha256": "782321244ddba4219764db707b6906c7be7f04a12510330da023c9bb0f248d4d",
+        "source_bytes": 1480,
+        "stage_path_relative": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/footer.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/footer.ut",
+        "expected_stage_sha256": "782321244ddba4219764db707b6906c7be7f04a12510330da023c9bb0f248d4d",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/footer.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/themes/footstrap/footer.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 0,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/header.ut",
+        "git_mode": "100644",
+        "git_object": "ed60435eeb98c71c192ffe98b638765a87934445",
+        "git_blob": "ed60435eeb98c71c192ffe98b638765a87934445",
+        "source_sha256": "7653f8353e5bb1062b3f5a901e6b2488af5ed59b530f3c5721169f0e8fa32977",
+        "source_bytes": 11191,
+        "stage_path_relative": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/header.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/header.ut",
+        "expected_stage_sha256": "7653f8353e5bb1062b3f5a901e6b2488af5ed59b530f3c5721169f0e8fa32977",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/header.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/themes/footstrap/header.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 0,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/brand.ut",
+        "git_mode": "100644",
+        "git_object": "835a2cebdd8378c8f716f690e9150ca0e8e5118e",
+        "git_blob": "835a2cebdd8378c8f716f690e9150ca0e8e5118e",
+        "source_sha256": "97213de5baf09a12d65fd65dfa6df2f65ac619a23df9e7b2a83f124e39413387",
+        "source_bytes": 1096,
+        "stage_path_relative": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/brand.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/brand.ut",
+        "expected_stage_sha256": "97213de5baf09a12d65fd65dfa6df2f65ac619a23df9e7b2a83f124e39413387",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/brand.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/brand.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 0,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/head.ut",
+        "git_mode": "100644",
+        "git_object": "2a6d01c5f6c07ffd7ec61f5a03d972d276f28823",
+        "git_blob": "2a6d01c5f6c07ffd7ec61f5a03d972d276f28823",
+        "source_sha256": "0ead14d53ec238ced1ddeaa6e0d09f7403475d0e5b4a87ffc294c9ba8bff360d",
+        "source_bytes": 28951,
+        "stage_path_relative": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/head.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/head.ut",
+        "expected_stage_sha256": "0ead14d53ec238ced1ddeaa6e0d09f7403475d0e5b4a87ffc294c9ba8bff360d",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/head.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/head.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 0,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/icon.ut",
+        "git_mode": "100644",
+        "git_object": "20288acac0a70469ccfa3a8486320241bc0d4616",
+        "git_blob": "20288acac0a70469ccfa3a8486320241bc0d4616",
+        "source_sha256": "c9d806d43871227ed6164a1c55aaf8d4c48627cb2a8ef427da122ddc6a3e1735",
+        "source_bytes": 925,
+        "stage_path_relative": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/icon.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/icon.ut",
+        "expected_stage_sha256": "c9d806d43871227ed6164a1c55aaf8d4c48627cb2a8ef427da122ddc6a3e1735",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/icon.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/icon.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 0,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/logout.ut",
+        "git_mode": "100644",
+        "git_object": "4477f31c6858dfe87210742c33a894ae96818107",
+        "git_blob": "4477f31c6858dfe87210742c33a894ae96818107",
+        "source_sha256": "01cbe49c9098a749fa92e5d2332614344967c80d5c7d0912495aeb65f772fe9a",
+        "source_bytes": 938,
+        "stage_path_relative": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/logout.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/logout.ut",
+        "expected_stage_sha256": "01cbe49c9098a749fa92e5d2332614344967c80d5c7d0912495aeb65f772fe9a",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/logout.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/logout.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 0,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/notice.ut",
+        "git_mode": "100644",
+        "git_object": "349ad31b0700a829ead6841c050f4e33278b3c48",
+        "git_blob": "349ad31b0700a829ead6841c050f4e33278b3c48",
+        "source_sha256": "23b7c066ae794476ecfd0f63898d89b82908cc8096eaa149eb824bbd70a26e5d",
+        "source_bytes": 897,
+        "stage_path_relative": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/notice.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/notice.ut",
+        "expected_stage_sha256": "23b7c066ae794476ecfd0f63898d89b82908cc8096eaa149eb824bbd70a26e5d",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/notice.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/notice.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 0,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/notices.ut",
+        "git_mode": "100644",
+        "git_object": "e643c7c4cf58cdd7c211aa644e133c4a0c99e4c3",
+        "git_blob": "e643c7c4cf58cdd7c211aa644e133c4a0c99e4c3",
+        "source_sha256": "6ada593c435f0064da58974668ec3e0688843ac657171397686f5c58f52505f5",
+        "source_bytes": 1518,
+        "stage_path_relative": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/notices.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/notices.ut",
+        "expected_stage_sha256": "6ada593c435f0064da58974668ec3e0688843ac657171397686f5c58f52505f5",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/notices.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/notices.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 0,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/search.ut",
+        "git_mode": "100644",
+        "git_object": "dda1fd168b197d81a69f8743196bb5a2ffd3c7ef",
+        "git_blob": "dda1fd168b197d81a69f8743196bb5a2ffd3c7ef",
+        "source_sha256": "785656c054b02cd8539ad805860cf498c939a404884a582519edefe48109d956",
+        "source_bytes": 1100,
+        "stage_path_relative": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/search.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/search.ut",
+        "expected_stage_sha256": "785656c054b02cd8539ad805860cf498c939a404884a582519edefe48109d956",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/partials/search.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/themes/footstrap/partials/search.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 0,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/sysauth.ut",
+        "git_mode": "100644",
+        "git_object": "5100ecc2d1d50c696846062ab004ff592b78da8d",
+        "git_blob": "5100ecc2d1d50c696846062ab004ff592b78da8d",
+        "source_sha256": "2428e3762f029bbe64b34d2416edf6ddf1228671c04907ec9f7d85643c0c5345",
+        "source_bytes": 10778,
+        "stage_path_relative": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/sysauth.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/sysauth.ut",
+        "expected_stage_sha256": "2428e3762f029bbe64b34d2416edf6ddf1228671c04907ec9f7d85643c0c5345",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-footstrap/ucode/template/themes/footstrap/sysauth.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/themes/footstrap/sysauth.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 0,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "themes/luci-theme-material/ucode/template/themes/material/footer.ut",
+        "git_mode": "100644",
+        "git_object": "8b3c7f728b01f1bc3b02f6cfec5e6f5aa65e1cea",
+        "git_blob": "8b3c7f728b01f1bc3b02f6cfec5e6f5aa65e1cea",
+        "source_sha256": "11645e45340e970b78039dcd242b0381d7e34c3604f4a1e4db9201621952ef2b",
+        "source_bytes": 900,
+        "stage_path_relative": "themes/luci-theme-material/ucode/template/themes/material/footer.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-material/ucode/template/themes/material/footer.ut",
+        "expected_stage_sha256": "11645e45340e970b78039dcd242b0381d7e34c3604f4a1e4db9201621952ef2b",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-material/ucode/template/themes/material/footer.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/themes/material/footer.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 0,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "themes/luci-theme-material/ucode/template/themes/material/header.ut",
+        "git_mode": "100644",
+        "git_object": "1aeca61f39970ad0210a0b261c55dcab7b4992ae",
+        "git_blob": "1aeca61f39970ad0210a0b261c55dcab7b4992ae",
+        "source_sha256": "1650823a3ee8218525b7de4a01fe28eb1e4b34d8b7691c78f8de49c806a7babe",
+        "source_bytes": 3863,
+        "stage_path_relative": "themes/luci-theme-material/ucode/template/themes/material/header.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-material/ucode/template/themes/material/header.ut",
+        "expected_stage_sha256": "1650823a3ee8218525b7de4a01fe28eb1e4b34d8b7691c78f8de49c806a7babe",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-material/ucode/template/themes/material/header.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/themes/material/header.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 2,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/footer.ut",
+        "git_mode": "100644",
+        "git_object": "6d165f15021f82b649e667ce27f84316b038767f",
+        "git_blob": "6d165f15021f82b649e667ce27f84316b038767f",
+        "source_sha256": "9a9bcb8168db705f5d1816943b58cbfdacb2bae2dbb46fe2bf66bffad5429316",
+        "source_bytes": 272,
+        "stage_path_relative": "themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/footer.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/footer.ut",
+        "expected_stage_sha256": "9a9bcb8168db705f5d1816943b58cbfdacb2bae2dbb46fe2bf66bffad5429316",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/footer.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/themes/openwrt2020/footer.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 0,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/header.ut",
+        "git_mode": "100644",
+        "git_object": "17734e487e6b3527d55794ff05d9161f71e72d7c",
+        "git_blob": "17734e487e6b3527d55794ff05d9161f71e72d7c",
+        "source_sha256": "61c541f0bcac66a60d132975f78d7368a683753e72e2b430607d2e804f938a5e",
+        "source_bytes": 2844,
+        "stage_path_relative": "themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/header.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/header.ut",
+        "expected_stage_sha256": "61c541f0bcac66a60d132975f78d7368a683753e72e2b430607d2e804f938a5e",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/header.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/themes/openwrt2020/header.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 2,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/footer.ut",
+        "git_mode": "100644",
+        "git_object": "12249ed75e50cc93c6581146bcce001086ae7ca1",
+        "git_blob": "12249ed75e50cc93c6581146bcce001086ae7ca1",
+        "source_sha256": "26a157017e3d7afe52486760b737e590e98ac3faf52659a4b413d68e1c4c37a7",
+        "source_bytes": 349,
+        "stage_path_relative": "themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/footer.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/footer.ut",
+        "expected_stage_sha256": "26a157017e3d7afe52486760b737e590e98ac3faf52659a4b413d68e1c4c37a7",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/footer.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/themes/openwrt.org/footer.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 0,
+          "installed_bytes_verified": false
+        }
+      },
+      {
+        "source_path": "themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/header.ut",
+        "git_mode": "100644",
+        "git_object": "8cc6cc02553d4879e0f966b3f33350f2d35700de",
+        "git_blob": "8cc6cc02553d4879e0f966b3f33350f2d35700de",
+        "source_sha256": "e637d00a1ad5efc15d2f54a0e296775edf1175a4c49f73521b2dd86cb05f8844",
+        "source_bytes": 3230,
+        "stage_path_relative": "themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/header.ut",
+        "expected_stage_path": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/header.ut",
+        "expected_stage_sha256": "e637d00a1ad5efc15d2f54a0e296775edf1175a4c49f73521b2dd86cb05f8844",
+        "expected_extraction_identity": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/luci-24-route-extraction-20261124/run-a/stage/themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/header.ut",
+        "proposed_installed_path": "usr/share/ucode/luci/template/themes/openwrt.org/header.ut",
+        "route": {
+          "classification": "markup",
+          "reason": "ut_markup_extension",
+          "status": "inconclusive",
+          "inconclusive_reason": "markup_not_modeled"
+        },
+        "luci_mk_source_transform_review": {
+          "transform": "SubstituteVersion scans ucode/*.ut under /usr/share/ucode/luci and root/* is copied under /; raw Git source staged; no package build/version context supplied",
+          "pkg_version_template_matches": 0,
+          "media_resource_version_matches": 2,
+          "installed_bytes_verified": false
+        }
+      }
+    ],
+    "prior_selection_overlap": {
+      "021": [],
+      "037": [],
+      "041": [],
+      "044": []
+    },
+    "prior_union_count": 53,
+    "prior_union_unique_count": 52,
+    "disjoint_from_prior_021_037_041_044": true,
+    "luci_mk_transform_note": "Build/Prepare copies ucode/ and root/; Install copies ucode/ to /usr/share/ucode/luci then applies SubstituteVersion to .ut files, and copies root/ to / without SubstituteVersion. Only pinned source bytes are staged here.",
+    "luci_mk_sha256": "9716c9a7a1c276b867df5887558e2b63b78f7d3695915adb7fcd0a7f0182ed0d"
+  },
+  "consumer": {
+    "checkout_commit": "48c6a65b7578234644c6b06780fc82ccf6d61a8b",
+    "dirty_state": "",
+    "corpus_lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "luci_pin": "b2e0be4b46ec0fd43394c081fa7c50657af14011"
+  },
+  "producer": {
+    "checkout_commit": "977331713b4b8b5574813bee0884245bf6db2752",
+    "dirty_state": "",
+    "extractor_policy_path": "extractor/src/extractor.rs",
+    "extractor_policy_sha256": "bc54d2fc6e4dfba095977053d92275c3474bb01ff7e6da7c5301002bde701a11",
+    "Cargo.lock_sha256": "20678c3cbb29632a9369bdb3c735af9ee63c9443879db38847fbda9813aa0a77",
+    "Cargo.toml_sha256": "0baa09c629ef475eb31ec99a5342b222bd8993bdd0b53c539dbe4b92112f71ef",
+    "ql_src_lock_sha256": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+    "ql_lib_lock_sha256": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+    "build_input_diff_from_pack_source_commit_78590f2_to_9773317": {
+      "Cargo.lock": "unchanged",
+      "Cargo.toml": "unchanged",
+      "codeql-extractor.yml": "unchanged",
+      "downgrades": "unchanged",
+      "tools": "unchanged",
+      "extractor": "unchanged"
+    }
+  },
+  "tool": {
+    "path": "/Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql/codeql",
+    "version": "CodeQL command-line toolchain release 2.27.4.\nCopyright (C) 2019-2026 GitHub, Inc.\nUnpacked in: /Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql\n   Analysis results depend critically on separately distributed query and\n   extractor modules. To list modules that are visible to the toolchain,\n   use 'codeql resolve packs' and 'codeql resolve languages'.",
+    "sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d"
+  },
+  "reused_pack": {
+    "source": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/stage6-next-install-shaped/run-g/pack",
+    "tree_sha256": "891c6c3d4eae1accaf0c502775ef0077a81d542eac39c17241bdd769dde37674",
+    "binary_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+    "build_source_commit": "78590f24ab20a69eb1ac70258a00165f453d305d",
+    "compatibility_basis": "pack-relevant source inputs unchanged to producer 9773317; Cargo/QL lock digests checked against producer 9773317; CodeQL toolchain is 2.27.4; pack and dependencies copied into run-owned paths."
+  },
+  "reused_dependency_cache": {
+    "source": "/Users/lalbers/gitroot/ucode/codeql-ucode-ledger/work/stage6-next-install-shaped/run-g/cache/common",
+    "tree_sha256": "21f615fc2136c12840b679e2744fdc1431b8fa36cb7d3edeab3587a2353ed5ea",
+    "readiness_basis": "exact cache tree digest previously consumed by 9773317 under CodeQL 2.27.4; copy will be run-owned."
+  },
+  "limits": [
+    "The expected extraction identity is the absolute staged source path; proposed installed paths are routing projections.",
+    "No configured package build or installed-byte inspection was performed.",
+    "Markup is expected to be routed as inconclusive markup_not_modeled; this is not a semantic coverage or security assertion."
+  ]
+}

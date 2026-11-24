@@ -1,0 +1,69 @@
+{
+  "raw_sha256": "219a53a317bd93a345914c9076aa61866c6ccbdf8228ae2b65413bbc7eadfe81",
+  "row_count": 21,
+  "rows": [
+    {
+      "path": "stage/usr/sbin/cli"
+    },
+    {
+      "path": "stage/usr/share/rpcd/ucode/luci"
+    },
+    {
+      "path": "stage/usr/share/ucode/cli/cache.uc"
+    },
+    {
+      "path": "stage/usr/share/ucode/cli/color.uc"
+    },
+    {
+      "path": "stage/usr/share/ucode/cli/context-call.uc"
+    },
+    {
+      "path": "stage/usr/share/ucode/cli/context.uc"
+    },
+    {
+      "path": "stage/usr/share/ucode/cli/datamodel.uc"
+    },
+    {
+      "path": "stage/usr/share/ucode/cli/modules/network.uc"
+    },
+    {
+      "path": "stage/usr/share/ucode/cli/modules/service.uc"
+    },
+    {
+      "path": "stage/usr/share/ucode/cli/object-editor.uc"
+    },
+    {
+      "path": "stage/usr/share/ucode/cli/types.uc"
+    },
+    {
+      "path": "stage/usr/share/ucode/cli/utils.uc"
+    },
+    {
+      "path": "stage/usr/share/ucode/luci/controller/admin/index.uc"
+    },
+    {
+      "path": "stage/usr/share/ucode/luci/controller/admin/uci.uc"
+    },
+    {
+      "path": "stage/usr/share/ucode/luci/dispatcher.uc"
+    },
+    {
+      "path": "stage/usr/share/ucode/luci/http.uc"
+    },
+    {
+      "path": "stage/usr/share/ucode/luci/runtime.uc"
+    },
+    {
+      "path": "stage/usr/share/ucode/luci/sys.uc"
+    },
+    {
+      "path": "stage/usr/share/ucode/luci/uhttpd.uc"
+    },
+    {
+      "path": "stage/usr/share/ucode/luci/zoneinfo.uc"
+    },
+    {
+      "path": "stage/www/cgi-bin/luci"
+    }
+  ]
+}

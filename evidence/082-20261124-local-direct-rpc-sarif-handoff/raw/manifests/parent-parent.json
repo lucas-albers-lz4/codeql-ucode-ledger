@@ -1,0 +1,37 @@
+{
+  "schema": "ucode-sarif-acceptance-v1",
+  "producer": {
+    "sha": "299731d8e22112cf88680b89ee08915ff531d273",
+    "pack_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+    "codeql_version": "2.27.4",
+    "suite_sha256": "6d343f93e37c309b8461da9fafcf67d089737980d7ac42a5409e75df3bd442e5"
+  },
+  "sources": [
+    {
+      "uri": "usr/share/rpcd/ucode/luci.openvpn.uc",
+      "sha256": "051c8162f826683333e11264615806df5ab08415676c0bd098921cb1b05af991"
+    }
+  ],
+  "expected_extracted": [
+    "usr/share/rpcd/ucode/luci.openvpn.uc"
+  ],
+  "expected_rules": [
+    "ucode/m4/direct-rpc-shell-word",
+    "ucode/diagnostics/extraction-errors",
+    "ucode/diagnostics/successfully-extracted-files"
+  ],
+  "expected_sarif_descriptors": [
+    "ucode/m4/direct-rpc-shell-word"
+  ],
+  "expected_results": [
+    {
+      "rule_id": "ucode/m4/direct-rpc-shell-word",
+      "uri": "usr/share/rpcd/ucode/luci.openvpn.uc",
+      "start_line": 71,
+      "start_column": 115,
+      "end_line": 71,
+      "end_column": 132,
+      "level": "warning"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# Claim 043 portable evidence
+
+The normalized run receipt replaces local absolute roots with `$RUN`, `$PRODUCER`, `$LEDGER`, and `$CODEQL`; it retains exact relative file identities, source hashes, command arguments/status/timing/RSS, and result multiplicity. Raw outputs and database remain under ignored `work/helper-shell-run-d/`; the receipt hashes selected raw outputs. The source-first oracle was prepared before CodeQL output. Its two original fixtures and the additional committed controls are referenced by hashes; the disposable producer commit is local and not published. The witness CSVs are copies of run-local BQRS decodes. This evidence establishes only the bounded experimental query matrix.

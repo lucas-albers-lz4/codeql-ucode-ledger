@@ -1,0 +1,332 @@
+{
+  "status": "fresh isolated local experimental query run; not default suite or consumer handoff",
+  "run_id": "helper-shell-run-d",
+  "source_oracle_sha256": "f269580b4cc3e17c37b5e9fe07836041173c3270c15a9982fd6a211f490556f9",
+  "source_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+  "source_dirty": [],
+  "producer_base_at_preflight": "b0e18ec39b99be3ae13e74d1171035140c27dcfd",
+  "producer_dirty_at_preflight": [
+    " M ql/src/m4/NamedHelperShellWord.ql",
+    " M ql/test/named-helper-shell-word/README.md",
+    " M ql/test/named-helper-shell-word/loop_helper_formal.uc",
+    " M ql/test/named-helper-shell-word/loop_helper_shadow.uc",
+    " M ql/test/named-helper-shell-word/loop_request_formal.uc",
+    "?? ql/test/named-helper-shell-word/nested_helper_block.uc",
+    "?? ql/test/named-helper-shell-word/nested_return_block.uc",
+    "?? ql/test/named-helper-shell-word/nested_table_block.uc"
+  ],
+  "producer_final_commit": "3111982595ab5cc873d95db09bb0ae71057d63e8",
+  "query_sha256": "43143b692f848bcb490a9bf3333adeb0073285fd057152c893deaac9f822593e",
+  "tool_version": "CodeQL command-line toolchain release 2.27.4.",
+  "extractor_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+  "pack_build_revision": "8375887ed14825dd59addbfd0df43616d9e684fb",
+  "source_hashes": {
+    "luci.lldpd": "a9d6e6477307408a130ce20ad9f92813dfeca611e5c8a5a7a86f2ca746081eac",
+    "augmented_helper_write.uc": "c6423fd26dc31360647025012c2497ba4e5c8d40c93d7daa3eea64c6bb1a3857",
+    "catch_helper_shadow.uc": "a89e9d20de43626541e833076f413444813735844f65831c02d5b5f9bab1bc93",
+    "duplicate_helper.uc": "08f63a819e71b5db4b456b0d931ccac569820193a531ae6572ab4b8fbc6a2547",
+    "earlier_substitution.uc": "baea9d0eea70a5113c3c420c857f2e8beafd5514b9c3e7f837e7bb945a8d09f5",
+    "helper-dynamic-positive.uc": "5e6b341f2574865a22441867928600c693f967731c6ecb9611f0ebb7825f12f9",
+    "helper-fixed-literal-nearmiss.uc": "5f61dbc3264c1bb4bfbb7e737e5fb2190f9f3f87d49bd74e9f5d8a1ca40598f0",
+    "helper_actual_shadow.uc": "4373838a1ae9bbf21603be0c123496bd59943a39128683b3b953112ae79ee625",
+    "helper_shadow.uc": "7614ea5fb285697a785c59e14df243cf7cafabe543b4502d63eff3ebec8f63f7",
+    "loop_helper_formal.uc": "166db10d2534bd173a13eb5436cfeabc7528d84af01f78849e09aab9c09fdf5b",
+    "loop_helper_shadow.uc": "e712edf5a7f3c10b07477295b2dadf040c8fb48bcf59242aa593968bd472bd58",
+    "loop_request_formal.uc": "67754e4285c3e6fadee7bb5743a49b7ee12544a597643e2d4cba272312eade5f",
+    "nested_helper_block.uc": "8ceb6348e57b655eb97e0aa305e08b402c5f982804b14c927760374f20f9a85a",
+    "nested_return_block.uc": "6a72a5205c6a870cf1bf6692744a4cb3e48645b4d4b510768a722bb61870961c",
+    "nested_table_block.uc": "79abbf439fcef09b8a395445f9b065d0eafbc55aca63cbc8527a7be24efc95ad",
+    "quoted_word.uc": "80e43878be257dd953d86b9ad1e26739f674541a62a334495c51366bca6c0795",
+    "reassigned_formal.uc": "f0b2a28691e79a578e4292a1cb4b8bcf464cd90a22ce67bfaeef5ffed93d9f46",
+    "sink_shadow.uc": "3f49384f7824ff7810477df1dc8ea9532bc0b990d914cdb4b6d2eb90310d5c03",
+    "trailing_word_positive.uc": "c989a45cc470b0b84e5ccb6fa38cb2e34647e3b71b1de41f333d10b8d77b6015",
+    "updated_helper_write.uc": "41e115cd47362b66da54f7380f7768e360fd0d65b128a7159c680897ff2d8001",
+    "word_fragment.uc": "d8838d69a9890ca517af8a3189360741ce1ddfc232884f8b9266c48d5145544e"
+  },
+  "source_hashes_after": {
+    "luci.lldpd": "a9d6e6477307408a130ce20ad9f92813dfeca611e5c8a5a7a86f2ca746081eac",
+    "augmented_helper_write.uc": "c6423fd26dc31360647025012c2497ba4e5c8d40c93d7daa3eea64c6bb1a3857",
+    "catch_helper_shadow.uc": "a89e9d20de43626541e833076f413444813735844f65831c02d5b5f9bab1bc93",
+    "duplicate_helper.uc": "08f63a819e71b5db4b456b0d931ccac569820193a531ae6572ab4b8fbc6a2547",
+    "earlier_substitution.uc": "baea9d0eea70a5113c3c420c857f2e8beafd5514b9c3e7f837e7bb945a8d09f5",
+    "helper-dynamic-positive.uc": "5e6b341f2574865a22441867928600c693f967731c6ecb9611f0ebb7825f12f9",
+    "helper-fixed-literal-nearmiss.uc": "5f61dbc3264c1bb4bfbb7e737e5fb2190f9f3f87d49bd74e9f5d8a1ca40598f0",
+    "helper_actual_shadow.uc": "4373838a1ae9bbf21603be0c123496bd59943a39128683b3b953112ae79ee625",
+    "helper_shadow.uc": "7614ea5fb285697a785c59e14df243cf7cafabe543b4502d63eff3ebec8f63f7",
+    "loop_helper_formal.uc": "166db10d2534bd173a13eb5436cfeabc7528d84af01f78849e09aab9c09fdf5b",
+    "loop_helper_shadow.uc": "e712edf5a7f3c10b07477295b2dadf040c8fb48bcf59242aa593968bd472bd58",
+    "loop_request_formal.uc": "67754e4285c3e6fadee7bb5743a49b7ee12544a597643e2d4cba272312eade5f",
+    "nested_helper_block.uc": "8ceb6348e57b655eb97e0aa305e08b402c5f982804b14c927760374f20f9a85a",
+    "nested_return_block.uc": "6a72a5205c6a870cf1bf6692744a4cb3e48645b4d4b510768a722bb61870961c",
+    "nested_table_block.uc": "79abbf439fcef09b8a395445f9b065d0eafbc55aca63cbc8527a7be24efc95ad",
+    "quoted_word.uc": "80e43878be257dd953d86b9ad1e26739f674541a62a334495c51366bca6c0795",
+    "reassigned_formal.uc": "f0b2a28691e79a578e4292a1cb4b8bcf464cd90a22ce67bfaeef5ffed93d9f46",
+    "sink_shadow.uc": "3f49384f7824ff7810477df1dc8ea9532bc0b990d914cdb4b6d2eb90310d5c03",
+    "trailing_word_positive.uc": "c989a45cc470b0b84e5ccb6fa38cb2e34647e3b71b1de41f333d10b8d77b6015",
+    "updated_helper_write.uc": "41e115cd47362b66da54f7380f7768e360fd0d65b128a7159c680897ff2d8001",
+    "word_fragment.uc": "d8838d69a9890ca517af8a3189360741ce1ddfc232884f8b9266c48d5145544e"
+  },
+  "expected_result_counts": {
+    "luci.lldpd": 0,
+    "helper-dynamic-positive.uc": 1,
+    "trailing_word_positive.uc": 1,
+    "augmented_helper_write.uc": 0,
+    "catch_helper_shadow.uc": 0,
+    "duplicate_helper.uc": 0,
+    "earlier_substitution.uc": 0,
+    "helper-fixed-literal-nearmiss.uc": 0,
+    "helper_actual_shadow.uc": 0,
+    "helper_shadow.uc": 0,
+    "loop_helper_formal.uc": 0,
+    "loop_helper_shadow.uc": 0,
+    "loop_request_formal.uc": 0,
+    "nested_helper_block.uc": 0,
+    "nested_return_block.uc": 0,
+    "nested_table_block.uc": 0,
+    "quoted_word.uc": 0,
+    "reassigned_formal.uc": 0,
+    "sink_shadow.uc": 0,
+    "updated_helper_write.uc": 0,
+    "word_fragment.uc": 0
+  },
+  "successful_file_multiset": {
+    "usr/share/rpcd/ucode/augmented_helper_write.uc": 1,
+    "usr/share/rpcd/ucode/catch_helper_shadow.uc": 1,
+    "usr/share/rpcd/ucode/duplicate_helper.uc": 1,
+    "usr/share/rpcd/ucode/earlier_substitution.uc": 1,
+    "usr/share/rpcd/ucode/helper-dynamic-positive.uc": 1,
+    "usr/share/rpcd/ucode/helper-fixed-literal-nearmiss.uc": 1,
+    "usr/share/rpcd/ucode/helper_actual_shadow.uc": 1,
+    "usr/share/rpcd/ucode/helper_shadow.uc": 1,
+    "usr/share/rpcd/ucode/loop_helper_formal.uc": 1,
+    "usr/share/rpcd/ucode/loop_helper_shadow.uc": 1,
+    "usr/share/rpcd/ucode/loop_request_formal.uc": 1,
+    "usr/share/rpcd/ucode/luci.lldpd": 1,
+    "usr/share/rpcd/ucode/nested_helper_block.uc": 1,
+    "usr/share/rpcd/ucode/nested_return_block.uc": 1,
+    "usr/share/rpcd/ucode/nested_table_block.uc": 1,
+    "usr/share/rpcd/ucode/quoted_word.uc": 1,
+    "usr/share/rpcd/ucode/reassigned_formal.uc": 1,
+    "usr/share/rpcd/ucode/sink_shadow.uc": 1,
+    "usr/share/rpcd/ucode/trailing_word_positive.uc": 1,
+    "usr/share/rpcd/ucode/updated_helper_write.uc": 1,
+    "usr/share/rpcd/ucode/word_fragment.uc": 1
+  },
+  "extraction_errors": [],
+  "result_counts": {
+    "helper-dynamic-positive.uc": 1,
+    "trailing_word_positive.uc": 1
+  },
+  "sarif_results": [
+    {
+      "ruleId": "ucode/m4/named-helper-shell-word",
+      "location": {
+        "artifactLocation": {
+          "uri": "usr/share/rpcd/ucode/helper-dynamic-positive.uc",
+          "uriBaseId": "%SRCROOT%",
+          "index": 0
+        },
+        "region": {
+          "startLine": 12,
+          "startColumn": 23,
+          "endColumn": 43
+        }
+      }
+    },
+    {
+      "ruleId": "ucode/m4/named-helper-shell-word",
+      "location": {
+        "artifactLocation": {
+          "uri": "usr/share/rpcd/ucode/trailing_word_positive.uc",
+          "uriBaseId": "%SRCROOT%",
+          "index": 1
+        },
+        "region": {
+          "startLine": 12,
+          "startColumn": 23,
+          "endColumn": 43
+        }
+      }
+    }
+  ],
+  "commands": [
+    {
+      "label": "init",
+      "argv": [
+        "$CODEQL",
+        "database",
+        "init",
+        "$RUN/db",
+        "--language=ucode",
+        "--search-path=$RUN/producer/extractor-pack",
+        "--common-caches=$RUN/cache/common",
+        "--source-root=$RUN/stage"
+      ],
+      "exit": 0,
+      "seconds": 0.453,
+      "peak_rss_bytes": 122535936
+    },
+    {
+      "label": "index",
+      "argv": [
+        "$CODEQL",
+        "database",
+        "index-files",
+        "$RUN/db",
+        "--language=ucode",
+        "--include=**/*",
+        "--working-dir=$RUN/stage",
+        "--common-caches=$RUN/cache/common"
+      ],
+      "exit": 0,
+      "seconds": 0.784,
+      "peak_rss_bytes": 119980032
+    },
+    {
+      "label": "finalize",
+      "argv": [
+        "$CODEQL",
+        "database",
+        "finalize",
+        "$RUN/db",
+        "--common-caches=$RUN/cache/common"
+      ],
+      "exit": 0,
+      "seconds": 1.12,
+      "peak_rss_bytes": 229785600
+    },
+    {
+      "label": "success-query",
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db",
+        "--search-path=$RUN/producer/extractor-pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/success.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "seconds": 1.4,
+      "peak_rss_bytes": 290734080
+    },
+    {
+      "label": "success-decode",
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "$RUN/out/success.bqrs"
+      ],
+      "exit": 0,
+      "seconds": 0.216,
+      "peak_rss_bytes": 89522176
+    },
+    {
+      "label": "errors-query",
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db",
+        "--search-path=$RUN/producer/extractor-pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/errors.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "seconds": 1.43,
+      "peak_rss_bytes": 309149696
+    },
+    {
+      "label": "errors-decode",
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "$RUN/out/errors.bqrs"
+      ],
+      "exit": 0,
+      "seconds": 0.211,
+      "peak_rss_bytes": 88801280
+    },
+    {
+      "label": "rule-query",
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/m4/NamedHelperShellWord.ql",
+        "--database=$RUN/db",
+        "--search-path=$RUN/producer/extractor-pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/rule.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "seconds": 2.903,
+      "peak_rss_bytes": 461389824
+    },
+    {
+      "label": "rule-decode",
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=csv",
+        "$RUN/out/rule.bqrs"
+      ],
+      "exit": 0,
+      "seconds": 0.207,
+      "peak_rss_bytes": 86458368
+    },
+    {
+      "label": "sarif",
+      "argv": [
+        "$CODEQL",
+        "database",
+        "analyze",
+        "$RUN/db",
+        "$RUN/producer/ql/src/m4/NamedHelperShellWord.ql",
+        "--search-path=$RUN/producer/extractor-pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--format=sarif-latest",
+        "--output=$RUN/out/rule.sarif",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "seconds": 1.93,
+      "peak_rss_bytes": 207503360
+    }
+  ],
+  "raw_output_sha256": {
+    "out/BlockScopeWitness.csv": "bd40b3d5cb7fc2d2f760d0f18e67c0181f3afb4d853c4327c9b4738aa8e72d77",
+    "out/LoopActiveWitness.csv": "f90984e6ef7aa1223fdf829e951f46c694f05ca7a958ac363177c35346a3b1da",
+    "out/NamedHelperWitness.csv": "ba543db1cf4393d22bcf8b92f82e5d3fadd34481f63c01a9bc97096cf3e0bc6b",
+    "out/RealHelperAst.csv": "943ea6537bef905e81c332d3274534ad556038382b912ff89bc62f4baf224756",
+    "out/errors.json": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "out/rule.csv": "c0ea6ff1605a1e312fe46292df46359331382e3b1ed9f84812a6ce00be84e457",
+    "out/rule.sarif": "95a942037af245e2ac66aa6fa4931d42eda2eb57c67aa51cacbfdce05e277028",
+    "out/success.json": "0e28d4f1494d88e792a29bd380350f75919658b382d02faed6a8fb191471c74b"
+  },
+  "raw_preflight_sha256": "59cf4886d04ccef729b97bbfdd7947001a7e866d4c6ca2afc88ad52fb2ba72fe",
+  "raw_summary_sha256": "cada71e67f2b46d627609cbca9b20c651cd8efdfd09b84240364e8f9618c12f8",
+  "raw_commands_sha256": "c1af45c73d0d29fa7be1a8a448e439b9fc82ce221920accfd1b8cce6e2dae89a"
+}

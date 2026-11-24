@@ -1,0 +1,19 @@
+{
+  "raw_sha256": "e0a02931c5187f9bc7a51ac5c6ffdbea996d04282c493338dd2d8562dd94294a",
+  "results": [
+    {
+      "message": "RPC metadata is directly interpolated into a command later passed to fs.popen at line 77; review the command path.",
+      "region": {
+        "endColumn": 132,
+        "startColumn": 115,
+        "startLine": 71
+      },
+      "ruleId": "ucode/m4/openvpn-raw-metadata-command",
+      "uri": "usr/share/rpcd/ucode/luci.openvpn.uc",
+      "uriBaseId": "%SRCROOT%"
+    }
+  ],
+  "rules": [
+    "ucode/m4/openvpn-raw-metadata-command"
+  ]
+}

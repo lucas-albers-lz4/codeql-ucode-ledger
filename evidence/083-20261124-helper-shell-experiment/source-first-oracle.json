@@ -1,0 +1,99 @@
+{
+  "purpose": "Source-first oracle for helper/interprocedural command candidate; no CodeQL run or security conclusion.",
+  "repository": "https://github.com/openwrt/luci.git",
+  "commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+  "dirty_state": "",
+  "source_path": "applications/luci-app-lldpd/root/usr/share/rpcd/ucode/luci.lldpd",
+  "git_blob": "3774e222cec2f43f73edb6fb07978dab14ed6d36",
+  "source_sha256": "a9d6e6477307408a130ce20ad9f92813dfeca611e5c8a5a7a86f2ca746081eac",
+  "facts": [
+    {
+      "line": 3,
+      "fact": "imports popen from fs"
+    },
+    {
+      "line": 5,
+      "fact": "defines helper lldpcli_json(section)"
+    },
+    {
+      "line": 6,
+      "fact": "raw template command reaches imported popen: lldpcli -f json0 show ${section}; mode r"
+    },
+    {
+      "line": 11,
+      "fact": "getStatus call function"
+    },
+    {
+      "line": 13,
+      "fact": "call lldpcli_json with fixed literal statistics"
+    },
+    {
+      "line": 14,
+      "fact": "call lldpcli_json with fixed literal neighbors details"
+    },
+    {
+      "line": 15,
+      "fact": "call lldpcli_json with fixed literal interfaces"
+    },
+    {
+      "line": 16,
+      "fact": "call lldpcli_json with fixed literal chassis"
+    }
+  ],
+  "expected_candidate_identity": {
+    "sink": "popen call at line 6",
+    "helper_formal": "section",
+    "caller": "getStatus.call at line 11",
+    "call_sites": [
+      {
+        "line": 13,
+        "argument": "statistics",
+        "classification": "fixed-literal near miss / unknown"
+      },
+      {
+        "line": 14,
+        "argument": "neighbors details",
+        "classification": "fixed-literal near miss / unknown"
+      },
+      {
+        "line": 15,
+        "argument": "interfaces",
+        "classification": "fixed-literal near miss / unknown"
+      },
+      {
+        "line": 16,
+        "argument": "chassis",
+        "classification": "fixed-literal near miss / unknown"
+      }
+    ]
+  },
+  "fixture_expectations": [
+    {
+      "path": "fixtures/helper-dynamic-positive.uc",
+      "sha256": "5e6b341f2574865a22441867928600c693f967731c6ecb9611f0ebb7825f12f9",
+      "shape": "returned methods object with getStatus.call; request.args.section passed to helper formal section, interpolated into command template",
+      "oracle_role": "synthetic dynamic-argument-flow candidate in RPC-shaped returned method; syntax only"
+    },
+    {
+      "path": "fixtures/helper-fixed-literal-nearmiss.uc",
+      "sha256": "5f61dbc3264c1bb4bfbb7e737e5fb2190f9f3f87d49bd74e9f5d8a1ca40598f0",
+      "shape": "returned methods object with getStatus.call; fixed literal passed to helper formal section, interpolated into command template",
+      "oracle_role": "synthetic fixed-literal near miss in matching RPC-shaped returned method; syntax only"
+    }
+  ],
+  "required_model_capabilities": [
+    "resolve imported fs.popen binding (including aliases if claimed)",
+    "recognize template-string command construction and sink argument",
+    "resolve helper declaration and call-site target",
+    "track actual argument to formal parameter across the helper edge",
+    "preserve caller-site/source identity for findings",
+    "distinguish fixed literal actual arguments from request-derived expressions without interpreting literals as universally safe",
+    "recognize returned methods.<name>.call shape while preserving the distinction between syntax and actual RPC registration"
+  ],
+  "limits": [
+    "Source syntax does not establish RPC registration/reachability, runtime values, shell semantics, or vulnerability.",
+    "Four fixed-literal callers are only near misses for dynamic argument flow; command safety and all possible other callers remain unassessed.",
+    "Synthetic fixtures are proposed oracle inputs, not extracted CodeQL results.",
+    "The synthetic returned methods object mirrors source shape but does not establish loader acceptance, method registration, or runtime invocation."
+  ]
+}

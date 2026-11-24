@@ -1,0 +1,213 @@
+{
+  "status": "source-first after replacing invalid throw syntax in catch controls; final run not started",
+  "producer_base": "18afe771568d373088edee7a790825ee46dec9e0",
+  "upstream_pins": {
+    "openvpn_parent": "b45584b4e6068b9b096872dd02494a048d869c36",
+    "openvpn_fixed": "e4ff45ecbc6ad212951815c8c99b2749fbd7de6b",
+    "swconfig": "b2e0be4b46ec0fd43394c081fa7c50657af14011"
+  },
+  "expected_sources": [
+    {
+      "stage": "openvpn-parent",
+      "site": "generateKey req.args?.cl_meta",
+      "line": 71,
+      "sink": "popen(cmd)",
+      "sink_line": 77,
+      "expected": 1
+    },
+    {
+      "stage": "openvpn-fixed",
+      "site": "shellquote(req.args?.cl_meta)",
+      "line": 71,
+      "sink": "popen(cmd)",
+      "sink_line": 77,
+      "expected": 0
+    },
+    {
+      "stage": "luci-swconfig",
+      "site": "getSwconfigFeatures request.args.switch",
+      "line": 343,
+      "sink": "popen(template)",
+      "expected": 0
+    },
+    {
+      "stage": "luci-swconfig",
+      "site": "getSwconfigPortState request.args.switch",
+      "line": 400,
+      "sink": "popen(template)",
+      "expected": 0
+    },
+    {
+      "stage": "control/initialized_local_pos.uc",
+      "site": "input.args.item",
+      "line": 5,
+      "sink": "popen(command)",
+      "sink_line": 6,
+      "expected": 1
+    },
+    {
+      "stage": "control/unregistered_object.uc",
+      "site": "input.args.value",
+      "line": 5,
+      "sink": "popen(template)",
+      "sink_line": 5,
+      "expected": 0
+    },
+    {
+      "stage": "control/exclusive_branches.uc",
+      "site": "input.args.value",
+      "line": 7,
+      "sink": "popen(command)",
+      "sink_line": 9,
+      "expected": 0
+    },
+    {
+      "stage": "control/multi_substitution_quote_context.uc",
+      "site": "input.args.prefix (first), input.args.value (second suppressed)",
+      "line": 5,
+      "sink": "popen(template)",
+      "sink_line": 5,
+      "expected": 1
+    },
+    {
+      "stage": "control/quoted_first_raw_second.uc",
+      "site": "input.args.prefix (quoted), input.args.value (raw)",
+      "line": 6,
+      "sink": "popen(template)",
+      "sink_line": 6,
+      "expected": 1
+    }
+  ],
+  "inputs": [
+    {
+      "path": "control/catch_formal_shadow.uc",
+      "sha256": "3adee04376ebbddf70c6b746091d0fc2b820efde630e22cd6fab1b257c865fbe",
+      "expected_rule_rows": 0
+    },
+    {
+      "path": "control/catch_local_shadow.uc",
+      "sha256": "75aee861cc6a04f7c7a41cd87bc3f33ed518860fd1fb9a18f22d2c5b76861acf",
+      "expected_rule_rows": 0
+    },
+    {
+      "path": "control/constant_sink.uc",
+      "sha256": "435432d86baca2be2cf20c134ec255383b7cc4ae49ae9750737627279c4b7854",
+      "expected_rule_rows": 0
+    },
+    {
+      "path": "control/different_field_pos.uc",
+      "sha256": "c8834db1a5580a3198d5887c33b5a9721728a6509b87b06c9d50990c654f8996",
+      "expected_rule_rows": 1
+    },
+    {
+      "path": "control/direct_pos.uc",
+      "sha256": "d288103a16e64d54eee2990d9f032e4b194f5916266c181d5e3bc099da991562",
+      "expected_rule_rows": 1
+    },
+    {
+      "path": "control/exclusive_branches.uc",
+      "sha256": "ec3cf0e2ec18bab903d84bc4055d1e188afc685c86da1dfd11160dc2560e8f30",
+      "expected_rule_rows": 0
+    },
+    {
+      "path": "control/for_formal_shadow.uc",
+      "sha256": "aa2a8a2860d9530660b33ed57a923e16cedcbb1d3ad8920950cd73fe4fafbbe3",
+      "expected_rule_rows": 0
+    },
+    {
+      "path": "control/for_local_shadow.uc",
+      "sha256": "47d3169e804dbe0032f025e5d4624d10d04fc89dd0120fdd92fb5b35712f2221",
+      "expected_rule_rows": 0
+    },
+    {
+      "path": "control/function_formal_shadow.uc",
+      "sha256": "d961c9dfb9d330ead678087aa144c53351442e93998d001dc90a7a6bd080d82e",
+      "expected_rule_rows": 0
+    },
+    {
+      "path": "control/function_local_shadow.uc",
+      "sha256": "9628ff484c6cf83a143a62954e22809fe88febd1ede028adc10e373c5aaf2a90",
+      "expected_rule_rows": 0
+    },
+    {
+      "path": "control/initialized_local_pos.uc",
+      "sha256": "56a4800a8d5fc5e5d5fd2f530641e129b5b4645e1bd00f2290db7b8914580c1c",
+      "expected_rule_rows": 1
+    },
+    {
+      "path": "control/multi_substitution_quote_context.uc",
+      "sha256": "b6f92489e562cd742daee0a2162162e35129ef6a2bac98a30a8bc02b48bca474",
+      "expected_rule_rows": 1
+    },
+    {
+      "path": "control/nested_callable.uc",
+      "sha256": "752fae7ead4c425212b1e9310e0ecd766f3a67007539ffcf9829fba12ffcfa1f",
+      "expected_rule_rows": 0
+    },
+    {
+      "path": "control/quoted_arg.uc",
+      "sha256": "4d41c72dc4a2ed78c75e2cb201ceb00fd96976a3ad157360cb470ead4b35cbff",
+      "expected_rule_rows": 0
+    },
+    {
+      "path": "control/quoted_context.uc",
+      "sha256": "a92b848ed4b76f5eb5417fbf8b6625c66c0864aa83933dfbb3bd9e6a731f3c60",
+      "expected_rule_rows": 0
+    },
+    {
+      "path": "control/quoted_first_raw_second.uc",
+      "sha256": "33e3941022583feef1825b95a68d8370df7d5869e77f7776c360b3199940c160",
+      "expected_rule_rows": 1
+    },
+    {
+      "path": "control/reassigned_formal.uc",
+      "sha256": "62735eb45820f19a348eb996cffffb9e8f8db7383cee6e5ef3a90ed5bbfa5ab3",
+      "expected_rule_rows": 0
+    },
+    {
+      "path": "control/shadowed_local.uc",
+      "sha256": "c9306a8e43e78b35372afb4ff6beb13d1399870dbe8ced2d7b2818cc64ed8613",
+      "expected_rule_rows": 0
+    },
+    {
+      "path": "control/unimported_popen.uc",
+      "sha256": "486fcfbdc63f57f23b1ea8bcb6ae0a34188f792476555c60ea03418bf23ca94e",
+      "expected_rule_rows": 0
+    },
+    {
+      "path": "control/unregistered_object.uc",
+      "sha256": "5cda4f2a884d3095a96cf9f58ae2addc82a919ac9c0e590b295c67df497036d7",
+      "expected_rule_rows": 0
+    },
+    {
+      "path": "control/word_fragment.uc",
+      "sha256": "6d830dade60f00926f0ea03b707e03f884bd64461e9101ba5ced6a51f15f9e53",
+      "expected_rule_rows": 0
+    },
+    {
+      "path": "real/luci-swconfig/luci",
+      "sha256": "6f9d972958d9cfb8a7ba421f38f0a5b03718ffeb0e30d460b64c9faf725fc54e",
+      "expected_rule_rows": 0
+    },
+    {
+      "path": "real/openvpn-fixed/luci.openvpn.uc",
+      "sha256": "6593792678951fd500c2b090d17d9e500a05a642cfb996ee02c1649473152410",
+      "expected_rule_rows": 0
+    },
+    {
+      "path": "real/openvpn-parent/luci.openvpn.uc",
+      "sha256": "051c8162f826683333e11264615806df5ab08415676c0bd098921cb1b05af991",
+      "expected_rule_rows": 1
+    }
+  ],
+  "limits": [
+    "pinned upstream source staged at installed-style path; installed bytes not verified",
+    "synthetic controls test syntax and binding only",
+    "zero expected rows require exact successful extraction and AST witnesses before interpretation",
+    "Multi-substitution same-template control expects only the first direct handler-field row; later field is suppressed because earlier direct dynamic source leaves quote context unresolved. This is not proof the later field is safe.",
+    "Quoted-first/raw-second control expects one second-field row; source witness must retain both field identities.",
+    "Exclusive-branch control covers one syntactic then/else case, not complete CFG reachability.",
+    "Returned-handler table shape is not runtime RPC registration.",
+    "Prior run h failed extraction for two catch controls with invalid throw syntax; neither failure was counted as negative evidence."
+  ]
+}

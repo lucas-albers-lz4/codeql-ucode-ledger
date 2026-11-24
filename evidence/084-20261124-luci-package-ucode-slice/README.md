@@ -1,0 +1,3 @@
+# Claim 044 portable evidence
+
+The source-first oracle preceded run-i. The normalized receipt replaces local absolute roots with `$RUN`, `$SLICE_WORK`, `$LEDGER`, and `$CODEQL` and retains the raw receipt/SARIF/output SHA-256 digests, source and stage hashes, exact identities, routes, query rows, per-phase status, timing and RSS. The copied CSVs preserve query column headers while normalizing local paths. Raw database, caches, logs and SARIF remain in ignored `work/stage6-next-install-shaped/run-i/`; another machine cannot access them through this repository. Run-h stopped at a validator filename error and is recorded as a failed attempt in run-i receipt. No built or installed package bytes were verified.

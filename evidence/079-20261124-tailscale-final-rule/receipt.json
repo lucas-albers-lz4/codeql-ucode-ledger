@@ -1,0 +1,52 @@
+{
+  "all_run_d_commands_exit_zero": true,
+  "claim": "039",
+  "codeql_version": "CodeQL command-line toolchain release 2.27.4.",
+  "copied_db_performance": {
+    "commands_raw_sha256": {
+      "commands.json": "be466cc53ec6724f96ec811e0fcbf1e72aca2680637d6cfacb67c2ae55b77f26",
+      "out/decode.stdout": "4326500af53585382099188718307ecc9a33c6bcfe0897505e1e3f0ce562316a",
+      "preflight.json": "8b0de2e08b87c15de61eaae6dbc5b8b9ccc7bf8142e4c8ae4d97f9e36671d1c0"
+    },
+    "db_copy_bytes": 42527916,
+    "directory": "work/tailscale-performance-20261124-b",
+    "query_sha256": "136ec48e2f38c0da03d3dd975fcccae348997dbb6e6ec4a014444c42b6e09bfc",
+    "source_count": 21,
+    "source_stage_oracle_sha256": "3943f4cec7739867178ceb94f2ba1026d24f5379d4137bf90aff7215c51e92da"
+  },
+  "execution_only_pack_transform": "Copied ql/src/qlpack.yml workspace dependency replaced by explicit 0.1.0; locked dependencies copied under producer/deps; query/library bytes unchanged.",
+  "extractor_sha256": "c7bde2d31303127f6bf8ebbbb364a5a47840867b67962a013032a3b6bbe7f8d2",
+  "lib_lock_sha256": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+  "limits": [
+    "bounded historical parent/fix distinction and explicit control response only",
+    "not default query suite or release gate",
+    "no runtime exploitability, reachability, or security determination"
+  ],
+  "manifest_pin_note": "The source fixture expected.json was frozen at baseline producer pin 18afe...; run-d analyzed clean producer 2dde... The manifest pins input bytes and source expectations, while preflight separately pins the analyzed producer/query.",
+  "manifest_producer_pin": "18afe771568d373088edee7a790825ee46dec9e0",
+  "producer_commit": "2dde7010e9bcf7cb445743fc48221bbfadfcaa34",
+  "producer_dirty": "",
+  "query_sha256": "136ec48e2f38c0da03d3dd975fcccae348997dbb6e6ec4a014444c42b6e09bfc",
+  "raw_artifact_sha256": {
+    "commands.json": "130fa6a2430bff44445a45e279b7a7df03a947a1bf54b8305552037b7e9a9e1c",
+    "out/controls/candidate-decode.stdout": "8bbf264b700b827c463d3e3697dbeaba611bccb79b55fa5beca2d5a605d00015",
+    "out/controls/errors-decode.stdout": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "out/controls/fields-decode.stdout": "e6d437006e15dc600af63c9eb9a654685c38eafbcfa516a3f4038e162d49d1c8",
+    "out/controls/success-decode.stdout": "8364f1bd7bcaaeca0d75dfe809db9831be618d5428a82b17c495d646cf4ac1ba",
+    "out/fixed/candidate-decode.stdout": "4326500af53585382099188718307ecc9a33c6bcfe0897505e1e3f0ce562316a",
+    "out/fixed/errors-decode.stdout": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "out/fixed/success-decode.stdout": "f0045269a5b758412777d71be3654e64b4df19598ea1b4edcac6c102274a97ef",
+    "out/parent/candidate-decode.stdout": "8bbf264b700b827c463d3e3697dbeaba611bccb79b55fa5beca2d5a605d00015",
+    "out/parent/errors-decode.stdout": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "out/parent/fields-decode.stdout": "2675146e0831146f1414ae8a4cf64fd8f81d70d497990bbbc16b08c9e8fbf413",
+    "out/parent/success-decode.stdout": "02bced83245d3ef8e49c66e916158edabc505d7ab7f28683aac3396508011cda",
+    "out/sarif-controls/candidate.sarif": "079e6109a0dcce81e230557f9a1382d7a432fd2b2e6fad1716d86859828c7433",
+    "out/sarif-fixed/candidate.sarif": "df588e30abe55097b22b1a831a532837042bf3f086177ec79d0e46fea2f3518c",
+    "out/sarif-parent/candidate.sarif": "fe085e94fadffa246ab002e17d46916b50f0b0c7e3d3ebd5af6c59f087131cb8",
+    "preflight.json": "2680645f2929615f37959c5d72a398f350d87bc08f1e5c3f8f93f9d80d120216"
+  },
+  "source_manifest_sha256": "b1a538d03d60e356ae94cf374a2bfdc9338d81068b9e0a7233ac3bcbf89ac114",
+  "source_oracle_file": "source-first.json",
+  "source_oracle_sha256": "b1a538d03d60e356ae94cf374a2bfdc9338d81068b9e0a7233ac3bcbf89ac114",
+  "src_lock_sha256": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3"
+}

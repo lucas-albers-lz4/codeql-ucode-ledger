@@ -1,0 +1,160 @@
+{
+  "schema": "luci-four-file-ucode-source-first/v1",
+  "purpose": "Frozen source-first oracle for genuinely disjoint four-file LuCI package-ucode slice; created before extraction/query outputs.",
+  "selection_source_manifest_sha256": "ced75af6db2b65b2ac64993d8b6d4af0958f2d678516bd88d7848774cfb17f42",
+  "source": {
+    "repo": "https://github.com/openwrt/luci.git",
+    "ref": "openwrt-25.12",
+    "commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "dirty_state": "clean detached checkout",
+    "checkout": "work/claim020/luci",
+    "files": [
+      {
+        "source_path": "applications/luci-app-commands/ucode/controller/commands.uc",
+        "source_root_relative_extraction_identity": "applications/luci-app-commands/ucode/controller/commands.uc",
+        "expected_absolute_db_identity": "$RUN/stage/applications/luci-app-commands/ucode/controller/commands.uc",
+        "git_blob": "9126d59eb0d051ef2d82ed20f495b2e744f44a0c",
+        "source_sha256": "13364aaed67c906c0102ca1bb5b9e611cb394022ebc3ab1714b7bb38cd4b1b6e",
+        "bytes": 5260,
+        "staged_sha256": "13364aaed67c906c0102ca1bb5b9e611cb394022ebc3ab1714b7bb38cd4b1b6e",
+        "expected_installed_path": "usr/share/ucode/luci/controller/commands.uc",
+        "proposed_absolute_installed_path": "/usr/share/ucode/luci/controller/commands.uc",
+        "expected_route": {
+          "classification": "plain",
+          "reason": "ucode_extension",
+          "status": "plain_route_selected"
+        },
+        "route_basis": "Preserved applications/<package>/ucode/<tail> maps to usr/share/ucode/luci/<tail>; extension .uc routes plain."
+      },
+      {
+        "source_path": "applications/luci-app-dockerman/ucode/controller/docker.uc",
+        "source_root_relative_extraction_identity": "applications/luci-app-dockerman/ucode/controller/docker.uc",
+        "expected_absolute_db_identity": "$RUN/stage/applications/luci-app-dockerman/ucode/controller/docker.uc",
+        "git_blob": "b2ca046145ca7b3b96ac2f5b72448c8d0ce321ac",
+        "source_sha256": "efe000bce54b6c946a20a7ee0950075bdd555ec92d3158dffc150ec0b4a53981",
+        "bytes": 11638,
+        "staged_sha256": "efe000bce54b6c946a20a7ee0950075bdd555ec92d3158dffc150ec0b4a53981",
+        "expected_installed_path": "usr/share/ucode/luci/controller/docker.uc",
+        "proposed_absolute_installed_path": "/usr/share/ucode/luci/controller/docker.uc",
+        "expected_route": {
+          "classification": "plain",
+          "reason": "ucode_extension",
+          "status": "plain_route_selected"
+        },
+        "route_basis": "Preserved applications/<package>/ucode/<tail> maps to usr/share/ucode/luci/<tail>; extension .uc routes plain."
+      },
+      {
+        "source_path": "applications/luci-app-dockerman/ucode/docker_socket.uc",
+        "source_root_relative_extraction_identity": "applications/luci-app-dockerman/ucode/docker_socket.uc",
+        "expected_absolute_db_identity": "$RUN/stage/applications/luci-app-dockerman/ucode/docker_socket.uc",
+        "git_blob": "ab4d149e8f0f8717c2b32bbb6fb30aecbbf0e8e6",
+        "source_sha256": "21ec950f71e6448c72f2b652695d0742804ab942da55c18009ca9be49a382989",
+        "bytes": 2408,
+        "staged_sha256": "21ec950f71e6448c72f2b652695d0742804ab942da55c18009ca9be49a382989",
+        "expected_installed_path": "usr/share/ucode/luci/docker_socket.uc",
+        "proposed_absolute_installed_path": "/usr/share/ucode/luci/docker_socket.uc",
+        "expected_route": {
+          "classification": "plain",
+          "reason": "ucode_extension",
+          "status": "plain_route_selected"
+        },
+        "route_basis": "Preserved applications/<package>/ucode/<tail> maps to usr/share/ucode/luci/<tail>; extension .uc routes plain."
+      },
+      {
+        "source_path": "applications/luci-app-lxc/ucode/controller/lxc.uc",
+        "source_root_relative_extraction_identity": "applications/luci-app-lxc/ucode/controller/lxc.uc",
+        "expected_absolute_db_identity": "$RUN/stage/applications/luci-app-lxc/ucode/controller/lxc.uc",
+        "git_blob": "1f4f041c7da60886c0e8b6696632e553ab86cc1b",
+        "source_sha256": "19b5dc5d2db606ac90053409eaf9031c1fc69b229b4c0e875ddfcbbbf2a9ca70",
+        "bytes": 6008,
+        "staged_sha256": "19b5dc5d2db606ac90053409eaf9031c1fc69b229b4c0e875ddfcbbbf2a9ca70",
+        "expected_installed_path": "usr/share/ucode/luci/controller/lxc.uc",
+        "proposed_absolute_installed_path": "/usr/share/ucode/luci/controller/lxc.uc",
+        "expected_route": {
+          "classification": "plain",
+          "reason": "ucode_extension",
+          "status": "plain_route_selected"
+        },
+        "route_basis": "Preserved applications/<package>/ucode/<tail> maps to usr/share/ucode/luci/<tail>; extension .uc routes plain."
+      }
+    ]
+  },
+  "consumer": {
+    "checkout_commit": "48c6a65b7578234644c6b06780fc82ccf6d61a8b",
+    "corpus_lock_path": "work/pkg1-codeql-openwrt/corpus/lock.json",
+    "corpus_lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "luci_pin": "b2e0be4b46ec0fd43394c081fa7c50657af14011"
+  },
+  "prior_slices": {
+    "first21_manifest_sha256": "ccf7ffad1b5701d366c98fc297d7590dc172d3144a824d9750063d0b66a23b45",
+    "rpcd17_manifest_sha256": "ef4abca47ed268c3ef59a64c5c4c33d289d147e6b0bd94695f728c9c77b50be1",
+    "overlap_source_paths": []
+  },
+  "routes": {
+    "expected_count": 4,
+    "expected_plain": 4,
+    "expected_markup": 0,
+    "expected_uncertain": 0,
+    "expected_excluded": 0,
+    "expected_duplicates": 0,
+    "decisions": [
+      {
+        "source_path": "applications/luci-app-commands/ucode/controller/commands.uc",
+        "expected_installed_path": "usr/share/ucode/luci/controller/commands.uc",
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected",
+        "multiplicity": 1
+      },
+      {
+        "source_path": "applications/luci-app-dockerman/ucode/controller/docker.uc",
+        "expected_installed_path": "usr/share/ucode/luci/controller/docker.uc",
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected",
+        "multiplicity": 1
+      },
+      {
+        "source_path": "applications/luci-app-dockerman/ucode/docker_socket.uc",
+        "expected_installed_path": "usr/share/ucode/luci/docker_socket.uc",
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected",
+        "multiplicity": 1
+      },
+      {
+        "source_path": "applications/luci-app-lxc/ucode/controller/lxc.uc",
+        "expected_installed_path": "usr/share/ucode/luci/controller/lxc.uc",
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected",
+        "multiplicity": 1
+      }
+    ]
+  },
+  "query": {
+    "query_file": "ql/src/m4/ShellInjection.ql",
+    "query_sha256": "a94a4cd20c532a11c0544b3ba24b1e07f3ff6f9554b4904a6632731547bdc6d5",
+    "rule_id": "ucode/m4/shell-injection-candidate",
+    "tag": "testing",
+    "severity": "recommendation",
+    "source_predicate": "RequestArgsAccess (modeled request.args property flow), sink is NamedFsPopenCall or BuiltinSystemCall",
+    "source_first_observations": {
+      "luci-app-commands": {
+        "source_shape": "function args/http.formvalue and parse_cmdline; calls system at 143 and popen at 203",
+        "request_args_shape_in_selected_file": false
+      },
+      "luci-app-lxc": {
+        "source_shape": "controller formal parameters; shellquote used at two dynamic template sinks; popen raw path at line 31; system at line 85",
+        "request_args_shape_in_selected_file": false
+      },
+      "dockerman_files": {
+        "source_shape": "no textual popen/system/exec match in these two files",
+        "request_args_shape_in_selected_files": false
+      }
+    },
+    "expected_query_rows": "unknown before execution; source-level textual proximity does not establish Query AST/model matches",
+    "near_miss_or_positive": "No proven positive and discriminating near miss were derived inside this four-file slice before execution. Treat every row as triage-only and do not interpret an empty table as negative proof."
+  },
+  "boundary": "Source-staged package files; this oracle does not claim built or installed bytes, a security finding, or full corpus coverage."
+}

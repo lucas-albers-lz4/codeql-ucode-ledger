@@ -1,0 +1,250 @@
+{
+  "status": "completed fresh four-file disjoint source-staged run",
+  "oracle_sha256": "123cf5151e3ff1f717883d665b35c36b9a823f9a17893a16d4cb3e2d3b74b518",
+  "run_path": "$RUN",
+  "preflight": {
+    "oracle_sha256": "123cf5151e3ff1f717883d665b35c36b9a823f9a17893a16d4cb3e2d3b74b518",
+    "luci": {
+      "head": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+      "dirty": false
+    },
+    "consumer": {
+      "head": "48c6a65b7578234644c6b06780fc82ccf6d61a8b",
+      "dirty": false
+    },
+    "producer": {
+      "head": "977331713b4b8b5574813bee0884245bf6db2752",
+      "dirty": false
+    },
+    "consumer_lock_sha256": "b4cbdabb76df90a807aba7d42ae675198c7b7b09c3b84db259a3a4c941b0ea9a",
+    "codeql": "CodeQL command-line toolchain release 2.27.4.\nCopyright (C) 2019-2026 GitHub, Inc.\nUnpacked in: /Users/lalbers/gitroot/ucode/.tools/codeql-2.27.4/codeql\n   Analysis results depend critically on separately distributed query and\n   extractor modules. To list modules that are visible to the toolchain,\n   use 'codeql resolve packs' and 'codeql resolve languages'.",
+    "codeql_executable": "$CODEQL",
+    "inherited_HOME": "/Users/lalbers",
+    "TMPDIR": "run-owned",
+    "XDG_CACHE_HOME": "run-owned",
+    "pack_source": "$SLICE_WORK/run-g/pack",
+    "pack_tree_sha256": "891c6c3d4eae1accaf0c502775ef0077a81d542eac39c17241bdd769dde37674",
+    "dependency_cache_source": "$SLICE_WORK/run-g/cache/common",
+    "dependency_cache_tree_sha256": "21f615fc2136c12840b679e2744fdc1431b8fa36cb7d3edeab3587a2353ed5ea",
+    "query_sha256": "a94a4cd20c532a11c0544b3ba24b1e07f3ff6f9554b4904a6632731547bdc6d5",
+    "suite_sha256": "6d343f93e37c309b8461da9fafcf67d089737980d7ac42a5409e75df3bd442e5",
+    "producer_src_lock_sha256": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+    "producer_lib_lock_sha256": "bce2891940f09fcac3337b250707047ba9fd06d307abdbc7cb42c2ed193751a3",
+    "stage_files": [
+      {
+        "source_path": "applications/luci-app-commands/ucode/controller/commands.uc",
+        "sha256": "13364aaed67c906c0102ca1bb5b9e611cb394022ebc3ab1714b7bb38cd4b1b6e",
+        "bytes": 5260
+      },
+      {
+        "source_path": "applications/luci-app-dockerman/ucode/controller/docker.uc",
+        "sha256": "efe000bce54b6c946a20a7ee0950075bdd555ec92d3158dffc150ec0b4a53981",
+        "bytes": 11638
+      },
+      {
+        "source_path": "applications/luci-app-dockerman/ucode/docker_socket.uc",
+        "sha256": "21ec950f71e6448c72f2b652695d0742804ab942da55c18009ca9be49a382989",
+        "bytes": 2408
+      },
+      {
+        "source_path": "applications/luci-app-lxc/ucode/controller/lxc.uc",
+        "sha256": "19b5dc5d2db606ac90053409eaf9031c1fc69b229b4c0e875ddfcbbbf2a9ca70",
+        "bytes": 6008
+      }
+    ]
+  },
+  "routing": {
+    "input_count": 4,
+    "plain_count": 4,
+    "markup_count": 0,
+    "markup_inconclusive_count": 0,
+    "uncertain_count": 0,
+    "excluded_count": 0,
+    "duplicate_input_count": 0,
+    "decisions": [
+      {
+        "path": "$RUN/stage/applications/luci-app-commands/ucode/controller/commands.uc",
+        "installed_path": "usr/share/ucode/luci/controller/commands.uc",
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      {
+        "path": "$RUN/stage/applications/luci-app-dockerman/ucode/controller/docker.uc",
+        "installed_path": "usr/share/ucode/luci/controller/docker.uc",
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      {
+        "path": "$RUN/stage/applications/luci-app-dockerman/ucode/docker_socket.uc",
+        "installed_path": "usr/share/ucode/luci/docker_socket.uc",
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      {
+        "path": "$RUN/stage/applications/luci-app-lxc/ucode/controller/lxc.uc",
+        "installed_path": "usr/share/ucode/luci/controller/lxc.uc",
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      }
+    ]
+  },
+  "successful_files": [
+    {
+      "f": "$RUN/stage/applications/luci-app-commands/ucode/controller/commands.uc",
+      "col1": ""
+    },
+    {
+      "f": "$RUN/stage/applications/luci-app-dockerman/ucode/controller/docker.uc",
+      "col1": ""
+    },
+    {
+      "f": "$RUN/stage/applications/luci-app-dockerman/ucode/docker_socket.uc",
+      "col1": ""
+    },
+    {
+      "f": "$RUN/stage/applications/luci-app-lxc/ucode/controller/lxc.uc",
+      "col1": ""
+    }
+  ],
+  "extraction_errors": [],
+  "resolved_default_suite": {
+    "queries": [
+      "$LEDGER/work/direct-rpc-promotion-producer/ql/src/m4/DirectRpcShellWord.ql",
+      "$LEDGER/work/direct-rpc-promotion-producer/ql/src/diagnostics/ExtractionErrors.ql",
+      "$LEDGER/work/direct-rpc-promotion-producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql"
+    ],
+    "query_ids": [
+      "DirectRpcShellWord",
+      "ExtractionErrors",
+      "SuccessfullyExtractedFiles"
+    ],
+    "normalized_sha256": "760b4f86cfe54652917d14cd4a2edbd4df3e3d59a948af5bdce134e247f5edd5"
+  },
+  "default_suite_sarif": {
+    "sha256": "89d8679d26a33869f24c1b4076ea84f59390b7de6def7f75690b58a1e3291f22",
+    "rule_descriptors": [
+      "ucode/m4/direct-rpc-shell-word"
+    ],
+    "results": [],
+    "result_count": 0
+  },
+  "testing_query": {
+    "path": "ql/src/m4/ShellInjection.ql",
+    "sha256": "a94a4cd20c532a11c0544b3ba24b1e07f3ff6f9554b4904a6632731547bdc6d5",
+    "columns": [
+      "src",
+      "col1",
+      "sink",
+      "col3",
+      "col4",
+      "col5",
+      "col6"
+    ],
+    "rows": [],
+    "row_count": 0,
+    "interpretation": "Testing-tagged candidate rows only; manual source triage required. Empty output is not negative proof."
+  },
+  "phase_metrics": {
+    "extracted-decode": {
+      "wall_seconds": 0.2,
+      "user_seconds": 0.32,
+      "system_seconds": 0.02,
+      "peak_rss_bytes": 87015424,
+      "exit_status": 0
+    },
+    "errors-query": {
+      "wall_seconds": 1.38,
+      "user_seconds": 3.34,
+      "system_seconds": 0.19,
+      "peak_rss_bytes": 307625984,
+      "exit_status": 0
+    },
+    "shell-injection-testing-query": {
+      "wall_seconds": 2.37,
+      "user_seconds": 7.63,
+      "system_seconds": 0.3,
+      "peak_rss_bytes": 681443328,
+      "exit_status": 0
+    },
+    "shell-injection-testing-decode": {
+      "wall_seconds": 0.2,
+      "user_seconds": 0.32,
+      "system_seconds": 0.02,
+      "peak_rss_bytes": 87179264,
+      "exit_status": 0
+    },
+    "extracted-query": {
+      "wall_seconds": 1.38,
+      "user_seconds": 3.39,
+      "system_seconds": 0.19,
+      "peak_rss_bytes": 301481984,
+      "exit_status": 0
+    },
+    "default-suite-analyze": {
+      "wall_seconds": 3.52,
+      "user_seconds": 11.04,
+      "system_seconds": 0.43,
+      "peak_rss_bytes": 472596480,
+      "exit_status": 0
+    },
+    "errors-decode": {
+      "wall_seconds": 0.2,
+      "user_seconds": 0.31,
+      "system_seconds": 0.02,
+      "peak_rss_bytes": 86507520,
+      "exit_status": 0
+    },
+    "index-files": {
+      "wall_seconds": 0.62,
+      "user_seconds": 0.64,
+      "system_seconds": 0.06,
+      "peak_rss_bytes": 120733696,
+      "exit_status": 0
+    },
+    "resolve-default-suite": {
+      "wall_seconds": 0.34,
+      "user_seconds": 0.58,
+      "system_seconds": 0.04,
+      "peak_rss_bytes": 119717888,
+      "exit_status": 0
+    },
+    "database-finalize": {
+      "wall_seconds": 1.14,
+      "user_seconds": 2.11,
+      "system_seconds": 0.18,
+      "peak_rss_bytes": 267042816,
+      "exit_status": 0
+    },
+    "database-init": {
+      "wall_seconds": 0.44,
+      "user_seconds": 0.86,
+      "system_seconds": 0.06,
+      "peak_rss_bytes": 122077184,
+      "exit_status": 0
+    }
+  },
+  "output_hashes": {
+    "default-suite.sarif": "89d8679d26a33869f24c1b4076ea84f59390b7de6def7f75690b58a1e3291f22",
+    "ShellInjection.bqrs": "7294e2b78b8c4a7020f265d4e3d734be68d5bdb0bf5e849ffc857dacee607ab6",
+    "extracted.bqrs": "105a040fd7b40d7f3384d0cc12c852f2342b70b7262f15c1ff62924a4989f847",
+    "errors.bqrs": "6b3e8d0923909272eb0979588e90af87a5fdec82815bab0afe0a486946d4e783",
+    "resolved-suite-normalized.json": "760b4f86cfe54652917d14cd4a2edbd4df3e3d59a948af5bdce134e247f5edd5",
+    "extracted-decode.csv": "a2f3198c81de06e5f36941a4e32b31b4e8662acb6ac0c872d45894b1f0ea164d",
+    "shell-injection-testing-decode.csv": "cba697a37f49559b7634366547b2d932d6b046c3db282ece0344b5a67cbdff0a",
+    "routing.json": "03157c79a1b481d11f980fb43feb02a89c13fa9c840430f044a3a96367f96f6b",
+    "errors-decode.csv": "0bb9068729a2970f4b125b6893565812fdd2d1fc6510626f214f3d055b4f94f5"
+  },
+  "installed_bytes_verified": false,
+  "prior_attempts": [
+    {
+      "attempt": "run-h",
+      "exit_status": 1,
+      "reason": "validator used extracted.csv/errors.csv although decoder wrote extracted-decode.csv/errors-decode.csv; raw route and diagnostic artifacts retained in run-h/failure-receipt.json; run stopped before suite/query."
+    }
+  ],
+  "raw_run_receipt_sha256": "576f3aaf7449f1d968b6668caed2055c44e67886385ce503e95f16acb758586c"
+}
