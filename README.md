@@ -83,9 +83,9 @@ Together these move from source selection through extraction, query, and consume
 | [061](claims/061-ucode-commit-restart-adjacency.md) | Blocked | Security-40: uci.commit to service-restart adjacency |
 | [062](claims/062-uhttpd-te-case-match.md) | Demonstrated | Security-40: Transfer-Encoding matching case sensitivity |
 | [063](claims/063-uhttpd-cl-chunk-signedness.md) | Demonstrated | Security-40: Content-Length signedness and chunk-size state |
-| [064](claims/064-uhttpd-ubus-params-type.md) | Proposed | Security-40: POST /ubus/call params type validation |
+| [064](claims/064-uhttpd-ubus-params-type.md) | Demonstrated | Security-40: POST /ubus/call params type validation |
 | [065](claims/065-uhttpd-keepalive-drain.md) | Demonstrated | Security-40: Keep-alive body drain and parse-error desync |
-| [066](claims/066-uhttpd-realm-handler-enforce.md) | Proposed | Security-40: Basic Auth realm enforcement on handler dispatch |
+| [066](claims/066-uhttpd-realm-handler-enforce.md) | Demonstrated | Security-40: Basic Auth realm enforcement on handler dispatch |
 | [067](claims/067-ubusd-blobmsg-peer-bounds.md) | Proposed | Security-40: ubusd peer blobmsg parsing bounds |
 | [068](claims/068-px5g-signing-bounds.md) | Proposed | Security-40: px5g certificate-signing buffer bounds |
 | [069](claims/069-mdnsd-ptr-stack-bounds.md) | Proposed | Security-40: mdnsd PTR/reverse-lookup stack buffers |

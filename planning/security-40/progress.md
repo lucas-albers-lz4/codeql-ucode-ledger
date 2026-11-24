@@ -7,9 +7,9 @@ Update after every claim transition; newest entries first.
 
 - Program opened: 2026-11-24
 - Claims created: 035–074 (40); base commit `379b172` on main.
-  035–040, 046, 048–050, 053–055, 058–060, 062, 063, 065 Demonstrated (19);
-  041–045, 047, 051, 052, 056, 057, 061 Blocked (11); 064, 066, 067 in flight;
-  068–074 Proposed (7). A/B/C/D/E closed; F parse done, auth/ubusd running.
+  035–040, 046, 048–050, 053–055, 058–060, 062–066 Demonstrated (21);
+  041–045, 047, 051, 052, 056, 057, 061 Blocked (11); 067 in flight;
+  068–074 Proposed (7). A/B/C/D/E closed; F parse+auth done, ubusd running.
 - Wave 0: P1 DONE — **PASS, full-build-extraction** (probe-c/VERDICT.md):
   15/15 uhttpd .c files, 0 extractor diagnostics, semantic queries verified;
   claims 062–066 viable now; 067–071 need per-package P1-style probes.
@@ -69,8 +69,14 @@ Update after every claim transition; newest entries first.
     ubus.c:1161; fix ancestry confirmed; controls 2/2 + POS absence census;
     2nd pass 20/20,30/30,30/30; no DB, peak RSS ~17-18MB; orchestrator re-ran
     3 pipelines exit 0 + spot-checks), log lanes/laneF-uhttpd-parse.log;
-    proc_3eaeb1f75860 (064 ubus params type + 066 realm enforcement; uhttpd
-    @93b05e0b) RUNNING, log lanes/laneF-uhttpd-auth.log; proc_2730fa24420d
+    proc_3eaeb1f75860 (064/066 DONE exit 0: Demonstrated — 064 params UNSPEC
+    copied verbatim, only type-sensitive consumer guarded ubus.c:638-639 before
+    :641 iterator, fix e76736e ancestor, 18 chains/controls 3/3/2nd 18/18;
+    066 enumeration complete, BYPASS BRANCH observed error-handler dispatch
+    file.c:924 no realm call :920-928 (config-gated, NOT claimed exploitable),
+    normal-path fixed 3aa7e1c ancestor, 5 branches/controls 3/3/2nd 4/4;
+    orchestrator re-ran 2 pipelines exit 0 + spot-checks + ancestry), log
+    lanes/laneF-uhttpd-auth.log; proc_2730fa24420d
     (067 ubusd blobmsg peer bounds; ubus @24864e78 via git show blobs — working
     tree dirty) RUNNING, log lanes/laneF-ubusd.log.
 - H/G pre-staged (prompts in lanes/, launch after F gates): laneH-px5g (068,
@@ -106,6 +112,24 @@ Update after every claim transition; newest entries first.
 - CodeQL CLI: 2.27.4 (gh extension)
 
 ## Log
+
+### 2026-11-24 — 064/066 Demonstrated (uhttpd auth)
+
+- Lane proc_3eaeb1f75860 (exit 0): source oracle, uhttpd @93b05e0b (clean).
+  064 FIXED-IN-PIN (fail-no-eligible-instance WITH census): params UNSPEC
+  (ubus.c:68) copied verbatim by blob_memdup (:893); only type-sensitive consumer
+  blobmsg_for_each_attr (:641) guarded :638-639 (fix e76736e ancestor); 18
+  chains, controls 3/3, 2nd pass 18/18; scanner fixed 3× (chain data unchanged).
+  066 enumeration complete + BYPASS BRANCH OBSERVED: error-handler check_url
+  dispatch uh_invoke_handler file.c:924 (inside is_error_handler:920) has NO
+  realm call in :920-928; normal-path shape fixed (3aa7e1c ancestor, :1038
+  uh_auth_check_url before :1039). 5 branches (3 checked/1 bypass/1 non_handler),
+  controls 3/3 (POS :924 bypass EXISTS), 2nd pass 4/4 + registrations 4/4.
+  Bypass reachability config-gated (conf.error_handler matches check_url prefix)
+  — recorded as condition, NOT asserted exploitable. Orchestrator re-ran 2
+  pipelines (exit 0) + spot-checked ubus.c:68/638-639/641/893 + file.c:920/924/
+  941/1038/1039 + ancestry e76736e/3aa7e1c. Source-shape only, no vuln verdict.
+  Claims 064/066 → Demonstrated; README + progress updated. 067 (ubusd) running.
 
 ### 2026-11-24 — 062/063/065 Demonstrated (uhttpd parse fixed-in-source)
 
