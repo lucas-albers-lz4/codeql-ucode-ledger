@@ -7,9 +7,8 @@ Update after every claim transition; newest entries first.
 
 - Program opened: 2026-11-24
 - Claims created: 035–074 (40); base commit `379b172` on main.
-  035–038 Demonstrated (waves 1A/1B); 039/040 Partial (closure lanes
-  running); 041–045 Blocked (wave 2, commit `2757d61`); 046 lane running;
-  047–074 Proposed.
+  035–038 and 046 Demonstrated; 039/040 Partial (closure lanes running);
+  041–045 Blocked (wave 2, commit `2757d61`); 047–074 Proposed.
 - Wave 0: P1 DONE — **PASS, full-build-extraction** (probe-c/VERDICT.md):
   15/15 uhttpd .c files, 0 extractor diagnostics, semantic queries verified;
   claims 062–066 viable now; 067–071 need per-package P1-style probes.
@@ -28,8 +27,9 @@ Update after every claim transition; newest entries first.
     log lanes/lane040fix.log
   - P2: DONE (proc_4027700a0cc1, exit 0) — verdict not-routed; receipts
     probe-ucode/{VERDICT.md,MANIFEST.yml,logs/,db/p2-slice}
-  - proc_0e309702728b: 046 lane (getFeatures templates; heavy slot), log
-    lanes/lane046.log; completion notify armed
+  - 046 lane DONE (proc_0e309702728b, exit 0): Demonstrated — orchestrator
+    re-ran run_pipeline.sh (exit 0), oracle 39/39, source spot-checks,
+    producer pin clean. Heavy CodeQL slot free.
 - Lanes: isolated `hermes chat` on alibaba/qwen4-max-preview (delegate_task
   codex-pipeline routing hit invalidated openai-codex OAuth; smoke SMOKE_OK).
   -Q logs stay empty until exit; progress visible via artifact dirs.
@@ -55,6 +55,27 @@ Update after every claim transition; newest entries first.
 - CodeQL CLI: 2.27.4 (gh extension)
 
 ## Log
+
+### 2026-11-24 — 046 Demonstrated; wave 2 fully closed
+
+- 046 (getFeatures templates): 4 substitution sites beyond the five M4
+  methods — L268/275 system (hostapd/wpa_supplicant -v${feature}, closed
+  literal array L248–262) + L26/37 helper popen (pkg literal-bound 'netifd'
+  at sole call site L313). Provenance: 2 literal + 2 other-named-literal-bound;
+  **0 request-derived, 0 config-derived**; getFeatures.call has no request
+  param/args (L224); no uci value reaches a command string. 3 fully literal
+  commands (L278/294/315).
+- GetFeaturesDirectExec.ql: 5 rows exact-multiset match on covered slice;
+  helper sites oracle-only by lexical boundary (GetFeaturesPopen 2 rows,
+  label-only — disclosed). RequestArgsExec reproduces P2 inventory.
+- Controls 4/5: named positive (config-derived) FAIL-no-eligible-instance,
+  predicted by fixed oracle, full-file census; no synthetic instance.
+  Demonstrated with that limit disclosed (bounded question fully answered:
+  absence IS the result).
+- Receipts: 6.84 s / 319 MB peak; serial ≤389 MB; re-run byte-identical;
+  orchestrator re-run exit 0; routed file sha256 6f9d9729… (path
+  modules/luci-base/root/usr/share/rpcd/ucode/luci).
+- Wave 2 closed: 041–045 Blocked (routing), 046 Demonstrated. Category B done.
 
 ### 2026-11-24 — wave 1B gated (038 Demonstrated; 039/040 Partial + closure lanes)
 

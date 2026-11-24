@@ -65,7 +65,7 @@ Together these move from source selection through extraction, query, and consume
 | [043](claims/043-ucode-app-fs-exec-argv.md) | Blocked | Security-40: request.args to fs.exec / fs.exec_direct argv |
 | [044](claims/044-app-shellquote-placement.md) | Blocked | Security-40: shellquote placement in application command templates |
 | [045](claims/045-app-sprintf-command-assembly.md) | Blocked | Security-40: sprintf/concatenation command assembly before sinks |
-| [046](claims/046-luci-base-getfeatures-templates.md) | Proposed | Security-40: Fixed-command template substitution in getFeatures |
+| [046](claims/046-luci-base-getfeatures-templates.md) | Demonstrated | Security-40: Fixed-command template substitution in getFeatures |
 | [047](claims/047-ucode-request-path-read.md) | Proposed | Security-40: Request-controlled paths into ucode fs read/stat |
 | [048](claims/048-cgi-io-canonicalize-order.md) | Proposed | Security-40: cgi-io canonicalize_path vs ACL ordering |
 | [049](claims/049-rpcd-file-symlink-reauth.md) | Proposed | Security-40: rpcd file plugin symlink re-authorization |
