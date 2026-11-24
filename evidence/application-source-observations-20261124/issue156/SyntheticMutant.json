@@ -1,0 +1,328 @@
+{
+  "original_sha256": "d39e478786a0707786e5fcef6acdc2e670f3b2f73e762f165b9d2547f0739907",
+  "columns": [
+    {
+      "name": "path",
+      "kind": "String"
+    },
+    {
+      "name": "function_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "import_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "import_specifier_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "declaration_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "initializer_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "receiver_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "owner_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "restart_owner_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "first_index",
+      "kind": "Integer"
+    },
+    {
+      "name": "first_statement_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "commit_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "package_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "package_name",
+      "kind": "String"
+    },
+    {
+      "name": "second_statement_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "restart_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "command_entity",
+      "kind": "Entity"
+    },
+    {
+      "name": "service_name",
+      "kind": "String"
+    },
+    {
+      "name": "action",
+      "kind": "String"
+    }
+  ],
+  "tuples": [
+    [
+      "controls/cross-owner-ordinal-braced.uc",
+      {
+        "id": -16776709
+      },
+      {
+        "id": -16776759
+      },
+      {
+        "id": -16776752
+      },
+      {
+        "id": -16776692
+      },
+      {
+        "id": -16776687
+      },
+      {
+        "id": -16776637
+      },
+      {
+        "id": -16776643
+      },
+      {
+        "id": -16776646
+      },
+      0,
+      {
+        "id": -16776640
+      },
+      {
+        "id": -16776639
+      },
+      {
+        "id": -16776627
+      },
+      "fixture-config",
+      {
+        "id": -16776609
+      },
+      {
+        "id": -16776608
+      },
+      {
+        "id": -16776602
+      },
+      "fixture-service",
+      "restart"
+    ],
+    [
+      "controls/cross-owner-ordinal-unbraced.uc",
+      {
+        "id": -16776465
+      },
+      {
+        "id": -16776515
+      },
+      {
+        "id": -16776508
+      },
+      {
+        "id": -16776448
+      },
+      {
+        "id": -16776443
+      },
+      {
+        "id": -16776372
+      },
+      {
+        "id": -16776388
+      },
+      {
+        "id": -16776415
+      },
+      0,
+      {
+        "id": -16776375
+      },
+      {
+        "id": -16776374
+      },
+      {
+        "id": -16776362
+      },
+      "fixture-config",
+      {
+        "id": -16776342
+      },
+      {
+        "id": -16776341
+      },
+      {
+        "id": -16776335
+      },
+      "fixture-service",
+      "restart"
+    ],
+    [
+      "controls/intervening-comment.uc",
+      {
+        "id": -16775173
+      },
+      {
+        "id": -16775223
+      },
+      {
+        "id": -16775216
+      },
+      {
+        "id": -16775156
+      },
+      {
+        "id": -16775151
+      },
+      {
+        "id": -16775104
+      },
+      {
+        "id": -16775110
+      },
+      {
+        "id": -16775110
+      },
+      0,
+      {
+        "id": -16775107
+      },
+      {
+        "id": -16775106
+      },
+      {
+        "id": -16775094
+      },
+      "fixture-config",
+      {
+        "id": -16775077
+      },
+      {
+        "id": -16775076
+      },
+      {
+        "id": -16775070
+      },
+      "fixture-service",
+      "restart"
+    ],
+    [
+      "controls/positive-matched.uc",
+      {
+        "id": -16773963
+      },
+      {
+        "id": -16774013
+      },
+      {
+        "id": -16774006
+      },
+      {
+        "id": -16773946
+      },
+      {
+        "id": -16773941
+      },
+      {
+        "id": -16773894
+      },
+      {
+        "id": -16773900
+      },
+      {
+        "id": -16773900
+      },
+      0,
+      {
+        "id": -16773897
+      },
+      {
+        "id": -16773896
+      },
+      {
+        "id": -16773884
+      },
+      "fixture-config",
+      {
+        "id": -16773869
+      },
+      {
+        "id": -16773868
+      },
+      {
+        "id": -16773862
+      },
+      "fixture-service",
+      "restart"
+    ],
+    [
+      "controls/positive-unbraced-case.uc",
+      {
+        "id": -16773725
+      },
+      {
+        "id": -16773775
+      },
+      {
+        "id": -16773768
+      },
+      {
+        "id": -16773708
+      },
+      {
+        "id": -16773703
+      },
+      {
+        "id": -16773659
+      },
+      {
+        "id": -16773675
+      },
+      {
+        "id": -16773675
+      },
+      0,
+      {
+        "id": -16773662
+      },
+      {
+        "id": -16773661
+      },
+      {
+        "id": -16773649
+      },
+      "fixture-config",
+      {
+        "id": -16773634
+      },
+      {
+        "id": -16773633
+      },
+      {
+        "id": -16773627
+      },
+      "fixture-service",
+      "restart"
+    ]
+  ]
+}

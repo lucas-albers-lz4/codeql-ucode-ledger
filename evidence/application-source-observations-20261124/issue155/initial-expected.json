@@ -1,0 +1,118 @@
+{
+  "schema": "issue155-source-first-expected-tuples-v1",
+  "expected_query_columns": [
+    "path",
+    "call_node",
+    "callee_node",
+    "import_node",
+    "specifier_node",
+    "handler_node",
+    "formal_node",
+    "argument_node",
+    "substitution_node",
+    "property_node",
+    "args_node",
+    "receiver_node"
+  ],
+  "positive_rows": [
+    [
+      "usr/share/rpcd/ucode/ddns.uc",
+      -16773026,
+      -16773025,
+      -16774506,
+      -16774489,
+      -16773215,
+      -16773209,
+      -16773020,
+      -16773007,
+      -16773004,
+      -16773003,
+      -16773002
+    ],
+    [
+      "controls/positive-direct.uc",
+      -16774881,
+      -16774880,
+      -16775040,
+      -16775033,
+      -16774937,
+      -16774931,
+      -16774875,
+      -16774862,
+      -16774859,
+      -16774858,
+      -16774857
+    ],
+    [
+      "controls/positive-post-call-property.uc",
+      -16774623,
+      -16774622,
+      -16774783,
+      -16774776,
+      -16774680,
+      -16774674,
+      -16774617,
+      -16774604,
+      -16774601,
+      -16774600,
+      -16774599
+    ]
+  ],
+  "negative_control_criteria": {
+    "controls/negative-shadow.uc": "Inner local declaration shadows the import.",
+    "controls/negative-reassignment.uc": "Competing write to the imported name.",
+    "controls/negative-other-module.uc": "Same name and import form, different module.",
+    "controls/negative-fixed-path.uc": "Request guard remains, no request property in path.",
+    "controls/negative-readfile.uc": "Same input shape to a different fs callee.",
+    "controls/negative-optional-call.uc": "Optional marker belongs to the call itself.",
+    "controls/negative-aliased-import.uc": "Preserve the local and exported stat names and fs module; add only a same-name alias specifier.",
+    "controls/negative-request-shadow.uc": "Preserve the outer request formal and guard, with the path root now resolving to the inner request local."
+  },
+  "note": "Expected output, not an observed query result. IDs were mapped from independently frozen source spans to audited raw AST rows; typed edges remain to be observed.",
+  "competing_binding_mutant_added_rows": [
+    [
+      "controls/negative-shadow.uc",
+      -16775138,
+      -16775137,
+      -16775335,
+      -16775328,
+      -16775232,
+      -16775226,
+      -16775132,
+      -16775119,
+      -16775116,
+      -16775115,
+      -16775114
+    ],
+    [
+      "controls/negative-reassignment.uc",
+      -16775734,
+      -16775733,
+      -16775929,
+      -16775922,
+      -16775826,
+      -16775820,
+      -16775728,
+      -16775715,
+      -16775712,
+      -16775711,
+      -16775710
+    ]
+  ],
+  "request_binding_mutant_added_rows": [
+    [
+      "controls/negative-request-shadow.uc",
+      -16775433,
+      -16775432,
+      -16775636,
+      -16775629,
+      -16775533,
+      -16775527,
+      -16775427,
+      -16775414,
+      -16775411,
+      -16775410,
+      -16775409
+    ]
+  ]
+}

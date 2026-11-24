@@ -1,0 +1,151 @@
+{
+  "original_sha256": "d25deb39a07672f58357e042e0af611ac3ffa2334caf6af0316d3e4bd28c23ba",
+  "columns": [
+    {
+      "name": "path",
+      "kind": "String"
+    },
+    {
+      "name": "call_node",
+      "kind": "Entity"
+    },
+    {
+      "name": "callee_node",
+      "kind": "Entity"
+    },
+    {
+      "name": "import_node",
+      "kind": "Entity"
+    },
+    {
+      "name": "specifier_node",
+      "kind": "Entity"
+    },
+    {
+      "name": "handler_node",
+      "kind": "Entity"
+    },
+    {
+      "name": "formal_node",
+      "kind": "Entity"
+    },
+    {
+      "name": "argument_node",
+      "kind": "Entity"
+    },
+    {
+      "name": "substitution_node",
+      "kind": "Entity"
+    }
+  ],
+  "tuples": [
+    [
+      "controls/negative-fixed-path.uc",
+      {
+        "id": -16776794
+      },
+      {
+        "id": -16776793
+      },
+      {
+        "id": -16776953
+      },
+      {
+        "id": -16776946
+      },
+      {
+        "id": -16776850
+      },
+      {
+        "id": -16776844
+      },
+      {
+        "id": -16776788
+      },
+      {
+        "id": -16776775
+      }
+    ],
+    [
+      "controls/positive-direct.uc",
+      {
+        "id": -16774881
+      },
+      {
+        "id": -16774880
+      },
+      {
+        "id": -16775040
+      },
+      {
+        "id": -16775033
+      },
+      {
+        "id": -16774937
+      },
+      {
+        "id": -16774931
+      },
+      {
+        "id": -16774875
+      },
+      {
+        "id": -16774862
+      }
+    ],
+    [
+      "controls/positive-post-call-property.uc",
+      {
+        "id": -16774623
+      },
+      {
+        "id": -16774622
+      },
+      {
+        "id": -16774783
+      },
+      {
+        "id": -16774776
+      },
+      {
+        "id": -16774680
+      },
+      {
+        "id": -16774674
+      },
+      {
+        "id": -16774617
+      },
+      {
+        "id": -16774604
+      }
+    ],
+    [
+      "usr/share/rpcd/ucode/ddns.uc",
+      {
+        "id": -16773026
+      },
+      {
+        "id": -16773025
+      },
+      {
+        "id": -16774506
+      },
+      {
+        "id": -16774489
+      },
+      {
+        "id": -16773215
+      },
+      {
+        "id": -16773209
+      },
+      {
+        "id": -16773020
+      },
+      {
+        "id": -16773007
+      }
+    ]
+  ]
+}

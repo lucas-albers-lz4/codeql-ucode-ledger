@@ -1,0 +1,207 @@
+{
+  "schema": "issue155-five-controls-source-expectations-v1",
+  "baseline": [
+    [
+      "usr/share/rpcd/ucode/ddns.uc",
+      -16773026,
+      -16773025,
+      -16774506,
+      -16774489,
+      -16773215,
+      -16773209,
+      -16773020,
+      -16773007,
+      -16773004,
+      -16773003,
+      -16773002
+    ],
+    [
+      "controls/positive-direct.uc",
+      -16774881,
+      -16774880,
+      -16775040,
+      -16775033,
+      -16774937,
+      -16774931,
+      -16774875,
+      -16774862,
+      -16774859,
+      -16774858,
+      -16774857
+    ],
+    [
+      "controls/positive-post-call-property.uc",
+      -16774623,
+      -16774622,
+      -16774783,
+      -16774776,
+      -16774680,
+      -16774674,
+      -16774617,
+      -16774604,
+      -16774601,
+      -16774600,
+      -16774599
+    ]
+  ],
+  "mutant_added": {
+    "ModuleMutant": [
+      [
+        "controls/negative-other-module.uc",
+        -16776284,
+        -16776283,
+        -16776443,
+        -16776436,
+        -16776340,
+        -16776334,
+        -16776278,
+        -16776265,
+        -16776262,
+        -16776261,
+        -16776260
+      ]
+    ],
+    "AliasMutant": [
+      [
+        "controls/negative-aliased-import.uc",
+        -16777051,
+        -16777050,
+        -16777215,
+        -16777208,
+        -16777107,
+        -16777101,
+        -16777045,
+        -16777032,
+        -16777029,
+        -16777028,
+        -16777027
+      ]
+    ],
+    "OptionalCallMutant": [
+      [
+        "controls/negative-optional-call.uc",
+        -16776543,
+        -16776542,
+        -16776702,
+        -16776695,
+        -16776599,
+        -16776593,
+        -16776535,
+        -16776522,
+        -16776519,
+        -16776518,
+        -16776517
+      ]
+    ],
+    "ReadfileMutant": [
+      [
+        "controls/negative-readfile.uc",
+        -16776027,
+        -16776026,
+        -16776186,
+        -16776174,
+        -16776083,
+        -16776077,
+        -16776021,
+        -16776008,
+        -16776005,
+        -16776004,
+        -16776003
+      ],
+      [
+        "usr/share/rpcd/ucode/ddns.uc",
+        -16772949,
+        -16772948,
+        -16774506,
+        -16774499,
+        -16773215,
+        -16773209,
+        -16772943,
+        -16772930,
+        -16772927,
+        -16772926,
+        -16772925
+      ]
+    ],
+    "FixedPathMutant": [
+      [
+        "controls/negative-fixed-path.uc",
+        -16776794,
+        -16776793,
+        -16776953,
+        -16776946,
+        -16776850,
+        -16776844,
+        -16776788,
+        -16776775
+      ]
+    ]
+  },
+  "module_strings": [
+    {
+      "path": "controls/negative-other-module.uc",
+      "string": -16776423,
+      "fragment": -16776420,
+      "value": "fixture_helpers"
+    },
+    {
+      "path": "controls/negative-aliased-import.uc",
+      "string": -16777190,
+      "fragment": -16777187,
+      "value": "fs"
+    },
+    {
+      "path": "controls/negative-optional-call.uc",
+      "string": -16776682,
+      "fragment": -16776679,
+      "value": "fs"
+    },
+    {
+      "path": "controls/negative-readfile.uc",
+      "string": -16776166,
+      "fragment": -16776163,
+      "value": "fs"
+    },
+    {
+      "path": "controls/negative-fixed-path.uc",
+      "string": -16776933,
+      "fragment": -16776930,
+      "value": "fs"
+    }
+  ],
+  "fixed_mutant_projected_baseline": [
+    [
+      "usr/share/rpcd/ucode/ddns.uc",
+      -16773026,
+      -16773025,
+      -16774506,
+      -16774489,
+      -16773215,
+      -16773209,
+      -16773020,
+      -16773007
+    ],
+    [
+      "controls/positive-direct.uc",
+      -16774881,
+      -16774880,
+      -16775040,
+      -16775033,
+      -16774937,
+      -16774931,
+      -16774875,
+      -16774862
+    ],
+    [
+      "controls/positive-post-call-property.uc",
+      -16774623,
+      -16774622,
+      -16774783,
+      -16774776,
+      -16774680,
+      -16774674,
+      -16774617,
+      -16774604
+    ]
+  ]
+}
