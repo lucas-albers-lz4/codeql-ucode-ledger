@@ -1678,6 +1678,13 @@ incoming OpenWrt/LuCI changes.
   errors; all eight commands exited zero. This conditional
   `CONFIG_WIFI_SCRIPTS_UCODE=y` source-staged result does not establish
   actual package-installed bytes or query/security coverage.
+- Consumer PR #169 merged as `9ec6c46b9a21a6d49ddd2d45ed36221c6b59442b`
+  after its exact-head contract, unit and typed-handoff checks passed. It adds
+  a manual Linux paired `wifi-scripts` package-byte experiment, with separate
+  `CONFIG_WIFI_SCRIPTS_UCODE=y/n` build roots and an IPK-byte comparator.
+  Workflow dispatch run [45548269425](https://github.com/lucas-albers-lz4/codeql-openwrt/actions/runs/45548269425)
+  started on that merge commit. Its package build and byte comparison remain
+  pending; the workflow start is not installed-byte evidence.
 
 ## Ledger reconciliation with Security-40
 
