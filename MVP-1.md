@@ -1288,6 +1288,20 @@ incoming OpenWrt/LuCI changes.
   completion, resolve default-tip events into the consumer, or guarantee
   transient heads between polls; these remain Gate 8 work before an incoming
   scanning service can be claimed.
+  A separate [offline queue draft PR #164](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/164)
+  builds on that poller at `51923e56fa858d0f07f374a2859031d54352fa4b`.
+  It prototypes a transactional predecessor, stable PR-head identity,
+  bounded reservations, first-attempt priority, recovery and audited retry
+  preemption. Twelve queue and 27 poller tests pass locally. The hosted
+  `unittest` and `typed-handoff` checks passed in run `45516924286`, but the
+  current workflow does not run the new queue tests. A locally verified CI
+  step is committed in the disposable checkout only: GitHub rejected its
+  push because the available token lacks workflow-file permission. The
+  prototype has no trusted production signer, verified same-job artifact
+  handoff, released event scan or authenticated live completion. Its earlier
+  1,851-row replay reserved identities without scanning, and predates the
+  final in-flight capacity rule. Keep #164 draft and unscheduled until these
+  gaps and the exact CI gate are resolved; it is not Gate 8 evidence.
   The [12-path recipe mapping](planning/mvp-openwrt-full-tree-candidates-v0.5-mapping-20261124.md)
   identifies conditional product install paths used by the source-staged
   v0.5 expansion, with no installed-byte claim.
