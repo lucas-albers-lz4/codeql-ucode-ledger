@@ -7,9 +7,9 @@ Update after every claim transition; newest entries first.
 
 - Program opened: 2026-11-24
 - Claims created: 035–074 (40); base commit `379b172` on main.
-  035–040, 046, 048–050, 053–055, 058–060, 062–067 Demonstrated (22);
-  041–045, 047, 051, 052, 056, 057, 061 Blocked (11); 068–074 Proposed (7).
-  A/B/C/D/E/F closed; H (068–071) + G (072–074) next.
+  035–040, 046, 048–050, 053–055, 058–060, 062–074 Demonstrated (29);
+  041–045, 047, 051, 052, 056, 057, 061 Blocked (11).
+  A/B/C/D/E/F/H/G all closed — Security-40 complete (40/40 evaluated).
 - Wave 0: P1 DONE — **PASS, full-build-extraction** (probe-c/VERDICT.md):
   15/15 uhttpd .c files, 0 extractor diagnostics, semantic queries verified;
   claims 062–066 viable now; 067–071 need per-package P1-style probes.
@@ -116,6 +116,33 @@ Update after every claim transition; newest entries first.
 - CodeQL CLI: 2.27.4 (gh extension)
 
 ## Log
+
+### 2026-11-24 — H/G gated: 068–074 Demonstrated; Security-40 complete (29D/11B)
+
+Refreshed ledger (concurrent MVP advanced 075–090). The H/G source-oracle lanes
+(068–074) had completed with full evidence under work/security-40/ but were never
+gated. Orchestrator gated all seven: re-ran each run_pipeline.sh (exit 0),
+spot-checked pinned blobs (luci/packages/uci pins reachable; 068 x509write.c
+make_sign → asn1_add_obj confirmed), merged lane draft Results into claim bodies
+(Status → Demonstrated; source pin recorded; README rows flipped).
+
+- 068 px5g signing bounds: Demonstrated (source-shape observability,
+  present_in_pin_unfixed; GHSA-jgc3-4q3p-g6xh shape is in the ASN.1 BIT STRING
+  wrap, not the correctly-sized RSA signature buffer); controls 3/3.
+- 069 mdnsd PTR stack / 070 libubox blobmsg-JSON / 071 libuci parse lifecycle /
+  072 procd PATH-env: FIXED-IN-PIN fail-no-eligible-instance WITH census;
+  controls 3/3; citations + ancestry verified (069: 32 chains / 169 citations /
+  59 census sites).
+- 073 banip first-IP / 074 travelmate f_check: FIXED-IN-PIN WITH census;
+  controls 3/3 (+ informational controls); residual config-opt-in `first:` /
+  unvalidated script_args source shapes documented as observations, not
+  exploitability claims.
+
+All source oracles (no CodeQL database; shell/C not extracted by the analyzer).
+No gate lifted; no runtime/exploit/vulnerability verdicts. Security-40 final:
+29 Demonstrated / 11 Blocked. The 11 Blocked are analyzer coverage gaps ticketed
+as ucode#154/#155/#156, openwrt#151, and markup investigation ucode#160. Evidence
+local under work/security-40/ (gitignored), matching the 062–067 pattern.
 
 ### 2026-11-24 — Follow-up coverage-gap wave filed in both analyzer repos
 

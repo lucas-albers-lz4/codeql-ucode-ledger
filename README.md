@@ -87,13 +87,13 @@ Together these move from source selection through extraction, query, and consume
 | [065](claims/065-uhttpd-keepalive-drain.md) | Demonstrated | Security-40: Keep-alive body drain and parse-error desync |
 | [066](claims/066-uhttpd-realm-handler-enforce.md) | Demonstrated | Security-40: Basic Auth realm enforcement on handler dispatch |
 | [067](claims/067-ubusd-blobmsg-peer-bounds.md) | Demonstrated | Security-40: ubusd peer blobmsg parsing bounds |
-| [068](claims/068-px5g-signing-bounds.md) | Proposed | Security-40: px5g certificate-signing buffer bounds |
-| [069](claims/069-mdnsd-ptr-stack-bounds.md) | Proposed | Security-40: mdnsd PTR/reverse-lookup stack buffers |
-| [070](claims/070-libubox-blobmsg-json-bounds.md) | Proposed | Security-40: libubox blobmsg JSON serialization bounds |
-| [071](claims/071-libuci-parse-package-lifecycle.md) | Proposed | Security-40: libuci uci_parse_package object lifecycle |
-| [072](claims/072-procd-path-env-filter.md) | Proposed | Security-40: procd PATH/environment filter in service exec |
-| [073](claims/073-banip-log-first-ip.md) | Proposed | Security-40: banip log-monitor first-IP extraction |
-| [074](claims/074-travelmate-fcheck-injection.md) | Proposed | Security-40: travelmate f_check script/script_args injection |
+| [068](claims/068-px5g-signing-bounds.md) | Demonstrated | Security-40: px5g certificate-signing buffer bounds |
+| [069](claims/069-mdnsd-ptr-stack-bounds.md) | Demonstrated | Security-40: mdnsd PTR/reverse-lookup stack buffers |
+| [070](claims/070-libubox-blobmsg-json-bounds.md) | Demonstrated | Security-40: libubox blobmsg JSON serialization bounds |
+| [071](claims/071-libuci-parse-package-lifecycle.md) | Demonstrated | Security-40: libuci uci_parse_package object lifecycle |
+| [072](claims/072-procd-path-env-filter.md) | Demonstrated | Security-40: procd PATH/environment filter in service exec |
+| [073](claims/073-banip-log-first-ip.md) | Demonstrated | Security-40: banip log-monitor first-IP extraction |
+| [074](claims/074-travelmate-fcheck-injection.md) | Demonstrated | Security-40: travelmate f_check script/script_args injection |
 | [075](claims/075-historical-openvpn-baseline.md) | Demonstrated | Local CodeQL baseline: historical OpenVPN source/sink AST present, current candidate query absent, positive/near-miss controls discriminate |
 | [076](claims/076-historical-tailscale-baseline.md) | Demonstrated | Post-merge local CodeQL baseline: historical Tailscale and nested control AST present, current candidate query absent, direct positive control live |
 | [077](claims/077-current-luci-openwrt-extraction.md) | Demonstrated | First source-staged current LuCI/OpenWrt slice: 21 exact extraction identities, zero errors, 20 plain and one markup-inconclusive route |
