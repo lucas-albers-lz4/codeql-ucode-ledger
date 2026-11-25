@@ -1483,6 +1483,16 @@ incoming OpenWrt/LuCI changes.
   passed in run `45540389079`. The check does not authenticate execution,
   verify its own oracle or lock, bind a distinct clean control or queue reservation,
   or sign an outcome. It cannot be used as a completion issuer by itself.
+  Further stacked [draft PR #167](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/167)
+  at `e731c1ee3252d0d650a7c32cabb1f5726bed6773` applies that graph check
+  to a distinct control commit and tree, binds both scans to one retained
+  R3 receipt and lock, checks the control binding and assertion, and requires
+  the actual control consumer replay to have zero results. Thirty-three local
+  focused and existing tests passed; exact-head hosted `unittest` and
+  `typed-handoff` passed in run `45542858880`. This is still offline
+  consistency checking: source and release
+  authentication, immutable artifact custody, queue reservation and signing,
+  and a live positive/control drill remain open.
   An earlier offline link probe was kept out because it did not replay the
   actual SARIF consumer. PR #166 adds that replay, but its synthetic tests
   still do not establish producer execution or a trusted consumer run.
