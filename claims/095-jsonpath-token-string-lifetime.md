@@ -1,6 +1,6 @@
 # 095 — jsonpath token string lifetime in jp_get_token
 
-- Status: Proposed
+- Status: Demonstrated
 - Question: At the pinned jsonpath upstream commit used by OpenWrt jsonfilter, does `jp_get_token()` release the temporary token string after `jp_alloc_op()` copies it, closing the string/label/regexp token leak in GHSA-rcc6-v4r6-gj4m / CVE-2026-30873?
 - Corpus pin: `jsonpath b9034210bd331749673416c6bf389cccd4e23610`, selected by `openwrt 4e9642517b48bae612ff10fb72fb9199e559500e:package/utils/jsonfilter/Makefile:9`.
 - Producer commit: `codeql-ucode 9166af76cf6944e1b3ea5856a9176366a1f7a6ee`; source oracle on pinned upstream C, no assumed CodeQL extraction.
@@ -8,4 +8,4 @@
 - Expected observable: every temporary string allocated by token matching is freed after ownership transfer/copy, while pooled opcode strings remain owned by the parser pool; no eligible leaked temporary token string remains in the pin.
 - Oracle: pinned-source allocation/ownership census plus deterministic token-lifetime emulator for string, label, and regexp paths; advisory anchors motivation/source-shape only; no runtime leak measurement or exploit verdict.
 - Controls: positive vulnerable fixture (temporary string copied but not freed), near-miss non-string token with null string, negative fixed pin; fail-no-eligible-instance with full token-path census if fixed.
-- Result: pending lane evidence.
+- Result: Demonstrated (fixed-in-pin source shape). Orchestrator re-ran `run_pipeline.sh` (exit 0); controls 3/3. Census: only temporary `strdup` sites are `lexer.c:274` (`parse_string`) and `lexer.c:383` (`parse_label`); eligible classes STRING_SQ, STRING_DQ, LABEL, REGEXP. `jp_get_token` copies via `jp_alloc_op` (`lexer.c:523`) then frees the temporary (`lexer.c:525-526`); pooled opcode strings remain pool-owned and are released once by `jp_free`. Makefile selector `package/utils/jsonfilter/Makefile:9` verified. Fix `e086664e6a570630e8feba889482f174a9a8715e` is an ancestor of the pin. Source-shape ownership proof only; no runtime leak measurement, exploit verdict, gate lift, or `path_found`.

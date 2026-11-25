@@ -2,9 +2,9 @@
 
 ## State
 
-- 091–095 Proposed; source-oracle lanes I/J/K launched, not yet gated.
-- 096–101 Proposed (Wave N: odhcpd/mdnsd); lanes not yet launched.
-- Deferred uhttpd resource-lifecycle advisories remain investigation-only; lane L decision packet running.
+- 091, 093, 095 Demonstrated (orchestrator re-ran pipelines, controls 3/3).
+- 092, 094 lanes still running; 096–101 Proposed (Wave N lanes N1/N2/O running).
+- Deferred uhttpd resource-lifecycle advisories: lane L decision packet complete (Option B recommended); claims not yet created.
 - Current-main application-routing re-measurement prompt prepared (lane M); heavy slot not yet acquired.
 - No gate lifted; no worker commit/push.
 
