@@ -70,10 +70,10 @@ and does not alter the release gate.
 Current execution sequence: (1) confirm the authenticated GitHub release
 immutability toggle, then publish and independently verify the producer's
 versioned asset; (2) fill the consumer release lock from those exact bytes
-and run fresh R3 and 128-path Linux corpus jobs; (3) review the completed
-installed-byte package receipt separately; (4) complete a released
+and run fresh R3 and 128-path Linux corpus jobs; (3) complete a released
 incoming-event known-alert/control drill and only then consider durable
-polling. The manual discovery snapshot does not replace steps 2–4.
+polling. The manual discovery snapshot and completed `luci-base` installed-byte
+receipt do not replace steps 2–3.
 
 ## Operational destination and first release decision
 
