@@ -517,6 +517,12 @@ The query relies on bounded syntax and source order, not proven execution
 flow or runtime registration. Its copied pack provenance and local-only run
 limits are recorded in the draft. A pinned hosted Linux matrix and review of
 current eligible source are required before any promotion decision.
+The draft now includes a separate pinned Linux matrix gate at
+`b8ca433dd49cc16155bf1b831f529ae07f36cb06`: it stages the 11 historical
+and control sources, checks exact routing and extraction identities, and
+requires the two predeclared SARIF locations. Static review, Python compile,
+`actionlint` and existing bundle tests passed; the new hosted gate was not
+yet observed at this checkpoint.
 
 ### Stage 10 — decide whether the scanner is useful enough to propose
 
