@@ -25,8 +25,11 @@ retained #154 base branch and stacked dependents need reconciliation with
 consumer `main`. Stacked
 [draft PR #157](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/157)
 advances that job's frozen manifest to
-[128 paths](planning/mvp-bounded-corpus-v0.6.md); its contract and repository
-tests pass, and its live job is skipped by the same null lock. No versioned
+[128 paths](planning/mvp-bounded-corpus-v0.6.md). Its current head `c278312`
+integrates #155's routing failure receipt with v0.6 route counts; 21 focused
+tests and `actionlint` passed locally. Hosted `contract`, `lock-state`,
+`unittest` and `typed-handoff` passed. The live job skipped on the null lock.
+No versioned
 release or R3 live handoff has occurred. The independently tested
 [v0.5 local manifest](planning/mvp-bounded-corpus-v0.5.md) selects 123 paths.
 An attempted [v0.6 source-staged run](evidence/mvp-corpus-v0.6-local-run/README.md)
@@ -1115,8 +1118,18 @@ incoming OpenWrt/LuCI changes.
   routes, 35 markup-inconclusive routes, exact extraction multiplicity, zero
   extraction errors, resolved suite IDs and consumer-accepted SARIF. The
   manifest digest is `9c004ed477665f6567a071eac45051445c61019af927bfa4e51bae4c50ebd490`;
-  19 downstream contract tests passed locally. The release lock remains null,
-  so PR CI cannot yet perform the released Linux handoff or v0.6 scan.
+  19 downstream contract tests passed locally at the earlier `36a4f6e` head.
+  After #155's routing-report fix, replaying that head onto #155
+  `817c4a3` exposed one conflict in `tools/current_corpus_linux.py`: the old
+  inline route check had 128/93 v0.6 counts while #155's new retained-report
+  helper still had 111/76 v0.4 counts. The reviewed resolution keeps the
+  retained-report helper and sets its expected counts to 128/93. Draft PR
+  #157 was updated to `c278312e59e5fafc891bac2777e50bee0bc9d9f3`,
+  directly atop #155's current head; 21 focused tests, `actionlint` and diff
+  checks passed locally. Fresh hosted `contract`, `lock-state`, `unittest` and
+  `typed-handoff` passed on that head. The release
+  lock remains null, so PR CI cannot yet perform the released Linux handoff or
+  v0.6 scan.
 - The [remaining packages-feed install inventory](planning/mvp-packages-feed-install-mapping-20261124.md)
   reconciles all 25 candidates outside v0.4: 22 product sources and three
   test mocks. It separates eight optional exporter collector packages from
