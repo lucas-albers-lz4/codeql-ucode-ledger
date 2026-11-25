@@ -1,0 +1,736 @@
+{
+  "candidate_path_count": 88,
+  "candidate_pr_count": 41,
+  "candidates": [
+    {
+      "base": "96b11ae111c49f41594195291aa2151ae1046da9",
+      "files": [
+        {
+          "blob": "31eb3a04c3837a6956df440cf765946e073a23eb",
+          "path": "collections/luci-uwsd/ucode/uwsd.uc",
+          "status": "added"
+        },
+        {
+          "blob": "4aeee849634cc8530ebe2af06eadab915a2ee9f8",
+          "path": "modules/luci-base/ucode/dispatcher.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "bcc4ceae299176cf46f610ac63d8f9a37f9945ff",
+          "path": "modules/luci-base/ucode/template/header.ut",
+          "status": "modified"
+        }
+      ],
+      "head": "68c2faad44d4f40b598c9074c3b8fe1b76522c85",
+      "number": 6552
+    },
+    {
+      "base": "4c4b5c31bd529b9d713cd6c9a167dc578c5b8e77",
+      "files": [
+        {
+          "blob": "7aa47f7381ea8c1ba5d2b6d7f72cd447629a81e5",
+          "path": "themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/header.ut",
+          "status": "modified"
+        }
+      ],
+      "head": "86491cbd08b5d5a954f23655f79cb3d94e141964",
+      "number": 8127
+    },
+    {
+      "base": "d12d55376188343d790fa40377c084245a4d2b86",
+      "files": [
+        {
+          "blob": "cb44e81c771a418b2ff2f34e1a5840f75b5b512d",
+          "path": "applications/luci-app-upnp/root/usr/share/rpcd/ucode/luci.upnp",
+          "status": "modified"
+        }
+      ],
+      "head": "7050081007b9111df1e3bf7d0f4b5c66a88beff3",
+      "number": 8415
+    },
+    {
+      "base": "22e4e76524046e21bb57b7595dda658bd41313a4",
+      "files": [
+        {
+          "blob": "93b454fe0a9b2bb02d76c2344fcfdc91df77e060",
+          "path": "modules/luci-base/root/usr/share/rpcd/ucode/luci",
+          "status": "modified"
+        }
+      ],
+      "head": "67106086340361008c0a0b5fdca666a70de1d3bb",
+      "number": 8678
+    },
+    {
+      "base": "46cd82328dfb7fbb15961c63f9e674a41cef2500",
+      "files": [
+        {
+          "blob": "f32b30707d7a36f0bd0618f63ada244f4aded055",
+          "path": "modules/luci-base/root/usr/share/rpcd/ucode/luci",
+          "status": "modified"
+        }
+      ],
+      "head": "104ed5df89f31574d3b3fd9c3d26e69274bf8a8f",
+      "number": 8696
+    },
+    {
+      "base": "4f4a69ea6127ab9f6f3648a1a942b8f7d1f08930",
+      "files": [
+        {
+          "blob": "ae42491f02cbc2922a1a3261bc2c0a9ab84d511d",
+          "path": "applications/luci-app-singbox/files/usr/share/ucode/rpc/singbox.uc",
+          "status": "added"
+        }
+      ],
+      "head": "c03f7f1e8ce8132baf2a1dff9bfdc5e5ed763101",
+      "number": 8707
+    },
+    {
+      "base": "580b6b1d9ec3a79edb8e2a5a9c4700b9c320ff6a",
+      "files": [
+        {
+          "blob": "ae6124af11f5f28d15904d24c93d888545cf1412",
+          "path": "applications/luci-app-hh4xmodem/root/usr/share/rpcd/ucode/hh4xmodem.uc",
+          "status": "added"
+        }
+      ],
+      "head": "fb9a1aa13007653bd9448b994b0c62cc634d511b",
+      "number": 8713
+    },
+    {
+      "base": "3c6837884c93439beeeb85eb51b2fe9346b89eee",
+      "files": [
+        {
+          "blob": "2f083c15e00562b68fcda89e39aeba9b0b15d90e",
+          "path": "modules/luci-mod-network/root/usr/share/rpcd/ucode/luci.wifi-iftypes",
+          "status": "added"
+        }
+      ],
+      "head": "7b61fef53630afcdbe7dde03e205d465a09d8683",
+      "number": 8735
+    },
+    {
+      "base": "de39fcc8d901fabfc80354484f5e66b40f9230dd",
+      "files": [
+        {
+          "blob": "21439057286e1a168d3e28875cc8fea5ca7977c0",
+          "path": "applications/luci-app-commands/ucode/template/commands.ut",
+          "status": "modified"
+        },
+        {
+          "blob": "be3a22b63c6e722587be556caf7f5b79bf0954e1",
+          "path": "modules/luci-base/ucode/dispatcher.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "f7a5397a1adf4120d61054165be76f692f1420eb",
+          "path": "modules/luci-base/ucode/http.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "689b0384e17279037c5cf7579ea93f3ee0cbbe0d",
+          "path": "modules/luci-base/ucode/luciplugins.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "6f2a49f864b9a72ddcc07a305da94b3c07b7a88d",
+          "path": "modules/luci-base/ucode/template/csrftoken.ut",
+          "status": "modified"
+        },
+        {
+          "blob": "bc89168bb0f5b919e0bf3d71d1496a300ab3ae5c",
+          "path": "modules/luci-base/ucode/template/footer.ut",
+          "status": "modified"
+        },
+        {
+          "blob": "734652c0926ae1fe9e152fd5a1ff6f19dd81745d",
+          "path": "modules/luci-base/ucode/template/header.ut",
+          "status": "modified"
+        },
+        {
+          "blob": "a373d938730e4421002f42007b22b681490fb759",
+          "path": "modules/luci-base/ucode/template/sysauth.ut",
+          "status": "modified"
+        },
+        {
+          "blob": "f036a0a90bcae7031d461d7320e4a86d890f6a83",
+          "path": "modules/luci-base/ucode/template/view.ut",
+          "status": "modified"
+        },
+        {
+          "blob": "0a5386153f7818446f8922612e4ca54bc9915b15",
+          "path": "plugins/luci-plugin-csp/ucode/plugins/http/headers/c0ffee2cf63e160c091224d95d69cdff.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "76aa82e9dcc641143a666840c91aeec8af2b23f7",
+          "path": "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/footer.ut",
+          "status": "modified"
+        },
+        {
+          "blob": "5938f1fbc021bdf11cf9a76ef5ddddc8ca89611f",
+          "path": "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/header.ut",
+          "status": "modified"
+        },
+        {
+          "blob": "4175ad1fcdf40390ee6806d520de4b4aed782635",
+          "path": "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/sysauth.ut",
+          "status": "modified"
+        },
+        {
+          "blob": "7fe20a603d49d095dc2c6de98c4554549440de24",
+          "path": "themes/luci-theme-material/ucode/template/themes/material/footer.ut",
+          "status": "modified"
+        },
+        {
+          "blob": "ad988d8471576376a292019754722d21619c5c40",
+          "path": "themes/luci-theme-material/ucode/template/themes/material/header.ut",
+          "status": "modified"
+        },
+        {
+          "blob": "f2ab87a68c2f8908ec197628dc6c0e5b44589be4",
+          "path": "themes/luci-theme-openwrt-2020/ucode/template/themes/openwrt2020/footer.ut",
+          "status": "modified"
+        },
+        {
+          "blob": "46a4421f44c39ef4c8845d05585957d1689681da",
+          "path": "themes/luci-theme-openwrt/ucode/template/themes/openwrt.org/footer.ut",
+          "status": "modified"
+        }
+      ],
+      "head": "0dbd70f19795be4c2ea8b20ed568fbabf8787fc8",
+      "number": 8788
+    },
+    {
+      "base": "f7e59912304972e500fa6caf63d925c671b26cb6",
+      "files": [
+        {
+          "blob": "c5badfdb976d59cc2b050d57489ea0876b70307e",
+          "path": "protocols/luci-proto-wireguard/root/usr/share/rpcd/ucode/luci.wireguard",
+          "status": "modified"
+        }
+      ],
+      "head": "a581a008fc9735daec5d9e0c14a1f0fc1d240afe",
+      "number": 8806
+    },
+    {
+      "base": "a7b9db461581a6e9c638a67f3e525e717f66ed32",
+      "files": [
+        {
+          "blob": "6ca66a4295adb8f237a91d406129642d954fc536",
+          "path": "applications/luci-app-openthread/root/usr/share/rpcd/ucode/luci.openthread",
+          "status": "added"
+        }
+      ],
+      "head": "1a69eb19788e00d6400df5c14f538c5dc6ec62c1",
+      "number": 8871
+    },
+    {
+      "base": "859f54738e6ca6fd33c94df12b70c1e87877c868",
+      "files": [
+        {
+          "blob": "2f9bf32915d69da624a3f413af4a86ece226579c",
+          "path": "applications/luci-app-commands/ucode/controller/commands.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "7b8471c19912305b61b6a0eca865e1447ee47534",
+          "path": "applications/luci-app-commands/ucode/template/commands.ut",
+          "status": "modified"
+        },
+        {
+          "blob": "16d1a000b0fbed27ebc113d3af226ddf2bc6775c",
+          "path": "applications/luci-app-ddns/root/usr/share/rpcd/ucode/ddns.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "6a45326ce244712f86e0e23a5a3a9a1312514a5c",
+          "path": "protocols/luci-proto-openvpn/root/usr/share/rpcd/ucode/luci.openvpn.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "3c7082f7cffd12252f59140ad70e7775b0ad6ca3",
+      "number": 8878
+    },
+    {
+      "base": "459941fb2fdb7365b0169ea06e9148afdd0319e0",
+      "files": [
+        {
+          "blob": "5afa01a5a1e0b5e37a0d0e6a84cbe802eba65fb0",
+          "path": "applications/luci-app-openthread/root/usr/share/rpcd/ucode/luci.openthread",
+          "status": "added"
+        }
+      ],
+      "head": "4326260b9e1b45da021c0a81ee233610987413f7",
+      "number": 8890
+    },
+    {
+      "base": "1154ee361d5d41811f7ea9355f76ac919e36b93f",
+      "files": [
+        {
+          "blob": "b9dac5acc122dde7c740ff0037ef91877fa1c485",
+          "path": "themes/luci-theme-bootstrap/ucode/template/themes/bootstrap/header.ut",
+          "status": "modified"
+        },
+        {
+          "blob": "42a63e88d731ded2504914224d3eaee98daf842d",
+          "path": "themes/luci-theme-material/ucode/template/themes/material/header.ut",
+          "status": "modified"
+        }
+      ],
+      "head": "e00b7d9252f367bdeceb4ba5c4b0f085ae9276bb",
+      "number": 8989
+    },
+    {
+      "base": "ddccfc9ec628a9e1a3990e9dd1af8968e80a6970",
+      "files": [
+        {
+          "blob": "9f08cfdca084618d8ce49872593fd6c0dc3594cb",
+          "path": "modules/luci-base/root/usr/share/rpcd/ucode/luci",
+          "status": "modified"
+        }
+      ],
+      "head": "1ebfc749ca6a58ceb88946f1c53c86ea7de0c63a",
+      "number": 8996
+    },
+    {
+      "base": "0257cc05ad4184eb13b62edaf946028b6db94cf6",
+      "files": [
+        {
+          "blob": "81f4228ff8e1cc4503929230a3d60b5ca6b1f201",
+          "path": "applications/luci-app-rustdesk-server/root/usr/share/rpcd/ucode/rustdesk-server.uc",
+          "status": "removed"
+        }
+      ],
+      "head": "78b3f69387c8e6da8ade607b0fb9afd696c2f6c9",
+      "number": 9058
+    },
+    {
+      "base": "7c91cb278d7cf19878069a44d5d1992f65c4e315",
+      "files": [
+        {
+          "blob": "8aeee9e5a52dfb1331f021141de8495377dc8303",
+          "path": "modules/luci-base/root/usr/share/rpcd/ucode/luci",
+          "status": "modified"
+        }
+      ],
+      "head": "de283430ef200792fcef8b417bc55be42f5b871e",
+      "number": 9059
+    },
+    {
+      "base": "9ece3107549998e17baddecc13ba38ea64b5e60e",
+      "files": [
+        {
+          "blob": "ffc6634dfeb88d072ca660395af1c0636734450f",
+          "path": "applications/luci-app-uapi/root/usr/share/rpcd/ucode/uapi.uc",
+          "status": "added"
+        }
+      ],
+      "head": "8c3a3e0a5121a7eb59f3faa670dea80c13c0d3d1",
+      "number": 9128
+    },
+    {
+      "base": "b0cead459cfb434f2b2066e03f36c5bf39a583e7",
+      "files": [
+        {
+          "blob": "4f8a06fa360f28f608d002622c82f37d77fc03b6",
+          "path": "applications/luci-app-notes/root/usr/share/rpcd/ucode/notes",
+          "status": "added"
+        }
+      ],
+      "head": "8440dec3de045b8e8d3c98e2a524968b7394b509",
+      "number": 9132
+    },
+    {
+      "base": "59b4e336d732f493f51e77563ae4f73251983b8f",
+      "files": [
+        {
+          "blob": "a60f0b1627498426e49a761ce879722ca76f40e8",
+          "path": "applications/luci-app-sfp-info/root/usr/share/rpcd/ucode/sfp-info.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "1140c95708dbfc5f81ad6169232eb937f65bf7e7",
+      "number": 9165
+    },
+    {
+      "base": "1da78bdbce437e97cf7bb863ebd93d99a16ff665",
+      "files": [
+        {
+          "blob": "2abc646e4ff3cde7798ed98c5726ac88e7709807",
+          "path": "modules/luci-base/root/usr/share/rpcd/ucode/luci",
+          "status": "modified"
+        }
+      ],
+      "head": "956ad517fbae8a93bf82be25935340af15444a92",
+      "number": 9178
+    },
+    {
+      "base": "326145c2399c4c07db47ea4dda41f763621ec016",
+      "files": [
+        {
+          "blob": "f99e254c32ab517bbae24c480f2e1372e4f5aac1",
+          "path": "applications/luci-app-switchdev/root/usr/share/rpcd/ucode/luci.switchdev",
+          "status": "added"
+        }
+      ],
+      "head": "abaf6cd9805bc9e0e0128dc1bd5e7f46bf0328e9",
+      "number": 9179
+    },
+    {
+      "base": "59b4e336d732f493f51e77563ae4f73251983b8f",
+      "files": [
+        {
+          "blob": "c77331a27abf5ddac70dc21f7784fc724ffd6323",
+          "path": "applications/luci-app-pbr/root/usr/share/rpcd/ucode/luci.pbr",
+          "status": "added"
+        }
+      ],
+      "head": "b178a1dff3511bc6c24808973ea450da34470ee7",
+      "number": 9193
+    },
+    {
+      "base": "59b4e336d732f493f51e77563ae4f73251983b8f",
+      "files": [
+        {
+          "blob": "5ac88b5fce0a38dd47cfafc101e377d05d2bd120",
+          "path": "modules/luci-base/ucode/sys.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "331c53a8068b6e0a602e138ab53f1fe395357ba5",
+      "number": 9195
+    },
+    {
+      "base": "2cd0c0bd04cf2e82f9425199b4da87aaae6f103a",
+      "files": [
+        {
+          "blob": "49d5247e0ccad06a3800bf65540a2c021ad36c04",
+          "path": "applications/luci-app-upnp/root/usr/share/rpcd/ucode/luci.upnp",
+          "status": "modified"
+        }
+      ],
+      "head": "636cff40b94025038875d90fd91a8d5f4c3176e7",
+      "number": 9200
+    },
+    {
+      "base": "9a62efcc5a063d43d7871c8e2c5bea2dad83eb47",
+      "files": [
+        {
+          "blob": "a99d6d698b6d55ea42759643b24d07d395f524c1",
+          "path": "protocols/luci-proto-jrd/root/usr/share/rpcd/ucode/luci.jrd",
+          "status": "added"
+        }
+      ],
+      "head": "78d6e12255b72fd71abae68ffe7b096a676b2227",
+      "number": 9209
+    },
+    {
+      "base": "217e71dc75dae31ab670b0e602162a76559a0b47",
+      "files": [
+        {
+          "blob": "5ea6af3b0027fb3a053e94615d870703bd571880",
+          "path": "applications/luci-app-dockerman/root/usr/share/rpcd/ucode/docker_rpc.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "3abb5aa82c4baaec3a9f80dcfecf210ea101df6f",
+      "number": 9212
+    },
+    {
+      "base": "ff373d85c30a3c668f249cf7bc6c47b859d37be8",
+      "files": [
+        {
+          "blob": "567582452e6fe6130026955487e70a3a1b377a70",
+          "path": "applications/luci-app-trafficctl/root/usr/share/rpcd/ucode/luci.trafficctl.uc",
+          "status": "added"
+        }
+      ],
+      "head": "ce83d6e8db57c1052abe4a9294073aea3a02b56a",
+      "number": 9221
+    },
+    {
+      "base": "326145c2399c4c07db47ea4dda41f763621ec016",
+      "files": [
+        {
+          "blob": "5954001ba58e5462d88d14e848598d3c15d92cc4",
+          "path": "applications/luci-app-corosync-qnetd/root/usr/share/rpcd/ucode/luci.qnetd",
+          "status": "added"
+        },
+        {
+          "blob": "135072892b2a4bc23c8e6ffa82d9e5eaf65e30fb",
+          "path": "applications/luci-app-corosync-qnetd/root/usr/share/ucode/qnetd.uc",
+          "status": "added"
+        },
+        {
+          "blob": "17f8351e3991f4ba6ee796036a8b7a4dc7310453",
+          "path": "applications/luci-app-corosync-qnetd/tests/parser.uc",
+          "status": "added"
+        }
+      ],
+      "head": "86fb70d6abfefefc9e04504937fb0e5bbcb6524f",
+      "number": 9253
+    },
+    {
+      "base": "85c7f60405d8f6dab5b2805151d9b334731ba0a3",
+      "files": [
+        {
+          "blob": "8fff63962820c77d98f50d3f3bae980e7b77d129",
+          "path": "modules/luci-base/root/usr/share/rpcd/ucode/luci",
+          "status": "modified"
+        },
+        {
+          "blob": "b2ad5b3f307bac8fdf6cffa243e5b3ce581f4346",
+          "path": "modules/luci-base/ucode/controller/admin/index.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "f9c7b51f7ae2577ed1656dad56db092be78849d8",
+          "path": "modules/luci-base/ucode/dispatcher.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "b1f5813e0956c786034e8f46a315bd491db02b38",
+          "path": "modules/luci-base/ucode/template/sysauth.ut",
+          "status": "modified"
+        },
+        {
+          "blob": "d80731ea26b8e09e6c1321039684f2734cbe0412",
+          "path": "themes/luci-theme-footstrap/ucode/template/themes/footstrap/sysauth.ut",
+          "status": "modified"
+        }
+      ],
+      "head": "d5d6d14ed6d4fca15cdc43e70caab22baf5f5874",
+      "number": 9258
+    },
+    {
+      "base": "8cbf09978159264baeb61cf282b63e0ce50f76a1",
+      "files": [
+        {
+          "blob": "58000b09be479e12ec904ba95dae6acf9a4c0655",
+          "path": "modules/luci-base/ucode/authplugins.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "7a27ed2a1900c6802675c29e86c584261367f121",
+          "path": "modules/luci-base/ucode/controller/admin/index.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "1395f036fbf6558d050a311c659ec3a269f22363",
+          "path": "modules/luci-base/ucode/dispatcher.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "7e03fb2c7e7fe26412cf1f41dceacdcff7090c48",
+      "number": 9260
+    },
+    {
+      "base": "1da78bdbce437e97cf7bb863ebd93d99a16ff665",
+      "files": [
+        {
+          "blob": "3c0223570589502ad619d71f07c633c79315079c",
+          "path": "modules/luci-base/ucode/authplugins.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "b4e2071e2e8608881c34666f37b49f2a6519a349",
+          "path": "modules/luci-base/ucode/http.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "86672ad3d7bacde13a557a23cf798ff309628858",
+          "path": "modules/luci-base/ucode/luciplugins.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "82e91eb6170d1be40e27b919e1b538391d475650",
+      "number": 9261
+    },
+    {
+      "base": "57126beca6fd98d4b9db28e96873412f2715f83a",
+      "files": [
+        {
+          "blob": "de8e2619f455cdcf9d3f11a3cca1a6c259c82900",
+          "path": "applications/luci-app-upnp/root/usr/share/rpcd/ucode/luci.upnp",
+          "status": "modified"
+        }
+      ],
+      "head": "0d6b1bee6fe0e2a465682093d13b402c2b30a868",
+      "number": 9269
+    },
+    {
+      "base": "ff373d85c30a3c668f249cf7bc6c47b859d37be8",
+      "files": [
+        {
+          "blob": "2c17de845e39498f6957980c5bf5ea620aa79051",
+          "path": "applications/luci-app-crowdsec-monitor/root/usr/share/rpcd/ucode/crowdsec-monitor.uc",
+          "status": "added"
+        }
+      ],
+      "head": "7ccee00802c9cb669ca7521ef887500f51b0d337",
+      "number": 9272
+    },
+    {
+      "base": "f7675c07caf6b129cb8fedb5b683550422978e31",
+      "files": [
+        {
+          "blob": "e62544c4ace1f97b8ed4d49560a9cf47b870b928",
+          "path": "modules/luci-mod-dashboard/root/usr/share/rpcd/ucode/luci.dashboard",
+          "status": "modified"
+        },
+        {
+          "blob": "a6408bfac4735bcc8a93bb5269ad484601ca3e1c",
+          "path": "modules/luci-mod-dashboard/root/usr/share/ucode/luci/dashboard/topology.uc",
+          "status": "added"
+        }
+      ],
+      "head": "9907da8629449b0cbdabca53a389355ee94cf937",
+      "number": 9275
+    },
+    {
+      "base": "8cbf09978159264baeb61cf282b63e0ce50f76a1",
+      "files": [
+        {
+          "blob": "82fd13c2fc2d1b48811a3e19853671dcf92061ee",
+          "path": "applications/luci-app-wifihistory/root/usr/share/rpcd/ucode/wifihistory.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "3ffc82107fa65e91bd859bc536e74de407e15cdf",
+          "path": "applications/luci-app-wifihistory/root/usr/share/ucode/wifihistory/clear-core.uc",
+          "status": "added"
+        },
+        {
+          "blob": "ec07ecc1b331c42d093906f93e7c1cfb05f55ecc",
+          "path": "applications/luci-app-wifihistory/root/usr/share/ucode/wifihistory/json-file.uc",
+          "status": "added"
+        },
+        {
+          "blob": "93c61de89a1924b62defce219ec3c4ba7a18dfba",
+          "path": "applications/luci-app-wifihistory/root/usr/share/ucode/wifihistory/mounts.uc",
+          "status": "added"
+        },
+        {
+          "blob": "998afdfd0647bce4ef50def0fb6b8032f794653d",
+          "path": "applications/luci-app-wifihistory/root/usr/share/ucode/wifihistory/recovery.uc",
+          "status": "added"
+        },
+        {
+          "blob": "46887e30887613ca586cf584935ee2cea947410f",
+          "path": "applications/luci-app-wifihistory/root/usr/share/ucode/wifihistory/storage-core.uc",
+          "status": "added"
+        },
+        {
+          "blob": "ea70d8f8dffca735d69b0fce17688041f8502c88",
+          "path": "applications/luci-app-wifihistory/root/usr/share/ucode/wifihistory/storage.uc",
+          "status": "added"
+        },
+        {
+          "blob": "ca96e51243a3a9bd95aa32d620acf6236e47d623",
+          "path": "applications/luci-app-wifihistory/tests/clear-core.uc",
+          "status": "added"
+        },
+        {
+          "blob": "99dee5a5938661afa7f5e7e88384a47102731bec",
+          "path": "applications/luci-app-wifihistory/tests/mounts.uc",
+          "status": "added"
+        },
+        {
+          "blob": "c99e87ad2dab9caedcd1f57cd672c8f8342c6d8b",
+          "path": "applications/luci-app-wifihistory/tests/recovery.uc",
+          "status": "added"
+        },
+        {
+          "blob": "6231c4e9699763ff4185c0d72822e87d26db9bd3",
+          "path": "applications/luci-app-wifihistory/tests/storage-core.uc",
+          "status": "added"
+        }
+      ],
+      "head": "12b9edc9e6ccbba2099c17fd4c73bf07215be908",
+      "number": 9286
+    },
+    {
+      "base": "f7675c07caf6b129cb8fedb5b683550422978e31",
+      "files": [
+        {
+          "blob": "d55086fc42e403a0a0b7cec66687db06f2e49389",
+          "path": "themes/luci-theme-athena/root/usr/share/rpcd/ucode/luci.athena",
+          "status": "added"
+        },
+        {
+          "blob": "25941c564e31995dac5bb71460bda0493f8ebbb8",
+          "path": "themes/luci-theme-athena/tests/rpc.uc",
+          "status": "added"
+        },
+        {
+          "blob": "7c837875de864134bb0e9853cca644b0b625a52f",
+          "path": "themes/luci-theme-athena/ucode/template/themes/athena/footer.ut",
+          "status": "added"
+        },
+        {
+          "blob": "b9c068fda703367528f71fe556ee34498c880da2",
+          "path": "themes/luci-theme-athena/ucode/template/themes/athena/header.ut",
+          "status": "added"
+        },
+        {
+          "blob": "e456d89a9702089762c0e05a9736b1bc54b2a509",
+          "path": "themes/luci-theme-athena/ucode/template/themes/athena/sysauth.ut",
+          "status": "added"
+        }
+      ],
+      "head": "7edbc0c3e0b7ca86350426c2f59ec56fff0b52e0",
+      "number": 9291
+    },
+    {
+      "base": "256f69627d97f63e9173e2ef213a339e70b4b7a3",
+      "files": [
+        {
+          "blob": "90d3f7aa5178248ee7e1a062d71058264683b669",
+          "path": "applications/luci-app-telldus-mqtt/root/usr/share/rpcd/ucode/luci.telldus-mqtt",
+          "status": "added"
+        }
+      ],
+      "head": "87c741ea455f33ee7240e9f7decca2975e498d1e",
+      "number": 9293
+    },
+    {
+      "base": "8cbf09978159264baeb61cf282b63e0ce50f76a1",
+      "files": [
+        {
+          "blob": "027830df5ead91392c4418232bf6c49e49e0b7b9",
+          "path": "applications/luci-app-sf21-dpns/root/usr/share/rpcd/ucode/luci.sf21-dpns",
+          "status": "added"
+        }
+      ],
+      "head": "945c2c84482b4176825dfde8ac3a4d63f50fee5b",
+      "number": 9294
+    },
+    {
+      "base": "ff373d85c30a3c668f249cf7bc6c47b859d37be8",
+      "files": [
+        {
+          "blob": "01817c94971f2acfc2ee1bda51442ae7de8b34be",
+          "path": "modules/luci-base/root/usr/share/rpcd/ucode/luci",
+          "status": "modified"
+        }
+      ],
+      "head": "820d7eb11e921fe1d7e424d7fb123b5a9e5dbd76",
+      "number": 9304
+    },
+    {
+      "base": "ff373d85c30a3c668f249cf7bc6c47b859d37be8",
+      "files": [
+        {
+          "blob": "6bf995cdfeae9b871b54b671efebd1c28782bbaa",
+          "path": "applications/luci-app-bird/root/usr/share/rpcd/ucode/luci.ospf",
+          "status": "added"
+        }
+      ],
+      "head": "cabe68d13a82d7a1a5cbe6210625affd6f4470b4",
+      "number": 9307
+    }
+  ],
+  "observed_at": "2026-11-25T02:53:32Z",
+  "open_pr_count": 200,
+  "schema": "gate8-luci-open-pr-ucode-paths-v1"
+}

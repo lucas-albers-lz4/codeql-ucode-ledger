@@ -72,8 +72,15 @@ exact routes, diagnostics, source witnesses and model identities. An
 independent exact-head review found no further merge blocker. The PR merged
 as producer `main` `4f5b2ab51c49d2c0b5b022ddab59e185f1d0efd5` on
 2026-11-25, and its merged branch was deleted. It adds no production query
-or default-suite rule. A tag-bound release run on this new `main` and the
-downstream gates remain open.
+or default-suite rule. Producer
+[PR #164](https://github.com/lucas-albers-lz4/codeql-ucode/pull/164)
+then fixed macOS diagnostic test-path aliases without changing production
+verification. Its exact head `6bb1d72` passed 34 affected tests under normal
+and optimized Python and 231 full-suite tests locally; hosted Cargo and
+M3/M4 smoke passed, including the nonphysical-URI negative. It merged as the
+current producer `main` `8d0caef1c9f9b683c1e3d9369f63b2d6aaf288eb` on
+2026-11-25, and its merged branch was deleted. A tag-bound release run on
+this current `main` and the downstream gates remain open.
 
 Current execution sequence: (1) confirm the authenticated GitHub release
 immutability toggle, then publish and independently verify the producer's
@@ -439,6 +446,14 @@ workflow. No scheduled trigger or released incoming-source scan exists yet.
    verified source location and one clean control. Verify the job reports its
    producer release, source SHA, exact selected/extracted files, rules run,
    SARIF artifact and status in a maintainer-accessible place.
+
+A [2026-11-25 open LuCI PR path screen](evidence/mvp-gate8-luci-open-pr-paths-20261125/README.md)
+checked changed-file metadata for the 200 PRs returned by a non-atomic open
+PR enumeration: 41 changed a Ucode
+or markup path, and 22 had a broad input/command token in those patches.
+Defensive source review found no eligible **changed-patch** positive for the
+current narrow direct-RPC rule. This does not screen unchanged head-tree code
+or establish a clean negative. Source-first positive selection remains open.
 
 **Gate 8:** a verified incoming upstream change with a known alert and an
 independently checked clean control pass through the released event resolver,
