@@ -1,6 +1,6 @@
 # Claim 100: odhcpd avoids a dangling first-lease pointer across IA options
 
-- Status: Proposed
+- Status: Demonstrated
 - Program: [Security-extension Wave N](../planning/security-extension-waveN-20261125.md)
 - Producer: `lucas-albers-lz4/codeql-ucode` — source-oracle lane; no analyzer grant assumed
 - Producer commit: `9166af76cf6944e1b3ea5856a9176366a1f7a6ee`
@@ -41,3 +41,7 @@ Pinned-blob census + deterministic pointer-lifetime emulation. No CodeQL extract
 ## Out of scope
 
 No runtime UAF verdict, exploitability, or analyzer `path_found`. No gate lifted.
+
+## Result
+
+Demonstrated (fixed-in-pin source shape). Orchestrator re-ran `run_pipeline.sh` (exit 0): oracle verdict PASS (13/13 checks), controls 3/3. `dhcpv6_free_lease` is pass-by-value and ends in `free(a)` (`src/dhcpv6-ia.c:61,76`), so safety comes from caller-side value semantics; the census enumerates lease free paths (`:1163,:1181,:1332`) and `first` assignment/key-reuse sites (`:1203-1290,:1375`) and shows the fixed invalidation/revalidation order leaves no eligible dangling-`first` path before a subsequent key copy. Fix `5b283832c0a77aed20f1cc384ffc40bc768b06e9` verified ancestor of pin. Source oracle only; no CodeQL extraction, runtime/exploit verdict, `path_found`, or gate lift.

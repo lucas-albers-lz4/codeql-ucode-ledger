@@ -1,6 +1,6 @@
 # Claim 098: odhcpd IA reply serialization checks buffer space at both overflow sites
 
-- Status: Proposed
+- Status: Demonstrated
 - Program: [Security-extension Wave N](../planning/security-extension-waveN-20261125.md)
 - Producer: `lucas-albers-lz4/codeql-ucode` — source-oracle lane; no analyzer grant assumed
 - Producer commit: `9166af76cf6944e1b3ea5856a9176366a1f7a6ee`
@@ -41,3 +41,7 @@ Pinned-blob census + deterministic buffer-offset emulation. No CodeQL extraction
 ## Out of scope
 
 No runtime overflow verdict, exploitability, or analyzer `path_found`. No gate lifted.
+
+## Result
+
+Demonstrated (fixed-in-pin source shape). Orchestrator re-ran `run_pipeline.sh` (exit 0): oracle 10/10 checks, controls 3/3, `vulnerable_sites=0` over 10 eligible write sites. Census covers `build_ia` status/IA header writes (`src/dhcpv6-ia.c:603-607,696-715,807-829`) and the Reconfigure-Accept auth write (`:1282-1283`); each write has a preceding remaining-space check with a buffer-full return, and IA_ADDR signals full consistently with IA_PREFIX in both branch pairs. Fixes `d168c27fb6a55a07ac4c888e09ff2f41e263d7b7`, `6634b7a3c79c41a27687925c98c35c8aea2f2b5a`, `89d18771810bdf73f05db042d0baa4fd1af71eae` verified ancestors of pin. Source oracle only; no CodeQL extraction, runtime/exploit verdict, `path_found`, or gate lift.

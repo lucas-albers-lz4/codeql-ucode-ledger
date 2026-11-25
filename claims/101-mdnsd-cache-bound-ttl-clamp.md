@@ -1,6 +1,6 @@
 # Claim 101: mdnsd cache growth is bounded and hostile TTLs are clamped
 
-- Status: Proposed
+- Status: Demonstrated
 - Program: [Security-extension Wave N](../planning/security-extension-waveN-20261125.md)
 - Producer: `lucas-albers-lz4/codeql-ucode` — source-oracle lane; no analyzer grant assumed
 - Producer commit: `9166af76cf6944e1b3ea5856a9176366a1f7a6ee`
@@ -42,3 +42,7 @@ Pinned-blob census + deterministic cache-growth emulation. No CodeQL extraction 
 ## Out of scope
 
 No runtime OOM/DoS verdict, exploitability, or analyzer `path_found`. No gate lifted.
+
+## Result
+
+Demonstrated (fixed-in-pin source shape). Orchestrator re-ran `run_pipeline.sh` (exit 0): oracle 12/12 checks, controls 3/3, complete allocator census (12 sites, 0 unclassified). Cache bounds `CACHE_TTL_MAX`/`CACHE_ENTRIES_MAX`/`cache_entries_max` (`cache.c:59-62`), service limit (`:202`), TTL clamp before storage (`:305-306`), record limit/drop (`:406-407`), and `-c` override validation (`main.c:111-115`) together bound growth and clamp hostile TTLs so GC can reclaim entries. Fixes `1b5e7bf1cec775b89f1a6068dc0b9df3593b5986` and `bd7599d021571e785bd32a75469e7148eb1772e3` verified ancestors of pin. Source oracle only; no CodeQL extraction, runtime/exploit verdict, `path_found`, or gate lift.

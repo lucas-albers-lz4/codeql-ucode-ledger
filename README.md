@@ -115,12 +115,12 @@ Together these move from source selection through extraction, query, and consume
 | [093](claims/093-ead-send-a-length-underflow.md) | Demonstrated | Security-extension: EAD handle_send_a pre-subtraction length guard (source oracle) |
 | [094](claims/094-ltq-ptm-ioctl-capability-user-copy.md) | Demonstrated | Security-extension: ltq-ptm ioctl capability gate and user-copy accessors (source oracle) |
 | [095](claims/095-jsonpath-token-string-lifetime.md) | Demonstrated | Security-extension: jsonpath token string lifetime in jp_get_token (source oracle) |
-| [096](claims/096-odhcpd-ia-buflen-underflow.md) | Proposed | Security-extension Wave N: odhcpd IA buflen underflow cap |
-| [097](claims/097-odhcpd-duid-endian-memcmp.md) | Proposed | Security-extension Wave N: odhcpd self-loop DUID host-order memcmp |
-| [098](claims/098-odhcpd-ia-reply-serialization-bounds.md) | Proposed | Security-extension Wave N: odhcpd IA reply serialization bounds |
-| [099](claims/099-odhcpd-short-ia-body-validation.md) | Proposed | Security-extension Wave N: odhcpd short IA_NA/IA_PD body validation |
-| [100](claims/100-odhcpd-dangling-first-lease-pointer.md) | Proposed | Security-extension Wave N: odhcpd dangling first-lease pointer |
-| [101](claims/101-mdnsd-cache-bound-ttl-clamp.md) | Proposed | Security-extension Wave N: mdnsd cache bound and hostile TTL clamp |
+| [096](claims/096-odhcpd-ia-buflen-underflow.md) | Demonstrated | Security-extension Wave N: odhcpd IA buflen underflow cap (source oracle) |
+| [097](claims/097-odhcpd-duid-endian-memcmp.md) | Demonstrated | Security-extension Wave N: odhcpd self-loop DUID host-order memcmp (source oracle) |
+| [098](claims/098-odhcpd-ia-reply-serialization-bounds.md) | Demonstrated | Security-extension Wave N: odhcpd IA reply serialization bounds (source oracle) |
+| [099](claims/099-odhcpd-short-ia-body-validation.md) | Demonstrated | Security-extension Wave N: odhcpd short IA_NA/IA_PD body validation (source oracle) |
+| [100](claims/100-odhcpd-dangling-first-lease-pointer.md) | Demonstrated | Security-extension Wave N: odhcpd dangling first-lease pointer (source oracle) |
+| [101](claims/101-mdnsd-cache-bound-ttl-clamp.md) | Demonstrated | Security-extension Wave N: mdnsd cache bound and hostile TTL clamp (source oracle) |
 | [102](claims/102-uhttpd-subscribe-refcount-pairing.md) | Demonstrated | Security-extension: uhttpd subscribe client refcount pairing (source oracle) |
 | [103](claims/103-uhttpd-ubus-url-path-ownership.md) | Demonstrated | Security-extension: uhttpd non-POST /ubus url_path ownership (source oracle) |
 | [104](claims/104-uhttpd-header-accumulation-caps.md) | Demonstrated | Security-extension: uhttpd header count/byte accumulation caps (source oracle) |
