@@ -1317,6 +1317,14 @@ incoming OpenWrt/LuCI changes.
   result, released scan or consumer replay has occurred, and #165 remains
   draft and unscheduled. Integrating its event kind and actual SARIF into the
   released consumer path is still Gate 8 work.
+  The [same-job completion issuer contract](planning/mvp-incoming-completion-issuer-contract-20261125.md)
+  specifies the trusted job boundary, exact event/control artifact links,
+  queue reservation binding, failure transitions and rejection controls needed
+  before a completion can be signed. It is a design, not an implemented issuer.
+  A local offline link probe was reviewed but kept out of the repo because
+  its passing fixture does not pass the actual SARIF consumer and does not
+  establish producer or consumer execution. A valid queue MAC alone cannot
+  turn that synthetic packet into Gate 8 evidence.
   The [12-path recipe mapping](planning/mvp-openwrt-full-tree-candidates-v0.5-mapping-20261124.md)
   identifies conditional product install paths used by the source-staged
   v0.5 expansion, with no installed-byte claim.
