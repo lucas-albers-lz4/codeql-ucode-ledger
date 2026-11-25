@@ -93,6 +93,18 @@ merged branch had no open dependent PR and was deleted with an exact lease.
 The model has no production security query, request-controlled flow or sink,
 so it does not close issue #155 or add MVP alert coverage. A tag-bound
 release run on current main and the downstream gates remain open.
+The next-query inventory screened the current OpenWrt Wi-Fi `fs.stat` then
+`fs.rename` pairs at clean core `727d8d2f8e5b19a2121e2cf05824e9e5cac35310`
+(`supplicant.uc` lines 347–349; `hostapd.uc` lines 583, 587–588).
+Defensive source/model review at clean PR #165 head `742d2d4` found these
+are **model near misses**: both files use namespace `import * as fs` and
+member calls, while `SourceDeclaredFs.qll` requires an unaliased named
+import and identifier callee. The reviewed `stat`/`rename` models therefore
+do not identify these calls. They do not justify a new security query or a
+claim of request-controlled path flow. The direct-import rename fixture and
+LuCI weechat call remain bounded model positives; broader namespace-call
+support and path-write flow stay with #155/#54. This was a source/model
+screen, not a fresh CodeQL run on merged main.
 
 Current execution sequence: (1) confirm the authenticated GitHub release
 immutability toggle, then publish and independently verify the producer's
