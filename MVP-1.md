@@ -1551,6 +1551,16 @@ incoming OpenWrt/LuCI changes.
   and `45545759259` passed the offline contract and policy tests; the released
   scan and graph step skipped on the null lock. Artifact freezing, queue
   custody, credential isolation and the live drill remain open.
+  Stacked [draft PR #170](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/170)
+  began at `2dca31e062b9bee7a69d224cd34ffe7f8bb030ec` with a non-issuing
+  same-job final source/Git recheck and read-only hashed artifact snapshot
+  on exact #168 base `f3886e24e3f8cc86465253b6fb2d6d079d2140d0`.
+  Its initial 30 focused and 89 broader local tests plus `actionlint` passed.
+  Independent review found concrete gaps in excluded tracked-symlink handling,
+  pre-read path validation, exclusive snapshot ownership, graph-to-byte
+  binding and exact stage inventory. These are being corrected on the draft;
+  initial hosted checks cannot establish the freeze boundary. The null lock
+  skips the live scan, so no trusted live freeze or Gate 8 claim exists.
   An earlier offline link probe was kept out because it did not replay the
   actual SARIF consumer. PR #166 adds that replay, but its synthetic tests
   still do not establish producer execution or a trusted consumer run.
