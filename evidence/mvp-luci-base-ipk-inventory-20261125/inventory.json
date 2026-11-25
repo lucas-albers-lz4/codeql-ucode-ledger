@@ -1,0 +1,135 @@
+{
+  "ipk_sha256": "1a2188f5206ce61c993fdcc451781a06994ae2175b489eef56595858ef22b363",
+  "luci_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+  "rows": [
+    {
+      "bytes": 4033,
+      "class": "source_equal",
+      "installed_path": "usr/share/ucode/luci/controller/admin/index.uc",
+      "ipk_sha256": "7d7a5dc3e694ad232e4e0f3d01db17c2f5502338aa8c4fc44fa714b0b1147620",
+      "source_path": "modules/luci-base/ucode/controller/admin/index.uc",
+      "source_sha256": "7d7a5dc3e694ad232e4e0f3d01db17c2f5502338aa8c4fc44fa714b0b1147620"
+    },
+    {
+      "bytes": 3304,
+      "class": "source_equal",
+      "installed_path": "usr/share/ucode/luci/controller/admin/uci.uc",
+      "ipk_sha256": "ac75cfef7d74f87ed7f957778004a7bf486c76df699398c215795b4947e0c93e",
+      "source_path": "modules/luci-base/ucode/controller/admin/uci.uc",
+      "source_sha256": "ac75cfef7d74f87ed7f957778004a7bf486c76df699398c215795b4947e0c93e"
+    },
+    {
+      "bytes": 23113,
+      "class": "source_equal",
+      "installed_path": "usr/share/ucode/luci/dispatcher.uc",
+      "ipk_sha256": "4f9923cf569aeebb956343d208bcc38f40d8a26d2f46f12c5539a9582fa4f037",
+      "source_path": "modules/luci-base/ucode/dispatcher.uc",
+      "source_sha256": "4f9923cf569aeebb956343d208bcc38f40d8a26d2f46f12c5539a9582fa4f037"
+    },
+    {
+      "bytes": 13202,
+      "class": "source_equal",
+      "installed_path": "usr/share/ucode/luci/http.uc",
+      "ipk_sha256": "68f8a7dffc7bccdfe98956cb3b6e0e087592c86049a2b83d061e5be3585fa5fa",
+      "source_path": "modules/luci-base/ucode/http.uc",
+      "source_sha256": "68f8a7dffc7bccdfe98956cb3b6e0e087592c86049a2b83d061e5be3585fa5fa"
+    },
+    {
+      "bytes": 4631,
+      "class": "source_equal",
+      "installed_path": "usr/share/ucode/luci/runtime.uc",
+      "ipk_sha256": "b15afce07020e2a7ad50718d49a874da30d0582ede7de65e54acaceb6e9d0926",
+      "source_path": "modules/luci-base/ucode/runtime.uc",
+      "source_sha256": "b15afce07020e2a7ad50718d49a874da30d0582ede7de65e54acaceb6e9d0926"
+    },
+    {
+      "bytes": 3443,
+      "class": "source_equal",
+      "installed_path": "usr/share/ucode/luci/sys.uc",
+      "ipk_sha256": "0380fba5d843a8950bab0ef70982cb40ab8f475e8d267c873e4199a736b55656",
+      "source_path": "modules/luci-base/ucode/sys.uc",
+      "source_sha256": "0380fba5d843a8950bab0ef70982cb40ab8f475e8d267c873e4199a736b55656"
+    },
+    {
+      "bytes": 603,
+      "class": "source_equal",
+      "installed_path": "usr/share/ucode/luci/template/csrftoken.ut",
+      "ipk_sha256": "a2f223208d9ff2c3e1bfa808f11d74636028b4902973afb5b7f336328f7e2160",
+      "source_path": "modules/luci-base/ucode/template/csrftoken.ut",
+      "source_sha256": "a2f223208d9ff2c3e1bfa808f11d74636028b4902973afb5b7f336328f7e2160"
+    },
+    {
+      "bytes": 435,
+      "class": "source_equal",
+      "installed_path": "usr/share/ucode/luci/template/error404.ut",
+      "ipk_sha256": "8fa2306435be3aca3ca59b09adaaa0190292c6cfe2fecda9df4eb3eeac5b8552",
+      "source_path": "modules/luci-base/ucode/template/error404.ut",
+      "source_sha256": "8fa2306435be3aca3ca59b09adaaa0190292c6cfe2fecda9df4eb3eeac5b8552"
+    },
+    {
+      "bytes": 1127,
+      "class": "source_equal",
+      "installed_path": "usr/share/ucode/luci/template/error500.ut",
+      "ipk_sha256": "6c7a519229524d7a34b18c5da97cb8b05f622ee0938fe1a4b2d2516a6adf1887",
+      "source_path": "modules/luci-base/ucode/template/error500.ut",
+      "source_sha256": "6c7a519229524d7a34b18c5da97cb8b05f622ee0938fe1a4b2d2516a6adf1887"
+    },
+    {
+      "bytes": 1271,
+      "class": "source_equal",
+      "installed_path": "usr/share/ucode/luci/template/footer.ut",
+      "ipk_sha256": "5625f938d625ff406e53434d37aa7643cc09e11f74379887a4ba154021240495",
+      "source_path": "modules/luci-base/ucode/template/footer.ut",
+      "source_sha256": "5625f938d625ff406e53434d37aa7643cc09e11f74379887a4ba154021240495"
+    },
+    {
+      "bytes": 1055,
+      "class": "version_substitution",
+      "installed_path": "usr/share/ucode/luci/template/header.ut",
+      "ipk_sha256": "6fb25a4ddb6038a3ffc207906157db2503cc1bff7dd230fd588776cde329c02e",
+      "source_path": "modules/luci-base/ucode/template/header.ut",
+      "source_sha256": "67132f2d1c1cf743f3e4ce11d660a5a2569b461804a63914061fe956171be6c2"
+    },
+    {
+      "bytes": 2096,
+      "class": "source_equal",
+      "installed_path": "usr/share/ucode/luci/template/sysauth.ut",
+      "ipk_sha256": "8c1dcf98cd29410021ed4f5f9dc668f8c70c0227f39f97f60f7205f9d52fa5bb",
+      "source_path": "modules/luci-base/ucode/template/sysauth.ut",
+      "source_sha256": "8c1dcf98cd29410021ed4f5f9dc668f8c70c0227f39f97f60f7205f9d52fa5bb"
+    },
+    {
+      "bytes": 231,
+      "class": "source_equal",
+      "installed_path": "usr/share/ucode/luci/template/view.ut",
+      "ipk_sha256": "785bf7d4cceb5cdd9f113cbede0bde5b69e35b69cc1b51d2e498665d50091d62",
+      "source_path": "modules/luci-base/ucode/template/view.ut",
+      "source_sha256": "785bf7d4cceb5cdd9f113cbede0bde5b69e35b69cc1b51d2e498665d50091d62"
+    },
+    {
+      "bytes": 204,
+      "class": "source_equal",
+      "installed_path": "usr/share/ucode/luci/uhttpd.uc",
+      "ipk_sha256": "a2b2694f52c021af16dd06ac8c988b8a0a726d9e8186d308708268ebb8849493",
+      "source_path": "modules/luci-base/ucode/uhttpd.uc",
+      "source_sha256": "a2b2694f52c021af16dd06ac8c988b8a0a726d9e8186d308708268ebb8849493"
+    },
+    {
+      "bytes": 86,
+      "class": "generated",
+      "content": "export const revision = '26.284.22350~8125d12', branch = 'LuCI openwrt-25.12 branch';\n",
+      "installed_path": "usr/share/ucode/luci/version.uc",
+      "ipk_sha256": "9567da9ecf509e8a58cec8b09806d8a0bd3d3717fb9a8160c24ad3e1903a6fa8"
+    },
+    {
+      "bytes": 15882,
+      "class": "source_equal",
+      "installed_path": "usr/share/ucode/luci/zoneinfo.uc",
+      "ipk_sha256": "54162a073660ea65706aa920a10cfbd3ee4d345e1e4ab3bed8a8d56c9cab3863",
+      "source_path": "modules/luci-base/ucode/zoneinfo.uc",
+      "source_sha256": "54162a073660ea65706aa920a10cfbd3ee4d345e1e4ab3bed8a8d56c9cab3863"
+    }
+  ],
+  "schema": "luci-base-ipk-suffix-inventory-v1",
+  "selection": "all regular .uc/.ut data.tar.gz members"
+}
