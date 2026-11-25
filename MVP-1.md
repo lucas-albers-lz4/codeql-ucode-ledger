@@ -532,8 +532,13 @@ After the `fs.rename` model merge advanced producer main to
 `8949bfab8d1e057dc0c06659da266b9d18cec0cb`, the draft branch was
 updated with an exact-head guard from `b8ca433dd49cc16155bf1b831f529ae07f36cb06`
 to `cc63aee8f9e8d31e1f71474f3008b8ccdd96bfdc`. Fresh Linux R2, Cargo
-and M3/M4 checks are queued on the combined tree. The earlier hosted result
-does not establish behavior after the model-library change.
+and M3/M4 checks launched on the combined tree. The [fresh Linux R2
+receipt](evidence/mvp-nested-rpc-current-main-linux-20261125/README.md)
+passed at synthetic merge `a7a8df3`, which has the same Git tree as the PR
+head: 11 exact plain extractions, zero errors, the two predeclared explicit
+SARIF locations and nine clear controls, with all 126 commands exiting zero.
+Cargo passed on the same head; M3/M4 smoke was still running at this
+checkpoint. The testing query remains outside the default suite.
 This is a bounded testing-query Linux regression, not a release or current
 source alert. The wider M3/M4 smoke was still running at this checkpoint.
 Producer #165 subsequently changed `main`'s model library; revalidate #166
