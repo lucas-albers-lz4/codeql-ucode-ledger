@@ -3,7 +3,7 @@
 ## State
 
 - 091–105 Demonstrated (orchestrator re-ran pipelines, controls 3/3). Wave N (096–101) gated from lanes N1/N2/O; Wave P (105, ASU) gated from openwrt-org sweep.
-- Lanes I/J/M hit provider quota after partial artifacts; orchestrator completed 092/094 source oracles from pinned blobs. Lane M routing re-measurement still owed.
+- Lanes I/J/M hit provider quota after partial artifacts; orchestrator completed 091–094 source oracles from pinned blobs (lane I terminal receipt: quota exit 1; 091/093 pipelines re-run exit 0, controls 3/3). Lane M routing re-measurement still owed.
 - Deferred uhttpd resource-lifecycle advisories: lane L decision packet accepted; claims 102–104 Demonstrated from pinned-source census/controls.
 - Current-main application-routing re-measurement prompt prepared (lane M); heavy slot not yet acquired.
 - No gate lifted; no worker commit/push.
@@ -26,3 +26,6 @@
 - 2026-11-25: openwrt-org sweep (90 repos) found one unclaimed advisory (asu
   GHSA-r3gq-96h6-3v7q). Gated 105 Demonstrated (full request hash + STRING_PATTERN
   package/profile validation + list exec_run); oracle 9/9, controls 3/3.
+- 2026-11-25: Lane I (091/093) background process exited 1 on provider quota after
+  partial artifacts; orchestrator re-ran both pipelines (exit 0): 091 oracle PASS,
+  controls 27/27 (gate 3/3); 093 oracle pass, controls 3/3. Claims remain Demonstrated.
