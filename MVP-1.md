@@ -504,6 +504,20 @@ prove PR-time detection.
 **Gate 9:** the team has a repeatable release/update and triage process that
 keeps the scanner useful as the upstream code and query pack change.
 
+Producer [draft PR #166](https://github.com/lucas-albers-lz4/codeql-ucode/pull/166)
+is a Stage 9 candidate, not a release gate or default-suite expansion. It
+keeps the historical Tailscale regression intact and adds a `testing`-tagged
+nested RPC shell-command query with renamed-command/field controls. At clean
+head `6227cfe1cb3f32bd7ad70d47d635ef6d1c60bd9c`, a fresh local
+11-file source-staged matrix extracted each file once with zero errors and
+reported only the historical parent and renamed positive; the actual fix and
+eight controls had no alert. A separate 17-file current LuCI source-staged
+run extracted each file once with zero errors and returned no candidates.
+The query relies on bounded syntax and source order, not proven execution
+flow or runtime registration. Its copied pack provenance and local-only run
+limits are recorded in the draft. A pinned hosted Linux matrix and review of
+current eligible source are required before any promotion decision.
+
 ### Stage 10 — decide whether the scanner is useful enough to propose
 
 1. Review the current source inventory with OpenWrt/LuCI maintainers' actual
