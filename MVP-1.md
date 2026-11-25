@@ -889,8 +889,9 @@ incoming OpenWrt/LuCI changes.
   run `45441997127`. PR #152 merged as
   `a1c9875575814329e5abdc70bc36e30f5ef0b987` on 2026-11-24. The
   released-bundle Linux R3 job was not part of that merge.
-  [Draft consumer PR #154](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/154)
-  now prepares that job at `745f28f` on merged consumer `main`. Its lock has
+  [Consumer PR #154](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/154)
+  prepared that job at `745f28f` and merged as
+  `e3b99cd7c03ca410bba0b9bae5d9095f21b11647` on 2026-11-25. Its lock has
   null release pins and fails before network use; PR CI runs 13 offline
   contract tests while fully null, rejects partial pins, and runs live R3
   once all pins are filled. It verifies the immutable release, exact
@@ -899,7 +900,10 @@ incoming OpenWrt/LuCI changes.
   `actionlint` pass. Hosted run `45444889701` passed `contract` and
   `lock-state`; its live `released-openvpn-pair` job was correctly skipped
   because all release pins are null. The repository's `typed-handoff` and
-  `unittest` jobs also passed on this PR head. No release or live R3 result
+  `unittest` jobs also passed on this PR head. Before merge, the exact PR
+  head was merged with then-current consumer `main` in a disposable checkout;
+  13 focused tests, `actionlint` and diff checks passed on the combined tree.
+  The stacked #155 base branch was retained. No release or live R3 result
   exists yet.
   This is parallel R3 preparation, not a released-producer Linux
   handoff; an actual pinned release and fresh job remain required.
