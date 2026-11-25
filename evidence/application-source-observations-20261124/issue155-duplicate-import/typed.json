@@ -1,0 +1,2044 @@
+{
+  "original_sha256": "ce32a2a153d2bce26402155ea1aca073baa3e25279551140d36e22ad2f8d2a54",
+  "table": {
+    "#select": {
+      "columns": [
+        {
+          "name": "path",
+          "kind": "String"
+        },
+        {
+          "name": "source",
+          "kind": "Entity"
+        },
+        {
+          "name": "source_classes",
+          "kind": "String"
+        },
+        {
+          "name": "field",
+          "kind": "String"
+        },
+        {
+          "name": "field_index",
+          "kind": "Integer"
+        },
+        {
+          "name": "target",
+          "kind": "Entity"
+        },
+        {
+          "name": "target_classes",
+          "kind": "String"
+        },
+        {
+          "name": "source_start_line",
+          "kind": "Integer"
+        },
+        {
+          "name": "source_start_column",
+          "kind": "Integer"
+        },
+        {
+          "name": "target_start_line",
+          "kind": "Integer"
+        },
+        {
+          "name": "target_start_column",
+          "kind": "Integer"
+        }
+      ],
+      "tuples": [
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777215
+          },
+          "ImportStatement",
+          "import-source",
+          -1,
+          {
+            "id": -16777195
+          },
+          "String",
+          1,
+          1,
+          1,
+          32
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777215
+          },
+          "ImportStatement",
+          "import-clause",
+          -1,
+          {
+            "id": -16777212
+          },
+          "ImportClause",
+          1,
+          1,
+          1,
+          8
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777212
+          },
+          "ImportClause",
+          "import-named",
+          -1,
+          {
+            "id": -16777211
+          },
+          "NamedImports",
+          1,
+          8,
+          1,
+          8
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777211
+          },
+          "NamedImports",
+          "named-import",
+          0,
+          {
+            "id": -16777208
+          },
+          "ImportSpecifier",
+          1,
+          8,
+          1,
+          10
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777211
+          },
+          "NamedImports",
+          "named-import",
+          1,
+          {
+            "id": -16777203
+          },
+          "ImportSpecifier",
+          1,
+          8,
+          1,
+          16
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777208
+          },
+          "ImportSpecifier",
+          "import-name",
+          -1,
+          {
+            "id": -16777207
+          },
+          "Identifier",
+          1,
+          10,
+          1,
+          10
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777203
+          },
+          "ImportSpecifier",
+          "import-name",
+          -1,
+          {
+            "id": -16777202
+          },
+          "Identifier",
+          1,
+          16,
+          1,
+          16
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777195
+          },
+          "String",
+          "string-child",
+          0,
+          {
+            "id": -16777192
+          },
+          "StringFragment",
+          1,
+          32,
+          1,
+          33
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777184
+          },
+          "ImportStatement",
+          "import-source",
+          -1,
+          {
+            "id": -16777164
+          },
+          "String",
+          2,
+          1,
+          2,
+          34
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777184
+          },
+          "ImportStatement",
+          "import-clause",
+          -1,
+          {
+            "id": -16777181
+          },
+          "ImportClause",
+          2,
+          1,
+          2,
+          8
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777181
+          },
+          "ImportClause",
+          "import-named",
+          -1,
+          {
+            "id": -16777180
+          },
+          "NamedImports",
+          2,
+          8,
+          2,
+          8
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777180
+          },
+          "NamedImports",
+          "named-import",
+          0,
+          {
+            "id": -16777177
+          },
+          "ImportSpecifier",
+          2,
+          8,
+          2,
+          10
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777177
+          },
+          "ImportSpecifier",
+          "import-name",
+          -1,
+          {
+            "id": -16777176
+          },
+          "Identifier",
+          2,
+          10,
+          2,
+          10
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777177
+          },
+          "ImportSpecifier",
+          "import-alias",
+          -1,
+          {
+            "id": -16777172
+          },
+          "Identifier",
+          2,
+          10,
+          2,
+          22
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777164
+          },
+          "String",
+          "string-child",
+          0,
+          {
+            "id": -16777161
+          },
+          "StringFragment",
+          2,
+          34,
+          2,
+          35
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777153
+          },
+          "LexicalDeclaration",
+          "lexical-declarator",
+          0,
+          {
+            "id": -16777150
+          },
+          "VariableDeclarator",
+          3,
+          1,
+          3,
+          7
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777150
+          },
+          "VariableDeclarator",
+          "declarator-name",
+          -1,
+          {
+            "id": -16777149
+          },
+          "Identifier",
+          3,
+          7,
+          3,
+          7
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777150
+          },
+          "VariableDeclarator",
+          "declarator-value",
+          -1,
+          {
+            "id": -16777145
+          },
+          "String",
+          3,
+          7,
+          3,
+          14
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777145
+          },
+          "String",
+          "string-child",
+          0,
+          {
+            "id": -16777142
+          },
+          "StringFragment",
+          3,
+          14,
+          3,
+          15
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777133
+          },
+          "LexicalDeclaration",
+          "lexical-declarator",
+          0,
+          {
+            "id": -16777130
+          },
+          "VariableDeclarator",
+          4,
+          1,
+          4,
+          7
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777130
+          },
+          "VariableDeclarator",
+          "declarator-name",
+          -1,
+          {
+            "id": -16777129
+          },
+          "Identifier",
+          4,
+          7,
+          4,
+          7
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777130
+          },
+          "VariableDeclarator",
+          "declarator-value",
+          -1,
+          {
+            "id": -16777125
+          },
+          "Object",
+          4,
+          7,
+          4,
+          17
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777125
+          },
+          "Object",
+          "object-child",
+          0,
+          {
+            "id": -16777122
+          },
+          "Pair",
+          4,
+          17,
+          5,
+          3
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777122
+          },
+          "Pair",
+          "pair-key",
+          -1,
+          {
+            "id": -16777121
+          },
+          "PropertyIdentifier",
+          5,
+          3,
+          5,
+          3
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777122
+          },
+          "Pair",
+          "pair-value",
+          -1,
+          {
+            "id": -16777117
+          },
+          "Object",
+          5,
+          3,
+          5,
+          12
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777117
+          },
+          "Object",
+          "object-child",
+          0,
+          {
+            "id": -16777114
+          },
+          "Pair",
+          5,
+          12,
+          6,
+          5
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777117
+          },
+          "Object",
+          "object-child",
+          1,
+          {
+            "id": -16777086
+          },
+          "Pair",
+          5,
+          12,
+          7,
+          5
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777114
+          },
+          "Pair",
+          "pair-key",
+          -1,
+          {
+            "id": -16777113
+          },
+          "PropertyIdentifier",
+          6,
+          5,
+          6,
+          5
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777114
+          },
+          "Pair",
+          "pair-value",
+          -1,
+          {
+            "id": -16777109
+          },
+          "Object",
+          6,
+          5,
+          6,
+          11
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777109
+          },
+          "Object",
+          "object-child",
+          0,
+          {
+            "id": -16777106
+          },
+          "Pair",
+          6,
+          11,
+          6,
+          13
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777106
+          },
+          "Pair",
+          "pair-key",
+          -1,
+          {
+            "id": -16777105
+          },
+          "PropertyIdentifier",
+          6,
+          13,
+          6,
+          13
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777106
+          },
+          "Pair",
+          "pair-value",
+          -1,
+          {
+            "id": -16777101
+          },
+          "String",
+          6,
+          13,
+          6,
+          27
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777101
+          },
+          "String",
+          "string-child",
+          0,
+          {
+            "id": -16777098
+          },
+          "StringFragment",
+          6,
+          27,
+          6,
+          28
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777086
+          },
+          "Pair",
+          "pair-key",
+          -1,
+          {
+            "id": -16777085
+          },
+          "PropertyIdentifier",
+          7,
+          5,
+          7,
+          5
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777086
+          },
+          "Pair",
+          "pair-value",
+          -1,
+          {
+            "id": -16777081
+          },
+          "FunctionExpression",
+          7,
+          5,
+          7,
+          11
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777081
+          },
+          "FunctionExpression",
+          "function-body",
+          -1,
+          {
+            "id": -16777070
+          },
+          "StatementBlock",
+          7,
+          11,
+          7,
+          29
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777081
+          },
+          "FunctionExpression",
+          "function-parameters",
+          -1,
+          {
+            "id": -16777078
+          },
+          "FormalParameters",
+          7,
+          11,
+          7,
+          19
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777078
+          },
+          "FormalParameters",
+          "formal",
+          0,
+          {
+            "id": -16777075
+          },
+          "Identifier",
+          7,
+          19,
+          7,
+          20
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777058
+          },
+          "MemberExpression",
+          "member-object",
+          -1,
+          {
+            "id": -16777057
+          },
+          "MemberExpression",
+          8,
+          12,
+          8,
+          12
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777058
+          },
+          "MemberExpression",
+          "member-property",
+          -1,
+          {
+            "id": -16777047
+          },
+          "PropertyIdentifier",
+          8,
+          12,
+          8,
+          25
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777057
+          },
+          "MemberExpression",
+          "member-object",
+          -1,
+          {
+            "id": -16777056
+          },
+          "Identifier",
+          8,
+          12,
+          8,
+          12
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777057
+          },
+          "MemberExpression",
+          "member-property",
+          -1,
+          {
+            "id": -16777052
+          },
+          "PropertyIdentifier",
+          8,
+          12,
+          8,
+          20
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777040
+          },
+          "ReturnStatement",
+          "return-value",
+          -1,
+          {
+            "id": -16777037
+          },
+          "Null",
+          8,
+          39,
+          8,
+          46
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777028
+          },
+          "ReturnStatement",
+          "return-value",
+          -1,
+          {
+            "id": -16777025
+          },
+          "CallExpression",
+          10,
+          9,
+          10,
+          16
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777025
+          },
+          "CallExpression",
+          "call-function",
+          -1,
+          {
+            "id": -16777024
+          },
+          "Identifier",
+          10,
+          16,
+          10,
+          16
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777025
+          },
+          "CallExpression",
+          "call-arguments",
+          -1,
+          {
+            "id": -16777022
+          },
+          "Arguments",
+          10,
+          16,
+          10,
+          20
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777022
+          },
+          "Arguments",
+          "argument",
+          0,
+          {
+            "id": -16777019
+          },
+          "TemplateString",
+          10,
+          20,
+          10,
+          21
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777019
+          },
+          "TemplateString",
+          "template-child",
+          0,
+          {
+            "id": -16777016
+          },
+          "TemplateSubstitution",
+          10,
+          21,
+          10,
+          22
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777019
+          },
+          "TemplateString",
+          "template-child",
+          1,
+          {
+            "id": -16777008
+          },
+          "StringFragment",
+          10,
+          21,
+          10,
+          29
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777019
+          },
+          "TemplateString",
+          "template-child",
+          2,
+          {
+            "id": -16777006
+          },
+          "TemplateSubstitution",
+          10,
+          21,
+          10,
+          30
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777019
+          },
+          "TemplateString",
+          "template-child",
+          3,
+          {
+            "id": -16776986
+          },
+          "StringFragment",
+          10,
+          21,
+          10,
+          58
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777016
+          },
+          "TemplateSubstitution",
+          "substitution-child",
+          -1,
+          {
+            "id": -16777013
+          },
+          "Identifier",
+          10,
+          22,
+          10,
+          24
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777006
+          },
+          "TemplateSubstitution",
+          "substitution-child",
+          -1,
+          {
+            "id": -16777003
+          },
+          "MemberExpression",
+          10,
+          30,
+          10,
+          32
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777003
+          },
+          "MemberExpression",
+          "member-object",
+          -1,
+          {
+            "id": -16777002
+          },
+          "MemberExpression",
+          10,
+          32,
+          10,
+          32
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777003
+          },
+          "MemberExpression",
+          "member-property",
+          -1,
+          {
+            "id": -16776992
+          },
+          "PropertyIdentifier",
+          10,
+          32,
+          10,
+          45
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777002
+          },
+          "MemberExpression",
+          "member-object",
+          -1,
+          {
+            "id": -16777001
+          },
+          "Identifier",
+          10,
+          32,
+          10,
+          32
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777002
+          },
+          "MemberExpression",
+          "member-property",
+          -1,
+          {
+            "id": -16776997
+          },
+          "PropertyIdentifier",
+          10,
+          32,
+          10,
+          40
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16776955
+          },
+          "ReturnStatement",
+          "return-value",
+          -1,
+          {
+            "id": -16776952
+          },
+          "Object",
+          15,
+          1,
+          15,
+          8
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16776952
+          },
+          "Object",
+          "object-child",
+          0,
+          {
+            "id": -16776949
+          },
+          "Pair",
+          15,
+          8,
+          15,
+          10
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16776949
+          },
+          "Pair",
+          "pair-key",
+          -1,
+          {
+            "id": -16776948
+          },
+          "String",
+          15,
+          10,
+          15,
+          10
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16776949
+          },
+          "Pair",
+          "pair-value",
+          -1,
+          {
+            "id": -16776938
+          },
+          "Identifier",
+          15,
+          10,
+          15,
+          30
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16776948
+          },
+          "String",
+          "string-child",
+          0,
+          {
+            "id": -16776945
+          },
+          "StringFragment",
+          15,
+          10,
+          15,
+          11
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776927
+          },
+          "ImportStatement",
+          "import-source",
+          -1,
+          {
+            "id": -16776907
+          },
+          "String",
+          1,
+          1,
+          1,
+          32
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776927
+          },
+          "ImportStatement",
+          "import-clause",
+          -1,
+          {
+            "id": -16776924
+          },
+          "ImportClause",
+          1,
+          1,
+          1,
+          8
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776924
+          },
+          "ImportClause",
+          "import-named",
+          -1,
+          {
+            "id": -16776923
+          },
+          "NamedImports",
+          1,
+          8,
+          1,
+          8
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776923
+          },
+          "NamedImports",
+          "named-import",
+          0,
+          {
+            "id": -16776920
+          },
+          "ImportSpecifier",
+          1,
+          8,
+          1,
+          10
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776923
+          },
+          "NamedImports",
+          "named-import",
+          1,
+          {
+            "id": -16776915
+          },
+          "ImportSpecifier",
+          1,
+          8,
+          1,
+          16
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776920
+          },
+          "ImportSpecifier",
+          "import-name",
+          -1,
+          {
+            "id": -16776919
+          },
+          "Identifier",
+          1,
+          10,
+          1,
+          10
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776915
+          },
+          "ImportSpecifier",
+          "import-name",
+          -1,
+          {
+            "id": -16776914
+          },
+          "Identifier",
+          1,
+          16,
+          1,
+          16
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776907
+          },
+          "String",
+          "string-child",
+          0,
+          {
+            "id": -16776904
+          },
+          "StringFragment",
+          1,
+          32,
+          1,
+          33
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776896
+          },
+          "LexicalDeclaration",
+          "lexical-declarator",
+          0,
+          {
+            "id": -16776893
+          },
+          "VariableDeclarator",
+          2,
+          1,
+          2,
+          7
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776893
+          },
+          "VariableDeclarator",
+          "declarator-name",
+          -1,
+          {
+            "id": -16776892
+          },
+          "Identifier",
+          2,
+          7,
+          2,
+          7
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776893
+          },
+          "VariableDeclarator",
+          "declarator-value",
+          -1,
+          {
+            "id": -16776888
+          },
+          "String",
+          2,
+          7,
+          2,
+          14
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776888
+          },
+          "String",
+          "string-child",
+          0,
+          {
+            "id": -16776885
+          },
+          "StringFragment",
+          2,
+          14,
+          2,
+          15
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776876
+          },
+          "LexicalDeclaration",
+          "lexical-declarator",
+          0,
+          {
+            "id": -16776873
+          },
+          "VariableDeclarator",
+          3,
+          1,
+          3,
+          7
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776873
+          },
+          "VariableDeclarator",
+          "declarator-name",
+          -1,
+          {
+            "id": -16776872
+          },
+          "Identifier",
+          3,
+          7,
+          3,
+          7
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776873
+          },
+          "VariableDeclarator",
+          "declarator-value",
+          -1,
+          {
+            "id": -16776868
+          },
+          "Object",
+          3,
+          7,
+          3,
+          17
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776868
+          },
+          "Object",
+          "object-child",
+          0,
+          {
+            "id": -16776865
+          },
+          "Pair",
+          3,
+          17,
+          4,
+          3
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776865
+          },
+          "Pair",
+          "pair-key",
+          -1,
+          {
+            "id": -16776864
+          },
+          "PropertyIdentifier",
+          4,
+          3,
+          4,
+          3
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776865
+          },
+          "Pair",
+          "pair-value",
+          -1,
+          {
+            "id": -16776860
+          },
+          "Object",
+          4,
+          3,
+          4,
+          12
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776860
+          },
+          "Object",
+          "object-child",
+          0,
+          {
+            "id": -16776857
+          },
+          "Pair",
+          4,
+          12,
+          5,
+          5
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776860
+          },
+          "Object",
+          "object-child",
+          1,
+          {
+            "id": -16776829
+          },
+          "Pair",
+          4,
+          12,
+          6,
+          5
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776857
+          },
+          "Pair",
+          "pair-key",
+          -1,
+          {
+            "id": -16776856
+          },
+          "PropertyIdentifier",
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776857
+          },
+          "Pair",
+          "pair-value",
+          -1,
+          {
+            "id": -16776852
+          },
+          "Object",
+          5,
+          5,
+          5,
+          11
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776852
+          },
+          "Object",
+          "object-child",
+          0,
+          {
+            "id": -16776849
+          },
+          "Pair",
+          5,
+          11,
+          5,
+          13
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776849
+          },
+          "Pair",
+          "pair-key",
+          -1,
+          {
+            "id": -16776848
+          },
+          "PropertyIdentifier",
+          5,
+          13,
+          5,
+          13
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776849
+          },
+          "Pair",
+          "pair-value",
+          -1,
+          {
+            "id": -16776844
+          },
+          "String",
+          5,
+          13,
+          5,
+          27
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776844
+          },
+          "String",
+          "string-child",
+          0,
+          {
+            "id": -16776841
+          },
+          "StringFragment",
+          5,
+          27,
+          5,
+          28
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776829
+          },
+          "Pair",
+          "pair-key",
+          -1,
+          {
+            "id": -16776828
+          },
+          "PropertyIdentifier",
+          6,
+          5,
+          6,
+          5
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776829
+          },
+          "Pair",
+          "pair-value",
+          -1,
+          {
+            "id": -16776824
+          },
+          "FunctionExpression",
+          6,
+          5,
+          6,
+          11
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776824
+          },
+          "FunctionExpression",
+          "function-body",
+          -1,
+          {
+            "id": -16776813
+          },
+          "StatementBlock",
+          6,
+          11,
+          6,
+          29
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776824
+          },
+          "FunctionExpression",
+          "function-parameters",
+          -1,
+          {
+            "id": -16776821
+          },
+          "FormalParameters",
+          6,
+          11,
+          6,
+          19
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776821
+          },
+          "FormalParameters",
+          "formal",
+          0,
+          {
+            "id": -16776818
+          },
+          "Identifier",
+          6,
+          19,
+          6,
+          20
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776801
+          },
+          "MemberExpression",
+          "member-object",
+          -1,
+          {
+            "id": -16776800
+          },
+          "MemberExpression",
+          7,
+          12,
+          7,
+          12
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776801
+          },
+          "MemberExpression",
+          "member-property",
+          -1,
+          {
+            "id": -16776790
+          },
+          "PropertyIdentifier",
+          7,
+          12,
+          7,
+          25
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776800
+          },
+          "MemberExpression",
+          "member-object",
+          -1,
+          {
+            "id": -16776799
+          },
+          "Identifier",
+          7,
+          12,
+          7,
+          12
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776800
+          },
+          "MemberExpression",
+          "member-property",
+          -1,
+          {
+            "id": -16776795
+          },
+          "PropertyIdentifier",
+          7,
+          12,
+          7,
+          20
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776783
+          },
+          "ReturnStatement",
+          "return-value",
+          -1,
+          {
+            "id": -16776780
+          },
+          "Null",
+          7,
+          39,
+          7,
+          46
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776771
+          },
+          "ReturnStatement",
+          "return-value",
+          -1,
+          {
+            "id": -16776768
+          },
+          "CallExpression",
+          9,
+          9,
+          9,
+          16
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776768
+          },
+          "CallExpression",
+          "call-function",
+          -1,
+          {
+            "id": -16776767
+          },
+          "Identifier",
+          9,
+          16,
+          9,
+          16
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776768
+          },
+          "CallExpression",
+          "call-arguments",
+          -1,
+          {
+            "id": -16776765
+          },
+          "Arguments",
+          9,
+          16,
+          9,
+          20
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776765
+          },
+          "Arguments",
+          "argument",
+          0,
+          {
+            "id": -16776762
+          },
+          "TemplateString",
+          9,
+          20,
+          9,
+          21
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776762
+          },
+          "TemplateString",
+          "template-child",
+          0,
+          {
+            "id": -16776759
+          },
+          "TemplateSubstitution",
+          9,
+          21,
+          9,
+          22
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776762
+          },
+          "TemplateString",
+          "template-child",
+          1,
+          {
+            "id": -16776751
+          },
+          "StringFragment",
+          9,
+          21,
+          9,
+          29
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776762
+          },
+          "TemplateString",
+          "template-child",
+          2,
+          {
+            "id": -16776749
+          },
+          "TemplateSubstitution",
+          9,
+          21,
+          9,
+          30
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776762
+          },
+          "TemplateString",
+          "template-child",
+          3,
+          {
+            "id": -16776729
+          },
+          "StringFragment",
+          9,
+          21,
+          9,
+          58
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776759
+          },
+          "TemplateSubstitution",
+          "substitution-child",
+          -1,
+          {
+            "id": -16776756
+          },
+          "Identifier",
+          9,
+          22,
+          9,
+          24
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776749
+          },
+          "TemplateSubstitution",
+          "substitution-child",
+          -1,
+          {
+            "id": -16776746
+          },
+          "MemberExpression",
+          9,
+          30,
+          9,
+          32
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776746
+          },
+          "MemberExpression",
+          "member-object",
+          -1,
+          {
+            "id": -16776745
+          },
+          "MemberExpression",
+          9,
+          32,
+          9,
+          32
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776746
+          },
+          "MemberExpression",
+          "member-property",
+          -1,
+          {
+            "id": -16776735
+          },
+          "PropertyIdentifier",
+          9,
+          32,
+          9,
+          45
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776745
+          },
+          "MemberExpression",
+          "member-object",
+          -1,
+          {
+            "id": -16776744
+          },
+          "Identifier",
+          9,
+          32,
+          9,
+          32
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776745
+          },
+          "MemberExpression",
+          "member-property",
+          -1,
+          {
+            "id": -16776740
+          },
+          "PropertyIdentifier",
+          9,
+          32,
+          9,
+          40
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776698
+          },
+          "ReturnStatement",
+          "return-value",
+          -1,
+          {
+            "id": -16776695
+          },
+          "Object",
+          14,
+          1,
+          14,
+          8
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776695
+          },
+          "Object",
+          "object-child",
+          0,
+          {
+            "id": -16776692
+          },
+          "Pair",
+          14,
+          8,
+          14,
+          10
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776692
+          },
+          "Pair",
+          "pair-key",
+          -1,
+          {
+            "id": -16776691
+          },
+          "String",
+          14,
+          10,
+          14,
+          10
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776692
+          },
+          "Pair",
+          "pair-value",
+          -1,
+          {
+            "id": -16776681
+          },
+          "Identifier",
+          14,
+          10,
+          14,
+          30
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776691
+          },
+          "String",
+          "string-child",
+          0,
+          {
+            "id": -16776688
+          },
+          "StringFragment",
+          14,
+          10,
+          14,
+          11
+        ]
+      ]
+    }
+  }
+}

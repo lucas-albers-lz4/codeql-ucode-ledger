@@ -1,0 +1,78 @@
+{
+  "original_sha256": "e1c7d25b46f50f5ab370bb9bc6911a134f86bdd6dd0b0e22871d5d01a772f820",
+  "table": {
+    "#select": {
+      "columns": [
+        {
+          "name": "path",
+          "kind": "String"
+        },
+        {
+          "name": "import_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "identifier",
+          "kind": "Entity"
+        },
+        {
+          "name": "import_line",
+          "kind": "Integer"
+        },
+        {
+          "name": "import_column",
+          "kind": "Integer"
+        },
+        {
+          "name": "identifier_line",
+          "kind": "Integer"
+        },
+        {
+          "name": "identifier_column",
+          "kind": "Integer"
+        }
+      ],
+      "tuples": [
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777215
+          },
+          {
+            "id": -16777207
+          },
+          1,
+          1,
+          1,
+          10
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777184
+          },
+          {
+            "id": -16777172
+          },
+          2,
+          1,
+          2,
+          22
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776927
+          },
+          {
+            "id": -16776919
+          },
+          1,
+          1,
+          1,
+          10
+        ]
+      ]
+    }
+  }
+}

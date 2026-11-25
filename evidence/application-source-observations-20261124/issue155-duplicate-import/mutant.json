@@ -1,0 +1,131 @@
+{
+  "original_sha256": "c07ff5071fc3d1dd2416c10c0ed5393ba687c09c09eeef8e8992488ab9f08cc9",
+  "table": {
+    "#select": {
+      "columns": [
+        {
+          "name": "path",
+          "kind": "String"
+        },
+        {
+          "name": "call_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "callee_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "import_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "specifier_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "handler_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "formal_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "argument_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "substitution_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "property_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "args_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "receiver_node",
+          "kind": "Entity"
+        }
+      ],
+      "tuples": [
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777025
+          },
+          {
+            "id": -16777024
+          },
+          {
+            "id": -16777215
+          },
+          {
+            "id": -16777208
+          },
+          {
+            "id": -16777081
+          },
+          {
+            "id": -16777075
+          },
+          {
+            "id": -16777019
+          },
+          {
+            "id": -16777006
+          },
+          {
+            "id": -16777003
+          },
+          {
+            "id": -16777002
+          },
+          {
+            "id": -16777001
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776768
+          },
+          {
+            "id": -16776767
+          },
+          {
+            "id": -16776927
+          },
+          {
+            "id": -16776920
+          },
+          {
+            "id": -16776824
+          },
+          {
+            "id": -16776818
+          },
+          {
+            "id": -16776762
+          },
+          {
+            "id": -16776749
+          },
+          {
+            "id": -16776746
+          },
+          {
+            "id": -16776745
+          },
+          {
+            "id": -16776744
+          }
+        ]
+      ]
+    }
+  }
+}

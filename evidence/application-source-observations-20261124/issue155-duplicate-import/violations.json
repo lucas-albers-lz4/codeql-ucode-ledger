@@ -1,0 +1,26 @@
+{
+  "original_sha256": "b7ffd3797e6e7e09e9439b3a6fb97274b2283add6c0c6db6abeef5dc4cc37363",
+  "table": {
+    "#select": {
+      "columns": [
+        {
+          "name": "path",
+          "kind": "String"
+        },
+        {
+          "name": "call_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "handler_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "violation",
+          "kind": "String"
+        }
+      ],
+      "tuples": []
+    }
+  }
+}

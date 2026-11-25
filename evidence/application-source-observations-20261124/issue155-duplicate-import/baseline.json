@@ -1,0 +1,95 @@
+{
+  "original_sha256": "c6619a5b03f99bb0b934648e11c221b99b0846dc6300d19fa9f615dd2515b7a5",
+  "table": {
+    "#select": {
+      "columns": [
+        {
+          "name": "path",
+          "kind": "String"
+        },
+        {
+          "name": "call_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "callee_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "import_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "specifier_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "handler_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "formal_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "argument_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "substitution_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "property_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "args_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "receiver_node",
+          "kind": "Entity"
+        }
+      ],
+      "tuples": [
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776768
+          },
+          {
+            "id": -16776767
+          },
+          {
+            "id": -16776927
+          },
+          {
+            "id": -16776920
+          },
+          {
+            "id": -16776824
+          },
+          {
+            "id": -16776818
+          },
+          {
+            "id": -16776762
+          },
+          {
+            "id": -16776749
+          },
+          {
+            "id": -16776746
+          },
+          {
+            "id": -16776745
+          },
+          {
+            "id": -16776744
+          }
+        ]
+      ]
+    }
+  }
+}

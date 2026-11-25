@@ -1,0 +1,28 @@
+{
+  "original_sha256": "cc04a00c692b35cb0544994c1bf7bf4a3694780e4988bcd9ea441419a4cef22e",
+  "route": {
+    "input_count": 2,
+    "plain_count": 2,
+    "markup_count": 0,
+    "markup_inconclusive_count": 0,
+    "uncertain_count": 0,
+    "excluded_count": 0,
+    "duplicate_input_count": 0,
+    "decisions": [
+      {
+        "path": "$RUN/stage/controls/negative-duplicate.uc",
+        "installed_path": "controls/negative-duplicate.uc",
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      },
+      {
+        "path": "$RUN/stage/controls/positive-direct.uc",
+        "installed_path": "controls/positive-direct.uc",
+        "classification": "plain",
+        "reason": "ucode_extension",
+        "status": "plain_route_selected"
+      }
+    ]
+  }
+}
