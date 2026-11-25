@@ -1416,6 +1416,12 @@ incoming OpenWrt/LuCI changes.
   package-member byte identities at the pinned LuCI/OpenWrt/packages commits;
   it does not establish the remaining installed corpus denominator, a CodeQL
   scan of those bytes or the R3 released Linux handoff.
+  A follow-up [complete suffix-member inventory of that same IPK](evidence/mvp-luci-base-ipk-inventory-20261125/README.md)
+  finds 16 regular `.uc`/`.ut` members: 14 equal to pinned LuCI source bytes,
+  one version-substituted `header.ut`, and one generated `version.uc`. This is
+  an exact denominator for the single `luci-base` package and suffix rule,
+  established retrospectively from the retained artifact. It does not cover
+  extensionless files, other packages or actual CodeQL extraction.
 - A [source-only census](planning/mvp-openwrt-packages-candidates-v0.1.md)
   of pinned OpenWrt core and packages-feed source found
   35 additional OpenWrt candidates beyond the 11 CLI paths and 37
