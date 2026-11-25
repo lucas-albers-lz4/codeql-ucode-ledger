@@ -1,0 +1,157 @@
+{
+  "schema": "wifi-ipk-byte-v1",
+  "source_commit": "4e9642517b48bae612ff10fb72fb9199e559500e",
+  "source_tree": "328d4df01c038d365176b72753b778e10c3ff413",
+  "variants": {
+    "y": {
+      "ipk_sha256": "20f2e18297a10e2c2fc0f3457dee52e5ee2db01a8d17d52ba44dffaf79ba833a",
+      "control": {
+        "Package": "wifi-scripts",
+        "Version": "1.0-r1",
+        "Architecture": "all"
+      },
+      "ucode_members": [
+        "lib/netifd/wireless-device.uc",
+        "lib/netifd/wireless.uc",
+        "lib/netifd/wireless/mac80211.sh",
+        "lib/wifi/mac80211.uc",
+        "usr/bin/iwinfo",
+        "usr/share/hostap/common.uc",
+        "usr/share/hostap/wdev.uc",
+        "usr/share/hostap/wifi-detect.uc",
+        "usr/share/ucode/iwinfo.uc",
+        "usr/share/ucode/wifi/ap.uc",
+        "usr/share/ucode/wifi/common.uc",
+        "usr/share/ucode/wifi/hostapd.uc",
+        "usr/share/ucode/wifi/iface.uc",
+        "usr/share/ucode/wifi/netifd.uc",
+        "usr/share/ucode/wifi/supplicant.uc",
+        "usr/share/ucode/wifi/utils.uc",
+        "usr/share/ucode/wifi/validate.uc"
+      ],
+      "compared": [
+        {
+          "path": "lib/netifd/wireless-device.uc",
+          "sha256": "d3e106d2fbc288d0af36c95bb97b9eae77630c4972c927c8d67a68a8822fa754"
+        },
+        {
+          "path": "lib/netifd/wireless.uc",
+          "sha256": "36888bcfbf04c8b35c30e10b3b186bc4295c1c5f3d7403779eedb51a450f557d"
+        },
+        {
+          "path": "lib/netifd/wireless/mac80211.sh",
+          "sha256": "f7d6ae091777a8eb77ba55c2c1f09bf8caff1a4364dc6de4f19a1ecb322801aa"
+        },
+        {
+          "path": "lib/wifi/mac80211.uc",
+          "sha256": "36da7b5286c98b8e82433c3656e2c4f02e12648ba7cb75899ab5546702b2ec1c"
+        },
+        {
+          "path": "usr/bin/iwinfo",
+          "sha256": "c279f6cc7000ee1cb7609a0a60f77a63500a85d6be1b1fe32afa333fe176ff1c"
+        },
+        {
+          "path": "usr/share/hostap/common.uc",
+          "sha256": "8f489d3c4fdde92b6dd027aadffc96880837664f3c2a1b1f6f3aeb9fdd484c0c"
+        },
+        {
+          "path": "usr/share/hostap/wdev.uc",
+          "sha256": "84e0de1089f253d65272f1c29254ec890b46576565b4a92fd48ecc2f9b5156d2"
+        },
+        {
+          "path": "usr/share/hostap/wifi-detect.uc",
+          "sha256": "1b21c13ef3e8df83575303c9b75609f22b3e359e66128abc43ebd369652270ab"
+        },
+        {
+          "path": "usr/share/ucode/iwinfo.uc",
+          "sha256": "df56c258702cb3bf60d4657031a2abf371df9ced2952da6ad13c04021fd4c3ea"
+        },
+        {
+          "path": "usr/share/ucode/wifi/ap.uc",
+          "sha256": "d036c64e14ae75297487ac4e572ee4e2504d5795e0c907267341d7b14931275a"
+        },
+        {
+          "path": "usr/share/ucode/wifi/common.uc",
+          "sha256": "92ecc237251e6dcb32ba0d230b339850adb9848cd7d6e1073e043bc3ae5d790d"
+        },
+        {
+          "path": "usr/share/ucode/wifi/hostapd.uc",
+          "sha256": "5fd200d76efb0a087ecb067003cae80819ee62a37cabf2a788a1daea9c80177e"
+        },
+        {
+          "path": "usr/share/ucode/wifi/iface.uc",
+          "sha256": "be89c76e55e9f838421b99328a9e84ac10b76dac64f4f8950660014123bdfc5f"
+        },
+        {
+          "path": "usr/share/ucode/wifi/netifd.uc",
+          "sha256": "2a5f4c94d186d1be150c4bb8ba308810af41a4930fd1287636de3274595d7af6"
+        },
+        {
+          "path": "usr/share/ucode/wifi/supplicant.uc",
+          "sha256": "8bdbd9d2688f0ed008ad00e5d19c4baf589020853b615bafd9e9586dcc79e78d"
+        },
+        {
+          "path": "usr/share/ucode/wifi/utils.uc",
+          "sha256": "bffaaff3e9ad9962206fb15aec190cd0fc2747990392885d346e0f6b3f5d61af"
+        },
+        {
+          "path": "usr/share/ucode/wifi/validate.uc",
+          "sha256": "2710fca796071133b30abedb28a8615ad0172af2b66a7c47580dde2f804eb4ee"
+        }
+      ],
+      "config_sha256": "02d5a123f9f0e4436e50b8651b45080537fea53ae490d430aece121a72664dc3"
+    },
+    "n": {
+      "ipk_sha256": "d1d48ba190d48de75563758378aca678cce4d8cc33df24f8886effff563d061f",
+      "control": {
+        "Package": "wifi-scripts",
+        "Version": "1.0-r1",
+        "Architecture": "all"
+      },
+      "ucode_members": [
+        "lib/netifd/wireless-device.uc",
+        "lib/netifd/wireless.uc",
+        "lib/wifi/mac80211.uc",
+        "usr/share/hostap/common.uc",
+        "usr/share/hostap/wdev.uc",
+        "usr/share/hostap/wifi-detect.uc",
+        "usr/share/ucode/wifi/utils.uc"
+      ],
+      "compared": [
+        {
+          "path": "lib/netifd/wireless-device.uc",
+          "sha256": "d3e106d2fbc288d0af36c95bb97b9eae77630c4972c927c8d67a68a8822fa754"
+        },
+        {
+          "path": "lib/netifd/wireless.uc",
+          "sha256": "36888bcfbf04c8b35c30e10b3b186bc4295c1c5f3d7403779eedb51a450f557d"
+        },
+        {
+          "path": "lib/netifd/wireless/mac80211.sh",
+          "sha256": "5f87f07cca56b20b0cf08cf02711c1c4fc4ddbbb17de7c8780282625c8d3be07"
+        },
+        {
+          "path": "lib/wifi/mac80211.uc",
+          "sha256": "36da7b5286c98b8e82433c3656e2c4f02e12648ba7cb75899ab5546702b2ec1c"
+        },
+        {
+          "path": "usr/share/hostap/common.uc",
+          "sha256": "8f489d3c4fdde92b6dd027aadffc96880837664f3c2a1b1f6f3aeb9fdd484c0c"
+        },
+        {
+          "path": "usr/share/hostap/wdev.uc",
+          "sha256": "84e0de1089f253d65272f1c29254ec890b46576565b4a92fd48ecc2f9b5156d2"
+        },
+        {
+          "path": "usr/share/hostap/wifi-detect.uc",
+          "sha256": "1b21c13ef3e8df83575303c9b75609f22b3e359e66128abc43ebd369652270ab"
+        },
+        {
+          "path": "usr/share/ucode/wifi/utils.uc",
+          "sha256": "bffaaff3e9ad9962206fb15aec190cd0fc2747990392885d346e0f6b3f5d61af"
+        }
+      ],
+      "config_sha256": "3e3ae05296bb4a410923ee7b74cdfd09b5febb15911b5e64ac8f5f2d3df3d74e"
+    }
+  }
+}

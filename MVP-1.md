@@ -1757,8 +1757,17 @@ incoming OpenWrt/LuCI changes.
   a manual Linux paired `wifi-scripts` package-byte experiment, with separate
   `CONFIG_WIFI_SCRIPTS_UCODE=y/n` build roots and an IPK-byte comparator.
   Workflow dispatch run [45548269425](https://github.com/lucas-albers-lz4/codeql-openwrt/actions/runs/45548269425)
-  started on that merge commit. Its package build and byte comparison remain
-  pending; the workflow start is not installed-byte evidence.
+  completed successfully on that merge commit. The [reviewed bounded
+  package-byte receipt](evidence/mvp-wifi-ipk-linux-20261125/README.md)
+  verifies actual `y`/`n` IPKs, exact 17/7 regular Ucode-looking member
+  identities and hashes, and the Ucode-versus-shell `mac80211.sh` collision.
+  Resolved configs differ only at the intended flag; both clean source pins
+  and source/blob receipts match. The actual comparator exited zero for
+  source, package stage and IPK bytes. This is conditional package-member
+  evidence, not a root-filesystem installation, released CodeQL scan or
+  complete Gate 6 denominator. Independent toolchain bootstraps consumed
+  about 32 and 31 minutes, so the first run also establishes a bounded CI
+  cost baseline.
 
 ## Ledger reconciliation with Security-40
 
