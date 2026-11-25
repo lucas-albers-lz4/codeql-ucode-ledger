@@ -64,11 +64,16 @@ across 81 successful API requests. It is discovery only; selected PR
 trees and a released scan remain unresolved. Hosted `unittest` and
 `typed-handoff` passed at final head `a417fb9` in run `45510746930`;
 #162 merged as `cd6c5c1f8d53edf6436ba34091106e5ff0d84382`.
-Producer [draft PR #163](https://github.com/lucas-albers-lz4/codeql-ucode/pull/163)
-adds a bounded source-declared unary `fs.stat` model for the read-side family.
-Its Linux R2 and Cargo checks passed at `93aadfe`, while M3/M4 smoke was still
-running at this checkpoint. It adds no production query or default-suite rule
-and does not alter the release gate.
+Producer [PR #163](https://github.com/lucas-albers-lz4/codeql-ucode/pull/163)
+added a bounded source-declared unary `fs.stat` model for the read-side
+family. Exact PR head `93aadfe` passed Linux R2, Cargo and M3/M4 smoke in
+runs `45526973840`, `45526973858` and `45526973945`; the smoke log verified
+exact routes, diagnostics, source witnesses and model identities. An
+independent exact-head review found no further merge blocker. The PR merged
+as producer `main` `4f5b2ab51c49d2c0b5b022ddab59e185f1d0efd5` on
+2026-11-25, and its merged branch was deleted. It adds no production query
+or default-suite rule. A tag-bound release run on this new `main` and the
+downstream gates remain open.
 
 Current execution sequence: (1) confirm the authenticated GitHub release
 immutability toggle, then publish and independently verify the producer's
