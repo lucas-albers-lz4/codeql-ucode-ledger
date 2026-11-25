@@ -937,6 +937,12 @@ incoming OpenWrt/LuCI changes.
   lock is null. PR #155 remains draft, with its own acceptance criterion
   requiring a live Linux gate before it is ready to merge. Its retained base
   branch and stacked #156/#157 must be reconciled when that gate is available.
+  A disposable replay on 2026-11-25 cherry-picked #155's four exact commits
+  (`e9c0b48`, `7cdcba9`, `82c4aef`, `817c4a3`) onto consumer `main`
+  `e3b99cd7c03ca410bba0b9bae5d9095f21b11647` without conflict. The
+  resulting private head `1bdbd18` passed 21 focused tests, `actionlint` and
+  `git diff --check`. This establishes a feasible replay path, not hosted CI
+  or a reason to rewrite the branch while #156/#157 depend on its old graph.
   Neither draft proves Gate 6/7 until the immutable release lock is filled
   and the actual Linux job passes.
 - The [current direct-rule eligibility census](planning/mvp-direct-rpc-current-eligibility.md)
