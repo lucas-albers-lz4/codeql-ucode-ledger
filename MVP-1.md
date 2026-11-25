@@ -1144,6 +1144,16 @@ incoming OpenWrt/LuCI changes.
   This does not justify default-suite promotion or a vulnerability claim;
   resolved callback identity, flow/quote semantics and a real consumer
   acceptance step remain under #50/#54.
+  A [testing-only resolved-callback follow-up](evidence/mvp-wol-resolved-callback-rule-20261125/README.md)
+  added an experimental shared `FunctionDeclaration` variable binding in a
+  disposable producer. On a new 22-file database it retained the two exact
+  synthetic SARIF results and zero real-WOL/control results, while a separate
+  five-row audit distinguished the callback shadow and write cases. Luna
+  checked exact stage, route, extraction, BQRS, SARIF and receipt identities.
+  Review found same-scope binding ambiguity and missing function-value flow
+  integration in the shared model. The patch and query remain evidence only;
+  production-model regression controls and downstream acceptance are still
+  needed before a producer PR or suite decision.
 - Stacked draft consumer [PR #156](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/156)
   (`mvp/incoming-ci-drill` at `3a2197c`, based on #155) now has
   a manual incoming-event **identity preflight** on top of PR #155. It

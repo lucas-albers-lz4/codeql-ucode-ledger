@@ -1,0 +1,49 @@
+diff --git a/ql/lib/codeql/ucode/ast/Variables.qll b/ql/lib/codeql/ucode/ast/Variables.qll
+index 2e878a5..72d99f2 100644
+--- a/ql/lib/codeql/ucode/ast/Variables.qll
++++ b/ql/lib/codeql/ucode/ast/Variables.qll
+@@ -1,5 +1,5 @@
+ /**
+- * ucode lexical variables, loop bindings, catch parameters, and named formals.
++ * ucode lexical variables, function declarations, loop bindings, catch parameters, and named formals.
+  *
+  * Generator leftover `codeql.bicep` imports, ParameterDeclaration/OutputDeclaration,
+  * and `getEnclosingCfgScope` are intentionally absent. Name binding uses the nearest lexical block and respects function parameters.
+@@ -17,6 +17,10 @@ private import internal.AstNodes
+ private import internal.TreeSitter
+ 
+ private predicate variableDecl(AstNode node, string name) {
++  exists(UCODE::FunctionDeclaration f |
++    node = TFunctionDeclaration(f) and name = f.getName().getValue()
++  )
++  or
+   exists(UCODE::VariableDeclarator d |
+     node = TVariableDeclarator(d) and
+     name = d.getName().getValue()
+@@ -76,8 +80,8 @@ private UCODE::AstNode functionBodyOfFormal(UCODE::Identifier id) {
+ }
+ 
+ /**
+- * A variable defined by a lexical declarator, loop binding, catch parameter,
+- * or named function formal.
++ * A variable defined by a lexical declarator, function declaration, loop binding,
++ * catch parameter, or named function formal.
+  */
+ class Variable extends MkVariable {
+   private AstNode node;
+@@ -122,6 +126,15 @@ private UCODE::AstNode declarationScope(UCODE::VariableDeclarator d) {
+ 
+ /** A declaration's actual binding scope, including loop-local bindings. */
+ private UCODE::AstNode bindingScope(Variable v) {
++  exists(UCODE::FunctionDeclaration f |
++    v.getAstNode() = TFunctionDeclaration(f) and
++    result = f.getParent+() and
++    lexicalScope(result) and
++    not exists(UCODE::AstNode inner |
++      inner = f.getParent+() and inner.getParent+() = result and lexicalScope(inner)
++    )
++  )
++  or
+   exists(UCODE::VariableDeclarator d |
+     v.getAstNode() = TVariableDeclarator(d) and result = declarationScope(d)
+   )
