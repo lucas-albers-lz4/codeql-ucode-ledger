@@ -5,6 +5,27 @@ scan are currently separate branches. A queue MAC authenticates a key holder,
 not a scan. No completion may be issued from an uploaded packet, a caller's
 JSON assertions, or a standalone offline verifier. Gate 8 remains open.
 
+## Implementation sequence after the offline prerequisites
+
+Draft consumer PR #160 re-fetches the PR response in the scan job and replays
+the source inventory and manifest; draft #166 replays the actual SARIF consumer
+and checks one retained scan's artifact graph against a supplied oracle and
+lock. Neither issues a completion. Integrate them in this order:
+
+1. Bind both the event and independent control scans to the same verified
+   release lock, run ID and source-first manifests. Extend the graph check to
+   the control assertion and reject a nonempty or incomplete control.
+2. Add a trusted same-job artifact freeze and end-of-run Git/source recheck.
+   The verifier must read run-owned files after writers stop, reject aliases
+   and unexpected files, and retain the hashed inventory. An uploaded artifact
+   alone is not a trusted input.
+3. Extend the queue completion schema with an issuer-receipt digest and job
+   identity, then bind a live reservation and predecessor to the scan job.
+   Review queue storage ownership and credential isolation before signing.
+4. Exercise failures and a real released positive/control pair on Linux before
+   enabling automatic completion or a schedule. The current null release lock
+   prevents this live gate.
+
 ## Trusted boundary and execution
 
 A reviewed, pinned issuer must run as the final step **inside the same trusted
