@@ -1422,6 +1422,15 @@ incoming OpenWrt/LuCI changes.
   an exact denominator for the single `luci-base` package and suffix rule,
   established retrospectively from the retained artifact. It does not cover
   extensionless files, other packages or actual CodeQL extraction.
+  A further [local actual-IPK extraction check](evidence/mvp-luci-base-ipk-extraction-20261125/README.md)
+  staged those exact 16 member bytes into a private database. All 16 routed
+  and appeared once in `SuccessfullyExtractedFiles`, with zero extraction
+  errors. Eight routes were plain; seven `.ut` and content-marked `uhttpd.uc`
+  were markup-inconclusive. The pre-output oracle and raw outputs matched
+  exact identities, decisions and multiplicity. This macOS build used
+  separately recorded copied grammar-generated assets whose regeneration
+  from current source was not proven; no separate source-byte control,
+  released Linux scan, SARIF or consumer handoff was run.
 - A [source-only census](planning/mvp-openwrt-packages-candidates-v0.1.md)
   of pinned OpenWrt core and packages-feed source found
   35 additional OpenWrt candidates beyond the 11 CLI paths and 37
