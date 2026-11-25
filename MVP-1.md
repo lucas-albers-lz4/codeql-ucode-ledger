@@ -549,8 +549,10 @@ receipt](evidence/mvp-nested-rpc-current-main-linux-20261125/README.md)
 passed at synthetic merge `a7a8df3`, which has the same Git tree as the PR
 head: 11 exact plain extractions, zero errors, the two predeclared explicit
 SARIF locations and nine clear controls, with all 126 commands exiting zero.
-Cargo passed on the same head; M3/M4 smoke was still running at this
-checkpoint. The testing query remains outside the default suite.
+Cargo and M3/M4 smoke also passed on the same head (smoke run
+`45548578880`, completed 2026-11-25 05:39 UTC). All three hosted PR checks
+are green at `cc63aee8f9e8d31e1f71474f3008b8ccdd96bfdc`. The draft
+testing query remains outside the default suite and is not a release rule.
 This is a bounded testing-query Linux regression, not a release or current
 source alert. The wider M3/M4 smoke was still running at this checkpoint.
 Producer #165 subsequently changed `main`'s model library; revalidate #166
