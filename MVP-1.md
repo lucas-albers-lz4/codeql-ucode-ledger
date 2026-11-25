@@ -105,6 +105,20 @@ claim of request-controlled path flow. The direct-import rename fixture and
 LuCI weechat call remain bounded model positives; broader namespace-call
 support and path-write flow stay with #155/#54. This was a source/model
 screen, not a fresh CodeQL run on merged main.
+A local follow-on candidate at producer `work/namespace-fs-producer-20261124`,
+commit `b58114b655b62a3896f224eacf7197c648dfe25d` on merged main
+`8949bfab8d1e057dc0c06659da266b9d18cec0cb`, adds separate bounded
+namespace-call `stat`/`rename` classes while preserving the direct-import
+`NamedCall` API. An independent review found no concrete blocker for this
+syntax-only draft after bracket-write/delete, simple-alias, wrong-index and
+exact-path controls were added. A fresh **local fixture** smoke matched 17
+exact extracted/archive identities, zero errors and the expected one named
+plus two namespace calls per family; 14 focused tests and six QL compile
+checks passed. It reused a byte-checked extractor pack from an earlier
+v0.6 build because the disposable checkout lacked its tree-sitter build
+dependency. No fresh extractor build, hosted CI, route-decision receipt,
+real-source scan, path flow or security query has been established. The
+commit and raw artifacts remain only under ignored `work/`; no PR exists.
 
 Current execution sequence: (1) confirm the authenticated GitHub release
 immutability toggle, then publish and independently verify the producer's
