@@ -78,18 +78,21 @@ then fixed macOS diagnostic test-path aliases without changing production
 verification. Its exact head `6bb1d72` passed 34 affected tests under normal
 and optimized Python and 231 full-suite tests locally; hosted Cargo and
 M3/M4 smoke passed, including the nonphysical-URI negative. It merged as the
-current producer `main` `8d0caef1c9f9b683c1e3d9369f63b2d6aaf288eb` on
-2026-11-25, and its merged branch was deleted. A tag-bound release run on
-this current `main` and the downstream gates remain open.
-Producer [draft PR #165](https://github.com/lucas-albers-lz4/codeql-ucode/pull/165)
+then producer `main` `8d0caef1c9f9b683c1e3d9369f63b2d6aaf288eb` on
+2026-11-25, and its merged branch was deleted.
+Producer [PR #165](https://github.com/lucas-albers-lz4/codeql-ucode/pull/165)
 adds a bounded source-declared `fs.rename` destination argument model at
 head `742d2d4e0770463cd73dcf5649c69df67d3d588b` against that main.
 A defensive exact-head source review found no concrete model blocker; nine
-focused offline tests passed. Linux R2 and Cargo checks passed, while M3/M4
-smoke was still running at the last check. The model has no production
-security query, request-controlled flow or sink, so it does not close
-issue #155 or add MVP alert coverage. Its draft review can proceed separately
-from the immutable release decision.
+focused offline tests passed. Hosted Linux R2, Cargo and M3/M4 smoke passed
+in runs `45537457388`, `45537457375` and `45537457379`; the smoke log
+verified exact route, diagnostics, source witnesses, destination and
+wrong-index control. Another developer merged it as current producer `main`
+`8949bfab8d1e057dc0c06659da266b9d18cec0cb` on 2026-11-25. Its
+merged branch had no open dependent PR and was deleted with an exact lease.
+The model has no production security query, request-controlled flow or sink,
+so it does not close issue #155 or add MVP alert coverage. A tag-bound
+release run on current main and the downstream gates remain open.
 
 Current execution sequence: (1) confirm the authenticated GitHub release
 immutability toggle, then publish and independently verify the producer's
@@ -515,8 +518,8 @@ eight controls had no alert. A separate 17-file current LuCI source-staged
 run extracted each file once with zero errors and returned no candidates.
 The query relies on bounded syntax and source order, not proven execution
 flow or runtime registration. Its copied pack provenance and local-only run
-limits are recorded in the draft. A pinned hosted Linux matrix and review of
-current eligible source are required before any promotion decision.
+limits are recorded in the draft. Review of current eligible source is still
+required before any promotion decision.
 The draft now includes a separate pinned Linux matrix gate at
 `b8ca433dd49cc16155bf1b831f529ae07f36cb06`. Its [hosted run
 `45544165223`](evidence/mvp-nested-rpc-linux-20261125/README.md) passed:
@@ -527,6 +530,9 @@ recorded commands exited zero. The default suite still resolved to the
 direct-RPC rule plus two diagnostics; the nested query ran explicitly.
 This is a bounded testing-query Linux regression, not a release or current
 source alert. The wider M3/M4 smoke was still running at this checkpoint.
+Producer #165 subsequently changed `main`'s model library; revalidate #166
+against that merged base before treating its hosted result as a current-main
+regression.
 
 ### Stage 10 — decide whether the scanner is useful enough to propose
 
