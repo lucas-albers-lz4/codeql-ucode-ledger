@@ -1,0 +1,83 @@
+{
+  "build_inputs": {
+    "config": {
+      "path": ".config",
+      "sha256": "e0dc30db2219dfbf503042a7403419f181a6ed38a922e95fb9097bddffecb9ff"
+    },
+    "feeds": {
+      "path": "feeds.conf",
+      "sha256": "52b3e3c257411fc5de4caf088d2fab73a242ca33dfe182088113f217d0239848"
+    },
+    "per_feed_repo": "CONFIG_PER_FEED_REPO=y",
+    "resolved_feeds": {
+      "luci": "/home/runner/work/_temp/luci-ipk-byte/luci",
+      "packages": "/home/runner/work/_temp/luci-ipk-byte/packages"
+    }
+  },
+  "elapsed_seconds": 0.142548,
+  "files": {
+    "header.ut": {
+      "equal": {
+        "prepared_staging": false,
+        "source_prepared": true,
+        "staging_ipk": true
+      },
+      "installed_path": "usr/share/ucode/luci/template/header.ut",
+      "sha256": {
+        "ipk_member": "6fb25a4ddb6038a3ffc207906157db2503cc1bff7dd230fd588776cde329c02e",
+        "package_staging": "6fb25a4ddb6038a3ffc207906157db2503cc1bff7dd230fd588776cde329c02e",
+        "prepared": "67132f2d1c1cf743f3e4ce11d660a5a2569b461804a63914061fe956171be6c2",
+        "source_git_blob_bytes": "67132f2d1c1cf743f3e4ce11d660a5a2569b461804a63914061fe956171be6c2"
+      },
+      "source_git_blob_oid": "f23e5e45c88211d3d500193407f9277f1912c784",
+      "source_git_path": "modules/luci-base/ucode/template/header.ut"
+    },
+    "http.uc": {
+      "equal": {
+        "prepared_staging": true,
+        "source_prepared": true,
+        "staging_ipk": true
+      },
+      "installed_path": "usr/share/ucode/luci/http.uc",
+      "sha256": {
+        "ipk_member": "68f8a7dffc7bccdfe98956cb3b6e0e087592c86049a2b83d061e5be3585fa5fa",
+        "package_staging": "68f8a7dffc7bccdfe98956cb3b6e0e087592c86049a2b83d061e5be3585fa5fa",
+        "prepared": "68f8a7dffc7bccdfe98956cb3b6e0e087592c86049a2b83d061e5be3585fa5fa",
+        "source_git_blob_bytes": "68f8a7dffc7bccdfe98956cb3b6e0e087592c86049a2b83d061e5be3585fa5fa"
+      },
+      "source_git_blob_oid": "e7f64ae6e9fe00bd1981518927565829a14b11ba",
+      "source_git_path": "modules/luci-base/ucode/http.uc"
+    }
+  },
+  "ipk": {
+    "control": {
+      "Architecture": "x86_64",
+      "Package": "luci-base",
+      "Version": "26.284.22350~8125d12"
+    },
+    "control_archive_sha256": "2b2e37676ad19a1acf1b53ddb074551a5436d6d9e19351534237a09b57ef3a0d",
+    "path": "bin/packages/x86_64/luci/luci-base_26.284.22350~8125d12_x86_64.ipk",
+    "sha256": "1a2188f5206ce61c993fdcc451781a06994ae2175b489eef56595858ef22b363"
+  },
+  "package_version": "26.284.22350~8125d12",
+  "pins": {
+    "luci": {
+      "dirty": false,
+      "sha": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+      "tree": "34b39b1f15d8a68898d84cab7f48e87f1ba80ac6"
+    },
+    "openwrt": {
+      "dirty": false,
+      "sha": "4e9642517b48bae612ff10fb72fb9199e559500e",
+      "tree": "328d4df01c038d365176b72753b778e10c3ff413"
+    },
+    "packages": {
+      "dirty": false,
+      "sha": "07e0d16305d2b5903b37ad7913e33e18795f81a4",
+      "tree": "a6b0fc0935cbfeedb810e6e991b6940f71548ea7"
+    }
+  },
+  "scope": "experimental luci-base file-byte mapping only",
+  "status": "PASS",
+  "timing_scope": "comparison helper only; excludes extraction/build/package"
+}

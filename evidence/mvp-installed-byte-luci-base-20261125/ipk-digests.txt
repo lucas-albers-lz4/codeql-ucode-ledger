@@ -1,0 +1,2 @@
+1a2188f5206ce61c993fdcc451781a06994ae2175b489eef56595858ef22b363  bin/packages/x86_64/luci/luci-base_26.284.22350~8125d12_x86_64.ipk
+1a2188f5206ce61c993fdcc451781a06994ae2175b489eef56595858ef22b363  /home/runner/work/_temp/luci-ipk-byte/output/luci-base.ipk

@@ -1395,7 +1395,16 @@ incoming OpenWrt/LuCI changes.
   [PR #163](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/163)
   removed that probe and runs one verbose serial package build; hosted checks
   passed and it merged as `9018c7633e9dce303d48e2a3ee8d9d78054d03de`.
-  Manual rerun `45513606386` is live and must be inspected independently.
+  [Manual rerun `45513606386`](https://github.com/lucas-albers-lz4/codeql-openwrt/actions/runs/45513606386)
+  completed successfully. Its retained IPK and
+  [independent two-file byte review](evidence/mvp-installed-byte-luci-base-20261125/README.md)
+  show that `http.uc` matches source through preparation, package staging and
+  IPK, while `header.ut` matches source through preparation and then changes
+  during staging when the package version replaces a template token. The
+  staging and IPK bytes match for both files. This establishes two actual
+  package-member byte identities at the pinned LuCI/OpenWrt/packages commits;
+  it does not establish the remaining installed corpus denominator, a CodeQL
+  scan of those bytes or the R3 released Linux handoff.
 - A [source-only census](planning/mvp-openwrt-packages-candidates-v0.1.md)
   of pinned OpenWrt core and packages-feed source found
   35 additional OpenWrt candidates beyond the 11 CLI paths and 37
