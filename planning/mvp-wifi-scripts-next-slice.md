@@ -32,3 +32,26 @@ delta rather than repeating the completed local slice. This slice is a
 natural follow-on
 to [corpus v0.1](mvp-bounded-corpus-v0.1.md), not part of its 76-file
 denominator until a new versioned manifest adds it.
+
+## Paired package-byte decision (2026-11-25 preflight)
+
+At the same clean OpenWrt commit, source review of the package recipe and
+`Config.in` selects a paired Linux IPK experiment: build `wifi-scripts` once
+with `CONFIG_WIFI_SCRIPTS_UCODE=y` and once with it unset, keeping the target,
+package, source revision and all other resolved configuration fixed. The
+corrected oracle projects 17 Ucode-looking members in the enabled package
+and seven common Ucode members in the disabled package. The distinguishing
+`lib/netifd/wireless/mac80211.sh` should match the Ucode-shebang source
+SHA-256 `f7d6ae091777a8eb77ba55c2c1f09bf8caff1a4364dc6de4f19a1ecb322801aa`
+when enabled and the shell source SHA-256
+`5f87f07cca56b20b0cf08cf02711c1c4fc4ddbbb17de7c8780282625c8d3be07`
+when disabled. These are source predictions, not observed package bytes.
+
+The build must resolve and compare both final configs before expensive
+toolchain work, then retain source Git blobs, stage paths, exact IPKs and
+member byte hashes separately for both variants. A missing or duplicate
+member, changed source/config, ambiguous archive, extra Ucode-looking member,
+or source/stage/IPK mismatch fails the experiment. The existing LuCI
+installed-byte build is a process precedent only; it does not establish
+wifi-scripts bytes or a CodeQL scan. A successful pair would add a conditional
+package-member slice to Gate 6, with an explicit config denominator.
