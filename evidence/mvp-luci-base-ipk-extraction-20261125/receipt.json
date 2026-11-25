@@ -1,0 +1,216 @@
+{
+  "actual_success": {
+    "usr/share/ucode/luci/controller/admin/index.uc": 1,
+    "usr/share/ucode/luci/controller/admin/uci.uc": 1,
+    "usr/share/ucode/luci/dispatcher.uc": 1,
+    "usr/share/ucode/luci/http.uc": 1,
+    "usr/share/ucode/luci/runtime.uc": 1,
+    "usr/share/ucode/luci/sys.uc": 1,
+    "usr/share/ucode/luci/template/csrftoken.ut": 1,
+    "usr/share/ucode/luci/template/error404.ut": 1,
+    "usr/share/ucode/luci/template/error500.ut": 1,
+    "usr/share/ucode/luci/template/footer.ut": 1,
+    "usr/share/ucode/luci/template/header.ut": 1,
+    "usr/share/ucode/luci/template/sysauth.ut": 1,
+    "usr/share/ucode/luci/template/view.ut": 1,
+    "usr/share/ucode/luci/uhttpd.uc": 1,
+    "usr/share/ucode/luci/version.uc": 1,
+    "usr/share/ucode/luci/zoneinfo.uc": 1
+  },
+  "commands": [
+    {
+      "argv": [
+        "$RUN/pack/tools/osx64/extractor",
+        "extract",
+        "--source-archive-dir",
+        "$RUN/route/archive",
+        "--output-dir",
+        "$RUN/route/trap",
+        "--file-list",
+        "$RUN/route/files",
+        "--staged-root",
+        "$RUN/stage"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "route",
+      "wall_seconds": 0.206
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "init",
+        "$RUN/db/current",
+        "--language=ucode",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--common-caches=$RUN/cache/common",
+        "--source-root=$RUN/stage"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "init",
+      "wall_seconds": 0.755
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "index-files",
+        "$RUN/db/current",
+        "--language=ucode",
+        "--include=**/*",
+        "--working-dir=$RUN/stage",
+        "--common-caches=$RUN/cache/common",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "index",
+      "wall_seconds": 0.57
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "database",
+        "finalize",
+        "$RUN/db/current",
+        "--common-caches=$RUN/cache/common"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "finalize",
+      "wall_seconds": 1.367
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db/current",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--additional-packs=$RUN/producer/ql/lib:$RUN/producer/ql/src:$RUN/deps",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/SuccessfullyExtractedFiles.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "SuccessfullyExtractedFiles-query",
+      "wall_seconds": 1.619
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "$RUN/out/SuccessfullyExtractedFiles.bqrs"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "SuccessfullyExtractedFiles-decode",
+      "wall_seconds": 0.234
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db/current",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--additional-packs=$RUN/producer/ql/lib:$RUN/producer/ql/src:$RUN/deps",
+        "--common-caches=$RUN/cache/common",
+        "--compilation-cache=$RUN/cache/compilation",
+        "--no-default-compilation-cache",
+        "--output=$RUN/out/ExtractionErrors.bqrs",
+        "--threads=1",
+        "--ram=2048"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "ExtractionErrors-query",
+      "wall_seconds": 1.55
+    },
+    {
+      "argv": [
+        "$CODEQL",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "$RUN/out/ExtractionErrors.bqrs"
+      ],
+      "exit": 0,
+      "peak_rss_bytes": null,
+      "phase": "ExtractionErrors-decode",
+      "wall_seconds": 0.228
+    }
+  ],
+  "errors": [],
+  "expected_success": {
+    "usr/share/ucode/luci/controller/admin/index.uc": 1,
+    "usr/share/ucode/luci/controller/admin/uci.uc": 1,
+    "usr/share/ucode/luci/dispatcher.uc": 1,
+    "usr/share/ucode/luci/http.uc": 1,
+    "usr/share/ucode/luci/runtime.uc": 1,
+    "usr/share/ucode/luci/sys.uc": 1,
+    "usr/share/ucode/luci/template/csrftoken.ut": 1,
+    "usr/share/ucode/luci/template/error404.ut": 1,
+    "usr/share/ucode/luci/template/error500.ut": 1,
+    "usr/share/ucode/luci/template/footer.ut": 1,
+    "usr/share/ucode/luci/template/header.ut": 1,
+    "usr/share/ucode/luci/template/sysauth.ut": 1,
+    "usr/share/ucode/luci/template/view.ut": 1,
+    "usr/share/ucode/luci/uhttpd.uc": 1,
+    "usr/share/ucode/luci/version.uc": 1,
+    "usr/share/ucode/luci/zoneinfo.uc": 1
+  },
+  "oracle_sha256": "593636dce870188e54f57d81945d4384bc913495b7b96dd91952719567a85b04",
+  "output_sha256": {
+    "ExtractionErrors-decode.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ExtractionErrors-decode.stdout": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "ExtractionErrors-query.stderr": "277f105b5843e13b889f0ef4e09ae42d2cc342f99882e43018ce7c484894cec3",
+    "ExtractionErrors-query.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ExtractionErrors.bqrs": "5b3c8b19b113ce87185c17493f7cf43d6cb22718843878126e2faee29868dc36",
+    "SuccessfullyExtractedFiles-decode.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "SuccessfullyExtractedFiles-decode.stdout": "8ffd738581d4ba5f5afcb3d088b6e6a5e3b90139208214b5ce45627270599923",
+    "SuccessfullyExtractedFiles-query.stderr": "481def58444d2f3b113c7ada7b3bea791bb856f695e14ea135d31530b28bc49a",
+    "SuccessfullyExtractedFiles-query.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "SuccessfullyExtractedFiles.bqrs": "1b56f138ed8f6eca18503b63427610659bf00f8b186ac6a9bba1e752ab01f72a",
+    "finalize.stderr": "b5bd4eb459d45e028c30b0994cdf6a731b274af4a9c95f6dcf2a000dedcf4a39",
+    "finalize.stdout": "8163b893f1578195264cdf717b4df8bee2fd1bfcc525c5243d7a3e6ff2db133e",
+    "index.stderr": "72102e66d6841ffc849c32fb2dd89acd8e59f3308ffb8145fef09b9003c0bbd5",
+    "index.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "init.stderr": "de0ee904d523f93ecbdba9bddf700b8b778ad1816d60909ed98fe873dadd1383",
+    "init.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "route-comparison.json": "a91b35ece9c7ec919e704073bfdab3cf123dc160ae24eef35bc389a94f3c03d6",
+    "route.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "route.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "route_match": true,
+  "staged_after_sha256": {
+    "usr/share/ucode/luci/controller/admin/index.uc": "7d7a5dc3e694ad232e4e0f3d01db17c2f5502338aa8c4fc44fa714b0b1147620",
+    "usr/share/ucode/luci/controller/admin/uci.uc": "ac75cfef7d74f87ed7f957778004a7bf486c76df699398c215795b4947e0c93e",
+    "usr/share/ucode/luci/dispatcher.uc": "4f9923cf569aeebb956343d208bcc38f40d8a26d2f46f12c5539a9582fa4f037",
+    "usr/share/ucode/luci/http.uc": "68f8a7dffc7bccdfe98956cb3b6e0e087592c86049a2b83d061e5be3585fa5fa",
+    "usr/share/ucode/luci/runtime.uc": "b15afce07020e2a7ad50718d49a874da30d0582ede7de65e54acaceb6e9d0926",
+    "usr/share/ucode/luci/sys.uc": "0380fba5d843a8950bab0ef70982cb40ab8f475e8d267c873e4199a736b55656",
+    "usr/share/ucode/luci/template/csrftoken.ut": "a2f223208d9ff2c3e1bfa808f11d74636028b4902973afb5b7f336328f7e2160",
+    "usr/share/ucode/luci/template/error404.ut": "8fa2306435be3aca3ca59b09adaaa0190292c6cfe2fecda9df4eb3eeac5b8552",
+    "usr/share/ucode/luci/template/error500.ut": "6c7a519229524d7a34b18c5da97cb8b05f622ee0938fe1a4b2d2516a6adf1887",
+    "usr/share/ucode/luci/template/footer.ut": "5625f938d625ff406e53434d37aa7643cc09e11f74379887a4ba154021240495",
+    "usr/share/ucode/luci/template/header.ut": "6fb25a4ddb6038a3ffc207906157db2503cc1bff7dd230fd588776cde329c02e",
+    "usr/share/ucode/luci/template/sysauth.ut": "8c1dcf98cd29410021ed4f5f9dc668f8c70c0227f39f97f60f7205f9d52fa5bb",
+    "usr/share/ucode/luci/template/view.ut": "785bf7d4cceb5cdd9f113cbede0bde5b69e35b69cc1b51d2e498665d50091d62",
+    "usr/share/ucode/luci/uhttpd.uc": "a2b2694f52c021af16dd06ac8c988b8a0a726d9e8186d308708268ebb8849493",
+    "usr/share/ucode/luci/version.uc": "9567da9ecf509e8a58cec8b09806d8a0bd3d3717fb9a8160c24ad3e1903a6fa8",
+    "usr/share/ucode/luci/zoneinfo.uc": "54162a073660ea65706aa920a10cfbd3ee4d345e1e4ab3bed8a8d56c9cab3863"
+  },
+  "success_match": true
+}
