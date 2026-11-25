@@ -1,0 +1,9 @@
+{
+  "expected_rows": {
+    "identity.uc": [6, 2, 0],
+    "identity_fixed_guard.uc": [41, 11, 0],
+    "luci.wol": [41, 11, 0],
+    "callback_shadow.uc": [7, 6, 0],
+    "callback_write.uc": [7, 2, 1]
+  }
+}
