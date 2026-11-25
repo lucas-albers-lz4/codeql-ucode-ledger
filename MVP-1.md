@@ -908,7 +908,7 @@ incoming OpenWrt/LuCI changes.
   This is parallel R3 preparation, not a released-producer Linux
   handoff; an actual pinned release and fresh job remain required.
   Stacked [draft consumer PR #155](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/155)
-  now targets #154's branch at `82c4aef` (initial implementation
+  now targets #154's retained branch at `817c4a301f4710cff6f0018c1b8fd3321f0b3b66` (initial implementation
   `e9c0b487fb44446cbbc2252573737047636ac4e1`, followed by a
   post-handoff symlink guard and a per-file coverage manifest).
   It adds the frozen 111-path v0.4 source oracle and a second stage in the
@@ -917,12 +917,16 @@ incoming OpenWrt/LuCI changes.
   SARIF passed to the strict consumer with a zero-result baseline. It writes
   `out/coverage-v0.4.json` with each selected, extracted,
   markup-inconclusive and excluded identity and pins its hash in the receipt.
-  A new Linux alert fails for review. Local 19-test contract suite and `actionlint`
-  pass, and Sol review found no high-confidence false-pass. Hosted run
-  `45456142624` passed `contract` and `lock-state`; the repository's
-  `typed-handoff` and `unittest` jobs also passed on the current head
-  `82c4aef`. The live corpus job correctly skipped while the release lock
-  is null. Keep #154's base branch until #155 can be retargeted after merge.
+  A new Linux alert fails for review. The latest commit retains the raw routing
+  report in the job artifact even when database indexing fails after writing
+  it or route validation rejects it; two focused tests exercise those failures.
+  Local 21-test contract suite and `actionlint` pass, and Sol review found no
+  high-confidence false-pass. Hosted run `45527919355` passed `contract` and
+  `lock-state`; run `45527919477` passed `typed-handoff` and `unittest` on the
+  exact latest head. The live corpus job correctly skipped while the release
+  lock is null. PR #155 remains draft, with its own acceptance criterion
+  requiring a live Linux gate before it is ready to merge. Its retained base
+  branch and stacked #156/#157 must be reconciled when that gate is available.
   Neither draft proves Gate 6/7 until the immutable release lock is filled
   and the actual Linux job passes.
 - The [current direct-rule eligibility census](planning/mvp-direct-rpc-current-eligibility.md)
