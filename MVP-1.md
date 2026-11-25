@@ -1003,6 +1003,14 @@ incoming OpenWrt/LuCI changes.
   resulting private head `1bdbd18` passed 21 focused tests, `actionlint` and
   `git diff --check`. This establishes a feasible replay path, not hosted CI
   or a reason to rewrite the branch while #156/#157 depend on its old graph.
+  A second disposable replay produced private #155 tip `7dc6cd0944e90a19447891eae31fa7bcf94ec678`,
+  then applied #156's seven commits and #157's one v0.6 commit separately
+  without conflicts, yielding `3f4795672ca1040798ada4595825af4b470f7541`
+  and `b99845a558445239112390b82743fe4175acf0df`. Their focused tests
+  and workflow lint passed. A same-turn remote read
+  confirmed main and the three PR heads still matched the cached pins. The
+  deeper #158–#160/#165–#167 stack has not been replayed, so the remote
+  branches remain unchanged until the released live gates can be reviewed.
   Neither draft proves Gate 6/7 until the immutable release lock is filled
   and the actual Linux job passes.
 - The [current direct-rule eligibility census](planning/mvp-direct-rpc-current-eligibility.md)
