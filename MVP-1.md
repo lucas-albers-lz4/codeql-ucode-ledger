@@ -1392,9 +1392,12 @@ incoming OpenWrt/LuCI changes.
   builds separate manifests and retains binding digests. Security review
   found and fixed real v3 repository-name handling, ambient Git configuration,
   redirect and run-path boundaries. Thirty-eight focused local tests pass.
-  Existing hosted checks do not run those new resolver tests; the
-  `typed-handoff` check passed and `unittest` was pending in run `45518804672`
-  at this review. The earlier tip is only a control candidate.
+  Earlier hosted checks did not run the new resolver tests. A discovery loader
+  at `ec3ccb70159e25e2b201091f6cfb71db287af8c7` now brings both
+  default-tip modules into the existing policy CI job. Their 15 tests pass
+  locally; hosted Linux run `45530467801` passed `unittest` and
+  `typed-handoff`, and its conformance log names test cases from both modules
+  (1,128 total conformance tests). The earlier tip is only a control candidate.
   No live upstream fetch, authenticated checkpoint history, clean-control
   result, released scan or consumer replay has occurred, and #165 remains
   draft and unscheduled. Integrating its event kind and actual SARIF into the
