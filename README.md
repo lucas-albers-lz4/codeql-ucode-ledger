@@ -121,6 +121,9 @@ Together these move from source selection through extraction, query, and consume
 | [099](claims/099-odhcpd-short-ia-body-validation.md) | Proposed | Security-extension Wave N: odhcpd short IA_NA/IA_PD body validation |
 | [100](claims/100-odhcpd-dangling-first-lease-pointer.md) | Proposed | Security-extension Wave N: odhcpd dangling first-lease pointer |
 | [101](claims/101-mdnsd-cache-bound-ttl-clamp.md) | Proposed | Security-extension Wave N: mdnsd cache bound and hostile TTL clamp |
+| [102](claims/102-uhttpd-subscribe-refcount-pairing.md) | Demonstrated | Security-extension: uhttpd subscribe client refcount pairing (source oracle) |
+| [103](claims/103-uhttpd-ubus-url-path-ownership.md) | Demonstrated | Security-extension: uhttpd non-POST /ubus url_path ownership (source oracle) |
+| [104](claims/104-uhttpd-header-accumulation-caps.md) | Demonstrated | Security-extension: uhttpd header count/byte accumulation caps (source oracle) |
 
 Every demonstrated status is limited to the run, inputs, controls and revisions
 in that claim. These rows are not a coverage percentage.
