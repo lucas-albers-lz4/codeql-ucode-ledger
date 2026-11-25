@@ -1472,10 +1472,21 @@ incoming OpenWrt/LuCI changes.
   runs `45539323497`, `45539323532` and `45539323533` passed their offline
   checks; the released scan step skipped on the null release lock. The change
   issues no queue completion and has not passed a live Gate 8 run.
-  A local offline link probe was reviewed but kept out of the repo because
-  its passing fixture does not pass the actual SARIF consumer and does not
-  establish producer or consumer execution. A valid queue MAC alone cannot
-  turn that synthetic packet into Gate 8 evidence.
+  Stacked [draft PR #166](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/166)
+  adds a separate non-issuing artifact-graph prerequisite at
+  `ae66bf793c79b6431cd45371592afcb612a555e1`. It checks retained
+  event scan manifest, coverage, routing, extraction diagnostics, release
+  and command receipts, SARIF and actual consumer triage against an
+  independently replayed oracle and verified lock supplied by its caller.
+  Twenty-two local consumer tests passed, including swapped-artifact and
+  altered-receipt controls; exact-head hosted `unittest` and `typed-handoff`
+  passed in run `45540389079`. The check does not authenticate execution,
+  verify its own oracle or lock, bind a distinct clean control or queue reservation,
+  or sign an outcome. It cannot be used as a completion issuer by itself.
+  An earlier offline link probe was kept out because it did not replay the
+  actual SARIF consumer. PR #166 adds that replay, but its synthetic tests
+  still do not establish producer execution or a trusted consumer run.
+  A valid queue MAC alone cannot turn fabricated files into Gate 8 evidence.
   The [12-path recipe mapping](planning/mvp-openwrt-full-tree-candidates-v0.5-mapping-20261124.md)
   identifies conditional product install paths used by the source-staged
   v0.5 expansion, with no installed-byte claim.
