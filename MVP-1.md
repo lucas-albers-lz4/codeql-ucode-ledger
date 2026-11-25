@@ -1123,6 +1123,17 @@ incoming OpenWrt/LuCI changes.
   `map`/`join`, model quoting and the fixed-executable guard, and test fresh
   SARIF with positive and near-miss controls. No WOL alert is ready for the
   default suite.
+  A later [testing-only WOL binding table](evidence/mvp-wol-assembly-bindings-20261124/README.md)
+  on clean producer `104a398468f214961168d2edc9a10be45b80062f`
+  expanded that prerequisite: 21 source-staged files were routed and
+  extracted once each with zero diagnostics; the real WOL handler and three
+  discriminating controls yielded four expected rows with 12 distinct AST
+  ranges each, and 17 further controls yielded no row. It independently
+  labels the quote-body shape and fixed-path comparison. The exact 10-command
+  run took 15.356 seconds; peak RSS was unavailable. This is bounded
+  binding/assembly evidence, not reusable `map`/`join` flow, quote safety,
+  a production alert, SARIF acceptance or consumer handoff. Keep #54 and #50
+  as the production-model owners.
 - Stacked draft consumer [PR #156](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/156)
   (`mvp/incoming-ci-drill` at `3a2197c`, based on #155) now has
   a manual incoming-event **identity preflight** on top of PR #155. It
