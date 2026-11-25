@@ -124,6 +124,7 @@ Together these move from source selection through extraction, query, and consume
 | [102](claims/102-uhttpd-subscribe-refcount-pairing.md) | Demonstrated | Security-extension: uhttpd subscribe client refcount pairing (source oracle) |
 | [103](claims/103-uhttpd-ubus-url-path-ownership.md) | Demonstrated | Security-extension: uhttpd non-POST /ubus url_path ownership (source oracle) |
 | [104](claims/104-uhttpd-header-accumulation-caps.md) | Demonstrated | Security-extension: uhttpd header count/byte accumulation caps (source oracle) |
+| [105](claims/105-asu-request-hash-package-validation.md) | Demonstrated | Security-extension Wave P: ASU full request hash + package/profile pattern validation (source oracle) |
 
 Every demonstrated status is limited to the run, inputs, controls and revisions
 in that claim. These rows are not a coverage percentage.
