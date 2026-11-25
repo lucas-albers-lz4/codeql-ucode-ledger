@@ -1567,6 +1567,17 @@ incoming OpenWrt/LuCI changes.
   (run `45551118377`) passed. The
   null lock skips the released scan, so no trusted live freeze, issuer or
   Gate 8 claim exists.
+  A local non-issuing queue-schema v2 prototype at `work/issuer-schema-openwrt`
+  initially reached `5a5937122adc25636ef40edbdc609330bebeda28` on #170,
+  but includes 13 unmerged queue/poller prerequisite commits. It binds a
+  claimed issuer-receipt digest and trusted job/run/attempt identity to the
+  attested queue start; it cannot authenticate receipt bytes or issue a live
+  completion. Independent review found a concurrent clean-store
+  initialization race and incomplete populated-v1 migration control; fixes
+  are underway locally. Automatic approval review rejected publishing this
+  branch because potentially private source/history lacked sufficient
+  publication authorization. No remote PR exists, and the rejected push
+  must not be treated as a release-path result.
   An earlier offline link probe was kept out because it did not replay the
   actual SARIF consumer. PR #166 adds that replay, but its synthetic tests
   still do not establish producer execution or a trusted consumer run.
