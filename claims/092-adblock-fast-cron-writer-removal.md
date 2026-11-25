@@ -1,6 +1,6 @@
 # 092 — luci-app-adblock-fast raw cron writer removal and field validation
 
-- Status: Proposed
+- Status: Demonstrated
 - Question: At the pinned LuCI corpus, is the caller-supplied `setCronEntry` RPC absent from both the method table and ACL, and does `syncCron` render cron lines only from discrete validated fields, closing the newline-injection shape in GHSA-ggpf-xrph-wg5v / CVE-2026-45767?
 - Corpus pin: `luci b2e0be4b46ec0fd43394c081fa7c50657af14011`.
 - Producer commit: `codeql-ucode 9166af76cf6944e1b3ea5856a9176366a1f7a6ee`; application-ucode routing remains gated by codeql-ucode#154, so this claim uses a pinned-source oracle.
@@ -8,4 +8,4 @@
 - Expected observable: no `setCronEntry`/`set_cron_entry` writer is exported or ACL-granted; `cron_write` validates/clamps discrete schedule fields before assembling a fixed `/etc/init.d/<package> dl` line; no caller-supplied physical cron line reaches `writefile`.
 - Oracle: pinned-source method/ACL census plus deterministic cron-field validator emulator; advisory anchors motivation/source-shape only; no runtime or exploit verdict.
 - Controls: positive vulnerable fixture (raw `entry` containing `\n` written verbatim), near-miss newline-bearing discrete field rejected/clamped, negative fixed pin; fail-no-eligible-instance with full cron-writer census if fixed.
-- Result: pending lane evidence.
+- Result: Demonstrated (fixed-in-pin source shape). Orchestrator re-ran `run_pipeline.sh` (exit 0): oracle PASS (blobs/ACL match, fix ancestry, `no_setCronEntry_method`, `acl_no_setCronEntry`, cron-field gate, modes allowlist, all-fields-validated, write-after-gate, no-raw-schedule-write, boundary emulation), controls 3/3. Method table exports `getCronStatus`/`getCronEntry`/`syncCron` only (`luci.adblock-fast:462-483`); ACL write grants `syncCron`, not `setCronEntry` (`acl.d/luci-app-adblock-fast.json:27-39`). `cron_field` (`:45-50`) coerces to bounded int, `CRON_MODES` allowlist (`:53`), all schedule fields validated (`:178-184`) before fixed-line `sprintf` (`:194`) and `writefile` (`:226`); removal note `:346-351`. Fix/update `9ccd99b5898457e5ef39dc21aea226d7fb6e5c7e` ancestor of pin. Source oracle only; application-ucode routing gate codeql-ucode#154 preserved; no analyzer `path_found`, runtime, or exploit verdict.

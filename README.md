@@ -111,9 +111,9 @@ Together these move from source selection through extraction, query, and consume
 | [089](claims/089-newer-openwrt-wifi-parse-boundary.md) | Demonstrated | Newer pinned OpenWrt wifi corpus: 128 exact routes, 126 extraction successes and two parse-failed source identities |
 | [090](claims/090-wifi-grammar-prototype-extraction.md) | Demonstrated | Disposable grammar override restores exact four-file extraction and observes dynamic-import/export AST nodes; later grammar support merged, released corpus untested |
 | [091](claims/091-luci-app-lxc-acl-path-validation.md) | Demonstrated | Security-extension: luci-app-lxc ACL consistency and container-name path validation (source oracle) |
-| [092](claims/092-adblock-fast-cron-writer-removal.md) | Proposed | Security-extension: adblock-fast cron writer removal and bounded cron fields |
+| [092](claims/092-adblock-fast-cron-writer-removal.md) | Demonstrated | Security-extension: adblock-fast cron writer removal and bounded cron fields (source oracle) |
 | [093](claims/093-ead-send-a-length-underflow.md) | Demonstrated | Security-extension: EAD handle_send_a pre-subtraction length guard (source oracle) |
-| [094](claims/094-ltq-ptm-ioctl-capability-user-copy.md) | Proposed | Security-extension: ltq-ptm ioctl capability and user-copy bounds |
+| [094](claims/094-ltq-ptm-ioctl-capability-user-copy.md) | Demonstrated | Security-extension: ltq-ptm ioctl capability gate and user-copy accessors (source oracle) |
 | [095](claims/095-jsonpath-token-string-lifetime.md) | Demonstrated | Security-extension: jsonpath token string lifetime in jp_get_token (source oracle) |
 | [096](claims/096-odhcpd-ia-buflen-underflow.md) | Proposed | Security-extension Wave N: odhcpd IA buflen underflow cap |
 | [097](claims/097-odhcpd-duid-endian-memcmp.md) | Proposed | Security-extension Wave N: odhcpd self-loop DUID host-order memcmp |
