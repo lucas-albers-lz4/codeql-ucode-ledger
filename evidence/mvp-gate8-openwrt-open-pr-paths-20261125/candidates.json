@@ -1,0 +1,831 @@
+{
+  "candidate_path_count": 83,
+  "candidate_pr_count": 58,
+  "candidates": [
+    {
+      "base": "1977301b5f8f76b4d04b5950b09b2fd7cf607bc4",
+      "files": [
+        {
+          "blob": "a7c13acc9838b06d0b776c03da4ee6b718f637fd",
+          "path": "package/network/services/hostapd/files/hostapd.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "3d367047a3e29f6dd71ef5bf6d7015827628686b",
+      "number": 15155
+    },
+    {
+      "base": "1977301b5f8f76b4d04b5950b09b2fd7cf607bc4",
+      "files": [
+        {
+          "blob": "9ef331fe74f9508a4bddb37942b744e901f8aa51",
+          "path": "package/network/config/wifi-scripts/files/usr/share/hostap/wifi-detect.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "4cabf21f54accf7b29ac2b9b722f978e2c0e8913",
+      "number": 18313
+    },
+    {
+      "base": "92d4f59709eac7422391187edbd85f2a14d5589b",
+      "files": [
+        {
+          "blob": "9ef331fe74f9508a4bddb37942b744e901f8aa51",
+          "path": "package/network/config/wifi-scripts/files/usr/share/hostap/wifi-detect.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "a7e9f10ed739e0eb10ea0923af260293d4eb6e9e",
+      "number": 18314
+    },
+    {
+      "base": "1977301b5f8f76b4d04b5950b09b2fd7cf607bc4",
+      "files": [
+        {
+          "blob": "f20788b48dcee06eeb928139907e0d767bd6e93b",
+          "path": "package/network/config/wifi-scripts/files/usr/share/hostap/common.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "121cc83c1824b286913c8639364a5186fad9c131",
+      "number": 19856
+    },
+    {
+      "base": "f26554ed98299c008b4ead7964a40d4bcec7a573",
+      "files": [
+        {
+          "blob": "bbf762bb37f8953399d1b7c9efd5b654516491bd",
+          "path": "package/utils/airoha/xpon-agent/files/usr/share/rpcd/ucode/xpon.agent",
+          "status": "added"
+        },
+        {
+          "blob": "8cf036904fda5965868501d173d55d26f2174a85",
+          "path": "package/utils/airoha/xpon-agent/tests/backend.uc",
+          "status": "added"
+        },
+        {
+          "blob": "e6e35d7b753396cc04ce09973be69d6cb2f67260",
+          "path": "package/utils/airoha/xpon-agent/tests/mocks/ubus.uc",
+          "status": "added"
+        },
+        {
+          "blob": "a9e5ce9cfb0c634802765eaf96b8fbdb9d722f89",
+          "path": "package/utils/airoha/xpon-agent/tests/mocks/uci.uc",
+          "status": "added"
+        },
+        {
+          "blob": "3e14c331e97b51c1f15652a67f1ef2030e3343b6",
+          "path": "package/utils/airoha/xpon-agent/tests/mocks/uloop.uc",
+          "status": "added"
+        },
+        {
+          "blob": "6086cfb5a264fec452b3d4c1e9c3c955565a8107",
+          "path": "package/utils/airoha/xpon-agent/tests/mocks/xpon.uc",
+          "status": "added"
+        },
+        {
+          "blob": "f619054fff804d3e7e5654540fed268b532b35ad",
+          "path": "package/utils/airoha/xpon-agent/tests/mocks/xpon_omci.uc",
+          "status": "added"
+        }
+      ],
+      "head": "68f25b077fe40be020fbfc1bb51c2f2b11be6670",
+      "number": 20104
+    },
+    {
+      "base": "1977301b5f8f76b4d04b5950b09b2fd7cf607bc4",
+      "files": [
+        {
+          "blob": "9de67e25ba1ee318863d093f32f61013374754e5",
+          "path": "package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "ddb6ad8144b9da905a7455b1e3215721855ddeb5",
+      "number": 20669
+    },
+    {
+      "base": "1977301b5f8f76b4d04b5950b09b2fd7cf607bc4",
+      "files": [
+        {
+          "blob": "8d1edccb8d0333474a5f721fdcb2b3ae8668e80e",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "5980d2527cf68aed1bec8aa125a89d8a92ef3e1f",
+      "number": 21210
+    },
+    {
+      "base": "1977301b5f8f76b4d04b5950b09b2fd7cf607bc4",
+      "files": [
+        {
+          "blob": "6230f9028768e788a4fe5faa7ab6ba217621b517",
+          "path": "package/network/config/wifi-scripts/files-ucode/lib/netifd/wireless/mac80211.uc",
+          "status": "added"
+        }
+      ],
+      "head": "8c3e038544e46d3b2b4eca8a3d68e2514094c722",
+      "number": 21473
+    },
+    {
+      "base": "99c0c360279c579a189135ed5130d7ace2b49a24",
+      "files": [
+        {
+          "blob": "56911347a75d1b85211eecf3cc33d34d93924041",
+          "path": "package/network/config/netifd/files/lib/netifd/main.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "7db61cdb2c16a608c2e13a5d6408d2a17f38ec1d",
+          "path": "package/network/config/netifd/files/lib/netifd/proto-ucode.uc",
+          "status": "added"
+        },
+        {
+          "blob": "b1a4e2ee1269c439dd4d64eadb74d85a3ccd8657",
+          "path": "package/network/config/netifd/files/lib/netifd/proto.uc",
+          "status": "added"
+        },
+        {
+          "blob": "b038efc5fc7b382ded9ae29b893dc5ab7babdb7c",
+          "path": "package/network/config/netifd/files/lib/netifd/utils.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "2c7c92b61cddc75a649329bb208974ead25214cd",
+      "number": 22108
+    },
+    {
+      "base": "02a3d72c96f91b9195b661541b6821176b30813e",
+      "files": [
+        {
+          "blob": "67a5a2f83a83969d5b2ce300b81dbacfd5449153",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "66c53ad8f756aada92938edfbb095dc1b1c28073",
+      "number": 22238
+    },
+    {
+      "base": "dd72c4c198330e208c2357625693a03996cae741",
+      "files": [
+        {
+          "blob": "6e1723b54c66204cef407b94ad1fd6f8288d9912",
+          "path": "package/utils/cli/files/usr/share/ucode/cli/modules/firewall.uc",
+          "status": "added"
+        },
+        {
+          "blob": "84dc385c57e0b9546738308bb52c91309b0196b3",
+          "path": "package/utils/cli/files/usr/share/ucode/cli/modules/network.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "81d27c838f4b2806ae603b0bfaf71b37f4890b61",
+          "path": "package/utils/cli/files/usr/share/ucode/cli/modules/service.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "c2d36979051915843a548e5124fa8d191403e0fe",
+          "path": "package/utils/cli/files/usr/share/ucode/cli/modules/startup.uc",
+          "status": "added"
+        },
+        {
+          "blob": "d91bab14466e8764044a4e42a52c1a7d033bf24d",
+          "path": "package/utils/cli/files/usr/share/ucode/cli/modules/system.uc",
+          "status": "added"
+        }
+      ],
+      "head": "88d6b96922f5bb81847c3ce731392573991284de",
+      "number": 22630
+    },
+    {
+      "base": "3d5a743f1f0cb77aed8ed63b2f9aa75700b4322c",
+      "files": [
+        {
+          "blob": "d08528df9b98fc96300fb5f30a65acbcd3d0b844",
+          "path": "package/network/config/netifd/files/lib/netifd/proto/dhcp.uc",
+          "status": "added"
+        },
+        {
+          "blob": "a1faa40fd608c4230ce50efe8a997759ef3ab7b1",
+          "path": "package/network/ipv6/odhcp6c/files/dhcpv6.uc",
+          "status": "added"
+        }
+      ],
+      "head": "14f8a80d3d07aac9c9404263af8754e93a23dbfd",
+      "number": 22751
+    },
+    {
+      "base": "30394cc5b94458ef4d9ec3148474333ecb7a40ab",
+      "files": [
+        {
+          "blob": "fadca6f429c7e7a4123103f3509dfca1536f029c",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "2e7f4381adb8ca0fa7c8179ac92968b7fadd84b7",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/supplicant.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "bdcc2a2ad17a2f5f1e6aa2e9720d007708183cd5",
+      "number": 23024
+    },
+    {
+      "base": "15342a05bd3e6d9a95c8d2ce1e294c14169ff9c3",
+      "files": [
+        {
+          "blob": "329e00d665c0c91ccdfd673597031bf97d663c02",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "b73124da98dbd7105efd1ccbadd741581929b633",
+      "number": 23251
+    },
+    {
+      "base": "f31b65a870f7b8b133bccf879cb3c5fc909d5d86",
+      "files": [
+        {
+          "blob": "a7abe944e0c9e114942b77b217cbcc7f591982b3",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "c4f7c6c520138993b75f5679426e34b445b0f352",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/hostapd.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "783dd4080b67e4d08135d6ecdaad06631c300761",
+      "number": 23641
+    },
+    {
+      "base": "d6f5c2685ff3fa97405c2d565f913deef86bebff",
+      "files": [
+        {
+          "blob": "956d03ddddb72bec029bac2d6ce4a28379f5d317",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/supplicant.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "4518ee96c5ceba60feb7aa287f86f10ef63c330a",
+      "number": 23728
+    },
+    {
+      "base": "d6f5c2685ff3fa97405c2d565f913deef86bebff",
+      "files": [
+        {
+          "blob": "fbafbf67d0dbcbc411e906a1cf7ccae562dea0b8",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/supplicant.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "d859363d81e0f67e363ce77e9b3ba3fe9447ff03",
+      "number": 23737
+    },
+    {
+      "base": "3d5a743f1f0cb77aed8ed63b2f9aa75700b4322c",
+      "files": [
+        {
+          "blob": "fd28f12c5478f9ebeee7d37579142b9229fd8d21",
+          "path": "package/network/services/ppp/files/ppp.uc",
+          "status": "added"
+        }
+      ],
+      "head": "21277e68604a1c2f84d967d8c898c709925f48f7",
+      "number": 23792
+    },
+    {
+      "base": "0d5fa224879029fde0637e2aa3707059c1264394",
+      "files": [
+        {
+          "blob": "007aad365a96041e2b323be0d5d48e91fb456269",
+          "path": "package/network/config/wifi-scripts/files/usr/share/hostap/wifi-detect.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "1b214665bf115d1771c86451bb3ddb0d8f47fa70",
+          "path": "package/network/config/wifi-scripts/files/usr/share/ucode/wifi/utils.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "491efe8b4c6b85b26b26fa9e3413e1fb63fe20cf",
+      "number": 23860
+    },
+    {
+      "base": "4be1036213238ecaca758bf43a57f7dc5255f6f5",
+      "files": [
+        {
+          "blob": "4e9d3377dbe640069127865eecc4961359857bc9",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/supplicant.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "ac92a03d3b13ab86e7f2e4d82532556b0904e037",
+      "number": 23889
+    },
+    {
+      "base": "1d206717c57f0b3af9e0f9ef7888422836164830",
+      "files": [
+        {
+          "blob": "c5f30fd4d01bce1fc402ff1eba914612b2c33715",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/iwinfo.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "062afde0037cf2f7497fb435ef43ccfb4694297f",
+      "number": 24109
+    },
+    {
+      "base": "2a73f02e564eb8717d8ff8f30fc91a6b358c446e",
+      "files": [
+        {
+          "blob": "fa7ab0992e6060bec193935146959ef721de78c5",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "933c4133e26cd798834a777a99ed075aa1d98f00",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/hostapd.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "92973a06e5b2de00ccbb0ac01d04eda80e6e7475",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/supplicant.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "a74dc82b608492645a0f42fdb354e385f6e4c893",
+          "path": "package/network/config/wifi-scripts/files/lib/netifd/wireless-device.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "51c4b696f237e0d6d3bb962f6f9bccb676ff338a",
+          "path": "package/network/services/hostapd/files/mesh-macfilter.uc",
+          "status": "added"
+        }
+      ],
+      "head": "b526548e4a8ed171f3eb699741a06d3606f1ec36",
+      "number": 24152
+    },
+    {
+      "base": "467c5b90ba1140dcdabc2e2e203c1d91fca9963e",
+      "files": [
+        {
+          "blob": "345be035783498b7345c373969fc8bc1931e7882",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/common.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "a3b3bb572f4c32eb855fc076bf3108f1e964b904",
+      "number": 24639
+    },
+    {
+      "base": "467c5b90ba1140dcdabc2e2e203c1d91fca9963e",
+      "files": [
+        {
+          "blob": "38251951ced68b479a18107bf66b2b0a0e3e2aa3",
+          "path": "package/network/config/wifi-scripts/files/lib/netifd/wireless-device.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "0b22f6037e3e2047ec9e2ba5cdf460bd09127d0d",
+      "number": 24641
+    },
+    {
+      "base": "fc636dac867fcd8c68dee0ad69fc15954e075715",
+      "files": [
+        {
+          "blob": "3fc76ca023d5573e0cb38d488050ad5604a88aa5",
+          "path": "package/network/config/wifi-scripts/files/lib/netifd/wireless-device.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "70c9fe43c325b72e9c3aed17cb8c692e0159f40a",
+      "number": 24670
+    },
+    {
+      "base": "eb0f561cc4064116e073bfb56345725e039244cd",
+      "files": [
+        {
+          "blob": "b2bb66c6a11b3d46129fd02f6b0bbe8665649b80",
+          "path": "package/network/config/wifi-scripts/files/usr/share/hostap/common.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "da63e838e3edbcad7867e8f0c7c72c3b7359ee9a",
+      "number": 24731
+    },
+    {
+      "base": "0c0d6dd7d12ff707813f99a03fa4d1c521c7b70c",
+      "files": [
+        {
+          "blob": "e49460baf3fe303576d373123a8d72882e581baa",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/iface.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "41878b7ca6d572608951f80e636696c1c6c0dd96",
+          "path": "package/network/config/wifi-scripts/files/lib/netifd/wireless.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "f7870a6e9ce19dc146eb7d9c22038253403195b5",
+          "path": "package/network/config/wifi-scripts/files/usr/share/ucode/wifi/utils.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "6d18f7aff816ce0073e9146c005af9dba3cf30f0",
+      "number": 24955
+    },
+    {
+      "base": "769116266bb9d67b5d0cd30c7eb018e796d6aa7e",
+      "files": [
+        {
+          "blob": "7da2f68c36f14831e744716edab44bf009fc6ad3",
+          "path": "package/network/config/wifi-scripts/files/usr/share/hostap/wifi-detect.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "4d300631f44ce4f19b37d14446717b83fc985da6",
+      "number": 24988
+    },
+    {
+      "base": "57d732596479fd7064dedc8753b59634687b740e",
+      "files": [
+        {
+          "blob": "9f99904812f449cc540942719b37cf249e7e9b8a",
+          "path": "package/network/utils/wireguard-tools/files/wireguard.uc",
+          "status": "added"
+        }
+      ],
+      "head": "7658c9e263afcdf460ecc8a1e7d5e073dcf1077d",
+      "number": 25175
+    },
+    {
+      "base": "0ad1348fb2a7f49c9c5941d4d8c98f88b6974e8d",
+      "files": [
+        {
+          "blob": "2fe089b1de331784b3f79fb46927c98685592361",
+          "path": "package/network/config/netifd/files/usr/libexec/network/packet-steering.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "1e41ee18de8f78e1b97377d25465d2862bbb3ab3",
+      "number": 25234
+    },
+    {
+      "base": "fc5bd7cc0c2c0ab55e27d85a3edfca80ada12088",
+      "files": [
+        {
+          "blob": "05d0bdf3eb8f55c3d55767dd02d5a34b525c1bf2",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/iwinfo.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "f5a0831dc1baf6ba482edea0a75478503350a282",
+      "number": 25337
+    },
+    {
+      "base": "5637708d36618f21c2191bdfba0fdd5da770954e",
+      "files": [
+        {
+          "blob": "352359375174ca33b43b10406d93ad8f700c8d62",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "9c88b4d36b4725f72528eed46e39adfa1ce6ed46",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/common.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "749bcc296d58e7524fc06a779b9c36383e744d51",
+      "number": 25349
+    },
+    {
+      "base": "ab58ca8fc0e36c526d3590b97f9ef6f90828cd7f",
+      "files": [
+        {
+          "blob": "738e0aa1887cbcb3305c9fa27ccccc57e25f698e",
+          "path": "package/network/utils/wireguard-tools/files/wireguard.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "68e1fc94ab9866aee4ef45b44b955b945999967f",
+      "number": 25438
+    },
+    {
+      "base": "ecc4a30859f2b556b0ad1c0b83ca226b36f4ab8c",
+      "files": [
+        {
+          "blob": "4541685c755ff4a8a5aec43bfc4bd174cfce56c0",
+          "path": "package/network/config/netifd/files/lib/netifd/utils.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "b816245c7cf7a7c8a100b06ee8ad43b45cb43048",
+      "number": 25851
+    },
+    {
+      "base": "913daed7916c96db2a2ea99b1e2fad624de511ef",
+      "files": [
+        {
+          "blob": "e82d33566f8dd03fb97b50a5cfc422f443ec9cb8",
+          "path": "package/network/config/wifi-scripts/files/usr/share/hostap/common.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "b16cd0b2d2f8c672a8a1169fc2050c15cbd26267",
+      "number": 26004
+    },
+    {
+      "base": "0d245fdaeae5c890c8aa997fadcf9287a707558f",
+      "files": [
+        {
+          "blob": "0e7498c91210c7a5e0164135fbb4d2d751f09a96",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "24e46d42943bc3daabd345c68c6513419b52bd33",
+      "number": 26057
+    },
+    {
+      "base": "fc5bd7cc0c2c0ab55e27d85a3edfca80ada12088",
+      "files": [
+        {
+          "blob": "bcd789d7d88bfe3b86905c584f7ac9f09d8f0e6a",
+          "path": "package/network/services/unetmsg/files/usr/share/ucode/unetmsg/client.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "bef19fb9ea7f4ab5d8ddf6053c54b5a5df6c1ae4",
+      "number": 26271
+    },
+    {
+      "base": "5700101d7c85381889d890dc1d3d001d0b4b6446",
+      "files": [
+        {
+          "blob": "aa7ce14f2cb5d4aa19ff0025c75e3b7834a343df",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "4705de90cdf740b398623ccc4ff255adf94bbe38",
+      "number": 26277
+    },
+    {
+      "base": "feb8ac5e7e421a73fda862997175b77eaaf0c7aa",
+      "files": [
+        {
+          "blob": "841da4a734881f5fbbb6b1180657e001d2a775e3",
+          "path": "package/network/config/wifi-scripts/files/lib/netifd/wireless-device.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "0d21f8414067268f26c15077a9432ca84b6ccaa2",
+      "number": 26325
+    },
+    {
+      "base": "5799d2da76998be50432b0a3325b42713b4b619b",
+      "files": [
+        {
+          "blob": "d71bd383e22c04c4286cf11c3d2bd066a1523c9b",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/hostapd.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "a0a1e964ac826d6c1b9ea5fb3576b8a2a45fe1dd",
+      "number": 26326
+    },
+    {
+      "base": "feb8ac5e7e421a73fda862997175b77eaaf0c7aa",
+      "files": [
+        {
+          "blob": "3f4d264402c24e72b31d4bef4a191d92a5d10edc",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "53ecc97d55902abe69e1a0cfbdd44ab38feb4e12",
+      "number": 26343
+    },
+    {
+      "base": "382a2109c849a45873aa908b4912fab667f603a0",
+      "files": [
+        {
+          "blob": "2d45935298cdc073ac9e46ffcccf094e699a6823",
+          "path": "package/network/config/wifi-scripts/files/lib/netifd/wireless-device.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "57f1e66c8b72e1e0866240e3e940117267dbdd36",
+      "number": 26378
+    },
+    {
+      "base": "e2ed57b957dc983fae535ca14a0969711537d752",
+      "files": [
+        {
+          "blob": "7c7a7f70db5bcfde8ac7d0b19f6c2d3fda35fbb3",
+          "path": "package/network/services/hostapd/files/hostapd.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "79bf0b7b637ba92ed01e05881aa5a6bf3d76deed",
+      "number": 26392
+    },
+    {
+      "base": "554f401d6b09eee91486a4b0399393605996e130",
+      "files": [
+        {
+          "blob": "c1f4cd38f5ec159259d076a62624e9f561f4750f",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "19ac38b0b7230d3b83b543c7999f5c427249a56e",
+      "number": 26394
+    },
+    {
+      "base": "30a23ae451602aa8cdaa8532c19855162c3e2de1",
+      "files": [
+        {
+          "blob": "12c240c02eb2aedeef257c039e66590f0873528e",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/hostapd.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "975121d4360bbcc4e7a94373e12cdefcd9f379bd",
+      "number": 26395
+    },
+    {
+      "base": "554f401d6b09eee91486a4b0399393605996e130",
+      "files": [
+        {
+          "blob": "e94a359096ddb24b4a4d2204634af0cc880e196d",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/hostapd.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "74d414e9d784e35fe5b902d46bf72d44747be7de",
+      "number": 26398
+    },
+    {
+      "base": "5c5a157852271d66489790048de935f3ebd36fa4",
+      "files": [
+        {
+          "blob": "36c2886b538cec121d3336f4b19b210868bb0d99",
+          "path": "package/network/config/wifi-scripts/files/lib/netifd/wireless-device.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "831cfd91d4a74251c58d99453af2a4e5b068c7cb",
+      "number": 26464
+    },
+    {
+      "base": "6fc74db0ddb6a172949d4a02b95a0a8c1e602d58",
+      "files": [
+        {
+          "blob": "c101bbcf16363514057ba9fde842408b301e4499",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "9da6710fa44f4f32dde0b046025470a1d7bbc9ce",
+      "number": 26467
+    },
+    {
+      "base": "f8145e65458fba52e360bbdb358be42939eb557f",
+      "files": [
+        {
+          "blob": "bee1b083844ff74900c70df371fa50f33965c739",
+          "path": "package/network/utils/jrd-modem/files/jrd.uc",
+          "status": "added"
+        }
+      ],
+      "head": "ba3083b04dfe1177cc22e8dcfec4693614c74e75",
+      "number": 26477
+    },
+    {
+      "base": "ecd9120f0451920fd277c717fa06cc358d553409",
+      "files": [
+        {
+          "blob": "2d699529e07134bc5cf77cd49165f2eb27293def",
+          "path": "package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "eeadfb3276c39566e944de49e6ec495f59499475",
+      "number": 26591
+    },
+    {
+      "base": "30a23ae451602aa8cdaa8532c19855162c3e2de1",
+      "files": [
+        {
+          "blob": "8f3b55021b0156ca0af3b913c151f07533f51094",
+          "path": "package/network/config/wifi-scripts/files/lib/netifd/wireless-device.uc",
+          "status": "modified"
+        },
+        {
+          "blob": "02852ddcdb5230f1cb5f57344e874a2e50f0d683",
+          "path": "package/network/config/wifi-scripts/files/lib/netifd/wireless.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "cee6edb0a7fe8a6bccd9de5f139206dbe03677a3",
+      "number": 26613
+    },
+    {
+      "base": "06429657494cc196773ccfb6ac0ada4fd81adf2b",
+      "files": [
+        {
+          "blob": "1e83f6aa23aff23fb19a515256da0a5d8d659ebf",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "bc9afe7c1811dde9c3b986ba4551d5520e2faa87",
+      "number": 26640
+    },
+    {
+      "base": "30a23ae451602aa8cdaa8532c19855162c3e2de1",
+      "files": [
+        {
+          "blob": "32d9d3d24c0731fea42fc209f84e062850f800c7",
+          "path": "package/network/config/netifd/files/usr/libexec/network/packet-steering.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "72bd8c243fcaaf6c4f2cbf253bb42dfa078086ed",
+      "number": 26655
+    },
+    {
+      "base": "7b46f9593eb92c80541dde12b6e49f1761f9c7be",
+      "files": [
+        {
+          "blob": "f0fe516b2aeb643fb693ecb6b66851799cd5d938",
+          "path": "package/network/config/netifd/files/usr/libexec/network/packet-steering.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "88679068afff30379c188665aa5effb7b6a863ab",
+      "number": 26668
+    },
+    {
+      "base": "8b34d6283fc51dc3d5235d4ea3c97c72cd8ed506",
+      "files": [
+        {
+          "blob": "4541685c755ff4a8a5aec43bfc4bd174cfce56c0",
+          "path": "package/network/config/netifd/files/lib/netifd/utils.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "15eb07752a51ec215446d03c8483922ad07187dd",
+      "number": 26805
+    },
+    {
+      "base": "6354b1ffc6d073a110624889b635e9f8ae2cd673",
+      "files": [
+        {
+          "blob": "7774347c74cbdb4c913f47e8463a72c8e37d751b",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/ap.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "dca36ff2e32d650d2916359abd912e54f73a1fd1",
+      "number": 26815
+    },
+    {
+      "base": "0e66e1c7457a6a92d851c23cd47f7c6f69a7455a",
+      "files": [
+        {
+          "blob": "9494576568af07cb18afbba5b1abe12092d8e160",
+          "path": "package/network/config/wifi-scripts/files/lib/netifd/wireless-device.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "44dc0a804187e55a39a3622599bf31303bd8e654",
+      "number": 26875
+    },
+    {
+      "base": "081ea0bddbf0ad97f4e587f82eb2b67b1aa44718",
+      "files": [
+        {
+          "blob": "4e3a6202d6928199b6335a56a9469bc56740dd8f",
+          "path": "package/network/config/wifi-scripts/files-ucode/usr/share/ucode/wifi/hostapd.uc",
+          "status": "modified"
+        }
+      ],
+      "head": "2081f61324d5fb08ad530da4c8ebea96a463f603",
+      "number": 26924
+    }
+  ],
+  "max_changed_files_returned": 1042,
+  "observed_at": "2026-11-25T03:10:27Z",
+  "open_pr_count": 1653,
+  "schema": "gate8-openwrt-open-pr-ucode-paths-v1"
+}

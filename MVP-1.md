@@ -455,6 +455,14 @@ Defensive source review found no eligible **changed-patch** positive for the
 current narrow direct-RPC rule. This does not screen unchanged head-tree code
 or establish a clean negative. Source-first positive selection remains open.
 
+A matching [OpenWrt open PR path screen](evidence/mvp-gate8-openwrt-open-pr-paths-20261125/README.md)
+checked changed-file metadata for the 1,653 PRs returned by a non-atomic
+enumeration: 58 had Ucode-path changes, and 12 had broad input/command tokens
+in those patches. Defensive review found no eligible **changed-patch**
+positive for the current narrow direct-RPC rule. The screen did not inspect
+unchanged head-tree code or establish a clean negative; source-first positive
+selection remains open.
+
 **Gate 8:** a verified incoming upstream change with a known alert and an
 independently checked clean control pass through the released event resolver,
 full selected-corpus scanner and actual SARIF consumer. The alert's exact
