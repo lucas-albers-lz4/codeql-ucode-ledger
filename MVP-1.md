@@ -1370,10 +1370,15 @@ incoming OpenWrt/LuCI changes.
   It prototypes a transactional predecessor, stable PR-head identity,
   bounded reservations, first-attempt priority, recovery and audited retry
   preemption. Twelve queue and 27 poller tests pass locally. The hosted
-  `unittest` and `typed-handoff` checks passed in run `45516924286`, but the
-  current workflow does not run the new queue tests. A locally verified CI
-  step is committed in the disposable checkout only: GitHub rejected its
-  push because the available token lacks workflow-file permission. The
+  `unittest` and `typed-handoff` checks passed in run `45516924286`, but that
+  earlier run did not execute the new queue tests. A workflow-file edit was
+  locally verified but could not be pushed because the available token lacks
+  workflow-file permission. Draft PR #164 now has a discovery loader at
+  `b47c92eb5df0729e8e7ecfaa8af886e540ecff53` under the existing
+  `policy/tests` CI root. It ran all 27 poller and 12 queue tests locally;
+  hosted Linux run `45529885754` passed `unittest` and `typed-handoff`, and
+  the `unittest` log explicitly includes both modules' test cases (1,118
+  conformance tests total). This closes the offline CI wiring gap. The
   prototype has no trusted production signer, verified same-job artifact
   handoff, released event scan or authenticated live completion. Its earlier
   1,851-row replay reserved identities without scanning, and predates the
