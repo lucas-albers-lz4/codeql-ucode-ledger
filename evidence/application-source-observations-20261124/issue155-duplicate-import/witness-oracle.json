@@ -1,0 +1,2487 @@
+{
+  "schema": "issue155-duplicate-witness-source-first-v1",
+  "coordinates": "one-based ASCII byte columns end exclusive; extractor end columns may be inclusive",
+  "entity_ids": "unknown until fresh database; independently review identity mapping before candidate outputs",
+  "unexpected_witness_rows": "reject; full edge inventories include other expected edges and must be projected by frozen anchors, field and index",
+  "files": [
+    {
+      "path": "controls/positive-direct.uc",
+      "sha256": "6deffd5ab279ed907db2f453f4605e64552643baadb3819a8265771cdd2d762e",
+      "anchors": {
+        "first_import": {
+          "start": [
+            1,
+            1
+          ],
+          "end_exclusive": [
+            1,
+            37
+          ],
+          "text": "import { stat, readfile } from 'fs';"
+        },
+        "first_stat_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            14
+          ],
+          "text": "stat"
+        },
+        "first_readfile_name": {
+          "start": [
+            1,
+            16
+          ],
+          "end_exclusive": [
+            1,
+            24
+          ],
+          "text": "readfile"
+        },
+        "first_source": {
+          "start": [
+            1,
+            32
+          ],
+          "end_exclusive": [
+            1,
+            36
+          ],
+          "text": "'fs'"
+        },
+        "function": {
+          "start": [
+            6,
+            11
+          ],
+          "end_exclusive": [
+            11,
+            6
+          ],
+          "text": "function(request) {\n      if (!request.args.service_name) return null;\n      {\n        return stat(`${base}/${request.args.service_name}.log`);\n      }\n    }"
+        },
+        "body": {
+          "start": [
+            6,
+            29
+          ],
+          "end_exclusive": [
+            11,
+            6
+          ],
+          "text": "{\n      if (!request.args.service_name) return null;\n      {\n        return stat(`${base}/${request.args.service_name}.log`);\n      }\n    }"
+        },
+        "parameters": {
+          "start": [
+            6,
+            19
+          ],
+          "end_exclusive": [
+            6,
+            28
+          ],
+          "text": "(request)"
+        },
+        "formal": {
+          "start": [
+            6,
+            20
+          ],
+          "end_exclusive": [
+            6,
+            27
+          ],
+          "text": "request"
+        },
+        "returned_methods_read": {
+          "start": [
+            14,
+            30
+          ],
+          "end_exclusive": [
+            14,
+            37
+          ],
+          "text": "methods"
+        },
+        "methods_declarator_name": {
+          "start": [
+            3,
+            7
+          ],
+          "end_exclusive": [
+            3,
+            14
+          ],
+          "text": "methods"
+        },
+        "call": {
+          "start": [
+            9,
+            16
+          ],
+          "end_exclusive": [
+            9,
+            64
+          ],
+          "text": "stat(`${base}/${request.args.service_name}.log`)"
+        },
+        "callee": {
+          "start": [
+            9,
+            16
+          ],
+          "end_exclusive": [
+            9,
+            20
+          ],
+          "text": "stat"
+        },
+        "arguments": {
+          "start": [
+            9,
+            20
+          ],
+          "end_exclusive": [
+            9,
+            64
+          ],
+          "text": "(`${base}/${request.args.service_name}.log`)"
+        },
+        "template": {
+          "start": [
+            9,
+            21
+          ],
+          "end_exclusive": [
+            9,
+            63
+          ],
+          "text": "`${base}/${request.args.service_name}.log`"
+        },
+        "substitution": {
+          "start": [
+            9,
+            30
+          ],
+          "end_exclusive": [
+            9,
+            58
+          ],
+          "text": "${request.args.service_name}"
+        },
+        "service_member": {
+          "start": [
+            9,
+            32
+          ],
+          "end_exclusive": [
+            9,
+            57
+          ],
+          "text": "request.args.service_name"
+        },
+        "args_member": {
+          "start": [
+            9,
+            32
+          ],
+          "end_exclusive": [
+            9,
+            44
+          ],
+          "text": "request.args"
+        },
+        "receiver": {
+          "start": [
+            9,
+            32
+          ],
+          "end_exclusive": [
+            9,
+            39
+          ],
+          "text": "request"
+        },
+        "service_property": {
+          "start": [
+            9,
+            45
+          ],
+          "end_exclusive": [
+            9,
+            57
+          ],
+          "text": "service_name"
+        },
+        "args_property": {
+          "start": [
+            9,
+            40
+          ],
+          "end_exclusive": [
+            9,
+            44
+          ],
+          "text": "args"
+        },
+        "top_return": {
+          "start": [
+            14,
+            1
+          ],
+          "end_exclusive": [
+            14,
+            40
+          ],
+          "text": "return { 'luci.review.stat': methods };"
+        },
+        "return_object": {
+          "start": [
+            14,
+            8
+          ],
+          "end_exclusive": [
+            14,
+            39
+          ],
+          "text": "{ 'luci.review.stat': methods }"
+        }
+      },
+      "import_witness": [
+        [
+          1,
+          1,
+          1,
+          10
+        ]
+      ],
+      "competing_witness": [],
+      "binding_expectations": [
+        "returned_methods_read uniquely targets methods_declarator_name",
+        "receiver uniquely targets formal"
+      ],
+      "arity": {
+        "arguments": [
+          0
+        ],
+        "formals": [
+          0
+        ]
+      },
+      "absent": [
+        "call optional chain",
+        "service_member optional chain",
+        "args_member optional chain",
+        "first stat import alias",
+        "nested function on call-to-handler-body path"
+      ],
+      "required_edges": [
+        "first_import program child; named child 0 is unaliased first_stat_name; child 1 is first_readfile_name; source first_source",
+        "function parameters \u2192 parameters \u2192 formal index 0; function body \u2192 body",
+        "top_return value \u2192 return_object; return_object RPC pair value \u2192 returned_methods_read",
+        "call function \u2192 callee; call arguments \u2192 arguments; argument index 0 \u2192 template",
+        "template \u2192 substitution \u2192 service_member; service_member object \u2192 args_member and property \u2192 service_property; args_member object \u2192 receiver and property \u2192 args_property"
+      ],
+      "graph": {
+        "nodes": {
+          "return": {
+            "kind": "ReturnStatement",
+            "start": [
+              14,
+              1
+            ],
+            "end_exclusive": [
+              14,
+              40
+            ]
+          },
+          "return_object": {
+            "kind": "Object",
+            "start": [
+              14,
+              8
+            ],
+            "end_exclusive": [
+              14,
+              39
+            ]
+          },
+          "rpc_pair": {
+            "kind": "Pair",
+            "start": [
+              14,
+              10
+            ],
+            "end_exclusive": [
+              14,
+              37
+            ]
+          },
+          "rpc_key": {
+            "kind": "String",
+            "start": [
+              14,
+              10
+            ],
+            "end_exclusive": [
+              14,
+              28
+            ]
+          },
+          "rpc_fragment": {
+            "kind": "StringFragment",
+            "start": [
+              14,
+              11
+            ],
+            "end_exclusive": [
+              14,
+              27
+            ]
+          },
+          "methods_read": {
+            "kind": "Identifier",
+            "start": [
+              14,
+              30
+            ],
+            "end_exclusive": [
+              14,
+              37
+            ]
+          },
+          "declarator": {
+            "kind": "VariableDeclarator",
+            "start": [
+              3,
+              7
+            ],
+            "end_exclusive": [
+              13,
+              2
+            ]
+          },
+          "declarator_name": {
+            "kind": "Identifier",
+            "start": [
+              3,
+              7
+            ],
+            "end_exclusive": [
+              3,
+              14
+            ]
+          },
+          "methods_object": {
+            "kind": "Object",
+            "start": [
+              3,
+              17
+            ],
+            "end_exclusive": [
+              13,
+              2
+            ]
+          },
+          "observe_pair": {
+            "kind": "Pair",
+            "start": [
+              4,
+              3
+            ],
+            "end_exclusive": [
+              12,
+              4
+            ]
+          },
+          "observe_key": {
+            "kind": "PropertyIdentifier",
+            "start": [
+              4,
+              3
+            ],
+            "end_exclusive": [
+              4,
+              10
+            ]
+          },
+          "method_object": {
+            "kind": "Object",
+            "start": [
+              4,
+              12
+            ],
+            "end_exclusive": [
+              12,
+              4
+            ]
+          },
+          "call_pair": {
+            "kind": "Pair",
+            "start": [
+              6,
+              5
+            ],
+            "end_exclusive": [
+              11,
+              6
+            ]
+          },
+          "call_key": {
+            "kind": "PropertyIdentifier",
+            "start": [
+              6,
+              5
+            ],
+            "end_exclusive": [
+              6,
+              9
+            ]
+          },
+          "handler": {
+            "kind": "FunctionExpression",
+            "start": [
+              6,
+              11
+            ],
+            "end_exclusive": [
+              11,
+              6
+            ]
+          },
+          "body": {
+            "kind": "StatementBlock",
+            "start": [
+              6,
+              29
+            ],
+            "end_exclusive": [
+              11,
+              6
+            ]
+          },
+          "template": {
+            "kind": "TemplateString",
+            "start": [
+              9,
+              21
+            ],
+            "end_exclusive": [
+              9,
+              63
+            ]
+          },
+          "substitution": {
+            "kind": "TemplateSubstitution",
+            "start": [
+              9,
+              30
+            ],
+            "end_exclusive": [
+              9,
+              58
+            ]
+          },
+          "source_string": {
+            "kind": "String",
+            "start": [
+              1,
+              32
+            ],
+            "end_exclusive": [
+              1,
+              36
+            ]
+          },
+          "source_fragment": {
+            "kind": "StringFragment",
+            "start": [
+              1,
+              33
+            ],
+            "end_exclusive": [
+              1,
+              35
+            ]
+          },
+          "call": {
+            "kind": "CallExpression",
+            "start": [
+              9,
+              16
+            ],
+            "end_exclusive": [
+              9,
+              64
+            ]
+          },
+          "callee": {
+            "kind": "Identifier",
+            "start": [
+              9,
+              16
+            ],
+            "end_exclusive": [
+              9,
+              20
+            ]
+          },
+          "arguments": {
+            "kind": "Arguments",
+            "start": [
+              9,
+              20
+            ],
+            "end_exclusive": [
+              9,
+              64
+            ]
+          },
+          "parameters": {
+            "kind": "FormalParameters",
+            "start": [
+              6,
+              19
+            ],
+            "end_exclusive": [
+              6,
+              28
+            ]
+          },
+          "formal": {
+            "kind": "Identifier",
+            "start": [
+              6,
+              20
+            ],
+            "end_exclusive": [
+              6,
+              27
+            ]
+          },
+          "receiver": {
+            "kind": "Identifier",
+            "start": [
+              9,
+              32
+            ],
+            "end_exclusive": [
+              9,
+              39
+            ]
+          },
+          "service_member": {
+            "kind": "MemberExpression",
+            "start": [
+              9,
+              32
+            ],
+            "end_exclusive": [
+              9,
+              57
+            ]
+          },
+          "args_member": {
+            "kind": "MemberExpression",
+            "start": [
+              9,
+              32
+            ],
+            "end_exclusive": [
+              9,
+              44
+            ]
+          },
+          "service_property": {
+            "kind": "PropertyIdentifier",
+            "start": [
+              9,
+              45
+            ],
+            "end_exclusive": [
+              9,
+              57
+            ]
+          },
+          "args_property": {
+            "kind": "PropertyIdentifier",
+            "start": [
+              9,
+              40
+            ],
+            "end_exclusive": [
+              9,
+              44
+            ]
+          },
+          "first_import": {
+            "kind": "ImportStatement",
+            "start": [
+              1,
+              1
+            ],
+            "end_exclusive": [
+              1,
+              37
+            ]
+          },
+          "first_stat_name": {
+            "kind": "Identifier",
+            "start": [
+              1,
+              10
+            ],
+            "end_exclusive": [
+              1,
+              14
+            ]
+          },
+          "first_readfile_name": {
+            "kind": "Identifier",
+            "start": [
+              1,
+              16
+            ],
+            "end_exclusive": [
+              1,
+              24
+            ]
+          },
+          "first_stat_specifier": {
+            "kind": "ImportSpecifier",
+            "start": [
+              1,
+              10
+            ],
+            "end_exclusive": [
+              1,
+              14
+            ]
+          },
+          "first_readfile_specifier": {
+            "kind": "ImportSpecifier",
+            "start": [
+              1,
+              16
+            ],
+            "end_exclusive": [
+              1,
+              24
+            ]
+          },
+          "first_clause": {
+            "kind": "ImportClause",
+            "start": [
+              1,
+              8
+            ],
+            "end_exclusive": [
+              1,
+              26
+            ]
+          },
+          "first_named": {
+            "kind": "NamedImports",
+            "start": [
+              1,
+              8
+            ],
+            "end_exclusive": [
+              1,
+              26
+            ]
+          }
+        },
+        "typed_edges": [
+          {
+            "source": "return",
+            "field": "return-value",
+            "index": -1,
+            "target": "return_object",
+            "count": 1
+          },
+          {
+            "source": "return_object",
+            "field": "object-child",
+            "index": 0,
+            "target": "rpc_pair",
+            "count": 1
+          },
+          {
+            "source": "rpc_pair",
+            "field": "pair-key",
+            "index": -1,
+            "target": "rpc_key",
+            "count": 1
+          },
+          {
+            "source": "rpc_pair",
+            "field": "pair-value",
+            "index": -1,
+            "target": "methods_read",
+            "count": 1
+          },
+          {
+            "source": "rpc_key",
+            "field": "string-child",
+            "index": 0,
+            "target": "rpc_fragment",
+            "count": 1
+          },
+          {
+            "source": "declarator",
+            "field": "declarator-name",
+            "index": -1,
+            "target": "declarator_name",
+            "count": 1
+          },
+          {
+            "source": "declarator",
+            "field": "declarator-value",
+            "index": -1,
+            "target": "methods_object",
+            "count": 1
+          },
+          {
+            "source": "methods_object",
+            "field": "object-child",
+            "index": 0,
+            "target": "observe_pair",
+            "count": 1
+          },
+          {
+            "source": "observe_pair",
+            "field": "pair-key",
+            "index": -1,
+            "target": "observe_key",
+            "count": 1
+          },
+          {
+            "source": "observe_pair",
+            "field": "pair-value",
+            "index": -1,
+            "target": "method_object",
+            "count": 1
+          },
+          {
+            "source": "method_object",
+            "field": "object-child",
+            "index": 1,
+            "target": "call_pair",
+            "count": 1
+          },
+          {
+            "source": "call_pair",
+            "field": "pair-key",
+            "index": -1,
+            "target": "call_key",
+            "count": 1
+          },
+          {
+            "source": "call_pair",
+            "field": "pair-value",
+            "index": -1,
+            "target": "handler",
+            "count": 1
+          },
+          {
+            "source": "handler",
+            "field": "function-body",
+            "index": -1,
+            "target": "body",
+            "count": 1
+          },
+          {
+            "source": "template",
+            "field": "template-child",
+            "index": 2,
+            "target": "substitution",
+            "count": 1
+          },
+          {
+            "source": "source_string",
+            "field": "string-child",
+            "index": 0,
+            "target": "source_fragment",
+            "count": 1
+          },
+          {
+            "source": "first_import",
+            "field": "import-clause",
+            "index": -1,
+            "target": "first_clause",
+            "count": 1
+          },
+          {
+            "source": "first_import",
+            "field": "import-source",
+            "index": -1,
+            "target": "source_string",
+            "count": 1
+          },
+          {
+            "source": "first_clause",
+            "field": "import-named",
+            "index": -1,
+            "target": "first_named",
+            "count": 1
+          },
+          {
+            "source": "first_named",
+            "field": "named-import",
+            "index": 0,
+            "target": "first_stat_specifier",
+            "count": 1
+          },
+          {
+            "source": "first_named",
+            "field": "named-import",
+            "index": 1,
+            "target": "first_readfile_specifier",
+            "count": 1
+          },
+          {
+            "source": "first_stat_specifier",
+            "field": "import-name",
+            "index": -1,
+            "target": "first_stat_name",
+            "count": 1
+          },
+          {
+            "source": "first_readfile_specifier",
+            "field": "import-name",
+            "index": -1,
+            "target": "first_readfile_name",
+            "count": 1
+          },
+          {
+            "source": "handler",
+            "field": "function-parameters",
+            "index": -1,
+            "target": "parameters",
+            "count": 1
+          },
+          {
+            "source": "parameters",
+            "field": "formal",
+            "index": 0,
+            "target": "formal",
+            "count": 1
+          },
+          {
+            "source": "call",
+            "field": "call-function",
+            "index": -1,
+            "target": "callee",
+            "count": 1
+          },
+          {
+            "source": "call",
+            "field": "call-arguments",
+            "index": -1,
+            "target": "arguments",
+            "count": 1
+          },
+          {
+            "source": "arguments",
+            "field": "argument",
+            "index": 0,
+            "target": "template",
+            "count": 1
+          },
+          {
+            "source": "substitution",
+            "field": "substitution-child",
+            "index": -1,
+            "target": "service_member",
+            "count": 1
+          },
+          {
+            "source": "service_member",
+            "field": "member-object",
+            "index": -1,
+            "target": "args_member",
+            "count": 1
+          },
+          {
+            "source": "service_member",
+            "field": "member-property",
+            "index": -1,
+            "target": "service_property",
+            "count": 1
+          },
+          {
+            "source": "args_member",
+            "field": "member-object",
+            "index": -1,
+            "target": "receiver",
+            "count": 1
+          },
+          {
+            "source": "args_member",
+            "field": "member-property",
+            "index": -1,
+            "target": "args_property",
+            "count": 1
+          }
+        ],
+        "raw_parent_edges": [
+          {
+            "parent_kind": "Program",
+            "child": "return",
+            "raw_index": 3,
+            "count": 1
+          },
+          {
+            "parent": "template",
+            "child": "substitution",
+            "raw_index": 3,
+            "count": 1
+          },
+          {
+            "parent_kind": "Program",
+            "child": "first_import",
+            "raw_index": 0,
+            "count": 1
+          }
+        ],
+        "string_values": [
+          {
+            "node": "rpc_fragment",
+            "value": "luci.review.stat"
+          },
+          {
+            "node": "source_fragment",
+            "value": "fs"
+          }
+        ],
+        "bindings": [
+          {
+            "read": "methods_read",
+            "target": "declarator",
+            "distinct_targets": 1
+          },
+          {
+            "read": "receiver",
+            "target": "formal",
+            "distinct_targets": 1
+          }
+        ],
+        "unique_nodes": [
+          "return",
+          "return_object",
+          "rpc_pair",
+          "rpc_key",
+          "rpc_fragment",
+          "methods_read",
+          "declarator",
+          "declarator_name",
+          "methods_object",
+          "observe_pair",
+          "observe_key",
+          "method_object",
+          "call_pair",
+          "call_key",
+          "handler",
+          "body",
+          "template",
+          "substitution",
+          "source_string",
+          "source_fragment",
+          "call",
+          "callee",
+          "arguments",
+          "parameters",
+          "formal",
+          "receiver",
+          "service_member",
+          "args_member",
+          "service_property",
+          "args_property",
+          "first_import",
+          "first_stat_name",
+          "first_readfile_name",
+          "first_stat_specifier",
+          "first_readfile_specifier",
+          "first_clause",
+          "first_named"
+        ],
+        "absence": [
+          {
+            "source": "rpc_key",
+            "field": "string-child",
+            "index": 1
+          },
+          {
+            "source": "source_string",
+            "field": "string-child",
+            "index": 1
+          },
+          {
+            "source": "first_stat_specifier",
+            "field": "import-alias",
+            "index": -1
+          },
+          {
+            "source": "call",
+            "field": "call-optional",
+            "index": -1
+          },
+          {
+            "source": "arguments",
+            "field": "argument",
+            "index": 1
+          },
+          {
+            "source": "parameters",
+            "field": "formal",
+            "index": 1
+          },
+          {
+            "source": "service_member",
+            "field": "member-optional",
+            "index": -1
+          },
+          {
+            "source": "args_member",
+            "field": "member-optional",
+            "index": -1
+          },
+          {
+            "source": "first_named",
+            "field": "named-import",
+            "index": 2
+          },
+          {
+            "source": "first_clause",
+            "field": "import-default",
+            "index": -1
+          },
+          {
+            "source": "first_clause",
+            "field": "import-namespace",
+            "index": -1
+          },
+          {
+            "source": "first_readfile_specifier",
+            "field": "import-alias",
+            "index": -1
+          }
+        ],
+        "identity_preconditions": {
+          "call": {
+            "kind": "CallExpression",
+            "span_anchor": "call",
+            "expected_count": 1
+          },
+          "handler": {
+            "kind": "FunctionExpression",
+            "node": "handler",
+            "expected_count": 1
+          },
+          "import_witness": {
+            "expected_rows": 1,
+            "require_distinct_import_and_identifier_entities": true
+          },
+          "structural_and_competing_absence_tables": "accept only after unique call, handler and all selected graph node identities are established"
+        },
+        "imports": [
+          [
+            "first_import",
+            "first_stat_name"
+          ]
+        ],
+        "enumerate_fields": [
+          {
+            "source": "arguments",
+            "field": "argument"
+          },
+          {
+            "source": "parameters",
+            "field": "formal"
+          },
+          {
+            "source": "first_named",
+            "field": "named-import"
+          },
+          {
+            "source": "source_string",
+            "field": "string-child"
+          },
+          {
+            "source": "rpc_key",
+            "field": "string-child"
+          }
+        ]
+      }
+    },
+    {
+      "path": "controls/negative-duplicate.uc",
+      "sha256": "60a144067ad6e354855014c763ee02ac86df0122e5f16740449a97f13bd17667",
+      "anchors": {
+        "first_import": {
+          "start": [
+            1,
+            1
+          ],
+          "end_exclusive": [
+            1,
+            37
+          ],
+          "text": "import { stat, readfile } from 'fs';"
+        },
+        "first_stat_name": {
+          "start": [
+            1,
+            10
+          ],
+          "end_exclusive": [
+            1,
+            14
+          ],
+          "text": "stat"
+        },
+        "first_readfile_name": {
+          "start": [
+            1,
+            16
+          ],
+          "end_exclusive": [
+            1,
+            24
+          ],
+          "text": "readfile"
+        },
+        "first_source": {
+          "start": [
+            1,
+            32
+          ],
+          "end_exclusive": [
+            1,
+            36
+          ],
+          "text": "'fs'"
+        },
+        "function": {
+          "start": [
+            7,
+            11
+          ],
+          "end_exclusive": [
+            12,
+            6
+          ],
+          "text": "function(request) {\n      if (!request.args.service_name) return null;\n      {\n        return stat(`${base}/${request.args.service_name}.log`);\n      }\n    }"
+        },
+        "body": {
+          "start": [
+            7,
+            29
+          ],
+          "end_exclusive": [
+            12,
+            6
+          ],
+          "text": "{\n      if (!request.args.service_name) return null;\n      {\n        return stat(`${base}/${request.args.service_name}.log`);\n      }\n    }"
+        },
+        "parameters": {
+          "start": [
+            7,
+            19
+          ],
+          "end_exclusive": [
+            7,
+            28
+          ],
+          "text": "(request)"
+        },
+        "formal": {
+          "start": [
+            7,
+            20
+          ],
+          "end_exclusive": [
+            7,
+            27
+          ],
+          "text": "request"
+        },
+        "returned_methods_read": {
+          "start": [
+            15,
+            30
+          ],
+          "end_exclusive": [
+            15,
+            37
+          ],
+          "text": "methods"
+        },
+        "methods_declarator_name": {
+          "start": [
+            4,
+            7
+          ],
+          "end_exclusive": [
+            4,
+            14
+          ],
+          "text": "methods"
+        },
+        "call": {
+          "start": [
+            10,
+            16
+          ],
+          "end_exclusive": [
+            10,
+            64
+          ],
+          "text": "stat(`${base}/${request.args.service_name}.log`)"
+        },
+        "callee": {
+          "start": [
+            10,
+            16
+          ],
+          "end_exclusive": [
+            10,
+            20
+          ],
+          "text": "stat"
+        },
+        "arguments": {
+          "start": [
+            10,
+            20
+          ],
+          "end_exclusive": [
+            10,
+            64
+          ],
+          "text": "(`${base}/${request.args.service_name}.log`)"
+        },
+        "template": {
+          "start": [
+            10,
+            21
+          ],
+          "end_exclusive": [
+            10,
+            63
+          ],
+          "text": "`${base}/${request.args.service_name}.log`"
+        },
+        "substitution": {
+          "start": [
+            10,
+            30
+          ],
+          "end_exclusive": [
+            10,
+            58
+          ],
+          "text": "${request.args.service_name}"
+        },
+        "service_member": {
+          "start": [
+            10,
+            32
+          ],
+          "end_exclusive": [
+            10,
+            57
+          ],
+          "text": "request.args.service_name"
+        },
+        "args_member": {
+          "start": [
+            10,
+            32
+          ],
+          "end_exclusive": [
+            10,
+            44
+          ],
+          "text": "request.args"
+        },
+        "receiver": {
+          "start": [
+            10,
+            32
+          ],
+          "end_exclusive": [
+            10,
+            39
+          ],
+          "text": "request"
+        },
+        "service_property": {
+          "start": [
+            10,
+            45
+          ],
+          "end_exclusive": [
+            10,
+            57
+          ],
+          "text": "service_name"
+        },
+        "args_property": {
+          "start": [
+            10,
+            40
+          ],
+          "end_exclusive": [
+            10,
+            44
+          ],
+          "text": "args"
+        },
+        "top_return": {
+          "start": [
+            15,
+            1
+          ],
+          "end_exclusive": [
+            15,
+            40
+          ],
+          "text": "return { 'luci.review.stat': methods };"
+        },
+        "return_object": {
+          "start": [
+            15,
+            8
+          ],
+          "end_exclusive": [
+            15,
+            39
+          ],
+          "text": "{ 'luci.review.stat': methods }"
+        },
+        "second_import": {
+          "start": [
+            2,
+            1
+          ],
+          "end_exclusive": [
+            2,
+            39
+          ],
+          "text": "import { readfile as stat } from 'fs';"
+        },
+        "second_specifier": {
+          "start": [
+            2,
+            10
+          ],
+          "end_exclusive": [
+            2,
+            26
+          ],
+          "text": "readfile as stat"
+        },
+        "second_name": {
+          "start": [
+            2,
+            10
+          ],
+          "end_exclusive": [
+            2,
+            18
+          ],
+          "text": "readfile"
+        },
+        "second_alias": {
+          "start": [
+            2,
+            22
+          ],
+          "end_exclusive": [
+            2,
+            26
+          ],
+          "text": "stat"
+        },
+        "second_source": {
+          "start": [
+            2,
+            34
+          ],
+          "end_exclusive": [
+            2,
+            38
+          ],
+          "text": "'fs'"
+        }
+      },
+      "import_witness": [
+        [
+          1,
+          1,
+          1,
+          10
+        ],
+        [
+          2,
+          1,
+          2,
+          22
+        ]
+      ],
+      "competing_witness": [],
+      "binding_expectations": [
+        "returned_methods_read uniquely targets methods_declarator_name",
+        "receiver uniquely targets formal"
+      ],
+      "arity": {
+        "arguments": [
+          0
+        ],
+        "formals": [
+          0
+        ]
+      },
+      "absent": [
+        "call optional chain",
+        "service_member optional chain",
+        "args_member optional chain",
+        "first stat import alias",
+        "nested function on call-to-handler-body path"
+      ],
+      "required_edges": [
+        "first_import program child; named child 0 is unaliased first_stat_name; child 1 is first_readfile_name; source first_source",
+        "function parameters \u2192 parameters \u2192 formal index 0; function body \u2192 body",
+        "top_return value \u2192 return_object; return_object RPC pair value \u2192 returned_methods_read",
+        "call function \u2192 callee; call arguments \u2192 arguments; argument index 0 \u2192 template",
+        "template \u2192 substitution \u2192 service_member; service_member object \u2192 args_member and property \u2192 service_property; args_member object \u2192 receiver and property \u2192 args_property",
+        "second_import program child; named child 0 \u2192 second_specifier \u2192 second_name and second_alias; source \u2192 second_source"
+      ],
+      "graph": {
+        "nodes": {
+          "return": {
+            "kind": "ReturnStatement",
+            "start": [
+              15,
+              1
+            ],
+            "end_exclusive": [
+              15,
+              40
+            ]
+          },
+          "return_object": {
+            "kind": "Object",
+            "start": [
+              15,
+              8
+            ],
+            "end_exclusive": [
+              15,
+              39
+            ]
+          },
+          "rpc_pair": {
+            "kind": "Pair",
+            "start": [
+              15,
+              10
+            ],
+            "end_exclusive": [
+              15,
+              37
+            ]
+          },
+          "rpc_key": {
+            "kind": "String",
+            "start": [
+              15,
+              10
+            ],
+            "end_exclusive": [
+              15,
+              28
+            ]
+          },
+          "rpc_fragment": {
+            "kind": "StringFragment",
+            "start": [
+              15,
+              11
+            ],
+            "end_exclusive": [
+              15,
+              27
+            ]
+          },
+          "methods_read": {
+            "kind": "Identifier",
+            "start": [
+              15,
+              30
+            ],
+            "end_exclusive": [
+              15,
+              37
+            ]
+          },
+          "declarator": {
+            "kind": "VariableDeclarator",
+            "start": [
+              4,
+              7
+            ],
+            "end_exclusive": [
+              14,
+              2
+            ]
+          },
+          "declarator_name": {
+            "kind": "Identifier",
+            "start": [
+              4,
+              7
+            ],
+            "end_exclusive": [
+              4,
+              14
+            ]
+          },
+          "methods_object": {
+            "kind": "Object",
+            "start": [
+              4,
+              17
+            ],
+            "end_exclusive": [
+              14,
+              2
+            ]
+          },
+          "observe_pair": {
+            "kind": "Pair",
+            "start": [
+              5,
+              3
+            ],
+            "end_exclusive": [
+              13,
+              4
+            ]
+          },
+          "observe_key": {
+            "kind": "PropertyIdentifier",
+            "start": [
+              5,
+              3
+            ],
+            "end_exclusive": [
+              5,
+              10
+            ]
+          },
+          "method_object": {
+            "kind": "Object",
+            "start": [
+              5,
+              12
+            ],
+            "end_exclusive": [
+              13,
+              4
+            ]
+          },
+          "call_pair": {
+            "kind": "Pair",
+            "start": [
+              7,
+              5
+            ],
+            "end_exclusive": [
+              12,
+              6
+            ]
+          },
+          "call_key": {
+            "kind": "PropertyIdentifier",
+            "start": [
+              7,
+              5
+            ],
+            "end_exclusive": [
+              7,
+              9
+            ]
+          },
+          "handler": {
+            "kind": "FunctionExpression",
+            "start": [
+              7,
+              11
+            ],
+            "end_exclusive": [
+              12,
+              6
+            ]
+          },
+          "body": {
+            "kind": "StatementBlock",
+            "start": [
+              7,
+              29
+            ],
+            "end_exclusive": [
+              12,
+              6
+            ]
+          },
+          "template": {
+            "kind": "TemplateString",
+            "start": [
+              10,
+              21
+            ],
+            "end_exclusive": [
+              10,
+              63
+            ]
+          },
+          "substitution": {
+            "kind": "TemplateSubstitution",
+            "start": [
+              10,
+              30
+            ],
+            "end_exclusive": [
+              10,
+              58
+            ]
+          },
+          "source_string": {
+            "kind": "String",
+            "start": [
+              1,
+              32
+            ],
+            "end_exclusive": [
+              1,
+              36
+            ]
+          },
+          "source_fragment": {
+            "kind": "StringFragment",
+            "start": [
+              1,
+              33
+            ],
+            "end_exclusive": [
+              1,
+              35
+            ]
+          },
+          "second_source_fragment": {
+            "kind": "StringFragment",
+            "start": [
+              2,
+              35
+            ],
+            "end_exclusive": [
+              2,
+              37
+            ]
+          },
+          "second_source_string": {
+            "kind": "String",
+            "start": [
+              2,
+              34
+            ],
+            "end_exclusive": [
+              2,
+              38
+            ]
+          },
+          "call": {
+            "kind": "CallExpression",
+            "start": [
+              10,
+              16
+            ],
+            "end_exclusive": [
+              10,
+              64
+            ]
+          },
+          "callee": {
+            "kind": "Identifier",
+            "start": [
+              10,
+              16
+            ],
+            "end_exclusive": [
+              10,
+              20
+            ]
+          },
+          "arguments": {
+            "kind": "Arguments",
+            "start": [
+              10,
+              20
+            ],
+            "end_exclusive": [
+              10,
+              64
+            ]
+          },
+          "parameters": {
+            "kind": "FormalParameters",
+            "start": [
+              7,
+              19
+            ],
+            "end_exclusive": [
+              7,
+              28
+            ]
+          },
+          "formal": {
+            "kind": "Identifier",
+            "start": [
+              7,
+              20
+            ],
+            "end_exclusive": [
+              7,
+              27
+            ]
+          },
+          "receiver": {
+            "kind": "Identifier",
+            "start": [
+              10,
+              32
+            ],
+            "end_exclusive": [
+              10,
+              39
+            ]
+          },
+          "service_member": {
+            "kind": "MemberExpression",
+            "start": [
+              10,
+              32
+            ],
+            "end_exclusive": [
+              10,
+              57
+            ]
+          },
+          "args_member": {
+            "kind": "MemberExpression",
+            "start": [
+              10,
+              32
+            ],
+            "end_exclusive": [
+              10,
+              44
+            ]
+          },
+          "service_property": {
+            "kind": "PropertyIdentifier",
+            "start": [
+              10,
+              45
+            ],
+            "end_exclusive": [
+              10,
+              57
+            ]
+          },
+          "args_property": {
+            "kind": "PropertyIdentifier",
+            "start": [
+              10,
+              40
+            ],
+            "end_exclusive": [
+              10,
+              44
+            ]
+          },
+          "first_import": {
+            "kind": "ImportStatement",
+            "start": [
+              1,
+              1
+            ],
+            "end_exclusive": [
+              1,
+              37
+            ]
+          },
+          "first_stat_name": {
+            "kind": "Identifier",
+            "start": [
+              1,
+              10
+            ],
+            "end_exclusive": [
+              1,
+              14
+            ]
+          },
+          "first_readfile_name": {
+            "kind": "Identifier",
+            "start": [
+              1,
+              16
+            ],
+            "end_exclusive": [
+              1,
+              24
+            ]
+          },
+          "first_stat_specifier": {
+            "kind": "ImportSpecifier",
+            "start": [
+              1,
+              10
+            ],
+            "end_exclusive": [
+              1,
+              14
+            ]
+          },
+          "first_readfile_specifier": {
+            "kind": "ImportSpecifier",
+            "start": [
+              1,
+              16
+            ],
+            "end_exclusive": [
+              1,
+              24
+            ]
+          },
+          "first_clause": {
+            "kind": "ImportClause",
+            "start": [
+              1,
+              8
+            ],
+            "end_exclusive": [
+              1,
+              26
+            ]
+          },
+          "first_named": {
+            "kind": "NamedImports",
+            "start": [
+              1,
+              8
+            ],
+            "end_exclusive": [
+              1,
+              26
+            ]
+          },
+          "second_import": {
+            "kind": "ImportStatement",
+            "start": [
+              2,
+              1
+            ],
+            "end_exclusive": [
+              2,
+              39
+            ]
+          },
+          "second_specifier": {
+            "kind": "ImportSpecifier",
+            "start": [
+              2,
+              10
+            ],
+            "end_exclusive": [
+              2,
+              26
+            ]
+          },
+          "second_name": {
+            "kind": "Identifier",
+            "start": [
+              2,
+              10
+            ],
+            "end_exclusive": [
+              2,
+              18
+            ]
+          },
+          "second_alias": {
+            "kind": "Identifier",
+            "start": [
+              2,
+              22
+            ],
+            "end_exclusive": [
+              2,
+              26
+            ]
+          },
+          "second_clause": {
+            "kind": "ImportClause",
+            "start": [
+              2,
+              8
+            ],
+            "end_exclusive": [
+              2,
+              28
+            ]
+          },
+          "second_named": {
+            "kind": "NamedImports",
+            "start": [
+              2,
+              8
+            ],
+            "end_exclusive": [
+              2,
+              28
+            ]
+          }
+        },
+        "typed_edges": [
+          {
+            "source": "return",
+            "field": "return-value",
+            "index": -1,
+            "target": "return_object",
+            "count": 1
+          },
+          {
+            "source": "return_object",
+            "field": "object-child",
+            "index": 0,
+            "target": "rpc_pair",
+            "count": 1
+          },
+          {
+            "source": "rpc_pair",
+            "field": "pair-key",
+            "index": -1,
+            "target": "rpc_key",
+            "count": 1
+          },
+          {
+            "source": "rpc_pair",
+            "field": "pair-value",
+            "index": -1,
+            "target": "methods_read",
+            "count": 1
+          },
+          {
+            "source": "rpc_key",
+            "field": "string-child",
+            "index": 0,
+            "target": "rpc_fragment",
+            "count": 1
+          },
+          {
+            "source": "declarator",
+            "field": "declarator-name",
+            "index": -1,
+            "target": "declarator_name",
+            "count": 1
+          },
+          {
+            "source": "declarator",
+            "field": "declarator-value",
+            "index": -1,
+            "target": "methods_object",
+            "count": 1
+          },
+          {
+            "source": "methods_object",
+            "field": "object-child",
+            "index": 0,
+            "target": "observe_pair",
+            "count": 1
+          },
+          {
+            "source": "observe_pair",
+            "field": "pair-key",
+            "index": -1,
+            "target": "observe_key",
+            "count": 1
+          },
+          {
+            "source": "observe_pair",
+            "field": "pair-value",
+            "index": -1,
+            "target": "method_object",
+            "count": 1
+          },
+          {
+            "source": "method_object",
+            "field": "object-child",
+            "index": 1,
+            "target": "call_pair",
+            "count": 1
+          },
+          {
+            "source": "call_pair",
+            "field": "pair-key",
+            "index": -1,
+            "target": "call_key",
+            "count": 1
+          },
+          {
+            "source": "call_pair",
+            "field": "pair-value",
+            "index": -1,
+            "target": "handler",
+            "count": 1
+          },
+          {
+            "source": "handler",
+            "field": "function-body",
+            "index": -1,
+            "target": "body",
+            "count": 1
+          },
+          {
+            "source": "template",
+            "field": "template-child",
+            "index": 2,
+            "target": "substitution",
+            "count": 1
+          },
+          {
+            "source": "source_string",
+            "field": "string-child",
+            "index": 0,
+            "target": "source_fragment",
+            "count": 1
+          },
+          {
+            "source": "second_source_string",
+            "field": "string-child",
+            "index": 0,
+            "target": "second_source_fragment",
+            "count": 1
+          },
+          {
+            "source": "first_import",
+            "field": "import-clause",
+            "index": -1,
+            "target": "first_clause",
+            "count": 1
+          },
+          {
+            "source": "first_import",
+            "field": "import-source",
+            "index": -1,
+            "target": "source_string",
+            "count": 1
+          },
+          {
+            "source": "first_clause",
+            "field": "import-named",
+            "index": -1,
+            "target": "first_named",
+            "count": 1
+          },
+          {
+            "source": "first_named",
+            "field": "named-import",
+            "index": 0,
+            "target": "first_stat_specifier",
+            "count": 1
+          },
+          {
+            "source": "first_named",
+            "field": "named-import",
+            "index": 1,
+            "target": "first_readfile_specifier",
+            "count": 1
+          },
+          {
+            "source": "first_stat_specifier",
+            "field": "import-name",
+            "index": -1,
+            "target": "first_stat_name",
+            "count": 1
+          },
+          {
+            "source": "first_readfile_specifier",
+            "field": "import-name",
+            "index": -1,
+            "target": "first_readfile_name",
+            "count": 1
+          },
+          {
+            "source": "handler",
+            "field": "function-parameters",
+            "index": -1,
+            "target": "parameters",
+            "count": 1
+          },
+          {
+            "source": "parameters",
+            "field": "formal",
+            "index": 0,
+            "target": "formal",
+            "count": 1
+          },
+          {
+            "source": "call",
+            "field": "call-function",
+            "index": -1,
+            "target": "callee",
+            "count": 1
+          },
+          {
+            "source": "call",
+            "field": "call-arguments",
+            "index": -1,
+            "target": "arguments",
+            "count": 1
+          },
+          {
+            "source": "arguments",
+            "field": "argument",
+            "index": 0,
+            "target": "template",
+            "count": 1
+          },
+          {
+            "source": "substitution",
+            "field": "substitution-child",
+            "index": -1,
+            "target": "service_member",
+            "count": 1
+          },
+          {
+            "source": "service_member",
+            "field": "member-object",
+            "index": -1,
+            "target": "args_member",
+            "count": 1
+          },
+          {
+            "source": "service_member",
+            "field": "member-property",
+            "index": -1,
+            "target": "service_property",
+            "count": 1
+          },
+          {
+            "source": "args_member",
+            "field": "member-object",
+            "index": -1,
+            "target": "receiver",
+            "count": 1
+          },
+          {
+            "source": "args_member",
+            "field": "member-property",
+            "index": -1,
+            "target": "args_property",
+            "count": 1
+          },
+          {
+            "source": "second_import",
+            "field": "import-clause",
+            "index": -1,
+            "target": "second_clause",
+            "count": 1
+          },
+          {
+            "source": "second_import",
+            "field": "import-source",
+            "index": -1,
+            "target": "second_source_string",
+            "count": 1
+          },
+          {
+            "source": "second_clause",
+            "field": "import-named",
+            "index": -1,
+            "target": "second_named",
+            "count": 1
+          },
+          {
+            "source": "second_named",
+            "field": "named-import",
+            "index": 0,
+            "target": "second_specifier",
+            "count": 1
+          },
+          {
+            "source": "second_specifier",
+            "field": "import-name",
+            "index": -1,
+            "target": "second_name",
+            "count": 1
+          },
+          {
+            "source": "second_specifier",
+            "field": "import-alias",
+            "index": -1,
+            "target": "second_alias",
+            "count": 1
+          }
+        ],
+        "raw_parent_edges": [
+          {
+            "parent_kind": "Program",
+            "child": "return",
+            "raw_index": 4,
+            "count": 1
+          },
+          {
+            "parent": "template",
+            "child": "substitution",
+            "raw_index": 3,
+            "count": 1
+          },
+          {
+            "parent_kind": "Program",
+            "child": "first_import",
+            "raw_index": 0,
+            "count": 1
+          },
+          {
+            "parent_kind": "Program",
+            "child": "second_import",
+            "raw_index": 1,
+            "count": 1
+          }
+        ],
+        "string_values": [
+          {
+            "node": "rpc_fragment",
+            "value": "luci.review.stat"
+          },
+          {
+            "node": "source_fragment",
+            "value": "fs"
+          },
+          {
+            "node": "second_source_fragment",
+            "value": "fs"
+          }
+        ],
+        "bindings": [
+          {
+            "read": "methods_read",
+            "target": "declarator",
+            "distinct_targets": 1
+          },
+          {
+            "read": "receiver",
+            "target": "formal",
+            "distinct_targets": 1
+          }
+        ],
+        "unique_nodes": [
+          "return",
+          "return_object",
+          "rpc_pair",
+          "rpc_key",
+          "rpc_fragment",
+          "methods_read",
+          "declarator",
+          "declarator_name",
+          "methods_object",
+          "observe_pair",
+          "observe_key",
+          "method_object",
+          "call_pair",
+          "call_key",
+          "handler",
+          "body",
+          "template",
+          "substitution",
+          "source_string",
+          "source_fragment",
+          "second_source_fragment",
+          "second_source_string",
+          "call",
+          "callee",
+          "arguments",
+          "parameters",
+          "formal",
+          "receiver",
+          "service_member",
+          "args_member",
+          "service_property",
+          "args_property",
+          "first_import",
+          "first_stat_name",
+          "first_readfile_name",
+          "first_stat_specifier",
+          "first_readfile_specifier",
+          "first_clause",
+          "first_named",
+          "second_import",
+          "second_specifier",
+          "second_name",
+          "second_alias",
+          "second_clause",
+          "second_named"
+        ],
+        "absence": [
+          {
+            "source": "rpc_key",
+            "field": "string-child",
+            "index": 1
+          },
+          {
+            "source": "source_string",
+            "field": "string-child",
+            "index": 1
+          },
+          {
+            "source": "second_source_string",
+            "field": "string-child",
+            "index": 1
+          },
+          {
+            "source": "first_stat_specifier",
+            "field": "import-alias",
+            "index": -1
+          },
+          {
+            "source": "call",
+            "field": "call-optional",
+            "index": -1
+          },
+          {
+            "source": "arguments",
+            "field": "argument",
+            "index": 1
+          },
+          {
+            "source": "parameters",
+            "field": "formal",
+            "index": 1
+          },
+          {
+            "source": "service_member",
+            "field": "member-optional",
+            "index": -1
+          },
+          {
+            "source": "args_member",
+            "field": "member-optional",
+            "index": -1
+          },
+          {
+            "source": "second_named",
+            "field": "named-import",
+            "index": 1
+          },
+          {
+            "source": "first_named",
+            "field": "named-import",
+            "index": 2
+          },
+          {
+            "source": "first_clause",
+            "field": "import-default",
+            "index": -1
+          },
+          {
+            "source": "first_clause",
+            "field": "import-namespace",
+            "index": -1
+          },
+          {
+            "source": "first_readfile_specifier",
+            "field": "import-alias",
+            "index": -1
+          },
+          {
+            "source": "second_clause",
+            "field": "import-default",
+            "index": -1
+          },
+          {
+            "source": "second_clause",
+            "field": "import-namespace",
+            "index": -1
+          }
+        ],
+        "identity_preconditions": {
+          "call": {
+            "kind": "CallExpression",
+            "span_anchor": "call",
+            "expected_count": 1
+          },
+          "handler": {
+            "kind": "FunctionExpression",
+            "node": "handler",
+            "expected_count": 1
+          },
+          "import_witness": {
+            "expected_rows": 2,
+            "require_distinct_import_and_identifier_entities": true
+          },
+          "structural_and_competing_absence_tables": "accept only after unique call, handler and all selected graph node identities are established"
+        },
+        "imports": [
+          [
+            "first_import",
+            "first_stat_name"
+          ],
+          [
+            "second_import",
+            "second_alias"
+          ]
+        ],
+        "enumerate_fields": [
+          {
+            "source": "arguments",
+            "field": "argument"
+          },
+          {
+            "source": "parameters",
+            "field": "formal"
+          },
+          {
+            "source": "first_named",
+            "field": "named-import"
+          },
+          {
+            "source": "source_string",
+            "field": "string-child"
+          },
+          {
+            "source": "rpc_key",
+            "field": "string-child"
+          },
+          {
+            "source": "second_named",
+            "field": "named-import"
+          },
+          {
+            "source": "second_source_string",
+            "field": "string-child"
+          }
+        ]
+      }
+    }
+  ]
+}

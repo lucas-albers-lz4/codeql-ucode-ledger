@@ -1,0 +1,114 @@
+{
+  "original_sha256": "dbadf5ef908d52f87ad418ce2dc4471c7bf203dd8b8a24d324d2987ebbd715b1",
+  "table": {
+    "#select": {
+      "columns": [
+        {
+          "name": "path",
+          "kind": "String"
+        },
+        {
+          "name": "fragment_node",
+          "kind": "Entity"
+        },
+        {
+          "name": "value",
+          "kind": "String"
+        }
+      ],
+      "tuples": [
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777192
+          },
+          "fs"
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777161
+          },
+          "fs"
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777142
+          },
+          "/fixture"
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777098
+          },
+          "service_name"
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16777008
+          },
+          "/"
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16776986
+          },
+          ".log"
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          {
+            "id": -16776945
+          },
+          "luci.review.stat"
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776904
+          },
+          "fs"
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776885
+          },
+          "/fixture"
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776841
+          },
+          "service_name"
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776751
+          },
+          "/"
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776729
+          },
+          ".log"
+        ],
+        [
+          "controls/positive-direct.uc",
+          {
+            "id": -16776688
+          },
+          "luci.review.stat"
+        ]
+      ]
+    }
+  }
+}

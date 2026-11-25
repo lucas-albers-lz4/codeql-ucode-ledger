@@ -1,0 +1,30 @@
+{
+  "original_sha256": "399daebcb1d3dc6333831b045e7ed65404c80922f6dfa7111b3b7a506e5dba45",
+  "table": {
+    "#select": {
+      "columns": [
+        {
+          "name": "path",
+          "kind": "String"
+        },
+        {
+          "name": "identifier",
+          "kind": "Entity"
+        },
+        {
+          "name": "classes",
+          "kind": "String"
+        },
+        {
+          "name": "line",
+          "kind": "Integer"
+        },
+        {
+          "name": "column",
+          "kind": "Integer"
+        }
+      ],
+      "tuples": []
+    }
+  }
+}

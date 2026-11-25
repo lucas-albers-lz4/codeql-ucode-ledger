@@ -1,0 +1,5825 @@
+{
+  "original_sha256": "5375393095285d1a830bb458257fe03a9995cd22df9de84ebeb0f78a579f8594",
+  "table": {
+    "#select": {
+      "columns": [
+        {
+          "name": "source_path",
+          "kind": "String"
+        },
+        {
+          "name": "node_kind",
+          "kind": "String"
+        },
+        {
+          "name": "raw_name",
+          "kind": "String"
+        },
+        {
+          "name": "node_start_line",
+          "kind": "Integer"
+        },
+        {
+          "name": "node_start_column",
+          "kind": "Integer"
+        },
+        {
+          "name": "node_end_line",
+          "kind": "Integer"
+        },
+        {
+          "name": "node_end_column",
+          "kind": "Integer"
+        },
+        {
+          "name": "node_entity",
+          "kind": "Entity"
+        },
+        {
+          "name": "parent_kind",
+          "kind": "String"
+        },
+        {
+          "name": "parent_start_line",
+          "kind": "Integer"
+        },
+        {
+          "name": "parent_start_column",
+          "kind": "Integer"
+        },
+        {
+          "name": "parent_end_line",
+          "kind": "Integer"
+        },
+        {
+          "name": "parent_end_column",
+          "kind": "Integer"
+        },
+        {
+          "name": "child_index",
+          "kind": "Integer"
+        },
+        {
+          "name": "parent_entity",
+          "kind": "Entity"
+        }
+      ],
+      "tuples": [
+        [
+          "controls/negative-duplicate.uc",
+          "Null",
+          "<not-an-identifier>",
+          8,
+          46,
+          8,
+          49,
+          {
+            "id": -16777037
+          },
+          "ReturnStatement",
+          8,
+          39,
+          8,
+          50,
+          1,
+          {
+            "id": -16777040
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Identifier",
+          "stat",
+          1,
+          10,
+          1,
+          13,
+          {
+            "id": -16777207
+          },
+          "ImportSpecifier",
+          1,
+          10,
+          1,
+          13,
+          0,
+          {
+            "id": -16777208
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Identifier",
+          "stat",
+          2,
+          22,
+          2,
+          25,
+          {
+            "id": -16777172
+          },
+          "ImportSpecifier",
+          2,
+          10,
+          2,
+          25,
+          2,
+          {
+            "id": -16777177
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Identifier",
+          "stat",
+          10,
+          16,
+          10,
+          19,
+          {
+            "id": -16777024
+          },
+          "CallExpression",
+          10,
+          16,
+          10,
+          63,
+          0,
+          {
+            "id": -16777025
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Identifier",
+          "readfile",
+          1,
+          16,
+          1,
+          23,
+          {
+            "id": -16777202
+          },
+          "ImportSpecifier",
+          1,
+          16,
+          1,
+          23,
+          0,
+          {
+            "id": -16777203
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Identifier",
+          "readfile",
+          2,
+          10,
+          2,
+          17,
+          {
+            "id": -16777176
+          },
+          "ImportSpecifier",
+          2,
+          10,
+          2,
+          25,
+          0,
+          {
+            "id": -16777177
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Identifier",
+          "base",
+          3,
+          7,
+          3,
+          10,
+          {
+            "id": -16777149
+          },
+          "VariableDeclarator",
+          3,
+          7,
+          3,
+          23,
+          0,
+          {
+            "id": -16777150
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Identifier",
+          "base",
+          10,
+          24,
+          10,
+          27,
+          {
+            "id": -16777013
+          },
+          "TemplateSubstitution",
+          10,
+          22,
+          10,
+          28,
+          1,
+          {
+            "id": -16777016
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Identifier",
+          "methods",
+          4,
+          7,
+          4,
+          13,
+          {
+            "id": -16777129
+          },
+          "VariableDeclarator",
+          4,
+          7,
+          14,
+          1,
+          0,
+          {
+            "id": -16777130
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Identifier",
+          "methods",
+          15,
+          30,
+          15,
+          36,
+          {
+            "id": -16776938
+          },
+          "Pair",
+          15,
+          10,
+          15,
+          36,
+          2,
+          {
+            "id": -16776949
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Identifier",
+          "request",
+          7,
+          20,
+          7,
+          26,
+          {
+            "id": -16777075
+          },
+          "FormalParameters",
+          7,
+          19,
+          7,
+          27,
+          1,
+          {
+            "id": -16777078
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Identifier",
+          "request",
+          8,
+          12,
+          8,
+          18,
+          {
+            "id": -16777056
+          },
+          "MemberExpression",
+          8,
+          12,
+          8,
+          23,
+          0,
+          {
+            "id": -16777057
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Identifier",
+          "request",
+          10,
+          32,
+          10,
+          38,
+          {
+            "id": -16777001
+          },
+          "MemberExpression",
+          10,
+          32,
+          10,
+          43,
+          0,
+          {
+            "id": -16777002
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Pair",
+          "<not-an-identifier>",
+          5,
+          3,
+          13,
+          3,
+          {
+            "id": -16777122
+          },
+          "Object",
+          4,
+          17,
+          14,
+          1,
+          1,
+          {
+            "id": -16777125
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Pair",
+          "<not-an-identifier>",
+          6,
+          5,
+          6,
+          42,
+          {
+            "id": -16777114
+          },
+          "Object",
+          5,
+          12,
+          13,
+          3,
+          1,
+          {
+            "id": -16777117
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Pair",
+          "<not-an-identifier>",
+          6,
+          13,
+          6,
+          40,
+          {
+            "id": -16777106
+          },
+          "Object",
+          6,
+          11,
+          6,
+          42,
+          1,
+          {
+            "id": -16777109
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Pair",
+          "<not-an-identifier>",
+          7,
+          5,
+          12,
+          5,
+          {
+            "id": -16777086
+          },
+          "Object",
+          5,
+          12,
+          13,
+          3,
+          3,
+          {
+            "id": -16777117
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Pair",
+          "<not-an-identifier>",
+          15,
+          10,
+          15,
+          36,
+          {
+            "id": -16776949
+          },
+          "Object",
+          15,
+          8,
+          15,
+          38,
+          1,
+          {
+            "id": -16776952
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          1,
+          1,
+          1,
+          6,
+          {
+            "id": -16777214
+          },
+          "ImportStatement",
+          1,
+          1,
+          1,
+          36,
+          0,
+          {
+            "id": -16777215
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          1,
+          8,
+          1,
+          8,
+          {
+            "id": -16777210
+          },
+          "NamedImports",
+          1,
+          8,
+          1,
+          25,
+          0,
+          {
+            "id": -16777211
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          1,
+          14,
+          1,
+          14,
+          {
+            "id": -16777205
+          },
+          "NamedImports",
+          1,
+          8,
+          1,
+          25,
+          2,
+          {
+            "id": -16777211
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          1,
+          25,
+          1,
+          25,
+          {
+            "id": -16777200
+          },
+          "NamedImports",
+          1,
+          8,
+          1,
+          25,
+          4,
+          {
+            "id": -16777211
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          1,
+          27,
+          1,
+          30,
+          {
+            "id": -16777197
+          },
+          "ImportStatement",
+          1,
+          1,
+          1,
+          36,
+          2,
+          {
+            "id": -16777215
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          1,
+          32,
+          1,
+          32,
+          {
+            "id": -16777194
+          },
+          "String",
+          1,
+          32,
+          1,
+          35,
+          0,
+          {
+            "id": -16777195
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          1,
+          35,
+          1,
+          35,
+          {
+            "id": -16777190
+          },
+          "String",
+          1,
+          32,
+          1,
+          35,
+          2,
+          {
+            "id": -16777195
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          1,
+          36,
+          1,
+          36,
+          {
+            "id": -16777187
+          },
+          "ImportStatement",
+          1,
+          1,
+          1,
+          36,
+          4,
+          {
+            "id": -16777215
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          2,
+          1,
+          2,
+          6,
+          {
+            "id": -16777183
+          },
+          "ImportStatement",
+          2,
+          1,
+          2,
+          38,
+          0,
+          {
+            "id": -16777184
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          2,
+          8,
+          2,
+          8,
+          {
+            "id": -16777179
+          },
+          "NamedImports",
+          2,
+          8,
+          2,
+          27,
+          0,
+          {
+            "id": -16777180
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          2,
+          19,
+          2,
+          20,
+          {
+            "id": -16777174
+          },
+          "ImportSpecifier",
+          2,
+          10,
+          2,
+          25,
+          1,
+          {
+            "id": -16777177
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          2,
+          27,
+          2,
+          27,
+          {
+            "id": -16777169
+          },
+          "NamedImports",
+          2,
+          8,
+          2,
+          27,
+          2,
+          {
+            "id": -16777180
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          2,
+          29,
+          2,
+          32,
+          {
+            "id": -16777166
+          },
+          "ImportStatement",
+          2,
+          1,
+          2,
+          38,
+          2,
+          {
+            "id": -16777184
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          2,
+          34,
+          2,
+          34,
+          {
+            "id": -16777163
+          },
+          "String",
+          2,
+          34,
+          2,
+          37,
+          0,
+          {
+            "id": -16777164
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          2,
+          37,
+          2,
+          37,
+          {
+            "id": -16777159
+          },
+          "String",
+          2,
+          34,
+          2,
+          37,
+          2,
+          {
+            "id": -16777164
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          2,
+          38,
+          2,
+          38,
+          {
+            "id": -16777156
+          },
+          "ImportStatement",
+          2,
+          1,
+          2,
+          38,
+          4,
+          {
+            "id": -16777184
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          3,
+          1,
+          3,
+          5,
+          {
+            "id": -16777152
+          },
+          "LexicalDeclaration",
+          3,
+          1,
+          3,
+          24,
+          0,
+          {
+            "id": -16777153
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          3,
+          12,
+          3,
+          12,
+          {
+            "id": -16777147
+          },
+          "VariableDeclarator",
+          3,
+          7,
+          3,
+          23,
+          1,
+          {
+            "id": -16777150
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          3,
+          14,
+          3,
+          14,
+          {
+            "id": -16777144
+          },
+          "String",
+          3,
+          14,
+          3,
+          23,
+          0,
+          {
+            "id": -16777145
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          3,
+          23,
+          3,
+          23,
+          {
+            "id": -16777140
+          },
+          "String",
+          3,
+          14,
+          3,
+          23,
+          2,
+          {
+            "id": -16777145
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          3,
+          24,
+          3,
+          24,
+          {
+            "id": -16777136
+          },
+          "LexicalDeclaration",
+          3,
+          1,
+          3,
+          24,
+          2,
+          {
+            "id": -16777153
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          4,
+          1,
+          4,
+          5,
+          {
+            "id": -16777132
+          },
+          "LexicalDeclaration",
+          4,
+          1,
+          14,
+          2,
+          0,
+          {
+            "id": -16777133
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          4,
+          15,
+          4,
+          15,
+          {
+            "id": -16777127
+          },
+          "VariableDeclarator",
+          4,
+          7,
+          14,
+          1,
+          1,
+          {
+            "id": -16777130
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          4,
+          17,
+          4,
+          17,
+          {
+            "id": -16777124
+          },
+          "Object",
+          4,
+          17,
+          14,
+          1,
+          0,
+          {
+            "id": -16777125
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          5,
+          10,
+          5,
+          10,
+          {
+            "id": -16777119
+          },
+          "Pair",
+          5,
+          3,
+          13,
+          3,
+          1,
+          {
+            "id": -16777122
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          5,
+          12,
+          5,
+          12,
+          {
+            "id": -16777116
+          },
+          "Object",
+          5,
+          12,
+          13,
+          3,
+          0,
+          {
+            "id": -16777117
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          6,
+          9,
+          6,
+          9,
+          {
+            "id": -16777111
+          },
+          "Pair",
+          6,
+          5,
+          6,
+          42,
+          1,
+          {
+            "id": -16777114
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          6,
+          11,
+          6,
+          11,
+          {
+            "id": -16777108
+          },
+          "Object",
+          6,
+          11,
+          6,
+          42,
+          0,
+          {
+            "id": -16777109
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          6,
+          25,
+          6,
+          25,
+          {
+            "id": -16777103
+          },
+          "Pair",
+          6,
+          13,
+          6,
+          40,
+          1,
+          {
+            "id": -16777106
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          6,
+          27,
+          6,
+          27,
+          {
+            "id": -16777100
+          },
+          "String",
+          6,
+          27,
+          6,
+          40,
+          0,
+          {
+            "id": -16777101
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          6,
+          40,
+          6,
+          40,
+          {
+            "id": -16777096
+          },
+          "String",
+          6,
+          27,
+          6,
+          40,
+          2,
+          {
+            "id": -16777101
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          6,
+          42,
+          6,
+          42,
+          {
+            "id": -16777092
+          },
+          "Object",
+          6,
+          11,
+          6,
+          42,
+          2,
+          {
+            "id": -16777109
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          6,
+          43,
+          6,
+          43,
+          {
+            "id": -16777088
+          },
+          "Object",
+          5,
+          12,
+          13,
+          3,
+          2,
+          {
+            "id": -16777117
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          7,
+          9,
+          7,
+          9,
+          {
+            "id": -16777083
+          },
+          "Pair",
+          7,
+          5,
+          12,
+          5,
+          1,
+          {
+            "id": -16777086
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          7,
+          11,
+          7,
+          18,
+          {
+            "id": -16777080
+          },
+          "FunctionExpression",
+          7,
+          11,
+          12,
+          5,
+          0,
+          {
+            "id": -16777081
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          7,
+          19,
+          7,
+          19,
+          {
+            "id": -16777077
+          },
+          "FormalParameters",
+          7,
+          19,
+          7,
+          27,
+          0,
+          {
+            "id": -16777078
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          7,
+          27,
+          7,
+          27,
+          {
+            "id": -16777073
+          },
+          "FormalParameters",
+          7,
+          19,
+          7,
+          27,
+          2,
+          {
+            "id": -16777078
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          7,
+          29,
+          7,
+          29,
+          {
+            "id": -16777069
+          },
+          "StatementBlock",
+          7,
+          29,
+          12,
+          5,
+          0,
+          {
+            "id": -16777070
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          8,
+          7,
+          8,
+          8,
+          {
+            "id": -16777066
+          },
+          "IfStatement",
+          8,
+          7,
+          8,
+          50,
+          0,
+          {
+            "id": -16777067
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          8,
+          10,
+          8,
+          10,
+          {
+            "id": -16777063
+          },
+          "ParenthesizedExpression",
+          8,
+          10,
+          8,
+          37,
+          0,
+          {
+            "id": -16777064
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          8,
+          11,
+          8,
+          11,
+          {
+            "id": -16777060
+          },
+          "UnaryExpression",
+          8,
+          11,
+          8,
+          36,
+          0,
+          {
+            "id": -16777061
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          8,
+          19,
+          8,
+          19,
+          {
+            "id": -16777054
+          },
+          "MemberExpression",
+          8,
+          12,
+          8,
+          23,
+          1,
+          {
+            "id": -16777057
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          8,
+          24,
+          8,
+          24,
+          {
+            "id": -16777049
+          },
+          "MemberExpression",
+          8,
+          12,
+          8,
+          36,
+          1,
+          {
+            "id": -16777058
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          8,
+          37,
+          8,
+          37,
+          {
+            "id": -16777043
+          },
+          "ParenthesizedExpression",
+          8,
+          10,
+          8,
+          37,
+          2,
+          {
+            "id": -16777064
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          8,
+          39,
+          8,
+          44,
+          {
+            "id": -16777039
+          },
+          "ReturnStatement",
+          8,
+          39,
+          8,
+          50,
+          0,
+          {
+            "id": -16777040
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          8,
+          50,
+          8,
+          50,
+          {
+            "id": -16777035
+          },
+          "ReturnStatement",
+          8,
+          39,
+          8,
+          50,
+          2,
+          {
+            "id": -16777040
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          9,
+          7,
+          9,
+          7,
+          {
+            "id": -16777030
+          },
+          "StatementBlock",
+          9,
+          7,
+          11,
+          7,
+          0,
+          {
+            "id": -16777031
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          10,
+          9,
+          10,
+          14,
+          {
+            "id": -16777027
+          },
+          "ReturnStatement",
+          10,
+          9,
+          10,
+          64,
+          0,
+          {
+            "id": -16777028
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          10,
+          20,
+          10,
+          20,
+          {
+            "id": -16777021
+          },
+          "Arguments",
+          10,
+          20,
+          10,
+          63,
+          0,
+          {
+            "id": -16777022
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          10,
+          21,
+          10,
+          21,
+          {
+            "id": -16777018
+          },
+          "TemplateString",
+          10,
+          21,
+          10,
+          62,
+          0,
+          {
+            "id": -16777019
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          10,
+          22,
+          10,
+          23,
+          {
+            "id": -16777015
+          },
+          "TemplateSubstitution",
+          10,
+          22,
+          10,
+          28,
+          0,
+          {
+            "id": -16777016
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          10,
+          28,
+          10,
+          28,
+          {
+            "id": -16777011
+          },
+          "TemplateSubstitution",
+          10,
+          22,
+          10,
+          28,
+          2,
+          {
+            "id": -16777016
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          10,
+          30,
+          10,
+          31,
+          {
+            "id": -16777005
+          },
+          "TemplateSubstitution",
+          10,
+          30,
+          10,
+          57,
+          0,
+          {
+            "id": -16777006
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          10,
+          39,
+          10,
+          39,
+          {
+            "id": -16776999
+          },
+          "MemberExpression",
+          10,
+          32,
+          10,
+          43,
+          1,
+          {
+            "id": -16777002
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          10,
+          44,
+          10,
+          44,
+          {
+            "id": -16776994
+          },
+          "MemberExpression",
+          10,
+          32,
+          10,
+          56,
+          1,
+          {
+            "id": -16777003
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          10,
+          57,
+          10,
+          57,
+          {
+            "id": -16776989
+          },
+          "TemplateSubstitution",
+          10,
+          30,
+          10,
+          57,
+          2,
+          {
+            "id": -16777006
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          10,
+          62,
+          10,
+          62,
+          {
+            "id": -16776984
+          },
+          "TemplateString",
+          10,
+          21,
+          10,
+          62,
+          5,
+          {
+            "id": -16777019
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          10,
+          63,
+          10,
+          63,
+          {
+            "id": -16776981
+          },
+          "Arguments",
+          10,
+          20,
+          10,
+          63,
+          2,
+          {
+            "id": -16777022
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          10,
+          64,
+          10,
+          64,
+          {
+            "id": -16776977
+          },
+          "ReturnStatement",
+          10,
+          9,
+          10,
+          64,
+          2,
+          {
+            "id": -16777028
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          11,
+          7,
+          11,
+          7,
+          {
+            "id": -16776974
+          },
+          "StatementBlock",
+          9,
+          7,
+          11,
+          7,
+          2,
+          {
+            "id": -16777031
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          12,
+          5,
+          12,
+          5,
+          {
+            "id": -16776971
+          },
+          "StatementBlock",
+          7,
+          29,
+          12,
+          5,
+          3,
+          {
+            "id": -16777070
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          13,
+          3,
+          13,
+          3,
+          {
+            "id": -16776966
+          },
+          "Object",
+          5,
+          12,
+          13,
+          3,
+          4,
+          {
+            "id": -16777117
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          14,
+          1,
+          14,
+          1,
+          {
+            "id": -16776962
+          },
+          "Object",
+          4,
+          17,
+          14,
+          1,
+          2,
+          {
+            "id": -16777125
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          14,
+          2,
+          14,
+          2,
+          {
+            "id": -16776958
+          },
+          "LexicalDeclaration",
+          4,
+          1,
+          14,
+          2,
+          2,
+          {
+            "id": -16777133
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          15,
+          1,
+          15,
+          6,
+          {
+            "id": -16776954
+          },
+          "ReturnStatement",
+          15,
+          1,
+          15,
+          39,
+          0,
+          {
+            "id": -16776955
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          15,
+          8,
+          15,
+          8,
+          {
+            "id": -16776951
+          },
+          "Object",
+          15,
+          8,
+          15,
+          38,
+          0,
+          {
+            "id": -16776952
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          15,
+          10,
+          15,
+          10,
+          {
+            "id": -16776947
+          },
+          "String",
+          15,
+          10,
+          15,
+          27,
+          0,
+          {
+            "id": -16776948
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          15,
+          27,
+          15,
+          27,
+          {
+            "id": -16776943
+          },
+          "String",
+          15,
+          10,
+          15,
+          27,
+          2,
+          {
+            "id": -16776948
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          15,
+          28,
+          15,
+          28,
+          {
+            "id": -16776940
+          },
+          "Pair",
+          15,
+          10,
+          15,
+          36,
+          1,
+          {
+            "id": -16776949
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          15,
+          38,
+          15,
+          38,
+          {
+            "id": -16776935
+          },
+          "Object",
+          15,
+          8,
+          15,
+          38,
+          2,
+          {
+            "id": -16776952
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          15,
+          39,
+          15,
+          39,
+          {
+            "id": -16776932
+          },
+          "ReturnStatement",
+          15,
+          1,
+          15,
+          39,
+          2,
+          {
+            "id": -16776955
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Object",
+          "<not-an-identifier>",
+          4,
+          17,
+          14,
+          1,
+          {
+            "id": -16777125
+          },
+          "VariableDeclarator",
+          4,
+          7,
+          14,
+          1,
+          2,
+          {
+            "id": -16777130
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Object",
+          "<not-an-identifier>",
+          5,
+          12,
+          13,
+          3,
+          {
+            "id": -16777117
+          },
+          "Pair",
+          5,
+          3,
+          13,
+          3,
+          2,
+          {
+            "id": -16777122
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Object",
+          "<not-an-identifier>",
+          6,
+          11,
+          6,
+          42,
+          {
+            "id": -16777109
+          },
+          "Pair",
+          6,
+          5,
+          6,
+          42,
+          2,
+          {
+            "id": -16777114
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Object",
+          "<not-an-identifier>",
+          15,
+          8,
+          15,
+          38,
+          {
+            "id": -16776952
+          },
+          "ReturnStatement",
+          15,
+          1,
+          15,
+          39,
+          1,
+          {
+            "id": -16776955
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "String",
+          "<not-an-identifier>",
+          1,
+          32,
+          1,
+          35,
+          {
+            "id": -16777195
+          },
+          "ImportStatement",
+          1,
+          1,
+          1,
+          36,
+          3,
+          {
+            "id": -16777215
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "String",
+          "<not-an-identifier>",
+          2,
+          34,
+          2,
+          37,
+          {
+            "id": -16777164
+          },
+          "ImportStatement",
+          2,
+          1,
+          2,
+          38,
+          3,
+          {
+            "id": -16777184
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "String",
+          "<not-an-identifier>",
+          3,
+          14,
+          3,
+          23,
+          {
+            "id": -16777145
+          },
+          "VariableDeclarator",
+          3,
+          7,
+          3,
+          23,
+          2,
+          {
+            "id": -16777150
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "String",
+          "<not-an-identifier>",
+          6,
+          27,
+          6,
+          40,
+          {
+            "id": -16777101
+          },
+          "Pair",
+          6,
+          13,
+          6,
+          40,
+          2,
+          {
+            "id": -16777106
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "String",
+          "<not-an-identifier>",
+          15,
+          10,
+          15,
+          27,
+          {
+            "id": -16776948
+          },
+          "Pair",
+          15,
+          10,
+          15,
+          36,
+          0,
+          {
+            "id": -16776949
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "StringFragment",
+          "<not-an-identifier>",
+          1,
+          33,
+          1,
+          34,
+          {
+            "id": -16777192
+          },
+          "String",
+          1,
+          32,
+          1,
+          35,
+          1,
+          {
+            "id": -16777195
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "StringFragment",
+          "<not-an-identifier>",
+          2,
+          35,
+          2,
+          36,
+          {
+            "id": -16777161
+          },
+          "String",
+          2,
+          34,
+          2,
+          37,
+          1,
+          {
+            "id": -16777164
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "StringFragment",
+          "<not-an-identifier>",
+          3,
+          15,
+          3,
+          22,
+          {
+            "id": -16777142
+          },
+          "String",
+          3,
+          14,
+          3,
+          23,
+          1,
+          {
+            "id": -16777145
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "StringFragment",
+          "<not-an-identifier>",
+          6,
+          28,
+          6,
+          39,
+          {
+            "id": -16777098
+          },
+          "String",
+          6,
+          27,
+          6,
+          40,
+          1,
+          {
+            "id": -16777101
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "StringFragment",
+          "<not-an-identifier>",
+          10,
+          29,
+          10,
+          29,
+          {
+            "id": -16777008
+          },
+          "TemplateString",
+          10,
+          21,
+          10,
+          62,
+          2,
+          {
+            "id": -16777019
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "StringFragment",
+          "<not-an-identifier>",
+          10,
+          58,
+          10,
+          61,
+          {
+            "id": -16776986
+          },
+          "TemplateString",
+          10,
+          21,
+          10,
+          62,
+          4,
+          {
+            "id": -16777019
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "StringFragment",
+          "<not-an-identifier>",
+          15,
+          11,
+          15,
+          26,
+          {
+            "id": -16776945
+          },
+          "String",
+          15,
+          10,
+          15,
+          27,
+          1,
+          {
+            "id": -16776948
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "PropertyIdentifier",
+          "observe",
+          5,
+          3,
+          5,
+          9,
+          {
+            "id": -16777121
+          },
+          "Pair",
+          5,
+          3,
+          13,
+          3,
+          0,
+          {
+            "id": -16777122
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "PropertyIdentifier",
+          "args",
+          6,
+          5,
+          6,
+          8,
+          {
+            "id": -16777113
+          },
+          "Pair",
+          6,
+          5,
+          6,
+          42,
+          0,
+          {
+            "id": -16777114
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "PropertyIdentifier",
+          "args",
+          8,
+          20,
+          8,
+          23,
+          {
+            "id": -16777052
+          },
+          "MemberExpression",
+          8,
+          12,
+          8,
+          23,
+          2,
+          {
+            "id": -16777057
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "PropertyIdentifier",
+          "args",
+          10,
+          40,
+          10,
+          43,
+          {
+            "id": -16776997
+          },
+          "MemberExpression",
+          10,
+          32,
+          10,
+          43,
+          2,
+          {
+            "id": -16777002
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "PropertyIdentifier",
+          "service_name",
+          6,
+          13,
+          6,
+          24,
+          {
+            "id": -16777105
+          },
+          "Pair",
+          6,
+          13,
+          6,
+          40,
+          0,
+          {
+            "id": -16777106
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "PropertyIdentifier",
+          "service_name",
+          8,
+          25,
+          8,
+          36,
+          {
+            "id": -16777047
+          },
+          "MemberExpression",
+          8,
+          12,
+          8,
+          36,
+          2,
+          {
+            "id": -16777058
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "PropertyIdentifier",
+          "service_name",
+          10,
+          45,
+          10,
+          56,
+          {
+            "id": -16776992
+          },
+          "MemberExpression",
+          10,
+          32,
+          10,
+          56,
+          2,
+          {
+            "id": -16777003
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "PropertyIdentifier",
+          "call",
+          7,
+          5,
+          7,
+          8,
+          {
+            "id": -16777085
+          },
+          "Pair",
+          7,
+          5,
+          12,
+          5,
+          0,
+          {
+            "id": -16777086
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "Arguments",
+          "<not-an-identifier>",
+          10,
+          20,
+          10,
+          63,
+          {
+            "id": -16777022
+          },
+          "CallExpression",
+          10,
+          16,
+          10,
+          63,
+          1,
+          {
+            "id": -16777025
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ImportClause",
+          "<not-an-identifier>",
+          1,
+          8,
+          1,
+          25,
+          {
+            "id": -16777212
+          },
+          "ImportStatement",
+          1,
+          1,
+          1,
+          36,
+          1,
+          {
+            "id": -16777215
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ImportClause",
+          "<not-an-identifier>",
+          2,
+          8,
+          2,
+          27,
+          {
+            "id": -16777181
+          },
+          "ImportStatement",
+          2,
+          1,
+          2,
+          38,
+          1,
+          {
+            "id": -16777184
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "NamedImports",
+          "<not-an-identifier>",
+          1,
+          8,
+          1,
+          25,
+          {
+            "id": -16777211
+          },
+          "ImportClause",
+          1,
+          8,
+          1,
+          25,
+          0,
+          {
+            "id": -16777212
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "NamedImports",
+          "<not-an-identifier>",
+          2,
+          8,
+          2,
+          27,
+          {
+            "id": -16777180
+          },
+          "ImportClause",
+          2,
+          8,
+          2,
+          27,
+          0,
+          {
+            "id": -16777181
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "IfStatement",
+          "<not-an-identifier>",
+          8,
+          7,
+          8,
+          50,
+          {
+            "id": -16777067
+          },
+          "StatementBlock",
+          7,
+          29,
+          12,
+          5,
+          1,
+          {
+            "id": -16777070
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "StatementBlock",
+          "<not-an-identifier>",
+          7,
+          29,
+          12,
+          5,
+          {
+            "id": -16777070
+          },
+          "FunctionExpression",
+          7,
+          11,
+          12,
+          5,
+          2,
+          {
+            "id": -16777081
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "StatementBlock",
+          "<not-an-identifier>",
+          9,
+          7,
+          11,
+          7,
+          {
+            "id": -16777031
+          },
+          "StatementBlock",
+          7,
+          29,
+          12,
+          5,
+          2,
+          {
+            "id": -16777070
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "TemplateString",
+          "<not-an-identifier>",
+          10,
+          21,
+          10,
+          62,
+          {
+            "id": -16777019
+          },
+          "Arguments",
+          10,
+          20,
+          10,
+          63,
+          1,
+          {
+            "id": -16777022
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReturnStatement",
+          "<not-an-identifier>",
+          8,
+          39,
+          8,
+          50,
+          {
+            "id": -16777040
+          },
+          "IfStatement",
+          8,
+          7,
+          8,
+          50,
+          2,
+          {
+            "id": -16777067
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReturnStatement",
+          "<not-an-identifier>",
+          10,
+          9,
+          10,
+          64,
+          {
+            "id": -16777028
+          },
+          "StatementBlock",
+          9,
+          7,
+          11,
+          7,
+          1,
+          {
+            "id": -16777031
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ReturnStatement",
+          "<not-an-identifier>",
+          15,
+          1,
+          15,
+          39,
+          {
+            "id": -16776955
+          },
+          "Program",
+          1,
+          1,
+          15,
+          40,
+          4,
+          {
+            "id": -16777216
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "CallExpression",
+          "<not-an-identifier>",
+          10,
+          16,
+          10,
+          63,
+          {
+            "id": -16777025
+          },
+          "ReturnStatement",
+          10,
+          9,
+          10,
+          64,
+          1,
+          {
+            "id": -16777028
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ImportSpecifier",
+          "<not-an-identifier>",
+          1,
+          10,
+          1,
+          13,
+          {
+            "id": -16777208
+          },
+          "NamedImports",
+          1,
+          8,
+          1,
+          25,
+          1,
+          {
+            "id": -16777211
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ImportSpecifier",
+          "<not-an-identifier>",
+          1,
+          16,
+          1,
+          23,
+          {
+            "id": -16777203
+          },
+          "NamedImports",
+          1,
+          8,
+          1,
+          25,
+          3,
+          {
+            "id": -16777211
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ImportSpecifier",
+          "<not-an-identifier>",
+          2,
+          10,
+          2,
+          25,
+          {
+            "id": -16777177
+          },
+          "NamedImports",
+          2,
+          8,
+          2,
+          27,
+          1,
+          {
+            "id": -16777180
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ImportStatement",
+          "<not-an-identifier>",
+          1,
+          1,
+          1,
+          36,
+          {
+            "id": -16777215
+          },
+          "Program",
+          1,
+          1,
+          15,
+          40,
+          0,
+          {
+            "id": -16777216
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ImportStatement",
+          "<not-an-identifier>",
+          2,
+          1,
+          2,
+          38,
+          {
+            "id": -16777184
+          },
+          "Program",
+          1,
+          1,
+          15,
+          40,
+          1,
+          {
+            "id": -16777216
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "FormalParameters",
+          "<not-an-identifier>",
+          7,
+          19,
+          7,
+          27,
+          {
+            "id": -16777078
+          },
+          "FunctionExpression",
+          7,
+          11,
+          12,
+          5,
+          1,
+          {
+            "id": -16777081
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "UnaryExpression",
+          "<not-an-identifier>",
+          8,
+          11,
+          8,
+          36,
+          {
+            "id": -16777061
+          },
+          "ParenthesizedExpression",
+          8,
+          10,
+          8,
+          37,
+          1,
+          {
+            "id": -16777064
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "MemberExpression",
+          "<not-an-identifier>",
+          8,
+          12,
+          8,
+          23,
+          {
+            "id": -16777057
+          },
+          "MemberExpression",
+          8,
+          12,
+          8,
+          36,
+          0,
+          {
+            "id": -16777058
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "MemberExpression",
+          "<not-an-identifier>",
+          8,
+          12,
+          8,
+          36,
+          {
+            "id": -16777058
+          },
+          "UnaryExpression",
+          8,
+          11,
+          8,
+          36,
+          1,
+          {
+            "id": -16777061
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "MemberExpression",
+          "<not-an-identifier>",
+          10,
+          32,
+          10,
+          43,
+          {
+            "id": -16777002
+          },
+          "MemberExpression",
+          10,
+          32,
+          10,
+          56,
+          0,
+          {
+            "id": -16777003
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "MemberExpression",
+          "<not-an-identifier>",
+          10,
+          32,
+          10,
+          56,
+          {
+            "id": -16777003
+          },
+          "TemplateSubstitution",
+          10,
+          30,
+          10,
+          57,
+          1,
+          {
+            "id": -16777006
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "LexicalDeclaration",
+          "<not-an-identifier>",
+          3,
+          1,
+          3,
+          24,
+          {
+            "id": -16777153
+          },
+          "Program",
+          1,
+          1,
+          15,
+          40,
+          2,
+          {
+            "id": -16777216
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "LexicalDeclaration",
+          "<not-an-identifier>",
+          4,
+          1,
+          14,
+          2,
+          {
+            "id": -16777133
+          },
+          "Program",
+          1,
+          1,
+          15,
+          40,
+          3,
+          {
+            "id": -16777216
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "VariableDeclarator",
+          "<not-an-identifier>",
+          3,
+          7,
+          3,
+          23,
+          {
+            "id": -16777150
+          },
+          "LexicalDeclaration",
+          3,
+          1,
+          3,
+          24,
+          1,
+          {
+            "id": -16777153
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "VariableDeclarator",
+          "<not-an-identifier>",
+          4,
+          7,
+          14,
+          1,
+          {
+            "id": -16777130
+          },
+          "LexicalDeclaration",
+          4,
+          1,
+          14,
+          2,
+          1,
+          {
+            "id": -16777133
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "FunctionExpression",
+          "<not-an-identifier>",
+          7,
+          11,
+          12,
+          5,
+          {
+            "id": -16777081
+          },
+          "Pair",
+          7,
+          5,
+          12,
+          5,
+          2,
+          {
+            "id": -16777086
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "TemplateSubstitution",
+          "<not-an-identifier>",
+          10,
+          22,
+          10,
+          28,
+          {
+            "id": -16777016
+          },
+          "TemplateString",
+          10,
+          21,
+          10,
+          62,
+          1,
+          {
+            "id": -16777019
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "TemplateSubstitution",
+          "<not-an-identifier>",
+          10,
+          30,
+          10,
+          57,
+          {
+            "id": -16777006
+          },
+          "TemplateString",
+          10,
+          21,
+          10,
+          62,
+          3,
+          {
+            "id": -16777019
+          }
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "ParenthesizedExpression",
+          "<not-an-identifier>",
+          8,
+          10,
+          8,
+          37,
+          {
+            "id": -16777064
+          },
+          "IfStatement",
+          8,
+          7,
+          8,
+          50,
+          1,
+          {
+            "id": -16777067
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Null",
+          "<not-an-identifier>",
+          7,
+          46,
+          7,
+          49,
+          {
+            "id": -16776780
+          },
+          "ReturnStatement",
+          7,
+          39,
+          7,
+          50,
+          1,
+          {
+            "id": -16776783
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Identifier",
+          "stat",
+          1,
+          10,
+          1,
+          13,
+          {
+            "id": -16776919
+          },
+          "ImportSpecifier",
+          1,
+          10,
+          1,
+          13,
+          0,
+          {
+            "id": -16776920
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Identifier",
+          "stat",
+          9,
+          16,
+          9,
+          19,
+          {
+            "id": -16776767
+          },
+          "CallExpression",
+          9,
+          16,
+          9,
+          63,
+          0,
+          {
+            "id": -16776768
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Identifier",
+          "readfile",
+          1,
+          16,
+          1,
+          23,
+          {
+            "id": -16776914
+          },
+          "ImportSpecifier",
+          1,
+          16,
+          1,
+          23,
+          0,
+          {
+            "id": -16776915
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Identifier",
+          "base",
+          2,
+          7,
+          2,
+          10,
+          {
+            "id": -16776892
+          },
+          "VariableDeclarator",
+          2,
+          7,
+          2,
+          23,
+          0,
+          {
+            "id": -16776893
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Identifier",
+          "base",
+          9,
+          24,
+          9,
+          27,
+          {
+            "id": -16776756
+          },
+          "TemplateSubstitution",
+          9,
+          22,
+          9,
+          28,
+          1,
+          {
+            "id": -16776759
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Identifier",
+          "methods",
+          3,
+          7,
+          3,
+          13,
+          {
+            "id": -16776872
+          },
+          "VariableDeclarator",
+          3,
+          7,
+          13,
+          1,
+          0,
+          {
+            "id": -16776873
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Identifier",
+          "methods",
+          14,
+          30,
+          14,
+          36,
+          {
+            "id": -16776681
+          },
+          "Pair",
+          14,
+          10,
+          14,
+          36,
+          2,
+          {
+            "id": -16776692
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Identifier",
+          "request",
+          6,
+          20,
+          6,
+          26,
+          {
+            "id": -16776818
+          },
+          "FormalParameters",
+          6,
+          19,
+          6,
+          27,
+          1,
+          {
+            "id": -16776821
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Identifier",
+          "request",
+          7,
+          12,
+          7,
+          18,
+          {
+            "id": -16776799
+          },
+          "MemberExpression",
+          7,
+          12,
+          7,
+          23,
+          0,
+          {
+            "id": -16776800
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Identifier",
+          "request",
+          9,
+          32,
+          9,
+          38,
+          {
+            "id": -16776744
+          },
+          "MemberExpression",
+          9,
+          32,
+          9,
+          43,
+          0,
+          {
+            "id": -16776745
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Pair",
+          "<not-an-identifier>",
+          4,
+          3,
+          12,
+          3,
+          {
+            "id": -16776865
+          },
+          "Object",
+          3,
+          17,
+          13,
+          1,
+          1,
+          {
+            "id": -16776868
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Pair",
+          "<not-an-identifier>",
+          5,
+          5,
+          5,
+          42,
+          {
+            "id": -16776857
+          },
+          "Object",
+          4,
+          12,
+          12,
+          3,
+          1,
+          {
+            "id": -16776860
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Pair",
+          "<not-an-identifier>",
+          5,
+          13,
+          5,
+          40,
+          {
+            "id": -16776849
+          },
+          "Object",
+          5,
+          11,
+          5,
+          42,
+          1,
+          {
+            "id": -16776852
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Pair",
+          "<not-an-identifier>",
+          6,
+          5,
+          11,
+          5,
+          {
+            "id": -16776829
+          },
+          "Object",
+          4,
+          12,
+          12,
+          3,
+          3,
+          {
+            "id": -16776860
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Pair",
+          "<not-an-identifier>",
+          14,
+          10,
+          14,
+          36,
+          {
+            "id": -16776692
+          },
+          "Object",
+          14,
+          8,
+          14,
+          38,
+          1,
+          {
+            "id": -16776695
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          1,
+          1,
+          1,
+          6,
+          {
+            "id": -16776926
+          },
+          "ImportStatement",
+          1,
+          1,
+          1,
+          36,
+          0,
+          {
+            "id": -16776927
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          1,
+          8,
+          1,
+          8,
+          {
+            "id": -16776922
+          },
+          "NamedImports",
+          1,
+          8,
+          1,
+          25,
+          0,
+          {
+            "id": -16776923
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          1,
+          14,
+          1,
+          14,
+          {
+            "id": -16776917
+          },
+          "NamedImports",
+          1,
+          8,
+          1,
+          25,
+          2,
+          {
+            "id": -16776923
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          1,
+          25,
+          1,
+          25,
+          {
+            "id": -16776912
+          },
+          "NamedImports",
+          1,
+          8,
+          1,
+          25,
+          4,
+          {
+            "id": -16776923
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          1,
+          27,
+          1,
+          30,
+          {
+            "id": -16776909
+          },
+          "ImportStatement",
+          1,
+          1,
+          1,
+          36,
+          2,
+          {
+            "id": -16776927
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          1,
+          32,
+          1,
+          32,
+          {
+            "id": -16776906
+          },
+          "String",
+          1,
+          32,
+          1,
+          35,
+          0,
+          {
+            "id": -16776907
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          1,
+          35,
+          1,
+          35,
+          {
+            "id": -16776902
+          },
+          "String",
+          1,
+          32,
+          1,
+          35,
+          2,
+          {
+            "id": -16776907
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          1,
+          36,
+          1,
+          36,
+          {
+            "id": -16776899
+          },
+          "ImportStatement",
+          1,
+          1,
+          1,
+          36,
+          4,
+          {
+            "id": -16776927
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          2,
+          1,
+          2,
+          5,
+          {
+            "id": -16776895
+          },
+          "LexicalDeclaration",
+          2,
+          1,
+          2,
+          24,
+          0,
+          {
+            "id": -16776896
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          2,
+          12,
+          2,
+          12,
+          {
+            "id": -16776890
+          },
+          "VariableDeclarator",
+          2,
+          7,
+          2,
+          23,
+          1,
+          {
+            "id": -16776893
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          2,
+          14,
+          2,
+          14,
+          {
+            "id": -16776887
+          },
+          "String",
+          2,
+          14,
+          2,
+          23,
+          0,
+          {
+            "id": -16776888
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          2,
+          23,
+          2,
+          23,
+          {
+            "id": -16776883
+          },
+          "String",
+          2,
+          14,
+          2,
+          23,
+          2,
+          {
+            "id": -16776888
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          2,
+          24,
+          2,
+          24,
+          {
+            "id": -16776879
+          },
+          "LexicalDeclaration",
+          2,
+          1,
+          2,
+          24,
+          2,
+          {
+            "id": -16776896
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          3,
+          1,
+          3,
+          5,
+          {
+            "id": -16776875
+          },
+          "LexicalDeclaration",
+          3,
+          1,
+          13,
+          2,
+          0,
+          {
+            "id": -16776876
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          3,
+          15,
+          3,
+          15,
+          {
+            "id": -16776870
+          },
+          "VariableDeclarator",
+          3,
+          7,
+          13,
+          1,
+          1,
+          {
+            "id": -16776873
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          3,
+          17,
+          3,
+          17,
+          {
+            "id": -16776867
+          },
+          "Object",
+          3,
+          17,
+          13,
+          1,
+          0,
+          {
+            "id": -16776868
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          4,
+          10,
+          4,
+          10,
+          {
+            "id": -16776862
+          },
+          "Pair",
+          4,
+          3,
+          12,
+          3,
+          1,
+          {
+            "id": -16776865
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          4,
+          12,
+          4,
+          12,
+          {
+            "id": -16776859
+          },
+          "Object",
+          4,
+          12,
+          12,
+          3,
+          0,
+          {
+            "id": -16776860
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          5,
+          9,
+          5,
+          9,
+          {
+            "id": -16776854
+          },
+          "Pair",
+          5,
+          5,
+          5,
+          42,
+          1,
+          {
+            "id": -16776857
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          5,
+          11,
+          5,
+          11,
+          {
+            "id": -16776851
+          },
+          "Object",
+          5,
+          11,
+          5,
+          42,
+          0,
+          {
+            "id": -16776852
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          5,
+          25,
+          5,
+          25,
+          {
+            "id": -16776846
+          },
+          "Pair",
+          5,
+          13,
+          5,
+          40,
+          1,
+          {
+            "id": -16776849
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          5,
+          27,
+          5,
+          27,
+          {
+            "id": -16776843
+          },
+          "String",
+          5,
+          27,
+          5,
+          40,
+          0,
+          {
+            "id": -16776844
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          5,
+          40,
+          5,
+          40,
+          {
+            "id": -16776839
+          },
+          "String",
+          5,
+          27,
+          5,
+          40,
+          2,
+          {
+            "id": -16776844
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          5,
+          42,
+          5,
+          42,
+          {
+            "id": -16776835
+          },
+          "Object",
+          5,
+          11,
+          5,
+          42,
+          2,
+          {
+            "id": -16776852
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          5,
+          43,
+          5,
+          43,
+          {
+            "id": -16776831
+          },
+          "Object",
+          4,
+          12,
+          12,
+          3,
+          2,
+          {
+            "id": -16776860
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          6,
+          9,
+          6,
+          9,
+          {
+            "id": -16776826
+          },
+          "Pair",
+          6,
+          5,
+          11,
+          5,
+          1,
+          {
+            "id": -16776829
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          6,
+          11,
+          6,
+          18,
+          {
+            "id": -16776823
+          },
+          "FunctionExpression",
+          6,
+          11,
+          11,
+          5,
+          0,
+          {
+            "id": -16776824
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          6,
+          19,
+          6,
+          19,
+          {
+            "id": -16776820
+          },
+          "FormalParameters",
+          6,
+          19,
+          6,
+          27,
+          0,
+          {
+            "id": -16776821
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          6,
+          27,
+          6,
+          27,
+          {
+            "id": -16776816
+          },
+          "FormalParameters",
+          6,
+          19,
+          6,
+          27,
+          2,
+          {
+            "id": -16776821
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          6,
+          29,
+          6,
+          29,
+          {
+            "id": -16776812
+          },
+          "StatementBlock",
+          6,
+          29,
+          11,
+          5,
+          0,
+          {
+            "id": -16776813
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          7,
+          7,
+          7,
+          8,
+          {
+            "id": -16776809
+          },
+          "IfStatement",
+          7,
+          7,
+          7,
+          50,
+          0,
+          {
+            "id": -16776810
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          7,
+          10,
+          7,
+          10,
+          {
+            "id": -16776806
+          },
+          "ParenthesizedExpression",
+          7,
+          10,
+          7,
+          37,
+          0,
+          {
+            "id": -16776807
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          7,
+          11,
+          7,
+          11,
+          {
+            "id": -16776803
+          },
+          "UnaryExpression",
+          7,
+          11,
+          7,
+          36,
+          0,
+          {
+            "id": -16776804
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          7,
+          19,
+          7,
+          19,
+          {
+            "id": -16776797
+          },
+          "MemberExpression",
+          7,
+          12,
+          7,
+          23,
+          1,
+          {
+            "id": -16776800
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          7,
+          24,
+          7,
+          24,
+          {
+            "id": -16776792
+          },
+          "MemberExpression",
+          7,
+          12,
+          7,
+          36,
+          1,
+          {
+            "id": -16776801
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          7,
+          37,
+          7,
+          37,
+          {
+            "id": -16776786
+          },
+          "ParenthesizedExpression",
+          7,
+          10,
+          7,
+          37,
+          2,
+          {
+            "id": -16776807
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          7,
+          39,
+          7,
+          44,
+          {
+            "id": -16776782
+          },
+          "ReturnStatement",
+          7,
+          39,
+          7,
+          50,
+          0,
+          {
+            "id": -16776783
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          7,
+          50,
+          7,
+          50,
+          {
+            "id": -16776778
+          },
+          "ReturnStatement",
+          7,
+          39,
+          7,
+          50,
+          2,
+          {
+            "id": -16776783
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          8,
+          7,
+          8,
+          7,
+          {
+            "id": -16776773
+          },
+          "StatementBlock",
+          8,
+          7,
+          10,
+          7,
+          0,
+          {
+            "id": -16776774
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          9,
+          9,
+          9,
+          14,
+          {
+            "id": -16776770
+          },
+          "ReturnStatement",
+          9,
+          9,
+          9,
+          64,
+          0,
+          {
+            "id": -16776771
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          9,
+          20,
+          9,
+          20,
+          {
+            "id": -16776764
+          },
+          "Arguments",
+          9,
+          20,
+          9,
+          63,
+          0,
+          {
+            "id": -16776765
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          9,
+          21,
+          9,
+          21,
+          {
+            "id": -16776761
+          },
+          "TemplateString",
+          9,
+          21,
+          9,
+          62,
+          0,
+          {
+            "id": -16776762
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          9,
+          22,
+          9,
+          23,
+          {
+            "id": -16776758
+          },
+          "TemplateSubstitution",
+          9,
+          22,
+          9,
+          28,
+          0,
+          {
+            "id": -16776759
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          9,
+          28,
+          9,
+          28,
+          {
+            "id": -16776754
+          },
+          "TemplateSubstitution",
+          9,
+          22,
+          9,
+          28,
+          2,
+          {
+            "id": -16776759
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          9,
+          30,
+          9,
+          31,
+          {
+            "id": -16776748
+          },
+          "TemplateSubstitution",
+          9,
+          30,
+          9,
+          57,
+          0,
+          {
+            "id": -16776749
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          9,
+          39,
+          9,
+          39,
+          {
+            "id": -16776742
+          },
+          "MemberExpression",
+          9,
+          32,
+          9,
+          43,
+          1,
+          {
+            "id": -16776745
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          9,
+          44,
+          9,
+          44,
+          {
+            "id": -16776737
+          },
+          "MemberExpression",
+          9,
+          32,
+          9,
+          56,
+          1,
+          {
+            "id": -16776746
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          9,
+          57,
+          9,
+          57,
+          {
+            "id": -16776732
+          },
+          "TemplateSubstitution",
+          9,
+          30,
+          9,
+          57,
+          2,
+          {
+            "id": -16776749
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          9,
+          62,
+          9,
+          62,
+          {
+            "id": -16776727
+          },
+          "TemplateString",
+          9,
+          21,
+          9,
+          62,
+          5,
+          {
+            "id": -16776762
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          9,
+          63,
+          9,
+          63,
+          {
+            "id": -16776724
+          },
+          "Arguments",
+          9,
+          20,
+          9,
+          63,
+          2,
+          {
+            "id": -16776765
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          9,
+          64,
+          9,
+          64,
+          {
+            "id": -16776720
+          },
+          "ReturnStatement",
+          9,
+          9,
+          9,
+          64,
+          2,
+          {
+            "id": -16776771
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          10,
+          7,
+          10,
+          7,
+          {
+            "id": -16776717
+          },
+          "StatementBlock",
+          8,
+          7,
+          10,
+          7,
+          2,
+          {
+            "id": -16776774
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          11,
+          5,
+          11,
+          5,
+          {
+            "id": -16776714
+          },
+          "StatementBlock",
+          6,
+          29,
+          11,
+          5,
+          3,
+          {
+            "id": -16776813
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          12,
+          3,
+          12,
+          3,
+          {
+            "id": -16776709
+          },
+          "Object",
+          4,
+          12,
+          12,
+          3,
+          4,
+          {
+            "id": -16776860
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          13,
+          1,
+          13,
+          1,
+          {
+            "id": -16776705
+          },
+          "Object",
+          3,
+          17,
+          13,
+          1,
+          2,
+          {
+            "id": -16776868
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          13,
+          2,
+          13,
+          2,
+          {
+            "id": -16776701
+          },
+          "LexicalDeclaration",
+          3,
+          1,
+          13,
+          2,
+          2,
+          {
+            "id": -16776876
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          14,
+          1,
+          14,
+          6,
+          {
+            "id": -16776697
+          },
+          "ReturnStatement",
+          14,
+          1,
+          14,
+          39,
+          0,
+          {
+            "id": -16776698
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          14,
+          8,
+          14,
+          8,
+          {
+            "id": -16776694
+          },
+          "Object",
+          14,
+          8,
+          14,
+          38,
+          0,
+          {
+            "id": -16776695
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          14,
+          10,
+          14,
+          10,
+          {
+            "id": -16776690
+          },
+          "String",
+          14,
+          10,
+          14,
+          27,
+          0,
+          {
+            "id": -16776691
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          14,
+          27,
+          14,
+          27,
+          {
+            "id": -16776686
+          },
+          "String",
+          14,
+          10,
+          14,
+          27,
+          2,
+          {
+            "id": -16776691
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          14,
+          28,
+          14,
+          28,
+          {
+            "id": -16776683
+          },
+          "Pair",
+          14,
+          10,
+          14,
+          36,
+          1,
+          {
+            "id": -16776692
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          14,
+          38,
+          14,
+          38,
+          {
+            "id": -16776678
+          },
+          "Object",
+          14,
+          8,
+          14,
+          38,
+          2,
+          {
+            "id": -16776695
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReservedWord",
+          "<not-an-identifier>",
+          14,
+          39,
+          14,
+          39,
+          {
+            "id": -16776675
+          },
+          "ReturnStatement",
+          14,
+          1,
+          14,
+          39,
+          2,
+          {
+            "id": -16776698
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Object",
+          "<not-an-identifier>",
+          3,
+          17,
+          13,
+          1,
+          {
+            "id": -16776868
+          },
+          "VariableDeclarator",
+          3,
+          7,
+          13,
+          1,
+          2,
+          {
+            "id": -16776873
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Object",
+          "<not-an-identifier>",
+          4,
+          12,
+          12,
+          3,
+          {
+            "id": -16776860
+          },
+          "Pair",
+          4,
+          3,
+          12,
+          3,
+          2,
+          {
+            "id": -16776865
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Object",
+          "<not-an-identifier>",
+          5,
+          11,
+          5,
+          42,
+          {
+            "id": -16776852
+          },
+          "Pair",
+          5,
+          5,
+          5,
+          42,
+          2,
+          {
+            "id": -16776857
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Object",
+          "<not-an-identifier>",
+          14,
+          8,
+          14,
+          38,
+          {
+            "id": -16776695
+          },
+          "ReturnStatement",
+          14,
+          1,
+          14,
+          39,
+          1,
+          {
+            "id": -16776698
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "String",
+          "<not-an-identifier>",
+          1,
+          32,
+          1,
+          35,
+          {
+            "id": -16776907
+          },
+          "ImportStatement",
+          1,
+          1,
+          1,
+          36,
+          3,
+          {
+            "id": -16776927
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "String",
+          "<not-an-identifier>",
+          2,
+          14,
+          2,
+          23,
+          {
+            "id": -16776888
+          },
+          "VariableDeclarator",
+          2,
+          7,
+          2,
+          23,
+          2,
+          {
+            "id": -16776893
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "String",
+          "<not-an-identifier>",
+          5,
+          27,
+          5,
+          40,
+          {
+            "id": -16776844
+          },
+          "Pair",
+          5,
+          13,
+          5,
+          40,
+          2,
+          {
+            "id": -16776849
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "String",
+          "<not-an-identifier>",
+          14,
+          10,
+          14,
+          27,
+          {
+            "id": -16776691
+          },
+          "Pair",
+          14,
+          10,
+          14,
+          36,
+          0,
+          {
+            "id": -16776692
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "StringFragment",
+          "<not-an-identifier>",
+          1,
+          33,
+          1,
+          34,
+          {
+            "id": -16776904
+          },
+          "String",
+          1,
+          32,
+          1,
+          35,
+          1,
+          {
+            "id": -16776907
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "StringFragment",
+          "<not-an-identifier>",
+          2,
+          15,
+          2,
+          22,
+          {
+            "id": -16776885
+          },
+          "String",
+          2,
+          14,
+          2,
+          23,
+          1,
+          {
+            "id": -16776888
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "StringFragment",
+          "<not-an-identifier>",
+          5,
+          28,
+          5,
+          39,
+          {
+            "id": -16776841
+          },
+          "String",
+          5,
+          27,
+          5,
+          40,
+          1,
+          {
+            "id": -16776844
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "StringFragment",
+          "<not-an-identifier>",
+          9,
+          29,
+          9,
+          29,
+          {
+            "id": -16776751
+          },
+          "TemplateString",
+          9,
+          21,
+          9,
+          62,
+          2,
+          {
+            "id": -16776762
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "StringFragment",
+          "<not-an-identifier>",
+          9,
+          58,
+          9,
+          61,
+          {
+            "id": -16776729
+          },
+          "TemplateString",
+          9,
+          21,
+          9,
+          62,
+          4,
+          {
+            "id": -16776762
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "StringFragment",
+          "<not-an-identifier>",
+          14,
+          11,
+          14,
+          26,
+          {
+            "id": -16776688
+          },
+          "String",
+          14,
+          10,
+          14,
+          27,
+          1,
+          {
+            "id": -16776691
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "PropertyIdentifier",
+          "observe",
+          4,
+          3,
+          4,
+          9,
+          {
+            "id": -16776864
+          },
+          "Pair",
+          4,
+          3,
+          12,
+          3,
+          0,
+          {
+            "id": -16776865
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "PropertyIdentifier",
+          "args",
+          5,
+          5,
+          5,
+          8,
+          {
+            "id": -16776856
+          },
+          "Pair",
+          5,
+          5,
+          5,
+          42,
+          0,
+          {
+            "id": -16776857
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "PropertyIdentifier",
+          "args",
+          7,
+          20,
+          7,
+          23,
+          {
+            "id": -16776795
+          },
+          "MemberExpression",
+          7,
+          12,
+          7,
+          23,
+          2,
+          {
+            "id": -16776800
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "PropertyIdentifier",
+          "args",
+          9,
+          40,
+          9,
+          43,
+          {
+            "id": -16776740
+          },
+          "MemberExpression",
+          9,
+          32,
+          9,
+          43,
+          2,
+          {
+            "id": -16776745
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "PropertyIdentifier",
+          "service_name",
+          5,
+          13,
+          5,
+          24,
+          {
+            "id": -16776848
+          },
+          "Pair",
+          5,
+          13,
+          5,
+          40,
+          0,
+          {
+            "id": -16776849
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "PropertyIdentifier",
+          "service_name",
+          7,
+          25,
+          7,
+          36,
+          {
+            "id": -16776790
+          },
+          "MemberExpression",
+          7,
+          12,
+          7,
+          36,
+          2,
+          {
+            "id": -16776801
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "PropertyIdentifier",
+          "service_name",
+          9,
+          45,
+          9,
+          56,
+          {
+            "id": -16776735
+          },
+          "MemberExpression",
+          9,
+          32,
+          9,
+          56,
+          2,
+          {
+            "id": -16776746
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "PropertyIdentifier",
+          "call",
+          6,
+          5,
+          6,
+          8,
+          {
+            "id": -16776828
+          },
+          "Pair",
+          6,
+          5,
+          11,
+          5,
+          0,
+          {
+            "id": -16776829
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "Arguments",
+          "<not-an-identifier>",
+          9,
+          20,
+          9,
+          63,
+          {
+            "id": -16776765
+          },
+          "CallExpression",
+          9,
+          16,
+          9,
+          63,
+          1,
+          {
+            "id": -16776768
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ImportClause",
+          "<not-an-identifier>",
+          1,
+          8,
+          1,
+          25,
+          {
+            "id": -16776924
+          },
+          "ImportStatement",
+          1,
+          1,
+          1,
+          36,
+          1,
+          {
+            "id": -16776927
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "NamedImports",
+          "<not-an-identifier>",
+          1,
+          8,
+          1,
+          25,
+          {
+            "id": -16776923
+          },
+          "ImportClause",
+          1,
+          8,
+          1,
+          25,
+          0,
+          {
+            "id": -16776924
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "IfStatement",
+          "<not-an-identifier>",
+          7,
+          7,
+          7,
+          50,
+          {
+            "id": -16776810
+          },
+          "StatementBlock",
+          6,
+          29,
+          11,
+          5,
+          1,
+          {
+            "id": -16776813
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "StatementBlock",
+          "<not-an-identifier>",
+          6,
+          29,
+          11,
+          5,
+          {
+            "id": -16776813
+          },
+          "FunctionExpression",
+          6,
+          11,
+          11,
+          5,
+          2,
+          {
+            "id": -16776824
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "StatementBlock",
+          "<not-an-identifier>",
+          8,
+          7,
+          10,
+          7,
+          {
+            "id": -16776774
+          },
+          "StatementBlock",
+          6,
+          29,
+          11,
+          5,
+          2,
+          {
+            "id": -16776813
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "TemplateString",
+          "<not-an-identifier>",
+          9,
+          21,
+          9,
+          62,
+          {
+            "id": -16776762
+          },
+          "Arguments",
+          9,
+          20,
+          9,
+          63,
+          1,
+          {
+            "id": -16776765
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReturnStatement",
+          "<not-an-identifier>",
+          7,
+          39,
+          7,
+          50,
+          {
+            "id": -16776783
+          },
+          "IfStatement",
+          7,
+          7,
+          7,
+          50,
+          2,
+          {
+            "id": -16776810
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReturnStatement",
+          "<not-an-identifier>",
+          9,
+          9,
+          9,
+          64,
+          {
+            "id": -16776771
+          },
+          "StatementBlock",
+          8,
+          7,
+          10,
+          7,
+          1,
+          {
+            "id": -16776774
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ReturnStatement",
+          "<not-an-identifier>",
+          14,
+          1,
+          14,
+          39,
+          {
+            "id": -16776698
+          },
+          "Program",
+          1,
+          1,
+          14,
+          40,
+          3,
+          {
+            "id": -16776928
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "CallExpression",
+          "<not-an-identifier>",
+          9,
+          16,
+          9,
+          63,
+          {
+            "id": -16776768
+          },
+          "ReturnStatement",
+          9,
+          9,
+          9,
+          64,
+          1,
+          {
+            "id": -16776771
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ImportSpecifier",
+          "<not-an-identifier>",
+          1,
+          10,
+          1,
+          13,
+          {
+            "id": -16776920
+          },
+          "NamedImports",
+          1,
+          8,
+          1,
+          25,
+          1,
+          {
+            "id": -16776923
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ImportSpecifier",
+          "<not-an-identifier>",
+          1,
+          16,
+          1,
+          23,
+          {
+            "id": -16776915
+          },
+          "NamedImports",
+          1,
+          8,
+          1,
+          25,
+          3,
+          {
+            "id": -16776923
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ImportStatement",
+          "<not-an-identifier>",
+          1,
+          1,
+          1,
+          36,
+          {
+            "id": -16776927
+          },
+          "Program",
+          1,
+          1,
+          14,
+          40,
+          0,
+          {
+            "id": -16776928
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "FormalParameters",
+          "<not-an-identifier>",
+          6,
+          19,
+          6,
+          27,
+          {
+            "id": -16776821
+          },
+          "FunctionExpression",
+          6,
+          11,
+          11,
+          5,
+          1,
+          {
+            "id": -16776824
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "UnaryExpression",
+          "<not-an-identifier>",
+          7,
+          11,
+          7,
+          36,
+          {
+            "id": -16776804
+          },
+          "ParenthesizedExpression",
+          7,
+          10,
+          7,
+          37,
+          1,
+          {
+            "id": -16776807
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "MemberExpression",
+          "<not-an-identifier>",
+          7,
+          12,
+          7,
+          23,
+          {
+            "id": -16776800
+          },
+          "MemberExpression",
+          7,
+          12,
+          7,
+          36,
+          0,
+          {
+            "id": -16776801
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "MemberExpression",
+          "<not-an-identifier>",
+          7,
+          12,
+          7,
+          36,
+          {
+            "id": -16776801
+          },
+          "UnaryExpression",
+          7,
+          11,
+          7,
+          36,
+          1,
+          {
+            "id": -16776804
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "MemberExpression",
+          "<not-an-identifier>",
+          9,
+          32,
+          9,
+          43,
+          {
+            "id": -16776745
+          },
+          "MemberExpression",
+          9,
+          32,
+          9,
+          56,
+          0,
+          {
+            "id": -16776746
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "MemberExpression",
+          "<not-an-identifier>",
+          9,
+          32,
+          9,
+          56,
+          {
+            "id": -16776746
+          },
+          "TemplateSubstitution",
+          9,
+          30,
+          9,
+          57,
+          1,
+          {
+            "id": -16776749
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "LexicalDeclaration",
+          "<not-an-identifier>",
+          2,
+          1,
+          2,
+          24,
+          {
+            "id": -16776896
+          },
+          "Program",
+          1,
+          1,
+          14,
+          40,
+          1,
+          {
+            "id": -16776928
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "LexicalDeclaration",
+          "<not-an-identifier>",
+          3,
+          1,
+          13,
+          2,
+          {
+            "id": -16776876
+          },
+          "Program",
+          1,
+          1,
+          14,
+          40,
+          2,
+          {
+            "id": -16776928
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "VariableDeclarator",
+          "<not-an-identifier>",
+          2,
+          7,
+          2,
+          23,
+          {
+            "id": -16776893
+          },
+          "LexicalDeclaration",
+          2,
+          1,
+          2,
+          24,
+          1,
+          {
+            "id": -16776896
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "VariableDeclarator",
+          "<not-an-identifier>",
+          3,
+          7,
+          13,
+          1,
+          {
+            "id": -16776873
+          },
+          "LexicalDeclaration",
+          3,
+          1,
+          13,
+          2,
+          1,
+          {
+            "id": -16776876
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "FunctionExpression",
+          "<not-an-identifier>",
+          6,
+          11,
+          11,
+          5,
+          {
+            "id": -16776824
+          },
+          "Pair",
+          6,
+          5,
+          11,
+          5,
+          2,
+          {
+            "id": -16776829
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "TemplateSubstitution",
+          "<not-an-identifier>",
+          9,
+          22,
+          9,
+          28,
+          {
+            "id": -16776759
+          },
+          "TemplateString",
+          9,
+          21,
+          9,
+          62,
+          1,
+          {
+            "id": -16776762
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "TemplateSubstitution",
+          "<not-an-identifier>",
+          9,
+          30,
+          9,
+          57,
+          {
+            "id": -16776749
+          },
+          "TemplateString",
+          9,
+          21,
+          9,
+          62,
+          3,
+          {
+            "id": -16776762
+          }
+        ],
+        [
+          "controls/positive-direct.uc",
+          "ParenthesizedExpression",
+          "<not-an-identifier>",
+          7,
+          10,
+          7,
+          37,
+          {
+            "id": -16776807
+          },
+          "IfStatement",
+          7,
+          7,
+          7,
+          50,
+          1,
+          {
+            "id": -16776810
+          }
+        ]
+      ]
+    }
+  }
+}

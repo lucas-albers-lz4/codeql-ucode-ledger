@@ -1,0 +1,33 @@
+{
+  "note": "Entity IDs are local to this database, derived from predeclared source spans and independently audited raw inventory before query results.",
+  "rows": {
+    "controls/negative-duplicate.uc": [
+      "controls/negative-duplicate.uc",
+      -16777025,
+      -16777024,
+      -16777215,
+      -16777208,
+      -16777081,
+      -16777075,
+      -16777019,
+      -16777006,
+      -16777003,
+      -16777002,
+      -16777001
+    ],
+    "controls/positive-direct.uc": [
+      "controls/positive-direct.uc",
+      -16776768,
+      -16776767,
+      -16776927,
+      -16776920,
+      -16776824,
+      -16776818,
+      -16776762,
+      -16776749,
+      -16776746,
+      -16776745,
+      -16776744
+    ]
+  }
+}

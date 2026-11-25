@@ -1,0 +1,219 @@
+{
+  "original_sha256": "3c44424e0347ca5e316a22397b451ef1c1ced90bc497ab662ee435921b592025",
+  "table": {
+    "#select": {
+      "columns": [
+        {
+          "name": "path",
+          "kind": "String"
+        },
+        {
+          "name": "kind",
+          "kind": "String"
+        },
+        {
+          "name": "name",
+          "kind": "String"
+        },
+        {
+          "name": "raw_access",
+          "kind": "Entity"
+        },
+        {
+          "name": "raw_access_classes",
+          "kind": "String"
+        },
+        {
+          "name": "start_line",
+          "kind": "Integer"
+        },
+        {
+          "name": "start_column",
+          "kind": "Integer"
+        },
+        {
+          "name": "end_line",
+          "kind": "Integer"
+        },
+        {
+          "name": "end_column",
+          "kind": "Integer"
+        },
+        {
+          "name": "variable",
+          "kind": "Entity"
+        },
+        {
+          "name": "raw_declaration",
+          "kind": "Entity"
+        },
+        {
+          "name": "declaration_classes",
+          "kind": "String"
+        }
+      ],
+      "tuples": [
+        [
+          "controls/negative-duplicate.uc",
+          "read",
+          "base",
+          {
+            "id": -16777013
+          },
+          "Identifier",
+          10,
+          24,
+          10,
+          27,
+          {
+            "id": 0
+          },
+          {
+            "id": -16777150
+          },
+          "VariableDeclarator"
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "read",
+          "methods",
+          {
+            "id": -16776938
+          },
+          "Identifier",
+          15,
+          30,
+          15,
+          36,
+          {
+            "id": 1
+          },
+          {
+            "id": -16777130
+          },
+          "VariableDeclarator"
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "read",
+          "request",
+          {
+            "id": -16777056
+          },
+          "Identifier",
+          8,
+          12,
+          8,
+          18,
+          {
+            "id": 4
+          },
+          {
+            "id": -16777075
+          },
+          "Identifier"
+        ],
+        [
+          "controls/negative-duplicate.uc",
+          "read",
+          "request",
+          {
+            "id": -16777001
+          },
+          "Identifier",
+          10,
+          32,
+          10,
+          38,
+          {
+            "id": 4
+          },
+          {
+            "id": -16777075
+          },
+          "Identifier"
+        ],
+        [
+          "controls/positive-direct.uc",
+          "read",
+          "base",
+          {
+            "id": -16776756
+          },
+          "Identifier",
+          9,
+          24,
+          9,
+          27,
+          {
+            "id": 2
+          },
+          {
+            "id": -16776893
+          },
+          "VariableDeclarator"
+        ],
+        [
+          "controls/positive-direct.uc",
+          "read",
+          "methods",
+          {
+            "id": -16776681
+          },
+          "Identifier",
+          14,
+          30,
+          14,
+          36,
+          {
+            "id": 3
+          },
+          {
+            "id": -16776873
+          },
+          "VariableDeclarator"
+        ],
+        [
+          "controls/positive-direct.uc",
+          "read",
+          "request",
+          {
+            "id": -16776799
+          },
+          "Identifier",
+          7,
+          12,
+          7,
+          18,
+          {
+            "id": 5
+          },
+          {
+            "id": -16776818
+          },
+          "Identifier"
+        ],
+        [
+          "controls/positive-direct.uc",
+          "read",
+          "request",
+          {
+            "id": -16776744
+          },
+          "Identifier",
+          9,
+          32,
+          9,
+          38,
+          {
+            "id": 5
+          },
+          {
+            "id": -16776818
+          },
+          "Identifier"
+        ]
+      ]
+    }
+  }
+}
