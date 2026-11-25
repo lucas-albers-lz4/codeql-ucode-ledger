@@ -1468,9 +1468,10 @@ incoming OpenWrt/LuCI changes.
   response in the released scan job, resolves it against canonical head,
   base and control Git identities, and requires the resulting receipt to
   match the captured preflight before replaying the inventory and manifest.
-  Thirty-three focused local tests and `actionlint` passed. The hosted scan
-  step remains skipped while the release lock is null; the change issues no
-  queue completion and has not passed a live Gate 8 run.
+  Thirty-three focused local tests and `actionlint` passed. Exact-head hosted
+  runs `45539323497`, `45539323532` and `45539323533` passed their offline
+  checks; the released scan step skipped on the null release lock. The change
+  issues no queue completion and has not passed a live Gate 8 run.
   A local offline link probe was reviewed but kept out of the repo because
   its passing fixture does not pass the actual SARIF consumer and does not
   establish producer or consumer execution. A valid queue MAC alone cannot
