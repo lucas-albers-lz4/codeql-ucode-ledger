@@ -1,9 +1,10 @@
 # Filling the R3 release lock from an immutable producer release
 
-Status: procedure prepared before publication, 2026-11-24. The consumer
-[draft PR #154](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/154)
-keeps every release-dependent field null until an actual immutable release
-exists. Producer [PR #159](https://github.com/lucas-albers-lz4/codeql-ucode/pull/159)
+Status: procedure prepared before publication, updated 2026-11-25. Consumer
+[PR #154](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/154)
+merged as `e3b99cd7c03ca410bba0b9bae5d9095f21b11647` with every
+release-dependent field null until an actual immutable release exists.
+Producer [PR #159](https://github.com/lucas-albers-lz4/codeql-ucode/pull/159)
 merged as `9166af76cf6944e1b3ea5856a9176366a1f7a6ee`, but the grammar
 compatibility [PR #161](https://github.com/lucas-albers-lz4/codeql-ucode/pull/161)
 passed Linux R2, Cargo and M3/M4 smoke at `b25bdd3` and merged as
