@@ -1,25 +1,29 @@
 # MVP-1: historical checks to continuous OpenWrt scanning
 
-Initial planning snapshot: 2026-11-23 UTC; progress refreshed 2026-11-24.
+Initial planning snapshot: 2026-11-23 UTC; progress refreshed 2026-11-25.
 The historical checks have since produced bounded local alerts, but the
 Linux release and operational gates remain open. Read [AGENTS.md](AGENTS.md),
 [PLAN.md](PLAN.md), [the case dossier](planning/mvp-historical-security-20261123.md)
 and the relevant claims before each run. The case dossier pins source revisions,
 advisories, digests, current model gaps and source-first oracles.
 
-Current release-path checkpoint (2026-11-24): producer PR #157
+Current release-path checkpoint (2026-11-25): producer PR #157
 merged as `b43592a8748557dae9f862644e1ddd3c5c60d5ce`. The tag-bound
 publication workflow in [PR #159](https://github.com/lucas-albers-lz4/codeql-ucode/pull/159)
 then passed Linux R2, Cargo and M3/M4 smoke and merged to producer `main` as
 `9166af76cf6944e1b3ea5856a9176366a1f7a6ee`. Release immutability must
-be enabled and confirmed before creating a version tag. Draft consumer
+be enabled and confirmed before creating a version tag. The producer Releases
+API currently lists no release. Consumer
 [PR #154](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/154)
-has passing contract tests and an intentionally skipped live job until an
-immutable release lock exists. Stacked
+merged as `e3b99cd7c03ca410bba0b9bae5d9095f21b11647`; its null lock
+keeps the live job skipped. Stacked
 [PR #155](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/155)
-prepares the 111-path Linux current-corpus stage in that same job; its hosted
-contract and repository tests pass, with live execution skipped by the null
-lock. Stacked [draft PR #157](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/157)
+prepares the 111-path Linux current-corpus stage in that same job. Its
+`817c4a3` head passed hosted contract and repository tests, with live execution
+skipped by the null lock. It remains draft until its live gate passes; its
+retained #154 base branch and stacked dependents need reconciliation with
+consumer `main`. Stacked
+[draft PR #157](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/157)
 advances that job's frozen manifest to
 [128 paths](planning/mvp-bounded-corpus-v0.6.md); its contract and repository
 tests pass, and its live job is skipped by the same null lock. No versioned
@@ -46,8 +50,9 @@ checks pass, but both live scans skip on the null release lock.
 Downstream [PR #161](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/161)
 merged its manual installed-byte experiment; run `45503598387` began a
 Linux build but failed in an executing dry-run probe before package
-compilation. Fix PR #163 merged and manual rerun `45513606386` is live;
-no installed-byte result is established. Downstream
+compilation. Fix PR #163 merged; manual rerun `45513606386` completed
+successfully and yielded a bounded installed-byte `luci-base` receipt
+documented below. Downstream
 [PR #162](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/162)
 adds read-only incoming discovery with no scheduled scan. A manual live
 [v3 discovery snapshot](evidence/mvp-incoming-poller-live-20261124/README.md)
@@ -56,12 +61,17 @@ across 81 successful API requests. It is discovery only; selected PR
 trees and a released scan remain unresolved. Hosted `unittest` and
 `typed-handoff` passed at final head `a417fb9` in run `45510746930`;
 #162 merged as `cd6c5c1f8d53edf6436ba34091106e5ff0d84382`.
+Producer [draft PR #163](https://github.com/lucas-albers-lz4/codeql-ucode/pull/163)
+adds a bounded source-declared unary `fs.stat` model for the read-side family.
+Its Linux R2 and Cargo checks passed at `93aadfe`, while M3/M4 smoke was still
+running at this checkpoint. It adds no production query or default-suite rule
+and does not alter the release gate.
 
 Current execution sequence: (1) confirm the authenticated GitHub release
 immutability toggle, then publish and independently verify the producer's
 versioned asset; (2) fill the consumer release lock from those exact bytes
-and run fresh R3 and 128-path Linux corpus jobs; (3) review the running
-installed-byte package experiment separately; (4) complete a released
+and run fresh R3 and 128-path Linux corpus jobs; (3) review the completed
+installed-byte package receipt separately; (4) complete a released
 incoming-event known-alert/control drill and only then consider durable
 polling. The manual discovery snapshot does not replace steps 2–4.
 
