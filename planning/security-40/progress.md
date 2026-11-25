@@ -172,10 +172,15 @@ no internal scratch paths or model refs.
   DOES classify .ut (extractor.rs L151-152 Classification::Markup / ut_markup_extension)
   and ships Markup.qll/MarkupCFG.qll/MarkupCreationCFG.qll + markup AST/CFG queries
   via merged PRs #142/#144/#147/#148/#151/#152. So the gap is NOT "AST unmerged."
-  #160 resolves the remaining question: production markup dataflow vs bounded/
-  AST-test-only CFG; re-measure 052/056 at current main; reconcile #56 verification
-  pin 629a708 (not reachable from fetched refs). Pointer comments on #56/#57/#68.
-  No gate lifted; 052/056 stay Blocked pending re-measure (stale-pin receipts).
+  #160 RESOLVED. Empirical fresh-pack 33-file run at current main (independently
+  audited; evidence/issue160-20261124-markup-33-reconciliation/): all 33 .ut extract
+  (classification markup / ut_markup_extension), zero ExtractionErrors, every route
+  inconclusive / markup_not_modeled. Source corroboration posted to #160 (comment
+  7149464328): MarkupCFG.qll L1 "No data flow is modeled"; docs/markup-cfg.md L16-18
+  "Routing remains inconclusive / markup_not_modeled"; all ql/src markup queries are
+  *-test.ql; production m3/m4 queries import no Markup. Remaining gap is production-
+  dataflow integration (a feature gap), NOT an unmerged AST. 052/056 stay Blocked on
+  a current, design-grounded basis. 629a708 unverified (cause unknown). No gate lifted.
 - All four tickets OPEN with verified labels + companion cross-links; seven
   comments read back on intended targets. H/G lanes (068–074) still in flight.
 
