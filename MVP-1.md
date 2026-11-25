@@ -81,6 +81,15 @@ M3/M4 smoke passed, including the nonphysical-URI negative. It merged as the
 current producer `main` `8d0caef1c9f9b683c1e3d9369f63b2d6aaf288eb` on
 2026-11-25, and its merged branch was deleted. A tag-bound release run on
 this current `main` and the downstream gates remain open.
+Producer [draft PR #165](https://github.com/lucas-albers-lz4/codeql-ucode/pull/165)
+adds a bounded source-declared `fs.rename` destination argument model at
+head `742d2d4e0770463cd73dcf5649c69df67d3d588b` against that main.
+A defensive exact-head source review found no concrete model blocker; nine
+focused offline tests passed. Linux R2 and Cargo checks passed, while M3/M4
+smoke was still running at the last check. The model has no production
+security query, request-controlled flow or sink, so it does not close
+issue #155 or add MVP alert coverage. Its draft review can proceed separately
+from the immutable release decision.
 
 Current execution sequence: (1) confirm the authenticated GitHub release
 immutability toggle, then publish and independently verify the producer's

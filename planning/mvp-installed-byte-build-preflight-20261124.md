@@ -1,7 +1,10 @@
 # Installed-byte package experiment preflight
 
-Status: read-only recipe/tool inspection plus a temporary filesystem case
-probe, 2026-11-24. No package build, IPK or installed byte was produced.
+Status of this preflight on 2026-11-24: read-only recipe/tool inspection plus
+a temporary filesystem case probe. No package build, IPK or installed byte
+was produced in this preflight. The later successful Linux package result is
+recorded separately in [the installed-byte receipt](../evidence/mvp-installed-byte-luci-base-20261125/README.md)
+and [the complete suffix-member inventory](../evidence/mvp-luci-base-ipk-inventory-20261125/README.md).
 Later the source-corrected manual Linux experiment merged through
 [codeql-openwrt PR #161](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/161)
 at `8215fc7931fa62309bc2a5dd861ebfa10ba07a24`. Hosted
@@ -10,7 +13,10 @@ later failed before package compilation because a `make -n` probe executed
 recursive OpenWrt recipes. The retained
 [failure receipt](../evidence/mvp-installed-byte-first-linux-failure-20261124/README.md)
 records exact phase outcomes. Fix PR #163 merged and manual rerun
-`45513606386` is live; neither run has an installed-byte result yet.
+`45513606386` completed successfully. The two-file byte receipt covers
+`http.uc` and version-substituted `header.ut` in that run's `luci-base` IPK;
+it does not establish installed bytes for other packages or a released
+CodeQL scan.
 The source pins are clean LuCI
 `b2e0be4b46ec0fd43394c081fa7c50657af14011`, OpenWrt
 `4e9642517b48bae612ff10fb72fb9199e559500e` and packages feed
