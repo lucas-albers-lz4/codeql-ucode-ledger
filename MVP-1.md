@@ -93,6 +93,13 @@ merged branch had no open dependent PR and was deleted with an exact lease.
 The model has no production security query, request-controlled flow or sink,
 so it does not close issue #155 or add MVP alert coverage. A tag-bound
 release run on current main and the downstream gates remain open.
+Producer PR #167 subsequently merged a bounded source-declared `fs.open`
+`wx` model as current main `e207966a88a0e93d93b4780b832778c9aa26c414`.
+It changed the shared `Models.qll`, so draft nested-query PR #166 was updated
+from `cc63aee8f9e8d31e1f71474f3008b8ccdd96bfdc` to
+`33f4dea07ca9e5dab2ba5bcfb24144aeda7512b9` with an exact-head guard.
+Cargo passed and fresh Linux R2 and M3/M4 checks are running on that combined tree;
+the earlier all-green run remains evidence only for its prior head.
 The next-query inventory screened the current OpenWrt Wi-Fi `fs.stat` then
 `fs.rename` pairs at clean core `727d8d2f8e5b19a2121e2cf05824e9e5cac35310`
 (`supplicant.uc` lines 347–349; `hostapd.uc` lines 583, 587–588).
@@ -237,21 +244,30 @@ unchanged extractor. Do not pin the release to a moving branch name.
 
 Use the current [AGENTS.md](AGENTS.md#model-routing) routing rule at execution
 rather than treating an earlier smoke test as a permanent service result.
+Use the [MVP review and run protocol](planning/mvp-review-run-protocol.md)
+for cross-repository and trust-boundary work; it specifies the context packet,
+pre-output controls, review order, exact-head revalidation and build-cost gate.
 `gpt-6-luna` handles bounded inventories and receipts; `gpt-6.1-terra`
 handles ordinary coordination and verification; `gpt-6.2-sol` is available
 for difficult non-security semantics and final evidence-boundary review.
 For defensive security-sensitive historical shell review, use the user's
-Daybreak-capable `gpt-6-sol` or `gpt-6-terra` route, and do not silently
-substitute an unavailable route. Check actual route availability for each
+Daybreak-capable `gpt-6-sol` route; `gpt-6-terra` would require its exact
+route to become available and pass a smoke test. Do not silently substitute
+an unavailable route. Check actual route availability for each
 worker and verify its output against source and commands. A same-model
 second pass is not independent-model corroboration. Do not switch
 subscription/API authentication or infer billing from a model alias.
 
 Earlier 2026-11-24 worker attempts to `gpt-6.1-terra` and `gpt-6.2-sol`
-returned Daybreak 403 before work. Later separate tasks in this session
-completed through both requested routes for ordinary work, so the earlier
-403s are historical observations, not a current unavailability claim. The
-runtime does not attest an independent server-side model ID. The
+returned Daybreak 403 before work. Later ordinary tasks completed through
+both routes, but the 2026-11-25 Terra process-review attempt again returned
+a Daybreak 403 and produced no review. Route availability is per attempt;
+a later trivial read-only `gpt-6.1-terra` smoke returned the same 403. No
+other Terra route is exposed in this session. The primary owner performed
+the process review without claiming Terra corroboration. A separate
+`gpt-6.2-sol` final document-review attempt also returned a Daybreak 403,
+so that review was not performed by the requested route.
+The runtime does not attest an independent server-side model ID. The
 `gpt-daybreak-blue-latest` alias was tested but is not used for this plan
 because the user identified its routing/cost ambiguity.
 

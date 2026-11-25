@@ -173,11 +173,12 @@ Replace the placeholders; do not paste the example unchanged. Record dirty state
 
 For model-assisted work, keep the split simple:
 
-- **Luna:** bounded mechanical collection, inventories, mapping paths to existing tests, and organizing run receipts. Check its output against the actual sources or commands.
-- **Terra:** coordinate the paired pins and isolated runs, verify claims and reproduce candidate results, reconcile overlap with existing issues, and maintain the ledger.
-- **Sol:** assess difficult semantic questions, choose discriminating controls, judge evidence boundaries, and synthesize the strongest unresolved coverage questions.
+- **`gpt-6-luna`:** bounded mechanical collection, inventories, mapping paths to existing tests, and organizing run receipts. Check its output against the actual sources or commands.
+- **`gpt-6.1-terra`:** ordinary coordination, paired pins and non-security verification when the exact route works.
+- **`gpt-6-sol`:** defensive security-sensitive semantics, shell and trust-boundary design.
+- **`gpt-6.2-sol`:** difficult final evidence-boundary review when needed.
 
-These are task roles, not separate mandatory stages or a requirement to run three models for every claim. Start with the simplest useful workflow. Resolve and smoke-test the desired model route at execution time; do not silently substitute another model. A second pass by the same model is fresh review, not independent-model corroboration.
+These are optional task roles, not separate mandatory stages. Start with the simplest useful workflow. Resolve and smoke-test the exact route at execution time; record a failure rather than silently substituting. A second pass by the same model is fresh review, not independent-model corroboration. Use the [MVP review and run protocol](planning/mvp-review-run-protocol.md) for cross-boundary changes.
 
 ## Relationship to the projects
 

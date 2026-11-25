@@ -123,11 +123,12 @@ commit or push unless requested.
 
 ## Optional delegation and review
 
-If delegation is authorized and the exact route is available, have
-`gpt-6-luna` inventory changes and candidate paths, coordinate and reproduce
-runs with `gpt-6.1-terra`, and use `gpt-6.2-sol` for a bounded adversarial
-review of expectations, controls and conclusions. Resolve and smoke-test
-routes before use; report unavailable routes rather than silently substituting.
-A same-model second pass is not independent-model corroboration. This is an
-optional efficiency aid, not a prerequisite or an instruction to run scans in
-parallel.
+If delegation is authorized and the exact route is available, use
+`gpt-6-luna` for inventories and receipts, `gpt-6.1-terra` for ordinary
+coordination and verification, `gpt-6-sol` for defensive security-sensitive
+semantics, and `gpt-6.2-sol` for difficult final review when needed. Resolve
+and smoke-test routes before use; record unavailable routes rather than
+silently substituting. A same-model second pass is not independent-model
+corroboration. This is an optional efficiency aid, not a prerequisite or an
+instruction to run scans in parallel. For MVP work that crosses project or
+trust boundaries, use the [review and run protocol](planning/mvp-review-run-protocol.md).

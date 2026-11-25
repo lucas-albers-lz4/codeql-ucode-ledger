@@ -76,18 +76,31 @@ Keep work useful alongside active development in both projects.
   as freshly generated or create an upstream implementation merely to make the
   ledger green.
 
+For producer/consumer, release, package-byte or queue trust-boundary changes,
+use the compact [MVP review and run protocol](planning/mvp-review-run-protocol.md).
+Before a costly run or implementation, record the decision, exact base/head
+and affected contracts, source-first oracle, eligible near miss, test-to-CI
+gate map, expected artifacts and resource budget. For code that reads or
+writes untrusted artifacts, review the first I/O and credential boundary
+before implementation. Give an independent reviewer the diff, relevant
+caller/API context, oracle, raw receipts and known limits; record each found
+gap with its added control. Revalidate only affected contracts after a base
+change, then satisfy the required exact-head gate.
+
 ## Model routing
 
-The user's requested model names are `gpt-6-luna` (Luna),
-`gpt-6.1-terra` (Terra) and `gpt-6.2-sol` (Sol). Where delegation is supported
-and authorized, use Luna for bounded inventories and receipts, Terra for
-coordination and verification, and Sol for difficult semantics, control design
-and evidence-boundary review. These are optional task roles, not mandatory
-stages. Resolve and smoke-test the exact route at execution time. If a route
-is unavailable, say so; do not silently substitute a different model. Verify
-mechanical output against sources. A same-model second pass is not
-independent-model corroboration. Do not claim delegation happened when it did
-not, and do not run concurrent scans against shared writable artifacts.
+The user's requested routes are `gpt-6-luna` for bounded inventories and
+receipts, `gpt-6.1-terra` for coordination and non-security verification,
+`gpt-6-sol` for defensive security-sensitive semantics and trust-boundary
+work, and `gpt-6.2-sol` for difficult final evidence-boundary review when
+needed. These are optional task roles, not mandatory stages. Resolve and
+smoke-test the exact route at execution time. If a route is unavailable,
+record the failed attempt and continue with the primary owner or explicitly
+choose another route; do not silently substitute or claim that review
+happened. Verify mechanical output against sources. A same-model second pass
+is not independent-model corroboration. A requested route does not attest
+the server-side model ID. Do not run concurrent scans against shared writable
+artifacts.
 
 The user's subscription-linked promotional API credits are separate from the
 ChatGPT/Codex usage allowance. OpenAI's published guidance says that benefit
