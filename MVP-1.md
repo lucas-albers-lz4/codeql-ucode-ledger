@@ -1558,9 +1558,15 @@ incoming OpenWrt/LuCI changes.
   Its initial 30 focused and 89 broader local tests plus `actionlint` passed.
   Independent review found concrete gaps in excluded tracked-symlink handling,
   pre-read path validation, exclusive snapshot ownership, graph-to-byte
-  binding and exact stage inventory. These are being corrected on the draft;
-  initial hosted checks cannot establish the freeze boundary. The null lock
-  skips the live scan, so no trusted live freeze or Gate 8 claim exists.
+  binding and exact stage inventory. The revised draft head
+  `1e6bc148d9b35f23648a1edef6faf16f4ba2850c` addresses those and the
+  later alias-before-graph controls. Independent exact-head review found no
+  remaining concrete blocker in the stopped-writer offline sequence; 45
+  focused and 104 broader local tests plus `actionlint` passed. Exact-head
+  hosted `contract` (run `45551118501`), `unittest` and `typed-handoff`
+  (run `45551118377`) passed. The
+  null lock skips the released scan, so no trusted live freeze, issuer or
+  Gate 8 claim exists.
   An earlier offline link probe was kept out because it did not replay the
   actual SARIF consumer. PR #166 adds that replay, but its synthetic tests
   still do not establish producer execution or a trusted consumer run.
