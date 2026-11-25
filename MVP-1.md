@@ -1302,6 +1302,21 @@ incoming OpenWrt/LuCI changes.
   1,851-row replay reserved identities without scanning, and predates the
   final in-flight capacity rule. Keep #164 draft and unscheduled until these
   gaps and the exact CI gate are resolved; it is not Gate 8 evidence.
+  A separate stacked [default-tip draft PR #165](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/165)
+  at `c26413716136e82194156e6a870629960786057b` prepares an offline
+  source-first path for a selected default-branch tip and a distinct earlier
+  recorded tip of the same repository and branch. It independently checks
+  canonical commit/tree identities in fresh checkouts, pins the source policy,
+  builds separate manifests and retains binding digests. Security review
+  found and fixed real v3 repository-name handling, ambient Git configuration,
+  redirect and run-path boundaries. Thirty-eight focused local tests pass.
+  Existing hosted checks do not run those new resolver tests; the
+  `typed-handoff` check passed and `unittest` was pending in run `45518804672`
+  at this review. The earlier tip is only a control candidate.
+  No live upstream fetch, authenticated checkpoint history, clean-control
+  result, released scan or consumer replay has occurred, and #165 remains
+  draft and unscheduled. Integrating its event kind and actual SARIF into the
+  released consumer path is still Gate 8 work.
   The [12-path recipe mapping](planning/mvp-openwrt-full-tree-candidates-v0.5-mapping-20261124.md)
   identifies conditional product install paths used by the source-staged
   v0.5 expansion, with no installed-byte claim.
