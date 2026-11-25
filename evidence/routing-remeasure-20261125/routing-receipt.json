@@ -1,0 +1,82 @@
+{
+ "schema": "routing-remeasure-receipt/1",
+ "producer_repo": "https://github.com/lucas-albers-lz4/codeql-ucode",
+ "producer_pin": "9166af76cf6944e1b3ea5856a9176366a1f7a6ee",
+ "extractor_sha256": "8204f818a7d8c6b6443c24b377f7ce45cfd89c538a252f39b66ad39661c93a22",
+ "codeql": "2.27.4",
+ "corpus": "openwrt/luci staged 13-blob slice (manifest sha256 verified)",
+ "manifest_count": 13,
+ "db1": {
+  "include": [
+   "**/*.uc",
+   "**/luci"
+  ],
+  "extracted": [
+   "applications/luci-app-ddns/root/usr/share/rpcd/ucode/ddns.uc",
+   "applications/luci-app-dockerman/root/usr/share/rpcd/ucode/docker_rpc.uc",
+   "applications/luci-app-example/root/usr/share/rpcd/ucode/example.uc",
+   "applications/luci-app-rustdesk-server/root/usr/share/rpcd/ucode/rustdesk-server.uc",
+   "applications/luci-app-tailscale-community/root/usr/share/rpcd/ucode/tailscale.uc",
+   "applications/luci-app-weechat/root/usr/share/rpcd/ucode/weechat.uc",
+   "applications/luci-app-wifihistory/root/usr/share/rpcd/ucode/wifihistory.uc"
+  ],
+  "extracted_count": 7,
+  "extraction_errors": 0,
+  "query_rows": {
+   "RequestArgsExec": 0,
+   "ShellInjection": 0,
+   "TailscaleNestedShell": 0,
+   "LuciBackendDeclarations": 0
+  }
+ },
+ "db2": {
+  "include": [
+   "**/*.uc",
+   "**/luci*"
+  ],
+  "extracted": [
+   "applications/luci-app-ddns/root/usr/share/rpcd/ucode/ddns.uc",
+   "applications/luci-app-dockerman/root/usr/share/rpcd/ucode/docker_rpc.uc",
+   "applications/luci-app-example/root/usr/share/rpcd/ucode/example.uc",
+   "applications/luci-app-rustdesk-server/root/usr/share/rpcd/ucode/rustdesk-server.uc",
+   "applications/luci-app-tailscale-community/root/usr/share/rpcd/ucode/tailscale.uc",
+   "applications/luci-app-weechat/root/usr/share/rpcd/ucode/weechat.uc",
+   "applications/luci-app-wifihistory/root/usr/share/rpcd/ucode/wifihistory.uc",
+   "applications/luci-app-wol/root/usr/share/rpcd/ucode/luci.wol"
+  ],
+  "extracted_count": 8,
+  "extraction_errors": 0,
+  "query_rows": {
+   "RequestArgsExec": 0,
+   "ShellInjection": 1,
+   "TailscaleNestedShell": 0,
+   "LuciBackendDeclarations": 0
+  }
+ },
+ "shell_injection_candidate_db2": [
+  {
+   "src": "MemberExpression",
+   "col1": "shell-injection candidate via popen in luci.wol",
+   "sink": "CallExpression",
+   "col3": "popen",
+   "col4": "exec",
+   "col5": "42",
+   "col6": "42"
+  }
+ ],
+ "not_extracted_db2": [
+  "applications/luci-app-adblock-fast/root/usr/share/rpcd/ucode/luci.adblock-fast",
+  "applications/luci-app-advanced-reboot/root/usr/share/rpcd/ucode/luci.advanced-reboot",
+  "applications/luci-app-lldpd/root/usr/share/rpcd/ucode/luci.lldpd",
+  "applications/luci-app-upnp/root/usr/share/rpcd/ucode/luci.upnp",
+  "modules/luci-base/root/usr/share/rpcd/ucode/luci"
+ ],
+ "limitations": [
+  "Probe include patterns select files; extensionless luci.* plugins other than luci.wol were not extracted in db2 (cause not isolated here).",
+  "print-baseline reported 0 ucode LOC despite extracted files; baseline counter not used as evidence.",
+  "No per-file routing-classification receipt captured (direct extractor stdout run not executed).",
+  "Source-shape observation only; no runtime/exploit verdict, no gate lift, no path_found."
+ ],
+ "gate_lifted": false,
+ "path_found": false
+}

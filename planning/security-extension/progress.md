@@ -3,9 +3,9 @@
 ## State
 
 - 091–105 Demonstrated (orchestrator re-ran pipelines, controls 3/3). Wave N (096–101) gated from lanes N1/N2/O; Wave P (105, ASU) gated from openwrt-org sweep.
-- Lanes I/J/M hit provider quota after partial artifacts; orchestrator completed 091–094 source oracles from pinned blobs (lane I terminal receipt: quota exit 1; 091/093 pipelines re-run exit 0, controls 3/3). Lane M routing re-measurement still owed.
+- Lanes I/J/M hit provider quota after partial artifacts; orchestrator completed 091–094 source oracles from pinned blobs (lane I terminal receipt: quota exit 1; 091/093 pipelines re-run exit 0, controls 3/3). Lane M routing re-measurement completed at current main (receipt archived; codeql-ucode#154 comment 7151772428).
 - Deferred uhttpd resource-lifecycle advisories: lane L decision packet accepted; claims 102–104 Demonstrated from pinned-source census/controls.
-- Current-main application-routing re-measurement prompt prepared (lane M); heavy slot not yet acquired.
+- Current-main application-routing re-measurement completed (lane M); receipt archived and posted to codeql-ucode#154.
 - No gate lifted; no worker commit/push.
 
 ## Log
@@ -35,3 +35,10 @@
   by claims 102–104 (Demonstrated); no duplicate claims filed. Public-safe packet,
   census, and sanitized provenance archived under evidence/uhttpd-decision-20261125/.
   The Security-40 resource-lifecycle deferral condition is satisfied.
+- 2026-11-25: Lane M routing re-measurement run by orchestrator at producer main
+  9166af76 (stock extractor sha256 8204f818…, CodeQL 2.27.4; M1 patches obsolete).
+  db1 (7 .uc extracted) all four m4 queries 0 rows; db2 (8 extracted incl luci.wol)
+  ShellInjection 1 row (luci.wol:42 popen candidate), others 0; ExtractionErrors 0.
+  Receipt archived evidence/routing-remeasure-20261125/; posted to codeql-ucode#154
+  (comment 7151772428). Gap refined to partial/query-dependent routing, not blanket
+  extraction failure. No gate lift / path_found.
