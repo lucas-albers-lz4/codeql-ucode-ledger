@@ -116,8 +116,15 @@ exercised together:
    and event kinds. Demonstrate on the retained 1,851-row checkpoint that a
    finite capacity advances beyond the first two after valid completions,
    that repeated failures do not starve later work indefinitely, and that
-   backlog size and oldest age are reported. Measure released Linux scan
-   cost before setting capacity or polling interval.
+   each eligible identity gets a first attempt before a completed identity is
+   selected again, absent a documented priority exception. Report backlog
+   size, oldest age and first-attempt coverage. Measure released Linux scan
+   cost before setting capacity or polling interval. An isolated offline
+   scratch scheduler over the retained checkpoint selected both default tips
+   every other capacity-two transition; six transitions reached only three
+   PRs per repository. That scheduler remains uncommitted and is not a scan
+   or queue-completion receipt. The repetition shows why rotation between
+   event kinds alone is insufficient for this acceptance criterion.
 4. **Scan-ready event resolution.** For PRs, re-fetch detail and bind the
    exact head/base commits and trees through the existing #160 resolver,
    rejecting drift or unsupported head provenance explicitly. For default
