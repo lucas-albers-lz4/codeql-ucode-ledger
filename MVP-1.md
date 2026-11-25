@@ -1574,10 +1574,18 @@ incoming OpenWrt/LuCI changes.
   attested queue start; it cannot authenticate receipt bytes or issue a live
   completion. Independent review found a concurrent clean-store
   initialization race and incomplete populated-v1 migration control; fixes
-  are underway locally. Automatic approval review rejected publishing this
-  branch because potentially private source/history lacked sufficient
-  publication authorization. No remote PR exists, and the rejected push
-  must not be treated as a release-path result.
+  were isolated into a queue-only local variant at
+  `work/issuer-schema-queue-only`, head
+  `7c0c299f7e1cee15c1d5867bd6d22eeb7256760a`, two commits above
+  exact queue prerequisite #164 `b47c92eb5df0729e8e7ecfaa8af886e540ecff53`.
+  It changes only queue code, tests and documentation. Atomic initialization
+  and populated-v1 rejection precede schema DDL; 17 queue, 27 poll and 44
+  discovery tests plus `actionlint` passed. Independent local review found
+  no concrete queue-only blocker, while confirming that a valid MAC over a
+  fabricated receipt digest still passes without a trusted issuer.
+  Automatic approval review rejected publishing the original broad branch
+  because potentially private source/history lacked sufficient publication
+  authorization. The queue-only variant remains local; no remote PR exists.
   An earlier offline link probe was kept out because it did not replay the
   actual SARIF consumer. PR #166 adds that replay, but its synthetic tests
   still do not establish producer execution or a trusted consumer run.
