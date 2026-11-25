@@ -1134,6 +1134,16 @@ incoming OpenWrt/LuCI changes.
   binding/assembly evidence, not reusable `map`/`join` flow, quote safety,
   a production alert, SARIF acceptance or consumer handoff. Keep #54 and #50
   as the production-model owners.
+  A subsequent [testing-only unquoted WOL rule candidate](evidence/mvp-wol-unquoted-rule-candidate-20261125/README.md)
+  ran on 22 source-staged files at the same producer/LuCI pins. All extracted
+  once with zero errors. Its exact BQRS and SARIF results were the synthetic
+  identity callback at line 7 and that callback with WOL's fixed-path source
+  comparison at line 42; the real quoted WOL source and 19 controls produced
+  no result. The query uses narrow spelling and lexical exclusions, leaves
+  partial quoting unclassified, and its testing SARIF lacks severity metadata.
+  This does not justify default-suite promotion or a vulnerability claim;
+  resolved callback identity, flow/quote semantics and a real consumer
+  acceptance step remain under #50/#54.
 - Stacked draft consumer [PR #156](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/156)
   (`mvp/incoming-ci-drill` at `3a2197c`, based on #155) now has
   a manual incoming-event **identity preflight** on top of PR #155. It

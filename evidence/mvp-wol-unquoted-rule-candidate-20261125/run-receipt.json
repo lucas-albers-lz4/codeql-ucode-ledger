@@ -1,0 +1,434 @@
+{
+  "schema": "wol-unquoted-map-join-candidate-v1",
+  "preflight": {
+    "oracle_sha256": "b2d12f9444744c4df7ca5e60dfe1198add5a6aac938ee2980509a8ac59a96861",
+    "codeql_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+    "extractor_sha256": "6ed90de2e6b352daa939ad1d0c627f847383307f212168ad11d9dd06f4faf15b",
+    "query_sha256": "03f6aa08140c3f67000c8e58fff23694f42147d9eb1bb217ba857290f06804ce",
+    "producer_status": [
+      "?? ql/src/testing/"
+    ],
+    "df": "Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s5   460Gi   332Gi    91Gi    79%    5.5M  956M    1%   /System/Volumes/Data\n"
+  },
+  "receipt": {
+    "producer_commit": "104a398468f214961168d2edc9a10be45b80062f",
+    "luci_commit": "b2e0be4b46ec0fd43394c081fa7c50657af14011",
+    "oracle_sha256": "b2d12f9444744c4df7ca5e60dfe1198add5a6aac938ee2980509a8ac59a96861",
+    "preflight_sha256": "b6b5721eca42d51e17a9aa2b0bfc6a69eabd700cddb3b289d43d404be4151790",
+    "query_sha256": "03f6aa08140c3f67000c8e58fff23694f42147d9eb1bb217ba857290f06804ce",
+    "successful_multiset": {
+      "usr/share/rpcd/ucode/altered_guard.uc": 1,
+      "usr/share/rpcd/ucode/callback_shadow.uc": 1,
+      "usr/share/rpcd/ucode/callback_write.uc": 1,
+      "usr/share/rpcd/ucode/escaped_join.uc": 1,
+      "usr/share/rpcd/ucode/fixed_args.uc": 1,
+      "usr/share/rpcd/ucode/identity.uc": 1,
+      "usr/share/rpcd/ucode/identity_fixed_guard.uc": 1,
+      "usr/share/rpcd/ucode/join_shadow.uc": 1,
+      "usr/share/rpcd/ucode/luci.wol": 1,
+      "usr/share/rpcd/ucode/map_shadow.uc": 1,
+      "usr/share/rpcd/ucode/mixed_parts.uc": 1,
+      "usr/share/rpcd/ucode/mixed_quoted_parts.uc": 1,
+      "usr/share/rpcd/ucode/no_join.uc": 1,
+      "usr/share/rpcd/ucode/nonreturned.uc": 1,
+      "usr/share/rpcd/ucode/other_callback.uc": 1,
+      "usr/share/rpcd/ucode/overridden_method.uc": 1,
+      "usr/share/rpcd/ucode/partial_quote.uc": 1,
+      "usr/share/rpcd/ucode/parts_shadow.uc": 1,
+      "usr/share/rpcd/ucode/parts_write.uc": 1,
+      "usr/share/rpcd/ucode/popen_shadow.uc": 1,
+      "usr/share/rpcd/ucode/request_write.uc": 1,
+      "usr/share/rpcd/ucode/wrong_import.uc": 1
+    },
+    "extraction_errors": [],
+    "rule_rows": {
+      "('usr/share/rpcd/ucode/identity.uc', 7, 'no-matching-comparison')": 1,
+      "('usr/share/rpcd/ucode/identity_fixed_guard.uc', 42, 'fixed-path-comparison')": 1
+    },
+    "sarif_results": 2,
+    "commands": [
+      {
+        "label": "compile",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "query",
+          "compile",
+          "<RUN_ROOT>/producer/ql/src/testing/WolUnquotedMapJoin.ql",
+          "--search-path=<RUN_ROOT>/producer/extractor-pack:<RUN_ROOT>/producer/ql/lib:<RUN_ROOT>/producer/ql/src",
+          "--compilation-cache=<RUN_ROOT>/cache/compile",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2800"
+        ],
+        "exit": 0,
+        "wall_seconds": 4.024,
+        "peak_rss_bytes": null,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "0b18852917f39ee7778ff6ef9e96b7c0c4e145a1c5245ff5cd8d6da4f53051c6"
+      },
+      {
+        "label": "init",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "database",
+          "init",
+          "<RUN_ROOT>/db",
+          "--language=ucode",
+          "--search-path=<RUN_ROOT>/producer/extractor-pack",
+          "--common-caches=<RUN_ROOT>/cache/db",
+          "--source-root=<RUN_ROOT>/stage"
+        ],
+        "exit": 0,
+        "wall_seconds": 0.536,
+        "peak_rss_bytes": null,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "5cf6a6248f0997970c8af0831660d25adf9917779918df4a91e40f7a8a1f60ee"
+      },
+      {
+        "label": "index",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "database",
+          "index-files",
+          "--language=ucode",
+          "--include=**/rpcd/ucode/*",
+          "--working-dir=<RUN_ROOT>/stage",
+          "--common-caches=<RUN_ROOT>/cache/db",
+          "<RUN_ROOT>/db"
+        ],
+        "exit": 0,
+        "wall_seconds": 0.786,
+        "peak_rss_bytes": null,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "0dcff6d6adf2c27c157d350366856d8f72a2a8a559175d83142c62047c42b8a8"
+      },
+      {
+        "label": "finalize",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "database",
+          "finalize",
+          "<RUN_ROOT>/db",
+          "--common-caches=<RUN_ROOT>/cache/db"
+        ],
+        "exit": 0,
+        "wall_seconds": 1.203,
+        "peak_rss_bytes": null,
+        "stdout_sha256": "1c71637d89232e8ec13fa33097fb06d1a0060ee58f2f12feda06e86eaf354a6c",
+        "stderr_sha256": "d921f1b3d1b6807d00cf5651d720f53fbe927e64a0d8a9de1b8870ce4b8037e2"
+      },
+      {
+        "label": "success-run",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "query",
+          "run",
+          "<RUN_ROOT>/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+          "--database=<RUN_ROOT>/db",
+          "--search-path=<RUN_ROOT>/producer/extractor-pack:<RUN_ROOT>/producer/ql/lib:<RUN_ROOT>/producer/ql/src",
+          "--common-caches=<RUN_ROOT>/home/.codeql",
+          "--compilation-cache=<RUN_ROOT>/cache/compile",
+          "--no-default-compilation-cache",
+          "--output=<RUN_ROOT>/out/success.bqrs",
+          "--threads=1",
+          "--ram=2800"
+        ],
+        "exit": 0,
+        "wall_seconds": 1.533,
+        "peak_rss_bytes": null,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "bcda183ad2b080fb74b65e4c5fa29c867d2f28f9156a4720d31d65efbed8e520"
+      },
+      {
+        "label": "success-decode",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "bqrs",
+          "decode",
+          "--format=json",
+          "--entities=url,string",
+          "<RUN_ROOT>/out/success.bqrs"
+        ],
+        "exit": 0,
+        "wall_seconds": 0.234,
+        "peak_rss_bytes": null,
+        "stdout_sha256": "39f06d6cf78daa036533f5b2ba3ba9cde943a6d6b7a9e75e8d508d258d40fca9",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "errors-run",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "query",
+          "run",
+          "<RUN_ROOT>/producer/ql/src/diagnostics/ExtractionErrors.ql",
+          "--database=<RUN_ROOT>/db",
+          "--search-path=<RUN_ROOT>/producer/extractor-pack:<RUN_ROOT>/producer/ql/lib:<RUN_ROOT>/producer/ql/src",
+          "--common-caches=<RUN_ROOT>/home/.codeql",
+          "--compilation-cache=<RUN_ROOT>/cache/compile",
+          "--no-default-compilation-cache",
+          "--output=<RUN_ROOT>/out/errors.bqrs",
+          "--threads=1",
+          "--ram=2800"
+        ],
+        "exit": 0,
+        "wall_seconds": 1.526,
+        "peak_rss_bytes": null,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "9327a5e9926bf9acf3f5f9ed75edb87db049f145774291cec2f95ad2870cca14"
+      },
+      {
+        "label": "errors-decode",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "bqrs",
+          "decode",
+          "--format=json",
+          "--entities=url,string",
+          "<RUN_ROOT>/out/errors.bqrs"
+        ],
+        "exit": 0,
+        "wall_seconds": 0.23,
+        "peak_rss_bytes": null,
+        "stdout_sha256": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "rule-run",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "query",
+          "run",
+          "<RUN_ROOT>/producer/ql/src/testing/WolUnquotedMapJoin.ql",
+          "--database=<RUN_ROOT>/db",
+          "--search-path=<RUN_ROOT>/producer/extractor-pack:<RUN_ROOT>/producer/ql/lib:<RUN_ROOT>/producer/ql/src",
+          "--common-caches=<RUN_ROOT>/home/.codeql",
+          "--compilation-cache=<RUN_ROOT>/cache/compile",
+          "--no-default-compilation-cache",
+          "--output=<RUN_ROOT>/out/rule.bqrs",
+          "--threads=1",
+          "--ram=2800"
+        ],
+        "exit": 0,
+        "wall_seconds": 5.356,
+        "peak_rss_bytes": null,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "7aec9d1e95de8e7a08e5bbc75951157e6093b4cf548565400b10f479c9c0f65f"
+      },
+      {
+        "label": "rule-decode",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "bqrs",
+          "decode",
+          "--format=json",
+          "--entities=url,string",
+          "<RUN_ROOT>/out/rule.bqrs"
+        ],
+        "exit": 0,
+        "wall_seconds": 0.24,
+        "peak_rss_bytes": null,
+        "stdout_sha256": "16e84313f32460f6c83d89a401e71452ff60e322ca46a85897d6c2a51b2bf386",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "sarif",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "database",
+          "analyze",
+          "<RUN_ROOT>/db",
+          "<RUN_ROOT>/producer/ql/src/testing/WolUnquotedMapJoin.ql",
+          "--format=sarif-latest",
+          "--output=<RUN_ROOT>/out/rule.sarif",
+          "--search-path=<RUN_ROOT>/producer/extractor-pack:<RUN_ROOT>/producer/ql/lib:<RUN_ROOT>/producer/ql/src",
+          "--common-caches=<RUN_ROOT>/home/.codeql",
+          "--compilation-cache=<RUN_ROOT>/cache/compile",
+          "--no-default-compilation-cache",
+          "--threads=1",
+          "--ram=2800"
+        ],
+        "exit": 0,
+        "wall_seconds": 3.687,
+        "peak_rss_bytes": null,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "8fc8af4ac3f89354c1dfa3ef5ffb368b5a9c1ce743595334152b4f904c33f46d"
+      }
+    ],
+    "total_wall_seconds": 19.355
+  },
+  "route_summary": {
+    "input_count": 22,
+    "plain_count": 22,
+    "markup_count": 0,
+    "markup_inconclusive_count": 0,
+    "uncertain_count": 0,
+    "excluded_count": 0,
+    "duplicate_input_count": 0
+  },
+  "route_decisions": [
+    {
+      "installed_path": "usr/share/rpcd/ucode/altered_guard.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/callback_shadow.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/callback_write.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/escaped_join.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/fixed_args.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/identity.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/identity_fixed_guard.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/join_shadow.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/luci.wol",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/map_shadow.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/mixed_parts.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/mixed_quoted_parts.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/no_join.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/nonreturned.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/other_callback.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/overridden_method.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/partial_quote.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/parts_shadow.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/parts_write.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/popen_shadow.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/request_write.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/wrong_import.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    }
+  ],
+  "sarif_rows": [
+    {
+      "rule_id": "ucode/testing/wol-unquoted-map-join",
+      "path": "usr/share/rpcd/ucode/identity.uc",
+      "region": {
+        "startLine": 7,
+        "startColumn": 18,
+        "endColumn": 61
+      },
+      "message": "Request arguments reach this shell command through an identity map callback; executable guard: no-matching-comparison."
+    },
+    {
+      "rule_id": "ucode/testing/wol-unquoted-map-join",
+      "path": "usr/share/rpcd/ucode/identity_fixed_guard.uc",
+      "region": {
+        "startLine": 42,
+        "startColumn": 16,
+        "endColumn": 65
+      },
+      "message": "Request arguments reach this shell command through an identity map callback; executable guard: fixed-path-comparison."
+    }
+  ],
+  "raw_artifact_sha256": {
+    "routing.json": "139c0a4c70b3d76ac6ba8d294fcfef69062c82d46419a24d3ee60041bd026079",
+    "success.json": "39f06d6cf78daa036533f5b2ba3ba9cde943a6d6b7a9e75e8d508d258d40fca9",
+    "errors.json": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "rule.json": "16e84313f32460f6c83d89a401e71452ff60e322ca46a85897d6c2a51b2bf386",
+    "rule.sarif": "22eab8e3a3c4741ecdb2447746829df1744a1566df2abc7298f82c2de22bf5e9",
+    "receipt.json": "05fc804f359e9a9c3f5439e2dc31005e67a9825892d7799a31c5d53c67df8962"
+  },
+  "extractor_build_provenance": "evidence/mvp-producer-grammar-integration-20261124/receipt.json; binary copied from prior matching producer checkout; no rebuild"
+}
