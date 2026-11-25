@@ -1,0 +1,1547 @@
+{
+  "schema": "uhttpd-resource-lifecycle-census/1",
+  "generated_at_utc": "2026-11-25T03:12:47.439760+00:00",
+  "pin": "93b05e0b65d91c23c5aa8fdde378df1f174ec71d",
+  "repo_url": "https://github.com/openwrt/uhttpd.git",
+  "method": "git show <commit>:<path> pinned-blob reads; structural line-order oracle; no runtime, no CodeQL",
+  "corpus_files": {
+    "ubus.c": {
+      "sha256": "11638cf862fd8638ad37a5e35c01f859f47648a7bca248078f98efb0d17985d6",
+      "bytes": 31490,
+      "lines": 1251,
+      "blob_id": "944857772185f5698c4ed67b768f49fb7823b68d"
+    },
+    "client.c": {
+      "sha256": "54b93e183b55fbbb8992a1997d3ec088441b15d28c0a1d0cea62ebf26fda165d",
+      "bytes": 28350,
+      "lines": 1146,
+      "blob_id": "47ca1dcf747e351e48753296f11ca3782c09f863"
+    },
+    "uhttpd.h": {
+      "sha256": "cbd046b4bd4607dc283444556cfd4409ff885c1e5b76a2b7f5d8212be97e11ed",
+      "bytes": 9110,
+      "lines": 396,
+      "blob_id": "074e85c282052c97cde45646d26e62c1b6ce2a8f"
+    },
+    "utils.c": {
+      "sha256": "2cd4500d1ed28c43d8d43d775249723d2894579b5ca8eb233948918183c575ac",
+      "bytes": 8177,
+      "lines": 323,
+      "blob_id": "1db20a85b2fbe0ab45fedf82009a20f90bc80d82"
+    },
+    "utils.h": {
+      "sha256": "6039732f8fe27e05d41bc8ad400f27339900958475a3673b380832bc35be0b11",
+      "bytes": 2872,
+      "lines": 101,
+      "blob_id": "1c481f83bda56137e178233024f8ccb837ae6f8a"
+    },
+    "file.c": {
+      "sha256": "399ada72b9a9d7378cc4dd07f075da73a49dd6c1fc9d251c1a0e68cc9bc8c816",
+      "bytes": 24066,
+      "lines": 1071,
+      "blob_id": "e89f0ce8d2075742f37f310b5506950c0eaaee54"
+    },
+    "main.c": {
+      "sha256": "20424d0f679f7ef1b176fd0a615b27eead110c6f68a463c912c3d59dce0902a8",
+      "bytes": 15875,
+      "lines": 692,
+      "blob_id": "286e34429f8c7c4c555a9c4f3ea7cb1fa43acd3e"
+    },
+    "handler.c": {
+      "sha256": "7e89f8c19e55ebde6f2a210cb8de3f380aa114b459dc2c95e998175b9f54b34a",
+      "bytes": 6231,
+      "lines": 258,
+      "blob_id": "04e71e0f9ef65f6d99f6d3e82917916fbe2b5616"
+    },
+    "relay.c": {
+      "sha256": "dfd69fd14d25c51fb6022fef8ef2d7a35c49162a31774e3f392c8e174e3fd873",
+      "bytes": 4407,
+      "lines": 205,
+      "blob_id": "4b9f3f945c99737b36778fb01422308cf6a15464"
+    },
+    "proc.c": {
+      "sha256": "1ce278a5486f780adc3ff08454fe5afd4119b748d7899da7d28e9c6b72115148",
+      "bytes": 10266,
+      "lines": 399,
+      "blob_id": "977d2ee8c3e60125a404228bfa4900c0b32f133b"
+    },
+    "cgi.c": {
+      "sha256": "8a7749004c2eba2f20916a3822c457349ea90dd69b6cb0a834222fcbab78fc37",
+      "bytes": 3315,
+      "lines": 131,
+      "blob_id": "b953a6b8569b21950548dc73444ac5207848f42d"
+    },
+    "ucode.c": {
+      "sha256": "b17729b18dc3cce842151adec93c3a7a63b280dfc994f263fab595b60579bc90",
+      "bytes": 10051,
+      "lines": 455,
+      "blob_id": "6b2e53bdd13c16029f26d82537e36593ac2e317a"
+    },
+    "lua.c": {
+      "sha256": "967fe9fa8e2ae61fc1a7d8187ee9bf916d180e9c8ed25c5ae4e60876d7d511d8",
+      "bytes": 7223,
+      "lines": 347,
+      "blob_id": "f026cbe63dd7bc930bd092b0b4174bfc382898e7"
+    },
+    "plugin.c": {
+      "sha256": "b39e563f28f3f800673760009c7113fe82e63de531eb0130e5bf892e4050b7b7",
+      "bytes": 2007,
+      "lines": 70,
+      "blob_id": "b84236c7a0cdb8b85daa6282ebf62684be359319"
+    },
+    "plugin.h": {
+      "sha256": "f9d9683ff9cd2496124806a57e37016644cc8c903e7b118598238949e8348a3f",
+      "bytes": 1909,
+      "lines": 45,
+      "blob_id": "822cb549e84b301847f548ca7661fd24bc3915d7"
+    },
+    "auth.c": {
+      "sha256": "1c352b8bd10a5b1f28398dfca7052965238150b31088d244c01863e091f93ee6",
+      "bytes": 5805,
+      "lines": 210,
+      "blob_id": "45cb09a21b14d1d8d7b5363b527bd59f76cb55a3"
+    },
+    "listen.c": {
+      "sha256": "624e2af3d0e05b43cd4c5aa50e17e93e6abbaa17a3b02ab5818ce8b2c8f7f015",
+      "bytes": 5713,
+      "lines": 242,
+      "blob_id": "9795ad46e16a469562b75b3284c0bd1651f12f40"
+    },
+    "tls.c": {
+      "sha256": "fcf64999ad655821a23fbff7f52f4baf64e2ed636c9da3aaaf9fad8458068286",
+      "bytes": 3265,
+      "lines": 140,
+      "blob_id": "aab9111cf37f4717a6efdccda6e480ebe53cb1b4"
+    },
+    "tls.h": {
+      "sha256": "89c1ec11ecb7dd345a606786127dea0c018a786382db7856f189fe667f23b0aa",
+      "bytes": 1489,
+      "lines": 51,
+      "blob_id": "06fbee95f800173055be075024b6b15ae4033cc3"
+    }
+  },
+  "advisories": {
+    "GHSA-wvgh-cm54-q6f6": {
+      "oracle": "O1",
+      "checks": {
+        "ref_taken": true,
+        "success_path_unref": true,
+        "error_path_unref": true,
+        "dispatch_free_hook": true,
+        "ref_count_in_func": 1,
+        "unref_count_in_func": 2,
+        "close_refcount_guard": true,
+        "close_dispatch_done_before_free": true,
+        "unref_wakeup_on_cleanup": true
+      },
+      "evidence": [
+        {
+          "check": "O1.ref_taken",
+          "path": "ubus.c",
+          "line": 445,
+          "excerpt": "uh_client_ref(cl);"
+        },
+        {
+          "check": "O1.success_path_unref",
+          "path": "ubus.c",
+          "line": 467,
+          "excerpt": "uh_client_unref(cl);"
+        },
+        {
+          "check": "O1.error_path_unref",
+          "path": "ubus.c",
+          "line": 473,
+          "excerpt": "uh_client_unref(cl);"
+        },
+        {
+          "check": "O1.dispatch_free_hook",
+          "path": "ubus.c",
+          "line": 465,
+          "excerpt": "cl->dispatch.free = uh_ubus_subscription_free;"
+        },
+        {
+          "check": "O1.close_refcount_guard",
+          "path": "client.c",
+          "line": 870,
+          "excerpt": "if (cl->refcount) {"
+        },
+        {
+          "check": "O1.close_dispatch_done",
+          "path": "client.c",
+          "line": 877,
+          "excerpt": "uh_dispatch_done(cl);"
+        },
+        {
+          "check": "O1.close_free_cl",
+          "path": "client.c",
+          "line": 886,
+          "excerpt": "free(cl);"
+        },
+        {
+          "check": "O1.unref_wakeup_on_cleanup",
+          "path": "uhttpd.h",
+          "line": 393,
+          "excerpt": "ustream_state_change(cl->us);"
+        }
+      ],
+      "eligible_instance": false,
+      "advisory": "GHSA-wvgh-cm54-q6f6",
+      "verdict_at_pin": "fixed_at_pin",
+      "fix_commit": {
+        "commit": "3c48b9e17d2086f9756b97e5825c2ebdf3ed233a",
+        "parent": "d6205aad61763b5e5d86441164b3aeed83294e7f",
+        "subject": "ubus: release client refcount on successful /ubus/subscribe",
+        "date": "2026-08-03 10:13:52 +0200"
+      }
+    },
+    "GHSA-83vv-qrc6-h3hx": {
+      "oracle": "O2",
+      "checks": {
+        "strdup_alloc": true,
+        "free_installed_before_switch": true,
+        "trailing_free_after_switch": true,
+        "trailing_null_after_free": true,
+        "request_free_frees_url_path": true,
+        "request_free_nulls_url_path": true,
+        "request_done_frees_before_memset": true,
+        "dispatch_done_invokes_free": true
+      },
+      "evidence": [
+        {
+          "check": "O2.strdup_alloc",
+          "path": "ubus.c",
+          "line": 1172,
+          "excerpt": "du->url_path = strdup(url);"
+        },
+        {
+          "check": "O2.free_install",
+          "path": "ubus.c",
+          "line": 1182,
+          "excerpt": "d->free = uh_ubus_request_free;"
+        },
+        {
+          "check": "O2.method_switch",
+          "path": "ubus.c",
+          "line": 1184,
+          "excerpt": "switch (cl->request.method)"
+        },
+        {
+          "check": "O2.trailing_free",
+          "path": "ubus.c",
+          "line": 1205,
+          "excerpt": "free(du->url_path);"
+        },
+        {
+          "check": "O2.trailing_null",
+          "path": "ubus.c",
+          "line": 1206,
+          "excerpt": "du->url_path = NULL;"
+        },
+        {
+          "check": "O2.request_free_free",
+          "path": "ubus.c",
+          "line": 617,
+          "excerpt": "free(du->url_path);"
+        },
+        {
+          "check": "O2.request_free_null",
+          "path": "ubus.c",
+          "line": 618,
+          "excerpt": "du->url_path = NULL;"
+        },
+        {
+          "check": "O2.request_done_dispatch_done",
+          "path": "client.c",
+          "line": 130,
+          "excerpt": "uh_dispatch_done(cl);"
+        },
+        {
+          "check": "O2.request_done_memset",
+          "path": "client.c",
+          "line": 132,
+          "excerpt": "memset(&cl->dispatch, 0, sizeof(cl->dispatch));"
+        },
+        {
+          "check": "O2.dispatch_done_invokes_free",
+          "path": "client.c",
+          "line": 90,
+          "excerpt": "cl->dispatch.free(cl);"
+        }
+      ],
+      "eligible_instance": false,
+      "advisory": "GHSA-83vv-qrc6-h3hx",
+      "verdict_at_pin": "fixed_at_pin",
+      "fix_commit": {
+        "commit": "42e30caa704e4e6e28fc7412e0006959eb247c44",
+        "parent": "e76736e5676fb25536b27d45865eb4153c68aca3",
+        "subject": "ubus: set d->free unconditionally to fix url_path leak",
+        "date": "2026-08-03 10:04:53 +0200"
+      }
+    },
+    "GHSA-vhx4-3p5q-m59q": {
+      "oracle": "O3",
+      "checks": {
+        "append_site": true,
+        "count_increment": true,
+        "bytes_increment": true,
+        "count_cap": true,
+        "bytes_cap": true,
+        "reject_431": true,
+        "caps_before_append": true,
+        "trailer_cap": true,
+        "trailer_cap_closes_connection": true,
+        "per_request_counter_reset": true,
+        "per_request_hdr_reinit": true,
+        "hdr_reclaimed_on_close": true,
+        "count_constant_defined": true,
+        "bytes_constant_defined": true,
+        "count_constant_value": 100,
+        "bytes_constant_value": 16384,
+        "counter_fields_defined": true
+      },
+      "evidence": [
+        {
+          "check": "O3.append",
+          "path": "client.c",
+          "line": 658,
+          "excerpt": "blobmsg_add_string(&cl->hdr, data, val);"
+        },
+        {
+          "check": "O3.count_increment",
+          "path": "client.c",
+          "line": 550,
+          "excerpt": "r->header_count++;"
+        },
+        {
+          "check": "O3.bytes_increment",
+          "path": "client.c",
+          "line": 551,
+          "excerpt": "r->header_bytes += line_len;"
+        },
+        {
+          "check": "O3.count_cap",
+          "path": "client.c",
+          "line": 552,
+          "excerpt": "if (r->header_count > UH_LIMIT_HEADER_COUNT ||"
+        },
+        {
+          "check": "O3.bytes_cap",
+          "path": "client.c",
+          "line": 553,
+          "excerpt": "r->header_bytes > UH_LIMIT_HEADER_BYTES) {"
+        },
+        {
+          "check": "O3.reject_431",
+          "path": "client.c",
+          "line": 554,
+          "excerpt": "uh_header_error(cl, 431, \"Request Header Fields Too Large\");"
+        },
+        {
+          "check": "O3.trailer_cap",
+          "path": "client.c",
+          "line": 721,
+          "excerpt": "if (r->header_count > UH_LIMIT_HEADER_COUNT ||"
+        },
+        {
+          "check": "O3.per_request_counter_reset",
+          "path": "client.c",
+          "line": 225,
+          "excerpt": "memset(&cl->request, 0, sizeof(cl->request));"
+        },
+        {
+          "check": "O3.per_request_hdr_reinit",
+          "path": "client.c",
+          "line": 255,
+          "excerpt": "blob_buf_init(&cl->hdr, 0);"
+        },
+        {
+          "check": "O3.hdr_reclaimed_on_close",
+          "path": "client.c",
+          "line": 884,
+          "excerpt": "blob_buf_free(&cl->hdr);"
+        },
+        {
+          "check": "O3.count_constant",
+          "path": "uhttpd.h",
+          "line": 49,
+          "excerpt": "#define UH_LIMIT_HEADER_COUNT\t100"
+        },
+        {
+          "check": "O3.bytes_constant",
+          "path": "uhttpd.h",
+          "line": 50,
+          "excerpt": "#define UH_LIMIT_HEADER_BYTES\t16384"
+        }
+      ],
+      "eligible_instance": false,
+      "advisory": "GHSA-vhx4-3p5q-m59q",
+      "verdict_at_pin": "fixed_at_pin",
+      "fix_commit": {
+        "commit": "f6c2fcfa539de49ddf6de8f805110c8804602e98",
+        "parent": "7b1bec45826bd78c8afc993435bdc0f1df2fe399",
+        "subject": "client: cap cumulative header count and bytes per request",
+        "date": "2026-07-24 01:48:06 +0200",
+        "companion": {
+          "commit": "f682ccabee9ed5f39dd3b0aaf96228975eeb478d",
+          "subject": "client: parse and discard chunked trailer sections, use enum chunked_state",
+          "date": "2026-07-24 12:04:03 +0200"
+        }
+      }
+    }
+  },
+  "cleanup_census": {
+    "totals": {
+      "client_ref": 4,
+      "client_unref": 5,
+      "dispatch_free_assign": 4,
+      "dispatch_req_free_assign": 2,
+      "dispatch_memset": 1,
+      "request_done_call": 21,
+      "dispatch_done_call": 2,
+      "blob_buf_free": 10,
+      "free_call": 25,
+      "ubus_unregister_subscriber": 3,
+      "json_object_put": 1,
+      "json_tokener_free": 1,
+      "hdr_append": 5,
+      "header_cap_check": 4,
+      "header_limit_define": 2,
+      "url_path_alloc": 1,
+      "url_path_free": 2
+    },
+    "sites": {
+      "auth.c": [
+        {
+          "kind": "request_done_call",
+          "path": "auth.c",
+          "line": 207,
+          "excerpt": "uh_request_done(cl);"
+        }
+      ],
+      "cgi.c": [
+        {
+          "kind": "free_call",
+          "path": "cgi.c",
+          "line": 86,
+          "excerpt": "free(escaped_url);"
+        }
+      ],
+      "client.c": [
+        {
+          "kind": "request_done_call",
+          "path": "client.c",
+          "line": 101,
+          "excerpt": "uh_request_done(cl);"
+        },
+        {
+          "kind": "dispatch_done_call",
+          "path": "client.c",
+          "line": 130,
+          "excerpt": "uh_dispatch_done(cl);"
+        },
+        {
+          "kind": "dispatch_memset",
+          "path": "client.c",
+          "line": 132,
+          "excerpt": "memset(&cl->dispatch, 0, sizeof(cl->dispatch));"
+        },
+        {
+          "kind": "request_done_call",
+          "path": "client.c",
+          "line": 166,
+          "excerpt": "uh_request_done(cl);"
+        },
+        {
+          "kind": "hdr_append",
+          "path": "client.c",
+          "line": 223,
+          "excerpt": "blobmsg_add_string(&cl->hdr, \"URL\", path);"
+        },
+        {
+          "kind": "request_done_call",
+          "path": "client.c",
+          "line": 352,
+          "excerpt": "uh_request_done(cl);"
+        },
+        {
+          "kind": "request_done_call",
+          "path": "client.c",
+          "line": 372,
+          "excerpt": "uh_request_done(cl);"
+        },
+        {
+          "kind": "header_cap_check",
+          "path": "client.c",
+          "line": 552,
+          "excerpt": "if (r->header_count > UH_LIMIT_HEADER_COUNT ||"
+        },
+        {
+          "kind": "header_cap_check",
+          "path": "client.c",
+          "line": 553,
+          "excerpt": "r->header_bytes > UH_LIMIT_HEADER_BYTES) {"
+        },
+        {
+          "kind": "hdr_append",
+          "path": "client.c",
+          "line": 658,
+          "excerpt": "blobmsg_add_string(&cl->hdr, data, val);"
+        },
+        {
+          "kind": "header_cap_check",
+          "path": "client.c",
+          "line": 721,
+          "excerpt": "if (r->header_count > UH_LIMIT_HEADER_COUNT ||"
+        },
+        {
+          "kind": "header_cap_check",
+          "path": "client.c",
+          "line": 722,
+          "excerpt": "r->header_bytes > UH_LIMIT_HEADER_BYTES) {"
+        },
+        {
+          "kind": "dispatch_done_call",
+          "path": "client.c",
+          "line": 877,
+          "excerpt": "uh_dispatch_done(cl);"
+        },
+        {
+          "kind": "blob_buf_free",
+          "path": "client.c",
+          "line": 884,
+          "excerpt": "blob_buf_free(&cl->hdr);"
+        },
+        {
+          "kind": "blob_buf_free",
+          "path": "client.c",
+          "line": 885,
+          "excerpt": "blob_buf_free(&cl->hdr_response);"
+        },
+        {
+          "kind": "free_call",
+          "path": "client.c",
+          "line": 886,
+          "excerpt": "free(cl);"
+        }
+      ],
+      "file.c": [
+        {
+          "kind": "request_done_call",
+          "path": "file.c",
+          "line": 254,
+          "excerpt": "uh_request_done(cl);"
+        },
+        {
+          "kind": "free_call",
+          "path": "file.c",
+          "line": 559,
+          "excerpt": "free(escaped);"
+        },
+        {
+          "kind": "free_call",
+          "path": "file.c",
+          "line": 562,
+          "excerpt": "free(files[i]);"
+        },
+        {
+          "kind": "free_call",
+          "path": "file.c",
+          "line": 595,
+          "excerpt": "free(escaped_path);"
+        },
+        {
+          "kind": "free_call",
+          "path": "file.c",
+          "line": 596,
+          "excerpt": "free(files);"
+        },
+        {
+          "kind": "request_done_call",
+          "path": "file.c",
+          "line": 599,
+          "excerpt": "uh_request_done(cl);"
+        },
+        {
+          "kind": "request_done_call",
+          "path": "file.c",
+          "line": 613,
+          "excerpt": "uh_request_done(cl);"
+        },
+        {
+          "kind": "request_done_call",
+          "path": "file.c",
+          "line": 618,
+          "excerpt": "uh_request_done(cl);"
+        },
+        {
+          "kind": "request_done_call",
+          "path": "file.c",
+          "line": 641,
+          "excerpt": "uh_request_done(cl);"
+        },
+        {
+          "kind": "request_done_call",
+          "path": "file.c",
+          "line": 658,
+          "excerpt": "uh_request_done(cl);"
+        },
+        {
+          "kind": "dispatch_free_assign",
+          "path": "file.c",
+          "line": 665,
+          "excerpt": "cl->dispatch.free = uh_file_free;"
+        },
+        {
+          "kind": "request_done_call",
+          "path": "file.c",
+          "line": 689,
+          "excerpt": "uh_request_done(cl);"
+        },
+        {
+          "kind": "free_call",
+          "path": "file.c",
+          "line": 734,
+          "excerpt": "free(escaped_url);"
+        },
+        {
+          "kind": "free_call",
+          "path": "file.c",
+          "line": 822,
+          "excerpt": "free(dr);"
+        },
+        {
+          "kind": "dispatch_req_free_assign",
+          "path": "file.c",
+          "line": 846,
+          "excerpt": "cl->dispatch.req_free = uh_free_pending_request;"
+        },
+        {
+          "kind": "dispatch_req_free_assign",
+          "path": "file.c",
+          "line": 901,
+          "excerpt": "cl->dispatch.req_free = uh_complete_request;"
+        },
+        {
+          "kind": "hdr_append",
+          "path": "file.c",
+          "line": 945,
+          "excerpt": "blobmsg_add_string(&cl->hdr, \"http-auth-user\", user);"
+        },
+        {
+          "kind": "hdr_append",
+          "path": "file.c",
+          "line": 946,
+          "excerpt": "blobmsg_add_string(&cl->hdr, \"http-auth-pass\", pass);"
+        },
+        {
+          "kind": "free_call",
+          "path": "file.c",
+          "line": 1070,
+          "excerpt": "free(escaped_url);"
+        }
+      ],
+      "handler.c": [
+        {
+          "kind": "request_done_call",
+          "path": "handler.c",
+          "line": 68,
+          "excerpt": "uh_request_done(cl);"
+        },
+        {
+          "kind": "hdr_append",
+          "path": "handler.c",
+          "line": 94,
+          "excerpt": "blobmsg_add_string(&cl->hdr, \"URL\", blobmsg_get_string(tb));"
+        },
+        {
+          "kind": "free_call",
+          "path": "handler.c",
+          "line": 225,
+          "excerpt": "free(h->request);"
+        },
+        {
+          "kind": "free_call",
+          "path": "handler.c",
+          "line": 226,
+          "excerpt": "free(h->fallback);"
+        },
+        {
+          "kind": "free_call",
+          "path": "handler.c",
+          "line": 227,
+          "excerpt": "free(h);"
+        }
+      ],
+      "main.c": [
+        {
+          "kind": "free_call",
+          "path": "main.c",
+          "line": 357,
+          "excerpt": "free(optarg);"
+        }
+      ],
+      "proc.c": [
+        {
+          "kind": "blob_buf_free",
+          "path": "proc.c",
+          "line": 263,
+          "excerpt": "blob_buf_free(&p->hdr);"
+        },
+        {
+          "kind": "dispatch_free_assign",
+          "path": "proc.c",
+          "line": 376,
+          "excerpt": "d->free = proc_free;"
+        }
+      ],
+      "tls.c": [
+        {
+          "kind": "free_call",
+          "path": "tls.c",
+          "line": 138,
+          "excerpt": "free(h);"
+        },
+        {
+          "kind": "free_call",
+          "path": "tls.c",
+          "line": 139,
+          "excerpt": "free(u);"
+        }
+      ],
+      "ubus.c": [
+        {
+          "kind": "free_call",
+          "path": "ubus.c",
+          "line": 228,
+          "excerpt": "free(str);"
+        },
+        {
+          "kind": "request_done_call",
+          "path": "ubus.c",
+          "line": 242,
+          "excerpt": "return ops->request_done(cl);"
+        },
+        {
+          "kind": "blob_buf_free",
+          "path": "ubus.c",
+          "line": 356,
+          "excerpt": "blob_buf_free(&tmp);"
+        },
+        {
+          "kind": "blob_buf_free",
+          "path": "ubus.c",
+          "line": 363,
+          "excerpt": "blob_buf_free(&tmp);"
+        },
+        {
+          "kind": "blob_buf_free",
+          "path": "ubus.c",
+          "line": 371,
+          "excerpt": "blob_buf_free(&tmp);"
+        },
+        {
+          "kind": "free_call",
+          "path": "ubus.c",
+          "line": 400,
+          "excerpt": "free(json);"
+        },
+        {
+          "kind": "ubus_unregister_subscriber",
+          "path": "ubus.c",
+          "line": 414,
+          "excerpt": "ubus_unregister_subscriber(ctx, &du->sub);"
+        },
+        {
+          "kind": "request_done_call",
+          "path": "ubus.c",
+          "line": 416,
+          "excerpt": "ops->request_done(cl);"
+        },
+        {
+          "kind": "ubus_unregister_subscriber",
+          "path": "ubus.c",
+          "line": 424,
+          "excerpt": "ubus_unregister_subscriber(ctx, &du->sub);"
+        },
+        {
+          "kind": "client_ref",
+          "path": "ubus.c",
+          "line": 445,
+          "excerpt": "uh_client_ref(cl);"
+        },
+        {
+          "kind": "dispatch_free_assign",
+          "path": "ubus.c",
+          "line": 465,
+          "excerpt": "cl->dispatch.free = uh_ubus_subscription_free;"
+        },
+        {
+          "kind": "client_unref",
+          "path": "ubus.c",
+          "line": 467,
+          "excerpt": "uh_client_unref(cl);"
+        },
+        {
+          "kind": "ubus_unregister_subscriber",
+          "path": "ubus.c",
+          "line": 471,
+          "excerpt": "ubus_unregister_subscriber(ctx, &du->sub);"
+        },
+        {
+          "kind": "client_unref",
+          "path": "ubus.c",
+          "line": 473,
+          "excerpt": "uh_client_unref(cl);"
+        },
+        {
+          "kind": "request_done_call",
+          "path": "ubus.c",
+          "line": 498,
+          "excerpt": "ops->request_done(cl);"
+        },
+        {
+          "kind": "blob_buf_free",
+          "path": "ubus.c",
+          "line": 605,
+          "excerpt": "blob_buf_free(&du->buf);"
+        },
+        {
+          "kind": "json_object_put",
+          "path": "ubus.c",
+          "line": 609,
+          "excerpt": "json_object_put(du->jsobj);"
+        },
+        {
+          "kind": "json_tokener_free",
+          "path": "ubus.c",
+          "line": 612,
+          "excerpt": "json_tokener_free(du->jstok);"
+        },
+        {
+          "kind": "free_call",
+          "path": "ubus.c",
+          "line": 617,
+          "excerpt": "free(du->url_path);"
+        },
+        {
+          "kind": "url_path_free",
+          "path": "ubus.c",
+          "line": 617,
+          "excerpt": "free(du->url_path);"
+        },
+        {
+          "kind": "request_done_call",
+          "path": "ubus.c",
+          "line": 625,
+          "excerpt": "ops->request_done(cl);"
+        },
+        {
+          "kind": "client_ref",
+          "path": "ubus.c",
+          "line": 799,
+          "excerpt": "uh_client_ref(cl);"
+        },
+        {
+          "kind": "free_call",
+          "path": "ubus.c",
+          "line": 839,
+          "excerpt": "free(dup);"
+        },
+        {
+          "kind": "client_unref",
+          "path": "ubus.c",
+          "line": 844,
+          "excerpt": "uh_client_unref(cl);"
+        },
+        {
+          "kind": "blob_buf_free",
+          "path": "ubus.c",
+          "line": 847,
+          "excerpt": "blob_buf_free(data.buf);"
+        },
+        {
+          "kind": "blob_buf_free",
+          "path": "ubus.c",
+          "line": 853,
+          "excerpt": "blob_buf_free(data.buf);"
+        },
+        {
+          "kind": "blob_buf_free",
+          "path": "ubus.c",
+          "line": 861,
+          "excerpt": "blob_buf_free(data.buf);"
+        },
+        {
+          "kind": "request_done_call",
+          "path": "ubus.c",
+          "line": 943,
+          "excerpt": "ops->request_done(cl);"
+        },
+        {
+          "kind": "client_ref",
+          "path": "ubus.c",
+          "line": 953,
+          "excerpt": "uh_client_ref(cl);"
+        },
+        {
+          "kind": "free_call",
+          "path": "ubus.c",
+          "line": 1001,
+          "excerpt": "free(data.params);"
+        },
+        {
+          "kind": "client_unref",
+          "path": "ubus.c",
+          "line": 1003,
+          "excerpt": "uh_client_unref(cl);"
+        },
+        {
+          "kind": "request_done_call",
+          "path": "ubus.c",
+          "line": 1015,
+          "excerpt": "ops->request_done(cl);"
+        },
+        {
+          "kind": "client_ref",
+          "path": "ubus.c",
+          "line": 1075,
+          "excerpt": "uh_client_ref(cl);"
+        },
+        {
+          "kind": "free_call",
+          "path": "ubus.c",
+          "line": 1108,
+          "excerpt": "free(data.params);"
+        },
+        {
+          "kind": "client_unref",
+          "path": "ubus.c",
+          "line": 1110,
+          "excerpt": "uh_client_unref(cl);"
+        },
+        {
+          "kind": "request_done_call",
+          "path": "ubus.c",
+          "line": 1137,
+          "excerpt": "ops->request_done(cl);"
+        },
+        {
+          "kind": "url_path_alloc",
+          "path": "ubus.c",
+          "line": 1172,
+          "excerpt": "du->url_path = strdup(url);"
+        },
+        {
+          "kind": "dispatch_free_assign",
+          "path": "ubus.c",
+          "line": 1182,
+          "excerpt": "d->free = uh_ubus_request_free;"
+        },
+        {
+          "kind": "request_done_call",
+          "path": "ubus.c",
+          "line": 1198,
+          "excerpt": "ops->request_done(cl);"
+        },
+        {
+          "kind": "free_call",
+          "path": "ubus.c",
+          "line": 1205,
+          "excerpt": "free(du->url_path);"
+        },
+        {
+          "kind": "url_path_free",
+          "path": "ubus.c",
+          "line": 1205,
+          "excerpt": "free(du->url_path);"
+        }
+      ],
+      "ucode.c": [
+        {
+          "kind": "free_call",
+          "path": "ucode.c",
+          "line": 132,
+          "excerpt": "free(p);"
+        },
+        {
+          "kind": "free_call",
+          "path": "ucode.c",
+          "line": 162,
+          "excerpt": "free(p);"
+        },
+        {
+          "kind": "free_call",
+          "path": "ucode.c",
+          "line": 278,
+          "excerpt": "free(syntax_error);"
+        }
+      ],
+      "uhttpd.h": [
+        {
+          "kind": "header_limit_define",
+          "path": "uhttpd.h",
+          "line": 49,
+          "excerpt": "#define UH_LIMIT_HEADER_COUNT\t100"
+        },
+        {
+          "kind": "header_limit_define",
+          "path": "uhttpd.h",
+          "line": 50,
+          "excerpt": "#define UH_LIMIT_HEADER_BYTES\t16384"
+        }
+      ]
+    }
+  },
+  "controls": {
+    "positive": {
+      "GHSA-wvgh-cm54-q6f6": {
+        "commit": "d6205aad61763b5e5d86441164b3aeed83294e7f",
+        "oracle": "O1",
+        "expect_eligible": true,
+        "result": {
+          "oracle": "O1",
+          "checks": {
+            "ref_taken": true,
+            "success_path_unref": false,
+            "error_path_unref": true,
+            "dispatch_free_hook": true,
+            "ref_count_in_func": 1,
+            "unref_count_in_func": 1
+          },
+          "evidence": [
+            {
+              "check": "O1.ref_taken",
+              "path": "ubus.c",
+              "line": 391,
+              "excerpt": "uh_client_ref(cl);"
+            },
+            {
+              "check": "O1.error_path_unref",
+              "path": "ubus.c",
+              "line": 418,
+              "excerpt": "uh_client_unref(cl);"
+            },
+            {
+              "check": "O1.dispatch_free_hook",
+              "path": "ubus.c",
+              "line": 411,
+              "excerpt": "cl->dispatch.free = uh_ubus_subscription_free;"
+            }
+          ],
+          "eligible_instance": true
+        },
+        "sha256": {
+          "ubus.c": "97caa5bbb4b006ac1f4f67ba75242617050eecf414aedcf9188613dddc6f1c4a"
+        },
+        "discrimination_pass": true
+      },
+      "GHSA-83vv-qrc6-h3hx": {
+        "commit": "e76736e5676fb25536b27d45865eb4153c68aca3",
+        "oracle": "O2",
+        "expect_eligible": true,
+        "result": {
+          "oracle": "O2",
+          "checks": {
+            "strdup_alloc": true,
+            "free_installed_before_switch": false,
+            "trailing_free_after_switch": true,
+            "trailing_null_after_free": true,
+            "request_free_frees_url_path": true,
+            "request_free_nulls_url_path": true
+          },
+          "evidence": [
+            {
+              "check": "O2.strdup_alloc",
+              "path": "ubus.c",
+              "line": 965,
+              "excerpt": "du->url_path = strdup(url);"
+            },
+            {
+              "check": "O2.free_install",
+              "path": "ubus.c",
+              "line": 985,
+              "excerpt": "d->free = uh_ubus_request_free;"
+            },
+            {
+              "check": "O2.method_switch",
+              "path": "ubus.c",
+              "line": 976,
+              "excerpt": "switch (cl->request.method)"
+            },
+            {
+              "check": "O2.trailing_free",
+              "path": "ubus.c",
+              "line": 998,
+              "excerpt": "free(du->url_path);"
+            },
+            {
+              "check": "O2.trailing_null",
+              "path": "ubus.c",
+              "line": 999,
+              "excerpt": "du->url_path = NULL;"
+            },
+            {
+              "check": "O2.request_free_free",
+              "path": "ubus.c",
+              "line": 553,
+              "excerpt": "free(du->url_path);"
+            },
+            {
+              "check": "O2.request_free_null",
+              "path": "ubus.c",
+              "line": 554,
+              "excerpt": "du->url_path = NULL;"
+            }
+          ],
+          "eligible_instance": true
+        },
+        "sha256": {
+          "ubus.c": "8eef3d47111df21afb596a383560aac801e939f9b6eede439ea6c2f00601ce0e"
+        },
+        "discrimination_pass": true
+      },
+      "GHSA-vhx4-3p5q-m59q": {
+        "commit": "7b1bec45826bd78c8afc993435bdc0f1df2fe399",
+        "oracle": "O3",
+        "expect_eligible": true,
+        "result": {
+          "oracle": "O3",
+          "checks": {
+            "append_site": true,
+            "count_increment": false,
+            "bytes_increment": false,
+            "count_cap": false,
+            "bytes_cap": false,
+            "reject_431": false,
+            "caps_before_append": false,
+            "trailer_cap": false,
+            "trailer_cap_closes_connection": false,
+            "per_request_counter_reset": true,
+            "per_request_hdr_reinit": true,
+            "hdr_reclaimed_on_close": true,
+            "count_constant_defined": false,
+            "bytes_constant_defined": false,
+            "counter_fields_defined": false
+          },
+          "evidence": [
+            {
+              "check": "O3.append",
+              "path": "client.c",
+              "line": 450,
+              "excerpt": "blobmsg_add_string(&cl->hdr, data, val);"
+            },
+            {
+              "check": "O3.per_request_counter_reset",
+              "path": "client.c",
+              "line": 200,
+              "excerpt": "memset(&cl->request, 0, sizeof(cl->request));"
+            },
+            {
+              "check": "O3.per_request_hdr_reinit",
+              "path": "client.c",
+              "line": 230,
+              "excerpt": "blob_buf_init(&cl->hdr, 0);"
+            },
+            {
+              "check": "O3.hdr_reclaimed_on_close",
+              "path": "client.c",
+              "line": 618,
+              "excerpt": "blob_buf_free(&cl->hdr);"
+            }
+          ],
+          "eligible_instance": true
+        },
+        "sha256": {
+          "client.c": "3dcbcfcfb404c0849223957c488368685b358f8db3941fed6ffc51726e1c3231",
+          "uhttpd.h": "c2f14ef121c8ba7c674dd60d00f3581c008c7e3e376bb435357f6329aacad65b"
+        },
+        "discrimination_pass": true
+      }
+    },
+    "near_miss": {
+      "NM1_subscribe_unref_removed": {
+        "transform": "delete success-path uh_client_unref(cl) before return in uh_ubus_handle_get_subscribe",
+        "expect_eligible": true,
+        "sha256": {
+          "ubus.c": "b6329c9790cdced010bde6fb9961158d3ec9ec75a4eb5fb3e11111cba7fd53d0"
+        },
+        "synthetic": true,
+        "base_pin": "93b05e0b65d91c23c5aa8fdde378df1f174ec71d",
+        "oracle": "O1",
+        "result": {
+          "oracle": "O1",
+          "checks": {
+            "ref_taken": true,
+            "success_path_unref": false,
+            "error_path_unref": true,
+            "dispatch_free_hook": true,
+            "ref_count_in_func": 1,
+            "unref_count_in_func": 1,
+            "close_refcount_guard": true,
+            "close_dispatch_done_before_free": true,
+            "unref_wakeup_on_cleanup": true
+          },
+          "evidence": [
+            {
+              "check": "O1.ref_taken",
+              "path": "ubus.c",
+              "line": 445,
+              "excerpt": "uh_client_ref(cl);"
+            },
+            {
+              "check": "O1.error_path_unref",
+              "path": "ubus.c",
+              "line": 472,
+              "excerpt": "uh_client_unref(cl);"
+            },
+            {
+              "check": "O1.dispatch_free_hook",
+              "path": "ubus.c",
+              "line": 465,
+              "excerpt": "cl->dispatch.free = uh_ubus_subscription_free;"
+            },
+            {
+              "check": "O1.close_refcount_guard",
+              "path": "client.c",
+              "line": 870,
+              "excerpt": "if (cl->refcount) {"
+            },
+            {
+              "check": "O1.close_dispatch_done",
+              "path": "client.c",
+              "line": 877,
+              "excerpt": "uh_dispatch_done(cl);"
+            },
+            {
+              "check": "O1.close_free_cl",
+              "path": "client.c",
+              "line": 886,
+              "excerpt": "free(cl);"
+            },
+            {
+              "check": "O1.unref_wakeup_on_cleanup",
+              "path": "uhttpd.h",
+              "line": 393,
+              "excerpt": "ustream_state_change(cl->us);"
+            }
+          ],
+          "eligible_instance": true
+        },
+        "discrimination_pass": true
+      },
+      "NM2_free_install_post_only": {
+        "transform": "move d->free = uh_ubus_request_free from before the method switch into case UH_HTTP_MSG_POST",
+        "expect_eligible": true,
+        "sha256": {
+          "ubus.c": "2628bee9fabca491c6bbfa2a510f3bc7a477a8c6cf21274e70ed0328db4f44fd"
+        },
+        "synthetic": true,
+        "base_pin": "93b05e0b65d91c23c5aa8fdde378df1f174ec71d",
+        "oracle": "O2",
+        "result": {
+          "oracle": "O2",
+          "checks": {
+            "strdup_alloc": true,
+            "free_installed_before_switch": false,
+            "trailing_free_after_switch": true,
+            "trailing_null_after_free": true,
+            "request_free_frees_url_path": true,
+            "request_free_nulls_url_path": true,
+            "request_done_frees_before_memset": true,
+            "dispatch_done_invokes_free": true
+          },
+          "evidence": [
+            {
+              "check": "O2.strdup_alloc",
+              "path": "ubus.c",
+              "line": 1172,
+              "excerpt": "du->url_path = strdup(url);"
+            },
+            {
+              "check": "O2.free_install",
+              "path": "ubus.c",
+              "line": 1189,
+              "excerpt": "d->free = uh_ubus_request_free;"
+            },
+            {
+              "check": "O2.method_switch",
+              "path": "ubus.c",
+              "line": 1183,
+              "excerpt": "switch (cl->request.method)"
+            },
+            {
+              "check": "O2.trailing_free",
+              "path": "ubus.c",
+              "line": 1205,
+              "excerpt": "free(du->url_path);"
+            },
+            {
+              "check": "O2.trailing_null",
+              "path": "ubus.c",
+              "line": 1206,
+              "excerpt": "du->url_path = NULL;"
+            },
+            {
+              "check": "O2.request_free_free",
+              "path": "ubus.c",
+              "line": 617,
+              "excerpt": "free(du->url_path);"
+            },
+            {
+              "check": "O2.request_free_null",
+              "path": "ubus.c",
+              "line": 618,
+              "excerpt": "du->url_path = NULL;"
+            },
+            {
+              "check": "O2.request_done_dispatch_done",
+              "path": "client.c",
+              "line": 130,
+              "excerpt": "uh_dispatch_done(cl);"
+            },
+            {
+              "check": "O2.request_done_memset",
+              "path": "client.c",
+              "line": 132,
+              "excerpt": "memset(&cl->dispatch, 0, sizeof(cl->dispatch));"
+            },
+            {
+              "check": "O2.dispatch_done_invokes_free",
+              "path": "client.c",
+              "line": 90,
+              "excerpt": "cl->dispatch.free(cl);"
+            }
+          ],
+          "eligible_instance": true
+        },
+        "discrimination_pass": true
+      },
+      "NM3_header_cap_block_removed": {
+        "transform": "delete first cap-rejection block in client_parse_header (counters retained)",
+        "expect_eligible": true,
+        "sha256": {
+          "client.c": "7b9073ff1522ef3b6c61f67a60d4e47f42b5f5ba290f2d38bef096135d19f162"
+        },
+        "synthetic": true,
+        "base_pin": "93b05e0b65d91c23c5aa8fdde378df1f174ec71d",
+        "oracle": "O3",
+        "result": {
+          "oracle": "O3",
+          "checks": {
+            "append_site": true,
+            "count_increment": true,
+            "bytes_increment": true,
+            "count_cap": false,
+            "bytes_cap": false,
+            "reject_431": false,
+            "caps_before_append": false,
+            "trailer_cap": true,
+            "trailer_cap_closes_connection": true,
+            "per_request_counter_reset": true,
+            "per_request_hdr_reinit": true,
+            "hdr_reclaimed_on_close": true,
+            "count_constant_defined": true,
+            "bytes_constant_defined": true,
+            "count_constant_value": 100,
+            "bytes_constant_value": 16384,
+            "counter_fields_defined": true
+          },
+          "evidence": [
+            {
+              "check": "O3.append",
+              "path": "client.c",
+              "line": 653,
+              "excerpt": "blobmsg_add_string(&cl->hdr, data, val);"
+            },
+            {
+              "check": "O3.count_increment",
+              "path": "client.c",
+              "line": 550,
+              "excerpt": "r->header_count++;"
+            },
+            {
+              "check": "O3.bytes_increment",
+              "path": "client.c",
+              "line": 551,
+              "excerpt": "r->header_bytes += line_len;"
+            },
+            {
+              "check": "O3.trailer_cap",
+              "path": "client.c",
+              "line": 716,
+              "excerpt": "if (r->header_count > UH_LIMIT_HEADER_COUNT ||"
+            },
+            {
+              "check": "O3.per_request_counter_reset",
+              "path": "client.c",
+              "line": 225,
+              "excerpt": "memset(&cl->request, 0, sizeof(cl->request));"
+            },
+            {
+              "check": "O3.per_request_hdr_reinit",
+              "path": "client.c",
+              "line": 255,
+              "excerpt": "blob_buf_init(&cl->hdr, 0);"
+            },
+            {
+              "check": "O3.hdr_reclaimed_on_close",
+              "path": "client.c",
+              "line": 879,
+              "excerpt": "blob_buf_free(&cl->hdr);"
+            },
+            {
+              "check": "O3.count_constant",
+              "path": "uhttpd.h",
+              "line": 49,
+              "excerpt": "#define UH_LIMIT_HEADER_COUNT\t100"
+            },
+            {
+              "check": "O3.bytes_constant",
+              "path": "uhttpd.h",
+              "line": 50,
+              "excerpt": "#define UH_LIMIT_HEADER_BYTES\t16384"
+            }
+          ],
+          "eligible_instance": true
+        },
+        "discrimination_pass": true
+      },
+      "NM4_count_cap_only": {
+        "transform": "replace first cap block with count-only cap (byte cap removed)",
+        "expect_eligible": true,
+        "sha256": {
+          "client.c": "a969cb799cb8af92a81b45d7c14d40855bd779040781bc9b010cc5ad0fad254a"
+        },
+        "synthetic": true,
+        "base_pin": "93b05e0b65d91c23c5aa8fdde378df1f174ec71d",
+        "oracle": "O3",
+        "result": {
+          "oracle": "O3",
+          "checks": {
+            "append_site": true,
+            "count_increment": true,
+            "bytes_increment": true,
+            "count_cap": true,
+            "bytes_cap": false,
+            "reject_431": true,
+            "caps_before_append": false,
+            "trailer_cap": true,
+            "trailer_cap_closes_connection": true,
+            "per_request_counter_reset": true,
+            "per_request_hdr_reinit": true,
+            "hdr_reclaimed_on_close": true,
+            "count_constant_defined": true,
+            "bytes_constant_defined": true,
+            "count_constant_value": 100,
+            "bytes_constant_value": 16384,
+            "counter_fields_defined": true
+          },
+          "evidence": [
+            {
+              "check": "O3.append",
+              "path": "client.c",
+              "line": 657,
+              "excerpt": "blobmsg_add_string(&cl->hdr, data, val);"
+            },
+            {
+              "check": "O3.count_increment",
+              "path": "client.c",
+              "line": 550,
+              "excerpt": "r->header_count++;"
+            },
+            {
+              "check": "O3.bytes_increment",
+              "path": "client.c",
+              "line": 551,
+              "excerpt": "r->header_bytes += line_len;"
+            },
+            {
+              "check": "O3.count_cap",
+              "path": "client.c",
+              "line": 552,
+              "excerpt": "if (r->header_count > UH_LIMIT_HEADER_COUNT) {"
+            },
+            {
+              "check": "O3.reject_431",
+              "path": "client.c",
+              "line": 553,
+              "excerpt": "uh_header_error(cl, 431, \"Request Header Fields Too Large\");"
+            },
+            {
+              "check": "O3.trailer_cap",
+              "path": "client.c",
+              "line": 720,
+              "excerpt": "if (r->header_count > UH_LIMIT_HEADER_COUNT ||"
+            },
+            {
+              "check": "O3.per_request_counter_reset",
+              "path": "client.c",
+              "line": 225,
+              "excerpt": "memset(&cl->request, 0, sizeof(cl->request));"
+            },
+            {
+              "check": "O3.per_request_hdr_reinit",
+              "path": "client.c",
+              "line": 255,
+              "excerpt": "blob_buf_init(&cl->hdr, 0);"
+            },
+            {
+              "check": "O3.hdr_reclaimed_on_close",
+              "path": "client.c",
+              "line": 883,
+              "excerpt": "blob_buf_free(&cl->hdr);"
+            },
+            {
+              "check": "O3.count_constant",
+              "path": "uhttpd.h",
+              "line": 49,
+              "excerpt": "#define UH_LIMIT_HEADER_COUNT\t100"
+            },
+            {
+              "check": "O3.bytes_constant",
+              "path": "uhttpd.h",
+              "line": 50,
+              "excerpt": "#define UH_LIMIT_HEADER_BYTES\t16384"
+            }
+          ],
+          "eligible_instance": true
+        },
+        "discrimination_pass": true
+      },
+      "NM5_irrelevant_comment": {
+        "transform": "add one comment line at top of ubus.c (no semantic change)",
+        "expect_eligible": false,
+        "sha256": {
+          "ubus.c": "5dc1b0eb93813f64e998438489f672d1241d9c7ec8602e5b33ad95ff00fb5cbc"
+        },
+        "synthetic": true,
+        "base_pin": "93b05e0b65d91c23c5aa8fdde378df1f174ec71d",
+        "results": {
+          "O1": false,
+          "O2": false,
+          "O3": false
+        },
+        "discrimination_pass": true
+      }
+    },
+    "negative": {
+      "description": "the pin itself",
+      "eligible_instances": {
+        "GHSA-wvgh-cm54-q6f6": false,
+        "GHSA-83vv-qrc6-h3hx": false,
+        "GHSA-vhx4-3p5q-m59q": false
+      }
+    }
+  },
+  "oracle_limits": [
+    "structural presence/line-order only; not interprocedural dataflow",
+    "does not measure runtime memory, RSS, OOM, or listener state",
+    "does not evaluate rpcd ACL reachability (external configuration)",
+    "does not evaluate libubox blob_buf_grow ceiling behavior (external dependency)",
+    "does not judge adequacy of cap values (100 headers / 16384 bytes) for legitimate traffic",
+    "does not prove absence of callback/client-free ordering races (single-threaded uloop event model assumed)",
+    "no analyzer path_found assertion; no CodeQL database built"
+  ],
+  "errors": [],
+  "complete": true
+}

@@ -1,0 +1,260 @@
+{
+ "schema": "uhttpd-decision-provenance/1",
+ "generated_at_utc": "2026-11-25T03:12:47.439760+00:00",
+ "primary_corpus": {
+  "repo_url": "https://github.com/openwrt/uhttpd.git",
+  "local_checkout": "(disposable pinned-blob checkout; path not committed)",
+  "pin": "93b05e0b65d91c23c5aa8fdde378df1f174ec71d",
+  "pin_commit": {
+   "commit": "93b05e0b65d91c23c5aa8fdde378df1f174ec71d",
+   "date": "2026-11-05 22:40:21 +0100",
+   "subject": "ubus: keep ubus list response encoding within encodable bounds"
+  },
+  "extraction": "git show <pin>:<path> (working tree never read; shared checkout never modified)",
+  "files": {
+   "ubus.c": {
+    "sha256": "11638cf862fd8638ad37a5e35c01f859f47648a7bca248078f98efb0d17985d6",
+    "bytes": 31490,
+    "lines": 1251,
+    "blob_id": "944857772185f5698c4ed67b768f49fb7823b68d"
+   },
+   "client.c": {
+    "sha256": "54b93e183b55fbbb8992a1997d3ec088441b15d28c0a1d0cea62ebf26fda165d",
+    "bytes": 28350,
+    "lines": 1146,
+    "blob_id": "47ca1dcf747e351e48753296f11ca3782c09f863"
+   },
+   "uhttpd.h": {
+    "sha256": "cbd046b4bd4607dc283444556cfd4409ff885c1e5b76a2b7f5d8212be97e11ed",
+    "bytes": 9110,
+    "lines": 396,
+    "blob_id": "074e85c282052c97cde45646d26e62c1b6ce2a8f"
+   },
+   "utils.c": {
+    "sha256": "2cd4500d1ed28c43d8d43d775249723d2894579b5ca8eb233948918183c575ac",
+    "bytes": 8177,
+    "lines": 323,
+    "blob_id": "1db20a85b2fbe0ab45fedf82009a20f90bc80d82"
+   },
+   "utils.h": {
+    "sha256": "6039732f8fe27e05d41bc8ad400f27339900958475a3673b380832bc35be0b11",
+    "bytes": 2872,
+    "lines": 101,
+    "blob_id": "1c481f83bda56137e178233024f8ccb837ae6f8a"
+   },
+   "file.c": {
+    "sha256": "399ada72b9a9d7378cc4dd07f075da73a49dd6c1fc9d251c1a0e68cc9bc8c816",
+    "bytes": 24066,
+    "lines": 1071,
+    "blob_id": "e89f0ce8d2075742f37f310b5506950c0eaaee54"
+   },
+   "main.c": {
+    "sha256": "20424d0f679f7ef1b176fd0a615b27eead110c6f68a463c912c3d59dce0902a8",
+    "bytes": 15875,
+    "lines": 692,
+    "blob_id": "286e34429f8c7c4c555a9c4f3ea7cb1fa43acd3e"
+   },
+   "handler.c": {
+    "sha256": "7e89f8c19e55ebde6f2a210cb8de3f380aa114b459dc2c95e998175b9f54b34a",
+    "bytes": 6231,
+    "lines": 258,
+    "blob_id": "04e71e0f9ef65f6d99f6d3e82917916fbe2b5616"
+   },
+   "relay.c": {
+    "sha256": "dfd69fd14d25c51fb6022fef8ef2d7a35c49162a31774e3f392c8e174e3fd873",
+    "bytes": 4407,
+    "lines": 205,
+    "blob_id": "4b9f3f945c99737b36778fb01422308cf6a15464"
+   },
+   "proc.c": {
+    "sha256": "1ce278a5486f780adc3ff08454fe5afd4119b748d7899da7d28e9c6b72115148",
+    "bytes": 10266,
+    "lines": 399,
+    "blob_id": "977d2ee8c3e60125a404228bfa4900c0b32f133b"
+   },
+   "cgi.c": {
+    "sha256": "8a7749004c2eba2f20916a3822c457349ea90dd69b6cb0a834222fcbab78fc37",
+    "bytes": 3315,
+    "lines": 131,
+    "blob_id": "b953a6b8569b21950548dc73444ac5207848f42d"
+   },
+   "ucode.c": {
+    "sha256": "b17729b18dc3cce842151adec93c3a7a63b280dfc994f263fab595b60579bc90",
+    "bytes": 10051,
+    "lines": 455,
+    "blob_id": "6b2e53bdd13c16029f26d82537e36593ac2e317a"
+   },
+   "lua.c": {
+    "sha256": "967fe9fa8e2ae61fc1a7d8187ee9bf916d180e9c8ed25c5ae4e60876d7d511d8",
+    "bytes": 7223,
+    "lines": 347,
+    "blob_id": "f026cbe63dd7bc930bd092b0b4174bfc382898e7"
+   },
+   "plugin.c": {
+    "sha256": "b39e563f28f3f800673760009c7113fe82e63de531eb0130e5bf892e4050b7b7",
+    "bytes": 2007,
+    "lines": 70,
+    "blob_id": "b84236c7a0cdb8b85daa6282ebf62684be359319"
+   },
+   "plugin.h": {
+    "sha256": "f9d9683ff9cd2496124806a57e37016644cc8c903e7b118598238949e8348a3f",
+    "bytes": 1909,
+    "lines": 45,
+    "blob_id": "822cb549e84b301847f548ca7661fd24bc3915d7"
+   },
+   "auth.c": {
+    "sha256": "1c352b8bd10a5b1f28398dfca7052965238150b31088d244c01863e091f93ee6",
+    "bytes": 5805,
+    "lines": 210,
+    "blob_id": "45cb09a21b14d1d8d7b5363b527bd59f76cb55a3"
+   },
+   "listen.c": {
+    "sha256": "624e2af3d0e05b43cd4c5aa50e17e93e6abbaa17a3b02ab5818ce8b2c8f7f015",
+    "bytes": 5713,
+    "lines": 242,
+    "blob_id": "9795ad46e16a469562b75b3284c0bd1651f12f40"
+   },
+   "tls.c": {
+    "sha256": "fcf64999ad655821a23fbff7f52f4baf64e2ed636c9da3aaaf9fad8458068286",
+    "bytes": 3265,
+    "lines": 140,
+    "blob_id": "aab9111cf37f4717a6efdccda6e480ebe53cb1b4"
+   },
+   "tls.h": {
+    "sha256": "89c1ec11ecb7dd345a606786127dea0c018a786382db7856f189fe667f23b0aa",
+    "bytes": 1489,
+    "lines": 51,
+    "blob_id": "06fbee95f800173055be075024b6b15ae4033cc3"
+   }
+  }
+ },
+ "fix_commits": {
+  "GHSA-wvgh-cm54-q6f6": {
+   "commit": "3c48b9e17d2086f9756b97e5825c2ebdf3ed233a",
+   "parent": "d6205aad61763b5e5d86441164b3aeed83294e7f",
+   "subject": "ubus: release client refcount on successful /ubus/subscribe",
+   "date": "2026-08-03 10:13:52 +0200"
+  },
+  "GHSA-83vv-qrc6-h3hx": {
+   "commit": "42e30caa704e4e6e28fc7412e0006959eb247c44",
+   "parent": "e76736e5676fb25536b27d45865eb4153c68aca3",
+   "subject": "ubus: set d->free unconditionally to fix url_path leak",
+   "date": "2026-08-03 10:04:53 +0200"
+  },
+  "GHSA-vhx4-3p5q-m59q": {
+   "commit": "f6c2fcfa539de49ddf6de8f805110c8804602e98",
+   "parent": "7b1bec45826bd78c8afc993435bdc0f1df2fe399",
+   "subject": "client: cap cumulative header count and bytes per request",
+   "date": "2026-07-24 01:48:06 +0200",
+   "companion": {
+    "commit": "f682ccabee9ed5f39dd3b0aaf96228975eeb478d",
+    "subject": "client: parse and discard chunked trailer sections, use enum chunked_state",
+    "date": "2026-07-24 12:04:03 +0200"
+   }
+  }
+ },
+ "positive_control_blobs": {
+  "GHSA-wvgh-cm54-q6f6": {
+   "commit": "d6205aad61763b5e5d86441164b3aeed83294e7f",
+   "files": [
+    "ubus.c"
+   ]
+  },
+  "GHSA-83vv-qrc6-h3hx": {
+   "commit": "e76736e5676fb25536b27d45865eb4153c68aca3",
+   "files": [
+    "ubus.c"
+   ]
+  },
+  "GHSA-vhx4-3p5q-m59q": {
+   "commit": "7b1bec45826bd78c8afc993435bdc0f1df2fe399",
+   "files": [
+    "client.c",
+    "uhttpd.h"
+   ]
+  }
+ },
+ "near_miss_fixtures": {
+  "NM1_subscribe_unref_removed": {
+   "base_pin": "93b05e0b65d91c23c5aa8fdde378df1f174ec71d",
+   "transform": "delete success-path uh_client_unref(cl) before return in uh_ubus_handle_get_subscribe",
+   "sha256": {
+    "ubus.c": "b6329c9790cdced010bde6fb9961158d3ec9ec75a4eb5fb3e11111cba7fd53d0"
+   }
+  },
+  "NM2_free_install_post_only": {
+   "base_pin": "93b05e0b65d91c23c5aa8fdde378df1f174ec71d",
+   "transform": "move d->free = uh_ubus_request_free from before the method switch into case UH_HTTP_MSG_POST",
+   "sha256": {
+    "ubus.c": "2628bee9fabca491c6bbfa2a510f3bc7a477a8c6cf21274e70ed0328db4f44fd"
+   }
+  },
+  "NM3_header_cap_block_removed": {
+   "base_pin": "93b05e0b65d91c23c5aa8fdde378df1f174ec71d",
+   "transform": "delete first cap-rejection block in client_parse_header (counters retained)",
+   "sha256": {
+    "client.c": "7b9073ff1522ef3b6c61f67a60d4e47f42b5f5ba290f2d38bef096135d19f162"
+   }
+  },
+  "NM4_count_cap_only": {
+   "base_pin": "93b05e0b65d91c23c5aa8fdde378df1f174ec71d",
+   "transform": "replace first cap block with count-only cap (byte cap removed)",
+   "sha256": {
+    "client.c": "a969cb799cb8af92a81b45d7c14d40855bd779040781bc9b010cc5ad0fad254a"
+   }
+  },
+  "NM5_irrelevant_comment": {
+   "base_pin": "93b05e0b65d91c23c5aa8fdde378df1f174ec71d",
+   "transform": "add one comment line at top of ubus.c (no semantic change)",
+   "sha256": {
+    "ubus.c": "5dc1b0eb93813f64e998438489f672d1241d9c7ec8602e5b33ad95ff00fb5cbc"
+   }
+  }
+ },
+ "advisory_source": {
+  "source_endpoint": "https://api.github.com/repos/openwrt/uhttpd/security-advisories?per_page=100",
+  "retrieved_at_utc": "2026-11-25T02:10:10.996746+00:00",
+  "sha256": "6745e90530e9a8738ae4637844673bd96e385c30215a0e9631388bbe5cd9815c",
+  "advisories": {
+   "GHSA-wvgh-cm54-q6f6": {
+    "summary": "uhttpd: leaked client refcount on /ubus/subscribe/ \u2014 permanent listener wedge",
+    "severity": "medium",
+    "published_at": "2026-08-03T08:25:50Z",
+    "cve_id": null,
+    "url": "https://github.com/openwrt/uhttpd/security/advisories/GHSA-wvgh-cm54-q6f6"
+   },
+   "GHSA-83vv-qrc6-h3hx": {
+    "summary": "uhttpd: unauthenticated unbounded memory growth \u2014 du->url_path leaked on every non-POST /ubus request",
+    "severity": "high",
+    "published_at": "2026-08-03T08:05:48Z",
+    "cve_id": null,
+    "url": "https://github.com/openwrt/uhttpd/security/advisories/GHSA-83vv-qrc6-h3hx"
+   },
+   "GHSA-vhx4-3p5q-m59q": {
+    "summary": "uhttpd \u2014 pre-auth HTTP header-accumulation memory-exhaustion DoS",
+    "severity": "high",
+    "published_at": "2026-07-21T22:31:10Z",
+    "cve_id": "CVE-2026-102338",
+    "url": "https://github.com/openwrt/uhttpd/security/advisories/GHSA-vhx4-3p5q-m59q"
+   }
+  }
+ },
+ "upstream_alignment": {
+  "check": "git ls-remote https://github.com/openwrt/uhttpd.git refs/heads/master",
+  "remote_master": "93b05e0b65d91c23c5aa8fdde378df1f174ec71d",
+  "pin_equals_remote_master": true
+ },
+ "constraints_honored": [
+  "pinned blobs only (git show); no dirty working-tree reads",
+  "writes confined to the decision output directory",
+  "no ledger claim created or edited; no gate lifted",
+  "no analyzer path_found asserted; no CodeQL database or heavy run",
+  "no runtime/exploit verdict; advisory text used as motivation/source-shape only",
+  "no commit, no push, no shared/ modification"
+ ],
+ "tools": {
+  "git": "git version 2.47.3",
+  "python": "3.13.5"
+ },
+ "errors": []
+}

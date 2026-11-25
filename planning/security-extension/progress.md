@@ -29,3 +29,9 @@
 - 2026-11-25: Lane I (091/093) background process exited 1 on provider quota after
   partial artifacts; orchestrator re-ran both pipelines (exit 0): 091 oracle PASS,
   controls 27/27 (gate 3/3); 093 oracle pass, controls 3/3. Claims remain Demonstrated.
+- 2026-11-25: Lane L uhttpd decision packet completed (exit 0); orchestrator re-ran
+  run_pipeline.sh (exit 0): all three advisory shapes fixed_at_pin, eligible=false,
+  3 positive + 5 near-miss controls pass. Recommendation Option B is already realized
+  by claims 102–104 (Demonstrated); no duplicate claims filed. Public-safe packet,
+  census, and sanitized provenance archived under evidence/uhttpd-decision-20261125/.
+  The Security-40 resource-lifecycle deferral condition is satisfied.
