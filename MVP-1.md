@@ -1327,6 +1327,21 @@ incoming OpenWrt/LuCI changes.
   hosted contract, typed-handoff and unittest checks passed in runs
   `45500743224`, `45500743278` and `45500743128`. The live scans skipped
   because the release lock is null.
+  Draft #160 now has base-tree commits `17efa31` and `1b42fdc` on its exact
+  head `1b42fdc99492867df76d6ff074379c9c1053db21`. The resolver fetches
+  the captured API base SHA from the hardcoded canonical upstream into an
+  isolated temporary Git repository, verifies the commit and tree, and
+  records both in its receipt. The event manifest checks that tree against
+  a fresh source inventory; the control adapter separately binds its frozen
+  policy base tree. Missing/mismatched objects, inherited Git URL rewrites,
+  timeouts and receipt/inventory tree drift have focused rejection controls.
+  An independent live helper check fetched pinned OpenWrt commit
+  `4e9642517b48bae612ff10fb72fb9199e559500e` and returned tree
+  `328d4df01c038d365176b72753b778e10c3ff413`, matching GitHub's Git
+  commit API. Hosted contract, unittest, typed-handoff and lock-state checks
+  passed on the new PR head; live resolution and released scans skipped on
+  the null lock. The workflow still replays captured PR API bytes rather than
+  re-fetching the PR in the scan job, and no trusted completion issuer exists.
   A separate [inert local feasibility probe](evidence/mvp-inert-positive-local-20261124/README.md)
   placed an unreachable direct-RPC shell-word pattern at the v0.6-selected
   LuCI `example.uc` path and an otherwise matching quoted control in isolated
@@ -1385,7 +1400,7 @@ incoming OpenWrt/LuCI changes.
   final in-flight capacity rule. Keep #164 draft and unscheduled until these
   gaps and the exact CI gate are resolved; it is not Gate 8 evidence.
   A separate stacked [default-tip draft PR #165](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/165)
-  at `c26413716136e82194156e6a870629960786057b` prepares an offline
+  now at `19be819be60673528f6c5c67e00012b3003ac3ea` prepares an offline
   source-first path for a selected default-branch tip and a distinct earlier
   recorded tip of the same repository and branch. It independently checks
   canonical commit/tree identities in fresh checkouts, pins the source policy,
@@ -1397,7 +1412,12 @@ incoming OpenWrt/LuCI changes.
   default-tip modules into the existing policy CI job. Their 15 tests pass
   locally; hosted Linux run `45530467801` passed `unittest` and
   `typed-handoff`, and its conformance log names test cases from both modules
-  (1,128 total conformance tests). The earlier tip is only a control candidate.
+  (1,128 total conformance tests). After #160's base-tree change, #165's four
+  commits were replayed onto the new base and its adapter now derives the
+  frozen policy base tree from its inventory. Forty-eight combined focused
+  tests passed locally. Hosted run `45532175245` passed `unittest` and
+  `typed-handoff` on the restacked head, including the base-tree and
+  default-tip module tests. The earlier tip is only a control candidate.
   No live upstream fetch, authenticated checkpoint history, clean-control
   result, released scan or consumer replay has occurred, and #165 remains
   draft and unscheduled. Integrating its event kind and actual SARIF into the
