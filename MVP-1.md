@@ -1525,6 +1525,15 @@ incoming OpenWrt/LuCI changes.
   consistency checking: source and release
   authentication, immutable artifact custody, queue reservation and signing,
   and a live positive/control drill remain open.
+  Stacked [draft PR #168](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/168)
+  at `f3886e24e3f8cc86465253b6fb2d6d079d2140d0` invokes the non-issuing
+  graph check after the actual event and control scan steps in the same job.
+  It replays both source-first manifests, requires both scan steps to succeed,
+  and retains a checked or failure report. Local unit tests, `actionlint`,
+  and defensive static review passed. Exact-head hosted runs `45545759306`
+  and `45545759259` passed the offline contract and policy tests; the released
+  scan and graph step skipped on the null lock. Artifact freezing, queue
+  custody, credential isolation and the live drill remain open.
   An earlier offline link probe was kept out because it did not replay the
   actual SARIF consumer. PR #166 adds that replay, but its synthetic tests
   still do not establish producer execution or a trusted consumer run.
