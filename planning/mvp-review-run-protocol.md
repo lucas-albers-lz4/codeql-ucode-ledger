@@ -11,7 +11,7 @@ step.
 | Work | First route | Review route |
 |---|---|---|
 | Pinned inventories, PR/CI status, receipt arithmetic, exact path and hash comparison | `gpt-6-luna` | Verify mechanically against source/raw receipts; escalate a semantic discrepancy |
-| Workflow coordination, package preflight, test wiring and non-security implementation | `gpt-6.1-terra` when its exact route works | `gpt-6.2-sol` for a difficult boundary or final decision |
+| Workflow coordination, package preflight, test wiring and non-security implementation | `gpt-6-luna` at xhigh effort while Terra is unavailable | `gpt-6.2-sol` for a difficult boundary or final decision when available |
 | Defensive security semantics, model/flow identity, shell or queue trust design | `gpt-6-sol` | Independent `gpt-6.2-sol` review when a boundary decision matters |
 | Final promotion, release or evidence-scope decision | Primary owner with `gpt-6.2-sol` review when needed | Check the current exact head and raw gate evidence |
 
@@ -19,9 +19,10 @@ These are options, not mandatory stages. Smoke-test an exact route before
 relying on it. During this review, `gpt-6.1-terra` returned a Daybreak 403;
 a second trivial read-only route smoke also returned the same 403. A
 `gpt-6.2-sol` final document-review attempt returned the same Daybreak 403.
-None produced a review and none may be relabeled as one. Continue
-with the primary owner or explicitly choose another available route and
-record the change. A requested model name is an assignment, not independent
+None produced a review and none may be relabeled as one. The user selected
+`gpt-6-luna` at xhigh effort for work formerly assigned to Terra; a bounded
+process review completed on that route. If a future route fails, continue with the primary
+owner and record the change. A requested model name is an assignment, not independent
 server-side model attestation. Do not run heavy scans concurrently against
 shared writable paths.
 
@@ -47,8 +48,12 @@ Write a compact review packet in the PR, claim or run notes:
 
 For an issuer, queue or artifact-custody change, add a trust-boundary map:
 which bytes are untrusted, who can write them, when writers stop, which
-paths are opened first, where credentials live, and what binds the event,
-control, release lock, run/attempt and queue reservation. Review that map
+paths are opened first, and who owns the queue database path and parent store
+before the first SQLite open. Include replacement, alias and hardlink checks
+at that boundary. Identify workflow token and action permissions, every
+process that can execute incoming data, and whether it can reach issuer
+credentials. Record what binds the event, control, release lock, run/attempt
+and queue reservation. Review that map
 before implementing the writer or signer. Test alias and special-file
 rejection **before the first read or write**, exclusive output creation,
 hardlinks, exact directory contents, tracked symlink exceptions, stale

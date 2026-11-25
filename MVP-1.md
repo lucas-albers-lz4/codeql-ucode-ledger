@@ -247,9 +247,11 @@ rather than treating an earlier smoke test as a permanent service result.
 Use the [MVP review and run protocol](planning/mvp-review-run-protocol.md)
 for cross-repository and trust-boundary work; it specifies the context packet,
 pre-output controls, review order, exact-head revalidation and build-cost gate.
-`gpt-6-luna` handles bounded inventories and receipts; `gpt-6.1-terra`
-handles ordinary coordination and verification; `gpt-6.2-sol` is available
-for difficult non-security semantics and final evidence-boundary review.
+`gpt-6-luna` handles bounded inventories and receipts. Following the user's
+2026-11-25 routing change, `gpt-6-luna` at xhigh effort handles ordinary
+coordination and verification formerly assigned to Terra. Use
+`gpt-6.2-sol` for difficult non-security semantics and final
+evidence-boundary review when its exact route is available.
 For defensive security-sensitive historical shell review, use the user's
 Daybreak-capable `gpt-6-sol` route; `gpt-6-terra` would require its exact
 route to become available and pass a smoke test. Do not silently substitute
@@ -266,7 +268,9 @@ a later trivial read-only `gpt-6.1-terra` smoke returned the same 403. No
 other Terra route is exposed in this session. The primary owner performed
 the process review without claiming Terra corroboration. A separate
 `gpt-6.2-sol` final document-review attempt also returned a Daybreak 403,
-so that review was not performed by the requested route.
+so that review was not performed by the requested route. The user then
+assigned Terra-class work to `gpt-6-luna` at xhigh effort; an independent
+process review was routed accordingly.
 The runtime does not attest an independent server-side model ID. The
 `gpt-daybreak-blue-latest` alias was tested but is not used for this plan
 because the user identified its routing/cost ambiguity.

@@ -174,7 +174,7 @@ Replace the placeholders; do not paste the example unchanged. Record dirty state
 For model-assisted work, keep the split simple:
 
 - **`gpt-6-luna`:** bounded mechanical collection, inventories, mapping paths to existing tests, and organizing run receipts. Check its output against the actual sources or commands.
-- **`gpt-6.1-terra`:** ordinary coordination, paired pins and non-security verification when the exact route works.
+- **`gpt-6-luna` at xhigh:** ordinary coordination, paired pins and non-security verification that would otherwise have gone to Terra. The Terra route currently fails a Daybreak smoke test.
 - **`gpt-6-sol`:** defensive security-sensitive semantics, shell and trust-boundary design.
 - **`gpt-6.2-sol`:** difficult final evidence-boundary review when needed.
 

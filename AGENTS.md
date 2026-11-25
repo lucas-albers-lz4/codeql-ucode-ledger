@@ -90,10 +90,13 @@ change, then satisfy the required exact-head gate.
 ## Model routing
 
 The user's requested routes are `gpt-6-luna` for bounded inventories and
-receipts, `gpt-6.1-terra` for coordination and non-security verification,
-`gpt-6-sol` for defensive security-sensitive semantics and trust-boundary
-work, and `gpt-6.2-sol` for difficult final evidence-boundary review when
-needed. These are optional task roles, not mandatory stages. Resolve and
+receipts, `gpt-6-luna` at xhigh effort for coordination and non-security
+verification previously assigned to Terra, `gpt-6-sol` for defensive
+security-sensitive semantics and trust-boundary work, and `gpt-6.2-sol` for
+difficult final evidence-boundary review when available. The
+`gpt-6.1-terra` route returned Daybreak 403 in this session; do not assign
+work to it until a fresh route smoke succeeds. These are optional task
+roles, not mandatory stages. Resolve and
 smoke-test the exact route at execution time. If a route is unavailable,
 record the failed attempt and continue with the primary owner or explicitly
 choose another route; do not silently substitute or claim that review

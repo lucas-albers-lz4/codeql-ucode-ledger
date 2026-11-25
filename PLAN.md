@@ -124,8 +124,9 @@ commit or push unless requested.
 ## Optional delegation and review
 
 If delegation is authorized and the exact route is available, use
-`gpt-6-luna` for inventories and receipts, `gpt-6.1-terra` for ordinary
-coordination and verification, `gpt-6-sol` for defensive security-sensitive
+`gpt-6-luna` for inventories and receipts, `gpt-6-luna` at xhigh effort for
+ordinary coordination and verification while Terra is unavailable,
+`gpt-6-sol` for defensive security-sensitive
 semantics, and `gpt-6.2-sol` for difficult final review when needed. Resolve
 and smoke-test routes before use; record unavailable routes rather than
 silently substituting. A same-model second pass is not independent-model
