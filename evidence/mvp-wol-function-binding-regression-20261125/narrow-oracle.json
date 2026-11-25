@@ -1,0 +1,14 @@
+{
+  "expected_matrix_rows": {
+    "matrix_func_let.uc": [[3, 2, "VariableDeclarator"]],
+    "matrix_func_func.uc": [],
+    "matrix_hoist.uc": [[3, 2, "FunctionDeclaration"]],
+    "matrix_nested_sibling.uc": [[5, 4, "FunctionDeclaration"], [8, 1, "FunctionDeclaration"]],
+    "matrix_formal_shadow.uc": [[2, 2, "Identifier"], [3, 1, "FunctionDeclaration"]],
+    "matrix_write.uc": [[3, 1, "FunctionDeclaration"]],
+    "matrix_closure_write.uc": [[4, 1, "FunctionDeclaration"]],
+    "matrix_ordinary_var.uc": [[2, 1, "VariableDeclarator"], [3, 3, "VariableDeclarator"], [4, 1, "VariableDeclarator"]]
+  },
+  "expected_wol_rule_rows": {"identity.uc": 7, "identity_fixed_guard.uc": 42},
+  "expected_existing_query_match": ["VariableOrderBindings", "VariableOrderFlow", "SsaReachesSystem"]
+}

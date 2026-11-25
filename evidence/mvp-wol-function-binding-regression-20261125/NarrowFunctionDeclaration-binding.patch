@@ -1,0 +1,94 @@
+diff --git a/ql/lib/codeql/ucode/ast/Variables.qll b/ql/lib/codeql/ucode/ast/Variables.qll
+index 2e878a5..0a9ac34 100644
+--- a/ql/lib/codeql/ucode/ast/Variables.qll
++++ b/ql/lib/codeql/ucode/ast/Variables.qll
+@@ -1,5 +1,5 @@
+ /**
+- * ucode lexical variables, loop bindings, catch parameters, and named formals.
++ * ucode lexical variables, function declarations, loop bindings, catch parameters, and named formals.
+  *
+  * Generator leftover `codeql.bicep` imports, ParameterDeclaration/OutputDeclaration,
+  * and `getEnclosingCfgScope` are intentionally absent. Name binding uses the nearest lexical block and respects function parameters.
+@@ -17,6 +17,18 @@ private import internal.AstNodes
+ private import internal.TreeSitter
+ 
+ private predicate variableDecl(AstNode node, string name) {
++  exists(UCODE::FunctionDeclaration f |
++    node = TFunctionDeclaration(f) and name = f.getName().getValue() and
++    not exists(UCODE::FunctionDeclaration other |
++      other != f and other.getName().getValue() = name and
++      functionScope(other) = functionScope(f)
++    ) and
++    not exists(UCODE::VariableDeclarator other |
++      other.getName().getValue() = name and
++      declarationScope(other) = functionScope(f)
++    )
++  )
++  or
+   exists(UCODE::VariableDeclarator d |
+     node = TVariableDeclarator(d) and
+     name = d.getName().getValue()
+@@ -76,8 +88,8 @@ private UCODE::AstNode functionBodyOfFormal(UCODE::Identifier id) {
+ }
+ 
+ /**
+- * A variable defined by a lexical declarator, loop binding, catch parameter,
+- * or named function formal.
++ * A variable defined by a lexical declarator, function declaration, loop binding,
++ * catch parameter, or named function formal.
+  */
+ class Variable extends MkVariable {
+   private AstNode node;
+@@ -120,8 +132,22 @@ private UCODE::AstNode declarationScope(UCODE::VariableDeclarator d) {
+   )
+ }
+ 
++/** The nearest lexical block containing a function declaration. */
++private UCODE::AstNode functionScope(UCODE::FunctionDeclaration f) {
++  result = f.getParent+() and
++  lexicalScope(result) and
++  not exists(UCODE::AstNode inner |
++    inner = f.getParent+() and inner.getParent+() = result and lexicalScope(inner)
++  )
++}
++
+ /** A declaration's actual binding scope, including loop-local bindings. */
+ private UCODE::AstNode bindingScope(Variable v) {
++  exists(UCODE::FunctionDeclaration f |
++    v.getAstNode() = TFunctionDeclaration(f) and
++    result = functionScope(f)
++  )
++  or
+   exists(UCODE::VariableDeclarator d |
+     v.getAstNode() = TVariableDeclarator(d) and result = declarationScope(d)
+   )
+@@ -170,7 +196,15 @@ private predicate parameterBinding(UCODE::AstNode body, string name) {
+ 
+ /** A lexical declarator becomes visible at its name, not at block entry. */
+ private predicate declaredAt(Variable v, UCODE::AstNode occurrence) {
+-  not v.getAstNode() instanceof TVariableDeclarator
++  exists(UCODE::FunctionDeclaration f |
++    v.getAstNode() = TFunctionDeclaration(f) and
++    (f.getName().getLocation().getStartLine() < occurrence.getLocation().getStartLine() or
++      f.getName().getLocation().getStartLine() = occurrence.getLocation().getStartLine() and
++      f.getName().getLocation().getStartColumn() < occurrence.getLocation().getStartColumn())
++  )
++  or
++  not v.getAstNode() instanceof TVariableDeclarator and
++  not v.getAstNode() instanceof TFunctionDeclaration
+   or
+   exists(UCODE::VariableDeclarator d |
+     v.getAstNode() = TVariableDeclarator(d) and
+@@ -201,6 +235,12 @@ private predicate visibleAt(UCODE::AstNode occurrence, Variable v, string name)
+       inner.getParent+() = scope and
+       occurrence.getParent*() = inner
+     ) and
++    not exists(UCODE::FunctionDeclaration hidden, UCODE::AstNode inner |
++      hidden.getName().getValue() = name and
++      inner = functionScope(hidden) and
++      inner.getParent+() = scope and
++      occurrence.getParent*() = inner
++    ) and
+     not exists(UCODE::AstNode body |
+       parameterBinding(body, name) and
+       body.getParent+() = scope and

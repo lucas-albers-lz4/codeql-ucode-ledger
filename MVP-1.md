@@ -1154,6 +1154,15 @@ incoming OpenWrt/LuCI changes.
   integration in the shared model. The patch and query remain evidence only;
   production-model regression controls and downstream acceptance are still
   needed before a producer PR or suite decision.
+  A [33-file function-binding regression matrix](evidence/mvp-wol-function-binding-regression-20261125/README.md)
+  compared baseline, broad patch and narrower prototype on fresh extraction:
+  exact matrix rows were 5/15/11, all 33 files extracted once with zero
+  errors, and three existing Variable/flow/SSA query tuple sets were unchanged
+  on this slice. The narrow prototype removes the measured duplicate bindings
+  but suppresses some valid declaration-order cases under Ucode's permissive
+  redeclaration semantics. It also leaves forward declarations, imports,
+  same-body formal collisions and function-value flow unreviewed. This is a
+  stop condition for shared-model promotion, not a production-ready fix.
 - Stacked draft consumer [PR #156](https://github.com/lucas-albers-lz4/codeql-openwrt/pull/156)
   (`mvp/incoming-ci-drill` at `3a2197c`, based on #155) now has
   a manual incoming-event **identity preflight** on top of PR #155. It

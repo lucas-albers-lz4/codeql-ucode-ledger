@@ -1,0 +1,1465 @@
+{
+  "schema": "wol-function-binding-regression-v1",
+  "producer_commit": "104a398468f214961168d2edc9a10be45b80062f",
+  "oracle_sha256": "a2b9b0ea694625dd97977e301d2a5b2da700ecc452090e26b0b366108ee13948",
+  "narrow_oracle_sha256": "90dbcf21fd53508f7e27aa2e0be4250b4d2e9d417b31bbe478e025a092456e6f",
+  "preflight": {
+    "oracle_sha256": "a2b9b0ea694625dd97977e301d2a5b2da700ecc452090e26b0b366108ee13948",
+    "codeql_sha256": "bb3a754e126ed061b5f3356531cd5501872ab3864bd665b2d1afdbf8a67a146d",
+    "extractor_sha256": "6ed90de2e6b352daa939ad1d0c627f847383307f212168ad11d9dd06f4faf15b",
+    "base_model_sha256": "e18665456e4ff02a6673383897d2d94489d929d3a76be1b7036aa146d64b213a",
+    "patch_model_sha256": "83a8b73ec4cb56aba43a8c707c96fe8b49bb9f3b17ea8d5ef70f65808c45c74b",
+    "base_status": [
+      "?? ql/src/testing/"
+    ],
+    "patch_status": [
+      " M ql/lib/codeql/ucode/ast/Variables.qll",
+      "?? ql/src/testing/"
+    ],
+    "df": "Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s5   460Gi   332Gi    90Gi    79%    5.5M  944M    1%   /System/Volumes/Data\n"
+  },
+  "canonical_receipt": {
+    "oracle_sha256": "a2b9b0ea694625dd97977e301d2a5b2da700ecc452090e26b0b366108ee13948",
+    "preflight_sha256": "8f3787e4c276ba719d5c85fa10881adb03dac4c6e124489995ad17ffde730bb8",
+    "successful_multiset": {
+      "usr/share/rpcd/ucode/altered_guard.uc": 1,
+      "usr/share/rpcd/ucode/callback_shadow.uc": 1,
+      "usr/share/rpcd/ucode/callback_write.uc": 1,
+      "usr/share/rpcd/ucode/escaped_join.uc": 1,
+      "usr/share/rpcd/ucode/fixed_args.uc": 1,
+      "usr/share/rpcd/ucode/identity.uc": 1,
+      "usr/share/rpcd/ucode/identity_fixed_guard.uc": 1,
+      "usr/share/rpcd/ucode/join_shadow.uc": 1,
+      "usr/share/rpcd/ucode/luci.wol": 1,
+      "usr/share/rpcd/ucode/map_shadow.uc": 1,
+      "usr/share/rpcd/ucode/matrix_closure_write.uc": 1,
+      "usr/share/rpcd/ucode/matrix_formal_shadow.uc": 1,
+      "usr/share/rpcd/ucode/matrix_func_func.uc": 1,
+      "usr/share/rpcd/ucode/matrix_func_let.uc": 1,
+      "usr/share/rpcd/ucode/matrix_hoist.uc": 1,
+      "usr/share/rpcd/ucode/matrix_nested_sibling.uc": 1,
+      "usr/share/rpcd/ucode/matrix_ordinary_var.uc": 1,
+      "usr/share/rpcd/ucode/matrix_write.uc": 1,
+      "usr/share/rpcd/ucode/mixed_parts.uc": 1,
+      "usr/share/rpcd/ucode/mixed_quoted_parts.uc": 1,
+      "usr/share/rpcd/ucode/no_join.uc": 1,
+      "usr/share/rpcd/ucode/nonreturned.uc": 1,
+      "usr/share/rpcd/ucode/order.uc": 1,
+      "usr/share/rpcd/ucode/other_callback.uc": 1,
+      "usr/share/rpcd/ucode/overridden_method.uc": 1,
+      "usr/share/rpcd/ucode/partial_quote.uc": 1,
+      "usr/share/rpcd/ucode/parts_shadow.uc": 1,
+      "usr/share/rpcd/ucode/parts_write.uc": 1,
+      "usr/share/rpcd/ucode/popen_shadow.uc": 1,
+      "usr/share/rpcd/ucode/request_write.uc": 1,
+      "usr/share/rpcd/ucode/ssa_neg": 1,
+      "usr/share/rpcd/ucode/ssa_pos": 1,
+      "usr/share/rpcd/ucode/wrong_import.uc": 1
+    },
+    "extraction_errors": [],
+    "commands": [
+      {
+        "label": "init",
+        "cwd": "<RUN_ROOT>/patch",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "database",
+          "init",
+          "<RUN_ROOT>/db",
+          "--language=ucode",
+          "--search-path=<RUN_ROOT>/patch/extractor-pack",
+          "--common-caches=<RUN_ROOT>/cache/db",
+          "--source-root=<RUN_ROOT>/stage"
+        ],
+        "exit": 0,
+        "wall_seconds": 0.553,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "f7ebfe30ca4f3746d8d680d92878c12319f5dc547cec6e44bd0bcc30320228ba",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "index",
+        "cwd": "<RUN_ROOT>/patch",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "database",
+          "index-files",
+          "--language=ucode",
+          "--include=**/rpcd/ucode/*",
+          "--working-dir=<RUN_ROOT>/stage",
+          "--common-caches=<RUN_ROOT>/cache/db",
+          "<RUN_ROOT>/db"
+        ],
+        "exit": 0,
+        "wall_seconds": 0.681,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "675023d2ae5a269ed3c34382957edaaf436ca01d01ba1f89b45c3441f516f58c",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "finalize",
+        "cwd": "<RUN_ROOT>/patch",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "database",
+          "finalize",
+          "<RUN_ROOT>/db",
+          "--common-caches=<RUN_ROOT>/cache/db"
+        ],
+        "exit": 0,
+        "wall_seconds": 1.661,
+        "stdout_sha256": "bed7540fa4a9f65d0646583873b05825ce4d9a13c6b6aac785afa4d3b8cac54e",
+        "stderr_sha256": "f8278d8959e5cf94852045a603d0d5ab01d7a9f44065608d2ebd782259fc097e",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "success-run",
+        "cwd": "<RUN_ROOT>/patch",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "query",
+          "run",
+          "<RUN_ROOT>/patch/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+          "--database=<RUN_ROOT>/db",
+          "--search-path=<RUN_ROOT>/patch/extractor-pack:<RUN_ROOT>/patch/ql/lib:<RUN_ROOT>/patch/ql/src",
+          "--common-caches=<RUN_ROOT>/home/.codeql",
+          "--compilation-cache=<RUN_ROOT>/cache/patch",
+          "--no-default-compilation-cache",
+          "--output=<RUN_ROOT>/out/success.bqrs",
+          "--threads=1",
+          "--ram=2800"
+        ],
+        "exit": 0,
+        "wall_seconds": 1.665,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "6f00b999e3afc37a1cd79ac779f8047441d3a4bb6e8086a52d19a064ec71611d",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "success-decode",
+        "cwd": "<RUN_ROOT>/patch",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "bqrs",
+          "decode",
+          "--format=json",
+          "--entities=url,string",
+          "<RUN_ROOT>/out/success.bqrs"
+        ],
+        "exit": 0,
+        "wall_seconds": 0.24,
+        "stdout_sha256": "3da70f23cce7613f718328fa262b4ef36afefa8428d5d2bd54a3c1eaf9f8870a",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "errors-run",
+        "cwd": "<RUN_ROOT>/patch",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "query",
+          "run",
+          "<RUN_ROOT>/patch/ql/src/diagnostics/ExtractionErrors.ql",
+          "--database=<RUN_ROOT>/db",
+          "--search-path=<RUN_ROOT>/patch/extractor-pack:<RUN_ROOT>/patch/ql/lib:<RUN_ROOT>/patch/ql/src",
+          "--common-caches=<RUN_ROOT>/home/.codeql",
+          "--compilation-cache=<RUN_ROOT>/cache/patch",
+          "--no-default-compilation-cache",
+          "--output=<RUN_ROOT>/out/errors.bqrs",
+          "--threads=1",
+          "--ram=2800"
+        ],
+        "exit": 0,
+        "wall_seconds": 1.527,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "d278156eff622e631dde0ac57e21f1d615a04ad0da04be6eb9998d4dee7cb506",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "errors-decode",
+        "cwd": "<RUN_ROOT>/patch",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "bqrs",
+          "decode",
+          "--format=json",
+          "--entities=url,string",
+          "<RUN_ROOT>/out/errors.bqrs"
+        ],
+        "exit": 0,
+        "wall_seconds": 0.232,
+        "stdout_sha256": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "base-matrix-run",
+        "cwd": "<RUN_ROOT>/base",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "query",
+          "run",
+          "<RUN_ROOT>/base/ql/src/testing/FunctionBindingMatrix.ql",
+          "--database=<RUN_ROOT>/db",
+          "--search-path=<RUN_ROOT>/base/extractor-pack:<RUN_ROOT>/base/ql/lib:<RUN_ROOT>/base/ql/src",
+          "--common-caches=<RUN_ROOT>/home/.codeql",
+          "--compilation-cache=<RUN_ROOT>/cache/base",
+          "--no-default-compilation-cache",
+          "--output=<RUN_ROOT>/out/base-matrix.bqrs",
+          "--threads=1",
+          "--ram=2800"
+        ],
+        "exit": 0,
+        "wall_seconds": 8.047,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "387604aff028de383a57149f6532b25b35a692cc42e56ba563f22f98eab315c9",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "base-matrix-decode",
+        "cwd": "<RUN_ROOT>/base",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "bqrs",
+          "decode",
+          "--format=json",
+          "--entities=url,string",
+          "<RUN_ROOT>/out/base-matrix.bqrs"
+        ],
+        "exit": 0,
+        "wall_seconds": 0.233,
+        "stdout_sha256": "24706ec0ef567965f13567ad19d7360bc85bc0377e36fc0a614a6d4fe87233c3",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "base-order-run",
+        "cwd": "<RUN_ROOT>/base",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "query",
+          "run",
+          "<RUN_ROOT>/base/ql/src/extractor-smoke/VariableOrderBindings.ql",
+          "--database=<RUN_ROOT>/db",
+          "--search-path=<RUN_ROOT>/base/extractor-pack:<RUN_ROOT>/base/ql/lib:<RUN_ROOT>/base/ql/src",
+          "--common-caches=<RUN_ROOT>/home/.codeql",
+          "--compilation-cache=<RUN_ROOT>/cache/base",
+          "--no-default-compilation-cache",
+          "--output=<RUN_ROOT>/out/base-order.bqrs",
+          "--threads=1",
+          "--ram=2800"
+        ],
+        "exit": 0,
+        "wall_seconds": 2.657,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "a28a5d82b1bbb99e93069637b3053e1c785014ba1c54f12c5b129a9d5da0b67a",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "base-order-decode",
+        "cwd": "<RUN_ROOT>/base",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "bqrs",
+          "decode",
+          "--format=json",
+          "--entities=url,string",
+          "<RUN_ROOT>/out/base-order.bqrs"
+        ],
+        "exit": 0,
+        "wall_seconds": 0.234,
+        "stdout_sha256": "cf06a8a0cf9e2eeaefd538d63d362bcad4b4e8e29849b76751a84b79666607a4",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "base-flow-run",
+        "cwd": "<RUN_ROOT>/base",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "query",
+          "run",
+          "<RUN_ROOT>/base/ql/src/extractor-smoke/VariableOrderFlow.ql",
+          "--database=<RUN_ROOT>/db",
+          "--search-path=<RUN_ROOT>/base/extractor-pack:<RUN_ROOT>/base/ql/lib:<RUN_ROOT>/base/ql/src",
+          "--common-caches=<RUN_ROOT>/home/.codeql",
+          "--compilation-cache=<RUN_ROOT>/cache/base",
+          "--no-default-compilation-cache",
+          "--output=<RUN_ROOT>/out/base-flow.bqrs",
+          "--threads=1",
+          "--ram=2800"
+        ],
+        "exit": 0,
+        "wall_seconds": 9.092,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "462da689c227911668c89633a4cd576deea6b71b93afe10a74b49de537b73fd7",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "base-flow-decode",
+        "cwd": "<RUN_ROOT>/base",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "bqrs",
+          "decode",
+          "--format=json",
+          "--entities=url,string",
+          "<RUN_ROOT>/out/base-flow.bqrs"
+        ],
+        "exit": 0,
+        "wall_seconds": 0.238,
+        "stdout_sha256": "d1a8739ebed5a5cb1f6986c49efa83aa5407fdd2c38a5c83dccee7915832d57c",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "base-ssa-run",
+        "cwd": "<RUN_ROOT>/base",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "query",
+          "run",
+          "<RUN_ROOT>/base/ql/src/m4/SsaReachesSystem.ql",
+          "--database=<RUN_ROOT>/db",
+          "--search-path=<RUN_ROOT>/base/extractor-pack:<RUN_ROOT>/base/ql/lib:<RUN_ROOT>/base/ql/src",
+          "--common-caches=<RUN_ROOT>/home/.codeql",
+          "--compilation-cache=<RUN_ROOT>/cache/base",
+          "--no-default-compilation-cache",
+          "--output=<RUN_ROOT>/out/base-ssa.bqrs",
+          "--threads=1",
+          "--ram=2800"
+        ],
+        "exit": 0,
+        "wall_seconds": 4.402,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "54ff8f40682a4bb308b11cf5653aec910c09f564f98e8d54900e4324de6a1abf",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "base-ssa-decode",
+        "cwd": "<RUN_ROOT>/base",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "bqrs",
+          "decode",
+          "--format=json",
+          "--entities=url,string",
+          "<RUN_ROOT>/out/base-ssa.bqrs"
+        ],
+        "exit": 0,
+        "wall_seconds": 0.234,
+        "stdout_sha256": "0db1da25ccac731add806d9ba7110540c28cbfb9c4cf0c7c5bf9a07a23a1c175",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "patch-matrix-run",
+        "cwd": "<RUN_ROOT>/patch",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "query",
+          "run",
+          "<RUN_ROOT>/patch/ql/src/testing/FunctionBindingMatrix.ql",
+          "--database=<RUN_ROOT>/db",
+          "--search-path=<RUN_ROOT>/patch/extractor-pack:<RUN_ROOT>/patch/ql/lib:<RUN_ROOT>/patch/ql/src",
+          "--common-caches=<RUN_ROOT>/home/.codeql",
+          "--compilation-cache=<RUN_ROOT>/cache/patch",
+          "--no-default-compilation-cache",
+          "--output=<RUN_ROOT>/out/patch-matrix.bqrs",
+          "--threads=1",
+          "--ram=2800"
+        ],
+        "exit": 0,
+        "wall_seconds": 9.489,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "d96c13a0f441146bb662d50522cc03d78e67ba5ba27cf2d069f0cb3826696ada",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "patch-matrix-decode",
+        "cwd": "<RUN_ROOT>/patch",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "bqrs",
+          "decode",
+          "--format=json",
+          "--entities=url,string",
+          "<RUN_ROOT>/out/patch-matrix.bqrs"
+        ],
+        "exit": 0,
+        "wall_seconds": 0.231,
+        "stdout_sha256": "154756affdd7d6a64931bfea59d6d3423ba904adcc448c2a611e590272c102c9",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "patch-order-run",
+        "cwd": "<RUN_ROOT>/patch",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "query",
+          "run",
+          "<RUN_ROOT>/patch/ql/src/extractor-smoke/VariableOrderBindings.ql",
+          "--database=<RUN_ROOT>/db",
+          "--search-path=<RUN_ROOT>/patch/extractor-pack:<RUN_ROOT>/patch/ql/lib:<RUN_ROOT>/patch/ql/src",
+          "--common-caches=<RUN_ROOT>/home/.codeql",
+          "--compilation-cache=<RUN_ROOT>/cache/patch",
+          "--no-default-compilation-cache",
+          "--output=<RUN_ROOT>/out/patch-order.bqrs",
+          "--threads=1",
+          "--ram=2800"
+        ],
+        "exit": 0,
+        "wall_seconds": 3.015,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "80aa1ab0f20169f7c574f3da3f935f7e599035d672d20bbed1efc96f3a4d4148",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "patch-order-decode",
+        "cwd": "<RUN_ROOT>/patch",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "bqrs",
+          "decode",
+          "--format=json",
+          "--entities=url,string",
+          "<RUN_ROOT>/out/patch-order.bqrs"
+        ],
+        "exit": 0,
+        "wall_seconds": 0.243,
+        "stdout_sha256": "cf06a8a0cf9e2eeaefd538d63d362bcad4b4e8e29849b76751a84b79666607a4",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "patch-flow-run",
+        "cwd": "<RUN_ROOT>/patch",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "query",
+          "run",
+          "<RUN_ROOT>/patch/ql/src/extractor-smoke/VariableOrderFlow.ql",
+          "--database=<RUN_ROOT>/db",
+          "--search-path=<RUN_ROOT>/patch/extractor-pack:<RUN_ROOT>/patch/ql/lib:<RUN_ROOT>/patch/ql/src",
+          "--common-caches=<RUN_ROOT>/home/.codeql",
+          "--compilation-cache=<RUN_ROOT>/cache/patch",
+          "--no-default-compilation-cache",
+          "--output=<RUN_ROOT>/out/patch-flow.bqrs",
+          "--threads=1",
+          "--ram=2800"
+        ],
+        "exit": 0,
+        "wall_seconds": 9.037,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "d2e361bee2dedaed298b01baefa42e472e673786d136dba47b13c26733ba28b8",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "patch-flow-decode",
+        "cwd": "<RUN_ROOT>/patch",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "bqrs",
+          "decode",
+          "--format=json",
+          "--entities=url,string",
+          "<RUN_ROOT>/out/patch-flow.bqrs"
+        ],
+        "exit": 0,
+        "wall_seconds": 0.253,
+        "stdout_sha256": "d1a8739ebed5a5cb1f6986c49efa83aa5407fdd2c38a5c83dccee7915832d57c",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "patch-ssa-run",
+        "cwd": "<RUN_ROOT>/patch",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "query",
+          "run",
+          "<RUN_ROOT>/patch/ql/src/m4/SsaReachesSystem.ql",
+          "--database=<RUN_ROOT>/db",
+          "--search-path=<RUN_ROOT>/patch/extractor-pack:<RUN_ROOT>/patch/ql/lib:<RUN_ROOT>/patch/ql/src",
+          "--common-caches=<RUN_ROOT>/home/.codeql",
+          "--compilation-cache=<RUN_ROOT>/cache/patch",
+          "--no-default-compilation-cache",
+          "--output=<RUN_ROOT>/out/patch-ssa.bqrs",
+          "--threads=1",
+          "--ram=2800"
+        ],
+        "exit": 0,
+        "wall_seconds": 5.112,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "19886a4073f3daf8af6f270c458cca99fa4e8a39b725887590f7564a8bd7787a",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "patch-ssa-decode",
+        "cwd": "<RUN_ROOT>/patch",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "bqrs",
+          "decode",
+          "--format=json",
+          "--entities=url,string",
+          "<RUN_ROOT>/out/patch-ssa.bqrs"
+        ],
+        "exit": 0,
+        "wall_seconds": 0.244,
+        "stdout_sha256": "0db1da25ccac731add806d9ba7110540c28cbfb9c4cf0c7c5bf9a07a23a1c175",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "patch-wol-run",
+        "cwd": "<RUN_ROOT>/patch",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "query",
+          "run",
+          "<RUN_ROOT>/patch/ql/src/testing/WolUnquotedMapJoin.ql",
+          "--database=<RUN_ROOT>/db",
+          "--search-path=<RUN_ROOT>/patch/extractor-pack:<RUN_ROOT>/patch/ql/lib:<RUN_ROOT>/patch/ql/src",
+          "--common-caches=<RUN_ROOT>/home/.codeql",
+          "--compilation-cache=<RUN_ROOT>/cache/patch",
+          "--no-default-compilation-cache",
+          "--output=<RUN_ROOT>/out/patch-wol.bqrs",
+          "--threads=1",
+          "--ram=2800"
+        ],
+        "exit": 0,
+        "wall_seconds": 8.084,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "9da2e8f86144cc21e73139efeb3b4ce6d70848c06447ae0c49783c5c9fc64cf1",
+        "peak_rss_bytes": null
+      },
+      {
+        "label": "patch-wol-decode",
+        "cwd": "<RUN_ROOT>/patch",
+        "argv": [
+          "<CODEQL_2_27_4>",
+          "bqrs",
+          "decode",
+          "--format=json",
+          "--entities=url,string",
+          "<RUN_ROOT>/out/patch-wol.bqrs"
+        ],
+        "exit": 0,
+        "wall_seconds": 0.247,
+        "stdout_sha256": "7eba929a65af3ced4b4a75d7075763ec71996896e738d0d6d0e0cb16a28350e3",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "peak_rss_bytes": null
+      }
+    ],
+    "total_wall_seconds": 67.651
+  },
+  "narrow_commands": [
+    {
+      "label": "narrow-matrix-run",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "query",
+        "run",
+        "<RUN_ROOT>/narrow/ql/src/testing/FunctionBindingMatrix.ql",
+        "--database=<RUN_ROOT>/db",
+        "--search-path=<RUN_ROOT>/narrow/extractor-pack:<RUN_ROOT>/narrow/ql/lib:<RUN_ROOT>/narrow/ql/src",
+        "--common-caches=<RUN_ROOT>/home/.codeql",
+        "--compilation-cache=<RUN_ROOT>/cache/narrow",
+        "--no-default-compilation-cache",
+        "--output=<RUN_ROOT>/out/narrow-matrix.bqrs",
+        "--threads=1",
+        "--ram=2800"
+      ],
+      "exit": 0,
+      "wall_seconds": 12.276,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "0a829143c4a47158aec34b52e6cf0cbee6ea8bde5d7a21ffec5a734a1b07dd99"
+    },
+    {
+      "label": "narrow-matrix-decode",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<RUN_ROOT>/out/narrow-matrix.bqrs"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.25,
+      "stdout_sha256": "abb07d447a9291f64385ced76717c9bc7c8ead8bee8cd65bcdd2a97bf6e68bfd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "narrow-order-run",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "query",
+        "run",
+        "<RUN_ROOT>/narrow/ql/src/extractor-smoke/VariableOrderBindings.ql",
+        "--database=<RUN_ROOT>/db",
+        "--search-path=<RUN_ROOT>/narrow/extractor-pack:<RUN_ROOT>/narrow/ql/lib:<RUN_ROOT>/narrow/ql/src",
+        "--common-caches=<RUN_ROOT>/home/.codeql",
+        "--compilation-cache=<RUN_ROOT>/cache/narrow",
+        "--no-default-compilation-cache",
+        "--output=<RUN_ROOT>/out/narrow-order.bqrs",
+        "--threads=1",
+        "--ram=2800"
+      ],
+      "exit": 0,
+      "wall_seconds": 3.164,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "157a7c8a4a5fd49f2ebe5b5d260f37b67d0ab48dba453565d81eb8470c262c23"
+    },
+    {
+      "label": "narrow-order-decode",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<RUN_ROOT>/out/narrow-order.bqrs"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.246,
+      "stdout_sha256": "cf06a8a0cf9e2eeaefd538d63d362bcad4b4e8e29849b76751a84b79666607a4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "narrow-flow-run",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "query",
+        "run",
+        "<RUN_ROOT>/narrow/ql/src/extractor-smoke/VariableOrderFlow.ql",
+        "--database=<RUN_ROOT>/db",
+        "--search-path=<RUN_ROOT>/narrow/extractor-pack:<RUN_ROOT>/narrow/ql/lib:<RUN_ROOT>/narrow/ql/src",
+        "--common-caches=<RUN_ROOT>/home/.codeql",
+        "--compilation-cache=<RUN_ROOT>/cache/narrow",
+        "--no-default-compilation-cache",
+        "--output=<RUN_ROOT>/out/narrow-flow.bqrs",
+        "--threads=1",
+        "--ram=2800"
+      ],
+      "exit": 0,
+      "wall_seconds": 9.176,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e419fe89445700d7364fe9eb9ec192f035fc0386866ebbb59ed032dde71359db"
+    },
+    {
+      "label": "narrow-flow-decode",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<RUN_ROOT>/out/narrow-flow.bqrs"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.248,
+      "stdout_sha256": "d1a8739ebed5a5cb1f6986c49efa83aa5407fdd2c38a5c83dccee7915832d57c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "narrow-ssa-run",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "query",
+        "run",
+        "<RUN_ROOT>/narrow/ql/src/m4/SsaReachesSystem.ql",
+        "--database=<RUN_ROOT>/db",
+        "--search-path=<RUN_ROOT>/narrow/extractor-pack:<RUN_ROOT>/narrow/ql/lib:<RUN_ROOT>/narrow/ql/src",
+        "--common-caches=<RUN_ROOT>/home/.codeql",
+        "--compilation-cache=<RUN_ROOT>/cache/narrow",
+        "--no-default-compilation-cache",
+        "--output=<RUN_ROOT>/out/narrow-ssa.bqrs",
+        "--threads=1",
+        "--ram=2800"
+      ],
+      "exit": 0,
+      "wall_seconds": 5.028,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "7fee0560ff7a3126e23b2102658a9aa725106dc5113a7dc14fc87f96105cf4e8"
+    },
+    {
+      "label": "narrow-ssa-decode",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<RUN_ROOT>/out/narrow-ssa.bqrs"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.248,
+      "stdout_sha256": "0db1da25ccac731add806d9ba7110540c28cbfb9c4cf0c7c5bf9a07a23a1c175",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "narrow-wol-run",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "query",
+        "run",
+        "<RUN_ROOT>/narrow/ql/src/testing/WolUnquotedMapJoin.ql",
+        "--database=<RUN_ROOT>/db",
+        "--search-path=<RUN_ROOT>/narrow/extractor-pack:<RUN_ROOT>/narrow/ql/lib:<RUN_ROOT>/narrow/ql/src",
+        "--common-caches=<RUN_ROOT>/home/.codeql",
+        "--compilation-cache=<RUN_ROOT>/cache/narrow",
+        "--no-default-compilation-cache",
+        "--output=<RUN_ROOT>/out/narrow-wol.bqrs",
+        "--threads=1",
+        "--ram=2800"
+      ],
+      "exit": 0,
+      "wall_seconds": 8.107,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "6be896fd4febd5037248d830266aecc75a1207dc0731611e19014edd25b9f8d4"
+    },
+    {
+      "label": "narrow-wol-decode",
+      "argv": [
+        "<CODEQL_2_27_4>",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "<RUN_ROOT>/out/narrow-wol.bqrs"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.249,
+      "stdout_sha256": "7eba929a65af3ced4b4a75d7075763ec71996896e738d0d6d0e0cb16a28350e3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "route_summary": {
+    "input_count": 33,
+    "plain_count": 33,
+    "markup_count": 0,
+    "markup_inconclusive_count": 0,
+    "uncertain_count": 0,
+    "excluded_count": 0,
+    "duplicate_input_count": 0
+  },
+  "route_decisions": [
+    {
+      "installed_path": "usr/share/rpcd/ucode/altered_guard.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/callback_shadow.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/callback_write.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/escaped_join.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/fixed_args.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/identity.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/identity_fixed_guard.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/join_shadow.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/luci.wol",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/map_shadow.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/matrix_closure_write.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/matrix_formal_shadow.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/matrix_func_func.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/matrix_func_let.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/matrix_hoist.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/matrix_nested_sibling.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/matrix_ordinary_var.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/matrix_write.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/mixed_parts.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/mixed_quoted_parts.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/no_join.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/nonreturned.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/order.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/other_callback.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/overridden_method.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/partial_quote.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/parts_shadow.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/parts_write.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/popen_shadow.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/request_write.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/ssa_neg",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/ssa_pos",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    },
+    {
+      "installed_path": "usr/share/rpcd/ucode/wrong_import.uc",
+      "classification": "plain",
+      "reason": "rpcd_raw_mode_full_path",
+      "status": "plain_route_selected"
+    }
+  ],
+  "matrix_rows": {
+    "base": [
+      [
+        "matrix_formal_shadow.uc",
+        2,
+        2,
+        "Identifier",
+        "target"
+      ],
+      [
+        "matrix_func_let.uc",
+        3,
+        2,
+        "VariableDeclarator",
+        "target"
+      ],
+      [
+        "matrix_ordinary_var.uc",
+        2,
+        1,
+        "VariableDeclarator",
+        "value"
+      ],
+      [
+        "matrix_ordinary_var.uc",
+        3,
+        3,
+        "VariableDeclarator",
+        "value"
+      ],
+      [
+        "matrix_ordinary_var.uc",
+        4,
+        1,
+        "VariableDeclarator",
+        "value"
+      ]
+    ],
+    "patch": [
+      [
+        "matrix_closure_write.uc",
+        4,
+        1,
+        "FunctionDeclaration",
+        "target"
+      ],
+      [
+        "matrix_formal_shadow.uc",
+        2,
+        2,
+        "Identifier",
+        "target"
+      ],
+      [
+        "matrix_formal_shadow.uc",
+        3,
+        1,
+        "FunctionDeclaration",
+        "target"
+      ],
+      [
+        "matrix_func_func.uc",
+        3,
+        1,
+        "FunctionDeclaration",
+        "target"
+      ],
+      [
+        "matrix_func_func.uc",
+        3,
+        2,
+        "FunctionDeclaration",
+        "target"
+      ],
+      [
+        "matrix_func_let.uc",
+        3,
+        1,
+        "FunctionDeclaration",
+        "target"
+      ],
+      [
+        "matrix_func_let.uc",
+        3,
+        2,
+        "VariableDeclarator",
+        "target"
+      ],
+      [
+        "matrix_hoist.uc",
+        1,
+        2,
+        "FunctionDeclaration",
+        "later"
+      ],
+      [
+        "matrix_hoist.uc",
+        3,
+        2,
+        "FunctionDeclaration",
+        "later"
+      ],
+      [
+        "matrix_nested_sibling.uc",
+        5,
+        4,
+        "FunctionDeclaration",
+        "pick"
+      ],
+      [
+        "matrix_nested_sibling.uc",
+        8,
+        1,
+        "FunctionDeclaration",
+        "pick"
+      ],
+      [
+        "matrix_ordinary_var.uc",
+        2,
+        1,
+        "VariableDeclarator",
+        "value"
+      ],
+      [
+        "matrix_ordinary_var.uc",
+        3,
+        3,
+        "VariableDeclarator",
+        "value"
+      ],
+      [
+        "matrix_ordinary_var.uc",
+        4,
+        1,
+        "VariableDeclarator",
+        "value"
+      ],
+      [
+        "matrix_write.uc",
+        3,
+        1,
+        "FunctionDeclaration",
+        "target"
+      ]
+    ],
+    "narrow": [
+      [
+        "matrix_closure_write.uc",
+        4,
+        1,
+        "FunctionDeclaration",
+        "target"
+      ],
+      [
+        "matrix_formal_shadow.uc",
+        2,
+        2,
+        "Identifier",
+        "target"
+      ],
+      [
+        "matrix_formal_shadow.uc",
+        3,
+        1,
+        "FunctionDeclaration",
+        "target"
+      ],
+      [
+        "matrix_func_let.uc",
+        3,
+        2,
+        "VariableDeclarator",
+        "target"
+      ],
+      [
+        "matrix_hoist.uc",
+        3,
+        2,
+        "FunctionDeclaration",
+        "later"
+      ],
+      [
+        "matrix_nested_sibling.uc",
+        5,
+        4,
+        "FunctionDeclaration",
+        "pick"
+      ],
+      [
+        "matrix_nested_sibling.uc",
+        8,
+        1,
+        "FunctionDeclaration",
+        "pick"
+      ],
+      [
+        "matrix_ordinary_var.uc",
+        2,
+        1,
+        "VariableDeclarator",
+        "value"
+      ],
+      [
+        "matrix_ordinary_var.uc",
+        3,
+        3,
+        "VariableDeclarator",
+        "value"
+      ],
+      [
+        "matrix_ordinary_var.uc",
+        4,
+        1,
+        "VariableDeclarator",
+        "value"
+      ],
+      [
+        "matrix_write.uc",
+        3,
+        1,
+        "FunctionDeclaration",
+        "target"
+      ]
+    ]
+  },
+  "existing_queries": {
+    "VariableOrderBindings": [
+      [
+        6,
+        13,
+        4,
+        7
+      ],
+      [
+        8,
+        13,
+        7,
+        9
+      ],
+      [
+        10,
+        11,
+        4,
+        7
+      ],
+      [
+        15,
+        11,
+        14,
+        17
+      ],
+      [
+        17,
+        13,
+        14,
+        17
+      ],
+      [
+        19,
+        13,
+        18,
+        9
+      ],
+      [
+        21,
+        11,
+        14,
+        17
+      ],
+      [
+        25,
+        13,
+        24,
+        12
+      ],
+      [
+        27,
+        11,
+        23,
+        15
+      ],
+      [
+        31,
+        23,
+        31,
+        10
+      ],
+      [
+        32,
+        11,
+        29,
+        19
+      ],
+      [
+        36,
+        32,
+        34,
+        17
+      ],
+      [
+        40,
+        11,
+        34,
+        17
+      ],
+      [
+        45,
+        11,
+        44,
+        7
+      ],
+      [
+        47,
+        34,
+        47,
+        19
+      ],
+      [
+        47,
+        63,
+        47,
+        42
+      ],
+      [
+        47,
+        77,
+        47,
+        19
+      ]
+    ],
+    "VariableOrderFlow": [
+      [
+        4,
+        11,
+        6,
+        13
+      ],
+      [
+        4,
+        11,
+        10,
+        11
+      ]
+    ],
+    "SsaReachesSystem": [
+      [
+        "ssa_neg",
+        7,
+        8,
+        "ssa_neg_y reaches system in ssa_neg"
+      ],
+      [
+        "ssa_neg",
+        14,
+        15,
+        "result reaches system in ssa_neg"
+      ],
+      [
+        "ssa_neg",
+        16,
+        18,
+        "decl_safe reaches system in ssa_neg"
+      ],
+      [
+        "ssa_neg",
+        20,
+        21,
+        "from_field reaches system in ssa_neg"
+      ],
+      [
+        "ssa_neg",
+        24,
+        25,
+        "skip_safe reaches system in ssa_neg"
+      ],
+      [
+        "ssa_pos",
+        6,
+        7,
+        "ssa_pos_src reaches system in ssa_pos"
+      ],
+      [
+        "ssa_pos",
+        8,
+        10,
+        "ssa_multiline reaches system in ssa_pos"
+      ],
+      [
+        "ssa_pos",
+        12,
+        13,
+        "seq reaches system in ssa_pos"
+      ],
+      [
+        "ssa_pos",
+        14,
+        15,
+        "seq reaches system in ssa_pos"
+      ],
+      [
+        "ssa_pos",
+        16,
+        17,
+        "seq reaches system in ssa_pos"
+      ],
+      [
+        "ssa_pos",
+        18,
+        23,
+        "shadow reaches system in ssa_pos"
+      ],
+      [
+        "ssa_pos",
+        20,
+        21,
+        "shadow reaches system in ssa_pos"
+      ],
+      [
+        "ssa_pos",
+        24,
+        29,
+        "branch reaches system in ssa_pos"
+      ],
+      [
+        "ssa_pos",
+        26,
+        27,
+        "branch reaches system in ssa_pos"
+      ],
+      [
+        "ssa_pos",
+        26,
+        29,
+        "branch reaches system in ssa_pos"
+      ],
+      [
+        "ssa_pos",
+        32,
+        36,
+        "both reaches system in ssa_pos"
+      ],
+      [
+        "ssa_pos",
+        34,
+        36,
+        "both reaches system in ssa_pos"
+      ],
+      [
+        "ssa_pos",
+        37,
+        43,
+        "param reaches system in ssa_pos"
+      ],
+      [
+        "ssa_pos",
+        40,
+        41,
+        "independent reaches system in ssa_pos"
+      ],
+      [
+        "ssa_pos",
+        45,
+        46,
+        "ssa_chain_copy reaches system in ssa_pos"
+      ],
+      [
+        "ssa_pos",
+        38,
+        39,
+        "param reaches system in ssa_pos"
+      ]
+    ]
+  },
+  "wol_rule_rows": [
+    [
+      "identity.uc",
+      7,
+      "Request arguments reach this shell command through an identity map callback; executable guard: no-matching-comparison."
+    ],
+    [
+      "identity_fixed_guard.uc",
+      42,
+      "Request arguments reach this shell command through an identity map callback; executable guard: fixed-path-comparison."
+    ]
+  ],
+  "artifact_sha256": {
+    "routing.json": "01729c9840eed4e904f1e658d71a8c4a0c02f61b18a7bc21baafe2a235beb6e7",
+    "success.json": "3da70f23cce7613f718328fa262b4ef36afefa8428d5d2bd54a3c1eaf9f8870a",
+    "errors.json": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc",
+    "base-matrix.json": "24706ec0ef567965f13567ad19d7360bc85bc0377e36fc0a614a6d4fe87233c3",
+    "patch-matrix.json": "154756affdd7d6a64931bfea59d6d3423ba904adcc448c2a611e590272c102c9",
+    "narrow-matrix.json": "abb07d447a9291f64385ced76717c9bc7c8ead8bee8cd65bcdd2a97bf6e68bfd",
+    "base-order.json": "cf06a8a0cf9e2eeaefd538d63d362bcad4b4e8e29849b76751a84b79666607a4",
+    "patch-order.json": "cf06a8a0cf9e2eeaefd538d63d362bcad4b4e8e29849b76751a84b79666607a4",
+    "narrow-order.json": "cf06a8a0cf9e2eeaefd538d63d362bcad4b4e8e29849b76751a84b79666607a4",
+    "base-flow.json": "d1a8739ebed5a5cb1f6986c49efa83aa5407fdd2c38a5c83dccee7915832d57c",
+    "patch-flow.json": "d1a8739ebed5a5cb1f6986c49efa83aa5407fdd2c38a5c83dccee7915832d57c",
+    "narrow-flow.json": "d1a8739ebed5a5cb1f6986c49efa83aa5407fdd2c38a5c83dccee7915832d57c",
+    "base-ssa.json": "0db1da25ccac731add806d9ba7110540c28cbfb9c4cf0c7c5bf9a07a23a1c175",
+    "patch-ssa.json": "0db1da25ccac731add806d9ba7110540c28cbfb9c4cf0c7c5bf9a07a23a1c175",
+    "narrow-ssa.json": "0db1da25ccac731add806d9ba7110540c28cbfb9c4cf0c7c5bf9a07a23a1c175",
+    "patch-wol.json": "7eba929a65af3ced4b4a75d7075763ec71996896e738d0d6d0e0cb16a28350e3",
+    "narrow-wol.json": "7eba929a65af3ced4b4a75d7075763ec71996896e738d0d6d0e0cb16a28350e3"
+  },
+  "narrow_patch_sha256": "49b7fc508d4716dab078b2f093d1aae7994a5788b7b1a4d01a89d7755da286e5",
+  "matrix_query_sha256": "99d243711a2482cdff592002b88f3774a460114e91220404f8a9675e4e8304a9",
+  "control_sha256": {
+    "matrix_closure_write.uc": "8af05c3c3538dd996eae6f4f963726686a15536084ecc445495642fd97f46c21",
+    "matrix_formal_shadow.uc": "17500b8b5503ad6a5dd4fd115273001a108d3a5d100ffec326e776241074984f",
+    "matrix_func_func.uc": "da7c99788cf0e464efc406764d5c391a270741add3e8c1690ef1020709f63d9f",
+    "matrix_func_let.uc": "dbab0546df043b7e42e3559a0cfb996276231a12743a2f0105664a692392e329",
+    "matrix_hoist.uc": "a85979ea0b78fc8cd68b89e5add95574c87a87de3ecebf18a55cbffc98fcea32",
+    "matrix_nested_sibling.uc": "25afdfd5aa98856bc3a80296775f68feb5dc355490b3c5bc04b2d63846218c6e",
+    "matrix_ordinary_var.uc": "c235db6a7af4c30ea67ed6f715e3f28ef1f5bd27781f3baf2e8312228ad92711",
+    "matrix_write.uc": "59614b32e725ab0d24200e690b3c4741d2b621bfb0d5918096c15a15ea28c3ba"
+  }
+}
