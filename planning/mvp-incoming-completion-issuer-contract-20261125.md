@@ -46,8 +46,9 @@ execution: these checks are meaningful only under the trusted job boundary.
    head and queued base with the fresh response and resolved receipt; reject
    closed, changed or unsupported provenance. Verify full commit and tree
    from Git, including base tree where required. Recheck source/control HEAD,
-   trees and cleanliness at end. The #160 resolver currently records the base
-   commit but not its tree; extend it before supporting this contract. Default
+   trees and cleanliness at end. The #160 resolver now records a separately
+   fetched canonical base commit and tree; the eventual issuer must verify
+   that identity and the post-scan source state. Default
    tips need an equivalent independent resolver and are rejected until then.
 2. Require a fully pinned reviewed `r3-release-lock.json`, successful R3
    verification, exact lock bytes and verified release/CLI/pack identities.

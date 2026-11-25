@@ -1463,6 +1463,14 @@ incoming OpenWrt/LuCI changes.
   specifies the trusted job boundary, exact event/control artifact links,
   queue reservation binding, failure transitions and rejection controls needed
   before a completion can be signed. It is a design, not an implemented issuer.
+  A reviewed prerequisite on draft consumer PR #160 at
+  `25d1058117a099c81f2a8b4309f999396c2bf508` re-fetches the PR API
+  response in the released scan job, resolves it against canonical head,
+  base and control Git identities, and requires the resulting receipt to
+  match the captured preflight before replaying the inventory and manifest.
+  Thirty-three focused local tests and `actionlint` passed. The hosted scan
+  step remains skipped while the release lock is null; the change issues no
+  queue completion and has not passed a live Gate 8 run.
   A local offline link probe was reviewed but kept out of the repo because
   its passing fixture does not pass the actual SARIF consumer and does not
   establish producer or consumer execution. A valid queue MAC alone cannot
