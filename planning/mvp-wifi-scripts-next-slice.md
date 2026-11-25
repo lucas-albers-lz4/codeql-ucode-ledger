@@ -55,3 +55,25 @@ or source/stage/IPK mismatch fails the experiment. The existing LuCI
 installed-byte build is a process precedent only; it does not establish
 wifi-scripts bytes or a CodeQL scan. A successful pair would add a conditional
 package-member slice to Gate 6, with an explicit config denominator.
+
+## First Linux run in progress
+
+Merged consumer workflow PR #169 was dispatched on merge commit
+`9ec6c46b9a21a6d49ddd2d45ed36221c6b59442b` as
+[run 45548269425](https://github.com/lucas-albers-lz4/codeql-openwrt/actions/runs/45548269425).
+The contract job passed. The package job is still live, so there is no
+paired IPK comparison or installed-byte result yet. A partial live log
+retained only under ignored `work/wifi-ipk-live-45548269425/` shows the
+independent `y` tools and toolchain builds took about 18 and 32 minutes,
+respectively, before its package phase; `n` rebuilt tools for about 18
+minutes and was still building its toolchain at the captured log end.
+These are log-boundary estimates, not the final GNU time/RSS receipts.
+
+The duplicate bootstrap is the likely cost driver. Do not copy built
+toolchain/stage directories between variants based on this partial run:
+the logged commands embed absolute variant-root paths. A later optimization
+could copy verified downloads into the second run-owned download directory,
+but compilation dominates the observed time. First inspect the completed
+phase receipts and IPK-byte result, then compare any optimization against
+this independently bootstrapped baseline with exact config, source, stage,
+member, collision, command-status and resource controls.
