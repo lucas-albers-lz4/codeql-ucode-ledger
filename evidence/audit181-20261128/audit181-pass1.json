@@ -1,0 +1,191 @@
+[
+ {
+  "kind": "declaration",
+  "class": "TDeclaration",
+  "flow_files": [
+   "ControlFlowGraphImpl.qll",
+   "Scope.qll"
+  ],
+  "verdict": "kind-rule-found"
+ },
+ {
+  "kind": "primary_expression",
+  "class": "TPrimaryExpression",
+  "flow_files": [
+   "ControlFlowGraphImpl.qll",
+   "DataFlowPrivate.qll",
+   "Scope.qll"
+  ],
+  "verdict": "kind-rule-found"
+ },
+ {
+  "kind": "arguments",
+  "class": "TArguments",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "computed_property_name",
+  "class": "TComputedPropertyName",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "else_alt_clause",
+  "class": "TElseAltClause",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "else_clause",
+  "class": "TElseClause",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "empty_statement",
+  "class": "TEmptyStatement",
+  "flow_files": [
+   "ControlFlowGraphImpl.qll"
+  ],
+  "verdict": "kind-rule-found"
+ },
+ {
+  "kind": "export_clause",
+  "class": "TExportClause",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "export_specifier",
+  "class": "TExportSpecifier",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "expression_statement",
+  "class": "TExpressionStatement",
+  "flow_files": [
+   "ControlFlowGraphImpl.qll"
+  ],
+  "verdict": "kind-rule-found"
+ },
+ {
+  "kind": "import_clause",
+  "class": "TImportClause",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "lexical_declaration",
+  "class": "TLexicalDeclaration",
+  "flow_files": [
+   "ControlFlowGraphImpl.qll"
+  ],
+  "verdict": "kind-rule-found"
+ },
+ {
+  "kind": "named_imports",
+  "class": "TNamedImports",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "namespace_import",
+  "class": "TNamespaceImport",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "regex",
+  "class": "TRegex",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "switch_body",
+  "class": "TSwitchBody",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "template_string",
+  "class": "TTemplateString",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "template_substitution",
+  "class": "TTemplateSubstitution",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "unary_expression",
+  "class": "TUnaryExpression",
+  "flow_files": [
+   "ControlFlowGraphImpl.qll"
+  ],
+  "verdict": "kind-rule-found"
+ },
+ {
+  "kind": "comment",
+  "class": "TComment",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "default",
+  "class": "TDefault",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "false",
+  "class": "TFalse",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "hash_bang_line",
+  "class": "THashBangLine",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "null",
+  "class": "TNull",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "number",
+  "class": "TNumber",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "optional_chain",
+  "class": "TOptionalChain",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "regex_flags",
+  "class": "TRegexFlags",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "regex_pattern",
+  "class": "TRegexPattern",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ },
+ {
+  "kind": "true",
+  "class": "TTrue",
+  "flow_files": [],
+  "verdict": "no-kind-rule"
+ }
+]
