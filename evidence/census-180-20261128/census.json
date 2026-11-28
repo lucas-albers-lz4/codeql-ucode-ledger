@@ -1,0 +1,1785 @@
+{
+ "pin_producer": "9166af76cf6944e1b3ea5856a9176366a1f7a6ee",
+ "pin_grammar": "4a243af329fae2f4ff01e0fc80133cbab8314600",
+ "ucode": [
+  {
+   "kind": "declaration",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Declaration.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Expression.qll",
+   "flow": [
+    "CfgNodes:class-ref",
+    "file:Scope:class-ref",
+    "file:DataFlowDispatch:class-ref",
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "primary_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/PrimaryExpression.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Statement.qll",
+   "flow": [
+    "CfgNodes:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "arguments",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Arguments.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "array",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Array.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "arrow_function",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ArrowFunction.qll",
+   "flow": [
+    "file:Scope:class-ref",
+    "file:DataFlowDispatch:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "assignment_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/AssignmentExpression.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:DataFlowPrivate:class-ref",
+    "file:SsaImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "augmented_assignment_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/AugmentedAssignmentExpression.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:DataFlowPrivate:class-ref",
+    "file:SsaImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "binary_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/BinaryExpression.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "break_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/BreakStatement.qll",
+   "flow": [
+    "file:Completion:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "call_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/CallExpression.qll",
+   "flow": [
+    "CfgNodes:class-ref",
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:DataFlowDispatch:class-ref",
+    "file:FlowSummaryImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "catch_clause",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/CatchClause.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:SsaImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "computed_property_name",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ComputedPropertyName.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "continue_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ContinueStatement.qll",
+   "flow": [
+    "file:Completion:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "delete_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/DeleteExpression.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "elif_clause",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ElifClause.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "else_alt_clause",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ElseAltClause.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "else_clause",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ElseClause.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "empty_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/EmptyStatement.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "export_clause",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ExportClause.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "export_specifier",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ExportSpecifier.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "export_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ExportStatement.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "expression_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ExpressionStatement.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "for_alt_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ForAltStatement.qll",
+   "flow": [
+    "file:Completion:class-ref",
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "for_in_alt_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ForInAltStatement.qll",
+   "flow": [
+    "file:Completion:class-ref",
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:SsaImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "for_in_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ForInStatement.qll",
+   "flow": [
+    "file:Completion:class-ref",
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:SsaImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "for_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ForStatement.qll",
+   "flow": [
+    "file:Completion:class-ref",
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "formal_parameters",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/FormalParameters.qll",
+   "flow": [
+    "file:Completion:class-ref",
+    "file:Scope:class-ref",
+    "file:DataFlowDispatch:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "function_declaration",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/FunctionDeclaration.qll",
+   "flow": [
+    "file:Scope:class-ref",
+    "file:DataFlowDispatch:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "function_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/FunctionExpression.qll",
+   "flow": [
+    "file:Scope:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "if_alt_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/IfAltStatement.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "if_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/IfStatement.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "import_clause",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ImportClause.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "import_specifier",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ImportSpecifier.qll",
+   "flow": [
+    "file:DataFlowDispatch:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "import_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ImportStatement.qll",
+   "flow": [
+    "file:DataFlowDispatch:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "lexical_declaration",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/LexicalDeclaration.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "member_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/MemberExpression.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:DataFlowDispatch:class-ref",
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "named_imports",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/NamedImports.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "namespace_import",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/NamespaceImport.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "object",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Object.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref",
+    "file:DataFlowPublic:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "pair",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Pair.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref",
+    "file:DataFlowPublic:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "parenthesized_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ParenthesizedExpression.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "program",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Program.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:Scope:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "regex",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Regex.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "rest_element",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/RestElement.qll",
+   "flow": [
+    "file:Scope:class-ref",
+    "file:DataFlowDispatch:class-ref",
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "return_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ReturnStatement.qll",
+   "flow": [
+    "file:Completion:class-ref",
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "sequence_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/SequenceExpression.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "spread_element",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/SpreadElement.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "statement_block",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/StatementBlock.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:Scope:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "statement_list",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/StatementList.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "string",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/String.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "subscript_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/SubscriptExpression.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "switch_body",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/SwitchBody.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "switch_case",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/SwitchCase.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "switch_default",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/SwitchDefault.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "switch_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/SwitchStatement.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "template_string",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/TemplateString.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "template_substitution",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/TemplateSubstitution.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "ternary_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/TernaryExpression.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "try_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/TryStatement.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "unary_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/UnaryExpression.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "update_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/UpdateExpression.qll",
+   "flow": [
+    "file:SsaImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "variable_declarator",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/VariableDeclarator.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "while_alt_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/WhileAltStatement.qll",
+   "flow": [
+    "file:Completion:class-ref",
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "while_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/WhileStatement.qll",
+   "flow": [
+    "file:Completion:class-ref",
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "comment",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Comment.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "default",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Default.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "doc_comment",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/DocComment.qll",
+   "flow": [
+    "file:Completion:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "escape_sequence",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/EscapeSequence.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "false",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/False.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "hash_bang_line",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/HashBangLine.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "identifier",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Identifier.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:Scope:class-ref",
+    "file:DataFlowDispatch:class-ref",
+    "file:DataFlowPrivate:class-ref",
+    "file:FlowSummaryImpl:class-ref",
+    "file:SsaImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "null",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Null.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "number",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Number.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "optional_chain",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/OptionalChain.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "property_identifier",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/PropertyIdentifier.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "regex_flags",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/RegexFlags.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "regex_pattern",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/RegexPattern.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "shorthand_property_identifier",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ShorthandPropertyIdentifier.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "string_fragment",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/StringFragment.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "this",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/This.qll",
+   "flow": [
+    "file:Completion:class-ref",
+    "file:DataFlowDispatch:class-ref",
+    "file:DataFlowPrivate:class-ref",
+    "file:DataFlowPublic:class-ref",
+    "file:ModelsAsData:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "true",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/True.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  }
+ ],
+ "markup": [
+  {
+   "kind": "declaration",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Declaration.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Expression.qll",
+   "flow": [
+    "CfgNodes:class-ref",
+    "file:Scope:class-ref",
+    "file:DataFlowDispatch:class-ref",
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "primary_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/PrimaryExpression.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Statement.qll",
+   "flow": [
+    "CfgNodes:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "arguments",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Arguments.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "array",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Array.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "arrow_function",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ArrowFunction.qll",
+   "flow": [
+    "file:Scope:class-ref",
+    "file:DataFlowDispatch:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "assignment_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/AssignmentExpression.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:DataFlowPrivate:class-ref",
+    "file:SsaImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "augmented_assignment_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/AugmentedAssignmentExpression.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:DataFlowPrivate:class-ref",
+    "file:SsaImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "binary_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/BinaryExpression.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "break_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/BreakStatement.qll",
+   "flow": [
+    "file:Completion:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "call_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/CallExpression.qll",
+   "flow": [
+    "CfgNodes:class-ref",
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:DataFlowDispatch:class-ref",
+    "file:FlowSummaryImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "catch_clause",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/CatchClause.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:SsaImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "comment_tag",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "computed_property_name",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ComputedPropertyName.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "continue_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ContinueStatement.qll",
+   "flow": [
+    "file:Completion:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "delete_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/DeleteExpression.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "elif_clause",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ElifClause.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "else_alt_clause",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ElseAltClause.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "else_clause",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ElseClause.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "empty_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/EmptyStatement.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "export_clause",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ExportClause.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "export_specifier",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ExportSpecifier.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "export_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ExportStatement.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "expression_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ExpressionStatement.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "expression_tag",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "for_alt_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ForAltStatement.qll",
+   "flow": [
+    "file:Completion:class-ref",
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "for_in_alt_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ForInAltStatement.qll",
+   "flow": [
+    "file:Completion:class-ref",
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:SsaImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "for_in_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ForInStatement.qll",
+   "flow": [
+    "file:Completion:class-ref",
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:SsaImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "for_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ForStatement.qll",
+   "flow": [
+    "file:Completion:class-ref",
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "formal_parameters",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/FormalParameters.qll",
+   "flow": [
+    "file:Completion:class-ref",
+    "file:Scope:class-ref",
+    "file:DataFlowDispatch:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "function_declaration",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/FunctionDeclaration.qll",
+   "flow": [
+    "file:Scope:class-ref",
+    "file:DataFlowDispatch:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "function_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/FunctionExpression.qll",
+   "flow": [
+    "file:Scope:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "if_alt_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/IfAltStatement.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "if_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/IfStatement.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "import_clause",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ImportClause.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "import_specifier",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ImportSpecifier.qll",
+   "flow": [
+    "file:DataFlowDispatch:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "import_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ImportStatement.qll",
+   "flow": [
+    "file:DataFlowDispatch:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "lexical_declaration",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/LexicalDeclaration.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "markup",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "member_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/MemberExpression.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:DataFlowDispatch:class-ref",
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "named_imports",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/NamedImports.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "namespace_import",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/NamespaceImport.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "object",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Object.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref",
+    "file:DataFlowPublic:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "pair",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Pair.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref",
+    "file:DataFlowPublic:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "parenthesized_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ParenthesizedExpression.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "regex",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Regex.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "rest_element",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/RestElement.qll",
+   "flow": [
+    "file:Scope:class-ref",
+    "file:DataFlowDispatch:class-ref",
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "return_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ReturnStatement.qll",
+   "flow": [
+    "file:Completion:class-ref",
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "sequence_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/SequenceExpression.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "spread_element",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/SpreadElement.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "statement_block",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/StatementBlock.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:Scope:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "statement_list",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/StatementList.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "string",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/String.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "subscript_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/SubscriptExpression.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "switch_body",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/SwitchBody.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "switch_case",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/SwitchCase.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "switch_default",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/SwitchDefault.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "switch_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/SwitchStatement.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "template_string",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/TemplateString.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "template_substitution",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/TemplateSubstitution.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "ternary_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/TernaryExpression.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "text_statement",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "try_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/TryStatement.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "unary_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/UnaryExpression.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "update_expression",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/UpdateExpression.qll",
+   "flow": [
+    "file:SsaImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "variable_declarator",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/VariableDeclarator.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "while_alt_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/WhileAltStatement.qll",
+   "flow": [
+    "file:Completion:class-ref",
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "while_statement",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/WhileStatement.qll",
+   "flow": [
+    "file:Completion:class-ref",
+    "file:ControlFlowGraphImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "comment",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Comment.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "comment_content",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "comment_tag_close",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "comment_tag_open",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "comment_tag_trim_close",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "comment_tag_trim_open",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "default",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Default.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "doc_comment",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/DocComment.qll",
+   "flow": [
+    "file:Completion:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "escape_sequence",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/EscapeSequence.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "expression_tag_close",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "expression_tag_open",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "expression_tag_trim_close",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "expression_tag_trim_open",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "false",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/False.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "hash_bang_line",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/HashBangLine.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "identifier",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Identifier.qll",
+   "flow": [
+    "file:ControlFlowGraphImpl:class-ref",
+    "file:Scope:class-ref",
+    "file:DataFlowDispatch:class-ref",
+    "file:DataFlowPrivate:class-ref",
+    "file:FlowSummaryImpl:class-ref",
+    "file:SsaImpl:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "null",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Null.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "number",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/Number.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "optional_chain",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/OptionalChain.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "property_identifier",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/PropertyIdentifier.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "raw_text",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "regex_flags",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/RegexFlags.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "regex_pattern",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/RegexPattern.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  },
+  {
+   "kind": "shorthand_property_identifier",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/ShorthandPropertyIdentifier.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "statement_tag_close",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "statement_tag_lstrip_open",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "statement_tag_open",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "statement_tag_trim_close",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "statement_tag_trim_open",
+   "dbscheme": true,
+   "ast": false,
+   "ast_file": null,
+   "flow": [],
+   "class": "extracted-only"
+  },
+  {
+   "kind": "string_fragment",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/StringFragment.qll",
+   "flow": [
+    "file:DataFlowPrivate:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "this",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/This.qll",
+   "flow": [
+    "file:Completion:class-ref",
+    "file:DataFlowDispatch:class-ref",
+    "file:DataFlowPrivate:class-ref",
+    "file:DataFlowPublic:class-ref",
+    "file:ModelsAsData:class-ref"
+   ],
+   "class": "extracted+ast+flow"
+  },
+  {
+   "kind": "true",
+   "dbscheme": true,
+   "ast": true,
+   "ast_file": "ql/lib/codeql/ucode/ast/internal/True.qll",
+   "flow": [],
+   "class": "extracted+ast"
+  }
+ ]
+}
