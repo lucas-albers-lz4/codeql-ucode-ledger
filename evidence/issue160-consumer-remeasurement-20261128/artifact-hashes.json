@@ -1,0 +1,73 @@
+{
+  "artifacts": {
+    "archive": {
+      "bytes": 11603,
+      "sha256": "d21bb56dec4201c1700f9e08dd56f503a2c3798523731dcd5cdfc2f63ce675c3"
+    },
+    "complete": {
+      "bytes": 162,
+      "sha256": "e8e731ab06e7a354016b875ef9fe570e2350a78c00e871a7cf1a865fe6254724"
+    },
+    "consumer_selected": {
+      "bytes": 24163,
+      "sha256": "59565135370db8466d313dce1b1bc83c15a7d17bb42e39b3307e0b393d588d3e"
+    },
+    "errors": {
+      "bytes": 122,
+      "sha256": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc"
+    },
+    "errors_evaluator": {
+      "bytes": 3175,
+      "sha256": "7d1256fbd33b0bc96d5298d6f2fdb23d6d2c87269029d07e0be8039494d6f1c0"
+    },
+    "frozen_consumer_baseline": {
+      "bytes": 24163,
+      "sha256": "59565135370db8466d313dce1b1bc83c15a7d17bb42e39b3307e0b393d588d3e"
+    },
+    "historical_manifest": {
+      "bytes": 3365,
+      "sha256": "8f84bf665718d36972c8b4f3d8648e1bd0c660b016cca80fa430453bb1b47a8f"
+    },
+    "input_inventory": {
+      "bytes": 88294,
+      "sha256": "29bd273b5095bc4bf94afdf74ee4b54f2666630a5ed253adc63ba15ca89f2839"
+    },
+    "joined": {
+      "bytes": 10393,
+      "sha256": "54ac35fe7075a6329376eca54eedad8f21ab97c15e3f1c632139becd00bf7c5a"
+    },
+    "launcher": {
+      "bytes": 922,
+      "sha256": "cae058035d3fee2e144c4accb546ac62d6b4138c77e41388c99e74ca6a600d6c"
+    },
+    "negative_expected": {
+      "bytes": 174,
+      "sha256": "77da6e7df19ec2da4229dd59ceccc631d99a7a6b6972610836dbfa718a5543c9"
+    },
+    "postguard": {
+      "bytes": 81,
+      "sha256": "96a263e517396fa4f56c0ae6dc1080dec1c8ff7c0260ab6adf78e523a525d885"
+    },
+    "routing": {
+      "bytes": 4280,
+      "sha256": "57370ac017c045c18062308e394e57c632482314627be9d1586334264b31eb70"
+    },
+    "runner": {
+      "bytes": 18578,
+      "sha256": "f2ff56b90ab6f2a7142f7f9c5737dafb384bd39471a98b4316b458984c0000aa"
+    },
+    "runner_tests": {
+      "bytes": 3275,
+      "sha256": "f8bde64c21912cb67622a668f838d53e6b45a24c6440fe12652d08363786f965"
+    },
+    "success": {
+      "bytes": 4742,
+      "sha256": "2a0a6321bfb8ccbdac3ab35bfe91fa07bb7961608752eda412c71ba560d301e4"
+    },
+    "success_evaluator": {
+      "bytes": 18455,
+      "sha256": "62bcbd114691438ef76fa91d9a8745669bd7cd02f9d28078158f555d21c27524"
+    }
+  },
+  "schema": "issue160-consumer-observation-artifacts-v1"
+}
