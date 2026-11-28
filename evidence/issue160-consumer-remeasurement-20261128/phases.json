@@ -1,0 +1,513 @@
+{
+  "phases": [
+    {
+      "argv": [
+        "$CLI",
+        "query",
+        "compile",
+        "--check-only",
+        "--threads=1",
+        "--ram=2048",
+        "--compilation-cache=$RUNTIME/cache/compilation",
+        "--no-default-compilation-cache",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--additional-packs=$RUN/dependencies/controlflow/1.0.12:$RUN/dependencies/dataflow/1.1.6:$RUN/dependencies/regex/1.0.12:$RUN/dependencies/ssa/1.0.12:$RUN/dependencies/threat-models/1.1.1:$RUN/dependencies/typetracking/1.0.12:$RUN/dependencies/util/1.0.12:$RUN/dependencies/yaml/1.0.61",
+        "--",
+        "$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql"
+      ],
+      "cwd": "$RUN",
+      "env": {
+        "CODEQL_CONFIG_FILE": "$RUNTIME/codeql-config.yml",
+        "HOME": "$RUNTIME/home",
+        "ISSUE160_RUNNER_SHA": "f2ff56b90ab6f2a7142f7f9c5737dafb384bd39471a98b4316b458984c0000aa",
+        "LC_ALL": "C",
+        "PATH": "$CLI_DIR:/usr/bin:/bin",
+        "TMPDIR": "$RUNTIME/tmp",
+        "TZ": "UTC",
+        "XDG_CACHE_HOME": "$RUNTIME/cache"
+      },
+      "exit": 0,
+      "group_json_sha256": "bdd97e6b359106476346c61499390a86916c4e93480b74e5fcef3b4fbccb11d7",
+      "name": "compile-errors",
+      "seconds": 0.939,
+      "stderr_sha256": "0c6a305a66a45f9ea42dd8769a706e49baaa843744c04d0425794ac5178ca941",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "$CLI",
+        "query",
+        "compile",
+        "--check-only",
+        "--threads=1",
+        "--ram=2048",
+        "--compilation-cache=$RUNTIME/cache/compilation",
+        "--no-default-compilation-cache",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--additional-packs=$RUN/dependencies/controlflow/1.0.12:$RUN/dependencies/dataflow/1.1.6:$RUN/dependencies/regex/1.0.12:$RUN/dependencies/ssa/1.0.12:$RUN/dependencies/threat-models/1.1.1:$RUN/dependencies/typetracking/1.0.12:$RUN/dependencies/util/1.0.12:$RUN/dependencies/yaml/1.0.61",
+        "--",
+        "$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql"
+      ],
+      "cwd": "$RUN",
+      "env": {
+        "CODEQL_CONFIG_FILE": "$RUNTIME/codeql-config.yml",
+        "HOME": "$RUNTIME/home",
+        "ISSUE160_RUNNER_SHA": "f2ff56b90ab6f2a7142f7f9c5737dafb384bd39471a98b4316b458984c0000aa",
+        "LC_ALL": "C",
+        "PATH": "$CLI_DIR:/usr/bin:/bin",
+        "TMPDIR": "$RUNTIME/tmp",
+        "TZ": "UTC",
+        "XDG_CACHE_HOME": "$RUNTIME/cache"
+      },
+      "exit": 0,
+      "group_json_sha256": "bdd97e6b359106476346c61499390a86916c4e93480b74e5fcef3b4fbccb11d7",
+      "name": "compile-success",
+      "seconds": 0.929,
+      "stderr_sha256": "95aea8c303b44309e979e3ee6a7f4bcee1fe49b8d7ff2e6054b504297e675f50",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "$CLI",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "$RUN/errors.bqrs"
+      ],
+      "cwd": "$RUN",
+      "env": {
+        "CODEQL_CONFIG_FILE": "$RUNTIME/codeql-config.yml",
+        "HOME": "$RUNTIME/home",
+        "ISSUE160_RUNNER_SHA": "f2ff56b90ab6f2a7142f7f9c5737dafb384bd39471a98b4316b458984c0000aa",
+        "LC_ALL": "C",
+        "PATH": "$CLI_DIR:/usr/bin:/bin",
+        "TMPDIR": "$RUNTIME/tmp",
+        "TZ": "UTC",
+        "XDG_CACHE_HOME": "$RUNTIME/cache"
+      },
+      "exit": 0,
+      "group_json_sha256": "bdd97e6b359106476346c61499390a86916c4e93480b74e5fcef3b4fbccb11d7",
+      "name": "decode-errors",
+      "seconds": 0.21,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "2c38be0a7d1935f63300ceccb92fd50f5bb76b829bcd0bac782393521a7665fc"
+    },
+    {
+      "argv": [
+        "$CLI",
+        "bqrs",
+        "decode",
+        "--format=json",
+        "--entities=url,string",
+        "$RUN/success.bqrs"
+      ],
+      "cwd": "$RUN",
+      "env": {
+        "CODEQL_CONFIG_FILE": "$RUNTIME/codeql-config.yml",
+        "HOME": "$RUNTIME/home",
+        "ISSUE160_RUNNER_SHA": "f2ff56b90ab6f2a7142f7f9c5737dafb384bd39471a98b4316b458984c0000aa",
+        "LC_ALL": "C",
+        "PATH": "$CLI_DIR:/usr/bin:/bin",
+        "TMPDIR": "$RUNTIME/tmp",
+        "TZ": "UTC",
+        "XDG_CACHE_HOME": "$RUNTIME/cache"
+      },
+      "exit": 0,
+      "group_json_sha256": "bdd97e6b359106476346c61499390a86916c4e93480b74e5fcef3b4fbccb11d7",
+      "name": "decode-success",
+      "seconds": 0.213,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "2a0a6321bfb8ccbdac3ab35bfe91fa07bb7961608752eda412c71ba560d301e4"
+    },
+    {
+      "argv": [
+        "$CLI",
+        "database",
+        "finalize",
+        "$RUN/db"
+      ],
+      "cwd": "$RUN",
+      "env": {
+        "CODEQL_CONFIG_FILE": "$RUNTIME/codeql-config.yml",
+        "HOME": "$RUNTIME/home",
+        "ISSUE160_RUNNER_SHA": "f2ff56b90ab6f2a7142f7f9c5737dafb384bd39471a98b4316b458984c0000aa",
+        "LC_ALL": "C",
+        "PATH": "$CLI_DIR:/usr/bin:/bin",
+        "TMPDIR": "$RUNTIME/tmp",
+        "TZ": "UTC",
+        "XDG_CACHE_HOME": "$RUNTIME/cache"
+      },
+      "exit": 0,
+      "group_json_sha256": "bdd97e6b359106476346c61499390a86916c4e93480b74e5fcef3b4fbccb11d7",
+      "name": "finalize",
+      "seconds": 1.142,
+      "stderr_sha256": "d2e16f30486976ef5478c2983082640dd7c91c5a384e668050c9f473c1e8f101",
+      "stdout_sha256": "22022da0863dfa235f13f261c44757d7f92c7d7715d1db1011b7dc54c48a9693"
+    },
+    {
+      "argv": [
+        "$PYTHON",
+        "-I",
+        "-B",
+        "$PLAN/consumer-input/evidence/markup-profile-0a6612f/validate.py",
+        "--source",
+        "$PLAN/luci-input",
+        "--stage",
+        "$RUN/stage",
+        "--receipt",
+        "$RUN/routing.json",
+        "--extracted",
+        "$RUN/success.json",
+        "--errors",
+        "$RUN/errors.json"
+      ],
+      "cwd": "$RUN",
+      "env": {
+        "CODEQL_CONFIG_FILE": "$RUNTIME/codeql-config.yml",
+        "HOME": "$RUNTIME/home",
+        "ISSUE160_RUNNER_SHA": "f2ff56b90ab6f2a7142f7f9c5737dafb384bd39471a98b4316b458984c0000aa",
+        "LC_ALL": "C",
+        "PATH": "$CLI_DIR:/usr/bin:/bin",
+        "TMPDIR": "$RUNTIME/tmp",
+        "TZ": "UTC",
+        "XDG_CACHE_HOME": "$RUNTIME/cache"
+      },
+      "exit": 0,
+      "group_json_sha256": "bdd97e6b359106476346c61499390a86916c4e93480b74e5fcef3b4fbccb11d7",
+      "name": "fresh-comparison-post",
+      "seconds": 0.037,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "dfd7c1882b74d0470bd9aba4b7644c08c814d7e8df9ceda158c9067d1b1bf12a"
+    },
+    {
+      "argv": [
+        "$PYTHON",
+        "-I",
+        "-B",
+        "$PLAN/consumer-input/evidence/markup-profile-0a6612f/validate.py",
+        "--source",
+        "$PLAN/luci-input",
+        "--stage",
+        "$RUN/stage",
+        "--receipt",
+        "$RUN/routing.json",
+        "--extracted",
+        "$RUN/success.json",
+        "--errors",
+        "$RUN/errors.json"
+      ],
+      "cwd": "$RUN",
+      "env": {
+        "CODEQL_CONFIG_FILE": "$RUNTIME/codeql-config.yml",
+        "HOME": "$RUNTIME/home",
+        "ISSUE160_RUNNER_SHA": "f2ff56b90ab6f2a7142f7f9c5737dafb384bd39471a98b4316b458984c0000aa",
+        "LC_ALL": "C",
+        "PATH": "$CLI_DIR:/usr/bin:/bin",
+        "TMPDIR": "$RUNTIME/tmp",
+        "TZ": "UTC",
+        "XDG_CACHE_HOME": "$RUNTIME/cache"
+      },
+      "exit": 0,
+      "group_json_sha256": "bdd97e6b359106476346c61499390a86916c4e93480b74e5fcef3b4fbccb11d7",
+      "name": "fresh-comparison",
+      "seconds": 0.037,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "dfd7c1882b74d0470bd9aba4b7644c08c814d7e8df9ceda158c9067d1b1bf12a"
+    },
+    {
+      "argv": [
+        "$CLI",
+        "database",
+        "index-files",
+        "$RUN/db",
+        "--language=ucode",
+        "--include=**/*",
+        "--working-dir=$RUN/stage"
+      ],
+      "cwd": "$RUN",
+      "env": {
+        "CODEQL_CONFIG_FILE": "$RUNTIME/codeql-config.yml",
+        "CODEQL_UCODE_STAGED_ROOT": "$RUN/stage",
+        "HOME": "$RUNTIME/home",
+        "ISSUE160_RUNNER_SHA": "f2ff56b90ab6f2a7142f7f9c5737dafb384bd39471a98b4316b458984c0000aa",
+        "LC_ALL": "C",
+        "PATH": "$CLI_DIR:/usr/bin:/bin",
+        "TMPDIR": "$RUNTIME/tmp",
+        "TZ": "UTC",
+        "XDG_CACHE_HOME": "$RUNTIME/cache"
+      },
+      "exit": 0,
+      "group_json_sha256": "bdd97e6b359106476346c61499390a86916c4e93480b74e5fcef3b4fbccb11d7",
+      "name": "index",
+      "seconds": 0.778,
+      "stderr_sha256": "ec1e87fed901710a6bdd5ae88782af6d2bedc827a160405c58fa024cbb16bf8a",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "$CLI",
+        "database",
+        "init",
+        "$RUN/db",
+        "--language=ucode",
+        "--search-path=$RUN/pack",
+        "--source-root=$RUN/stage"
+      ],
+      "cwd": "$RUN",
+      "env": {
+        "CODEQL_CONFIG_FILE": "$RUNTIME/codeql-config.yml",
+        "HOME": "$RUNTIME/home",
+        "ISSUE160_RUNNER_SHA": "f2ff56b90ab6f2a7142f7f9c5737dafb384bd39471a98b4316b458984c0000aa",
+        "LC_ALL": "C",
+        "PATH": "$CLI_DIR:/usr/bin:/bin",
+        "TMPDIR": "$RUNTIME/tmp",
+        "TZ": "UTC",
+        "XDG_CACHE_HOME": "$RUNTIME/cache"
+      },
+      "exit": 0,
+      "group_json_sha256": "bdd97e6b359106476346c61499390a86916c4e93480b74e5fcef3b4fbccb11d7",
+      "name": "init",
+      "seconds": 0.491,
+      "stderr_sha256": "f684af6c85f276a9eacd99d67c0ec9572a1a9700b7c81c67f8a144363a4ea1fe",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "$CLI",
+        "resolve",
+        "languages",
+        "--format=betterjson",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src"
+      ],
+      "cwd": "$RUN",
+      "env": {
+        "CODEQL_CONFIG_FILE": "$RUNTIME/codeql-config.yml",
+        "HOME": "$RUNTIME/home",
+        "ISSUE160_RUNNER_SHA": "f2ff56b90ab6f2a7142f7f9c5737dafb384bd39471a98b4316b458984c0000aa",
+        "LC_ALL": "C",
+        "PATH": "$CLI_DIR:/usr/bin:/bin",
+        "TMPDIR": "$RUNTIME/tmp",
+        "TZ": "UTC",
+        "XDG_CACHE_HOME": "$RUNTIME/cache"
+      },
+      "exit": 0,
+      "group_json_sha256": "bdd97e6b359106476346c61499390a86916c4e93480b74e5fcef3b4fbccb11d7",
+      "name": "languages",
+      "seconds": 0.371,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "eb59e6ae50618841783d8835b1dafc1e3b21ca720eb5dca890fc5f9b358b1142"
+    },
+    {
+      "argv": [
+        "$CLI",
+        "resolve",
+        "library-path",
+        "--format=json",
+        "--compilation-cache=$RUNTIME/cache/compilation",
+        "--no-default-compilation-cache",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--additional-packs=$RUN/dependencies/controlflow/1.0.12:$RUN/dependencies/dataflow/1.1.6:$RUN/dependencies/regex/1.0.12:$RUN/dependencies/ssa/1.0.12:$RUN/dependencies/threat-models/1.1.1:$RUN/dependencies/typetracking/1.0.12:$RUN/dependencies/util/1.0.12:$RUN/dependencies/yaml/1.0.61",
+        "--query=$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql"
+      ],
+      "cwd": "$RUN",
+      "env": {
+        "CODEQL_CONFIG_FILE": "$RUNTIME/codeql-config.yml",
+        "HOME": "$RUNTIME/home",
+        "ISSUE160_RUNNER_SHA": "f2ff56b90ab6f2a7142f7f9c5737dafb384bd39471a98b4316b458984c0000aa",
+        "LC_ALL": "C",
+        "PATH": "$CLI_DIR:/usr/bin:/bin",
+        "TMPDIR": "$RUNTIME/tmp",
+        "TZ": "UTC",
+        "XDG_CACHE_HOME": "$RUNTIME/cache"
+      },
+      "exit": 0,
+      "group_json_sha256": "bdd97e6b359106476346c61499390a86916c4e93480b74e5fcef3b4fbccb11d7",
+      "name": "library-errors",
+      "seconds": 0.364,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "24ba6f125600bfed8ffed6f59372f8c534fb8a7b75bf6a8aa0bdce8a2950d0b3"
+    },
+    {
+      "argv": [
+        "$CLI",
+        "resolve",
+        "library-path",
+        "--format=json",
+        "--compilation-cache=$RUNTIME/cache/compilation",
+        "--no-default-compilation-cache",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--additional-packs=$RUN/dependencies/controlflow/1.0.12:$RUN/dependencies/dataflow/1.1.6:$RUN/dependencies/regex/1.0.12:$RUN/dependencies/ssa/1.0.12:$RUN/dependencies/threat-models/1.1.1:$RUN/dependencies/typetracking/1.0.12:$RUN/dependencies/util/1.0.12:$RUN/dependencies/yaml/1.0.61",
+        "--query=$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql"
+      ],
+      "cwd": "$RUN",
+      "env": {
+        "CODEQL_CONFIG_FILE": "$RUNTIME/codeql-config.yml",
+        "HOME": "$RUNTIME/home",
+        "ISSUE160_RUNNER_SHA": "f2ff56b90ab6f2a7142f7f9c5737dafb384bd39471a98b4316b458984c0000aa",
+        "LC_ALL": "C",
+        "PATH": "$CLI_DIR:/usr/bin:/bin",
+        "TMPDIR": "$RUNTIME/tmp",
+        "TZ": "UTC",
+        "XDG_CACHE_HOME": "$RUNTIME/cache"
+      },
+      "exit": 0,
+      "group_json_sha256": "bdd97e6b359106476346c61499390a86916c4e93480b74e5fcef3b4fbccb11d7",
+      "name": "library-success",
+      "seconds": 0.364,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "14506ecb84e013a5f890526e79f79b39c9a8ee39975520d33e017cfcd8965100"
+    },
+    {
+      "argv": [
+        "$CLI",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql",
+        "--database=$RUN/db",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--additional-packs=$RUN/dependencies/controlflow/1.0.12:$RUN/dependencies/dataflow/1.1.6:$RUN/dependencies/regex/1.0.12:$RUN/dependencies/ssa/1.0.12:$RUN/dependencies/threat-models/1.1.1:$RUN/dependencies/typetracking/1.0.12:$RUN/dependencies/util/1.0.12:$RUN/dependencies/yaml/1.0.61",
+        "--output=$RUN/errors.bqrs",
+        "--threads=1",
+        "--ram=2048",
+        "--compilation-cache=$RUNTIME/cache/compilation",
+        "--no-default-compilation-cache",
+        "--evaluator-log=$RUN/errors-evaluator.json"
+      ],
+      "cwd": "$RUN",
+      "env": {
+        "CODEQL_CONFIG_FILE": "$RUNTIME/codeql-config.yml",
+        "HOME": "$RUNTIME/home",
+        "ISSUE160_RUNNER_SHA": "f2ff56b90ab6f2a7142f7f9c5737dafb384bd39471a98b4316b458984c0000aa",
+        "LC_ALL": "C",
+        "PATH": "$CLI_DIR:/usr/bin:/bin",
+        "TMPDIR": "$RUNTIME/tmp",
+        "TZ": "UTC",
+        "XDG_CACHE_HOME": "$RUNTIME/cache"
+      },
+      "exit": 0,
+      "group_json_sha256": "bdd97e6b359106476346c61499390a86916c4e93480b74e5fcef3b4fbccb11d7",
+      "name": "query-errors",
+      "seconds": 1.376,
+      "stderr_sha256": "ee4c612c931ec0242a56aa4ca472c15446a29e273a132eb6f762510fb2e0477d",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "$CLI",
+        "query",
+        "run",
+        "$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql",
+        "--database=$RUN/db",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--additional-packs=$RUN/dependencies/controlflow/1.0.12:$RUN/dependencies/dataflow/1.1.6:$RUN/dependencies/regex/1.0.12:$RUN/dependencies/ssa/1.0.12:$RUN/dependencies/threat-models/1.1.1:$RUN/dependencies/typetracking/1.0.12:$RUN/dependencies/util/1.0.12:$RUN/dependencies/yaml/1.0.61",
+        "--output=$RUN/success.bqrs",
+        "--threads=1",
+        "--ram=2048",
+        "--compilation-cache=$RUNTIME/cache/compilation",
+        "--no-default-compilation-cache",
+        "--evaluator-log=$RUN/success-evaluator.json"
+      ],
+      "cwd": "$RUN",
+      "env": {
+        "CODEQL_CONFIG_FILE": "$RUNTIME/codeql-config.yml",
+        "HOME": "$RUNTIME/home",
+        "ISSUE160_RUNNER_SHA": "f2ff56b90ab6f2a7142f7f9c5737dafb384bd39471a98b4316b458984c0000aa",
+        "LC_ALL": "C",
+        "PATH": "$CLI_DIR:/usr/bin:/bin",
+        "TMPDIR": "$RUNTIME/tmp",
+        "TZ": "UTC",
+        "XDG_CACHE_HOME": "$RUNTIME/cache"
+      },
+      "exit": 0,
+      "group_json_sha256": "bdd97e6b359106476346c61499390a86916c4e93480b74e5fcef3b4fbccb11d7",
+      "name": "query-success",
+      "seconds": 1.57,
+      "stderr_sha256": "fdd936fb648ce2f10aa35b930f924edd302ef22270820978a3f7978496454d06",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "$CLI",
+        "resolve",
+        "queries",
+        "--format=bylanguage",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--additional-packs=$RUN/dependencies/controlflow/1.0.12:$RUN/dependencies/dataflow/1.1.6:$RUN/dependencies/regex/1.0.12:$RUN/dependencies/ssa/1.0.12:$RUN/dependencies/threat-models/1.1.1:$RUN/dependencies/typetracking/1.0.12:$RUN/dependencies/util/1.0.12:$RUN/dependencies/yaml/1.0.61",
+        "--",
+        "$RUN/producer/ql/src/diagnostics/ExtractionErrors.ql"
+      ],
+      "cwd": "$RUN",
+      "env": {
+        "CODEQL_CONFIG_FILE": "$RUNTIME/codeql-config.yml",
+        "HOME": "$RUNTIME/home",
+        "ISSUE160_RUNNER_SHA": "f2ff56b90ab6f2a7142f7f9c5737dafb384bd39471a98b4316b458984c0000aa",
+        "LC_ALL": "C",
+        "PATH": "$CLI_DIR:/usr/bin:/bin",
+        "TMPDIR": "$RUNTIME/tmp",
+        "TZ": "UTC",
+        "XDG_CACHE_HOME": "$RUNTIME/cache"
+      },
+      "exit": 0,
+      "group_json_sha256": "bdd97e6b359106476346c61499390a86916c4e93480b74e5fcef3b4fbccb11d7",
+      "name": "resolve-errors",
+      "seconds": 0.38,
+      "stderr_sha256": "0fbba1d46b06bb1a009c2831a537e9dc738452eed3f3a003590db2f877f7019f",
+      "stdout_sha256": "3412bd77bf01b04f52238193a0d09fdd16ecdbd96521f88f9b98af59f5169a90"
+    },
+    {
+      "argv": [
+        "$CLI",
+        "resolve",
+        "queries",
+        "--format=bylanguage",
+        "--search-path=$RUN/pack:$RUN/producer/ql/lib:$RUN/producer/ql/src",
+        "--additional-packs=$RUN/dependencies/controlflow/1.0.12:$RUN/dependencies/dataflow/1.1.6:$RUN/dependencies/regex/1.0.12:$RUN/dependencies/ssa/1.0.12:$RUN/dependencies/threat-models/1.1.1:$RUN/dependencies/typetracking/1.0.12:$RUN/dependencies/util/1.0.12:$RUN/dependencies/yaml/1.0.61",
+        "--",
+        "$RUN/producer/ql/src/diagnostics/SuccessfullyExtractedFiles.ql"
+      ],
+      "cwd": "$RUN",
+      "env": {
+        "CODEQL_CONFIG_FILE": "$RUNTIME/codeql-config.yml",
+        "HOME": "$RUNTIME/home",
+        "ISSUE160_RUNNER_SHA": "f2ff56b90ab6f2a7142f7f9c5737dafb384bd39471a98b4316b458984c0000aa",
+        "LC_ALL": "C",
+        "PATH": "$CLI_DIR:/usr/bin:/bin",
+        "TMPDIR": "$RUNTIME/tmp",
+        "TZ": "UTC",
+        "XDG_CACHE_HOME": "$RUNTIME/cache"
+      },
+      "exit": 0,
+      "group_json_sha256": "bdd97e6b359106476346c61499390a86916c4e93480b74e5fcef3b4fbccb11d7",
+      "name": "resolve-success",
+      "seconds": 0.382,
+      "stderr_sha256": "0fbba1d46b06bb1a009c2831a537e9dc738452eed3f3a003590db2f877f7019f",
+      "stdout_sha256": "d659715d3cb01edc65ecf5d037558e690f84c1934e16aec58be859e2c5a18a03"
+    },
+    {
+      "argv": [
+        "$CLI",
+        "version",
+        "--format=json"
+      ],
+      "cwd": "$RUN",
+      "env": {
+        "CODEQL_CONFIG_FILE": "$RUNTIME/codeql-config.yml",
+        "HOME": "$RUNTIME/home",
+        "ISSUE160_RUNNER_SHA": "f2ff56b90ab6f2a7142f7f9c5737dafb384bd39471a98b4316b458984c0000aa",
+        "LC_ALL": "C",
+        "PATH": "$CLI_DIR:/usr/bin:/bin",
+        "TMPDIR": "$RUNTIME/tmp",
+        "TZ": "UTC",
+        "XDG_CACHE_HOME": "$RUNTIME/cache"
+      },
+      "exit": 0,
+      "group_json_sha256": "bdd97e6b359106476346c61499390a86916c4e93480b74e5fcef3b4fbccb11d7",
+      "name": "version",
+      "seconds": 0.256,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f8b88594dc9e44bf9dfac86ba19dc08ebfd6bce94742ac35b06c331a5d36a1d9"
+    }
+  ],
+  "schema": "issue160-consumer-observation-phases-v1"
+}
