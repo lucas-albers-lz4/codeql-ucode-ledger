@@ -117,6 +117,32 @@ Update after every claim transition; newest entries first.
 
 ## Log
 
+### 2026-11-28 — Markup #182 Phase 0 gate LIFTED (design pass approved)
+
+- #182 (markup production dataflow integration) Phase 0 cleared all three items:
+  - item 1 (interpreter pin + escaping facts): interpreter `ucode@49dacb2c` +
+    `luci@b2e0be4b`. Decisive facts — template mode is the `raw_mode` compiler flag;
+    `{{ expr }}` → single raw `I_PRINT` (`vm.c:3061-3086`); **no HTML-escape function
+    exists in the interpreter**; escaping is an opt-in from luci's own
+    `contrib/package/ucode-mod-html` (`entityencode`/`striptags`); corpus ratio 274
+    substitutions vs 28 `entityencode` uses. `evidence/markup-phase0-20261128/FINDINGS.md`
+    (commit `830601e`); #182 comment `7243737273`.
+  - items 2 & 3 (granularity decision + author design pass): APPROVED. **D1 =
+    named-scope-identifier** (not whole-table, not per-deep-field); **D2 = arg-sensitive**
+    (`entityencode(x)` ≠ `entityencode(x,true)`; bare is not attribute-safe); **D3**
+    every `{{}}` is a sink incl. the JSON object/array path; **D4** `{% include %}` =
+    scope-join edge. `evidence/markup-phase0-20261128/DESIGN-NOTE.md` (commit `3589ba2`);
+    #182 gate comment `7243805650`.
+- Scope reduction recorded: most of Phase 1 collapses to #155-style identity modeling
+  (recognize `html` module fns + `loadfile` template entry), not new CFG expressiveness.
+- Positive-vs-near-miss discipline enforced in-note: `dispatcher.lang` reclassified as an
+  **eligible near-miss** (allow-list-gated), not a sink; a true positive is a Phase 1 sweep.
+- Claims 052/056 updated to point at #182; **remain Blocked** (framing refined, path
+  defined, no rule/witness yet). No gate lifted beyond the design note; no runtime claim.
+- Parallel tracks now cleared to run: Phase 1 (bridge rule + 3/3 witnesses; needs the
+  single heavy CodeQL slot) and #181 (read-only fail-open audit; no heavy slot) — #181
+  can run alongside anything but a second heavy run.
+
 ### 2026-11-28 — Coverage-gap wave follow-through: grammar census #180 CLOSED, fail-open #181 filed
 
 - Measurement layer executed per the #154-era plan: pinned census of grammar node
