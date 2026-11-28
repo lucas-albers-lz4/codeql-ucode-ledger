@@ -117,6 +117,20 @@ Update after every claim transition; newest entries first.
 
 ## Log
 
+### 2026-11-28 — Coverage-gap wave follow-through: grammar census #180 CLOSED, fail-open #181 filed
+
+- Measurement layer executed per the #154-era plan: pinned census of grammar node
+  kinds vs dbscheme/AST/flow layers (ucode 83: 54 flow-modeled / 29 audit set / 0
+  absent; ucode_markup 101: 53 / 29 / 19 extracted-only).
+- Evidence: `evidence/census-180-20261128/` (census.py, census.json, census.md) at
+  commit `147d37f1995cc7902f5b0e2a8293d1da62be024d`; producer pin `9166af76…`,
+  grammar pin `4a243af…`. Results comment `7243360250`.
+- #180 closed; follow-up #181 (fail-open audit of the 29 ucode kinds, 3/3 witnesses
+  per rule, standing unmodeled-traversal diagnostic) filed and staffable. markup's
+  19 extracted-only kinds stay gated on the #160 dataflow-integration decision.
+- No gates lifted; no `path_found`. This run performed no CodeQL execution —
+  pinned-source measurement only, safe to run alongside other tracks.
+
 ### 2026-11-24 — H/G gated: 068–074 Demonstrated; Security-40 complete (29D/11B)
 
 Refreshed ledger (concurrent MVP advanced 075–090). The H/G source-oracle lanes
