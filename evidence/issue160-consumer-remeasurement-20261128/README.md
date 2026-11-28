@@ -12,7 +12,7 @@ security-coverage claim.
 blob, source SHA-256 and byte count, projected installed path, observed
 producer route, fresh consumer classification and inventory lookup identity.
 [phases.json](phases.json) records the 17 child command vectors, environments,
-exit codes, elapsed times and output hashes; entries are sorted by name, not
+exit codes, elapsed times and output hashes; entries follow raw receipt filename order, not
 execution order. Private absolute path prefixes are
 replaced by `$RUN`, `$RUNTIME`, `$PLAN`, `$CLI`, `$CLI_DIR` and `$PYTHON`; raw
 logs and databases remain local. [artifact-hashes.json](artifact-hashes.json)
