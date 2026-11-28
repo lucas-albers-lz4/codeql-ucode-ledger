@@ -61,3 +61,14 @@ suite is unchanged. No extraction or consumer re-measurement was run at
 coverage, markup taint, or argument-to-substitution flow. Claims 052 and 056
 remain blocked; the `629a708` and 641/641 historical citations remain
 unverified, and no owner gate is lifted.
+
+The bounded comparison above was checked in the producer Git repository with
+these exact commands (both exited **0**):
+
+```sh
+git merge-base --is-ancestor 9166af76cf6944e1b3ea5856a9176366a1f7a6ee b598314ce4991f479fe8d32e92551ad987484f9a
+git diff --quiet 9166af76cf6944e1b3ea5856a9176366a1f7a6ee b598314ce4991f479fe8d32e92551ad987484f9a -- extractor/src/extractor.rs ql/lib/codeql/ucode/Markup.qll ql/lib/codeql/ucode/MarkupCFG.qll ql/lib/codeql/ucode/MarkupCreationCFG.qll docs/markup-cfg.md
+```
+
+The first exit confirms ancestry; the second confirms no Git diff in those
+five paths. Neither command is an extraction or consumer measurement.
