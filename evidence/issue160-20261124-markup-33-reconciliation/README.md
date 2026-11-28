@@ -34,3 +34,30 @@ Current-source files inspected at producer `9166af76` (SHA-256):
 | `ql/src/codeql-suites/code-scanning.qls` | `6d343f93e37c309b8461da9fafcf67d089737980d7ac42a5409e75df3bd442e5` |
 
 LocalTaint and RequestArgsExec are testing-tagged, while DirectRpcShellWord is security-tagged. The declarative default suite selects security problem/path-problem and diagnostic queries while excluding testing and experimental queries. The prior v0.5 resolved suite contained DirectRpcShellWord and the two extraction diagnostics. This source inspection and resolved suite do not establish absence from every external pack or custom query.
+
+## Follow-up scope check (2026-11-27)
+
+The [producer #160](https://github.com/lucas-albers-lz4/codeql-ucode/issues/160)
+acceptance text also names [OpenWrt #151](https://github.com/lucas-albers-lz4/codeql-openwrt/issues/151).
+That issue concerns application-scope exec/fs effects and grant joins; its stated
+prerequisites are application routing and fs sink models, not the markup
+substitution or template-argument questions in claims 052 and 056. The
+same-numbered [producer PR #151](https://github.com/lucas-albers-lz4/codeql-ucode/pull/151) is a markup-initializer PR. This evidence does
+not establish that either issue can be closed, or that OpenWrt #151 needs a
+markup classification change. [OpenWrt #68](https://github.com/lucas-albers-lz4/codeql-openwrt/issues/68)
+separately retains the consumer integration question and its inconclusive
+classification boundary.
+
+A read-only Git comparison from producer `9166af76cf6944e1b3ea5856a9176366a1f7a6ee`
+to `b598314ce4991f479fe8d32e92551ad987484f9a` found no changes in
+`extractor/src/extractor.rs`, `Markup.qll`, `MarkupCFG.qll`,
+`MarkupCreationCFG.qll`, or `docs/markup-cfg.md`. The extractor descriptor
+still lists `.uc`; its changed comment describes installed rpcd path routing.
+Other producer files did change, including `RequestArgsExec.ql`, so this is a
+bounded source comparison, not a claim that the whole pack or its resolved
+suite is unchanged. No extraction or consumer re-measurement was run at
+`b598314c`. The 33-file result above remains evidence for its stated local
+`9166af76` build and does not establish a release binary, installed-image
+coverage, markup taint, or argument-to-substitution flow. Claims 052 and 056
+remain blocked; the `629a708` and 641/641 historical citations remain
+unverified, and no owner gate is lifted.
